@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&display=swap');
+
+:root {
+    --nunito-sans: 'Nunito Sans', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+    --red: #e50914;
+    --black: #080808;
+}
+
+.thankyou-h2,h2 {
+    color: var(--red);
+    text-align: center;
+    font-family: var(--roboto);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media (min-width:600px) {
+    .thankyou-h2,h2 {
+        font-size: 25px;
+    }
+}
+
+@media (min-width:768px) {
+    .thankyou-h2,h2 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width:992px) {
+    .thankyou-h2,h2 {
+        font-size: 40px;
+    }
+}
+
+.thankyou-h2 span {
+    font-weight: 700;
+}
+
+.thankyou-navbar {
+    background: #ffffff;
+}
+
+.thankyou-navbar .nav-item .nav-link {
+    color: var(--black);
+    font-family: var(--roboto);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.thankyou-navbar .nav-item .nav-link svg {
+    margin-right: 6px;
+}
+
+.thankyou-banner {
+    background: var(--black);
+    padding: 36px 0;
+}
+
+@media (min-width:768px) {
+    .thankyou-banner {
+        padding: 0;
+    }
+}
+
+.thankyou-banner h1 {
+    color: var(--heading-highlight, #e50914);
+    font-family: var(--roboto);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .thankyou-banner h1 {
+        text-align: left;
+        font-size: 40px;
+    }
+}
+
+.thankyou-banner .item>span {
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 16px 0;
+    display: block;
+}
+
+@media (min-width:768px) {
+    .thankyou-banner .item>span {
+        text-align: justify;
+        font-size: 28px;
+    }
+}
+
+.thankyou-banner .item>p {
+    overflow: hidden;
+    color: #ffffff;
+    font-family: var(--nunito-sans);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .thankyou-banner .item>p {
+        text-align: left;
+        font-size: 20px;
+    }
+}
+
+.thankyou-banner .item>a {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: linear-gradient(267deg, #E50914 -15.61%, #FF8A00 123.55%);
+    color: #ffffff;
+    text-align: center;
+    font-family: var(--nunito-sans);
+    font-size: 15px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media (min-width:768px) {
+    .thankyou-banner .item>a {
+        text-align: left;
+        font-size: 20px;
+        padding: 12px 35px;
+    }
+}
+
+.thankyou-sec {
+    padding: 36px 0;
+    background: rgba(229, 229, 229, 0.50);
+}
+
+@media (min-width:768px) {
+    .thankyou-sec {
+        padding: 72px 0;
+    }
+
+}
+
+/*========== thankyou--card-item style start =============*/
+.thankyou-sec .col-lg-3,.col-lg-3 {
+    margin-top: 32px;
+}
+
+.thankyou--card-item {
+    height: 100%;
+    border: 1px solid #D0D0D0;
+    display: block;
+    text-decoration: none;
+    color: var(--dark-charcoal);
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.thankyou--card-item>img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.thankyou--card-item>h4 {
+    /* color: #282828;
+    font-family: var(--roboto);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 15px 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; */
+    color: #080808;
+    font-family: "Nunito Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 10px 8px;
+    min-height: 60px;
+    /* text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; */
+}
+
+@media (min-width:768px) {
+    .thankyou--card-item>h4 {
+        font-size: 16px;
+        padding: 16px 12px;
+    }
+}
+
+.thankyou--card-item>a {
+    border-radius: 5px;
+    background: linear-gradient(0deg, #F0F0F0 0%, #F0F0F0 100%), linear-gradient(267deg, #EE224A -15.61%, #FF8A00 123.55%);
+    display: block;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #484848;
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 8px 10px 8px;
+}
+
+.thankyou--card-item>a:hover {
+    border-radius: 5px;
+    background: linear-gradient(267deg, #EE224A -15.61%, #FF8A00 123.55%);
+    color: #ffffff;
+}
+
+@media (min-width:768px) {
+    .thankyou--card-item>a {
+        padding: 12px;
+        font-size: 14px;
+        margin: 0 12px 16px 12px;
+    }
+}
+
+footer .item h3 {
+    color: var(--red);
+    font-family: var(--roboto);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+footer .item p {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--nunito-sans);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media (min-width:768px) {
+    footer .item p {
+        text-align: justify;
+        font-size: 16px;
+    }
+}
+
+footer .social-link a {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.copywright {
+    color: #FFF;
+    text-align: justify;
+    font-family: var(--nunito-sans);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 30px 0;
+    background: var(--black);
+    text-align: center;
+}

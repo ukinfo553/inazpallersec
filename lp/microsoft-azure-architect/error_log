@@ -1,0 +1,4 @@
+[04-Jun-2019 08:38:08 Etc/GMT] PHP Notice:  fputs(): send of 27 bytes failed with errno=32 Broken pipe in /home/infoswb1/public_html/pages/lp/phpmailer/class.smtp.php on line 497
+[04-Jun-2019 08:38:08 Etc/GMT] PHP Notice:  fputs(): send of 12 bytes failed with errno=32 Broken pipe in /home/infoswb1/public_html/pages/lp/phpmailer/class.smtp.php on line 215
+[04-Jun-2019 11:22:59 Etc/GMT] PHP Notice:  fputs(): send of 27 bytes failed with errno=32 Broken pipe in /home/infoswb1/public_html/pages/lp/phpmailer/class.smtp.php on line 497
+[04-Jun-2019 11:22:59 Etc/GMT] PHP Notice:  fputs(): send of 12 bytes failed with errno=32 Broken pipe in /home/infoswb1/public_html/pages/lp/phpmailer/class.smtp.php on line 215

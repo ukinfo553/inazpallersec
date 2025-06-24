@@ -1,0 +1,1022 @@
+<?php
+// Start session
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Get user's real IP
+function getUserIpAddr()
+{
+    $client = @$_SERVER['HTTP_CLIENT_IP'];
+    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remote = $_SERVER['REMOTE_ADDR'];
+
+    if (filter_var($client, FILTER_VALIDATE_IP)) {
+        return $client;
+    } elseif (filter_var($forward, FILTER_VALIDATE_IP)) {
+        return $forward;
+    } else {
+        return $remote;
+    }
+}
+
+// Generic function to fetch data via cURL
+function getdata($url, $args = false)
+{
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    if ($args) {
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $args);
+    }
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return $result;
+}
+
+// Detect country based on IP
+if (!isset($_SESSION['country']) || empty($_SESSION['country'])) {
+    $ip = getUserIpAddr();
+    $details = getdata("https://ipinfo.io/" . $ip . "/?token=116180fd94c9d5");
+    $details = json_decode($details);
+    $_SESSION['country'] = isset($details->country) ? $details->country : '';
+}
+
+$country = $_SESSION['country'];
+?>
+
+<!-- <?php include('include/comman_use.php'); ?> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Audit Masterclass</title>
+    <meta name="description" content="Cloud Audit Masterclass">
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="assets/images/favicon.ico">
+    <!--/ style link start /-->
+    <link href="assets/css/bootstrap-grid.css" rel="stylesheet" defer>
+    <link rel="stylesheet" href="assets/css/custom.css" defer>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--/ style link end /-->
+    <!-- Google Tag Manager -->
+    <script>
+        setTimeout(function () {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-5XZDRWG");
+        }, 10000);
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- <?php
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+        $pag_url = "https://";
+    } else {
+        $pag_url = "http://";
+    }
+    // Append the host(domain name, ip) to the URL.
+    $pag_url .= $_SERVER['HTTP_HOST'];
+    // Append the requested resource location to the URL
+    $pag_url .= $_SERVER['REQUEST_URI'];
+    ?> -->
+
+    <!--/ navbar start /-->
+    <nav class="navbar navbar-expand-lg py-3 d-flex">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-6 col-lg-2 cl-xl-3">
+                    <img src="https://www.infosectrain.com/wp-content/themes/Divi/assets/images/logo.svg"
+                        class="navbar-brand" alt="infosectrain" loading="lazy" width="306" height="31" />
+                </div>
+                <div class="col-6 col-lg-10 col-xl-9 d-flex justify-content-end">
+                    <input id="toggle" type="checkbox" />
+                    <label for="toggle" class="hamburger">
+                        <div class="top-bun"></div>
+                        <div class="meat"></div>
+                        <div class="bottom-bun"></div>
+                    </label>
+                    <ul class="sidenav">
+                        <li>
+                            <a href="#masterclass-agenda">Masterclass Agenda</a>
+                        </li>
+                        <li>
+                            <a href="#experts">Meet the Expert</a>
+                        </li>
+                        <li>
+                            <a href="#key-takeaways">Key Takeaways</a>
+                        </li>
+                    </ul>
+                    <a href="https://api.whatsapp.com/send?phone=918767256840&text=Hi" target="_blank"
+                        class="button ms-2 d-none d-md-block" style="background: #25d366;">
+                        <img src="assets/images/whatsapp.svg" alt="" width="20" class="me-2"
+                            style="vertical-align: bottom;">
+                        Let's Talk
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--/ navbar end /-->
+
+    <main>
+        <!--banner sec start-->
+        <section class="banner-sec pt-5 pb-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div
+                            class="meetup-container d-flex flex-column align-items-md-start align-items-center text-md-start text-center gap-3">
+                            <h1 class="meetup-title">Cloud Audit Masterclass</h1>
+                            <div class="fs-18 f-nunito text-white fw-bold">For Auditors Who Lead in the Cloud Era</div>
+
+                            <div class="live-badge align-items-center d-flex gap-md-3 gap-2 p-3 rounded-3"
+                                style="background: rgba(255, 204, 0, 0.20);border: 1px solid #FFCC00;">
+                                <img src="assets/images/live.gif" width="77" height="24" alt="">
+                                <div class="d-flex gap-3 flex-wrap">
+                                    <div class="fs-16 f-nunito text-white fw-bold d-flex gap-2 align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none">
+                                            <g clip-path="url(#clip0_22893_1717)">
+                                                <path
+                                                    d="M12.3333 1.33333H12V1C12 0.447333 11.552 0 11 0C10.448 0 10 0.447333 10 1V1.33333H6V1C6 0.447333 5.552 0 5 0C4.448 0 4 0.447333 4 1V1.33333H3.66667C1.64533 1.33333 0 2.978 0 5V12.3333C0 14.3553 1.64533 16 3.66667 16H12.3333C14.3547 16 16 14.3553 16 12.3333V5C16 2.978 14.3547 1.33333 12.3333 1.33333ZM12.3333 14H3.66667C2.74733 14 2 13.252 2 12.3333V6H14V12.3333C14 13.252 13.2527 14 12.3333 14ZM6.66667 8.33333V9.66667C6.66667 10.2187 6.21867 10.6667 5.66667 10.6667H4.33333C3.78133 10.6667 3.33333 10.2187 3.33333 9.66667V8.33333C3.33333 7.78133 3.78133 7.33333 4.33333 7.33333H5.66667C6.21867 7.33333 6.66667 7.78133 6.66667 8.33333Z"
+                                                    fill="#00FFFF" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_22893_1717">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span>1st - 3rd July, 2025</span>
+                                    </div>
+                                    <div class="fs-16 f-nunito text-white fw-bold d-flex gap-2 align-items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none">
+                                            <g clip-path="url(#clip0_22893_1721)">
+                                                <path
+                                                    d="M8.99761 1.41V1C8.99761 0.734784 8.89225 0.48043 8.70472 0.292893C8.51718 0.105357 8.26283 0 7.99761 0C7.73239 0 7.47804 0.105357 7.2905 0.292893C7.10297 0.48043 6.99761 0.734784 6.99761 1V1.41C5.72585 1.58173 4.52168 2.08513 3.50609 2.86964C2.49051 3.65415 1.69928 4.69213 1.2119 5.87928C0.724531 7.06644 0.55818 8.36095 0.729566 9.63276C0.900952 10.9046 1.40404 12.1089 2.18828 13.1247C1.91224 13.3515 1.69156 13.6384 1.54301 13.9633C1.39445 14.2883 1.32192 14.6428 1.33094 15C1.33094 15.2652 1.4363 15.5196 1.62384 15.7071C1.81137 15.8946 2.06573 16 2.33094 16C2.59616 16 2.85051 15.8946 3.03805 15.7071C3.22559 15.5196 3.33094 15.2652 3.33094 15C3.32076 14.9009 3.34549 14.8014 3.40087 14.7186C3.45626 14.6359 3.53881 14.575 3.63428 14.5467C4.89327 15.4894 6.42378 15.9989 7.99661 15.9989C9.56944 15.9989 11.1 15.4894 12.3589 14.5467C12.4548 14.5747 12.5378 14.6353 12.5936 14.7181C12.6493 14.8009 12.6744 14.9007 12.6643 15C12.6643 15.2652 12.7696 15.5196 12.9572 15.7071C13.1447 15.8946 13.3991 16 13.6643 16C13.9295 16 14.1838 15.8946 14.3714 15.7071C14.5589 15.5196 14.6643 15.2652 14.6643 15C14.6733 14.6428 14.6008 14.2883 14.4522 13.9633C14.3037 13.6384 14.083 13.3515 13.8069 13.1247C14.5912 12.1089 15.0943 10.9046 15.2657 9.63276C15.437 8.36095 15.2707 7.06644 14.7833 5.87928C14.2959 4.69213 13.5047 3.65415 12.4891 2.86964C11.4735 2.08513 10.2694 1.58173 8.99761 1.41ZM2.66428 8.66667C2.66428 7.61183 2.97707 6.58069 3.56311 5.70363C4.14914 4.82656 4.98209 4.14298 5.95663 3.73931C6.93117 3.33564 8.00353 3.23002 9.03809 3.43581C10.0727 3.6416 11.023 4.14955 11.7688 4.89543C12.5147 5.64131 13.0227 6.59162 13.2285 7.62619C13.4343 8.66075 13.3286 9.73311 12.925 10.7076C12.5213 11.6822 11.8377 12.5151 10.9607 13.1012C10.0836 13.6872 9.05244 14 7.99761 14C6.58361 13.9984 5.22798 13.436 4.22813 12.4361C3.22828 11.4363 2.66586 10.0807 2.66428 8.66667Z"
+                                                    fill="#00FFFF" />
+                                                <path
+                                                    d="M13 0.0012864C12.7348 0.0012864 12.4804 0.106643 12.2929 0.29418C12.1054 0.481716 12 0.73607 12 1.00129C12 1.2665 12.1054 1.52086 12.2929 1.70839C12.4804 1.89593 12.7348 2.00129 13 2.00129C13.1327 1.99096 13.2661 2.00997 13.3907 2.05698C13.5152 2.10398 13.6279 2.17782 13.7208 2.27326C13.8136 2.36869 13.8843 2.48339 13.9278 2.60921C13.9714 2.73503 13.9867 2.86889 13.9727 3.00129C13.9727 3.2665 14.078 3.52086 14.2656 3.70839C14.4531 3.89593 14.7074 4.00129 14.9727 4.00129C15.2379 4.00129 15.4922 3.89593 15.6798 3.70839C15.8673 3.52086 15.9727 3.2665 15.9727 3.00129C15.9881 2.6055 15.922 2.21077 15.7784 1.84162C15.6349 1.47247 15.4169 1.13679 15.1381 0.85544C14.8593 0.574087 14.5257 0.353074 14.1578 0.206134C13.79 0.0591943 13.3959 -0.0105325 13 0.0012864Z"
+                                                    fill="#00FFFF" />
+                                                <path
+                                                    d="M2.02563 3.00129C2.01164 2.86889 2.02695 2.73503 2.07048 2.60921C2.11401 2.48339 2.1847 2.36869 2.27753 2.27326C2.37036 2.17782 2.48305 2.10398 2.60762 2.05698C2.73218 2.00997 2.86556 1.99096 2.9983 2.00129C3.26352 2.00129 3.51787 1.89593 3.70541 1.70839C3.89294 1.52086 3.9983 1.2665 3.9983 1.00129C3.9983 0.73607 3.89294 0.481716 3.70541 0.29418C3.51787 0.106643 3.26352 0.0012864 2.9983 0.0012864C2.60239 -0.0105325 2.20828 0.0591943 1.84046 0.206134C1.47264 0.353074 1.13897 0.574087 0.860182 0.85544C0.581393 1.13679 0.363443 1.47247 0.219876 1.84162C0.0763086 2.21077 0.0101918 2.6055 0.0256338 3.00129C0.0256338 3.2665 0.130991 3.52086 0.318527 3.70839C0.506063 3.89593 0.760417 4.00129 1.02563 4.00129C1.29085 4.00129 1.5452 3.89593 1.73274 3.70839C1.92028 3.52086 2.02563 3.2665 2.02563 3.00129Z"
+                                                    fill="#00FFFF" />
+                                                <path
+                                                    d="M9.02344 8.25397V5.66797C9.02344 5.40275 8.91808 5.1484 8.73054 4.96086C8.54301 4.77333 8.28865 4.66797 8.02344 4.66797C7.75822 4.66797 7.50387 4.77333 7.31633 4.96086C7.12879 5.1484 7.02344 5.40275 7.02344 5.66797V8.52997C7.02351 8.88356 7.16404 9.22265 7.4141 9.47264L8.60944 10.668C8.79804 10.8501 9.05064 10.9509 9.31284 10.9486C9.57504 10.9464 9.82585 10.8412 10.0113 10.6558C10.1967 10.4704 10.3018 10.2196 10.3041 9.95737C10.3064 9.69517 10.2056 9.44257 10.0234 9.25397L9.02344 8.25397Z"
+                                                    fill="#00FFFF" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_22893_1721">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span>8 PM – 10 PM (IST)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="d-flex flex-wrap justify-content-md-start justify-content-center gap-3 feature-boxes">
+                                <div class="feature-box d-flex align-items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M11.8878 1.42681L7.71121 0.03416C7.57446 -0.0113867 7.42664 -0.0113867 7.28989 0.03416L3.11328 1.42681C2.44923 1.64739 1.87158 2.07163 1.46241 2.63926C1.05323 3.20689 0.833343 3.88903 0.833986 4.58876V8.00004C0.833986 13.042 6.96722 15.8266 7.22989 15.9426C7.3151 15.9804 7.40731 16 7.50055 16C7.59379 16 7.686 15.9804 7.77121 15.9426C8.03387 15.8266 14.1671 13.042 14.1671 8.00004V4.58876C14.1678 3.88903 13.9479 3.20689 13.5387 2.63926C13.1295 2.07163 12.5519 1.64739 11.8878 1.42681ZM10.6458 6.47806L7.79788 9.32602C7.68134 9.44334 7.54265 9.53634 7.38987 9.59963C7.23709 9.66292 7.07326 9.69522 6.90789 9.69468H6.88589C6.71716 9.69209 6.5507 9.65531 6.39658 9.58656C6.24246 9.51781 6.10389 9.41852 5.98924 9.29469L4.45193 7.69471C4.38535 7.63294 4.3321 7.55822 4.29543 7.47513C4.25877 7.39204 4.23947 7.30233 4.23872 7.21151C4.23797 7.1207 4.25578 7.03068 4.29107 6.947C4.32635 6.86331 4.37836 6.78772 4.44391 6.72486C4.50946 6.66199 4.58716 6.61318 4.67224 6.58143C4.75733 6.54967 4.84801 6.53563 4.93871 6.54018C5.02942 6.54472 5.11824 6.56775 5.19973 6.60786C5.28121 6.64796 5.35365 6.70429 5.41258 6.77339L6.90856 8.33337L9.70052 5.53341C9.82625 5.41197 9.99465 5.34478 10.1694 5.3463C10.3442 5.34782 10.5114 5.41793 10.635 5.54153C10.7587 5.66513 10.8288 5.83234 10.8303 6.00713C10.8318 6.18193 10.7646 6.35033 10.6432 6.47606L10.6458 6.47806Z"
+                                            fill="#00FFFF" />
+                                    </svg>
+                                    <div class="fs-16 f-nunito fw-bold text-white">3 days</div>
+                                </div>
+
+                                <div class="feature-box d-flex align-items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M11.8878 1.42681L7.71121 0.03416C7.57446 -0.0113867 7.42664 -0.0113867 7.28989 0.03416L3.11328 1.42681C2.44923 1.64739 1.87158 2.07163 1.46241 2.63926C1.05323 3.20689 0.833343 3.88903 0.833986 4.58876V8.00004C0.833986 13.042 6.96722 15.8266 7.22989 15.9426C7.3151 15.9804 7.40731 16 7.50055 16C7.59379 16 7.686 15.9804 7.77121 15.9426C8.03387 15.8266 14.1671 13.042 14.1671 8.00004V4.58876C14.1678 3.88903 13.9479 3.20689 13.5387 2.63926C13.1295 2.07163 12.5519 1.64739 11.8878 1.42681ZM10.6458 6.47806L7.79788 9.32602C7.68134 9.44334 7.54265 9.53634 7.38987 9.59963C7.23709 9.66292 7.07326 9.69522 6.90789 9.69468H6.88589C6.71716 9.69209 6.5507 9.65531 6.39658 9.58656C6.24246 9.51781 6.10389 9.41852 5.98924 9.29469L4.45193 7.69471C4.38535 7.63294 4.3321 7.55822 4.29543 7.47513C4.25877 7.39204 4.23947 7.30233 4.23872 7.21151C4.23797 7.1207 4.25578 7.03068 4.29107 6.947C4.32635 6.86331 4.37836 6.78772 4.44391 6.72486C4.50946 6.66199 4.58716 6.61318 4.67224 6.58143C4.75733 6.54967 4.84801 6.53563 4.93871 6.54018C5.02942 6.54472 5.11824 6.56775 5.19973 6.60786C5.28121 6.64796 5.35365 6.70429 5.41258 6.77339L6.90856 8.33337L9.70052 5.53341C9.82625 5.41197 9.99465 5.34478 10.1694 5.3463C10.3442 5.34782 10.5114 5.41793 10.635 5.54153C10.7587 5.66513 10.8288 5.83234 10.8303 6.00713C10.8318 6.18193 10.7646 6.35033 10.6432 6.47606L10.6458 6.47806Z"
+                                            fill="#00FFFF" />
+                                    </svg>
+                                    <div class="fs-16 f-nunito fw-bold text-white">Hands-On Sessions</div>
+                                </div>
+
+                                <div class="feature-box d-flex align-items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M11.8878 1.42681L7.71121 0.03416C7.57446 -0.0113867 7.42664 -0.0113867 7.28989 0.03416L3.11328 1.42681C2.44923 1.64739 1.87158 2.07163 1.46241 2.63926C1.05323 3.20689 0.833343 3.88903 0.833986 4.58876V8.00004C0.833986 13.042 6.96722 15.8266 7.22989 15.9426C7.3151 15.9804 7.40731 16 7.50055 16C7.59379 16 7.686 15.9804 7.77121 15.9426C8.03387 15.8266 14.1671 13.042 14.1671 8.00004V4.58876C14.1678 3.88903 13.9479 3.20689 13.5387 2.63926C13.1295 2.07163 12.5519 1.64739 11.8878 1.42681ZM10.6458 6.47806L7.79788 9.32602C7.68134 9.44334 7.54265 9.53634 7.38987 9.59963C7.23709 9.66292 7.07326 9.69522 6.90789 9.69468H6.88589C6.71716 9.69209 6.5507 9.65531 6.39658 9.58656C6.24246 9.51781 6.10389 9.41852 5.98924 9.29469L4.45193 7.69471C4.38535 7.63294 4.3321 7.55822 4.29543 7.47513C4.25877 7.39204 4.23947 7.30233 4.23872 7.21151C4.23797 7.1207 4.25578 7.03068 4.29107 6.947C4.32635 6.86331 4.37836 6.78772 4.44391 6.72486C4.50946 6.66199 4.58716 6.61318 4.67224 6.58143C4.75733 6.54967 4.84801 6.53563 4.93871 6.54018C5.02942 6.54472 5.11824 6.56775 5.19973 6.60786C5.28121 6.64796 5.35365 6.70429 5.41258 6.77339L6.90856 8.33337L9.70052 5.53341C9.82625 5.41197 9.99465 5.34478 10.1694 5.3463C10.3442 5.34782 10.5114 5.41793 10.635 5.54153C10.7587 5.66513 10.8288 5.83234 10.8303 6.00713C10.8318 6.18193 10.7646 6.35033 10.6432 6.47606L10.6458 6.47806Z"
+                                            fill="#00FFFF" />
+                                    </svg>
+                                    <div class="fs-16 f-nunito fw-bold text-white">Cutting-Edge Audit Tools</div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex gap-4 align-items-center mt-2">
+                                <button class="button modal-btn" modal-title="Join Now">JOIN NOW</button>
+                                <div class="d-flex align-items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_22989_916)">
+                                            <path
+                                                d="M12 24.5C18.6274 24.5 24 19.1274 24 12.5C24 5.87258 18.6274 0.5 12 0.5C5.37258 0.5 0 5.87258 0 12.5C0 19.1274 5.37258 24.5 12 24.5Z"
+                                                fill="#FFB703" />
+                                            <path
+                                                d="M12.0007 21.228C16.8207 21.228 20.728 17.3207 20.728 12.5007C20.728 7.68077 16.8207 3.77344 12.0007 3.77344C7.18077 3.77344 3.27344 7.68077 3.27344 12.5007C3.27344 17.3207 7.18077 21.228 12.0007 21.228Z"
+                                                fill="#FFCC29" />
+                                            <path
+                                                d="M12.0039 21.1171C16.7609 21.1171 20.6172 17.2609 20.6172 12.5039C20.6172 7.74691 16.7609 3.89062 12.0039 3.89062C7.24693 3.89062 3.39062 7.74691 3.39062 12.5039C3.39062 17.2609 7.24693 21.1171 12.0039 21.1171Z"
+                                                stroke="#F99300" stroke-width="0.75" stroke-miterlimit="10" />
+                                            <path
+                                                d="M16.002 22.4454C17.971 21.6485 19.6571 20.2816 20.8443 18.5201C22.0315 16.7587 22.6655 14.6828 22.6653 12.5586"
+                                                stroke="#FFCC29" stroke-width="0.75" stroke-miterlimit="10"
+                                                stroke-linecap="round" />
+                                            <path d="M6.66797 3.26376C8.28807 2.32579 10.1275 1.83319 11.9995 1.83595"
+                                                stroke="#FFCC29" stroke-width="0.75" stroke-miterlimit="10"
+                                                stroke-linecap="round" />
+                                            <path d="M3.02734 6.73218C3.54664 5.92775 4.1716 5.19669 4.88547 4.55859"
+                                                stroke="#FFCC29" stroke-width="0.75" stroke-miterlimit="10"
+                                                stroke-linecap="round" />
+                                            <path d="M2.6315 17.6058C1.77771 16.041 1.33151 14.2865 1.33399 12.5039"
+                                                stroke="#FFCC29" stroke-width="0.75" stroke-miterlimit="10"
+                                                stroke-linecap="round" />
+                                            <path
+                                                d="M14.164 11.0636L12.1213 8.10726C12.1077 8.08743 12.0895 8.07122 12.0682 8.06002C12.047 8.04882 12.0233 8.04297 11.9992 8.04297C11.9752 8.04297 11.9515 8.04882 11.9303 8.06002C11.909 8.07122 11.8908 8.08743 11.8772 8.10726L9.83446 11.0636C9.81489 11.0921 9.78598 11.1129 9.75272 11.1224C9.71946 11.1319 9.68394 11.1295 9.65228 11.1155L6.75376 9.82797C6.72788 9.8166 6.6993 9.81283 6.67136 9.8171C6.64341 9.82137 6.61726 9.8335 6.59596 9.85208C6.57466 9.87066 6.55908 9.89492 6.55106 9.92202C6.54303 9.94913 6.54288 9.97795 6.55062 10.0051L8.23126 15.7603C8.24023 15.7911 8.25898 15.8183 8.28468 15.8376C8.31039 15.8569 8.34167 15.8673 8.37381 15.8673H15.6251C15.6573 15.8673 15.6885 15.8569 15.7143 15.8376C15.74 15.8183 15.7587 15.7911 15.7677 15.7603L17.4483 10.0051C17.4561 9.97795 17.4559 9.94913 17.4479 9.92202C17.4399 9.89492 17.4243 9.87066 17.403 9.85208C17.3817 9.8335 17.3555 9.82137 17.3276 9.8171C17.2996 9.81283 17.2711 9.8166 17.2452 9.82797L14.3467 11.1155C14.3149 11.1293 14.2794 11.1317 14.2461 11.1222C14.2128 11.1127 14.1838 11.092 14.164 11.0636Z"
+                                                fill="#F99300" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_22989_916">
+                                                <rect width="24" height="24" fill="white"
+                                                    transform="translate(0 0.5)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="fs-16 f-nunito text-white fw-bold">Earn 6 CPE Credits</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <img src="assets/images/banner-img.webp" width="1074" height="579"
+                            class="img-fluid d-block m-auto" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--banner sec end-->
+
+        <div class="price-offer">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div
+                        class="col-lg-10 text-center d-flex flex-column flex-lg-row align-items-center justify-content-center gap-md-5 gap-3 pb-4 pb-lg-0">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/early-bird-offer.svg" width="36" height="37" class="d-block" alt="">
+                            <div>
+                                <div class="fs-28 f-nunito fw-bold text-white">Special Early Bird Offer!</div>
+                            </div>
+                        </div>
+                        <div class="text-white d-flex align-items-center gap-md-5 gap-3 fw-bold f-nunito">
+                            <sup class="fs-18 text-white">
+                                <?php if ($country == 'IN') { ?>
+                                    <del>₹4,999/-</del>
+                                <?php } else { ?>
+                                    <del>$299/-</del>
+                                <?php } ?>
+                            </sup>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="price fw-bold">
+                                    <?php if ($country == 'IN') { ?>
+                                        ₹1999/-
+                                    <?php } else { ?>
+                                        $99/-
+                                    <?php } ?>
+                                </div>
+<?php if ($country == 'IN') { ?>
+                                <sup class="fs-16">+ GST</sup>
+<?php }?>
+                            </div>
+                            <button class="button modal-btn d-none d-md-block" modal-title="Avail Now">avail
+                                now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="row flex-column-reverse flex-lg-row">
+                    <div class="col-lg-8 mt-4 mt-lg-0">
+                        <div class="item">
+                            <div class="fs-24 text-red fw-bold f-nunito">
+                                Why Attend?
+                            </div>
+                            <p class="mt-3">
+                                Join this intensive 3-day masterclass designed for auditors ready to master cloud
+                                environments. Covering foundational AWS principles to advanced auditing and compliance
+                                practices, this program offers a complete and practical learning journey.
+                            </p>
+                            <p class="mt-3">
+                                Through real-world scenarios and hands-on exercises, you'll develop the skills to
+                                confidently assess cloud environments, manage risks proactively, and ensure compliance
+                                with evolving standards. Experience deep insights into AWS and cloud security through
+                                live demonstrations and interactive workshops that empower your success.
+                            </p>
+                        </div>
+
+                        <div class="fs-24 fw-bold text-red f-nunito my-4" id="experts">
+                            Meet the Expert
+                        </div>
+
+                        <div class="p-3 f-nunito rounded-3 d-flex flex-column gap-2"
+                            style="background: var(--light-blue);">
+                            <div class="p-3 d-flex flex-wrap gap-md-3 g-2 bg-white rounded-3 fs-18">
+                                <span class="fw-bold">Krish</span>
+                                <span class="fw-bold text-red">18+ Years of Experience</span>
+                                <span class="text-dark-grey">Cloud Security Expert</span>
+                            </div>
+                            <div class="text-disable-grey fw-bold">Credentials at a glance:</div>
+                            <div class="fs-16 text-dark">
+                                Cloud Audit | CCSP | CCSK | CCAK | AWS CS-S | AWS CAN-S | AWS CSA-P | AWS CDE-P | MCT |
+                                Azure Advanced Architect & Security | GCP PCA | GCP PCSE | CEH | RHCE | AIGP
+                            </div>
+                            <div class="fs-16 text-dark">
+                                With proven expertise in cloud audit, security, and architecture, Krish is a globally
+                                recognized authority on AWS, Azure, and GCP platforms. Krish has trained more than 1,000
+                                professionals worldwide, including those from Fortune 500 organizations, and has
+                                designed cloud security architectures for over 60 enterprises. As a Microsoft Certified
+                                Trainer and published subject matter expert, Krish integrates extensive technical
+                                knowledge with practical insights to deliver effective cloud audit mastery.
+                            </div>
+                        </div>
+
+                        <div class="fs-24 fw-bold text-red f-nunito my-4" id="masterclass-agenda">
+                            Masterclass Agenda
+                        </div>
+
+                        <div class="d-flex gap-md-3 gap-2 align-items-md-center flex-lg-row flex-column p-3 f-nunito text-dark fw-bold rounded-3 fs-18"
+                            style="background: #FFF8CC;">
+                            <div>
+                                Cloud & AWS Fundamentals for Auditors
+                            </div>
+
+                            <div class="d-flex gap-3 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_22891_1393)">
+                                        <path
+                                            d="M20.359 15L20.124 14.946C19.6109 13.7857 18.7308 12.8261 17.6191 12.2149C16.5074 11.6037 15.2256 11.3746 13.971 11.563C12.6544 11.7729 11.4533 12.4386 10.5775 13.4439C9.70162 14.4491 9.20666 15.73 9.179 17.063C9.17657 17.266 9.18928 17.4689 9.217 17.67C8.52371 17.948 7.93629 18.4384 7.53902 19.0709C7.14175 19.7035 6.95504 20.4456 7.00568 21.1908C7.05632 21.936 7.34172 22.646 7.82091 23.219C8.30011 23.7919 8.94848 24.1984 9.673 24.38C9.96371 24.4543 10.262 24.4949 10.562 24.501H19.179C19.5267 24.4946 19.8728 24.4527 20.212 24.376C21.2721 24.1432 22.2225 23.5593 22.9092 22.7189C23.596 21.8785 23.9789 20.8309 23.9959 19.7457C24.0129 18.6605 23.6631 17.6013 23.003 16.7398C22.3429 15.8783 21.4112 15.2649 20.359 14.999V15ZM20.943 20.117C20.8571 20.4448 20.6824 20.7426 20.4383 20.9776C20.1941 21.2126 19.8899 21.3757 19.559 21.449C19.4251 21.48 19.2884 21.4977 19.151 21.502H10.605C10.5419 21.5007 10.4791 21.4919 10.418 21.476C10.3249 21.4508 10.2396 21.4027 10.1697 21.3362C10.0999 21.2697 10.0477 21.1868 10.018 21.095C9.93 20.769 10.269 20.461 10.536 20.372C11.1098 20.1676 11.5933 19.7679 11.902 19.2428C12.2106 18.7177 12.3246 18.1007 12.224 17.5C12.1977 17.3756 12.1826 17.2491 12.179 17.122C12.1826 16.9197 12.2091 16.7184 12.258 16.522C12.3739 16.0142 12.6393 15.5527 13.0201 15.1973C13.4008 14.8419 13.8794 14.6087 14.394 14.528C15.0012 14.4339 15.6224 14.5421 16.1621 14.8359C16.7017 15.1297 17.1296 15.5929 17.38 16.154C17.5706 16.6101 17.8745 17.0099 18.2631 17.3155C18.6516 17.6211 19.1118 17.8223 19.6 17.9C20.0715 18.0162 20.4776 18.3146 20.7294 18.7299C20.9812 19.1451 21.058 19.6432 20.943 20.115V20.117ZM7.378 14.242L4.9 16.717C4.61404 16.9707 4.24203 17.1056 3.85995 17.0942C3.47788 17.0828 3.11456 16.926 2.8442 16.6558C2.57385 16.3855 2.41686 16.0223 2.4053 15.6402C2.39374 15.2582 2.52848 14.8861 2.782 14.6L4.329 13.052C4.04454 12.5674 3.8304 12.0449 3.693 11.5H1.5C1.10218 11.5 0.720644 11.342 0.43934 11.0607C0.158035 10.7794 0 10.3978 0 10C0 9.60218 0.158035 9.22064 0.43934 8.93934C0.720644 8.65804 1.10218 8.5 1.5 8.5H3.7C3.84025 7.95863 4.05568 7.43958 4.34 6.958L2.782 5.4C2.52848 5.11392 2.39374 4.74185 2.4053 4.35978C2.41686 3.9777 2.57385 3.61446 2.8442 3.34423C3.11456 3.07401 3.47788 2.91719 3.85995 2.90581C4.24203 2.89443 4.61404 3.02934 4.9 3.283L6.458 4.837C6.93974 4.55373 7.45878 4.33931 8 4.2V2C8 1.60218 8.15804 1.22064 8.43934 0.93934C8.72064 0.658035 9.10218 0.5 9.5 0.5C9.89782 0.5 10.2794 0.658035 10.5607 0.93934C10.842 1.22064 11 1.60218 11 2V4.2C11.5428 4.338 12.0633 4.55212 12.546 4.836L14.1 3.283C14.386 3.02934 14.758 2.89443 15.14 2.90581C15.5221 2.91719 15.8854 3.07401 16.1558 3.34423C16.4262 3.61446 16.5831 3.9777 16.5947 4.35978C16.6063 4.74185 16.4715 5.11392 16.218 5.4L14.659 6.962C14.731 7.086 14.812 7.203 14.876 7.333C15.0529 7.68945 15.081 8.10158 14.954 8.47871C14.827 8.85585 14.5555 9.1671 14.199 9.344C13.8425 9.5209 13.4304 9.54895 13.0533 9.42199C12.6762 9.29503 12.3649 9.02345 12.188 8.667C9.938 4.635 4.279 8.702 7.379 12.122C7.65977 12.4034 7.81737 12.7847 7.81718 13.1822C7.81699 13.5797 7.65903 13.9609 7.378 14.242Z"
+                                            fill="#E50914" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22891_1393">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>DAY 1</span>
+                                <span>1st July, 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <p class="fw-bold">Cloud Fundamentals for Auditors</p>
+                            <ul>
+                                <li>Introduction</li>
+                                <li>Core Cloud Concepts</li>
+                                <li>Cloud Risks & Compliance</li>
+                                <li>Q&A</li>
+                            </ul>
+                        </div>
+                        <div class="mt-3">
+                            <p class="fw-bold">AWS Essentials for Auditors</p>
+                            <ul>
+                                <li>AWS Global Infrastructure</li>
+                                <li>Key AWS Services for Auditing</li>
+                                <li>AWS Shared Responsibility Model in Detail</li>
+                                <li>Q&A </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-4 d-flex gap-md-3 gap-2 align-items-md-center flex-lg-row flex-column p-3 f-nunito text-dark fw-bold rounded-3 fs-18"
+                            style="background: #FFF8CC;">
+                            <div>
+                                Cloud Auditing Methodologies & Techniques
+                            </div>
+
+                            <div class="d-flex gap-3 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_22891_1393)">
+                                        <path
+                                            d="M20.359 15L20.124 14.946C19.6109 13.7857 18.7308 12.8261 17.6191 12.2149C16.5074 11.6037 15.2256 11.3746 13.971 11.563C12.6544 11.7729 11.4533 12.4386 10.5775 13.4439C9.70162 14.4491 9.20666 15.73 9.179 17.063C9.17657 17.266 9.18928 17.4689 9.217 17.67C8.52371 17.948 7.93629 18.4384 7.53902 19.0709C7.14175 19.7035 6.95504 20.4456 7.00568 21.1908C7.05632 21.936 7.34172 22.646 7.82091 23.219C8.30011 23.7919 8.94848 24.1984 9.673 24.38C9.96371 24.4543 10.262 24.4949 10.562 24.501H19.179C19.5267 24.4946 19.8728 24.4527 20.212 24.376C21.2721 24.1432 22.2225 23.5593 22.9092 22.7189C23.596 21.8785 23.9789 20.8309 23.9959 19.7457C24.0129 18.6605 23.6631 17.6013 23.003 16.7398C22.3429 15.8783 21.4112 15.2649 20.359 14.999V15ZM20.943 20.117C20.8571 20.4448 20.6824 20.7426 20.4383 20.9776C20.1941 21.2126 19.8899 21.3757 19.559 21.449C19.4251 21.48 19.2884 21.4977 19.151 21.502H10.605C10.5419 21.5007 10.4791 21.4919 10.418 21.476C10.3249 21.4508 10.2396 21.4027 10.1697 21.3362C10.0999 21.2697 10.0477 21.1868 10.018 21.095C9.93 20.769 10.269 20.461 10.536 20.372C11.1098 20.1676 11.5933 19.7679 11.902 19.2428C12.2106 18.7177 12.3246 18.1007 12.224 17.5C12.1977 17.3756 12.1826 17.2491 12.179 17.122C12.1826 16.9197 12.2091 16.7184 12.258 16.522C12.3739 16.0142 12.6393 15.5527 13.0201 15.1973C13.4008 14.8419 13.8794 14.6087 14.394 14.528C15.0012 14.4339 15.6224 14.5421 16.1621 14.8359C16.7017 15.1297 17.1296 15.5929 17.38 16.154C17.5706 16.6101 17.8745 17.0099 18.2631 17.3155C18.6516 17.6211 19.1118 17.8223 19.6 17.9C20.0715 18.0162 20.4776 18.3146 20.7294 18.7299C20.9812 19.1451 21.058 19.6432 20.943 20.115V20.117ZM7.378 14.242L4.9 16.717C4.61404 16.9707 4.24203 17.1056 3.85995 17.0942C3.47788 17.0828 3.11456 16.926 2.8442 16.6558C2.57385 16.3855 2.41686 16.0223 2.4053 15.6402C2.39374 15.2582 2.52848 14.8861 2.782 14.6L4.329 13.052C4.04454 12.5674 3.8304 12.0449 3.693 11.5H1.5C1.10218 11.5 0.720644 11.342 0.43934 11.0607C0.158035 10.7794 0 10.3978 0 10C0 9.60218 0.158035 9.22064 0.43934 8.93934C0.720644 8.65804 1.10218 8.5 1.5 8.5H3.7C3.84025 7.95863 4.05568 7.43958 4.34 6.958L2.782 5.4C2.52848 5.11392 2.39374 4.74185 2.4053 4.35978C2.41686 3.9777 2.57385 3.61446 2.8442 3.34423C3.11456 3.07401 3.47788 2.91719 3.85995 2.90581C4.24203 2.89443 4.61404 3.02934 4.9 3.283L6.458 4.837C6.93974 4.55373 7.45878 4.33931 8 4.2V2C8 1.60218 8.15804 1.22064 8.43934 0.93934C8.72064 0.658035 9.10218 0.5 9.5 0.5C9.89782 0.5 10.2794 0.658035 10.5607 0.93934C10.842 1.22064 11 1.60218 11 2V4.2C11.5428 4.338 12.0633 4.55212 12.546 4.836L14.1 3.283C14.386 3.02934 14.758 2.89443 15.14 2.90581C15.5221 2.91719 15.8854 3.07401 16.1558 3.34423C16.4262 3.61446 16.5831 3.9777 16.5947 4.35978C16.6063 4.74185 16.4715 5.11392 16.218 5.4L14.659 6.962C14.731 7.086 14.812 7.203 14.876 7.333C15.0529 7.68945 15.081 8.10158 14.954 8.47871C14.827 8.85585 14.5555 9.1671 14.199 9.344C13.8425 9.5209 13.4304 9.54895 13.0533 9.42199C12.6762 9.29503 12.3649 9.02345 12.188 8.667C9.938 4.635 4.279 8.702 7.379 12.122C7.65977 12.4034 7.81737 12.7847 7.81718 13.1822C7.81699 13.5797 7.65903 13.9609 7.378 14.242Z"
+                                            fill="#E50914" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22891_1393">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>DAY 2</span>
+                                <span>2nd July, 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <p class="fw-bold">End-to-End Cloud Audit Process & Planning</p>
+                            <ul>
+                                <li>The Cloud Audit Lifecycle: A Step-by-Step Guide</li>
+                                <li>Initiation & Scoping</li>
+                                <li>Planning & Risk Assessment</li>
+                                <li>Execution & Evidence Gathering</li>
+                                <li>Reporting & Follow-up</li>
+                                <li>Audit Planning & Program Development</li>
+                                <li>Evidence Collection Techniques in Cloud Environments</li>
+                                <li>Q&A</li>
+                            </ul>
+                        </div>
+                        <div class="mt-3">
+                            <p class="fw-bold">Auditing Core Cloud Security Domains</p>
+                            <ul>
+                                <li>Auditing Identity & Access Management (IAM)</li>
+                                <li>Auditing Network Security</li>
+                                <li>Auditing Data Security & Encryption</li>
+                                <li>Reporting Cloud Audit Findings</li>
+                                <li>Q&A</li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-4 d-flex gap-md-3 gap-2 align-items-md-center flex-lg-row flex-column p-3 f-nunito text-dark fw-bold rounded-3 fs-18"
+                            style="background: #FFF8CC;">
+                            <div>
+                                Auditing AWS Cloud - Practical Scenarios
+                            </div>
+
+                            <div class="d-flex gap-3 align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_22891_1393)">
+                                        <path
+                                            d="M20.359 15L20.124 14.946C19.6109 13.7857 18.7308 12.8261 17.6191 12.2149C16.5074 11.6037 15.2256 11.3746 13.971 11.563C12.6544 11.7729 11.4533 12.4386 10.5775 13.4439C9.70162 14.4491 9.20666 15.73 9.179 17.063C9.17657 17.266 9.18928 17.4689 9.217 17.67C8.52371 17.948 7.93629 18.4384 7.53902 19.0709C7.14175 19.7035 6.95504 20.4456 7.00568 21.1908C7.05632 21.936 7.34172 22.646 7.82091 23.219C8.30011 23.7919 8.94848 24.1984 9.673 24.38C9.96371 24.4543 10.262 24.4949 10.562 24.501H19.179C19.5267 24.4946 19.8728 24.4527 20.212 24.376C21.2721 24.1432 22.2225 23.5593 22.9092 22.7189C23.596 21.8785 23.9789 20.8309 23.9959 19.7457C24.0129 18.6605 23.6631 17.6013 23.003 16.7398C22.3429 15.8783 21.4112 15.2649 20.359 14.999V15ZM20.943 20.117C20.8571 20.4448 20.6824 20.7426 20.4383 20.9776C20.1941 21.2126 19.8899 21.3757 19.559 21.449C19.4251 21.48 19.2884 21.4977 19.151 21.502H10.605C10.5419 21.5007 10.4791 21.4919 10.418 21.476C10.3249 21.4508 10.2396 21.4027 10.1697 21.3362C10.0999 21.2697 10.0477 21.1868 10.018 21.095C9.93 20.769 10.269 20.461 10.536 20.372C11.1098 20.1676 11.5933 19.7679 11.902 19.2428C12.2106 18.7177 12.3246 18.1007 12.224 17.5C12.1977 17.3756 12.1826 17.2491 12.179 17.122C12.1826 16.9197 12.2091 16.7184 12.258 16.522C12.3739 16.0142 12.6393 15.5527 13.0201 15.1973C13.4008 14.8419 13.8794 14.6087 14.394 14.528C15.0012 14.4339 15.6224 14.5421 16.1621 14.8359C16.7017 15.1297 17.1296 15.5929 17.38 16.154C17.5706 16.6101 17.8745 17.0099 18.2631 17.3155C18.6516 17.6211 19.1118 17.8223 19.6 17.9C20.0715 18.0162 20.4776 18.3146 20.7294 18.7299C20.9812 19.1451 21.058 19.6432 20.943 20.115V20.117ZM7.378 14.242L4.9 16.717C4.61404 16.9707 4.24203 17.1056 3.85995 17.0942C3.47788 17.0828 3.11456 16.926 2.8442 16.6558C2.57385 16.3855 2.41686 16.0223 2.4053 15.6402C2.39374 15.2582 2.52848 14.8861 2.782 14.6L4.329 13.052C4.04454 12.5674 3.8304 12.0449 3.693 11.5H1.5C1.10218 11.5 0.720644 11.342 0.43934 11.0607C0.158035 10.7794 0 10.3978 0 10C0 9.60218 0.158035 9.22064 0.43934 8.93934C0.720644 8.65804 1.10218 8.5 1.5 8.5H3.7C3.84025 7.95863 4.05568 7.43958 4.34 6.958L2.782 5.4C2.52848 5.11392 2.39374 4.74185 2.4053 4.35978C2.41686 3.9777 2.57385 3.61446 2.8442 3.34423C3.11456 3.07401 3.47788 2.91719 3.85995 2.90581C4.24203 2.89443 4.61404 3.02934 4.9 3.283L6.458 4.837C6.93974 4.55373 7.45878 4.33931 8 4.2V2C8 1.60218 8.15804 1.22064 8.43934 0.93934C8.72064 0.658035 9.10218 0.5 9.5 0.5C9.89782 0.5 10.2794 0.658035 10.5607 0.93934C10.842 1.22064 11 1.60218 11 2V4.2C11.5428 4.338 12.0633 4.55212 12.546 4.836L14.1 3.283C14.386 3.02934 14.758 2.89443 15.14 2.90581C15.5221 2.91719 15.8854 3.07401 16.1558 3.34423C16.4262 3.61446 16.5831 3.9777 16.5947 4.35978C16.6063 4.74185 16.4715 5.11392 16.218 5.4L14.659 6.962C14.731 7.086 14.812 7.203 14.876 7.333C15.0529 7.68945 15.081 8.10158 14.954 8.47871C14.827 8.85585 14.5555 9.1671 14.199 9.344C13.8425 9.5209 13.4304 9.54895 13.0533 9.42199C12.6762 9.29503 12.3649 9.02345 12.188 8.667C9.938 4.635 4.279 8.702 7.379 12.122C7.65977 12.4034 7.81737 12.7847 7.81718 13.1822C7.81699 13.5797 7.65903 13.9609 7.378 14.242Z"
+                                            fill="#E50914" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22891_1393">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>DAY 3</span>
+                                <span>3rd July, 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <p class="fw-bold">Practical AWS Audit Scenarios</p>
+                            <ul>
+                                <li>Auditing S3 Security (Scenario & Evidence)</li>
+                                <li>Auditing IAM Access (Scenario & Evidence)</li>
+                                <li>Q&A</li>
+                            </ul>
+                        </div>
+                        <div class="mt-3">
+                            <p class="fw-bold">AWS Audit Tools & Next-Gen Auditing</p>
+                            <ul>
+                                <li>Leveraging AWS Native Audit Tools (CloudTrail, Config, Security Hub)</li>
+                                <li>Auditing other AWS services</li>
+                                <li>Future of Cloud Auditing: Automation & AI</li>
+                                <li>Workshop Conclusion</li>
+                                <li>Q&A</li>
+                            </ul>
+                        </div>
+
+
+                        <p class="mt-5">
+                            Whether you're stepping into cloud auditing or seeking to sharpen your skills, this
+                            masterclass will equip you with the expertise that sets you apart.
+                        </p>
+
+
+
+                        <div class="my-4" id="key-takeaways">
+                            <div class="fs-24 fw-bold text-red f-nunito text-center text-lg-start">
+                                Key Takeaways
+                            </div>
+
+                            <div class="d-flex flex-wrap flex-md-nowrap gap-4 mt-3">
+                                <div class="rounded-4 w-100 p-3 d-flex flex-column align-items-center gap-3 rounded"
+                                    style="background: var(--light-blue);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="37" height="36" viewBox="0 0 37 36"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20779_858)">
+                                            <path
+                                                d="M36.166 11.25V25.281C36.166 27.2925 35.434 29.2305 34.1035 30.738C33.28 31.671 31.861 31.7595 30.928 30.9375C29.9965 30.1155 29.9065 28.6935 30.7285 27.762C31.333 27.0765 31.666 26.196 31.666 25.2825V11.25C31.666 9.183 29.9845 7.5 27.916 7.5H8.41602C6.34752 7.5 4.66602 9.183 4.66602 11.25V24.75C4.66602 26.817 6.34752 28.5 8.41602 28.5H12.916C14.158 28.5 15.166 29.5065 15.166 30.75C15.166 31.9935 14.158 33 12.916 33H8.41602C3.86802 33 0.166016 29.2995 0.166016 24.75V11.25C0.166016 6.7005 3.86802 3 8.41602 3H27.916C32.464 3 36.166 6.7005 36.166 11.25ZM28.666 12.75C28.666 11.5065 27.658 10.5 26.416 10.5H9.91602C8.67402 10.5 7.66602 11.5065 7.66602 12.75C7.66602 13.9935 8.67402 15 9.91602 15H26.416C27.658 15 28.666 13.9935 28.666 12.75ZM29.416 24.75C29.416 27.0855 28.2235 29.145 26.416 30.357V35.0205C26.416 35.955 25.2295 36.3555 24.6625 35.613L22.666 32.9985L20.6695 35.613C20.1025 36.3555 18.916 35.955 18.916 35.0205V30.357C17.1085 29.145 15.916 27.084 15.916 24.75C15.916 21.0285 18.9445 18 22.666 18C26.3875 18 29.416 21.0285 29.416 24.75ZM20.416 24.75C20.416 25.9905 21.4255 27 22.666 27C23.9065 27 24.916 25.9905 24.916 24.75C24.916 23.5095 23.9065 22.5 22.666 22.5C21.4255 22.5 20.416 23.5095 20.416 24.75ZM9.91602 18C8.67402 18 7.66602 19.0065 7.66602 20.25C7.66602 21.4935 8.67402 22.5 9.91602 22.5H11.416C12.658 22.5 13.666 21.4935 13.666 20.25C13.666 19.0065 12.658 18 11.416 18H9.91602Z"
+                                                fill="url(#paint0_linear_20779_858)" />
+                                        </g>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_20779_858" x1="0.166016" y1="35.9989"
+                                                x2="36.166" y2="35.9989" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#FF8A00" />
+                                                <stop offset="1" stop-color="#E50914" />
+                                            </linearGradient>
+                                            <clipPath id="clip0_20779_858">
+                                                <rect width="36" height="36" fill="white"
+                                                    transform="translate(0.166016)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <div class="text-center fw-bold fs-14 f-nunito">
+                                        Earn 6 CPE credits in just 6 hours
+                                    </div>
+                                </div>
+
+                                <div class="rounded-4 w-100 p-3 d-flex flex-column align-items-center gap-3 rounded"
+                                    style="background: var(--light-blue);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="37" height="36" viewBox="0 0 37 36"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20752_517)">
+                                            <path
+                                                d="M6.5255 30.303C7.5995 29.6805 8.978 30.048 9.6005 31.1235C9.737 31.359 9.98 31.4985 10.2515 31.4985H20.7515C21.164 31.4985 21.5015 31.1625 21.5015 30.7485V29.2485C21.5015 28.005 22.5095 26.9985 23.7515 26.9985H24.665C26.5505 26.9985 28.1495 25.5885 28.385 23.718L28.8575 19.9665C29 18.8415 29.9555 17.997 31.0895 17.997H31.6745C30.7535 15.7905 28.2125 11.1945 26.7215 9.3495C24.5435 6.444 21.236 4.68 17.6435 4.5105C16.403 4.452 15.443 3.399 15.5015 2.157C15.5585 0.9165 16.646 -0.057 17.8535 0.015C22.7915 0.2475 27.335 2.6655 30.269 6.585C31.796 8.4705 36.497 16.3215 36.497 18.8145C36.497 20.5335 35.2985 22.359 33.0725 22.4895L32.8475 24.279C32.384 27.957 29.522 30.8265 25.958 31.3935C25.637 33.984 23.4245 35.9955 20.747 35.9955H10.247C8.378 35.9955 6.6365 34.9905 5.7005 33.372C5.0795 32.2965 5.447 30.9195 6.5225 30.2985L6.5255 30.303ZM12.5 3V9C12.5 10.6575 11.1575 12 9.5 12H3.5C1.8425 12 0.5 10.6575 0.5 9V3C0.5 1.3425 1.8425 0 3.5 0H9.5C11.1575 0 12.5 1.3425 12.5 3ZM10.5725 3.165C9.9815 2.5605 9.0095 2.5635 8.423 3.171L5.681 6.009L4.5155 4.7775C3.9275 4.1565 2.9405 4.152 2.348 4.7685C1.793 5.3445 1.79 6.2565 2.339 6.837L3.4925 8.0565C4.673 9.3045 6.656 9.315 7.85 8.079L10.58 5.2545C11.144 4.671 11.141 3.744 10.574 3.1635L10.5725 3.165ZM0.5 18V24C0.5 25.6575 1.8425 27 3.5 27H9.5C11.1575 27 12.5 25.6575 12.5 24V18C12.5 16.3425 11.1575 15 9.5 15H3.5C1.8425 15 0.5 16.3425 0.5 18Z"
+                                                fill="url(#paint0_linear_20752_517)" />
+                                        </g>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_20752_517" x1="0.5" y1="35.9955"
+                                                x2="36.497" y2="35.9955" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#FF8A00" />
+                                                <stop offset="1" stop-color="#E50914" />
+                                            </linearGradient>
+                                            <clipPath id="clip0_20752_517">
+                                                <rect width="36" height="36" fill="white" transform="translate(0.5)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <div class="text-center fw-bold fs-14 f-nunito">
+                                        Sharpen your Cloud Auditing Skills
+                                    </div>
+                                </div>
+
+                                <div class="rounded-4 w-100 p-3 d-flex flex-column align-items-center gap-3 rounded"
+                                    style="background: var(--light-blue);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.1077 16.8693H20.6817V7.90907C20.6817 7.45724 20.3155 7.09103 19.8637 7.09103C18.5767 7.09103 16.9999 7.09103 16.9999 7.09103C16.5485 7.09103 16.1819 6.72442 16.1819 6.27278C16.1819 5.82115 16.5485 5.45454 16.9999 5.45454H19.8637C21.2191 5.45454 22.3182 6.55358 22.3182 7.90907V16.8693H23.1362C23.5883 16.8693 23.9545 17.2355 23.9545 17.6874V18.5455C23.9545 19.1964 23.6959 19.8208 23.2356 20.2811C22.7753 20.7414 22.1509 21 21.4999 21H3.49995C2.849 21 2.22477 20.7414 1.76429 20.2811C1.30402 19.8208 1.04541 19.1964 1.04541 18.5455V17.6874C1.04541 17.2355 1.41182 16.8693 1.86365 16.8693H2.6819V7.90907C2.6819 6.55358 3.78075 5.45454 5.13644 5.45454H8C8.45163 5.45454 8.81824 5.82115 8.81824 6.27278C8.81824 6.72442 8.45163 7.09103 8 7.09103C8 7.09103 6.4232 7.09103 5.13644 7.09103C4.68441 7.09103 4.31819 7.45724 4.31819 7.90907V16.8693H4.89216L5.50383 14.1758C6.08487 11.6174 8.35895 9.80182 10.9824 9.80182H11.9384C11.9489 9.80162 11.9595 9.80162 11.9699 9.80182H13.03C13.0406 9.80162 13.051 9.80162 13.0614 9.80182H14.0175C16.6409 9.80182 18.9152 11.6174 19.4961 14.1758L20.1077 16.8693ZM13.3181 18.5056V19.3637H21.4999C21.7169 19.3637 21.9251 19.2775 22.0784 19.1239C22.232 18.9706 22.3182 18.7624 22.3182 18.5455V18.5056H13.3181ZM11.6818 18.5056H2.6819V18.5455C2.6819 18.7624 2.7681 18.9706 2.92146 19.1239C3.07482 19.2775 3.28297 19.3637 3.49995 19.3637H11.6818V18.5056ZM10.9056 11.4389C9.07881 11.4738 7.50575 12.75 7.09967 14.5381L6.57028 16.8693H12.406C12.2803 16.8548 12.157 16.811 12.0472 16.7379L10.4107 15.6507C10.1223 15.4588 9.98581 15.1062 10.0701 14.7702L10.9056 11.4389ZM14.0943 11.4389L14.9298 14.7702C15.0143 15.1062 14.8778 15.4588 14.5892 15.6507L12.9529 16.7379C12.8429 16.811 12.7198 16.8548 12.5939 16.8693H18.4296L17.9004 14.5381C17.4943 12.75 15.9211 11.4738 14.0943 11.4389ZM11.7979 14.6076L12.5 15.0742L13.202 14.6076L12.5 11.8084L11.7979 14.6076ZM12.5 3C10.719 3 9.26654 4.4629 9.26654 6.27278C9.26654 8.08266 10.719 9.54556 12.5 9.54556C14.2809 9.54556 15.7336 8.08266 15.7336 6.27278C15.7336 4.4629 14.2809 3 12.5 3ZM12.5 4.63649C13.3851 4.63649 14.0971 5.37324 14.0971 6.27278C14.0971 7.17232 13.3851 7.90907 12.5 7.90907C11.6148 7.90907 10.9028 7.17232 10.9028 6.27278C10.9028 5.37324 11.6148 4.63649 12.5 4.63649Z"
+                                            fill="url(#paint0_linear_21857_1037)" />
+                                        <defs>
+                                            <linearGradient id="paint0_linear_21857_1037" x1="1.04541" y1="21"
+                                                x2="23.9545" y2="21" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#FF8A00" />
+                                                <stop offset="1" stop-color="#E50914" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+
+                                    <div class="text-center fw-bold fs-14 f-nunito">
+                                        Get expert career guidance on cloud career pathways
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 text-md-start text-center rounded-4 d-flex align-items-center justify-content-between flex-column flex-md-row gap-3"
+                            style="background: radial-gradient(60.82% 100% at 51.2% -50%, #01166E 0%, #000 100%);">
+                            <div>
+                                <div class="fs-18 text-white fw-bold f-nunito">
+                                    Limited Seats Available! Secure Your Spot Now!
+                                </div>
+                            </div>
+                            <div>
+                                <a href="#" class="button modal-btn" modal-title="Register Now">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-3 rounded-4 border-red" style="overflow: hidden;position: sticky;
+        top: 100px;box-shadow: var(--box-shadow);">
+                            <div class="fs-28 text-center f-nunito fw-bold text-red p-3">
+                                <span class="fs-16 text-dark">Ready to Join the<br></span>
+                                Cloud Audit Masterclass
+                            </div>
+                            <div class="d-flex justify-content-center gap-3 px-3 timers">
+                                <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 bg-danger text-white rounded"
+                                    id="timer1">
+                                    <strong style="color: var(--white);"></strong>
+                                    <span>Days</span>
+                                </div>
+                                <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-dark rounded"
+                                    id="timer2" style="background: var(--light-blue);">
+                                    <strong></strong>
+                                    <span>Hours</span>
+                                </div>
+                                <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-dark rounded"
+                                    id="timer3" style="background: var(--light-blue);">
+                                    <strong></strong>
+                                    <span>Minutes</span>
+                                </div>
+                                <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-dark rounded"
+                                    id="timer4" style="background: var(--light-blue);">
+                                    <strong></strong>
+                                    <span>Seconds</span>
+                                </div>
+                            </div>
+                            <div class="fs-16 f-nunito fw-bold px-3">Please Fill the Form</div>
+                            <div class="d-flex flex-column gap-3 px-3">
+                                <form method="post" class="ajax-form d-flex flex-column gap-3">
+                                    <div>
+                                        <input type="text" name="me_name" class="me_name form-control"
+                                            placeholder="Full Name">
+                                        <div class="error-message name_error"></div>
+                                    </div>
+
+                                    <div>
+                                        <input type="email" name="me_email" class="me_email form-control"
+                                            placeholder="Email">
+                                        <div class="error-message email_error"></div>
+                                    </div>
+
+                                    <input type="text" name="me_phone" class="me_phone form-control"
+                                        placeholder="Mobile">
+
+                                    <input type="text" name="me_message" class="me_message form-control"
+                                        placeholder="Mention your call time preference">
+
+
+                                    <input type="hidden" name="me_pageurl" value="<?php echo $pag_url; ?>">
+                                    <input type="hidden" id="me_others" name="me_others" value="">
+                                    <input type="hidden" name="me_submited" value="1">
+                                    <button type="submit" class="form-control-btn">SUBMIT</button>
+
+                                    <div class="loader text-center" style="display:none;">
+                                        <img src="assets/images/loader.gif" alt="Loading..." loading="lazy">
+                                    </div>
+                                </form>
+                                <div class="fs-16 f-nunito">
+                                    Our Advisor will Contact You with Event Details, Payment Options, and Exclusive
+                                    Offers!
+                                </div>
+                                <div class="d-flex gap-3 align-items-center pb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20752_1313)">
+                                            <path
+                                                d="M10.692 12.0676C11.9187 12.7289 12.882 13.8209 13.3007 15.1689C13.3317 15.2687 13.3388 15.3744 13.3215 15.4775C13.3042 15.5805 13.2629 15.6781 13.2009 15.7622C13.1389 15.8464 13.0581 15.9148 12.9648 15.9619C12.8715 16.0091 12.7685 16.0336 12.664 16.0336H3.33132C3.22672 16.0339 3.12352 16.0095 3.0301 15.9625C2.93668 15.9154 2.85568 15.847 2.79366 15.7628C2.73164 15.6785 2.69035 15.5809 2.67315 15.4777C2.65594 15.3745 2.66331 15.2687 2.69465 15.1689C3.11465 13.8183 4.08065 12.7249 5.31065 12.0636C5.46321 11.9806 5.63978 11.9528 5.81048 11.985C5.98117 12.0172 6.13549 12.1074 6.24732 12.2403L7.54665 13.7989C7.60233 13.8658 7.67205 13.9196 7.75085 13.9566C7.82966 13.9935 7.91562 14.0127 8.00265 14.0127C8.08968 14.0127 8.17565 13.9935 8.25445 13.9566C8.33325 13.9196 8.40297 13.8658 8.45865 13.7989L9.75465 12.2436C9.8666 12.1106 10.0211 12.0205 10.1919 11.9884C10.3628 11.9563 10.5394 11.9843 10.692 12.0676ZM13.7733 1.76694L9.46398 0.246271C8.53595 -0.0807128 7.52426 -0.0821235 6.59532 0.242271L2.23332 1.76894C1.96984 1.85851 1.7413 2.02888 1.5802 2.2558C1.41911 2.48272 1.33365 2.75466 1.33598 3.03294C1.33598 3.61094 1.68865 4.10694 2.23398 4.29694L6.57198 5.81027C7.49488 6.13119 8.49909 6.13119 9.42198 5.81027L13.3313 4.44694V7.36627C13.3313 7.54308 13.4016 7.71265 13.5266 7.83768C13.6516 7.9627 13.8212 8.03294 13.998 8.03294C14.1748 8.03294 14.3444 7.9627 14.4694 7.83768C14.5944 7.71265 14.6647 7.54308 14.6647 7.36627L14.6673 3.0316C14.6699 2.75366 14.585 2.48193 14.4247 2.25485C14.2644 2.02778 14.0368 1.85686 13.774 1.76627L13.7733 1.76694ZM11.9973 6.32427L9.86065 7.06961C8.65314 7.48762 7.34016 7.48762 6.13265 7.06961L3.99732 6.32427V6.69961C3.99732 8.90561 5.79132 10.6996 7.99732 10.6996C10.2033 10.6996 11.9973 8.90561 11.9973 6.69961V6.32361V6.32427Z"
+                                                fill="#E50914" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20752_1313">
+                                                <rect width="16" height="16" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>
+                                        <strong>09</strong> People have registered
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--footer start-->
+    <footer>
+        <div class="container-fluid container-lg">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="item">
+                        <h3>About InfosecTrain</h3>
+                        <p>
+                            InfosecTrain offers complete training and consulting solutions to its customers globally.
+                            Whether the requirements are technical services, certification or custom training, Infosec
+                            Train has consistently delivered the highest quality and best success rates in the industry.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 quick-links">
+                    <div class="item">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#masterclass-agenda">Masterclass Agenda</a></li>
+                            <li><a href="#experts">Meet the Expert</a></li>
+                            <li><a href="#key-takeaways">Key Takeaways</a></li>
+                            <li><a href="https://www.infosectrain.com/events/" target="_blank">Free Training</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <h3>Corporate Office</h3>
+                        <p>
+                            B7, Sector 1, Noida, Uttar Pradesh 201301<br> India
+                        </p>
+                        <p style="font-size: 12px;margin-top: 15px;">
+                            All rights reserved. © 2025, InfosecTrain
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <section class="footer-fixed">
+        <ul class="desktop-list">
+            <!--/ li start /-->
+            <li>
+                <a href="https://api.whatsapp.com/send?phone=918767256840&amp;text=Hi" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 16" fill="none">
+                        <g clip-path="url(#clip0_6136_92)">
+                            <path d="M0.913574 16L2.03857 11.8906C1.34482 10.6906 0.982324 9.325 0.982324 7.92812C0.982324 3.55625 4.5417 0 8.91357 0C11.0354 0 13.0261 0.828125 14.5229 2.325C16.0198 3.825 16.8448 5.81562 16.8448 7.93437C16.8417 12.3062 13.2854 15.8625 8.91357 15.8625H8.91045C7.58232 15.8625 6.2792 15.5281 5.11982 14.8969L0.913574 16ZM5.31357 13.4625L5.5542 13.6062C6.5667 14.2063 7.72607 14.525 8.91045 14.525H8.91357C12.5479 14.525 15.5042 11.5688 15.5042 7.93437C15.5042 6.175 14.8198 4.51875 13.5761 3.27187C12.3323 2.025 10.6761 1.34063 8.9167 1.34063C5.2792 1.34063 2.32295 4.29688 2.32295 7.93125C2.32295 9.175 2.66982 10.3875 3.3292 11.4375L3.48545 11.6875L2.81982 14.1187L5.31357 13.4625Z" fill="white"></path>
+                            <path d="M1.19189 15.7211L2.27939 11.7555C1.60752 10.5961 1.25439 9.27734 1.25439 7.93047C1.25752 3.70859 4.69189 0.277344 8.91064 0.277344C10.9575 0.277344 12.8825 1.07422 14.3263 2.52109C15.7731 3.96797 16.57 5.88984 16.5669 7.93672C16.5638 12.1555 13.1294 15.5898 8.91064 15.5898H8.90752C7.62627 15.5898 6.36689 15.268 5.24814 14.6586L1.19189 15.7211Z" fill="url(#paint0_linear_6136_92)"></path>
+                            <path d="M0.913574 16L2.03857 11.8906C1.34482 10.6906 0.982324 9.325 0.982324 7.92812C0.982324 3.55625 4.5417 0 8.91357 0C11.0354 0 13.0261 0.828125 14.5229 2.325C16.0198 3.825 16.8448 5.81562 16.8448 7.93437C16.8417 12.3062 13.2854 15.8625 8.91357 15.8625H8.91045C7.58232 15.8625 6.2792 15.5281 5.11982 14.8969L0.913574 16ZM5.31357 13.4625L5.5542 13.6062C6.5667 14.2063 7.72607 14.525 8.91045 14.525H8.91357C12.5479 14.525 15.5042 11.5688 15.5042 7.93437C15.5042 6.175 14.8198 4.51875 13.5761 3.27187C12.3323 2.025 10.6761 1.34063 8.9167 1.34063C5.2792 1.34063 2.32295 4.29688 2.32295 7.93125C2.32295 9.175 2.66982 10.3875 3.3292 11.4375L3.48545 11.6875L2.81982 14.1187L5.31357 13.4625Z" fill="url(#paint1_linear_6136_92)"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.92939 4.61328C6.77939 4.28203 6.62314 4.27578 6.48252 4.26953C6.36689 4.26328 6.23564 4.26641 6.10127 4.26641C5.97002 4.26641 5.75439 4.31641 5.57314 4.51328C5.39189 4.71016 4.87939 5.19141 4.87939 6.16641C4.87939 7.14141 5.58877 8.08516 5.68877 8.21641C5.78877 8.34766 7.06064 10.4133 9.07314 11.207C10.7481 11.8664 11.0888 11.7352 11.4513 11.7039C11.8138 11.6727 12.6231 11.2258 12.7888 10.7633C12.9544 10.3008 12.9544 9.90391 12.9044 9.82266C12.8544 9.74141 12.7231 9.69141 12.5231 9.59141C12.3263 9.49141 11.3513 9.01328 11.17 8.94766C10.9888 8.88203 10.8575 8.84766 10.7231 9.04766C10.5919 9.24453 10.2106 9.69141 10.095 9.82266C9.97939 9.95391 9.86377 9.97266 9.66689 9.87266C9.47002 9.77266 8.82939 9.56328 8.07314 8.88828C7.48252 8.36328 7.08564 7.71328 6.97002 7.51641C6.85439 7.31953 6.95752 7.21016 7.05752 7.11328C7.14502 7.02578 7.25439 6.88203 7.35439 6.76641C7.45439 6.65078 7.48564 6.56953 7.55127 6.43516C7.61689 6.30391 7.58564 6.18828 7.53564 6.08828C7.49189 5.98516 7.10752 5.00703 6.92939 4.61328Z" fill="white"></path>
+                        </g>
+                        <defs>
+                            <linearGradient id="paint0_linear_6136_92" x1="8.87933" y1="15.7224" x2="8.87933" y2="0.276281" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#20B038"></stop>
+                                <stop offset="1" stop-color="#60D66A"></stop>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_6136_92" x1="8.8792" y1="16" x2="8.8792" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F9F9F9"></stop>
+                                <stop offset="1" stop-color="white"></stop>
+                            </linearGradient>
+                            <clipPath id="clip0_6136_92">
+                                <rect width="16" height="16" fill="white" transform="translate(0.879395)"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>+91-87672-56840</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:sales@infosectrain.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 16" fill="none">
+                        <g clip-path="url(#clip0_5863_217)">
+                            <path d="M13.5461 0.667969H4.21273C3.329 0.669027 2.48177 1.02056 1.85687 1.64545C1.23198 2.27034 0.880453 3.11757 0.879395 4.0013L0.879395 12.0013C0.880453 12.885 1.23198 13.7323 1.85687 14.3572C2.48177 14.982 3.329 15.3336 4.21273 15.3346H13.5461C14.4298 15.3336 15.277 14.982 15.9019 14.3572C16.5268 13.7323 16.8783 12.885 16.8794 12.0013V4.0013C16.8783 3.11757 16.5268 2.27034 15.9019 1.64545C15.277 1.02056 14.4298 0.669027 13.5461 0.667969ZM4.21273 2.0013H13.5461C13.9453 2.00209 14.3351 2.12231 14.6654 2.3465C14.9957 2.5707 15.2513 2.8886 15.3994 3.2593L10.2941 8.3653C9.91835 8.73951 9.40967 8.94961 8.87939 8.94961C8.34912 8.94961 7.84044 8.73951 7.46473 8.3653L2.35939 3.2593C2.50749 2.8886 2.76314 2.5707 3.09343 2.3465C3.42372 2.12231 3.81354 2.00209 4.21273 2.0013ZM13.5461 14.0013H4.21273C3.6823 14.0013 3.17359 13.7906 2.79851 13.4155C2.42344 13.0404 2.21273 12.5317 2.21273 12.0013V5.0013L6.52206 9.30797C7.14781 9.93214 7.99557 10.2827 8.87939 10.2827C9.76322 10.2827 10.611 9.93214 11.2367 9.30797L15.5461 5.0013V12.0013C15.5461 12.5317 15.3353 13.0404 14.9603 13.4155C14.5852 13.7906 14.0765 14.0013 13.5461 14.0013Z" fill="white"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_5863_217">
+                                <rect width="16" height="16" fill="white" transform="translate(0.879395)"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>sales@infosectrain.com</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="mobile-list">
+            <!--/ li start /-->
+            <li>
+                <a href="https://api.whatsapp.com/send?phone=918767256840&amp;text=Hi" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 16" fill="none">
+                        <g clip-path="url(#clip0_6136_92)">
+                            <path d="M0.913574 16L2.03857 11.8906C1.34482 10.6906 0.982324 9.325 0.982324 7.92812C0.982324 3.55625 4.5417 0 8.91357 0C11.0354 0 13.0261 0.828125 14.5229 2.325C16.0198 3.825 16.8448 5.81562 16.8448 7.93437C16.8417 12.3062 13.2854 15.8625 8.91357 15.8625H8.91045C7.58232 15.8625 6.2792 15.5281 5.11982 14.8969L0.913574 16ZM5.31357 13.4625L5.5542 13.6062C6.5667 14.2063 7.72607 14.525 8.91045 14.525H8.91357C12.5479 14.525 15.5042 11.5688 15.5042 7.93437C15.5042 6.175 14.8198 4.51875 13.5761 3.27187C12.3323 2.025 10.6761 1.34063 8.9167 1.34063C5.2792 1.34063 2.32295 4.29688 2.32295 7.93125C2.32295 9.175 2.66982 10.3875 3.3292 11.4375L3.48545 11.6875L2.81982 14.1187L5.31357 13.4625Z" fill="white"></path>
+                            <path d="M1.19189 15.7211L2.27939 11.7555C1.60752 10.5961 1.25439 9.27734 1.25439 7.93047C1.25752 3.70859 4.69189 0.277344 8.91064 0.277344C10.9575 0.277344 12.8825 1.07422 14.3263 2.52109C15.7731 3.96797 16.57 5.88984 16.5669 7.93672C16.5638 12.1555 13.1294 15.5898 8.91064 15.5898H8.90752C7.62627 15.5898 6.36689 15.268 5.24814 14.6586L1.19189 15.7211Z" fill="url(#paint0_linear_6136_92)"></path>
+                            <path d="M0.913574 16L2.03857 11.8906C1.34482 10.6906 0.982324 9.325 0.982324 7.92812C0.982324 3.55625 4.5417 0 8.91357 0C11.0354 0 13.0261 0.828125 14.5229 2.325C16.0198 3.825 16.8448 5.81562 16.8448 7.93437C16.8417 12.3062 13.2854 15.8625 8.91357 15.8625H8.91045C7.58232 15.8625 6.2792 15.5281 5.11982 14.8969L0.913574 16ZM5.31357 13.4625L5.5542 13.6062C6.5667 14.2063 7.72607 14.525 8.91045 14.525H8.91357C12.5479 14.525 15.5042 11.5688 15.5042 7.93437C15.5042 6.175 14.8198 4.51875 13.5761 3.27187C12.3323 2.025 10.6761 1.34063 8.9167 1.34063C5.2792 1.34063 2.32295 4.29688 2.32295 7.93125C2.32295 9.175 2.66982 10.3875 3.3292 11.4375L3.48545 11.6875L2.81982 14.1187L5.31357 13.4625Z" fill="url(#paint1_linear_6136_92)"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.92939 4.61328C6.77939 4.28203 6.62314 4.27578 6.48252 4.26953C6.36689 4.26328 6.23564 4.26641 6.10127 4.26641C5.97002 4.26641 5.75439 4.31641 5.57314 4.51328C5.39189 4.71016 4.87939 5.19141 4.87939 6.16641C4.87939 7.14141 5.58877 8.08516 5.68877 8.21641C5.78877 8.34766 7.06064 10.4133 9.07314 11.207C10.7481 11.8664 11.0888 11.7352 11.4513 11.7039C11.8138 11.6727 12.6231 11.2258 12.7888 10.7633C12.9544 10.3008 12.9544 9.90391 12.9044 9.82266C12.8544 9.74141 12.7231 9.69141 12.5231 9.59141C12.3263 9.49141 11.3513 9.01328 11.17 8.94766C10.9888 8.88203 10.8575 8.84766 10.7231 9.04766C10.5919 9.24453 10.2106 9.69141 10.095 9.82266C9.97939 9.95391 9.86377 9.97266 9.66689 9.87266C9.47002 9.77266 8.82939 9.56328 8.07314 8.88828C7.48252 8.36328 7.08564 7.71328 6.97002 7.51641C6.85439 7.31953 6.95752 7.21016 7.05752 7.11328C7.14502 7.02578 7.25439 6.88203 7.35439 6.76641C7.45439 6.65078 7.48564 6.56953 7.55127 6.43516C7.61689 6.30391 7.58564 6.18828 7.53564 6.08828C7.49189 5.98516 7.10752 5.00703 6.92939 4.61328Z" fill="white"></path>
+                        </g>
+                        <defs>
+                            <linearGradient id="paint0_linear_6136_92" x1="8.87933" y1="15.7224" x2="8.87933" y2="0.276281" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#20B038"></stop>
+                                <stop offset="1" stop-color="#60D66A"></stop>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_6136_92" x1="8.8792" y1="16" x2="8.8792" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#F9F9F9"></stop>
+                                <stop offset="1" stop-color="white"></stop>
+                            </linearGradient>
+                            <clipPath id="clip0_6136_92">
+                                <rect width="16" height="16" fill="white" transform="translate(0.879395)"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>+91-87672-56840</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!--<[form model start]>-->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-header">Get Free Demo</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form method="post" class="ajax-form d-flex flex-column gap-3">
+                    <div>
+                        <input type="text" name="me_name" class="me_name form-control" placeholder="Full Name">
+                        <div class="error-message name_error"></div>
+                    </div>
+
+                    <div>
+                        <input type="email" name="me_email" class="me_email form-control" placeholder="Email">
+                        <div class="error-message email_error"></div>
+                    </div>
+
+                    <input type="text" name="me_phone" class="me_phone form-control" placeholder="Mobile">
+                    <input type="text" name="me_message" class="me_message form-control"
+                        placeholder="Mention your call time preference">
+
+                    <input type="hidden" id="me_others_pop" name="me_others" value="T">
+                    <input type="hidden" name="me_pageurl" value="<?php echo $pag_url; ?>">
+
+                    <input type="hidden" name="me_submited" value="1">
+                    <button type="submit" class="form-control-btn">Submit</button>
+
+                    <div class="loader text-center" style="display:none;">
+                        <img src="assets/images/loader.gif" alt="Loading...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--<[form model end]>-->
+
+    <!--<[model sec start]>-->
+
+    <!--/ js link start /-->
+    <script src="assets/js/custom.js" defer></script>
+    <!--/ js link start /-->
+    <script>
+        /*-------- form validation and ajax script --------*/
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Function to load Zopim chat widget after a delay
+            function loadZopim() {
+                window.$zopim || (function (d, s) {
+                    var z = $zopim = function (c) { z._.push(c) }, $ = z.s = d.createElement(s),
+                        e = d.getElementsByTagName(s)[0]; z.set = function (o) { z.set._.push(o) };
+                    z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+                    $.src = "https://v2.zopim.com/?5Y1ZvMP3lrSPwhhyQjIGwo618dlqPLkD";
+                    z.t = +new Date; $.type = "text/javascript";
+                    e.parentNode.insertBefore($, e)
+                })(document, "script");
+            }
+
+            // Set a timeout to load Zopim after 10 seconds (10,000 milliseconds)
+            setTimeout(loadZopim, 15000);
+
+            // Select all forms with the class "ajax-form"
+            const forms = document.querySelectorAll('.ajax-form');
+
+            // Function to validate a single form
+            function validateForm(form) {
+                let isValid = true;
+                let errorMessages = {};
+
+                const name = form.querySelector('input[name="me_name"]');
+                const email = form.querySelector('input[name="me_email"]');
+
+                // Validate Name field
+                if (!name.value.trim()) {
+                    isValid = false;
+                    name.classList.add('error');
+                    errorMessages.name = "Name is required.";
+                } else {
+                    name.classList.remove('error');
+                }
+
+                // Validate Email field
+                if (!email.value.trim()) {
+                    isValid = false;
+                    email.classList.add('error');
+                    errorMessages.email = "Email is required.";
+                } else if (!/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9]{2,4}$/.test(email.value)) {
+                    isValid = false;
+                    email.classList.add('error');
+                    errorMessages.email = "Please enter a valid email.";
+                } else {
+                    email.classList.remove('error');
+                }
+
+                // Display error messages
+                form.querySelectorAll('.error-message').forEach((el) => {
+                    el.textContent = ''; // Clear all previous error messages
+                });
+
+                for (const [key, msg] of Object.entries(errorMessages)) {
+                    const errorMessageDiv = form.querySelector(`.${key}_error`);
+                    errorMessageDiv.textContent = msg;
+                }
+
+                return isValid;
+            }
+
+            // Handle form submission
+            function handleFormSubmit(event) {
+                event.preventDefault();  // Prevent the default form submission
+
+                const form = event.target;
+                const loader = form.querySelector('.loader');
+                const isValid = validateForm(form);
+
+                if (!isValid) {
+                    return;  // Stop the submission if the form is invalid
+                }
+
+                // Show the loader while submitting
+                loader.style.display = 'block';
+
+                // Create a FormData object with the form data
+                const formData = new FormData(form);
+
+                // Make the AJAX request
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'send-ajax.php', true);
+
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        // Redirect to the thank-you page or any other page
+                        window.location.href = "thank-you.php";
+                        loader.style.display = 'none'; // Hide the loader
+                        form.reset(); // Reset the form fields after successful submission
+                    } else {
+                        loader.style.display = 'none'; // Hide the loader in case of failure
+                        alert("An error occurred. Please try again.");
+                    }
+                };
+
+                xhr.onerror = function () {
+                    loader.style.display = 'none'; // Hide the loader in case of an error
+                    alert("An error occurred. Please try again.");
+                };
+
+                // Send the form data to the server
+                xhr.send(formData);
+            }
+
+            // Attach the submit event listener to each form
+            forms.forEach(form => {
+                form.addEventListener('submit', handleFormSubmit);
+            });
+        });
+        /*-------- form valudation and ajax script end --------*/
+
+
+        // Countdown function to show only specific time units in each div
+        function startCountdown() {
+            const targetDate = new Date("July 1, 2025 09:00:00").getTime(); // Target date
+
+            // Update the countdown every second
+            const interval = setInterval(function () {
+                const currentDate = new Date().getTime(); // Current date and time
+                const timeRemaining = targetDate - currentDate; // Time remaining in milliseconds
+
+                // Calculate days, hours, minutes, and seconds
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                // Update each timer separately
+                document.getElementById("timer1").querySelector("strong").textContent = days;
+                document.getElementById("timer2").querySelector("strong").textContent = hours;
+                document.getElementById("timer3").querySelector("strong").textContent = minutes;
+                document.getElementById("timer4").querySelector("strong").textContent = seconds;
+
+                // If the countdown reaches zero, stop the timer and display "Time's up!"
+                if (timeRemaining <= 0) {
+                    clearInterval(interval);
+                    document.getElementById("timer1").querySelector("strong").textContent = "0";
+                    document.getElementById("timer2").querySelector("strong").textContent = "0";
+                    document.getElementById("timer3").querySelector("strong").textContent = "0";
+                    document.getElementById("timer4").querySelector("strong").textContent = "0";
+                }
+            }, 1000); // Update every second
+        }
+
+        // Call the function to start the countdown
+        startCountdown();
+
+    </script>
+</body>
+
+</html>

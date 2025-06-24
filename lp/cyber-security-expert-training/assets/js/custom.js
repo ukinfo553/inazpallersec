@@ -1,0 +1,165 @@
+$(document).ready(function () {
+    // Your jQuery code here
+    $('.faq-wrapper .faq-title').on('click', function (e) {
+        var element = $(this).parent('.faq-item');
+        if (element.hasClass('open')) {
+            element.removeClass('open');
+            element.find('.faq-content').removeClass('open');
+            element.find('.faq-content').slideUp(300, "swing");
+        } else {
+            element.addClass('open');
+            element.children('.faq-content').slideDown(300, "swing");
+            element.siblings('.faq-item').children('.faq-content').slideUp(300, "swing");
+            element.siblings('.faq-item').removeClass('open');
+            element.siblings('.faq-item').find('.faq-title').removeClass('open');
+            element.siblings('.taq-item').find('.faq-content').slideUp(300, "swing");
+        }
+    });
+
+    setTimeout(function() {
+        $('#myModal').modal('show'); // Show the modal after a delay
+      }, 10000);
+    // Function to add the zoom-in class when the modal is shown
+    $('#myModal').on('show.bs.modal', function (e) {
+        $(this).find('.modal-dialog').addClass('zoom-in');
+    });
+
+    // Function to remove the zoom-in class when the modal is hidden
+    $('#myModal').on('hidden.bs.modal', function (e) {
+        $(this).find('.modal-dialog').removeClass('zoom-in');
+    });
+});
+
+// testimonial slider start
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 1,
+    breakpoints: {
+        '992': {
+            slidesPerView: 2,
+            spaceBetween: 50,
+        },
+    },
+});
+// testimonoal slider end
+// form validation start
+/*document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelectorAll(".enquiry_form");
+    form.forEach(element => {
+        element.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+    
+            // Get all input elements within the form
+            const name = element.querySelector("input[type='text']");
+            const email = element.querySelector("input[type='email']");
+            // Flag to track if the form is valid
+            let isFormValid = true;
+    
+            // show error in html
+            
+            // Loop through each input and perform basic validation
+            if (!name.value.trim()) {
+                isFormValid = false;
+                name.classList.add("is-invalid");
+                document.querySelector('.name-valid').innerText = "Enter Name";
+                document.querySelector('.model-name').innerText = "Enter Name";
+            }
+            if (!email.value.trim()) {
+                isFormValid = false;
+                email.classList.add("is-invalid");
+                document.querySelector('.email-valid').innerText = "Invalid Email"
+                document.querySelector('.model-email').innerText = "Invalid Email";
+            }
+            else {
+                name.classList.remove("is-invalid");
+                email.classList.remove("is-invalid");
+            }
+    
+            // If form is valid, you can submit it or perform further actions
+            isFormValid;
+        });
+    });
+});
+
+document.querySelector("input[type='text']").addEventListener('keypress', function (event) {
+    const name = document.querySelector("input[type='text']");
+    var key = event.key;
+    // Check if the pressed key is a number or a symbol
+    if (!/^[a-zA-Z\s]+$/.test(key)) {
+        event.preventDefault(); // Prevent the default behavior of the key press event
+    }
+    if (name.value !== '') {
+        name.classList.remove("is-invalid");
+        document.querySelector('.name-valid').innerText = ""
+    }
+});
+
+document.querySelector("input[type='email']").addEventListener('keypress', function (event) {
+    const email = document.querySelector("input[type='email']");
+    if (email.value !== '') {
+        email.classList.remove("is-invalid");
+        document.querySelector('.email-valid').innerText = ""
+    }
+});*/
+// form validation end
+//mobile function
+function Mobilesticky() {
+    let a = document.querySelector('.sticky-footer');
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        a.style.bottom = "0"
+    }
+    else {
+        a.style.bottom = "-50px"
+    }
+}
+window.addEventListener('scroll', Mobilesticky);
+
+// topup button code start
+// Get the button:
+let mybutton = document.querySelector(".topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.right = "25px";
+    } else {
+        mybutton.style.right = "-70px";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+//navbar fixed
+
+function scrollNavbar() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.querySelector(".navbar").classList.add("fixedNav");
+    } else {
+        document.querySelector(".navbar").classList.remove("fixedNav");
+    }
+}
+
+window.addEventListener('scroll', scrollNavbar);
+
+
+// model form title
+const buttons = document.querySelectorAll('.linkBtn'); 
+buttons.forEach(button => {   
+  button.addEventListener('click', () => { 
+    const title = button.getAttribute('data-title'); 
+    const changeTitle = document.querySelector('.modal-body .card-header').innerText = title; 
+    const message = document.getElementById('me_message').value = title; 
+    // console.log(`Clicked button with title: ${title}`); 
+  }); 
+});

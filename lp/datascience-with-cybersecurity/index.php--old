@@ -1,0 +1,1266 @@
+<?php include('include/comman_use.php'); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="CompTIA Security+ Training and Certification course">
+<meta name="author" content="Infosec Train">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>CompTIA Security+ SY0-601 Training and Certification course</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow" /> 
+<link rel="icon" href="assets/img/fav.ico">
+<link href="assets/css/style.min.css" rel="stylesheet"> 
+
+</head>
+<body >
+<?php  
+    if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+         $pag_url = "https://";   
+    else  
+         $pag_url = "http://";   
+    // Append the host(domain name, ip) to the URL.   
+    $pag_url.= $_SERVER['HTTP_HOST'];   
+    
+    // Append the requested resource location to the URL   
+    $pag_url.= $_SERVER['REQUEST_URI'];    
+      
+     
+  ?>   
+<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+<div class="height" style=" display:none; visibility:hidden;">
+    <h3 class="text-center scroll" >Scroll down </h3>
+</div>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<header id="header" class="nav-transparent"> 
+
+  <div class="container py-2">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                        <a class="navbar-brand" href="https://www.infosectrain.com"><img src="assets/img/logo_1.png"></a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_btn" aria-controls="nav_btn" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="nav_btn">
+                            <ul class="navbar-nav ml-auto text-uppercase">
+                                
+                                <li class="nav-item active"><a class="nav-link href_toscroll" href="#coursecontent">Course Content</a></li>                                
+                                <li class="nav-item"><a class="nav-link href_toscroll" href="#table_section">Training Calendar </a></li>
+								<li class="nav-item"><a class="nav-link href_toscroll" href="#fastfacts_section">Career</a></li>
+                                <li class="nav-item"><a class="nav-link href_toscroll" href="#advisors2">Trainers</a></li>
+                                <li class="nav-item"><a class="nav-link href_toscroll" href="#reviews">Reviews </a></li>       
+
+                            </ul>
+                        </div>
+                    </nav>
+        </div>
+    
+  </header>  
+ 
+  
+  <section id="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6 col-xl-8">
+        <div class="left_banner">
+            <div class="b_test_box">
+                <h1 class="b_com">Get a Power Start in <br />Cyber Security with a Global</h1>
+                <h1 class="e_hacker">
+				<a href="#" class="bannerf_a">CompTIA Security+</a></h1>
+                <h2 class="e_council">
+				<a href="#" class="bannerf_a2">Training and Certification</a></h2>
+				<p class="bannerp">
+				Cybersecurity attacks continue to grow at a rapid pace. Therefore, more job roles are required to equip with baseline security readiness and response to modern-day security threats. The latest Changes in CompTIA Security+ certification reflect skills relevant to these job roles and prepare candidates to be more proactive in preventing potential cyber-attacks.
+				</p>
+                
+            </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+	  
+	  <div class="form_headtop"><div class="topright"><img src="assets/img_2/camptia.png"  width="100%"/></div></div>
+        <div class="form-container wow fadeInRight" id="free_demo">
+          
+		  <div class="home-form" > 
+		     	    
+            <h2 class="form_head">Get A Free Demo Class!</h2>
+            <div class="hide rows  mt-2" id="demo_form_output">  </div>
+             <form class="rows  clearfix" method="post" action=""  onSubmit="return val_demo_request(this.form);"  id="demo_me_phone_f" >
+                      <div class="form-group "> 
+                        <input type="text" class="form-control"  id="me_name"  name="me_name"  value="" placeholder="Your Name * " requierd >
+                        
+                        <div class="form-control-feedback"> </div> 
+                      </div>
+                      
+                      <div class="form-group"> 
+                        <input type="email" class="form-control" name="me_email" id="me_email" value="" placeholder="E-mail address *" requierd> 
+                        <div class="form-control-feedback"> </div> 
+                      </div>
+                      <div class="form-group"> 
+                        <input type="text" class="form-control" maxlength="10" name="me_phone" value="" id="me_phone" placeholder="Phone Number" > 
+                        <div class="form-control-feedback"> </div> 
+                      </div>
+                      <div class="form-group"> 
+                    <select class="form-control " id="me_country" name="me_country" requierd > 
+  <option selected="selected" value="">Your Country</option>
+    <option value="Afghanistan">Afghanistan</option>
+    <option value="Albania">Albania</option>
+    <option value="Algeria">Algeria</option>
+    <option value="American Samoa">American Samoa</option>
+    <option value="Andorra">Andorra</option>
+    <option value="Angola">Angola</option>
+    <option value="Anguilla">Anguilla</option>
+    <option value="Antartica">Antarctica</option>
+    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Armenia">Armenia</option>
+    <option value="Aruba">Aruba</option>
+    <option value="Australia">Australia</option>
+    <option value="Austria">Austria</option>
+    <option value="Azerbaijan">Azerbaijan</option>
+    <option value="Bahamas">Bahamas</option>
+    <option value="Bahrain">Bahrain</option>
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="Barbados">Barbados</option>
+    <option value="Belarus">Belarus</option>
+    <option value="Belgium">Belgium</option>
+    <option value="Belize">Belize</option>
+    <option value="Benin">Benin</option>
+    <option value="Bermuda">Bermuda</option>
+    <option value="Bhutan">Bhutan</option>
+    <option value="Bolivia">Bolivia</option>
+    <option value="Bosnia and Herzegowina">Bosnia and Herzegowina</option>
+    <option value="Botswana">Botswana</option>
+    <option value="Bouvet Island">Bouvet Island</option>
+    <option value="Brazil">Brazil</option>
+    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+    <option value="Brunei Darussalam">Brunei Darussalam</option>
+    <option value="Bulgaria">Bulgaria</option>
+    <option value="Burkina Faso">Burkina Faso</option>
+    <option value="Burundi">Burundi</option>
+    <option value="Cambodia">Cambodia</option>
+    <option value="Cameroon">Cameroon</option>
+    <option value="Canada">Canada</option>
+    <option value="Cape Verde">Cape Verde</option>
+    <option value="Cayman Islands">Cayman Islands</option>
+    <option value="Central African Republic">Central African Republic</option>
+    <option value="Chad">Chad</option>
+    <option value="Chile">Chile</option>
+    <option value="China">China</option>
+    <option value="Christmas Island">Christmas Island</option>
+    <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+    <option value="Colombia">Colombia</option>
+    <option value="Comoros">Comoros</option>
+    <option value="Congo">Congo</option>
+    <option value="Congo">Congo, the Democratic Republic of the</option>
+    <option value="Cook Islands">Cook Islands</option>
+    <option value="Costa Rica">Costa Rica</option>
+    <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+    <option value="Croatia">Croatia (Hrvatska)</option>
+    <option value="Cuba">Cuba</option>
+    <option value="Cyprus">Cyprus</option>
+    <option value="Czech Republic">Czech Republic</option>
+    <option value="Denmark">Denmark</option>
+    <option value="Djibouti">Djibouti</option>
+    <option value="Dominica">Dominica</option>
+    <option value="Dominican Republic">Dominican Republic</option>
+    <option value="East Timor">East Timor</option>
+    <option value="Ecuador">Ecuador</option>
+    <option value="Egypt">Egypt</option>
+    <option value="El Salvador">El Salvador</option>
+    <option value="Equatorial Guinea">Equatorial Guinea</option>
+    <option value="Eritrea">Eritrea</option>
+    <option value="Estonia">Estonia</option>
+    <option value="Ethiopia">Ethiopia</option>
+    <option value="Falkland Islands">Falkland Islands (Malvinas)</option>
+    <option value="Faroe Islands">Faroe Islands</option>
+    <option value="Fiji">Fiji</option>
+    <option value="Finland">Finland</option>
+    <option value="France">France</option>
+    <option value="France Metropolitan">France, Metropolitan</option>
+    <option value="French Guiana">French Guiana</option>
+    <option value="French Polynesia">French Polynesia</option>
+    <option value="French Southern Territories">French Southern Territories</option>
+    <option value="Gabon">Gabon</option>
+    <option value="Gambia">Gambia</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Germany">Germany</option>
+    <option value="Ghana">Ghana</option>
+    <option value="Gibraltar">Gibraltar</option>
+    <option value="Greece">Greece</option>
+    <option value="Greenland">Greenland</option>
+    <option value="Grenada">Grenada</option>
+    <option value="Guadeloupe">Guadeloupe</option>
+    <option value="Guam">Guam</option>
+    <option value="Guatemala">Guatemala</option>
+    <option value="Guinea">Guinea</option>
+    <option value="Guinea-Bissau">Guinea-Bissau</option>
+    <option value="Guyana">Guyana</option>
+    <option value="Haiti">Haiti</option>
+    <option value="Heard and McDonald Islands">Heard and Mc Donald Islands</option>
+    <option value="Holy See">Holy See (Vatican City State)</option>
+    <option value="Honduras">Honduras</option>
+    <option value="Hong Kong">Hong Kong</option>
+    <option value="Hungary">Hungary</option>
+    <option value="Iceland">Iceland</option>
+    <option value="India">India</option>
+    <option value="Indonesia">Indonesia</option>
+    <option value="Iran">Iran (Islamic Republic of)</option>
+    <option value="Iraq">Iraq</option>
+    <option value="Ireland">Ireland</option>
+    <option value="Israel">Israel</option>
+    <option value="Italy">Italy</option>
+    <option value="Jamaica">Jamaica</option>
+    <option value="Japan">Japan</option>
+    <option value="Jordan">Jordan</option>
+    <option value="Kazakhstan">Kazakhstan</option>
+    <option value="Kenya">Kenya</option>
+    <option value="Kiribati">Kiribati</option>
+    <option value="Democratic People's Republic of Korea">Korea, Democratic People's Republic of</option>
+    <option value="Korea">Korea, Republic of</option>
+    <option value="Kuwait">Kuwait</option>
+    <option value="Kyrgyzstan">Kyrgyzstan</option>
+    <option value="Lao">Lao People's Democratic Republic</option>
+    <option value="Latvia">Latvia</option>
+    <option value="Lebanon">Lebanon</option>
+    <option value="Lesotho">Lesotho</option>
+    <option value="Liberia">Liberia</option>
+    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+    <option value="Liechtenstein">Liechtenstein</option>
+    <option value="Lithuania">Lithuania</option>
+    <option value="Luxembourg">Luxembourg</option>
+    <option value="Macau">Macau</option>
+    <option value="Macedonia">Macedonia, The Former Yugoslav Republic of</option>
+    <option value="Madagascar">Madagascar</option>
+    <option value="Malawi">Malawi</option>
+    <option value="Malaysia">Malaysia</option>
+    <option value="Maldives">Maldives</option>
+    <option value="Mali">Mali</option>
+    <option value="Malta">Malta</option>
+    <option value="Marshall Islands">Marshall Islands</option>
+    <option value="Martinique">Martinique</option>
+    <option value="Mauritania">Mauritania</option>
+    <option value="Mauritius">Mauritius</option>
+    <option value="Mayotte">Mayotte</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Micronesia">Micronesia, Federated States of</option>
+    <option value="Moldova">Moldova, Republic of</option>
+    <option value="Monaco">Monaco</option>
+    <option value="Mongolia">Mongolia</option>
+    <option value="Montserrat">Montserrat</option>
+    <option value="Morocco">Morocco</option>
+    <option value="Mozambique">Mozambique</option>
+    <option value="Myanmar">Myanmar</option>
+    <option value="Namibia">Namibia</option>
+    <option value="Nauru">Nauru</option>
+    <option value="Nepal">Nepal</option>
+    <option value="Netherlands">Netherlands</option>
+    <option value="Netherlands Antilles">Netherlands Antilles</option>
+    <option value="New Caledonia">New Caledonia</option>
+    <option value="New Zealand">New Zealand</option>
+    <option value="Nicaragua">Nicaragua</option>
+    <option value="Niger">Niger</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="Niue">Niue</option>
+    <option value="Norfolk Island">Norfolk Island</option>
+    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+    <option value="Norway">Norway</option>
+    <option value="Oman">Oman</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Palau">Palau</option>
+    <option value="Panama">Panama</option>
+    <option value="Papua New Guinea">Papua New Guinea</option>
+    <option value="Paraguay">Paraguay</option>
+    <option value="Peru">Peru</option>
+    <option value="Philippines">Philippines</option>
+    <option value="Pitcairn">Pitcairn</option>
+    <option value="Poland">Poland</option>
+    <option value="Portugal">Portugal</option>
+    <option value="Puerto Rico">Puerto Rico</option>
+    <option value="Qatar">Qatar</option>
+    <option value="Reunion">Reunion</option>
+    <option value="Romania">Romania</option>
+    <option value="Russia">Russian Federation</option>
+    <option value="Rwanda">Rwanda</option>
+    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
+    <option value="Saint LUCIA">Saint LUCIA</option>
+    <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
+    <option value="Samoa">Samoa</option>
+    <option value="San Marino">San Marino</option>
+    <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
+    <option value="Saudi Arabia">Saudi Arabia</option>
+    <option value="Senegal">Senegal</option>
+    <option value="Seychelles">Seychelles</option>
+    <option value="Sierra">Sierra Leone</option>
+    <option value="Singapore">Singapore</option>
+    <option value="Slovakia">Slovakia (Slovak Republic)</option>
+    <option value="Slovenia">Slovenia</option>
+    <option value="Solomon Islands">Solomon Islands</option>
+    <option value="Somalia">Somalia</option>
+    <option value="South Africa">South Africa</option>
+    <option value="South Georgia">South Georgia and the South Sandwich Islands</option>
+    <option value="Span">Spain</option>
+    <option value="SriLanka">Sri Lanka</option>
+    <option value="St. Helena">St. Helena</option>
+    <option value="St. Pierre and Miguelon">St. Pierre and Miquelon</option>
+    <option value="Sudan">Sudan</option>
+    <option value="Suriname">Suriname</option>
+    <option value="Svalbard">Svalbard and Jan Mayen Islands</option>
+    <option value="Swaziland">Swaziland</option>
+    <option value="Sweden">Sweden</option>
+    <option value="Switzerland">Switzerland</option>
+    <option value="Syria">Syrian Arab Republic</option>
+    <option value="Taiwan">Taiwan, Province of China</option>
+    <option value="Tajikistan">Tajikistan</option>
+    <option value="Tanzania">Tanzania, United Republic of</option>
+    <option value="Thailand">Thailand</option>
+    <option value="Togo">Togo</option>
+    <option value="Tokelau">Tokelau</option>
+    <option value="Tonga">Tonga</option>
+    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+    <option value="Tunisia">Tunisia</option>
+    <option value="Turkey">Turkey</option>
+    <option value="Turkmenistan">Turkmenistan</option>
+    <option value="Turks and Caicos">Turks and Caicos Islands</option>
+    <option value="Tuvalu">Tuvalu</option>
+    <option value="Uganda">Uganda</option>
+    <option value="Ukraine">Ukraine</option>
+    <option value="United Arab Emirates">United Arab Emirates</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="United States">United States</option>
+    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+    <option value="Uruguay">Uruguay</option>
+    <option value="Uzbekistan">Uzbekistan</option>
+    <option value="Vanuatu">Vanuatu</option>
+    <option value="Venezuela">Venezuela</option>
+    <option value="Vietnam">Viet Nam</option>
+    <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+    <option value="Virgin Islands (U.S)">Virgin Islands (U.S.)</option>
+    <option value="Wallis and Futana Islands">Wallis and Futuna Islands</option>
+    <option value="Western Sahara">Western Sahara</option>
+    <option value="Yemen">Yemen</option>
+    <option value="Yugoslavia">Yugoslavia</option>
+    <option value="Zambia">Zambia</option>
+    <option value="Zimbabwe">Zimbabwe</option>
+    <option value="Other">Other</option>
+
+
+
+</select>
+                        
+                        <div class="form-control-feedback"> </div> 
+                      </div>
+          
+                      <!--<div class="row">
+                       <div class="col-xs-12 col-md-12">-->
+                        <div class="form-group">
+                        <textarea class="form-control" id="me_message" value=""  name="me_message" placeholder="Comment/Training " ></textarea> 
+                        <div class="form-control-feedback"> </div> 
+                      <!--</div>
+          
+                      </div>-->
+                            </div>
+               
+                <input type="hidden"   value="<?php echo BASE_URL;?>thank-you.html" id="me_redirect"  > 
+                <input type="hidden"   value="CompTIA Security+" id="me_others" name="me_others"  > 
+				<input type="hidden"   value="<?php echo $pag_url;?>" id="me_pageurl"  >
+                <button type="submit" name="me_submited" id="me_submited" value="submited" class="form-control btn btn-primary btn_submit  ">Reserve your seat Now</button> 
+                <div class="loading_w hide" id="loading_w"><img src="<?php echo BASE_URL; ?>assets/img/loader.gif"/></div>
+             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="coursecontent">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">               
+               <h2 class="package-heading">CompTIA Security+ Training Includes</h2>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-lg-6">
+           
+              <img src="assets/img_2/CompTIASecurityIncludes.webp" width="100%" alt="" class="">
+           
+          </div>
+          <div class="col-12 col-lg-6 mt-lg-0 mt-4">
+           <!-------- <img src="assets/img_2/CompTIASecurityIncludes.png" width="100%" alt="" class="">-------->
+            
+			<div class="row cust_row">
+			<div class="col-lg-6 mt-lg-0 mt-4">
+			<div class="certification_box">
+                        <h4 class="adv-h">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon flag-icon1" width="44" height="44" viewBox="0 0 44 44">
+						<defs>
+						<style>.a{fill:#ddd;opacity:0;}.b{fill:#3b3a39;}.b:hover{fill:#ff1046;}</style>
+						</defs>
+						<g transform="translate(-726 -997)">
+						<g transform="translate(-241 -219)">
+						<rect class="a" width="44" height="44" transform="translate(967 1216)"/></g>
+						<g transform="translate(489.926 897.641)"><g transform="translate(240.952 103)">
+						<circle class="b" cx="2.862" cy="2.862" r="2.862" transform="translate(13.936 15.739)"/><path class="b" d="M270.7,121.515c.324-.356.63-.714.916-1.069,2.574-3.206,3.325-6.124,2.118-8.215-.628-1.087-2.06-2.4-5.316-2.478a1.412,1.412,0,0,0-1.465,1.4,1.431,1.431,0,0,0,1.4,1.465c1.506.036,2.538.409,2.908,1.048.551.955-.166,2.867-1.872,4.993-.227.283-.475.568-.73.852a38.462,38.462,0,0,0-3.035-2.443c-.736-7.1-3.407-14.063-7.874-14.063-2.964,0-5.159,3.034-6.512,7.295q-.727-.159-1.424-.267c-4.061-.623-6.965.182-8.173,2.274-.66,1.144-1.073,3.146.706,6.186a1.431,1.431,0,1,0,2.47-1.446c-.834-1.425-1.088-2.632-.7-3.31.552-.954,2.568-1.29,5.26-.876.368.056.748.13,1.132.212a38.187,38.187,0,0,0-.61,3.814c-5.847,4.2-10.632,10.052-8.381,13.951,1,1.735,3.029,2.473,5.586,2.473a19.145,19.145,0,0,0,4.094-.52c1.35,4.324,3.558,7.418,6.55,7.418,1.362,0,3.36-.681,5.13-3.928a1.431,1.431,0,0,0-2.513-1.371c-.844,1.549-1.8,2.437-2.618,2.437-1.2,0-2.7-1.927-3.791-5.309a37.982,37.982,0,0,0,3.64-1.408,27.734,27.734,0,0,0,10.659,2.743c2.544,0,4.594-.722,5.6-2.465C275.354,128.31,273.777,124.848,270.7,121.515ZM244,129.4c-.841-1.457,1.12-5.012,5.654-8.731q-.01.466-.01.931a41.554,41.554,0,0,0,.846,8.43C247.015,130.778,244.6,130.44,244,129.4Zm13.751-23.539c1.667,0,3.739,3.414,4.707,9.1-.217-.131-.434-.259-.652-.385a41.421,41.421,0,0,0-7.8-3.528C255.087,107.747,256.565,105.862,257.749,105.862Zm-4.507,23.407a40.125,40.125,0,0,1,.023-15.45,38.765,38.765,0,0,1,7.108,3.239,38.052,38.052,0,0,1,6.258,4.463,38.642,38.642,0,0,1-6.378,4.554A38.023,38.023,0,0,1,253.242,129.269Zm18.139.2c-.841,1.459-4.905,1.537-10.4-.534.233-.13.471-.251.7-.383a41.4,41.4,0,0,0,6.989-5.025C271.061,126.166,271.98,128.432,271.381,129.471Z" transform="translate(-240.952 -103)"/></g></g></g></svg>
+						</h4>
+                        <p class="adv-p">40 hours of instructor <br />led training</p>
+            </div>
+			</div>
+			
+			<div class="col-lg-6 mt-lg-0 mt-4">
+			<div class="certification_box">
+                        <h4 class="adv-h">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{fill:#ddd;opacity:0;}.b{fill:#3b3a39;}</style></defs><g transform="translate(-967 -997)"><g transform="translate(241)"><g transform="translate(-241 -219)"><rect class="a" width="44" height="44" transform="translate(967 1216)"/></g></g><g transform="translate(595.118 829.242)"><g transform="translate(381.51 171.668)"><path class="b" d="M397.94,194.514l-2.119-.308-.948-1.919c-.327-.664-.858-.664-1.186,0l-.948,1.919-2.119.308c-.732.107-.9.612-.366,1.128l1.534,1.494-.362,2.111c-.126.73.3,1.042.959.7l1.895-1,1.9,1c.655.344,1.084.032.959-.7l-.362-2.111,1.533-1.494C398.836,195.125,398.672,194.62,397.94,194.514Zm7.749-22.846h-8.3a.951.951,0,0,0-.834.493l-5.639,10.253a13.677,13.677,0,0,1,3.359-.433h0a13.812,13.812,0,0,1,6.462,1.608l5.781-10.511A.951.951,0,0,0,405.689,171.668Z" transform="translate(-381.917 -171.668)"/><path class="b" d="M392.426,174.014l-.835-1.516a.949.949,0,0,0-.834-.493h-8.3a.951.951,0,0,0-.834,1.41l5.563,10.115Zm1.446,10.363a11.576,11.576,0,1,0,11.576,11.575A11.576,11.576,0,0,0,393.872,184.377Zm0,18.393a6.817,6.817,0,1,1,6.818-6.818A6.818,6.818,0,0,1,393.872,202.769Z" transform="translate(-381.51 -171.684)"/></g></g></g></svg>
+						</h4>
+                        <p class="adv-p">Certified & <br />Experienced Trainers</p>
+            </div>
+			</div>
+			
+			<div class="col-lg-6 mt-lg-0 mt-4">
+			<div class="certification_box">
+                        <h4 class="adv-h">
+					
+						<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{fill:#ddd;opacity:0;}.b{fill:#3b3a39;}</style></defs><g transform="translate(-967 -997)"><g transform="translate(241)"><g transform="translate(-241 -219)"><rect class="a" width="44" height="44" transform="translate(967 1216)"/></g></g><g transform="translate(938 898.759)"><g transform="translate(32 106.241)"><path class="b" d="M69.543,128.357h.016l-1.888-.648v-6.4a3.733,3.733,0,0,1-.43.044H64.232v5.173H38.446V110.2H51.339v-2.164a3.825,3.825,0,0,1,.233-1.274H36.727a1.719,1.719,0,0,0-1.719,1.719v19.231l-1.891.648h.019A1.714,1.714,0,0,0,32,129.968v2.577a1.719,1.719,0,0,0,1.719,1.719H68.96a1.72,1.72,0,0,0,1.719-1.719v-2.577A1.714,1.714,0,0,0,69.543,128.357Zm-16.054,3.276h-4.3a1.289,1.289,0,1,1,0-2.579h4.3a1.289,1.289,0,1,1,0,2.579ZM44.73,118.767a2.495,2.495,0,1,0-1.088-1.088A2.206,2.206,0,0,0,44.73,118.767Zm-3.037,4.4v.585a.6.6,0,0,0,.572.616h7.213a.6.6,0,0,0,.572-.616v-.585a1.958,1.958,0,0,0-1.881-2.027h-4.6A1.958,1.958,0,0,0,41.693,123.162Z" transform="translate(-32 -106.314)"/><path class="b" d="M70.753,106.241H58.719A1.719,1.719,0,0,0,57,107.96v12.033a.861.861,0,0,0,.863.861.847.847,0,0,0,.512-.174l1.6-1.2a1.716,1.716,0,0,1,1.031-.344h9.741a1.719,1.719,0,0,0,1.719-1.719V107.96A1.719,1.719,0,0,0,70.753,106.241Zm-2.911,6.75-3.516,2.153a.859.859,0,0,1-1.308-.732V110.1a.86.86,0,0,1,1.308-.733l3.516,2.154A.86.86,0,0,1,67.841,112.991Z" transform="translate(-35.512 -106.241)"/></g></g></g></svg>
+						</h4>
+                        <p class="adv-p">Access to the<br /> recorded sessions</p>
+            </div>
+			</div>
+			
+			<div class="col-lg-6 mt-lg-0 mt-4">
+			<div class="certification_box">
+                        <h4 class="adv-h">
+						
+						<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{fill:#ddd;opacity:0;}.b{fill:#3b3a39;}</style></defs><g transform="translate(-967 -1216)"><rect class="a" width="44" height="44" transform="translate(967 1216)"/><g transform="translate(662.5 979.403)"><path class="b" d="M339.25,256.9a1.25,1.25,0,0,0-1.25-1.25H317a1.25,1.25,0,0,0,0,2.5h21A1.25,1.25,0,0,0,339.25,256.9ZM317,260.653a1.25,1.25,0,0,0,0,2.5h8.7a1.25,1.25,0,0,0,0-2.5Zm14-7.5a1.25,1.25,0,0,0,0-2.5h-8a1.25,1.25,0,0,0,0,2.5ZM343.5,242.6h-34a2,2,0,0,0-2,2v25a2,2,0,0,0,2,2h19v-4h-14a3,3,0,0,0-3-3v-15a3,3,0,0,0,3-3h24a3,3,0,0,0,3,3v15a3,3,0,0,0-3,3h0v4h5a2,2,0,0,0,2-2v-25A2,2,0,0,0,343.5,242.6Z"/><path class="b" d="M331,269.738v4.218a.447.447,0,0,0,.448.447.441.441,0,0,0,.258-.084l1.535-1.1a.447.447,0,0,1,.519,0l1.535,1.1a.439.439,0,0,0,.258.084.446.446,0,0,0,.447-.447v-4.218a5.928,5.928,0,0,1-5,0Zm2.5-1.947a3.5,3.5,0,1,0-3.5-3.5A3.5,3.5,0,0,0,333.5,267.791Z"/></g></g></svg>
+						</h4>
+                        <p class="adv-p">CompTIA Authorized<br /> Training Partner</p>
+            </div>
+			</div>
+			</div>
+			<!---------------->
+            
+          </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="coursess">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 wow fadeInLeft">
+        <h2 class="package-heading">CompTIA Security+ Course Content / Exam(s)</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+      <!-- Tabs navs -->
+
+
+<!-- Tabs content -->
+	  
+	  
+<section class="accordion-tabs js-tabs" data-tabs-allowed="true" data-breakpoint="640" data-start-collapsed="true">
+      <ul role="tablist" class="tabs-tab-list">
+          <li role="presentation"><a id="tab1" href="#section1" role="tab" aria-controls="section1" aria-selected="true" class="tabs-trigger js-tabs-trigger">Overview</a></li>
+          <li role="presentation"><a id="tab2" href="#section2" role="tab" aria-controls="section2" class="tabs-trigger js-tabs-trigger">Course Objectives</a></li>
+          <li role="presentation"><a id="tab3" href="#section3" role="tab" aria-controls="section3" class="tabs-trigger js-tabs-trigger">Course Content</a></li>
+		  <li role="presentation"><a id="tab4" href="#section4" role="tab" aria-controls="section4" class="tabs-trigger js-tabs-trigger">Who Should Attend</a></li>
+          <li role="presentation"><a id="tab5" href="#section5" role="tab" aria-controls="section5" class="tabs-trigger js-tabs-trigger"> Pre-Requisite</a></li>
+		  <li role="presentation"><a id="tab6" href="#section6" role="tab" aria-controls="section6" class="tabs-trigger js-tabs-trigger">Exam Information</a></li>
+      </ul>
+      <section id="section1" role="tabpanel" aria-labelledby="tab1" class="tabs-panel js-tabs-panel" tabindex="0">
+        <div class="accordion-trigger js-accordion-trigger" aria-controls="section1" aria-expanded="true" tabindex="0">Overview<div class="accordion-trigger-icon"><span class="label--open">Open</span><span class="label--close">Close</span>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+            <rect class="vert" height="18" width="2" fill="currentColor" y="1" x="9"></rect>
+            <rect height="2" width="18" fill="currentColor" y="9" x="1"></rect>
+          </svg>
+        </div></div>
+        <div class="content" aria-hidden="false">
+         <div  class="tab_content"> 
+            <img src="assets/img_2/camptia.png" align="right"  style="width:120px;" class="d-inline-block ml-3">
+                       <p>
+This Comptia security+ sy0 601 course highlights the basic knowledge needed to perform the security functions in IT security. It focuses on the practical skillset required to solve a variety of problems and tackle issues. The course covers the latest updates and market trends on risk management and mitigation, how to respond to threats and treat them, and various auditing and penetration testing opportunities.</p>
+<p>
+Cybersecurity attacks continue to grow. Increasingly, more job roles are tasked with baseline security readiness and Response to address today’s threats. Latest Changes in comptia security+ certification reflect skills relevant to these job roles and prepare candidates to be more proactive in preventing the next attack.
+
+
+</p>
+                     </div>
+        </div>
+      </section>
+      <section id="section2" role="tabpanel" aria-labelledby="tab2" class="tabs-panel js-tabs-panel">
+        <div class="accordion-trigger js-accordion-trigger" aria-controls="section2" aria-expanded="false" tabindex="0">Course Objectives<div class="accordion-trigger-icon"><span class="label--open">Open</span><span class="label--close">Close</span><svg aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+            <rect class="vert" height="18" width="2" fill="currentColor" y="1" x="9"></rect>
+            <rect height="2" width="18" fill="currentColor" y="9" x="1"></rect>
+          </svg></div></div>
+        <div class="content" aria-hidden="true">
+          <div  class="tab_content">
+<p><strong><em>Attacks, Threats, and Vulnerabilities :</em></strong></p>
+<ul class="ulclass">
+<li>Compare and contrast different methods of social engineering techniques.</li>
+<li>Learn about potential indicators to determine the type of attack.</li>
+<li>Explain different threat actors, intelligence sources, and Vectors.</li>
+<li>Explain the security-related concerns associated with different types of vulnerabilities.</li>
+<li>Summarize techniques used in security assessments.</li>
+<li>Explain the strategies that are used in penetration testing</li>
+</ul>
+<p><strong><em>Architecture and Design:</em></strong></p>
+<ul class="ulclass">
+<li>Importance of security concepts in an organization environment</li>
+<li>Summarize virtualization and cloud computing concepts, secure application development, deployment, and automation concepts</li>
+<li>Summarize authentication and authorization design concepts and the basics of cryptographic concepts.</li>
+<li>Implement cybersecurity resilience</li>
+<li>Explain the security implications of physical security controls and embedded and specialized systems</li>
+</ul>
+<p><strong>Implementation:</strong></p>
+<ul class="ulclass">
+<li>Implement secure protocols, host or application security solutions, and secure network designs</li>
+<li>Comprehend how to install and configure wireless security settings and how to apply cybersecurity solutions to the cloud</li>
+<li>Implement authentication and authorization solutions and identity and account management controls</li>
+<li>Understand implementing public key infrastructure (PKI)</li>
+</ul>
+<p><strong>Operations and Incident Response</strong></p>
+<ul class="ulclass">
+<li>Use the appropriate tool for assessing the organizational Security</li>
+<li>Learn about the importance of policies, processes, and procedures for incident response</li>
+<li>Utilize relevant data sources to support investigations</li>
+<li>How to implement mitigation techniques or controls to secure an environment</li>
+<li>Explain key aspects of digital forensics</li>
+</ul>
+<p><strong>Governance, Risk, and Compliance</strong></p>
+<ul class="ulclass">
+<li>Compare and contrast different types of controls</li>
+<li>Explain the necessity of standards or frameworks, applicable regulations that impact the organizational security posture</li>
+<li>Explain the importance of policies to corporate Security</li>
+<li>Summarize risk management processes and concepts</li>
+<li>Explain privacy and sensitive data concepts about Security</li>
+</ul>
+   
+   </div>
+        </div>
+      </section>
+      <section id="section3" role="tabpanel" aria-labelledby="tab3" class="tabs-panel js-tabs-panel">
+        <div class="accordion-trigger js-accordion-trigger" aria-controls="section3" aria-expanded="false" tabindex="0">Course Content <div class="accordion-trigger-icon"><span class="label--open">Open</span><span class="label--close">Close</span><svg aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+            <rect class="vert" height="18" width="2" fill="currentColor" y="1" x="9"></rect>
+            <rect height="2" width="18" fill="currentColor" y="9" x="1"></rect>
+          </svg></div></div>
+        <div class="content" aria-hidden="true">
+          <div class="tab_content"><ul class="ulclass"><li>Domain 1.0: Attacks, Threats, and Vulnerabilities</li>
+  <li>Domain 2.0: Architecture and Design</li>
+  <li>Domain 3.0: Implementation</li>
+  <li>Domain 4.0: Operations and Incident Response</li><li>Domain 5.0: Governance, Risk, and Compliance</li></ul></div>
+        </div>
+      </section>
+	  <section id="section4" role="tabpanel" aria-labelledby="tab4" class="tabs-panel js-tabs-panel">
+        <div class="accordion-trigger js-accordion-trigger" aria-controls="section4" aria-expanded="false" tabindex="0">Who Should Attend <div class="accordion-trigger-icon"><span class="label--open">Open</span><span class="label--close">Close</span><svg aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+            <rect class="vert" height="18" width="2" fill="currentColor" y="1" x="9"></rect>
+            <rect height="2" width="18" fill="currentColor" y="9" x="1"></rect>
+          </svg></div></div>
+        <div class="content" aria-hidden="true">
+         <div class="tab_content"><ul class="ulclass"><li>System  Administrators</li>
+  <li>Security  Engineers and consultants</li>
+  <li>Network  administrators</li>
+  <li>IT  Auditor/Penetration Tester</li></ul></div>
+        </div>
+      </section>
+	  <section id="section5" role="tabpanel" aria-labelledby="tab5" class="tabs-panel js-tabs-panel">
+        <div class="accordion-trigger js-accordion-trigger" aria-controls="section5" aria-expanded="false" tabindex="0">Pre-Requisite <div class="accordion-trigger-icon"><span class="label--open">Open</span><span class="label--close">Close</span><svg aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+            <rect class="vert" height="18" width="2" fill="currentColor" y="1" x="9"></rect>
+            <rect height="2" width="18" fill="currentColor" y="9" x="1"></rect>
+          </svg></div></div>
+        <div class="content" aria-hidden="true">
+         <div class="tab_content"><p>CompTIA Network + and minimum of 2 year’s experience in IT security administration.</p>  </div>
+        </div>
+      </section>
+	  <section id="section6" role="tabpanel" aria-labelledby="tab6" class="tabs-panel js-tabs-panel">
+        <div class="accordion-trigger js-accordion-trigger" aria-controls="section6" aria-expanded="false" tabindex="0">Exam Information <div class="accordion-trigger-icon"><span class="label--open">Open</span><span class="label--close">Close</span><svg aria-hidden="true" focusable="false" viewBox="0 0 20 20">
+            <rect class="vert" height="18" width="2" fill="currentColor" y="1" x="9"></rect>
+            <rect height="2" width="18" fill="currentColor" y="9" x="1"></rect>
+          </svg></div></div>
+        <div class="content" aria-hidden="true">
+         <div class="tab_content"> <ul class="ulclass"><li>Duration:  90 Minutes</li><li>Number of questions: 90 questions per exame</li><li>Pass score: 750 (on a scale of 100-900)</li><li>Type: Multiple choice and performance-based</li></ul></div>
+        </div>
+      </section>
+    </section>
+	  
+      </div>
+      <!-- /.col-md-8 -->
+    </div>
+
+
+     
+  </div>
+</section>
+
+
+
+
+
+
+<section id="table_section">
+ 
+    <div  class="container" id="benefits">
+        <div class="row">
+            <div class="col-12">
+               <h2 class="package-heading">CompTIA Security+ Training Calendar</h2>
+            </div>
+        </div>
+
+    <div class="row">
+      <div class="col-12">
+
+<?php
+$url = "https://www.infosectrain.com/api/33864/href_toscroll/free_demo";
+ 
+
+function gettraning_Cal($url){
+  $ch = curl_init();
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_VERBOSE, 1);
+//curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+// curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+//curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+curl_setopt($ch, CURLOPT_URL, $url);
+ 
+$content = curl_exec($ch);
+
+curl_close ($ch);
+return $content;
+}
+
+gettraning_Cal($url);
+ 
+   ?>
+            </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section id="fastfacts_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 wow fadeInLeft">
+        <h2 class="package-heading">Career opportunities in Cyber Security</h2>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class="col-md-12">
+				 <div id="career_oppor" class="owl-carousel owl-theme owl-loaded owl-drag" >
+				  <div class="item"  > <img src="assets/img_2/slide1.webp" class="img-fluid"> </div>
+				   <div class="item"  > <img src="assets/img_2/slide2.webp" class="img-fluid"> </div>
+				   <div class="item" > <img src="assets/img_2/slide3.webp" class="img-fluid"> </div>
+				   
+				</div>
+	  
+      </div>
+      <!-- /.col-md-8 -->
+    </div>
+
+
+     
+  </div>
+</section>
+
+
+<section id="advisors2">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 wow fadeInLeft">
+             <h2 class="package-heading">Our Course Advisors</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="advisor_box_con">
+                    <div class="advisor_box">
+					<!--<span class="box_coma">"</span>-->
+					<img src="assets/img_2/adviso_1.png" width="61">
+					<p class="pt20">
+					Srikanth served as a corporate trainer & Consultant with nearly 4+ years of experience across the diverse industry.  Hands-on experience on Exploit techniques like social engineering, client-side attacks, Virus & backdoors
+					</p>
+                        <h4 class="adv-h">Srikanth Rendla</h4>
+                        <p class="adv-p">CEH |  Network+ | A+ | Sec+ | Azure |</p>
+                    </div>
+                    <div class="advisor_box">
+					<img src="assets/img_2/adviso_2.png"  width="61">
+					<p class="pt20">
+					Sanyam served as a corporate trainer & Consultant with nearly 5+ years of experience across the diverse industry. Delivering more than 30+ training programs yearly, with 250+ professionals overall.<br /><br /></p>
+                    <h4 class="adv-h">Sanyam Negi</h4>
+                    <p class="adv-p">CEH | CHFI | CTIA | Sec+ | Pentest+ | AWS Sec | AWS Architect</p>
+                    </div>
+                    <div class="advisor_box">
+					<img src="assets/img_2/adviso_3.png"  width="61">
+					<p class="pt20">
+					Ashish Delivered training to government and non-government organizations around the globe with nearly 4+ years of experience on different cyber security verticals and Network Security.<br /><br /></p>
+                    <h4 class="adv-h">Ashish Dhyani</h4>
+                    <p class="adv-p">CEH | CND | CCNA | Network+ | Sec+ | Server+ | Linux+ | Pentest+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!----------------Done--------->
+<section id="coursess22">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 wow fadeInLeft">
+        <h2 class="package-heading">Benefits of Being CompTIA Security+ 
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      
+           
+		    <div class="col-lg-4 mt-lg-0 mt-4">
+				<div class="certification_box2">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{opacity:0;}.b{fill:#ddd;}.c{fill:#3b3a39;}</style></defs><g transform="translate(-233 -4176)"><g class="a" transform="translate(233.033 4176)"><rect class="b" width="44" height="44" transform="translate(-0.033)"/></g><g transform="translate(132.748 4007.2)"><path class="c" d="M122.5,187a3,3,0,1,0,3,3A3,3,0,0,0,122.5,187Zm17.654,1.581c-2.8-2.759-9.647-8.581-17.654-8.581s-14.857,5.822-17.654,8.581a1.992,1.992,0,0,0,0,2.838c2.8,2.759,9.647,8.581,17.654,8.581s14.857-5.822,17.654-8.581A1.992,1.992,0,0,0,140.154,188.581ZM122.5,196a6,6,0,1,1,6-6A6,6,0,0,1,122.5,196Z"/><path class="c" d="M113.065,173.8h-4.8a2.97,2.97,0,0,0-2.967,2.966v4.8a1.5,1.5,0,0,0,3,0l-.033-4.766h4.8a1.5,1.5,0,0,0,0-3Zm0,30.4-4.765.033v-4.8a1.5,1.5,0,0,0-3,0v4.8a2.97,2.97,0,0,0,2.967,2.967h4.8a1.5,1.5,0,0,0,0-3Zm22.668-30.4h-4.8a1.5,1.5,0,0,0,0,3l4.765-.034v4.8a1.5,1.5,0,0,0,3,0v-4.8A2.97,2.97,0,0,0,135.733,173.8Zm1.467,24.134a1.5,1.5,0,0,0-1.5,1.5l.033,4.766h-4.8a1.5,1.5,0,0,0,0,3h4.8a2.97,2.97,0,0,0,2.967-2.967v-4.8A1.5,1.5,0,0,0,137.2,197.934Z"/></g></g></svg>
+							</h4>
+							<p class="adv-p">Threats, Attacks & <br />Vulnerabilities</p>
+							<p class="adv-ps">Detects types of compromises, understands testing and vulnerabilities scanning concepts</p>
+				</div>
+			</div>
+			
+			
+			<div class="col-lg-4 mt-lg-0 mt-4">
+				<div class="certification_box2">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{opacity:0;}.b{fill:#ddd;}.c{fill:#3b3a39;}</style></defs><g transform="translate(-558 -4176)"><g class="a" transform="translate(558.37 4176)"><rect class="b" width="44" height="44" transform="translate(-0.37)"/></g><g transform="translate(389.129 4007.696)"><path class="c" d="M207.589,193.994h0a2.5,2.5,0,0,0-3.509-.419L197,199.122a2,2,0,0,1-1.232.425l-5.072.005a1.25,1.25,0,0,1,0-2.5l4.25,0a2.5,2.5,0,0,0-.005-5l-9.731.01h-.657a6.011,6.011,0,0,0-3.7,1.282l-3.472,2.726a.5.5,0,0,0-.084.7l6.745,8.529a.5.5,0,0,0,.387.19l8.159.069,2.256.019a6,6,0,0,0,3.771-1.293l8.566-6.773A2.5,2.5,0,0,0,207.589,193.994Z"/><path class="c" d="M175.332,198.319a.5.5,0,0,0-.7-.082l-1.569,1.24a.5.5,0,0,0-.082.7l6.584,8.327a.5.5,0,0,0,.7.082l1.569-1.24a.5.5,0,0,0,.082-.7Zm27.494-18.951H201.6a.738.738,0,0,1-.5-.49,6.36,6.36,0,0,0-.413-.992.711.711,0,0,1,.111-.838l.745-.744a.71.71,0,0,0,0-1l-1-1a.71.71,0,0,0-1,0l-.744.745a.711.711,0,0,1-.838.111,6.323,6.323,0,0,0-.992-.413.725.725,0,0,1-.522-.684v-1.042a.71.71,0,0,0-.71-.709H194.31a.709.709,0,0,0-.71.709v1.042a.725.725,0,0,1-.523.684,6.362,6.362,0,0,0-.992.413.711.711,0,0,1-.838-.111l-.744-.745a.71.71,0,0,0-1,0l-1,1a.709.709,0,0,0,0,1l.744.744a.713.713,0,0,1,.112.838,6.265,6.265,0,0,0-.413.992.742.742,0,0,1-.5.49h-1.23a.71.71,0,0,0-.71.71v1.451a.71.71,0,0,0,.71.71h1.23a.741.741,0,0,1,.5.491,6.265,6.265,0,0,0,.413.992.713.713,0,0,1-.112.838l-.744.744a.709.709,0,0,0,0,1l1,1a.71.71,0,0,0,1,0l.744-.744a.713.713,0,0,1,.838-.112,6.266,6.266,0,0,0,.992.413.727.727,0,0,1,.523.685v1.041a.71.71,0,0,0,.71.71h1.419a.71.71,0,0,0,.71-.71v-1.041a.727.727,0,0,1,.522-.685,6.228,6.228,0,0,0,.992-.413.713.713,0,0,1,.838.112l.744.744a.71.71,0,0,0,1,0l1-1a.71.71,0,0,0,0-1l-.745-.744a.712.712,0,0,1-.111-.838,6.36,6.36,0,0,0,.413-.992.737.737,0,0,1,.5-.491h1.23a.709.709,0,0,0,.709-.71v-1.451A.71.71,0,0,0,202.826,179.368Zm-7.807,4.4a2.96,2.96,0,1,1,2.961-2.96A2.96,2.96,0,0,1,195.019,183.764Z"/></g></g></svg>
+							</h4>
+							<p class="adv-p">Technologies & <br />Tools</p>
+							<p class="adv-ps">Install, configure, and deploy network components while assessing and troubleshooting issues to support organizational security</p>
+				</div>
+			</div>
+			
+			
+			<div class="col-lg-4 mt-lg-0 mt-4">
+				<div class="certification_box2">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{opacity:0;}.b{fill:#ddd;}.c{fill:#3b3a39;}</style></defs><g transform="translate(-883 -4176)"><g class="a" transform="translate(882.707 4176)"><rect class="b" width="44" height="44" transform="translate(0.293)"/></g><g transform="translate(579 3939.5)"><rect class="c" width="17" height="9" rx="1" transform="translate(318 241.5)"/><path class="c" d="M344,266.5h-4V261a2.5,2.5,0,0,0-2.5-2.5H328V253h-3v5.5h-9.5A2.5,2.5,0,0,0,313,261v5.5h-4a1,1,0,0,0-1,1v7a1,1,0,0,0,1,1h11a1,1,0,0,0,1-1v-7a1,1,0,0,0-1-1h-4v-5h21v5h-4a1,1,0,0,0-1,1v7a1,1,0,0,0,1,1h11a1,1,0,0,0,1-1v-7A1,1,0,0,0,344,266.5Z"/></g></g></svg>
+							</h4>
+							<p class="adv-p">Architecture & <br />Design</p>
+							<p class="adv-ps">Implement secure network architecture concepts and systems design</p>
+				</div>
+			</div>
+			
+			
+			<div class="col-lg-4 mt-lg-0 mt-4">
+				<div class="certification_box2">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{opacity:0;}.b{fill:#ddd;}.c{fill:#3b3a39;}</style></defs><g transform="translate(-233 -4532)"><g class="a" transform="translate(233.37 4532)"><rect class="b" width="44" height="44" transform="translate(-0.37)"/></g><g transform="translate(-71.968 4363.674)"><path class="c" d="M317.758,194.262a1.244,1.244,0,0,0-1.423,1.048,53.876,53.876,0,0,1-1.735,7.736,1.251,1.251,0,0,0,.829,1.562,1.266,1.266,0,0,0,.367.055,1.251,1.251,0,0,0,1.2-.883,56.639,56.639,0,0,0,1.816-8.1A1.249,1.249,0,0,0,317.758,194.262Zm10.673-12.826a5.276,5.276,0,0,0-4.38.915,7.376,7.376,0,0,0-2.509,5.5,77.825,77.825,0,0,1-1.233,10.866,1.25,1.25,0,0,0,2.454.479,80.212,80.212,0,0,0,1.275-11.208,5,5,0,0,1,1.546-3.665,2.767,2.767,0,0,1,2.359-.439c2.036.4,2.726,1.914,2.543,5.567a77,77,0,0,1-1.275,10.6,1.248,1.248,0,0,0,.992,1.462,1.2,1.2,0,0,0,.236.023,1.252,1.252,0,0,0,1.227-1.015,79.506,79.506,0,0,0,1.316-10.945C333.081,187.619,333.341,182.413,328.431,181.436Zm1.342,22.015a1.254,1.254,0,0,0-1.522.9c-.236.909-.5,1.81-.773,2.707a1.251,1.251,0,0,0,2.391.735c.286-.934.558-1.872.8-2.817A1.251,1.251,0,0,0,329.773,203.451Z"/><path class="c" d="M320.954,201.692a1.255,1.255,0,0,0-1.53.884c-.241.9-.526,1.845-.873,2.885a1.251,1.251,0,0,0,2.374.789c.361-1.088.661-2.079.915-3.028A1.251,1.251,0,0,0,320.954,201.692Zm6.356-15.866H327.3a1.251,1.251,0,0,0-1.25,1.245,62.71,62.71,0,0,1-3.187,19.726,1.251,1.251,0,0,0,.78,1.587,1.266,1.266,0,0,0,.4.067,1.253,1.253,0,0,0,1.184-.847,65.274,65.274,0,0,0,3.32-20.523A1.249,1.249,0,0,0,327.31,185.826Zm-.1-11a1.25,1.25,0,1,0-.022-2.5A14.891,14.891,0,0,0,312.96,183.62a24.738,24.738,0,0,0-.5,4.918c-.03.851-.058,1.655-.131,2.451A58.058,58.058,0,0,1,311,199.181a1.251,1.251,0,0,0,.924,1.508,1.277,1.277,0,0,0,.292.034,1.25,1.25,0,0,0,1.215-.959,60.608,60.608,0,0,0,1.382-8.547c.079-.866.109-1.744.139-2.592a22.709,22.709,0,0,1,.436-4.427A12.365,12.365,0,0,1,327.207,174.826Zm5.66-1.417a1.25,1.25,0,0,0-.942,2.316c4.958,2.015,7.8,6.838,7.6,12.9a82.912,82.912,0,0,1-1.715,14.2,1.25,1.25,0,0,0,.968,1.479,1.188,1.188,0,0,0,.257.027,1.251,1.251,0,0,0,1.223-.994,85.472,85.472,0,0,0,1.765-14.626C342.255,181.662,338.747,175.8,332.867,173.409Zm-5.9,3.425a10.369,10.369,0,0,0-8.413,4.884c-1.375,2.243-1.473,4.631-1.569,6.94-.022.56-.046,1.121-.088,1.681a1.25,1.25,0,0,0,2.492.19c.045-.589.07-1.18.094-1.768.086-2.082.167-4.047,1.2-5.737a7.765,7.765,0,0,1,13.438.366c1.164,2.148.983,4.649.793,7.3l-.031.43a1.249,1.249,0,0,0,1.159,1.335c.03,0,.059,0,.089,0a1.251,1.251,0,0,0,1.246-1.162l.03-.426c.2-2.754.424-5.877-1.087-8.667A10.379,10.379,0,0,0,326.97,176.834Zm8.915,17.3a1.265,1.265,0,0,0-1.391,1.091,78.369,78.369,0,0,1-2.035,10.75,1.25,1.25,0,0,0,2.416.644,80.945,80.945,0,0,0,2.1-11.094A1.251,1.251,0,0,0,335.885,194.13Z"/></g></g></svg>
+							</h4>
+							<p class="adv-p">Identity & Access <br />Management</p>
+							<p class="adv-ps">Install and configure identity and access services, as well as management controls</p>
+				</div>
+			</div>
+			
+			
+			<div class="col-lg-4 mt-lg-0 mt-4">
+				<div class="certification_box2">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{opacity:0;}.b{fill:#ddd;}.c{fill:#3b3a39;}</style></defs><g transform="translate(-558 -4532)"><g class="a" transform="translate(558.37 4532)"><rect class="b" width="44" height="44" transform="translate(-0.37)"/></g><g transform="translate(185.982 4363.691)"><path class="c" d="M388.477,192.691H375.523a.5.5,0,0,0-.5.524,7,7,0,0,0,13.962,0A.5.5,0,0,0,388.477,192.691Zm25,0H400.523a.5.5,0,0,0-.5.524,7,7,0,0,0,13.962,0A.5.5,0,0,0,413.477,192.691Z"/><path class="c" d="M408.152,180.779a1.238,1.238,0,0,0-.9-.729,1.474,1.474,0,0,0-.39-.166,47.311,47.311,0,0,0-9.217-1.2,3.49,3.49,0,0,0-2-1.785l1.267-1.792a.5.5,0,0,0,.039-.512l-2.005-4.01a.5.5,0,0,0-.894,0l-2.005,4.01a.5.5,0,0,0,.039.512l1.267,1.792a3.485,3.485,0,0,0-2,1.785,47.312,47.312,0,0,0-9.218,1.2,1.474,1.474,0,0,0-.39.166,1.238,1.238,0,0,0-.9.729l-3.945,9.412h2.709L382,184.5l2.388,5.695H387.1l-3.2-7.632a47,47,0,0,1,7.449-.873,3.508,3.508,0,0,0,1.153,1.372v19.633h-2a2,2,0,0,0-2,2v1h-3a2,2,0,0,0-2,2v2.5a.5.5,0,0,0,.5.5h21a.5.5,0,0,0,.5-.5v-2.5a2,2,0,0,0-2-2h-3v-1a2,2,0,0,0-2-2h-2V183.058a3.508,3.508,0,0,0,1.153-1.372,47,47,0,0,1,7.449.873l-3.2,7.632h2.709L407,184.5l2.388,5.695H412.1Z"/></g></g></svg>
+							</h4>
+							<p class="adv-p">Risk <br />Management</p>
+							<p class="adv-ps">Implement and summarize risk management best practices and the business impact.</p>
+				</div>
+			</div>
+			
+			
+			<div class="col-lg-4 mt-lg-0 mt-4">
+				<div class="certification_box2">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{fill:#fff;stroke:#707070;opacity:0;}.b{fill:#3d3d3d;fill-rule:evenodd;}.c{stroke:none;}.d{fill:none;}</style></defs><g transform="translate(-292 -4826)"><g class="a" transform="translate(292 4826)"><rect class="c" width="44" height="44"/><rect class="d" x="0.5" y="0.5" width="43" height="43"/></g><g transform="translate(-58.202 4244.097)"><path class="b" d="M380.157,585.9l6.84,7.311c.212.216.521.351.521.658.015,1.151.029,2.161.029,2.7a30.966,30.966,0,0,1-4.536,16.381,25.041,25.041,0,0,1-10.338,9.532.828.828,0,0,1-.305.059.9.9,0,0,1-.307-.059,25.085,25.085,0,0,1-10.794-10.341,31.152,31.152,0,0,1-4.065-15.572c0-.525,0-1.52.032-2.7l.506-.658c.814-.891,6.273-7.311,6.853-7.311Zm-8.893,15.727h0l-1.688-1.565a1,1,0,0,0-.7-.273,1.038,1.038,0,0,0-.721.273l-.524.479a.919.919,0,0,0,0,1.333l2.943,2.71a1.079,1.079,0,0,0,.725.3.973.973,0,0,0,.719-.307l5.106-5.033a.86.86,0,0,0-.046-1.3l-.534-.478a1.182,1.182,0,0,0-.723-.259,1.047,1.047,0,0,0-.693.308Zm1.1-7.941a7.506,7.506,0,1,1-7.5,7.495,7.5,7.5,0,0,1,7.5-7.495Z" transform="translate(0)"/></g></g></svg>
+							</h4>
+							<p class="adv-p">Cryptography & <br />PKI</p>
+							<p class="adv-ps">Install and configure wireless security settings and implement public key infrastructure</p>
+				</div>
+			</div>
+
+	  
+      
+      <!-- /.col-md-8 -->
+    </div>
+
+
+     
+  </div>
+</section>
+
+
+
+<!----------------Done--------->
+<section id="schedule">
+  <div class="container">
+    <div class="row">
+          <div class="col-12 col-lg-12 mt-lg-0 mt-4">
+           
+              <h2 class="sche-h">Looking For A Flexible, Customize, Cost-Effective <br />Learning Solution? We Are Just A Click Away</h2>
+       
+        <a href="#free_demo" class="btn href_toscroll" data-target="#request_demo">Schedule a Demo</a>
+           
+          </div>
+          
+    </div>
+  </div>
+</section>
+
+
+<!----------------Done--------->
+<section id="whyinfosec_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 wow fadeInLeft">
+        <h2 class="package-heading">Why Infosec Train</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      
+           
+		    <div class="col-lg-3 mt-lg-0 mt-4">
+				<div class="certification_box3">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{fill:#fff;stroke:#707070;opacity:0;}.b{fill:#3d3d3d;fill-rule:evenodd;}.c{stroke:none;}.d{fill:none;}</style></defs><g transform="translate(-292 -4826)"><g class="a" transform="translate(292 4826)"><rect class="c" width="44" height="44"/><rect class="d" x="0.5" y="0.5" width="43" height="43"/></g><g transform="translate(-58.202 4244.097)"><path class="b" d="M380.157,585.9l6.84,7.311c.212.216.521.351.521.658.015,1.151.029,2.161.029,2.7a30.966,30.966,0,0,1-4.536,16.381,25.041,25.041,0,0,1-10.338,9.532.828.828,0,0,1-.305.059.9.9,0,0,1-.307-.059,25.085,25.085,0,0,1-10.794-10.341,31.152,31.152,0,0,1-4.065-15.572c0-.525,0-1.52.032-2.7l.506-.658c.814-.891,6.273-7.311,6.853-7.311Zm-8.893,15.727h0l-1.688-1.565a1,1,0,0,0-.7-.273,1.038,1.038,0,0,0-.721.273l-.524.479a.919.919,0,0,0,0,1.333l2.943,2.71a1.079,1.079,0,0,0,.725.3.973.973,0,0,0,.719-.307l5.106-5.033a.86.86,0,0,0-.046-1.3l-.534-.478a1.182,1.182,0,0,0-.723-.259,1.047,1.047,0,0,0-.693.308Zm1.1-7.941a7.506,7.506,0,1,1-7.5,7.495,7.5,7.5,0,0,1,7.5-7.495Z" transform="translate(0)"/></g></g></svg>
+							</h4>
+							<p class="adv-p">Learn from <br />Industry Experts</p>
+				</div>
+			</div>
+			
+			
+			<div class="col-lg-3 mt-lg-0 mt-4">
+				<div class="certification_box3">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{fill:#fff;stroke:#707070;opacity:0;}.b{fill:#3d3d3d;}.c{stroke:none;}.d{fill:none;}</style></defs><g transform="translate(-538 -4826)"><g class="a" transform="translate(538 4826)"><rect class="c" width="44" height="44"/><rect class="d" x="0.5" y="0.5" width="43" height="43"/></g><g transform="translate(-128 -90)"><g transform="translate(670 4920)"><path class="b" d="M886.153,216.105a17.57,17.57,0,0,0-10.74-10.01,17.585,17.585,0,0,0-11.041,0,17.379,17.379,0,0,0-4.23,2.064,20.6,20.6,0,0,0-4.586,4.445,19.4,19.4,0,0,0-1.957,3.5,17.822,17.822,0,0,0,0,13.373,17.589,17.589,0,0,0,32.553,0,17.361,17.361,0,0,0,0-13.373Zm-15.5,1.692a.677.677,0,0,0-.692.677v4.979h-4.395a.684.684,0,1,0,0,1.367h5.087a.679.679,0,0,0,.677-.692v-5.654a.677.677,0,0,0-.677-.677Zm-.763-7.041a11.95,11.95,0,1,1-11.95,11.949,11.96,11.96,0,0,1,11.95-11.949Zm8.963,11.949a.718.718,0,0,1,.728-.727h1.312a10.856,10.856,0,0,0-1.1-4.13l-1.14.642a.719.719,0,0,1-.368.108.734.734,0,0,1-.643-.376.754.754,0,0,1,.268-1l1.151-.659a11.137,11.137,0,0,0-3.021-3.04l-.674,1.155a.716.716,0,0,1-.623.373.7.7,0,0,1-.37-.106.715.715,0,0,1-.269-.993l.661-1.14a11.175,11.175,0,0,0-4.127-1.121v1.315a.755.755,0,0,1-.747.749.732.732,0,0,1-.728-.749V211.7c-1.887.125-4.643.212-3.471,2.238a.756.756,0,0,1-.286,1.015.721.721,0,0,1-.992-.268l-.66-1.155a11,11,0,0,0-3.026,3.04l1.137.659a.714.714,0,0,1,.273,1,.7.7,0,0,1-.641.376.622.622,0,0,1-.355-.108L860,217.848a10.792,10.792,0,0,0-1.1,4.13h1.3a.728.728,0,1,1,0,1.455h-1.3a10.924,10.924,0,0,0,1.1,4.144l1.139-.655a.726.726,0,1,1,.723,1.259l-1.137.677c1.054,1.566,2.51,3.912,3.686,1.867a.724.724,0,0,1,.992-.266.756.756,0,0,1,.286,1.01l-.656,1.141a11.408,11.408,0,0,0,4.127,1.1V232.4a.731.731,0,0,1,.728-.746.754.754,0,0,1,.747.746v1.316a11.436,11.436,0,0,0,4.127-1.1l-.661-1.141a.73.73,0,0,1,.269-1.01.722.722,0,0,1,.993.266l.674,1.157a11.042,11.042,0,0,0,3.021-3.023l-1.151-.677a.75.75,0,0,1-.268-1,.729.729,0,0,1,1.011-.262l1.14.655a10.99,10.99,0,0,0,1.1-4.144h-1.312a.72.72,0,0,1-.728-.728Zm5.136,6.827h0a15.638,15.638,0,0,1-28.218,0,15.632,15.632,0,1,1,28.218-13.461,15.559,15.559,0,0,1,0,13.461Z" transform="translate(-852.298 -205.206)"/></g></g></g></svg>
+							</h4>
+							<p class="adv-p">24*7 <br />Support</p>
+				</div>
+			</div>
+			
+			
+			<div class="col-lg-3 mt-lg-0 mt-4">
+				<div class="certification_box3">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{fill:#fff;stroke:#707070;opacity:0;}.b{fill:#3d3d3d;fill-rule:evenodd;}.c{stroke:none;}.d{fill:none;}</style></defs><g transform="translate(-784 -4826)"><g class="a" transform="translate(784 4826)"><rect class="c" width="44" height="44"/><rect class="d" x="0.5" y="0.5" width="43" height="43"/></g><g transform="translate(179.346 4372.741)"><path class="b" d="M619.144,478.34v.582c2.268,1.316,3.427.66,3.427,3.61h-9.3c0-3.056,1.16-2.293,3.408-3.61v-.51a2.213,2.213,0,0,1-.62-1.328h0c-.054,0-.123-.1-.123-.2a.08.08,0,0,1,.018-.059,1.132,1.132,0,0,1-.105-.263c-.05-.159-.194-.5-.072-.637a.137.137,0,0,1,.2.015c-.161-.867-.394-2.006.817-2.34,0-.749,2.8-.41,3.16.763a4.941,4.941,0,0,1-.056,1.562.108.108,0,0,1,.158-.058c.14.114-.013.552-.071.695a.791.791,0,0,1-.109.286v.036c0,.1-.051.2-.1.2a2.062,2.062,0,0,1-.624,1.256Zm8.076-4.773h9.765a.394.394,0,0,1,.39.39v1.987a.4.4,0,0,1-.39.4H627.22a.4.4,0,0,1-.39-.4v-1.987a.394.394,0,0,1,.39-.39Zm0,4.191h9.765a.4.4,0,0,1,.39.388v2.008a.4.4,0,0,1-.39.388H627.22a.4.4,0,0,1-.39-.388v-2.008a.4.4,0,0,1,.39-.388Zm13.243-11.345h-7.9v-.069a2.07,2.07,0,0,0-2.083-2.082h-1.468a2.076,2.076,0,0,0-2.076-2h-1.454a2.087,2.087,0,0,0-2.078,2h-1.482a2.078,2.078,0,0,0-2.07,2.082v.069h-7.883a3.315,3.315,0,0,0-3.318,3.32v15.975a3.315,3.315,0,0,0,3.318,3.318h28.491a3.33,3.33,0,0,0,3.321-3.318V469.733a3.33,3.33,0,0,0-3.321-3.32Zm-12.975-.853Zm13.794,20.147a.837.837,0,0,1-.819.836H611.972a.84.84,0,0,1-.833-.836V469.733a.839.839,0,0,1,.833-.835h7.935a2.071,2.071,0,0,0,2.076,2.077h8.47a2.076,2.076,0,0,0,2.076-2.077h7.933a.836.836,0,0,1,.819.835v15.975Z" transform="translate(0)"/></g></g></svg>
+							</h4>
+							<p class="adv-p">Certification <br />Focused Programs</p>
+				</div>
+			</div>
+			
+			
+			<div class="col-lg-3 mt-lg-0 mt-4">
+				<div class="certification_box3">
+							<h4 class="adv-h">
+							<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a{fill:#fff;stroke:#707070;opacity:0;}.b{fill:#3d3d3d;fill-rule:evenodd;}.c{stroke:none;}.d{fill:none;}</style></defs><g transform="translate(-1030 -4826)"><g class="a" transform="translate(1030 4826)"><rect class="c" width="44" height="44"/><rect class="d" x="0.5" y="0.5" width="43" height="43"/></g><g transform="translate(426.841 4689.243)"><path class="b" d="M616.91,147.545h1.927a.959.959,0,0,0,.961-.953v-3.866a.972.972,0,0,0-.961-.969H616.91a.964.964,0,0,0-.967.969v3.866a.951.951,0,0,0,.967.953Zm8.056,17.116a.435.435,0,0,0-.441.17.488.488,0,0,0-.017.485l1.91,3.274,2.291-3.384Zm4.2.844h0l-2.3,3.4,8.009,5.433,2.307-3.388Zm9.31,6.318h0l-2.3,3.383-.922-.622,2.291-3.388Zm.535,4.242h0l1.309-1.917a.9.9,0,0,0-.24-1.235l-1.257-.857-2.306,3.385,1.256.859a.875.875,0,0,0,.679.14.888.888,0,0,0,.559-.374Zm-21.335-21.9a2.9,2.9,0,1,1-2.9,2.9,2.9,2.9,0,0,1,2.9-2.9Zm8.351,0a2.9,2.9,0,1,1-2.9,2.9,2.909,2.909,0,0,1,2.9-2.9Zm8.367,0a2.9,2.9,0,1,1-2.917,2.9,2.893,2.893,0,0,1,2.917-2.9Zm-16.718,7.5a2.9,2.9,0,1,1-2.9,2.9,2.9,2.9,0,0,1,2.9-2.9Zm8.351,0a2.912,2.912,0,0,1,2.873,2.42h0l-.079.09-3.7-.543a1.479,1.479,0,0,0-1.436.635,1.45,1.45,0,0,0-.056,1.53l.571,1.031a2.906,2.906,0,0,1,1.827-5.164Zm8.367,0a2.9,2.9,0,0,1,0,5.8,2.456,2.456,0,0,1-.6-.062l-1.843-1.246a2.9,2.9,0,0,1,2.439-4.494Zm6.644-12.187v19.3a3.838,3.838,0,0,1-1.157,2.76l-1.343-.907h0l-.218-.153-.108-.079a1.929,1.929,0,0,0,.893-1.621V153.348c0-3.713-21.708-1.932-25.094-1.932a1.935,1.935,0,0,0-1.935,1.932v15.433a1.947,1.947,0,0,0,1.935,1.934h13.7l2.841,1.932H614.009a3.85,3.85,0,0,1-3.85-3.866v-19.3a3.838,3.838,0,0,1,3.85-3.852h.968v.967a1.924,1.924,0,0,0,1.933,1.918h1.927a1.927,1.927,0,0,0,1.927-1.918v-.967h9.647v.967a1.926,1.926,0,0,0,1.933,1.918h1.932a1.927,1.927,0,0,0,1.938-1.918v-.967h.953a3.854,3.854,0,0,1,3.87,3.852Zm-8.693-1.933h1.932a.961.961,0,0,0,.973-.953v-3.866a.975.975,0,0,0-.973-.969h-1.932a.973.973,0,0,0-.967.969v3.866a.959.959,0,0,0,.967.953Z"/></g></g></svg>
+							</h4>
+							<p class="adv-p">Flexible <br />Schedule</p>
+				</div>
+			</div>
+			
+			
+			
+      
+      <!-- /.col-md-8 -->
+    </div>
+
+
+     
+  </div>
+</section>
+
+
+<!----------------Done--------->
+<section id="jobsthats_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 wow fadeInLeft">
+        <h2 class="package-heading">Organizations That Have Contributed <br />To The Development Of Security+</h2>
+      </div>
+    </div>
+
+    <div class="row m_b50">
+      <div class="col-md-2 col-xs-6">     
+	  <img src="assets/img_2/1.png"  align="middle" width="100%"  style="text-align:center;"></div>
+	  <div class="col-md-2 col-xs-6">
+	  <img src="assets/img_2/2.png"  align="middle"  width="100%"style="text-align:center;"></div>
+	  <div class="col-md-2 col-xs-6">
+	  <img src="assets/img_2/3.png"  align="middle" width="100%" style="text-align:center;"></div>
+	  <div class="col-md-2 col-xs-6">
+	  <img src="assets/img_2/4.png"  align="middle" width="100%" style="text-align:center;"></div>
+	  <div class="col-md-2 col-xs-6">
+	  <img src="assets/img_2/5.png"  align="middle" width="100%" style="text-align:center;"></div>
+	  <div class="col-md-2 col-xs-6">
+	  <img src="assets/img_2/6.png"  align="middle"width="100%"  style="text-align:center;">
+	 <!-- <img src="assets/img_2/fast_facts_V.svg" width="100%" align="middle" class="content-mobile" style="text-align:center;">-->
+	 
+	  
+      </div>
+      <!-- /.col-md-8 -->
+    </div>
+
+    <div class="row">
+      <div class="col-12 wow fadeInLeft">
+        <h2 class="package-heading">Jobs That Use CompTIA Security+</h2>
+		
+      </div>
+    </div>
+     
+	 <div class="row">
+     
+	  <div class="col-md-4 col-xs-12 dotPoints">
+	  <p><img src="assets/img_2/Group8306.svg"  align="middle" style="text-align:center;">&nbsp;Systems Administrator</p>
+	  <p><img src="assets/img_2/Group8306.svg"  align="middle" style="text-align:center;">&nbsp;Network Administrator</p>
+	  <p><img src="assets/img_2/Group8306.svg"  align="middle" style="text-align:center;">&nbsp;Security Administrator</p>
+	  <p><img src="assets/img_2/Group8306.svg"  align="middle" style="text-align:center;">&nbsp;Junior IT Auditor/ Penetration Tester</p>	  
+	  </div>
+	 
+	   <div class="col-md-4 col-xs-12 dotPoints">
+	  <p><img src="assets/img_2/Group8306.svg"  align="middle" style="text-align:center;">&nbsp;Security Specialist</p>
+	  <p><img src="assets/img_2/Group8306.svg"  align="middle" style="text-align:center;">&nbsp;Security Consultant</p>
+	  <p><img src="assets/img_2/Group8306.svg"  align="middle" style="text-align:center;">&nbsp;Security Engineer</p>	  
+	  </div>
+	 
+	 </div>
+	  
+	  
+	  
+  </div>
+</section>
+
+
+
+
+<!----------------Done--------->
+<section id="profile_card">
+    <div class="container" id="reviews">
+        <div class="row">
+		<div class="col-12 wow fadeInLeft">
+        <h2 class="package-heading">Words of Praise</h2>
+        </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="profile_card_carousel owl-carousel owl-theme wow fadeInUp">
+                    <div class="item card">
+					<div class="advisor_box">
+					<div class="prof-img">
+                            <img src="assets/img_2/Sudarshan.png" alt=""  class="p_image">                    </div>
+					<p class="wordof_p">
+				Training and Trainer was good. The session were interactive and knowledgeable. Thanks to InfosecTrain
+					</p>
+                        <h4 class="adv-ho">Sudarshan</h4>
+                        <p class="adv-p">CompTIA Security+ | India</p>
+                    </div>
+                 
+                    </div>
+                    <div class="item card">
+					<div class="advisor_box">
+					<div class="prof-img">
+                            <img src="assets/img_2/freddy.png" alt="" class="p_image">                          </div>
+					<p class="wordof_p">
+					I was highly impressed about the quality of training here at Infosectrain.
+					</p>
+                        <h4 class="adv-ho">Freddy Kameni</h4>
+                        <p class="adv-p">CompTIA Security+ | USA</p>
+                    </div>
+                       
+                    </div>
+                    
+
+                    <div class="item card">
+					<div class="advisor_box">
+					 <div class="prof-img">
+                            <img src="assets/img_2/IrshadAmeen.png" alt="" class="p_image">                          </div>
+					<p class="wordof_p">
+					Trainer is well skilled trainer and provided excellent training and manage to complete course on time.
+					</p>
+                        <h4 class="adv-ho">Irshad Ameen</h4>
+                        <p class="adv-p">CompTIA Security+ | India</p>
+                    </div>
+                       
+                    </div>
+                       <div class="item card">
+          <div class="advisor_box">
+           <div class="prof-img">
+                            <img src="assets/img_2/sujesh.png" alt="" class="p_image">                          </div>
+          <p class="wordof_p">
+         Basic info conveyed in a good manner. Appreciate the effort of the trainer and best wishes. Thanks to InfosecTrain
+          </p>
+                        <h4 class="adv-ho">Sujesh Punnapully</h4>
+                        <p class="adv-p">CompTIA Security+ | Oman</p>
+                    </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!----------------Done--------->
+
+<section id="courses" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="wow fadeInDown">Related Courses</h1>
+            </div>
+        </div>
+        <div class="row mt-4 wow fadeInUp">
+            <div class="col-md-6 col-lg-3">
+                <div class="c_box">
+                    <a href="https://www.infosectrain.com/pages/lp/ceh-v11/" class="link_box" target="_blank">
+                        <img src="assets/img_2/cieh.png" />
+						<span>CEH Certification <br />Course </span>                    </a>
+                               </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mt-md-0 mt-4">
+                <div class="c_box">
+                    <a href="https://www.infosectrain.com/courses/red-team-certification-online-training/" class="link_box" target="_blank">
+					 <img src="assets/img_2/RedTeam.svg" />
+                        <span>Red Team Online Training <br />Course </span>                    </a>
+                                 </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="c_box">
+                    <a href="https://www.infosectrain.com/pages/lp/cissp-new/" class="link_box" target="_blank">
+                         <img src="assets/img_2/cissp.png" />
+                        <span>CISSP Certification <br />Training  </span>                    </a>
+                                  </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mt-4 mt-lg-0">
+                <div class="c_box">
+                    <a href="https://www.infosectrain.com/pages/lp/soc-expert/" class="link_box" target="_blank">
+                        <img src="assets/img_2/Group 8346.svg" />
+                        <span>SOC Analyst Online <br />Training</span>                    </a>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--<section id="footr_last" class="section bg-dark_b button_transparent active">
+    <div class="container ">
+        <div class="row text-white justify-content-center wow fadeInUp">
+           <div class="col-3 col-lg-3 col-md-4"><a href="https://api.whatsapp.com/send?phone=918767256840" target="_blank"><img src="assets/img/whatsapp.png"><span>+91-87672-56840</span></a></div>
+           <div class="col-3 col-lg-3 col-md-4"><a href="tel:+91-8767256840"><img src="assets/img/phone.png"><span>+91-87672-56840</span></a></div>
+           <div class="col-3 col-lg-3 col-md-4"><a href="mailto:sales@infosectrain.com"><img src="assets/img/email.png"><span> sales@infosectrain.com</span></a></div>
+         </div>
+    </div>
+</section>-->
+
+
+<section id="footer_buttom">
+    <div class="container">
+        <div class="row">
+        <div class="col-12 col-md-12 flogo">
+      <img src="assets/img_2/footer_logo.svg" />
+      </div>
+            <div class="col-12 col-md-3">
+                <div class="foot_con">
+                    <h2 class="foot_h">About Infosec Train</h2>
+                   <p class="foot_p"><ul class="f_list ">
+      <li><a href="https://www.infosectrain.com/about-us/" class="text-white" target="_blank">About us</a></li>
+<li><a href="https://www.infosectrain.com/leadership/" class="text-white" target="_blank">Our Team</a></li>
+<li><a href="https://www.infosectrain.com/customers-review/" class="text-white" target="_blank">Testimonials</a></li>
+<li><a href="https://www.infosectrain.com/privacy-policy/" class="text-white" target="_blank">Privacy Policy</a></li>
+<li><a href="https://www.infosectrain.com/contact-us/" class="text-white" target="_blank">Contact us</a></li>
+
+</ul></p>
+                    <!--<p class="copy-r">All rights reserved. � 2021, Infosec Train</p>-->
+                </div>
+                <div class="buttom_links">
+                   <!-- <a href="#"><img src="assets/img/cell.png" class="align-middle mr-2"> Toll Free - 1800-843-7890 (India)</a> -->
+                   <!-- <a href="#"><img src="assets/img/email.png" class="align-middle mr-2"> sales@infosectrain.com</a> -->
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="foot_con">
+                    <h2 class="foot_h">Quick Contacts</h2>
+                    <p class="foot_p"><a href="https://api.whatsapp.com/send?phone=918767256840" class="text-white" target="_blank"><img src="assets/img_2/whatsapp.svg" /> +91 8767256840</a></p>
+                    <p class="foot_p"><a href="tel:1800-843-7890" class="text-white"><img src="assets/img_2/call.svg" /> 1800-843-7890 (IN)</a></p>
+                    <p class="foot_p"><a href="tel:+44745120841" class="text-white"><img src="assets/img_2/call.svg" /> +44-7451-208413 (UK)</a></p>
+          <p class="foot_p"><a href="tel:+1 657-722-11127" class="text-white"><img src="assets/img_2/call.svg" /> +1 657-722-11127 (USA)</a></p>
+          <p class="foot_p"><a href="mailto:sales@infosectrain.com" class="text-white"><img src="assets/img_2/email.svg" /> sales@infosectrain.com</a></p>
+                </div>
+                
+                
+            </div>
+      <div class="col-12 col-md-3">
+                <div class="foot_con">
+                    <h2 class="foot_h">Our Office</h2>
+                    <p class="foot_p" style="color:#FF1046;">India</p>
+           <p class="foot_p">Manyata Embassy Business Park, Ground Floor, E1 Block, Beech Building, Outer Ring Road, Bangalore- 560045</p>
+                    <p class="foot_p"><a href="tel:1800-843-7890" class="text-white"><img src="assets/img_2/call.svg" /> 1800-843-7890 (IN)</a></p>
+                </div>
+                
+                
+            </div>
+      <div class="col-12 col-md-3">
+                <div class="foot_con">
+                    <h2 class="foot_h" style="    padding: 12px;"></h2>
+                    <p class="foot_p" style="color:#FF1046;">New York, United States</p>
+           <p class="foot_p">99 Wall Street #599 New York, NY 10005, United States</p>
+                    <p class="foot_p"><a href="tel:+1 657-722-11127" class="text-white"><img src="assets/img_2/call.svg" /> +1 657-722-11127 (USA)</a></p>
+                </div>
+                
+                
+            </div>
+      <div class="col-12 col-md-12 flogo">
+      <p class="copy-r">All rights reserved. &copy; 2021, Infosec Train</p>
+      </div>
+      
+      
+            <!--<div class="col-12 col-md-3">
+                <div class="footer_ri">
+                    <p class="o-s-h mb-0">Our Social Handles</p>
+                    <div class="f-social-i">
+                        <a href="https://www.facebook.com/Infosectrain/" class="icon_fo"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/infosec-train/" class="icon_fo"><i class="fa fa-whatsapp"></i></a>
+                        <a href="https://twitter.com/Infosec_Train" class="icon_fo"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <div class="read_b">
+                        
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</section>
+
+
+
+
+<script src="assets/js/common.js"></script>
+<script src="assets/js/common.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function($){ 
+$(".training_cal_courses").click(function(){
+    $("#me_others").val($(this).attr('data-text'));
+  });
+
+
+setTimeout( function() {
+  //mahendra
+
+$('body').addClass('offer_on');
+/*var endDate = $('#countdown').attr('data-time');
+$('#countdown').countdown({date: endDate}, function() {        
+         $('body').removeClass('offer_on');
+       $('.counter_wrap').hide();      
+});  */
+}, 4000 ); //4000  
+
+
+ $(".close_counter").click(function(){
+$('body').removeClass('offer_on');
+
+ });
+
+  $(".grab_now").click(function(){
+$('#popup_offer').addClass('active'); 
+ });
+
+  $(".pop_close").click(function(){
+$('#popup_offer').removeClass('active'); 
+ });
+
+
+ new WOW().init(); 
+$(".lazy").lazyload();
+ 
+$("#career_oppor").owlCarousel({
+margin:0,
+loop: true, 
+//autoplay: 5000,  
+autoplaySpeed : 1000, 
+paginationSpeed : 400,
+autoplayHoverPause : true, 
+lazyLoad: true,
+dots: false,
+nav: true, 
+items : 1
+}); 
+$("#home_testimonials").owlCarousel({
+margin: 20,
+loop: true, 
+//autoplay: 3000,  
+autoplaySpeed : 300, 
+paginationSpeed : 400,
+autoplayHoverPause : true, 
+lazyLoad: true,
+dots: false,
+nav: true, 
+items : 3,
+responsive:{  
+360:{items:1},
+480:{items:1},
+960:{items:3} }
+}); 
+
+ 
+
+});
+
+
+/*-------------- Scrool To Top----------*/
+$(document).ready(function() {
+$(window).scroll(function() {
+if ($(this).scrollTop() > 20) {
+$('#toTopBtn').fadeIn();
+} else {
+$('#toTopBtn').fadeOut();
+}
+});
+
+$('#toTopBtn').click(function() {
+$("html, body").animate({
+scrollTop: 0
+}, 1000);
+return false;
+});
+});
+/*-------------- Scrool To Top----------*/
+</script>
+ 
+</body>
+</html>

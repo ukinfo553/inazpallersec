@@ -1,0 +1,7 @@
+[29-Apr-2019 20:41:18 Etc/GMT] PHP Warning:  include(include/comman_use.php): failed to open stream: No such file or directory in /home/infoswb1/public_html/pages/lp/ec-council/index.php on line 1
+[29-Apr-2019 20:41:18 Etc/GMT] PHP Warning:  include(include/comman_use.php): failed to open stream: No such file or directory in /home/infoswb1/public_html/pages/lp/ec-council/index.php on line 1
+[29-Apr-2019 20:41:18 Etc/GMT] PHP Warning:  include(): Failed opening 'include/comman_use.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/infoswb1/public_html/pages/lp/ec-council/index.php on line 1
+[29-Apr-2019 20:41:18 Etc/GMT] PHP Warning:  include(include/css.php): failed to open stream: No such file or directory in /home/infoswb1/public_html/pages/lp/ec-council/index.php on line 14
+[29-Apr-2019 20:41:18 Etc/GMT] PHP Warning:  include(include/css.php): failed to open stream: No such file or directory in /home/infoswb1/public_html/pages/lp/ec-council/index.php on line 14
+[29-Apr-2019 20:41:18 Etc/GMT] PHP Warning:  include(): Failed opening 'include/css.php' for inclusion (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/infoswb1/public_html/pages/lp/ec-council/index.php on line 14
+[29-Apr-2019 20:41:18 Etc/GMT] PHP Fatal error:  Call to undefined function isMobile() in /home/infoswb1/public_html/pages/lp/ec-council/index.php on line 30

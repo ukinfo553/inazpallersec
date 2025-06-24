@@ -1,0 +1,6 @@
+[11-Sep-2021 11:52:40 UTC] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/infoswb1/public_html/pages/lp/sailpoint-training/send-ajax.php on line 33
+[11-Sep-2021 11:52:40 UTC] PHP Warning:  file_get_contents(http://ipinfo.io/49.207.142.120): failed to open stream: no suitable wrapper could be found in /home/infoswb1/public_html/pages/lp/sailpoint-training/send-ajax.php on line 33
+[15-Sep-2021 08:18:32 UTC] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/infoswb1/public_html/pages/lp/sailpoint-training/send-ajax.php on line 33
+[15-Sep-2021 08:18:32 UTC] PHP Warning:  file_get_contents(http://ipinfo.io/49.206.3.213): failed to open stream: no suitable wrapper could be found in /home/infoswb1/public_html/pages/lp/sailpoint-training/send-ajax.php on line 33
+[15-Sep-2021 10:08:48 UTC] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/infoswb1/public_html/pages/lp/sailpoint-training/send-ajax.php on line 33
+[15-Sep-2021 10:08:48 UTC] PHP Warning:  file_get_contents(http://ipinfo.io/106.76.196.229): failed to open stream: no suitable wrapper could be found in /home/infoswb1/public_html/pages/lp/sailpoint-training/send-ajax.php on line 33

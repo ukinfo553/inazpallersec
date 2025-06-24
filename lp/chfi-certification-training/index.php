@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<meta name="viewport" content="width=device-width, initial-scale=1">
+					<meta name="description" content="Computer Hacking Forensic Investigator - CHFI  Certification & Training ">
+
+    <meta name="author" content="Infosec Train">
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>Computer Hacking Forensic Investigator - CHFI  Certification & Training  | InfoSecTrain</title>
+<link rel="shortcut icon" href="https://infosectrain.com/wp-content/uploads/2017/10/favicon.ico" /><link rel="icon" href="https://www.infosectrain.com/wp-content/uploads/2017/10/cropped-infosec-FAV-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.infosectrain.com/wp-content/uploads/2017/10/cropped-infosec-FAV-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.infosectrain.com/wp-content/uploads/2017/10/cropped-infosec-FAV-1-180x180.png" />
+					<link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
+            <link href="css/menu.css" rel="stylesheet">
+            <link href="css/owl.carousel.css" rel="stylesheet">
+							<link href="css/font-awesome.min.css" rel="stylesheet">
+								<link href="fonts/stylesheet.css" rel="stylesheet">
+                 <!-- Google Tag Manager -->
+               <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                  
+                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                  
+                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                  
+                  })(window,document,'script','dataLayer','GTM-5XZDRWG');
+               </script>
+               <!-- End Google Tag Manager -->
+									</head>
+									<body>
+                    <div class="container-fuild topheader">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                    <div class="col-lg-4 col-md-8 col-sm-8 col-xs-10">
+                                        <div class="logo">
+                                         <a href="https://www.infosectrain.com/pages/lp/chfi-certification-training"><img src="images/logo.png" alt="InfosecTrain"/> </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-8 col-md-4 col-sm-4 col-xs-2 topcontact">
+                                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden-md hidden-sm hidden-xs">
+                                              <p class="pull-right"> 
+                                                <span> <i class="fa fa-envelope"></i> <a href="mailto:sales@infosectrain.com">sales@infosectrain.com </a> </span>   
+                                                <span> <i class="fa fa-phone"></i> <a href="tel:+91-9773667874">+91-97736-67874 </a> </span>   </p>
+                                          </div>
+
+                                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 menu">
+                                              <nav class="navbar" data-animated="fadeInRight">
+                                                  <div class="wsmenuexpandermain slideRight"><a id="navToggle" class="animated-arrow slideLeft" href="#"><span></span></a></div>
+                                                  <div class="wsmenucontent overlapblackbg"></div>
+                                                  <nav class="wsmenu slideLeft clearfix">
+                                                    <ul class="mobile-sub wsmenu-list"><li><a href="#overview" class="href_toscroll">OVERVIEW</a> </li>
+                                                      <li><a href="#ceh"  class="href_toscroll">COURSE CONTENT/EXAM</a> </li>
+                                                      <li><a href="#trainer" class="href_toscroll">TRAINERS      </a></li>
+                                                      <li><a href="#review" class="href_toscroll">REVIEWS</a> </li>
+                                                      <li><a href="#why" class="href_toscroll">WHY INFOSECTRAIN</a> </li>
+                                                    </ul>
+                                                  </nav>
+                                                </nav>
+                                          </div>
+                                          
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<div class="container-fuild bigBanner" >
+<div class="container">
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+      <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 leftsec">
+        <img src="images/discount.png" alt="Discount" />
+        <h3>Become an expert in</h3>
+        <h4>EC-COUNCIL CHFI</h4>
+        <h5>(Computer Hacking Forensic Investigator)</h5>
+        <ul>
+          <li><i class="fa fa-chevron-right"></i> 40 hours of Instructor-Led Training  </li>
+          <li><i class="fa fa-chevron-right"></i> EC-Council Authorized Training Partner  </li>
+          <li><i class="fa fa-chevron-right"></i> EC-Council Official Courseware  </li>
+          <li><i class="fa fa-chevron-right"></i> 96% passing rate  </li>
+          <li><i class="fa fa-chevron-right"></i> CEH Certified Trainers  </li>
+        </ul>
+      </div>
+    
+
+      <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 rightsec" id="demo">
+         <form class="rows  clearfix" method="post" action=""  onSubmit="return val_demo_request(this.form);"  id="demo_me_phone_f" >
+          <div class="getform" >
+            <h3>GET A FREE DEMO CLASS!</h3> 
+            <div class="hide rows  mt-2" id="demo_form_output">  </div>      
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="form-group">
+                      <input type="text" id="me_name"  name="me_name"  value="" placeholder="Your Name * "/>
+                      </div>
+              </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="form-group">
+                      <input type="email" name="me_email" id="me_email" value="" placeholder="E-mail address *"/>
+              </div>
+            </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                  <div class="col-lg-6">
+                      <input type="text" name="me_phone" value="" id="me_phone" placeholder="Phone Number *"/>
+                  </div>
+
+                  <div class="col-lg-6">
+                      <select class="form-control " id="me_country" name="me_country" > 
+  <option selected="selected" value=" ">Your Country*</option>
+    <option value="Afghanistan">Afghanistan</option>
+    <option value="Albania">Albania</option>
+    <option value="Algeria">Algeria</option>
+    <option value="American Samoa">American Samoa</option>
+    <option value="Andorra">Andorra</option>
+    <option value="Angola">Angola</option>
+    <option value="Anguilla">Anguilla</option>
+    <option value="Antartica">Antarctica</option>
+    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Armenia">Armenia</option>
+    <option value="Aruba">Aruba</option>
+    <option value="Australia">Australia</option>
+    <option value="Austria">Austria</option>
+    <option value="Azerbaijan">Azerbaijan</option>
+    <option value="Bahamas">Bahamas</option>
+    <option value="Bahrain">Bahrain</option>
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="Barbados">Barbados</option>
+    <option value="Belarus">Belarus</option>
+    <option value="Belgium">Belgium</option>
+    <option value="Belize">Belize</option>
+    <option value="Benin">Benin</option>
+    <option value="Bermuda">Bermuda</option>
+    <option value="Bhutan">Bhutan</option>
+    <option value="Bolivia">Bolivia</option>
+    <option value="Bosnia and Herzegowina">Bosnia and Herzegowina</option>
+    <option value="Botswana">Botswana</option>
+    <option value="Bouvet Island">Bouvet Island</option>
+    <option value="Brazil">Brazil</option>
+    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+    <option value="Brunei Darussalam">Brunei Darussalam</option>
+    <option value="Bulgaria">Bulgaria</option>
+    <option value="Burkina Faso">Burkina Faso</option>
+    <option value="Burundi">Burundi</option>
+    <option value="Cambodia">Cambodia</option>
+    <option value="Cameroon">Cameroon</option>
+    <option value="Canada">Canada</option>
+    <option value="Cape Verde">Cape Verde</option>
+    <option value="Cayman Islands">Cayman Islands</option>
+    <option value="Central African Republic">Central African Republic</option>
+    <option value="Chad">Chad</option>
+    <option value="Chile">Chile</option>
+    <option value="China">China</option>
+    <option value="Christmas Island">Christmas Island</option>
+    <option value="Cocos Islands">Cocos (Keeling) Islands</option>
+    <option value="Colombia">Colombia</option>
+    <option value="Comoros">Comoros</option>
+    <option value="Congo">Congo</option>
+    <option value="Congo">Congo, the Democratic Republic of the</option>
+    <option value="Cook Islands">Cook Islands</option>
+    <option value="Costa Rica">Costa Rica</option>
+    <option value="Cota D'Ivoire">Cote d'Ivoire</option>
+    <option value="Croatia">Croatia (Hrvatska)</option>
+    <option value="Cuba">Cuba</option>
+    <option value="Cyprus">Cyprus</option>
+    <option value="Czech Republic">Czech Republic</option>
+    <option value="Denmark">Denmark</option>
+    <option value="Djibouti">Djibouti</option>
+    <option value="Dominica">Dominica</option>
+    <option value="Dominican Republic">Dominican Republic</option>
+    <option value="East Timor">East Timor</option>
+    <option value="Ecuador">Ecuador</option>
+    <option value="Egypt">Egypt</option>
+    <option value="El Salvador">El Salvador</option>
+    <option value="Equatorial Guinea">Equatorial Guinea</option>
+    <option value="Eritrea">Eritrea</option>
+    <option value="Estonia">Estonia</option>
+    <option value="Ethiopia">Ethiopia</option>
+    <option value="Falkland Islands">Falkland Islands (Malvinas)</option>
+    <option value="Faroe Islands">Faroe Islands</option>
+    <option value="Fiji">Fiji</option>
+    <option value="Finland">Finland</option>
+    <option value="France">France</option>
+    <option value="France Metropolitan">France, Metropolitan</option>
+    <option value="French Guiana">French Guiana</option>
+    <option value="French Polynesia">French Polynesia</option>
+    <option value="French Southern Territories">French Southern Territories</option>
+    <option value="Gabon">Gabon</option>
+    <option value="Gambia">Gambia</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Germany">Germany</option>
+    <option value="Ghana">Ghana</option>
+    <option value="Gibraltar">Gibraltar</option>
+    <option value="Greece">Greece</option>
+    <option value="Greenland">Greenland</option>
+    <option value="Grenada">Grenada</option>
+    <option value="Guadeloupe">Guadeloupe</option>
+    <option value="Guam">Guam</option>
+    <option value="Guatemala">Guatemala</option>
+    <option value="Guinea">Guinea</option>
+    <option value="Guinea-Bissau">Guinea-Bissau</option>
+    <option value="Guyana">Guyana</option>
+    <option value="Haiti">Haiti</option>
+    <option value="Heard and McDonald Islands">Heard and Mc Donald Islands</option>
+    <option value="Holy See">Holy See (Vatican City State)</option>
+    <option value="Honduras">Honduras</option>
+    <option value="Hong Kong">Hong Kong</option>
+    <option value="Hungary">Hungary</option>
+    <option value="Iceland">Iceland</option>
+    <option value="India">India</option>
+    <option value="Indonesia">Indonesia</option>
+    <option value="Iran">Iran (Islamic Republic of)</option>
+    <option value="Iraq">Iraq</option>
+    <option value="Ireland">Ireland</option>
+    <option value="Israel">Israel</option>
+    <option value="Italy">Italy</option>
+    <option value="Jamaica">Jamaica</option>
+    <option value="Japan">Japan</option>
+    <option value="Jordan">Jordan</option>
+    <option value="Kazakhstan">Kazakhstan</option>
+    <option value="Kenya">Kenya</option>
+    <option value="Kiribati">Kiribati</option>
+    <option value="Democratic People's Republic of Korea">Korea, Democratic People's Republic of</option>
+    <option value="Korea">Korea, Republic of</option>
+    <option value="Kuwait">Kuwait</option>
+    <option value="Kyrgyzstan">Kyrgyzstan</option>
+    <option value="Lao">Lao People's Democratic Republic</option>
+    <option value="Latvia">Latvia</option>
+    <option value="Lebanon">Lebanon</option>
+    <option value="Lesotho">Lesotho</option>
+    <option value="Liberia">Liberia</option>
+    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+    <option value="Liechtenstein">Liechtenstein</option>
+    <option value="Lithuania">Lithuania</option>
+    <option value="Luxembourg">Luxembourg</option>
+    <option value="Macau">Macau</option>
+    <option value="Macedonia">Macedonia, The Former Yugoslav Republic of</option>
+    <option value="Madagascar">Madagascar</option>
+    <option value="Malawi">Malawi</option>
+    <option value="Malaysia">Malaysia</option>
+    <option value="Maldives">Maldives</option>
+    <option value="Mali">Mali</option>
+    <option value="Malta">Malta</option>
+    <option value="Marshall Islands">Marshall Islands</option>
+    <option value="Martinique">Martinique</option>
+    <option value="Mauritania">Mauritania</option>
+    <option value="Mauritius">Mauritius</option>
+    <option value="Mayotte">Mayotte</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Micronesia">Micronesia, Federated States of</option>
+    <option value="Moldova">Moldova, Republic of</option>
+    <option value="Monaco">Monaco</option>
+    <option value="Mongolia">Mongolia</option>
+    <option value="Montserrat">Montserrat</option>
+    <option value="Morocco">Morocco</option>
+    <option value="Mozambique">Mozambique</option>
+    <option value="Myanmar">Myanmar</option>
+    <option value="Namibia">Namibia</option>
+    <option value="Nauru">Nauru</option>
+    <option value="Nepal">Nepal</option>
+    <option value="Netherlands">Netherlands</option>
+    <option value="Netherlands Antilles">Netherlands Antilles</option>
+    <option value="New Caledonia">New Caledonia</option>
+    <option value="New Zealand">New Zealand</option>
+    <option value="Nicaragua">Nicaragua</option>
+    <option value="Niger">Niger</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="Niue">Niue</option>
+    <option value="Norfolk Island">Norfolk Island</option>
+    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+    <option value="Norway">Norway</option>
+    <option value="Oman">Oman</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Palau">Palau</option>
+    <option value="Panama">Panama</option>
+    <option value="Papua New Guinea">Papua New Guinea</option>
+    <option value="Paraguay">Paraguay</option>
+    <option value="Peru">Peru</option>
+    <option value="Philippines">Philippines</option>
+    <option value="Pitcairn">Pitcairn</option>
+    <option value="Poland">Poland</option>
+    <option value="Portugal">Portugal</option>
+    <option value="Puerto Rico">Puerto Rico</option>
+    <option value="Qatar">Qatar</option>
+    <option value="Reunion">Reunion</option>
+    <option value="Romania">Romania</option>
+    <option value="Russia">Russian Federation</option>
+    <option value="Rwanda">Rwanda</option>
+    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option> 
+    <option value="Saint LUCIA">Saint LUCIA</option>
+    <option value="Saint Vincent">Saint Vincent and the Grenadines</option>
+    <option value="Samoa">Samoa</option>
+    <option value="San Marino">San Marino</option>
+    <option value="Sao Tome and Principe">Sao Tome and Principe</option> 
+    <option value="Saudi Arabia">Saudi Arabia</option>
+    <option value="Senegal">Senegal</option>
+    <option value="Seychelles">Seychelles</option>
+    <option value="Sierra">Sierra Leone</option>
+    <option value="Singapore">Singapore</option>
+    <option value="Slovakia">Slovakia (Slovak Republic)</option>
+    <option value="Slovenia">Slovenia</option>
+    <option value="Solomon Islands">Solomon Islands</option>
+    <option value="Somalia">Somalia</option>
+    <option value="South Africa">South Africa</option>
+    <option value="South Georgia">South Georgia and the South Sandwich Islands</option>
+    <option value="Span">Spain</option>
+    <option value="SriLanka">Sri Lanka</option>
+    <option value="St. Helena">St. Helena</option>
+    <option value="St. Pierre and Miguelon">St. Pierre and Miquelon</option>
+    <option value="Sudan">Sudan</option>
+    <option value="Suriname">Suriname</option>
+    <option value="Svalbard">Svalbard and Jan Mayen Islands</option>
+    <option value="Swaziland">Swaziland</option>
+    <option value="Sweden">Sweden</option>
+    <option value="Switzerland">Switzerland</option>
+    <option value="Syria">Syrian Arab Republic</option>
+    <option value="Taiwan">Taiwan, Province of China</option>
+    <option value="Tajikistan">Tajikistan</option>
+    <option value="Tanzania">Tanzania, United Republic of</option>
+    <option value="Thailand">Thailand</option>
+    <option value="Togo">Togo</option>
+    <option value="Tokelau">Tokelau</option>
+    <option value="Tonga">Tonga</option>
+    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+    <option value="Tunisia">Tunisia</option>
+    <option value="Turkey">Turkey</option>
+    <option value="Turkmenistan">Turkmenistan</option>
+    <option value="Turks and Caicos">Turks and Caicos Islands</option>
+    <option value="Tuvalu">Tuvalu</option>
+    <option value="Uganda">Uganda</option>
+    <option value="Ukraine">Ukraine</option>
+    <option value="United Arab Emirates">United Arab Emirates</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="United States">United States</option>
+    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+    <option value="Uruguay">Uruguay</option>
+    <option value="Uzbekistan">Uzbekistan</option>
+    <option value="Vanuatu">Vanuatu</option>
+    <option value="Venezuela">Venezuela</option>
+    <option value="Vietnam">Viet Nam</option>
+    <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+    <option value="Virgin Islands (U.S)">Virgin Islands (U.S.)</option>
+    <option value="Wallis and Futana Islands">Wallis and Futuna Islands</option>
+    <option value="Western Sahara">Western Sahara</option>
+    <option value="Yemen">Yemen</option>
+    <option value="Yugoslavia">Yugoslavia</option>
+    <option value="Zambia">Zambia</option>
+    <option value="Zimbabwe">Zimbabwe</option>
+    <option value="Other">Other</option>
+
+
+
+</select>
+                  </div>
+                </div></div>
+              </div>
+
+              
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                <textarea id="me_message" value=""  name="me_message" placeholder="Comment/Training Required "></textarea>
+              </div>
+              </div>
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+               <input type="hidden"   value="thank-you.html" id="me_redirect"  > 
+
+                <button type="submit" name="me_submited" id="me_submited" value="submited">Reserve your seat Now</button> 
+                <div class="loading_w hide" id="loading_w"><img src="images/loader.gif"/></div>
+              </div>
+
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="container-fluid ceh" id="overview">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h3>CHFI V9 Certification  Includes</h3>
+        <p></p>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12  lightpink">
+          <img src="images/official-structured-courseware.png" alt="Official & Structured Courseware" />
+          <h4>Official & Structured Courseware </h4>
+        </div>
+        <div class="col-lg-3  col-md-6 col-sm-6 col-xs-12 darkpink">
+          <img src="images/learn-from-the-experts.png" alt=" Learn From The Experts" />
+          <h4>   Learn From The Experts </h4>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 lightpink">
+          <img src="images/certification-exam.png"  alt=" Certification Exam "/>
+          <h4>  Certification
+                                      Exam  </h4>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 darkpink">
+          <img src="images/course-completion-certificate.png"  alt="Course Completion Certificate "/>
+          <h4> Course Completion
+                                      Certificate   </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid tabview" id="ceh">
+<div class="container">
+<div class="row">
+  <h3>CHFI V9 Course Content / Exam(s)</h3>
+  <p class="border"></p>
+  <ul class="tabs">
+    <li class="">
+      <a href="#tab0">CHFI Overview</a>
+    </li>
+    <li class="">
+      <a href="#tab1">Course Objectives</a>
+    </li>
+    <li class="">
+      <a href="#tab2">Who Should Attend </a>
+    </li>
+    <li class="">
+      <a href="#tab3">Pre-Requisite </a>
+    </li>
+    <li class="">
+      <a href="#tab4">Exam Information</a>
+    </li>
+  </ul>
+  <!-- /.tabs -->
+  <div class="tabs_container">
+    <a name="tab0"></a>
+    <h4 class="tab_heading">
+      <a href="#tab0">CHFI Overview <i class="fa fa-angle-down pull-right"></i> </a>
+    </h4>
+    <div id="tab0" class="tab_content">
+      <p>Computer Hacking Forensic Investigation (CHFI) is an all-encompassing certification training course devised by EC-council that helps security professionals stay ahead of the curve with extensive know-how of detecting and investigating the cyber-attacks and exploiting all crucial evidences to support the investigation reports. This certification also focuses to explain all vital components to perform security audits ensuring prevention from such attacks in the future. CHFI certification authenticates the expertise of security professionals in overall computer forensics including the reporting the incidents of cyber-attacks and hacking attempts in the courts of law.</p>
+<p>Computer Hacking Forensic Investigator (CHFI V9) is a vendor-neutral training certification that imbibes extensive understanding of diverse cyber forensic techniques, ultra-moderns forensic tools, footprints collection, and other essential components to conduct far-reaching hacking forensic investigations with hands-on exposure. This training has been exclusively designed to expertly train the professionals intending to advance their career as Forensic Investigators and execute their security roles with more proficiency. It focuses to practically explain miscellaneous foolproof methodologies to address digital forensics concerns in the organization, that constitute core fundamentals of security incidents including security infrastructure analysis tools and techniques to identify and capture legal evidence against the hackers and intruders. CHFI V9 certification enables the cyber investigators to detect the incidents such as compromising of the confidential data, trade secret thefts, exploitation of the intellectual property, and digital frauds.</p>
+<h3>WHY CHFI?</h3>
+ <ul>
+        <li>
+          <i class="fa fa-chevron-right"></i>  The CHFI program has been redesigned and modified after thorough research and development analyzing current market requirements, job tasks, and recent industry emphasis on forensic skills.
+        </li>
+<li>
+          <i class="fa fa-chevron-right"></i> CHFI training includes exhaustive labs for hands-on labs experience. On an average, approximately 50% of training time is dedicated to labs.
+        <li>
+          <i class="fa fa-chevron-right"></i>  This training delivers relevant knowledge and skills required to meet with regulatory compliance standards such as ISO 27001, PCI DSS, SOX, HIPPA, etc.
+        </li>
+        <li>
+          <i class="fa fa-chevron-right"></i>  The program presents a repeatable forensics investigation methodology required from a versatile digital forensic professional which increases employability
+        </li>
+
+ <li>
+          <i class="fa fa-chevron-right"></i>  The training curriculum runs with cloud-based virtual labs enabling students to practice various investigation techniques in a real-time and simulated environment.
+        </li>
+
+
+    </ul>
+    </div>
+    <!-- / #tab0 .tab_content -->
+    <a name="tab1"></a>
+    <h4 class="tab_heading">
+      <a href="#tab1">Course Objectives <i class="fa fa-angle-down pull-right"></i></a>
+    </h4>
+    <div id="tab1" class="tab_content">
+     <p>The boundless use of enormous devices worldwide to exchange the information and execute businesses has drastically raised a serious concern to protect and identify the cyber-attacks well-in time. Due to the digital transformation of the businesses, identifying potential threats, preventing cyber-attacks and investigating the malicious attacks and hacking incidents has become the most challenging task for the organizations.</p>
+     <p>CHFI V9 certification is a rigorous exam from the EC-Council that focuses to assess capabilities of the computer forensics professionals on the critical competencies for cyber threat and attack detection, forensic investigation, evidence collection and reporting along with the data recovery to recover compromised, encrypted, or lost data. The primary focus of the certification training from InfoSec Train constitute:</p>
+      <ul>
+<li> <i class="fa fa-chevron-right"></i> Digital evidence analysis following best practices and evidence rules adhering to specific crime categories</li>
+<li> <i class="fa fa-chevron-right"></i> Technical know-how of the first responder role, toolkit, preserving and evaluating the digital crime scenes, conducting preliminary interviews, collecting and safeguarding electronic evidence, documenting and reporting the crime incidents aligned to the collected evidence</li>
+<li> <i class="fa fa-chevron-right"></i> Configuring and deploying computer forensics labs</li>
+<li> <i class="fa fa-chevron-right"></i> Acquaintance with the image forensics, Steganography, and Steganalysis</li>
+<li> <i class="fa fa-chevron-right"></i> Test environments to carry out real-like investigations to validate your gained skills</li>
+<li> <i class="fa fa-chevron-right"></i> Comprehensive theory and practical implementation sessions conducted by the dedicated security professionals from the industry</li>
+</ul>
+      </ul>
+    </div>
+    <!-- / #tab1 .tab_content -->
+    <a name="tab2"></a>
+    <h4 class="tab_heading">
+      <a href="#tab2">Who Should Attend <i class="fa fa-angle-down pull-right"></i> </a>
+    </h4>
+    <div id="tab2" class="tab_content">
+        <p>The CHFI V9 training and certification course have been developed to equip the security professionals accountable for various executing roles pertaining to the computer forensics, incident response, and information system security. It helps workforce in the roles of:</p>
+     <ul>
+<li><i class="fa fa-chevron-right"></i> Digital Forensic Examiner</li>
+<li><i class="fa fa-chevron-right"></i> Computer Crime Investigator</li>
+<li><i class="fa fa-chevron-right"></i> Computer Forensic Analyst</li>
+<li><i class="fa fa-chevron-right"></i> Network Forensic Examiner</li>
+<li><i class="fa fa-chevron-right"></i> Computer Network Defense (CND) Forensic Analyst</li>
+<li><i class="fa fa-chevron-right"></i> Forensic Analyst and technician</li>
+<li><i class="fa fa-chevron-right"></i> Special Agent</li>
+</ul>
+    </div>
+    <!-- / #tab2 .tab_content -->
+    <a name="tab3"></a>
+    <h4 class="tab_heading">
+      <a href="#tab3"> Pre-Requisite <i class="fa fa-angle-down pull-right"></i></a>
+    </h4>
+    <div id="tab3" class="tab_content">
+      <p>Basic understanding of IT, cyber security, computer forensics, and incident response<br>
+CEH training and certification recommended</p>
+    </div>
+    <!-- / #tab2 .tab_content -->
+    <a name="tab4"></a>
+    <h4 class="tab_heading">
+      <a href="#tab4">Exam Information <i class="fa fa-angle-down pull-right"></i></a>
+    </h4>
+    <div id="tab4" class="tab_content">
+      <ul>
+<li><i class="fa fa-chevron-right"></i> To become a certified Computer Hacking Forensic Investigator, you need to pass the CHFI V9 exam successfully.</li>
+<li><i class="fa fa-chevron-right"></i> <b>Certification Name:</b> 312-49 (ECC EXAM)</li>
+<li><i class="fa fa-chevron-right"></i> <b>Test Format:</b> Multiple Choice</li>
+<li><i class="fa fa-chevron-right"></i> <b>Number of Questions:</b> 150</li>
+<li><i class="fa fa-chevron-right"></i> <b>Test Duration:</b>4 Hours</li>
+</ul>
+    </div>
+    <!-- / #tab2 .tab_content -->
+  </div>
+  <!-- /.tab_container -->
+</div>
+</div>
+</div>
+<!-- custom modes start -->
+<div class="container-fluid customMode0">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 customMode">
+    <h3>Custom Learning Modes</h3>
+    <p></p>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="blackbox">
+        <img src="images/instructor.jpg"  alt="Instructor-Led (ILT)"/>
+        <h4> Instructor-Led (ILT)</h4>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="blackbox">
+        <img src="images/classroom.jpg"  alt="Classroom"/>
+        <h4> Classroom </h4>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="blackbox">
+        <img src="images/on-demand.jpg"  alt="On-Demand "/>
+        <h4> On-Demand </h4>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="blackbox">
+        <img src="images/onsite.jpg"  alt="Onsite"/>
+        <h4> Onsite </h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 otherCourses">
+    <h3>Other Popular Courses</h3>
+    <p></p>
+    <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12">
+     <a href="https://www.infosectrain.com/pages/lp/cisa/" target="_new"> <div class="whitebox">
+        <img src="images/ceh.jpg" alt="CEH Certification Course"/>
+        <h4> CEH Certification Course  </h4>
+      </div></a>
+    </div>
+    <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12">
+     <a href="https://www.infosectrain.com/pages/lp/cism/" target="_new"> <div class="whitebox">
+        <img src="images/cciso.jpg" alt="CCISO Certification Training "/>
+        <h4> CCISO Certification Training </h4>
+      </div></a>
+    </div>
+    <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12">
+     <a href="https://www.infosectrain.com/pages/lp/cissp-new/" target="_new"> <div class="whitebox">
+        <img src="images/cissp-certification-training.jpg" alt="CISSP Certification Training"/>
+        <h4> CISSP Certification Training   </h4>
+      </div></a>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+     <a href="https://www.infosectrain.com/pages/lp/security/" target="_new"> <div class="whitebox">
+        <img src="images/comp-tia-security.jpg" alt="CompTIA Security+ SY0-501 Certification"/>
+        <h4> CompTIA Security+ SY0-501 Certification </h4>
+      </div></a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- custom modes End -->
+<!-- Our course Advisor Start -->
+<div class="container-fluid ourAdvisor" id="trainer">
+<div class="container">
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+    <h3>Our Course Advisors</h3>
+    <p class="border"></p>
+<!----------------
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <div class="module">
+        <p class="profile">
+          <img src="images/bharat.png" class="img-thumbnail img-circle" alt="Bharat"/>
+        </p>
+        <h4>Bharat</h4>
+        <h5>Information Security Analyst (CHFI, ECSA)</h5>
+        <p class="star">
+          <img src="images/star.png" alt="star"/>
+        </p>
+        <p>
+          <i class="fa fa-quote-left"></i>  
+                                          Bharat is a security enthusiast uses his risk assessment skills in protecting the industry from diverse threat factors and mentoring individuals as well as aiding in their quest for information security keeps him motivated.
+                                      
+        </p>
+      </div>
+    </div>------------->
+    <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
+      <div class="module">
+        <p class="profile">
+          <img src="images/deepak-bhatt.png" class="img-thumbnail img-circle" alt="Deepak Bhatt"/>
+        </p>
+        <h4>Deepak Bhatt</h4>
+        <h5> CHFI | CEH |  Security + | PENTEST +</h5>
+        <p class="star">
+          <img src="images/star.png" alt="star"/>
+        </p>
+        <p>
+          <i class="fa fa-quote-left"></i>  
+                                        Information security Instructor and a security researcher . Performed Web App. Security assessment, identifying various application related vulnerabilities.Performing Internal and external pen-test"
+                                      
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
+      <div class="module">
+        <p class="profile">
+          <img src="images/karan-srivastava.png" class="img-thumbnail img-circle" alt="Karan Srivastava"/>
+        </p>
+        <h4>Karan Srivastava</h4>
+        <h5> CHFI, CEH(Master), ECIH, CTIA, ECSAv10, LPT(Master)</h5>
+        <p class="star">
+          <img src="images/star.png" alt="star"/>
+        </p>
+        <p>
+          <i class="fa fa-quote-left"></i>  
+                                        Karan is a multi talented Cyber Security Enthusiast. Since he himself has earned various certification like CEI,CND, CEH(Master), CHFI,ECIH, CTIA, ECSAv10,LPT(Master) ,OSWP, he very well understands the basic..
+                                      
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- Our course Advisor End -->
+<!-- Why Infosec start -->
+<div class="container-fluid whyTrain" id="why">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+<div class="whyinfosec0">
+<h3>Why Infosec Train</h3>
+<p></p>
+</div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 whyinfosec p0">
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<div class="whiteblock">
+  <img src="images/learn-from-industry-experts.png" alt="Learn from Industry Experts"/>
+  <h4>Learn from Industry Experts</h4>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<div class="whiteblock">
+  <img src="images/24x7-support.png" alt="24*7 Support">
+    <h4> 24*7 Support</h4>
+  </div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  <div class="whiteblock">
+    <img src="images/certification-focused-programs.png" alt="">
+      <h4>Certification Focused Programs</h4>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="whiteblock">
+      <img src="images/flexible-schedule.png" alt="">
+        <h4> Flexible Schedule</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bigwhite">
+    <div class="module">
+      <h4>Looking For A Flexible, Customize, Cost-Effective Learning Solution? We Are Just A Click Away</h4>
+      <p>
+        <a href="#demo" class="href_toscroll"> Schedule a Demo</a>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Why Infosec End -->
+<!-- Words Praise start -->
+<div class="container-fluid words" id="review">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+      <h3>Words of Praise</h3>
+      <p class="border"></p>
+      <div class="owl-carousel03">
+
+        <div class="col-lg-12">
+          <div class="testmodule">
+            <div class="whitetext">
+              <p>
+                <i class="fa fa-quote-left"></i>  You will not only let you explore the surface of CHFI but shows you how to dive deep into Ethical Hacking. I am glad to a apart of his splendid training session through InfosecTrain. I strongly recommend InfosecTrain for other ethical hacking programs.
+                                      
+              </p>
+            </div>
+            <div class="photoblock">
+              <p class="proimg">
+                <img src="images/mohit-ranjan.png" alt="Mohit Ranjan"/>
+              </p>
+              <h4>Mohit Ranjan </h4>
+              <h5>Senior Manager  Cyber Security</h5>
+              <p>
+                <img src="images/star.png" alt="star"/>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="testmodule">
+            <div class="whitetext">
+              <p>
+                <i class="fa fa-quote-left"></i> The class was very interactive and full of learning trainer helped in every way possible and cleared all doubt. He just not covered all the topic but gave the practical so that we can have a clear understanding of each topic.
+                                      
+              </p>
+            </div>
+            <div class="photoblock">
+              <p class="proimg">
+                <img src="images/shahnawaz-khan.png" alt="Shahnawaz khan"/>
+              </p>
+              <h4>Shahnawaz khan  </h4>
+              <h5>Manager  Cyber Security</h5>
+              <p>
+                <img src="images/star.png" alt="star"/>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      
+        
+        <div class="col-lg-12">
+            <div class="testmodule">
+              <div class="whitetext">
+                <p>
+                  <i class="fa fa-quote-left"></i>   I took class with Infosec. He is a very good Security expert and has lots of industry & training experience. He is very punctual about the class timing and explained everything and put extra time if some for slow students. 
+                                        
+                </p>
+              </div>
+              <div class="photoblock">
+                <p class="proimg">
+                  <img src="images/mohammed.png" alt="Mohammed"/>
+                </p>
+                <h4>Mohammed </h4>
+                <h5>Security Engineer at IBM, USA </h5>
+                <p>
+                  <img src="images/star.png" alt="star"/>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="testmodule">
+              <div class="whitetext">
+                <p>
+                  <i class="fa fa-quote-left"></i>   I want to express my deepest gratitude for trainer who helped me to pass my exam. Trainer went the extra mile to assist me, and I have gained a significant benefit because of his knowledge and skills in Information...
+                                        
+                </p>
+              </div>
+              <div class="photoblock">
+                <p class="proimg">
+                  <img src="images/shailesh-vishwakarma.png" alt="Shailesh Vishwakarma"/>
+                </p>
+                <h4>Shailesh Vishwakarma  </h4>
+                <h5> CSOC Monitoring in Deloitte, India</h5>
+                <p>
+                  <img src="images/star.png" alt="star"/>
+                </p>
+              </div>
+            </div>
+          </div>
+
+         
+          
+        <div class="col-lg-12">
+            <div class="testmodule">
+              <div class="whitetext">
+                <p>
+                  <i class="fa fa-quote-left"></i>   I took class with Infosec. He is a very good Security expert and has lots of industry & training experience. He is very punctual about the class timing and explained everything and put extra time if some for slow students. 
+                                        
+                </p>
+              </div>
+              <div class="photoblock">
+                <p class="proimg">
+                  <img src="images/mohammed.png" alt="Mohammed"/>
+                </p>
+                <h4>Mohammed </h4>
+                <h5>Security Engineer at IBM, USA </h5>
+                <p>
+                  <img src="images/star.png" alt="star"/>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div class="col-lg-12">
+            <div class="testmodule">
+              <div class="whitetext">
+                <p>
+                  <i class="fa fa-quote-left"></i>  My Trainer is an exceptional trainer I have seen in Information Security. Getting trained for course under him was the right decision I made. He is very patient and hardworking trainer who delivers security concepts in a more efficient...
+                                        
+                </p>
+              </div>
+              <div class="photoblock">
+                <p class="proimg">
+                  <img src="images/srinivas-reddy-sudhini.png" alt="Mohammed"/>
+                </p>
+                <h4>Srinivas Reddy Sudhini  </h4>
+                <h5> Senior Information Security Specialist, India</h5>
+                <p>
+                  <img src="images/star.png" alt="star"/>
+                </p>
+              </div>
+            </div>
+          </div>
+
+      
+      
+        
+  
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Words Praise end -->
+<!-- Silder start -->
+<div class="container-fluid slider">
+<div class="container">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+<h3>Career opportunities in Cyber Security</h3>
+<p></p>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="banner owl-carousel02">
+<div class="item">
+  <img src="images/slider-img1.png" width="100%"/>
+</div>
+<div class="item">
+  <img src="images/slider-img2.png" width="100%"/>
+</div>
+<div class="item">
+  <img src="images/slider-img3.png" width="100%"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Silder End -->
+<!-- footer start -->
+<div class="container-fluid footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<h3>About Infosec Train</h3>
+<p>Infosec Train is a Technology related organization focusing on a variety of IT Security Trainings and Information Security Services.</p>
+<p>
+<span>
+  <a href="mailto:sales@infosectrain.com">
+    <i class="fa fa-envelope"></i>  sales@infosectrain.com 
+  </a>
+</span>   |   
+<span>
+  <a href="tel:919773667874">
+    <i class="fa fa-phone"></i> +91-97736-67874 
+  </a>
+</span>
+</p>
+<p class="social">
+<i class="fa fa-facebook"></i>
+<i class="fa fa-linkedin"></i>
+<i class="fa fa-twitter"></i>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid footerbottom">
+  <div class="container">
+    <div class="row">
+      <p>All rights reserved. © <?php echo date('Y');?>, Infosec Train</p>
+    </div>
+  </div>
+</div>
+<!-- footer end -->
+<script src="js/common.js"></script>
+<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+
+$.src="https://v2.zopim.com/?5Y1ZvMP3lrSPwhhyQjIGwo618dlqPLkD";z.t=+new Date;$.
+
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zendesk Chat Script-->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/menu.js"></script> 
+<script src="js/owl.carousel.min.js"></script> 
+<script src="js/jquery.nicescroll.js"></script> 
+<script src="js/back-to-top.js"></script> 
+
+<script>
+  $(document).ready(function() {
+          $('.owl-carousel03').owlCarousel({
+          loop:true,
+          nav:false,
+          dots:true,
+          responsiveClass:true,
+          autoWidth:false,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+            smartSpeed:800,
+            responsive:{
+            0:{
+                items:1,
+            },
+            768:{
+                items:1,
+            },
+            1000:{
+                items:3,
+            }
+        }
+        })
+        
+        $('.owl-carousel02').owlCarousel({
+          loop:true,
+          nav:false,
+          dots:true,
+          responsiveClass:true,
+          autoWidth:false,
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:true,
+          items: 1,
+          smartSpeed:800
+        })
+  });
+</script>
+<script>
+var settings;
+$.fn.myTabs = function(options) {
+ var defaults = {
+  tabs: "ul.tabs li",
+  heading: ".tab_heading",
+  tab_content: ".tab_content"
+ };
+ settings = $.extend(defaults, options);
+
+ tabHandler({
+  'activeTab': '#tab0'
+ });
+
+ $(settings.tabs).on("click", tabHandler);
+ $(settings.heading).on("click", tabHandler);
+
+
+ function scrollToAnchor(activeTab) {
+  var activeTabId = activeTab.replace(/#/, '');
+  var anchor = $("a[name='" + activeTabId + "']");
+
+ }
+
+ function tabHandler(event) {
+
+  var activeTab;
+
+  if (event.activeTab && event.activeTab.match(/^#tab/)) {
+   activeTab = event.activeTab;
+  } else {
+   activeTab = $(this).find("a").attr("href");
+  }
+
+  var activeIndex = parseInt(activeTab.replace("#tab", ""));
+
+  if (!$.isNumeric(activeIndex)) {
+   return false;
+  }
+
+  var tabsSize = $(settings.tabs).size();
+  var prevIndex = (activeIndex === 0) ? (tabsSize - 1) : (activeIndex - 1);
+  var nextIndex = (activeIndex === (tabsSize - 1)) ? 0 : (activeIndex + 1);
+
+  $(settings.tab_content).hide();
+  // tabs
+  $(settings.tabs + ":nth-child(" + (activeIndex + 1) + ")").addClass('active').siblings().removeClass('active');
+  // heading
+  $(settings.heading).eq(activeIndex).addClass('active').siblings().removeClass('active');
+
+  // tab_pager
+  $(settings.tab_pager).removeClass('active');
+  $(settings.tab_pager + ":nth-child(" + (activeIndex + 2) + ")").addClass('active');
+  $(settings.tab_pager + ":first-child").find("a").attr("href", "#tab" + prevIndex);
+  $(settings.tab_pager + ":last-child").find("a").attr("href", "#tab" + nextIndex);
+
+  scrollToAnchor(activeTab);
+  $(activeTab).toggle();
+  return false;
+ }
+};
+
+$(".href_toscroll").on("click", function() {
+            return $("html, body").animate({
+                scrollTop: $(this.hash).offset().top - 70
+            }, 500), !1    
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $().myTabs({});
+    });
+</script>                
+<script>
+$("html").niceScroll({styler:"fb",cursorcolor:"#fa2456",cursorwidth:'12',cursorborderradius:'10px',background:'#e2e2e2',cursorborder:'',zindex:'20010'});
+</script>
+  </body>
+</html>

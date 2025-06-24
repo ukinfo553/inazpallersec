@@ -1,0 +1,2 @@
+[11-Sep-2021 08:21:33 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/infoswb1/public_html/pages/lp/cysa/send-ajax.php on line 61
+[11-Sep-2021 08:21:33 UTC] PHP Warning:  file_get_contents(https://www.infosectrain.com/api/ip/5.108.214.179): failed to open stream: no suitable wrapper could be found in /home/infoswb1/public_html/pages/lp/cysa/send-ajax.php on line 61

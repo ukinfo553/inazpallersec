@@ -1,0 +1,2 @@
+[07-Sep-2021 13:00:40 UTC] PHP Warning:  file_get_contents(): https:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/infoswb1/public_html/pages/lp/crisc/send-ajax.php on line 61
+[07-Sep-2021 13:00:40 UTC] PHP Warning:  file_get_contents(https://www.infosectrain.com/api/ip/157.37.131.183): failed to open stream: no suitable wrapper could be found in /home/infoswb1/public_html/pages/lp/crisc/send-ajax.php on line 61

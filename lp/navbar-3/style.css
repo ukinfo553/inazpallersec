@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }
+  
+.mega-menu{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.mega-menu-heading{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.mega-menu .row .col-3{
+    background: #f9f9f9;
+}
+.mega-menu-opt-tabs{
+    background: #fdf9f9;
+}
+.mega-menu-opt-tabs .nav-pills a{
+    padding: 10px 15px!important;
+    border-bottom: 1px solid #0000001a;
+    border-radius: 0;
+    letter-spacing: 1px;
+    color: #000000;
+    font-size:15px;
+    position: relative;
+}
+.mega-menu-opt-tabs .list-group-link a{
+    padding: 10px 15px!important;
+    border-radius: 0;
+    letter-spacing: 1px;
+    color: #000000;
+    display: block;
+    font-size:15px;
+}
+.mega-menu-v-tabs .vendor-nav-col .list-group li a{
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: .5px;
+    line-height: 26px;
+    display: block;
+}
+.vendor-nav-col .list-group{
+    min-height: 355px;
+}
+.vendor-nav-col .mega-menu-sub-heading{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.tab-pane .resourceCol{
+    background: #f9f9f9;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.tab-pane .resourceCol strong{
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #000000;
+    letter-spacing: 1px;
+}
+.tab-pane .resourceCol p{
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #000000;
+    font-weight: 500;
+}
+.tab-pane .resourceCol a{
+    font-size: 13px;
+    text-align: end;
+    color: #000000;
+    text-decoration: underline;
+    letter-spacing: 1px;
+}

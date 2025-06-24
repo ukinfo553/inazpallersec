@@ -1,0 +1,367 @@
+<!-- <?php include('include/comman_use.php'); ?> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRC Skills Meetup</title>
+    <meta name="description"
+        content="GRC Skills Meetup A Masterclass by Top GRC Experts">
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="assets/images/favicon.ico">
+    <!--/ style link start /-->
+    <link href="assets/css/bootstrap-grid.css" rel="stylesheet" defer>
+    <link rel="stylesheet" href="assets/css/custom.css" defer>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--/ style link end /-->
+    <!-- Google Tag Manager -->
+    
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- <?php
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+        $pag_url = "https://";
+    } else {
+        $pag_url = "http://";
+    }
+    // Append the host(domain name, ip) to the URL.
+    $pag_url .= $_SERVER['HTTP_HOST'];
+    // Append the requested resource location to the URL
+    $pag_url .= $_SERVER['REQUEST_URI'];
+    ?> -->
+
+    <!--/ navbar start /-->
+    <nav class="navbar navbar-expand-lg py-3 d-flex">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-6 col-lg-2 cl-xl-3">
+                    <img src="https://www.infosectrain.com/wp-content/themes/Divi/assets/images/logo.svg"
+                        class="navbar-brand" alt="infosectrain" loading="lazy" width="306" height="31" />
+                </div>
+                <div class="col-6 col-lg-10 col-xl-9 d-flex justify-content-end">
+                    <input id="toggle" type="checkbox" />
+                    <label for="toggle" class="hamburger">
+                        <div class="top-bun"></div>
+                        <div class="meat"></div>
+                        <div class="bottom-bun"></div>
+                    </label>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--/ navbar end /-->
+
+    <main>
+        <!--banner sec start-->
+        <section class="banner-sec">
+            <div class="container">
+                <div class="row align-items-center flex-md-row flex-column-reverse">
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="d-flex flex-column gap-3">
+                            <span>
+                                The GRC Skills Meetup Masterclass has been  
+                            </span>
+                            <h1>cancelled</h1>
+                            <h3>due to unforeseen circumstances. We apologize for any inconvenience caused.</h3>
+                        </div>
+                        <?php /*?><div class="mt-4 d-flex flex-wrap gap-3">
+                            <!--<button class="button modal-btn button1" modal-title="Register Now">
+                                Register NOW
+                            </button>-->
+                            <div class="d-flex gap-3 align-items-center bg-white p-2 rounded border-grey">
+                                <!--<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                    <g clip-path="url(#clip0_20792_963)">
+                                        <path d="M35.9918 33.4468L33.1636 17.8648C33.1354 17.7092 33.0389 17.5745 32.9007 17.4976L25.7821 13.5383C25.6897 13.4869 25.5861 13.4664 25.4844 13.4743L26.7795 30.1811L26.7361 30.2005L35.2554 34.0225C35.3248 34.0535 35.3985 34.0689 35.4718 34.0689C35.5879 34.0689 35.7029 34.0307 35.7975 33.9566C35.952 33.836 36.0268 33.6397 35.9918 33.4468Z" fill="#44C868"/>
+                                        <path d="M17.9998 17.3236L10.7193 13.5315C10.632 13.486 10.5353 13.4675 10.44 13.4739C10.4652 13.4723 10.4906 13.4725 10.5158 13.4744L9.2207 30.1813L17.7834 34.0228C17.8526 34.0537 17.9263 34.0691 17.9998 34.0691V17.3236Z" fill="#44C868"/>
+                                        <path d="M10.5159 13.4743C10.4142 13.4664 10.3106 13.4869 10.2182 13.5383L3.09958 17.4976C2.96135 17.5744 2.86488 17.7091 2.83668 17.8647L0.00849922 33.4467C-0.0265165 33.6395 0.0482962 33.8358 0.202773 33.9566C0.297484 34.0307 0.412445 34.0689 0.528461 34.0689C0.601797 34.0689 0.675555 34.0536 0.744813 34.0225L9.21777 30.2214L10.5159 13.4743Z" fill="#4CE166"/>
+                                        <path d="M25.484 13.4736C25.414 13.479 25.3447 13.4977 25.2805 13.5311L18 17.3231V34.0686H18.0001C18.0735 34.0686 18.1474 34.0533 18.2164 34.0223L26.7792 30.1808L25.484 13.4736Z" fill="#4CE166"/>
+                                        <path d="M1.97882 22.5867L1.4043 25.7521L9.91171 21.2587L10.1092 18.7107L10.142 18.2881L1.97882 22.5867Z" fill="#FFDB56"/>
+                                        <path d="M9.98903 20.2705L9.91246 21.2585L1.40505 25.7519L0.00849922 33.4465C-0.0265165 33.6393 0.0482962 33.8356 0.202773 33.9564C0.297484 34.0304 0.412445 34.0686 0.528461 34.0686C0.601797 34.0686 0.675555 34.0533 0.744813 34.0223L9.21777 30.2211L9.98903 20.2705Z" fill="#A8EEFC"/>
+                                        <path d="M18.0018 19.4119L10.1424 18.2881L9.91211 21.2587L17.9997 33.5409V29.0747L13.1736 21.4755L18.0018 22.053V19.4119Z" fill="#FFBB24"/>
+                                        <path d="M32.3406 17.1862L28.9209 15.2842L25.6836 16.0406L25.7241 16.5634L25.884 18.626L32.3406 17.1862Z" fill="#FFBB24"/>
+                                        <path d="M26.1703 22.3294L25.8638 18.3743L25.6828 16.04L18.002 19.4117V22.0528L23.0192 19.871L26.1703 22.3294Z" fill="#FFDB56"/>
+                                        <path d="M35.991 33.447L35.2806 29.5329L25.8828 18.626L26.17 22.3299L35.8077 33.947C35.9543 33.8256 36.0251 33.6349 35.991 33.447Z" fill="#FFBB24"/>
+                                        <path d="M18.0338 1.93066C13.9583 1.93066 10.6426 5.24365 10.6426 9.31588C10.6426 11.8349 11.8385 14.5394 14.1973 17.3542C15.9297 19.4216 17.6386 20.7512 17.7105 20.8069C17.8057 20.8805 17.9198 20.9173 18.0339 20.9173C18.148 20.9173 18.2621 20.8805 18.3573 20.8069C18.4291 20.7512 20.1381 19.4216 21.8705 17.3542C24.2293 14.5394 25.4252 11.835 25.4252 9.31588C25.4251 5.24365 22.1094 1.93066 18.0338 1.93066ZM20.7711 9.31581C20.7711 10.8263 19.5456 12.0508 18.0338 12.0508C16.5221 12.0508 15.2966 10.8263 15.2966 9.31581C15.2966 7.80529 16.5221 6.58079 18.0338 6.58079C19.5456 6.58079 20.7711 7.80536 20.7711 9.31581Z" fill="#FF4A4A"/>
+                                        <path d="M18.0334 1.93066C17.7104 1.93066 17.3923 1.95162 17.0801 1.99198C20.707 2.46075 23.518 5.56639 23.518 9.31588C23.518 11.8349 22.3221 14.5394 19.9633 17.3542C18.8492 18.6836 17.7457 19.7073 17.0801 20.284C17.4496 20.6041 17.6846 20.787 17.7101 20.8069C17.8054 20.8805 17.9194 20.9173 18.0335 20.9173C18.1476 20.9173 18.2617 20.8805 18.3569 20.8069C18.4287 20.7512 20.1377 19.4216 21.8701 17.3542C24.2289 14.5394 25.4249 11.835 25.4249 9.31588C25.4247 5.24365 22.109 1.93066 18.0334 1.93066Z" fill="#E7343F"/>
+                                        <path d="M18.2164 34.0229L21.4005 32.5944L18 29.0752V34.0692H18.0001C18.0735 34.0692 18.1473 34.054 18.2164 34.0229Z" fill="#FFDB56"/>
+                                        <path d="M33.1627 17.8643C33.1345 17.7088 33.038 17.5741 32.8998 17.4972L32.3394 17.1855L25.8828 18.6253L35.2805 29.5323L33.1627 17.8643Z" fill="#1EA4E9"/>
+                                        <path d="M17.9999 34.0688C17.9999 34.0688 17.9999 34.0688 17.9999 34.0688V33.5409L9.91237 21.2588L9.2207 30.1811L17.7834 34.0226C17.8526 34.0536 17.9263 34.0688 17.9999 34.0688Z" fill="#1EA4E9"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_20792_963">
+                                        <rect width="36" height="36" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <div class="d-flex flex-column">
+                                    <div class="fs-16 text-red fw-bold f-nunito">
+                                        Gurugram
+                                    </div>
+                                    <div class="fs-14 text-dark fw-bold f-nunito">
+                                        Sunday, 30 March | 9 AM - 5 PM
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div><?php */?>
+                    </div>
+
+                    <div class="col-md-6">
+                        <!--<img src="assets/images/banner.png" class="img-fluid d-block m-auto" alt="">-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--banner sec end-->
+
+        
+    </main>
+
+    <!--footer start-->
+    <footer>
+        <div class="container-fluid container-lg">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="item">
+                        <h3>About InfosecTrain</h3>
+                        <p>
+                            InfosecTrain offers complete training and consulting solutions to its customers globally.
+                            Whether the requirements are technical services, certification or custom training, Infosec
+                            Train has consistently delivered the highest quality and best success rates in the industry.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 quick-links">
+                    <div class="item">
+                       <!-- <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#agenda">Meetup Agenda</a></li>
+                            <li><a href="#highlights">Key Highlights</a></li>
+                            <li><a href="#experts">Meet the Experts</a></li>
+                        </ul>-->
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <h3>Corporate Office</h3>
+                        <p>
+                            B7, Sector 1, Noida, Uttar Pradesh 201301<br> India
+                        </p>
+                        <p style="font-size: 12px;margin-top: 15px;">
+                        All rights reserved. © 2025, InfosecTrain
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer end-->
+
+    <!--<[form model start]>-->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-header">Get Free Demo</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form method="post" class="ajax-form d-flex flex-column gap-3">
+                    <div>
+                        <input type="text" name="me_name" class="me_name form-control" placeholder="Full Name">
+                        <div class="error-message name_error"></div>
+                    </div>
+
+                    <div>
+                        <input type="email" name="me_email" class="me_email form-control" placeholder="Email">
+                        <div class="error-message email_error"></div>
+                    </div>
+
+                    <input type="text" name="me_phone" class="me_phone form-control" placeholder="Mobile">
+                    <input type="text" name="me_message" class="me_message form-control"
+                        placeholder="Mention your call time preference">
+
+                    <input type="hidden" id="me_others_pop" name="me_others" value="T">
+                    <input type="hidden" name="me_pageurl" value="<?php echo $pag_url; ?>">
+
+                    <input type="hidden" name="me_submited" value="1">
+                    <button type="submit" class="form-control-btn">Submit</button>
+
+                    <div class="loader text-center" style="display:none;">
+                        <img src="assets/images/loader.gif" alt="Loading...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--<[form model end]>-->
+
+    <!--<[model sec start]>-->
+
+    <!--/ js link start /-->
+    <script src="assets/js/custom.js" defer></script>
+    <!--/ js link start /-->
+    <script>
+        /*-------- form validation and ajax script --------*/
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // Function to load Zopim chat widget after a delay
+            function loadZopim() {
+                window.$zopim || (function (d, s) {
+                    var z = $zopim = function (c) { z._.push(c) }, $ = z.s = d.createElement(s),
+                        e = d.getElementsByTagName(s)[0]; z.set = function (o) { z.set._.push(o) };
+                    z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+                    $.src = "https://v2.zopim.com/?5Y1ZvMP3lrSPwhhyQjIGwo618dlqPLkD";
+                    z.t = +new Date; $.type = "text/javascript";
+                    e.parentNode.insertBefore($, e)
+                })(document, "script");
+            }
+
+            // Set a timeout to load Zopim after 10 seconds (10,000 milliseconds)
+            setTimeout(loadZopim, 15000);
+
+            // Select all forms with the class "ajax-form"
+            const forms = document.querySelectorAll('.ajax-form');
+
+            // Function to validate a single form
+            function validateForm(form) {
+                let isValid = true;
+                let errorMessages = {};
+
+                const name = form.querySelector('input[name="me_name"]');
+                const email = form.querySelector('input[name="me_email"]');
+
+                // Validate Name field
+                if (!name.value.trim()) {
+                    isValid = false;
+                    name.classList.add('error');
+                    errorMessages.name = "Name is required.";
+                } else {
+                    name.classList.remove('error');
+                }
+
+                // Validate Email field
+                if (!email.value.trim()) {
+                    isValid = false;
+                    email.classList.add('error');
+                    errorMessages.email = "Email is required.";
+                } else if (!/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9]{2,4}$/.test(email.value)) {
+                    isValid = false;
+                    email.classList.add('error');
+                    errorMessages.email = "Please enter a valid email.";
+                } else {
+                    email.classList.remove('error');
+                }
+
+                // Display error messages
+                form.querySelectorAll('.error-message').forEach((el) => {
+                    el.textContent = ''; // Clear all previous error messages
+                });
+
+                for (const [key, msg] of Object.entries(errorMessages)) {
+                    const errorMessageDiv = form.querySelector(`.${key}_error`);
+                    errorMessageDiv.textContent = msg;
+                }
+
+                return isValid;
+            }
+
+            // Handle form submission
+            function handleFormSubmit(event) {
+                event.preventDefault();  // Prevent the default form submission
+
+                const form = event.target;
+                const loader = form.querySelector('.loader');
+                const isValid = validateForm(form);
+
+                if (!isValid) {
+                    return;  // Stop the submission if the form is invalid
+                }
+
+                // Show the loader while submitting
+                loader.style.display = 'block';
+
+                // Create a FormData object with the form data
+                const formData = new FormData(form);
+
+                // Make the AJAX request
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'send-ajax.php', true);
+
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        // Redirect to the thank-you page or any other page
+                        window.location.href = "thank-you.php";
+                        loader.style.display = 'none'; // Hide the loader
+                        form.reset(); // Reset the form fields after successful submission
+                    } else {
+                        loader.style.display = 'none'; // Hide the loader in case of failure
+                        alert("An error occurred. Please try again.");
+                    }
+                };
+
+                xhr.onerror = function () {
+                    loader.style.display = 'none'; // Hide the loader in case of an error
+                    alert("An error occurred. Please try again.");
+                };
+
+                // Send the form data to the server
+                xhr.send(formData);
+            }
+
+            // Attach the submit event listener to each form
+            forms.forEach(form => {
+                form.addEventListener('submit', handleFormSubmit);
+            });
+        });
+        /*-------- form valudation and ajax script end --------*/
+
+
+        // Countdown function to show only specific time units in each div
+function startCountdown() {
+  const targetDate = new Date("March 30, 2025 09:00:00").getTime(); // Target date
+
+  // Update the countdown every second
+  const interval = setInterval(function () {
+      const currentDate = new Date().getTime(); // Current date and time
+      const timeRemaining = targetDate - currentDate; // Time remaining in milliseconds
+
+      // Calculate days, hours, minutes, and seconds
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      // Update each timer separately
+      document.getElementById("timer1").querySelector("strong").textContent = days;
+      document.getElementById("timer2").querySelector("strong").textContent = hours;
+      document.getElementById("timer3").querySelector("strong").textContent = minutes;
+      document.getElementById("timer4").querySelector("strong").textContent = seconds;
+
+      // If the countdown reaches zero, stop the timer and display "Time's up!"
+      if (timeRemaining <= 0) {
+          clearInterval(interval);
+          document.getElementById("timer1").querySelector("strong").textContent = "0";
+          document.getElementById("timer2").querySelector("strong").textContent = "0";
+          document.getElementById("timer3").querySelector("strong").textContent = "0";
+          document.getElementById("timer4").querySelector("strong").textContent = "0";
+      }
+  }, 1000); // Update every second
+}
+
+// Call the function to start the countdown
+startCountdown();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://www.infosectrain.com/wp-content/themes/Divi/assets/css/style-boot.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap');
+
+        .container,
+        .container-fluid,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl,
+        .container-xxl {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100% !important;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-right: auto;
+            margin-left: auto
+        }
+
+        @media (min-width:576px) {
+
+            .container,
+            .container-sm {
+                max-width: 540px !important;
+            }
+        }
+
+        @media (min-width:768px) {
+
+            .container,
+            .container-md,
+            .container-sm {
+                max-width: 720px !important;
+            }
+        }
+
+        @media (min-width:992px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm {
+                max-width: 960px !important;
+            }
+        }
+
+        @media (min-width:1200px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl {
+                max-width: 1140px !important;
+            }
+        }
+
+        @media (min-width:1400px) {
+
+            .container,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                max-width: 1320px !important;
+            }
+        }
+
+        .course-details-nav ul.course-details-navlist li a.active {
+            color: var(--red);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!--/ banner sec start /-->
+        <section class="course-banner-sec">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <!--/ col start /-->
+                    <div class="col-lg-7">
+                        <div class="d-flex flex-column banner-item">
+                            <h1>CISSP Exam Prep Training</h1>
+                            <h3>Certified Information Systems Security Professional</h3>
+                            <!--/ list-->
+                            <ul class="banner-item-list">
+                                <li>Highly interactive program that helps you master all 8 CISSP Domains</li>
+                                <li>Highly interactive program that helps you master all 8 CISSP Domains</li>
+                                <li>Highly interactive program that helps you master all 8 CISSP Domains</li>
+                            </ul>
+                            <!--/ button-->
+                            <div class="banner-item-button d-flex flex-wrap">
+                                <button>ENROLL NOW</button>
+                                <button>DOWNLOAD BROCHURE</button>
+                                <button>Intro Video</button>
+                            </div>
+                            <div class="banner-item-quote">
+                                <span>Train Your Entire Teams:</span>
+                                <span>Get Quote</span>
+                            </div>
+                            <div class="banner-item-accredited d-flex align-items-center">
+                                <span>Accredited By</span>
+                                <img src="assets/images/banner/acceriated.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ col start /-->
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <div class="banner-item">
+                            <img src="assets/images/banner/banner-img-2.png" alt="" class="img-fluid m-auto d-block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ banner sec start /-->
+
+        <!--/ stick sec start /-->
+        <section class="course-stick-sec">
+            <div class="container">
+                <div class="row justify-content-around align-items-center">
+                    <div class="live-session d-flex align-items-center">
+                        <!--< svg start >-->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+                            <path
+                                d="M18.7802 5.3594C18.2057 4.97341 17.4803 4.90127 16.8397 5.16421L14.424 6.15738V5.91496C14.424 4.77283 13.4949 3.84375 12.3528 3.84375H11.2134C10.8318 3.84375 10.523 4.15288 10.523 4.53415C10.523 4.91542 10.8318 5.22455 11.2134 5.22455H12.3528C12.7398 5.22455 13.0432 5.52795 13.0432 5.91496V11.9283C13.0432 12.3089 12.7337 12.6187 12.3528 12.6187H2.43839C2.05746 12.6187 1.74799 12.3089 1.74799 11.9283V5.91496C1.74799 5.53436 2.05746 5.22455 2.43839 5.22455H3.57783C3.95944 5.22455 4.26823 4.91542 4.26823 4.53415C4.26823 4.15288 3.95944 3.84375 3.57783 3.84375H2.43839C1.29626 3.84375 0.367188 4.77283 0.367188 5.91496V11.9283C0.367188 13.0705 1.29626 13.9995 2.43839 13.9995H12.3528C13.4949 13.9995 14.424 13.0705 14.424 11.9283V11.6835L16.8397 12.6764C17.0939 12.7809 17.3616 12.8325 17.6279 12.8325C18.0324 12.8325 18.4336 12.7135 18.7802 12.4812C19.3553 12.0959 19.6984 11.453 19.6984 10.7609V7.08001C19.6984 6.38792 19.3553 5.74472 18.7802 5.3594ZM18.3176 10.7609C18.3176 10.9949 18.2064 11.2039 18.0115 11.3343C17.8167 11.4645 17.5814 11.4877 17.3643 11.3994L14.8542 10.3675C14.5939 10.2606 14.426 10.0098 14.426 9.72869V8.1119C14.426 7.83075 14.5939 7.58028 14.8535 7.47342L17.3643 6.44119C17.5821 6.35286 17.8167 6.37579 18.0115 6.50625C18.2064 6.63671 18.3176 6.84572 18.3176 7.08001V10.7609Z"
+                                fill="#00A538" />
+                            <path
+                                d="M5.12385 2.32033C6.3779 1.06695 8.41674 1.06695 9.67079 2.32033C9.80564 2.45517 9.98229 2.5226 10.1589 2.5226C10.3356 2.5226 10.5122 2.45517 10.6471 2.32033C10.9168 2.05064 10.9168 1.61375 10.6471 1.34406C8.85499 -0.44802 5.93966 -0.44802 4.14758 1.34406C3.87789 1.61375 3.87789 2.05064 4.14758 2.32033C4.41727 2.59002 4.85416 2.59002 5.12385 2.32033Z"
+                                fill="#00A538" />
+                            <path
+                                d="M9.24018 4.60277C9.41683 4.60277 9.59347 4.53535 9.72832 4.4005C9.99801 4.13081 9.99801 3.69358 9.72832 3.42423C8.44325 2.13984 6.35452 2.13984 5.06945 3.42423C4.79977 3.69358 4.79977 4.13081 5.06945 4.4005C5.33914 4.67019 5.77604 4.67019 6.04573 4.4005C6.79141 3.65481 8.00636 3.65481 8.75205 4.4005C8.88689 4.53535 9.06354 4.60277 9.24018 4.60277Z"
+                                fill="#00A538" />
+                            <path
+                                d="M7.40187 4.92188C7.02094 4.92188 6.71484 5.23101 6.71484 5.61228C6.71484 5.99355 7.02768 6.30268 7.40862 6.30268C7.79023 6.30268 8.09902 5.99355 8.09902 5.61228C8.09902 5.23101 7.79023 4.92188 7.40862 4.92188H7.40187Z"
+                                fill="#00A538" />
+                        </svg>
+                        <!--< svg end >-->
+                        <span>80 Hours LIVE Sessions</span>
+                    </div>
+                    <div class="trust-review d-flex align-items-center">
+                        <span class="rated-text">Rated the best</span>
+                        <span>Trustpilot 4.8/5</span>
+                        <span>Read Reviews</span>
+                    </div>
+                    <div class="learners d-flex align-items-center">
+                        <img src="assets/images/stick/group-learner.png" alt="" class="d-md-none d-lg-block">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/images/stick/learner-point.png" alt="">
+                            <span>70,000+ Learners</span>
+                        </div>
+                    </div>
+                    <div class="sticky-whatsapp">
+                        <a href="#">
+                            <img src="assets/images/stick/whatsapp.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ stick sec end /-->
+
+        <!-- / highlights sec start /-->
+        <section class="course-highlight-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Program Highlights</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="course-highlight-item d-flex flex-column">
+                            <div class="course-highlight-overview">
+                                <p>
+                                    CISSP is the most renowned certification in the information security domain. Our
+                                    CISSP
+                                    certification training program aims to equip participants with in-demand technical
+                                    and
+                                    administrative competence to design, architect, and manage an organization's
+                                    security
+                                    posture by applying internationally accepted information security standards.
+                                </p>
+                                <p>
+                                    The CISSP® was the first credential in information security to meet the stringent
+                                    requirements of ISO/IEC Standard 17024. It is looked upon as an objective measure of
+                                    excellence and a highly reputed standard of achievement.
+                                </p>
+                            </div>
+                            <!--/ list start-->
+                            <ul class="course-highlight-list">
+                                <li>48-Hours LIVE Instructor-Led Training</li>
+                                <li>Full 8 Domain Exam Practice</li>
+                                <li>Online Test Simulations</li>
+                                <li>Highly Interactive and Dynamic Sessions</li>
+                                <li>98% Exam Pass Rate</li>
+                                <li>Learn from Industry Experts</li>
+                                <li>Career Guidance and Mentorship</li>
+                                <li>Post Training Support</li>
+                                <li>Access to Recorded Sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / highlights sec end /-->
+        <style>
+            /* Style the tab content */
+            @media (min-width:768px) {
+                .learning-tab-content {
+                    display: none;
+                }
+            }
+
+            /* Style the active tab */
+            @media (min-width:768px) {
+                .learning-tab-content.active {
+                    display: flex;
+                }
+            }
+        </style>
+        <!--/ training calendar start /-->
+        <section class="course-calendar">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div
+                        class="d-flex justify-content-around align-items-center flex-md-column flex-xl-row learning-tab">
+                        <h2>Learning Schedule</h2>
+                        <ul class="d-none d-md-block">
+                            <li class="tabbll" id="defaultOpen" onclick="openTab(event, 'Tab1')">upcoming classes</li>
+                            <li class="tabbll" onclick="openTab(event, 'Tab2')">corporate training</li>
+                            <li class="tabbll" onclick="openTab(event, 'Tab3')">1 on 1 training</li>
+                        </ul>
+                    </div>
+
+                    <!--< item start >-->
+                    <div class="learning-tab-content flex-column flex-md-row align-items-center justify-content-between active open"
+                        id="Tab1">
+                        <!--< item start >-->
+                        <div class="item d-flex align-items-center justify-content-between d-md-none" id="section1">
+                            <span class="title">upcoming classes</span>
+                            <span class="right-icon"></span>
+                        </div>
+                        <!--< item start >-->
+                        <div class="item-two">
+                            <table class="course-training-table">
+                                <tr>
+                                    <td class="training-date">02 March</td>
+                                    <td class="training-mode">ONLINE</td>
+                                    <td class="training-type">Weekend</td>
+                                    <td class="training-time">19:00 - 23:00 IST</td>
+                                    <td class="training-status">BATCH OPEN</td>
+                                    <td class="training-enroll">enroll now</td>
+                                </tr>
+                                <tr>
+                                    <td class="training-date">02 March</td>
+                                    <td class="training-mode">ONLINE</td>
+                                    <td class="training-type">Weekend</td>
+                                    <td class="training-time">19:00 - 23:00 IST</td>
+                                    <td class="training-status">BATCH OPEN</td>
+                                    <td class="training-enroll">enroll now</td>
+                                </tr>
+                                <tr>
+                                    <td class="training-date">02 March</td>
+                                    <td class="training-mode">ONLINE</td>
+                                    <td class="training-type">Weekend</td>
+                                    <td class="training-time">19:00 - 23:00 IST</td>
+                                    <td class="training-status">BATCH OPEN</td>
+                                    <td class="training-enroll">enroll now</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!--< item start >-->
+                        <div class="item-three d-none d-lg-block">
+                            <img src="assets/images/calendar.png" alt="">
+                        </div>
+                    </div>
+
+                    <!--< item start >-->
+                    <div class="learning-tab-content flex-column flex-md-row align-items-center justify-content-between"
+                        id="Tab2">
+                        <!--< item start >-->
+                        <div class="item d-flex align-items-center justify-content-between d-md-none" id="section1">
+                            <span class="title">corporate training</span>
+                            <span class="right-icon"></span>
+                        </div>
+                        <!--< item start >-->
+                        <div class="item-two">
+                            <form action="" class="corparate-form">
+                                <div class="form-heading">
+                                    Still unsure? We're just a click away
+                                </div>
+                                <div class="corparate-form-body">
+                                    <input type="text" name="" id="" class="corparate-form-control"
+                                        placeholder="Full Name">
+                                    <input type="email" name="" id="" class="corparate-form-control"
+                                        placeholder="Email">
+                                    <input type="number" name="" id="" class="corparate-form-control"
+                                        placeholder="Mobile">
+                                    <input type="number" name="" id="" class="corparate-form-control"
+                                        placeholder="Enter Your Company Name">
+                                    <input type="text" name="" class="corparate-form-control" id=""
+                                        placeholder="Mention your call time preference">
+                                </div>
+                                <div class="corparate-form-body">
+                                    <button type="submit" class="corparate-form-btn">Get in Touch</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--< item start >-->
+                        <div class="item-three  d-none d-lg-block">
+                            <img src="assets/images/calendar.png" alt="">
+                        </div>
+                    </div>
+
+                    <!--< item start >-->
+                    <div class="learning-tab-content flex-column flex-md-row align-items-center justify-content-between"
+                        id="Tab3">
+                        <!--< item start >-->
+                        <div class="item d-flex align-items-center justify-content-between d-md-none" id="section1">
+                            <span class="title">1 on 1 training</span>
+                            <span class="right-icon"></span>
+                        </div>
+                        <!--< item start >-->
+                        <div class="item-two">
+                            <form action="" class="corparate-form">
+                                <div class="form-heading">
+                                    Still unsure? We're just a click away
+                                </div>
+                                <div class="corparate-form-body">
+                                    <input type="text" name="" id="" class="corparate-form-control"
+                                        placeholder="Full Name">
+                                    <input type="number" name="" id="" class="corparate-form-control"
+                                        placeholder="Mobile">
+                                    <input type="date" name="" id="" class="corparate-form-control" placeholder="Date">
+                                    <input type="time" name="" id="" class="corparate-form-control" placeholder="Time">
+                                    <select name="" id="" class="corparate-form-control">
+                                        <option value="">IST (India)</option>
+                                    </select>
+                                    <input type="email" name="" id="" class="corparate-form-control"
+                                        placeholder="Email">
+                                    <input type="text" name="" class="corparate-form-control" id=""
+                                        placeholder="Mention your call time preference">
+                                </div>
+                                <div class="corparate-form-body">
+                                    <button type="submit" class="corparate-form-btn">Get in Touch</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--< item start >-->
+                        <div class="item-three d-none d-lg-block">
+                            <img src="assets/images/calendar.png" alt="">
+                        </div>
+                    </div>
+
+
+                    <!--< item start >-->
+                    <div class="d-flex align-items-center course-calendar-form flex-lg-row flex-column">
+                        <div class="col-lg-4">
+                            <div class="item">
+                                <h3>
+                                    Can't Find a Suitable Schedule?
+                                    Talk to Our Training Advisor
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="item">
+                                <form action="" class="d-flex flex-md-row flex-column">
+                                    <input type="text" name="" id="" placeholder="Name">
+                                    <input type="text" name="" id="" placeholder="Mobile">
+                                    <input type="submit" value="Request a Callback">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function openTab(e, t) {
+                var n = document.getElementsByClassName("learning-tab-content"),
+                    c = document.getElementsByClassName("tabbll");
+                for (i = 0; i < n.length; i++) n[i].classList.remove("active"), c[i].classList.remove("active");
+                document.getElementById(t).classList.add("active"), e.currentTarget.classList.add("active");
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
+        <!--/ training calendar end /-->
+
+        <!--/ course detail start /-->
+        <section class="course-details-nav d-none d-md-block" id="navbartt" style=" position: sticky;
+        top: 0;
+        background-color: #fff; /* Add your desired background color */
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="course-details-navlist">
+                            <li><a href="#section1">About course</a></li>
+                            <li><a href="#section2">lEARNING OUTCOME</a></li>
+                            <li><a href="#section3">TARGET AUDIENCE</a></li>
+                            <li><a href="#section4">PRE-REQUISITIES</a></li>
+                            <li><a href="#section5">EXAM DETIALS</a></li>
+                            <li><a href="#section6">Our Instructors</a></li>
+                            <li><a href="#section7">EXAM DETIALS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-details-sec">
+            <div class="container">
+                <div class="row">
+                    <!--/ course details start /-->
+                    <div class="col-md-6 col-lg-8 course-accordian-wrapper pr-lg-5">
+                        <!--/ course content /-->
+                        <div class="course-details-item open active" id="section1">
+                            <div class="course-details-heading" id="section1">
+                                <span class="title">Learning Outcome</span>
+                                <span class="right-icon"></span>
+                            </div>
+                            <div class="course-details-content">
+                                <span>Domain 1</span> <br>
+                                <strong>Security and Risk Management</strong>
+                                <p>Understand and apply security, governance and compliance, risk management and
+                                    legal/regulatory requirements that pertain to information security in an
+                                    organization.
+                                </p> <br>
+                                <span>Domain 1</span> <br>
+                                <strong>Security and Risk Management</strong>
+                                <p>Understand and apply security, governance and compliance, risk management and
+                                    legal/regulatory requirements that pertain to information security in an
+                                    organization.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--/ course content /-->
+                        <div class="course-details-item" id="section2">
+                            <div class="course-details-heading">
+                                <span class="title">Learning Outcome</span>
+                                <span class="right-icon"></span>
+                            </div>
+                            <div class="course-details-content">
+                                <span>Domain 1</span> <br>
+                                <strong>Security and Risk Management</strong>
+                                <p>Understand and apply security, governance and compliance, risk management and
+                                    legal/regulatory requirements that pertain to information security in an
+                                    organization.
+                                </p> <br>
+                                <span>Domain 1</span> <br>
+                                <strong>Security and Risk Management</strong>
+                                <p>Understand and apply security, governance and compliance, risk management and
+                                    legal/regulatory requirements that pertain to information security in an
+                                    organization.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--/ course content /-->
+                        <div class="course-details-item" id="section3">
+                            <div class="course-details-heading">
+                                <span class="title">Learning Outcome</span>
+                                <span class="right-icon"></span>
+                            </div>
+                            <div class="course-details-content">
+                                <span>Domain 1</span> <br>
+                                <strong>Security and Risk Management</strong>
+                                <p>Understand and apply security, governance and compliance, risk management and
+                                    legal/regulatory requirements that pertain to information security in an
+                                    organization.
+                                </p> <br>
+                                <span>Domain 1</span> <br>
+                                <strong>Security and Risk Management</strong>
+                                <p>Understand and apply security, governance and compliance, risk management and
+                                    legal/regulatory requirements that pertain to information security in an
+                                    organization.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--/ course content /-->
+                        <div class="course-details-item" id="section4">
+                            <div class="course-details-heading">
+                                <span class="title">Learning Outcome</span>
+                                <span class="right-icon"></span>
+                            </div>
+                            <div class="course-details-content">
+                                <span>Domain 1</span> <br>
+                                <strong>Security and Risk Management</strong>
+                                <p>Understand and apply security, governance and compliance, risk management and
+                                    legal/regulatory requirements that pertain to information security in an
+                                    organization.
+                                </p> <br>
+                                <span>Domain 1</span> <br>
+                                <strong>Security and Risk Management</strong>
+                                <p>Understand and apply security, governance and compliance, risk management and
+                                    legal/regulatory requirements that pertain to information security in an
+                                    organization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--/ course form start /-->
+                    <div class="col-md-6 col-lg-4 pl-lg-5">
+                        <div class="position-sticky d-md-flex flex-column d-none" style="gap: 24px;top: 70px;">
+                            <!--/ form /-->
+                            <form action="" class="course-form">
+                                <div class="form-heading">
+                                    Still unsure? <br>
+                                    We're just a click away
+                                </div>
+                                <input type="text" name="" id="" class="course-form-control" placeholder="Full Name">
+                                <input type="email" name="" id="" class="course-form-control" placeholder="Email">
+                                <input type="number" name="" id="" class="course-form-control" placeholder="Mobile">
+                                <input type="text" name="" class="course-form-control" id=""
+                                    placeholder="Mention your call time preference">
+                                <button type="submit">Get in Touch</button>
+                            </form>
+
+                            <!--/ get touch CTA-->
+                            <div class="get">
+                                <p>Can't wait? Get in touch now</p>
+                                <div class="d-flex">
+                                    <img src="assets/images/icon/indian-flag.png" alt="">
+                                    <a href="#" target="_blank">
+                                        1800-843-7890
+                                    </a>
+                                </div>
+                                <span>Toll Free Numbers</span>
+                            </div>
+
+                            <!--/ limited time offer /-->
+                            <div class="limited-offer d-flex flex-column">
+                                <div class="limited-offer-heading">
+                                    Limited Time Offer!
+                                </div>
+                                <div class="limited-offer-text">
+                                    <p>AWS Combo (Architect Associate + Security Specialty) Training Course</p>
+                                </div>
+                                <div class="limited-offer-footer d-flex justify-content-between align-items-center">
+                                    <div class="limited-offer-timer d-flex align-items-center">
+                                        <img src="assets/images/offer/alarm-clock.svg" alt="offer expire date"
+                                            width="16" height="24">
+                                        <span>00:29:59</span>
+                                    </div>
+                                    <div class="limited-offer-claim">
+                                        <a href="#">claim</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ course detail end /-->
+
+        <!--/ Succeed sec start /-->
+        <section class="course-succeed-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">How we help you Succeed</h2>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center flex-wrap flex-md-nowrap">
+                    <!--/ col start /-->
+                    <div class="course-succeed-item text-center">
+                        <img src="assets/images/succeed/vision.svg" alt="" class="d-block mx-auto">
+                        <p class="text-center">Vision</p>
+                    </div>
+                    <!--/ col start /-->
+                    <div class="course-succeed-item text-center">
+                        <img src="assets/images/succeed/goal.svg" alt="" class="d-block mx-auto">
+                        <p class="text-center">Goal</p>
+                    </div>
+                    <!--/ col start /-->
+                    <div class="course-succeed-item text-center">
+                        <img src="assets/images/succeed/skill-building.svg" alt="" class="d-block mx-auto">
+                        <p class="text-center">Skill-Building</p>
+                    </div>
+                    <!--/ col start /-->
+                    <div class="course-succeed-item text-center">
+                        <img src="assets/images/succeed/mentoring.svg" alt="" class="d-block mx-auto">
+                        <p class="text-center">Mentoring</p>
+                    </div>
+                    <!--/ col start /-->
+                    <div class="course-succeed-item text-center">
+                        <img src="assets/images/succeed/direction.svg" alt="" class="d-block mx-auto">
+                        <p class="text-center">Direction</p>
+                    </div>
+                    <!--/ col start /-->
+                    <div class="course-succeed-item text-center">
+                        <img src="assets/images/succeed/support.svg" alt="" class="d-block mx-auto">
+                        <p class="text-center">Support</p>
+                    </div>
+                    <!--/ col start /-->
+                    <div class="course-succeed-item text-center">
+                        <img src="assets/images/succeed/success.svg" alt="" class="d-block mx-auto">
+                        <p class="text-center">Success</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ Succeed sec end /-->
+
+        <!--/ Career Transformation sec start /-->
+        <section class="course-career-transformation">
+            <div class="container">
+
+                <div class="carerr-transform-leftview d-none d-xl-block">
+                    <img src="assets/images/career-transform/career-transform-first.png" alt="" class="d-block w-100">
+                </div>
+
+                <!--/ row start /-->
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">Career Transformation</h2>
+                    </div>
+                </div>
+
+                <!--/ row start /-->
+                <div class="row justify-content-center">
+                    <div class="col-xl-2 col-md-4">
+                        <div class="item-one flex-row flex-md-column">
+                            <div>
+                                <span>3.4 million</span>
+                                <p>cybersecurity expert needed</p>
+                            </div>
+
+                            <div>
+                                <span>3.4 million</span>
+                                <p>cybersecurity expert needed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-7 col-md-8">
+                        <!--/ item start /-->
+                        <div class="item-two">
+                            <!--/ subitem start /-->
+                            <div class="subItem">
+                                <!--/ subitem heading start /-->
+                                <div class="subItem-heading">
+                                    To tackle the skills shortage
+                                </div>
+                                <!--/ subitem body start /-->
+                                <div class="subItem-body">
+                                    <div class="subItem-body-one">
+                                        <span>67%</span>
+                                        <p>
+                                            Organizations Plan to recruit trained staff
+                                        </p>
+                                    </div>
+                                    <div class="subItem-body-one">
+                                        <span>67%</span>
+                                        <p>
+                                            Organizations Plan to invest in training
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--/ subitem start /-->
+                            <div class="subItem-two">
+                                <!--/ subitem heading start /-->
+                                <div class="subItem-two-heading">
+                                    Demand across industries
+                                </div>
+                                <!--/ subitem-two body start /-->
+                                <div class="subItem-two-body d-flex justify-content-between">
+                                    <div
+                                        class="subItem-two-body-one d-flex flex-column justify-content-center align-items-center">
+                                        <img src="assets/images/career-transform/graduation-cap.svg" width="22"
+                                            height="22" alt="">
+                                        <p>Education</p>
+                                    </div>
+                                    <div
+                                        class="subItem-two-body-one d-flex flex-column justify-content-center align-items-center">
+                                        <img src="assets/images/career-transform/stethoscope.svg" width="22" height="22"
+                                            alt="">
+                                        <p>Education</p>
+                                    </div>
+                                    <div
+                                        class="subItem-two-body-one d-flex flex-column justify-content-center align-items-center">
+                                        <img src="assets/images/career-transform/shop.svg" width="22" height="22"
+                                            alt="">
+                                        <p>Education</p>
+                                    </div>
+                                    <div
+                                        class="subItem-two-body-one d-flex flex-column justify-content-center align-items-center">
+                                        <img src="assets/images/career-transform/government-flag.svg" width="22"
+                                            height="22" alt="">
+                                        <p>Education</p>
+                                    </div>
+                                    <div
+                                        class="subItem-two-body-one d-flex flex-column justify-content-center align-items-center">
+                                        <img src="assets/images/career-transform/industry-alt.svg" width="22"
+                                            height="22" alt="">
+                                        <p>Education</p>
+                                    </div>
+                                    <div
+                                        class="subItem-two-body-one d-flex flex-column justify-content-center align-items-center">
+                                        <img src="assets/images/career-transform/dollar.svg" width="22" height="22"
+                                            alt="">
+                                        <p>Education</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 d-md-none" style="margin-top: 24px;">
+                        <img src="assets/images/career-transform/career-transform.png" alt=""
+                            class="d-block mx-auto w-100">
+                    </div>
+                </div>
+
+                <div class="carerr-transform-rightview d-none d-xl-block">
+                    <img src="assets/images/career-transform/career-transform-last.png" alt="" class="d-block w-100">
+                </div>
+            </div>
+        </section>
+        <!--/ Career Transformation sec end /-->
+
+        <!--/ Words Have Power sec start /-->
+        <section class="courses-instructor">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">Your Trusted Instructors</h2>
+                    </div>
+                </div>
+
+                <div class="row owl-carousel owl-instructor">
+                    <!--/col start /-->
+                    <div class="col-md-10 item d-flex align-items-center flex-column flex-md-row m-auto">
+                        <div class="item-img">
+                            <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/Waseem-Akram-Fareed.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="item-content d-flex align-items-center align-items-md-start flex-column text-center text-md-left">
+                            <div class="item-name">Prabh Nair</div>
+                            <div class="item-exp">17+ Years Of Experience</div>
+                            <div class="item-certificate">
+                                CISSP-ISSAP | CCSP | CSSLP | CCISO | CISM | CISA | CRISC | CGEIT | CIPM | CIPPE | CDPSE
+                            </div>
+                            <div class="item-desc">
+                                I have pursued CISSP, CRISC, and CISM from InfosecTrain. InfosecTrain is my default
+                                option
+                                when I think about any cybersecurity certification. The trainer's dedication and
+                                sincerity
+                                towards his classes is something that inspires me a lot personally. You will get 100
+                                percent
+                                from InfosecTrain for whichever course you want to pursue. Especially the trainers are
+                                outstanding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--/col start /-->
+                    <div class="col-md-10 item d-flex align-items-center flex-column flex-md-row m-auto">
+                        <div class="item-img">
+                            <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/Waseem-Akram-Fareed.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="item-content d-flex align-items-center align-items-md-start flex-column text-center text-md-left">
+                            <div class="item-name">Prabh Nair</div>
+                            <div class="item-exp">17+ Years Of Experience</div>
+                            <div class="item-certificate">
+                                CISSP-ISSAP | CCSP | CSSLP | CCISO | CISM | CISA | CRISC | CGEIT | CIPM | CIPPE | CDPSE
+                            </div>
+                            <div class="item-desc">
+                                I have pursued CISSP, CRISC, and CISM from InfosecTrain. InfosecTrain is my default
+                                option
+                                when I think about any cybersecurity certification. The trainer's dedication and
+                                sincerity
+                                towards his classes is something that inspires me a lot personally. You will get 100
+                                percent
+                                from InfosecTrain for whichever course you want to pursue. Especially the trainers are
+                                outstanding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--/col start /-->
+                    <div class="col-md-10 item d-flex align-items-center flex-column flex-md-row m-auto">
+                        <div class="item-img">
+                            <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/Waseem-Akram-Fareed.png"
+                                alt="">
+                        </div>
+                        <div
+                            class="item-content d-flex align-items-center align-items-md-start flex-column text-center text-md-left">
+                            <div class="item-name">Prabh Nair</div>
+                            <div class="item-exp">17+ Years Of Experience</div>
+                            <div class="item-certificate">
+                                CISSP-ISSAP | CCSP | CSSLP | CCISO | CISM | CISA | CRISC | CGEIT | CIPM | CIPPE | CDPSE
+                            </div>
+                            <div class="item-desc">
+                                I have pursued CISSP, CRISC, and CISM from InfosecTrain. InfosecTrain is my default
+                                option
+                                when I think about any cybersecurity certification. The trainer's dedication and
+                                sincerity
+                                towards his classes is something that inspires me a lot personally. You will get 100
+                                percent
+                                from InfosecTrain for whichever course you want to pursue. Especially the trainers are
+                                outstanding.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!--/ Words Have Power sec end /-->
+
+        <!--/ Words Have Power sec start /-->
+        <section class="testimonial-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="text-center">Words Have Power</h2>
+                    </div>
+                </div>
+
+                <div class="row owl-carousel">
+                    <!--/col start /-->
+                    <div class="testimonial-item">
+                        <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/Waseem-Akram-Fareed.png"
+                            alt="">
+                        <div class="testimonial-content">
+                            <span class="item-name">Waseem Akram Fareed</span>
+                            <span class="item-country">
+                                Canada
+                                <!-- <a href="#" target="_blank">
+                                <span class="fa fa-linkedin-square"> </span>
+                            </a> -->
+                            </span>
+                            <p>
+                                I have pursued CISSP, CRISC, and CISM from InfosecTrain. InfosecTrain is my default
+                                option
+                                when I think about any cybersecurity certification. The trainer's dedication and
+                                sincerity
+                                towards his classes is something that inspires me a lot personally. You will get 100
+                                percent
+                                from InfosecTrain for whichever course you want to pursue. Especially the trainers are
+                                outstanding.
+                            </p>
+                        </div>
+                    </div>
+                    <!--/col start /-->
+                    <div class="testimonial-item">
+                        <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/Fuzail-Ahmed-Lohare.png"
+                            alt="">
+                        <div class="testimonial-content">
+                            <span class="item-name">Fuzail Ahmed Lohare</span>
+                            <span class="item-country">
+                                UAE
+                                <!-- <a href="#" target="_blank">
+                                <span class="fa fa-linkedin-square"> </span>
+                            </a> -->
+                            </span>
+                            <p>
+                                The trainer was very good, with good knowledge and skills to share, and he handled the
+                                session with patience. I really enjoyed the training. Selecting InfosecTrain is always a
+                                good choice for me. The sales team is very supportive and helped me on this journey.
+                            </p>
+                        </div>
+                    </div>
+                    <!--/col start /-->
+                    <div class="testimonial-item">
+                        <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/Rudraram-Sai.png" alt="">
+                        <div class="testimonial-content">
+                            <span class="item-name">Rudraram Sai Kiran</span>
+                            <span class="item-country">
+                                United Kingdom
+                                <!-- <a href="#" target="_blank">
+                                <span class="fa fa-linkedin-square"> </span>
+                            </a> -->
+                            </span>
+                            <p>
+                                The trainer is a great presenter/tutor and teaches in a relaxing manner. His sense of
+                                humor
+                                and honesty about the task ahead for the newbie help make the challenging subject matter
+                                accessible. Thank you very much! I had been looking forward to this workshop for weeks,
+                                and
+                                it exceeded my expectations! I have learned a lot.
+                            </p>
+                        </div>
+                    </div>
+                    <!--/col start /-->
+                    <div class="testimonial-item">
+                        <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/Jatin-Tandon.png" alt="">
+                        <div class="testimonial-content">
+                            <span class="item-name">Jatin Tandon</span>
+                            <span class="item-country">
+                                Canada
+                                <!-- <a href="#" target="_blank">
+                                <span class="fa fa-linkedin-square"> </span>
+                            </a> -->
+                            </span>
+                            <p>
+                                Very detailed and organized training, as always, by the best instructors at
+                                InfosecTrain.
+                                Will come back for more courses after completing my certification.
+                            </p>
+                        </div>
+                    </div>
+                    <!--/col start /-->
+                    <div class="testimonial-item">
+                        <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/Yamna-Taouss.png" alt="">
+                        <div class="testimonial-content">
+                            <span class="item-name">Yamna Taouss </span>
+                            <span class="item-country">
+                                Morocco
+                                <!-- <a href="#" target="_blank">
+                                <span class="fa fa-linkedin-square"> </span>
+                            </a> -->
+                            </span>
+                            <p>
+                                It was an interesting training that could help me succeed in obtaining certificates. I
+                                am
+                                truly thankful to InfosecTrain for an amazing training. Looking forward to attending
+                                more
+                                sessions with InfosecTrain.
+                            </p>
+                        </div>
+                    </div>
+                    <!--/col start /-->
+                    <div class="testimonial-item">
+                        <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/KALUNGI-BOBSON.png" alt="">
+                        <div class="testimonial-content">
+                            <span class="item-name">KALUNGI J BOBSON</span>
+                            <span class="item-country">
+                                Uganda
+                                <!-- <a href="#" target="_blank">
+                                <span class="fa fa-linkedin-square"> </span>
+                            </a> -->
+                            </span>
+                            <p>
+                                Thanks for the wonderful course. The setup and delivery of the course were great. I
+                                appreciate the entire team that was with me throughout the study and my trainer.
+                            </p>
+                        </div>
+                    </div>
+                    <!--/col start /-->
+                    <div class="testimonial-item">
+                        <img src="https://www.infosectrain.com/wp-content/uploads/2024/01/Sougata-Dutta-Bhowmick.png"
+                            alt="">
+                        <div class="testimonial-content">
+                            <span class="item-name">Sougata Dutta Bhowmick</span>
+                            <span class="item-country">
+                                United Kingdom
+                                <!-- <a href="#" target="_blank">
+                                <span class="fa fa-linkedin-square"> </span>
+                            </a> -->
+                            </span>
+                            <p>
+                                The trainer is excellent, and his training method is also very much focused on
+                                certification. It's my bad luck that I couldn't join all the sessions due to the UK time
+                                zone. However, all the topics are well explained with basic examples, and the same is
+                                recorded. I wish you all the best, InfosecTrain team, for your upcoming training, and
+                                have a
+                                good year!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ Words Have Power sec end /-->
+
+        <!--/ success story sec start /-->
+        <section class="success-story-hm-sec">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 success-story d-flex flex-column">
+                        <h2>Success Speaks Volumes</h2>
+                        <div class="success-item">
+                            <div class="video-container" id="videoContainer">
+                                <div class="overlay" id="overlay">
+                                    <div class="play-button" onclick="playVideo()" id="playButton">
+                                        <img src="https://www.infosectrain.com/wp-content/themes/Divi/assets/images/home/play-button.svg"
+                                            alt="Success Story">
+                                    </div>
+                                </div>
+                                <iframe width="100%" height="315" src="" allowfullscreen id="youtubeVideo"
+                                    title="InfosecTrain Success Story"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="col-md-6 success-certificate d-flex align-items-center justify-content-center flex-column">
+                        <h2>Get a Sample Certificate</h2>
+                        <div class="success-item">
+                            <img src="assets/images/certificate.png" alt="" class="d-block m-auto">
+                        </div>
+                        <button class="success-certificate-btn">get in touch</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ success story sec end /-->
+
+        <!--/ related course sec start /-->
+        <section class="related-course-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">Other Related Courses</h2>
+                    </div>
+                </div>
+
+                <div class="row owl-carousel">
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ related course sec start /-->
+
+        <!--/ related blog sec start /-->
+        <section class="related-course-sec related-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">Related Blogs</h2>
+                    </div>
+                </div>
+
+                <div class="row owl-carousel">
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                    <!--/ item start /-->
+                    <div class="item">
+                        <img src="assets/images/related.png" alt="" class="d-block m-auto w-100">
+                        <div class="item-body">
+                            <p>Certified Information Privacy Manager (CIPM)</p>
+                            <a href="#">
+                                Explore More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ related blog sec start /-->
+
+        <!--/ FAQ sec start /-->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center">Frequently Asked Questions</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="faq-wrapper">
+                            <!--/ faq item /-->
+                            <div class="faq-item active open">
+                                <h3 class="faq-title"><span class="title">What is CIPP/E?</span><span
+                                        class="right-icon"></span></h3>
+                                <div class="faq-content">
+                                    <p>
+                                        The Certified Information Privacy Professional/Europe (CIPP/E) provides all the
+                                        GDPR knowledge, understanding, and perspective needed to ensure compliance and
+                                        the success of data protection in Europe, enabling DPOs to
+                                        take advantage of the career opportunity that this expansive legislation
+                                        represents.
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/ faq item /-->
+                            <div class="faq-item">
+                                <h3 class="faq-title"><span class="title">How many questions are there in the CIPP/E
+                                        exam?</span><span class="right-icon"></span></h3>
+                                <div class="faq-content">
+                                    <p>There are 90 questions in the CIPP/E exam which are to be answered in 150
+                                        minutes.</p>
+                                </div>
+                            </div>
+                            <!--/ faq item /-->
+                            <div class="faq-item">
+                                <h3 class="faq-title"><span class="title">How are the exam passing marks
+                                        determined?</span><span class="right-icon"></span></h3>
+                                <div class="faq-content">
+                                    <p>
+                                        The number of questions that are correctly answered determines the exam score.
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/ faq item /-->
+                            <div class="faq-item">
+                                <h3 class="faq-title"><span class="title">Can I know how many questions I correctly
+                                        answered?</span><span class="right-icon"></span></h3>
+                                <div class="faq-content">
+                                    <p>
+                                        The IAPP does not disclose to the candidates how many questions they answered
+                                        correctly. However, a section breakdown showing the proportion of your right
+                                        answers for each blueprint domain is given to you after the exam
+                                        is over. Candidates who don't pass might use this data to figure out which
+                                        domains they should concentrate on when preparing for the exam again.
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/ faq item /-->
+                            <div class="faq-item">
+                                <h3 class="faq-title"><span class="title">Is the CIPP/E exam challenging?</span><span
+                                        class="right-icon"></span></h3>
+                                <div class="faq-content">
+                                    <p>
+                                        Though difficult, it's not impossible. There are both straightforward questions
+                                        and unexpected ones that could leave you unsure between two generally equivalent
+                                        choices.
+                                    </p>
+                                </div>
+                            </div>
+                            <!--/ faq item /-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/ FAQ sec end /-->
+
+    </main>
+</body>
+<script src="https://www.infosectrain.com/wp-content/themes/Divi/assets/js/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+            var sections = document.querySelectorAll(".course-details-item");
+            sections.forEach(function (section) {
+                var rect = section.getBoundingClientRect();
+
+                if (rect.top <= 50 && rect.bottom > 50) {
+                    var id = section.getAttribute("id");
+                    var activeLink = document.querySelector("a[href='#" + id + "']");
+                    if (activeLink) {
+                        document.querySelectorAll(".course-details-navlist li a").forEach(function (link) {
+                            link.classList.remove("active");
+                        });
+                        activeLink.classList.add("active");
+                    }
+                }
+            });
+        });
+    });
+
+
+
+
+    $(document).ready(function () {
+
+        $('.owl-instructor').owlCarousel({
+            loop: false,
+            margin: 16, // Call a function to dynamically determine margin
+            dots: false,
+            stagePadding: 24,
+            items: 1,
+            lazyLoad: true,
+            nav: true,
+            navText: [
+                "<div class='nav-button owl-prev'><img src='https://www.infosectrain.com/wp-content/themes/Divi/assets/images/arrow-left.png'/></div>",
+                "<div class='nav-button owl-next'><img src='https://www.infosectrain.com/wp-content/themes/Divi/assets/images/arrow.png'/></div>"
+            ],
+            autoplay: false
+        });
+
+        $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 16, // Call a function to dynamically determine margin
+            dots: false,
+            stagePadding: 24,
+            items: 1,
+            lazyLoad: true,
+            nav: true,
+            navText: [
+                "<div class='nav-button owl-prev'><img src='https://www.infosectrain.com/wp-content/themes/Divi/assets/images/arrow-left.png'/></div>",
+                "<div class='nav-button owl-next'><img src='https://www.infosectrain.com/wp-content/themes/Divi/assets/images/arrow.png'/></div>"
+            ],
+            autoplay: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 16 // Adjust margin for mobile view
+                },
+                600: {
+                    items: 2,
+                    margin: 24 // Adjust margin for tablet view
+                },
+                1000: {
+                    items: 3,
+                    margin: 24 // Adjust margin for desktop view
+                },
+                1200: {
+                    items: 4,
+                    margin: 24 // Adjust margin for desktop view
+                }
+            }
+        });
+
+        // calendar faq start
+        $('.learning-tab-content .item').on('click', function () {
+            var $parent = $(this).parent('.learning-tab-content');
+            var $siblings = $parent.siblings('.learning-tab-content');
+
+            $parent.toggleClass('open').children('.learning-tab-content .item-two').slideToggle(300, "swing");
+            $siblings.removeClass('open').find('..learning-tab-content .item').removeClass('open').end().children('.learning-tab-content .item-two').slideUp(300, "swing");
+        });
+        // calendar faq end
+
+        // course faq start
+        $('.course-accordian-wrapper .course-details-heading').on('click', function () {
+            var $parent = $(this).parent('.course-details-item');
+            var $siblings = $parent.siblings('.course-details-item');
+
+            $parent.toggleClass('open').children('.course-details-content').slideToggle(300, "swing");
+            $siblings.removeClass('open').find('.course-details-heading').removeClass('open').end().children('.course-details-content').slideUp(300, "swing");
+        });
+        // course faq end
+
+        // faq start
+        $('.faq-wrapper .faq-title').on('click', function () {
+            var $parent = $(this).parent('.faq-item');
+            var $siblings = $parent.siblings('.faq-item');
+
+            $parent.toggleClass('open').children('.faq-content').slideToggle(300, "swing");
+            $siblings.removeClass('open').find('.faq-title').removeClass('open').end().children('.faq-content').slideUp(300, "swing");
+        });
+        // faq end
+
+    });
+
+</script>
+
+</html>

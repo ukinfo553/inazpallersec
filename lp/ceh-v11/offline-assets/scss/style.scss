@@ -1,0 +1,47 @@
+ 
+ @import 'custom-variables'; 
+@import 'bootstrap';
+@import 'font-awesome'; 
+@import 'animate.scss'; 
+@import 'owl.carousel2';
+@import 'banner';
+  .rows { width: 100%; float: left;  }   
+
+   .alert-danger{ font-size: 13px; margin-bottom: 10px;
+   	p{ margin: 0; padding: 0; }
+   	ul{ padding:0; margin: 0; 
+li{ display: block; }  
+   	 }
+   }
+  .hide{ display: none !important; }
+@import 'custom-styles';     
+  .f12{ font-size: 12px; }
+  .f14{ font-size: 14px; } 
+
+.btn_submit{background: rgb(255,16,70);
+background: linear-gradient(180deg, rgba(255,16,70,1) 0%, rgba(243,13,65,1) 35%, rgba(224,8,57,1) 58%, rgba(191,0,43,1) 100%);}
+// Your variable overrides 
+/* $body-bg: #eee;
+$body-color: #111; */ 
+
+  $theme-colors: (
+  "primary": #000000,
+  "danger": #ff4136
+);  
+
+ //$theme-colors: map-remove($theme-colors, "success", "info", "danger");
+
+
+// Bootstrap and its default variables
+
+
+// Option A: Include all of Bootstrap
+
+
+
+ 
+// Option B: Include parts of Bootstrap
+
+ 
+
+ 

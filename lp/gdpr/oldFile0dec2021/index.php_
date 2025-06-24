@@ -1,0 +1,344 @@
+<?php include('include/comman_use.php'); ?>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="General Data Protection Regulation Foundation Training ">
+<meta name="author" content="Infosec Train">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>General Data Protection Regulation Foundation Training</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php include('include/css.php');?>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                  
+                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                  
+                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                  
+                  })(window,document,'script','dataLayer','GTM-5XZDRWG');
+               </script>
+<!-- End Google Tag Manager -->
+</head>
+<body >
+<?php include('include/header.php');?>
+<section class="rows bg-fixed  banner home_search <?php
+if(isMobile()){ 
+}else{ 
+ echo 'lazy';
+}
+?>" data-src="<?php echo BASE_URL; ?>assets/images/bg.jpg"  >
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-7">
+        <h1 class=" heading1 mt-4  text-white  wow  fadeInLeft animated" data-wow-duration="1s" >General Data Protection Regulation Foundation<br>(GDPR)
+     <br>
+          <strong> Certification Training</strong> </h1>
+        <ul class="list6">
+          <li><img src="assets/images/5.png" />32 hours of instructor-led training</li>
+          <li><img src="assets/images/3.png" /> Certified & Experienced Trainers</li>
+          <li><img src="assets/images/6.png" /> Post Training Support</li>
+          <li><img src="assets/images/4.png" /> PECB Authorized Training Partner</li>
+
+        </ul>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-5 ">
+        <div class="cir_head wow  fadeInRight animated" data-wow-duration="1s" id="free_demo">
+          <div class="home_form">
+            <h2 class="     form_head">Talk to our Experts <img src="assets/images/user.png" class="float-right" /></h2>
+            <div class="hide rows  mt-2" id="demo_form_output"> </div>
+            <form class="rows  clearfix" method="post" action=""  onSubmit="return val_demo_request(this.form);"  id="demo_me_phone_f" >
+              <div class="form-group ">
+                <input type="text" class="form-control"  id="me_name"  name="me_name"  value="" placeholder="Your Name * " >
+                <div class="form-control-feedback"> </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="me_email" id="me_email" value="" placeholder="E-mail address *">
+                <div class="form-control-feedback"> </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="me_phone" value="" id="me_phone" placeholder="Phone Number  ">
+                <div class="form-control-feedback"> </div>
+              </div>
+              <div class="form-group">
+                <textarea  class="form-control textarea" name="me_message"  id="me_message" placeholder="Mention your call time preference"></textarea>
+                <div class="form-control-feedback"> </div>
+              </div>
+              <input type="hidden"   value="<?php echo BASE_URL;?>thank-you.html" id="me_redirect"  >
+              <button type="submit" name="me_submited" id="me_submited" value="submited" class="form-control btn btn-primary btn_submit  ">SUBMIT</button>
+              <div class="loading_w hide" id="loading_w"><img src="<?php echo BASE_URL; ?>assets/images/loader.gif"/></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid  section    ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-4">
+        <h2 class="head-home2 wow  fadeInDown animated  " id="overview"  data-wow-duration="1s"> General Data Protection Regulation Foundation (GDPR)<br>
+          <span>Course Content / Exam(s) </span> </h2>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-md-6">
+        <h2 class="head-home text-left m-0 "> Course Overview </h2>
+        <p>The GDPR Foundation training allows you to study the essential elements to execute and manage the framework of compliance concerning personal data protection. All through this training course, you will be able to comprehend the fundamental principles of privacy and get acquainted with the role of the Data Protection Officer. </p>
+      
+       
+       <p>After the course completion, you can sit for the examination and apply for the credential of a ‘PECB Certified GDPR Foundation.’ The certificate of PECB Foundation depicts that you have understood the underlying methodologies, framework, requirements, and management approach.</p>
+
+      </div>
+      <div class="col-md-6"> <img src="<?php echo BASE_URL; ?>assets/images/img2.jpg" class="img-fluid float-right" /> </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid section   bg3" id="course"  >
+  <div class="container">
+    <div class="row"  >
+      <div class="col-md-12 mt-3 mb-3">
+        <h2 class="head-home ">Course Objectives </h2>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-6   " >
+        <div class="panel p-5 panel_height">
+          <h3 class="head ">Course Outline</h3>
+          <ul class="list1">
+           
+           
+<ul class="list1">
+   <img src="<?php echo BASE_URL; ?>assets/images/course1.png" class="img-fluid float-right" />
+<li>Introduction  to the General Data Protection Regulation (GDPR)&nbsp;</li>
+  <li>Introduction to GDPR and Data Protection Principles</li>
+  <li>The General Data Protection Regulation requirements </li>
+  <li>Introduction to the GDPR concepts and principles&nbsp;</li>
+  <li>Designation of the DPO and analysis of the GDPR compliance  program</li>
+  <li>DPO operations</li>
+  <li>Monitoring and continual improvement of GDPR compliance</li>
+  <li>Certification exam</li>
+</ul>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6   " >
+        <div class="panel p-5 panel_height ">
+          <h3 class="rows head ">Who Should Attend</h3>
+       
+<ul class="list1">
+            <img src="<?php echo BASE_URL; ?>assets/images/course2.png" class="img-fluid float-right" />
+<li>Individuals interested in gaining   knowledge about the chief principles of privacy</li>
+  <li>Individuals seeking to pursue a  career in the field of Data Protection</li>
+  <li>Individuals engaged in  Information Security and Personal Data Protection</li>
+</ul>
+          </ul>
+          <h3 class="rows head mt-4">Pre- requisites</h3>
+         <ul class="list1">
+<li>A candidate must have a  fundamental understanding of the GDPR and primary knowledge of the present data protection legal requirements.</li>
+</ul>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-12   " >
+        <div class="panel p-5 ">
+          <h3 class="head">Exam Information </h3>
+          <p class="rows    mb-3 mt-3">The examination of the ‘PECB Certified GDPR Foundation’ thoroughly meets the needs and requirements of the PECB Exam and Certification Program (ECP). The domain of competence covered in the exam includes the basic concepts and principles of the General Data Protection Regulation (GDRP).</p>
+         
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</section>
+<section class="container-fluid   bg5 " >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" id="training-calendar">
+        <h2 class="head-home wow  fadeInDown animated  text-white"   data-wow-duration="1s">Training Calendar </h2>
+      </div>
+    </div>
+     
+<div class="row">
+      <div class="col-md-12">
+      <table id="tablepress-43" class="tablepress table table-striped table_training tablepress-id-43">
+  <thead class="row-hover">
+    <tr class="row-1">
+      <th class="column-1" data-label="Start Date">Start Date</th>
+      <th class="column-2" data-label="Start/End Time">Start/End Time</th>
+      <th class="column-3" data-label="Batch Type">Batch Type</th>
+      <th class="column-4" data-label="Training Mode  ">Training Mode </th>
+      <th class="column-5" data-label="Batch Status">Batch Status</th>
+      <th>#</th>
+    </tr>
+</thead>
+      <tbody class="row-hover">   
+   
+   
+      
+
+   
+    <tr class="row-2">      
+      <td class="column-2" data-label="Start Date">29 Jan 2022</td>
+      <td class="column-3" data-label="Start/End Time">19:00   - 23:00  (IST)</td>
+      <td class="column-1" data-label="Batch Type">Weekday(Evening)</td>
+      <td class="column-4" data-label="Training Mode  ">Online Training </td>
+      <td class="column-5" data-label="Batch Status"><font color="green"><strong> [ Open ]</strong></font></td>
+     <td><a href="#free_demo" class="btn-danger btn href_toscroll">Enquire Now</a></td>
+    </tr>
+     
+    
+    
+  </tbody>
+</table>
+
+ 
+
+ </div>
+    </div>
+
+  
+  </div>
+</section> 
+<section class="rows bg-fixed container-fluid section  banner  instructor  <?php
+if(isMobile()){ 
+}else{ 
+ echo 'lazy';
+}
+?>" data-src="<?php echo BASE_URL; ?>assets/images/bg2.jpg"  id="instructor" >
+  <div class="container text-white">
+    <div class="row" >
+      <div class="col-md-12   ">
+        <h2 class="head-home2 text-white"  > Instructor <br>
+          <span class="f22"> Our Course Advisors</span> </h2>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col-md-4   ">
+        <div class="review"><img src="<?php echo BASE_URL; ?>assets/images/rajesh.png" class="img-fluid mt-4" />
+          
+        </div>
+      </div>
+      <div class="col-md-8  mb-4 "> <img src="<?php echo BASE_URL; ?>assets/images/star.png" class="img-fluid mt-4" /><br>
+        <h2 class="head text-white mt-2">Rajesh<br>
+          <strong>CDCP, CDPO, ISO 27001 Lead Auditor, ISO 22301 Lead Auditor</strong></h2>
+        <p class="rows text-white mt-4 "> A data center management expert with extensive hands on experience of implementation of ISO 27001, ISO 22301 standards for TIER III data centers. He has trained more than 1000 students till date from top IT, Banking and Finance, Telecom and other sectors from countries such as India, Philippines, Singapore, USA, UK, Cambodia, Vietnam, UAE, Saudi Arabia, Tanzania, Senegal and many more.<br>
+A renowned trainer conducting training programs/workshops based on experiential learning and interactive discussions and activities. He also conducts audits and implementation of ISO Management Systems – ISMS, QMS, BCMS, EnMS and OHSAS. He is a certified Lead Auditor.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="container-fluid section    " >
+  <div class="container">
+    <div class="row" id="infosectrain">
+      <div class="col-md-12 mt-3">
+        <h2 class="head-home"  > Why InfosecTrain </h2>
+      </div>
+    </div>
+    <div class="row mb-5" >
+      <div class="col-md-3"> <span class="learning_mode4"  > <span><img src="<?php echo BASE_URL; ?>assets/images/industry.png"  ></span> Learn from Industry <br>
+        Experts</span> </div>
+      <div class="col-md-3"> <span class="learning_mode4" ><span> <img src="<?php echo BASE_URL; ?>assets/images/support.png"  ></span> Post Training <br>
+        Support</span> </div>
+      <div class="col-md-3"> <span class="learning_mode4"  data-wow-duration="3s"> <span><img src="<?php echo BASE_URL; ?>assets/images/programs.png"  ></span> Certification Focused <br>
+        Programs</span> </div>
+      <div class="col-md-3"> <span class="learning_mode4"  data-wow-duration="4s"> <span><img src="<?php echo BASE_URL; ?>assets/images/flexible-schedule.png"  ></span> Flexible <br>
+        Schedule</span> </div>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="container-fluid    home_flexible">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h3 class="wow  fadeInRight animated text-white "  >Looking For A Flexible, Customize, Cost-Effective Learning Solution? <br>
+          We Are Just A Click Away </h3>
+      </div>
+      <div class="col-md-3"> <a href="#free_demo" class="btn-primary4 href_toscroll float-right" data-target="#request_demo"> ENQUIRY NOW </a> </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid home_testimonials b3" id="reviews">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="head-home wow   "> Words of Praise<span><i></i></span></h2>
+      </div>
+    </div>
+    <div id="home_testimonials" class="owl-carousel owl-theme owl-loaded owl-drag" >
+      <div class="item wow   "  >
+        <div class="card">
+          <h3 class="head_name">Jatin Dhruva </h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/jatin.jpg" class="d-inline img-v users" alt="Jatin Dhruva ">   <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> It was awesome bootcamp and i learned a lot from the course. I would love to attend more bootcamps to sharpen my skills and increase my knowledge. I would like to recommend this course to my colleagues and friends as it gives lot of knowledge for the one who wants to pursue this as career </p>
+        </div>
+      </div>
+      <div class="item wow   "  >
+        <div class="card">
+          <h3 class="head_name">Neelima Kant </h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/neelima.jpg" class="d-inline img-v users" alt="Abhay Kumar Kashyap">   <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> Hi Team, Firstly I would like to say thanks to trainer. It was an awesome experience by reviewing again the our courses. Interactive session with lot of concepts add on.
+</p>
+        </div>
+      </div>
+      <div class="item wow   "  >
+        <div class="card">
+          <h3 class="head_name">Ramakrishnan </h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/ramakrishnan.jpg" class="d-inline img-v users" alt="Srinivas Reddy Sudhini">   <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> It was a great experience in terms of gaining knowledge from an expert; Trainer's intension is beyond the scope, what we generally get from the ...</p>
+        </div>
+      </div>
+     
+      <div class="item wow   "  >
+        <div class="card">
+          <h3 class="head_name">Munish </h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/munish-3-150x150.jpg" class="d-inline img-v users" alt="Munish"> <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot">
+           The way he teaches, the way he clears concepts.. you can feel the difference. Trainer dropped down to my level of understanding and then pulled me up! That is not what a “just teacher” does. Trainer never showed...<br><br>
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid   bg2 popular_course">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="head-home ">Related Courses </h2>
+      </div>
+    </div>
+    <div class="row mb-5 corporate_course" >
+      <div class="col-md-3">
+        <div class="c_wrapper">
+          <div class="c_name">ISO Lead Implementer</div>
+          <a href="https://www.infosectrain.com/pages/lp/iso-27001/" target="_blank" class="s_demo">Explore</a></div>
+      </div>
+      <div class="col-md-3">
+        <div class="c_wrapper">
+          <div class="c_name">QRadar SIEM</div>
+          <a href="https://www.infosectrain.com/pages/lp/ibm-security-qradar/" target="_blank" class="s_demo">Explore</a></div>
+      </div>
+      <div class="col-md-3">
+        <div class="c_wrapper">
+          <div class="c_name">AWS Certified Solutions Combo Course</div>
+          <a href="https://www.infosectrain.com/pages/lp/aws-certified-training/" target="_blank" class="s_demo">Explore</a></div>
+      </div>
+     <div class="col-md-3">
+        <div class="c_wrapper">
+          <div class="c_name">AZ-500 : Microsoft Azure SECURITY </div>
+          <a href="https://www.infosectrain.com/courses/az-500-microsoft-azure-security-technologies-training/" target="_blank" class="s_demo">Explore</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php include('include/footer.php');?>
+<?php  include('../../assets/include/offers.php');?>
+</body>
+</html>

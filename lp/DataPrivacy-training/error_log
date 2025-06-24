@@ -1,0 +1,6 @@
+[26-May-2020 08:14:03 Etc/GMT] PHP Warning:  file_get_contents(http://ipinfo.io/27.106.11.75): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/infoswb1/public_html/pages/assets/email/email_config.php on line 8
+[26-May-2020 15:11:09 Etc/GMT] PHP Warning:  file_get_contents(http://ipinfo.io/72.163.220.7): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/infoswb1/public_html/pages/assets/email/email_config.php on line 8
+[02-Jun-2020 18:58:18 Etc/GMT] PHP Warning:  file_get_contents(http://ipinfo.io/122.183.49.23): failed to open stream: HTTP request failed! HTTP/1.0 429 Too Many Requests
+ in /home/infoswb1/public_html/pages/assets/email/email_config.php on line 8

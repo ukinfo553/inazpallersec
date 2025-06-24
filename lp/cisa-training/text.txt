@@ -1,0 +1,9 @@
+kinldy suggest in this code file which functina and line of code centerlized
+
+because evrything go on same line of code in every landing page for mailer
+
+only related course change and blog and video change
+
+'page_type' => 'CISA', this value change and this value chnage
+
+$email_subject = "CISA Landing Page";

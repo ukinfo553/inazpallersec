@@ -1,0 +1,815 @@
+<?php include('include/comman_use.php'); ?>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="CCISO Training and Certification course ">
+<meta name="author" content="Infosec Train">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>CCISO Training and Certification course</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php include('include/css.php');?>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                  
+                  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                  
+                  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                  
+                  })(window,document,'script','dataLayer','GTM-5XZDRWG');
+               </script>
+<!-- End Google Tag Manager -->
+</head>
+<body >
+<style type="text/css">
+ 
+body.offer_on{ padding-top: 42px; }
+.offer_on header{ top: 42px !important; }
+
+
+
+@media (max-width: 767px) {
+body.offer_on{ padding-top: 99px; }
+.offer_on header{ top: 99px !important; }
+
+}
+.counter_wrap{ opacity: 0; display: none;
+    visibility: hidden; height: 0; }
+ .offer_on .counter_wrap { background: #cc232b; float: left; width: 100%; text-align: center; height: 42px; line-height:38px;position: absolute; color: #fff;position: fixed;   z-index: 10000000;
+    left: 0;
+    top: 0;
+    right: 0; font-size: 16px; opacity: 1; display: block;
+    visibility: visible;}
+.counter_wrap img{ vertical-align: middle; margin: 0 10px; }
+.close_counter{ float: right; padding-right: 10px; color: #fff; font-size: 12px;  }
+.offer_on.et_non_fixed_nav.et_transparent_nav.et_secondary_nav_enabled #main-header, .offer_on.et_fixed_nav.et_secondary_nav_enabled #main-header{top:71px !important; }
+
+.offer_on.et_non_fixed_nav.et_transparent_nav.et_show_nav #page-container, 
+.offer_on.et_fixed_nav.et_show_nav #page-container {
+    padding-top: 42px  !important;
+}
+
+.offer_on.et_non_fixed_nav.et_transparent_nav.et_show_nav.single-courses #page-container, 
+.offer_on.et_fixed_nav.et_show_nav.single-courses #page-container,
+.offer_on.et_non_fixed_nav.et_transparent_nav.et_show_nav.post-type-archive-blog #page-container, 
+.offer_on.et_fixed_nav.et_show_nav.post-type-archive-blog #page-container,
+.offer_on.et_non_fixed_nav.et_transparent_nav.et_show_nav.single-blog #page-container, 
+.offer_on.et_fixed_nav.et_show_nav.single-blog #page-container{
+    padding-top: 42px  !important;
+}
+
+
+.counter_wrap .grab_now{ background: #f7ff1f; color: #454545;font-size: 16px; text-transform: uppercase;     margin: 0 10px;
+    padding:2px 6px;
+    font-weight: 600;}
+.counter_wrap .grab_now:hover{ background: #0e0e0e; color: #f7ff1f }
+.counter_wrap .dig{ border: 1px   dashed rgba(255, 255, 255,.6); background: rgba(255, 255, 255,.18);padding: 1px 4px;margin: 0 2px; }
+#countdown{ font-size: 13px; }
+.counter_wrap strong{ font-size: 20px; color: #f7ff1f; }
+ .upto_50 {color: #fff;font-weight: 700; }
+ .offer_head{font-weight: 500;}
+ .divider{     width: 50px;    display: inline-block; }
+</style>
+<div class="counter_wrap    "> <img src="https://www.infosectrain.com/wp-content/themes/Divi/assets/images/gift1.png" /> <span class="offer_head"> To unbox your Christmas gift</span> <strong class="upto_50">upto 50% Off</strong> on our combo courses <span class="divider">|</span> OFFER ENDING In :<span id="countdown" data-time="DEC 31, 2019 23:59:00"> <span class="years dig"></span> <span class="me_y text">Y</span> <span class="days dig"></span> <span class="me_d text">D</span> <span class="hours dig"></span> <span class="me_h text">H</span> <span class="mins dig"></span> <span class="me_m text">M</span> <span class="secs dig"></span> <span class="me_s text">S</span> </span> <a href="https://www.infosectrain.com/offers/" target="_blank" class="grab_now">Grab Now</a> <img src="https://www.infosectrain.com/wp-content/themes/Divi/assets/images/gift.png" /> <a class="close_counter" href="javascript:void(0)"  title="Close" >X</a> </div>
+<style type="text/css">
+    
+.modals {  background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000000; 
+    overflow: hidden; display: none; 
+    outline: 0;
+
+}
+.modals.active{ display: block; }
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;  
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+.modals.in .modal-dialog {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+.modals.fade .modal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0,-25%);
+    -ms-transform: translate(0,-25%);
+    -o-transform: translate(0,-25%);
+    transform: translate(0,-25%);
+}
+.modals.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.modals.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+}
+.models_wrap {
+      width: 750px;
+    display: table;
+    margin: 60px auto;
+    vertical-align: middle;
+    background: #fff;  position: relative;
+}
+
+.pop_img{ background: url('https://www.infosectrain.com/wp-content/themes/Divi/assets/images/popup3.jpg');
+background-repeat: no-repeat; background-color: #434343;
+float: left; width: 100%;  }
+.img_content{text-align: center; color: #fff;   margin:198px 20px 10px; font-size: 16px;     font-family: "Open Sans", Arial, sans-serif;}
+.pop_close{ position: absolute;  font: inherit;  
+    right: -16px;
+    opacity: 1;
+    top: -23px;
+    text-shadow: none;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 100; }
+
+    .img_content ul{border-top: 1px #fff solid;
+    border-left: 1px #fff solid;
+    float: left;
+    width: 100%; margin: 26px 0 8px; background: rgba(255,255,255,.08);
+
+}
+.img_content li{     display: block;
+    width: 33.33333%;
+    border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    padding: 3px;
+    float: left;
+    min-height: 86px; }
+.img_content li p{   margin: 0;
+    padding: 11px 0 0;
+    height: 46px;
+    font-size: 15px;
+    font-size: 18px;
+    font-weight: 600; }
+.f14{ font-size: 14px !important; }
+ .img_content h4{ color: #fff;     letter-spacing: 0.5px; text-transform: uppercase; font-size: 14px; font-weight: 600; margin: 5px 0 0; }
+ .img_content p{  letter-spacing: 0.5px; margin: 0;    padding: 0;font-size: 26px; }
+ .diver{  background: #c83f8c; width: 195px; height: 2px;    display: inline-block; }
+ .img_content h2{ color: #fff; font-size: 30px; font-weight: 600;  margin: 0; padding:5px 0;     letter-spacing: 0.5px;}
+ .img_content strong{ color: #ffd01d; font-size: 22px; display: block; }
+.img_content .btn-primary{  text-transform: uppercase; background: #ff8705; color: #fff;    letter-spacing: 2px;
+    padding: 12px 45px; border-color: #ff8705;
+    font-size: 20px;margin-top: 10px;
+    display: inline-block; }
+.img_content .btn-primary:hover{   background: #000; color: #fff; }
+.visible-mobile{ display: none }
+.offer_on .nav_banner_w.active{top: 40px;}
+
+@media (max-width: 767px) {
+    .visible-mobile{ display: block; }
+ .close_counter {
+    float: right;
+    padding-right: 0;
+    color: #fff;
+    font-size: 12px;
+    position: absolute; 
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    color: #333;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    bottom: -12px;
+}
+.offer_on .counter_wrap {
+     line-height: 31px;
+    font-size: 12px;}
+
+.counter_wrap strong {
+    font-size: 15px;
+}.counter_wrap img {
+    vertical-align: middle;
+    margin: 0;
+    width: 20px; display: none;
+}.offer_on .counter_wrap { 
+    height: auto;}.counter_wrap .grab_now {
+     
+    font-size: 13px;  display: table; margin: 0 auto;
+}
+.offer_on.et_non_fixed_nav.et_transparent_nav #top-header, .offer_on.et_fixed_nav #top-header {
+    top: 94px;
+}
+.offer_on.et_non_fixed_nav.et_transparent_nav.et_secondary_nav_enabled #main-header, .offer_on.et_fixed_nav.et_secondary_nav_enabled #main-header {
+    top: 107px !important;
+}   
+.et_non_fixed_nav.et_transparent_nav.et_show_nav #page-container, .et_fixed_nav.et_show_nav #page-container {
+    padding-top: 81px !important; 
+}
+
+.offer_on.et_non_fixed_nav.et_transparent_nav.et_show_nav #page-container, .offer_on.et_fixed_nav.et_show_nav #page-container {
+    padding-top: 0px !important;
+    overflow: hidden;
+}
+.modals { 
+    z-index: 10000000;
+}
+.models_wrap {
+    width: 100%;
+    display: table;
+    margin: 0;
+    vertical-align: middle;
+    background: #801646;
+    position: relative;
+}.pop_img { background: none;
+}.img_content {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+.img_content h2 { 
+    margin: 12px 0;  
+}
+.img_content ul {
+    
+    margin: 20px 0 8px; border: none;
+}.img_content li { width: 50%;
+   border-right:none;
+    border-bottom: 1px #fff solid; 
+    min-height: 88px; text-align: center;
+}
+.img_content p{     text-align: center;  font-size: 23px;
+    padding: 8px;}
+.img_content li p {
+    
+    height: auto;
+    font-size: 14px; text-align: center;
+}
+.pop_close {
+    
+    right: 10px; 
+    top: 6px; 
+}
+}
+
+</style>
+<div class="  modals  "  id="popup_offer" >
+  <div class="models_wrap"> <a href="#" class="pop_close">x</a>
+    <div class="modals-body">
+      <div class="pop_img">
+        <div class="img_content">
+          <!-- <h2 class="visible-mobile">Black Friday Offer</h2>-->
+          <p class=" text-center  ">with Never-Before Training<sup style="font-size: 11px; color: red;">*</sup> Combos!</p>
+          <ul>
+            <li>
+              <p class=" text-center">CEH + CFR</p>
+              <strong>USD 899 </strong> </li>
+            <li>
+              <p class=" text-center">CEH + CYSA </p>
+              <strong> USD 799</strong></li>
+            <li>
+              <p class=" text-center"> CEH + CTIA</p>
+              <strong>USD 999 </strong></li>
+            <li>
+              <p class=" text-center">CCISO + CISM </p>
+              <strong>USD 899 </strong></li>
+            <li>
+              <p class=" text-center">CCISO + CCSP</p>
+              <strong>USD 899 </strong></li>
+            <li>
+              <p class=" text-center">CCISO + CISA</p>
+              <strong>USD  899 </strong></li>
+          </ul>
+          <p class="f14 text-center">For Expert Assistance, call us on <a href="tel:+91-9773667874 "> +91-97736-67874 </a> or write us on <a href="mailto:sales@infosectrain.com"> sales@infosectrain.com</a></p>
+          <p class="f14" style="text-align: center;"><small style="font-size: 11px;  "><span style="font-size: 11px; color: red;">*</span>All training combos will be delivered through ILT mode.</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<?php include('include/header.php');?>
+<section class="rows bg-fixed  banner home_search <?php
+if(isMobile()){ 
+}else{ 
+ echo 'lazy';
+}
+?>" data-src="<?php echo BASE_URL; ?>assets/images/bg.jpg"  >
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12 text-center">
+        <h1 class="  heading1 mt-4  text-white  wow  fadeInLeft animated" data-wow-duration="1s" >EC-COUNCIL<br> Certified Chief Information Security Officer (CCISO) <br>
+          <strong class="mt-2"> Training & Certification Courses </strong></h1>
+         
+        
+      <p class="text-white text-center f18">40 hrs of instructor-led training | Includes exam and EC-Council E Kit <br>
+              <img width="130"  src="<?php echo BASE_URL; ?>assets/images/ec-council_accredited_trainin.png" class="d-inline img-v  " alt="cot"> </p>
+
+      </div>
+      <div class="col-xs-12 col-md-12 ">
+        <div class="cir_head wow  fadeInRight animated" data-wow-duration="1s" id="free_demo">
+          <div class="home_form">
+            <h2 class="  text-center form_head">Talk to our <span>Experts</span></h2>
+            <div class="hide rows  mt-2" id="demo_form_output"> </div>
+            <form class="rows  clearfix" method="post" action=""  onSubmit="return val_demo_request(this.form);"  id="demo_me_phone_f" >
+              <div class="row">
+                <div class="col-xs-12 col-md-2">
+                  <div class="form-group ">
+                    <input type="text" class="form-control"  id="me_name"  name="me_name"  value="" placeholder="Name * " >
+                    <div class="form-control-feedback"> </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-3 ">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="me_email" id="me_email" value="" placeholder="E-mail address *">
+                    <div class="form-control-feedback"> </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-3 ">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="me_phone" value="" id="me_phone" placeholder="Phone Number *">
+                    <div class="form-control-feedback"> </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-4 ">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="me_message" value="" id="me_message" placeholder="Mention your call time preference">
+                    <div class="form-control-feedback"> </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 offset-md-4 col-md-5 ">
+                  <input type="hidden"   value="<?php echo BASE_URL;?>thank-you.html" id="me_redirect"  >
+                  <input type="hidden"   value="" id="me_others" name="me_others" > 
+                  <button type="submit" name="me_submited" id="me_submited" value="submited" class="form-control btn btn-primary btn_submit  ">Request a Callback <i class="fa fa-angle-right"></i></button>
+                  <div class="loading_w hide" id="loading_w"><img src="<?php echo BASE_URL; ?>assets/images/loader.gif"/></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid  section  bg2 ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="head-home wow  fadeInDown animated  " id="overview"  data-wow-duration="1s"> CCISO TRAINING PACKAGE INCLUDES </h2>
+      </div>
+    </div>
+    <div class="row " >
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated "  data-wow-duration="1s"> <span><img src="<?php echo BASE_URL; ?>assets/images/presentation.png"  ></span> Certified Instructor</span> </div>
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated"  data-wow-duration="2s"> <span><img src="<?php echo BASE_URL; ?>assets/images/document.png"  ></span>Reference Material</span> </div>
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated"  data-wow-duration="3s"> <span><img src="<?php echo BASE_URL; ?>assets/images/answer.png"  ></span>EC-Council 
+        Authorized Partner</span> </div>
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated"  data-wow-duration="4s"> <span><img src="<?php echo BASE_URL; ?>assets/images/diploma.png"  ></span>Course Completion 
+        Certificate</span> </div>
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated"  data-wow-duration="4s"> <span><img src="<?php echo BASE_URL; ?>assets/images/mortarboard.png"  ></span>Desired Modes of 
+        Training</span> </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid   bg2 course_wrap">
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h2 class="head-home wow  "  > CCISO Certification Course Content </h2>
+      <p class="lead text-center f22"><strong>The Certified CISO (CCISO) program is the first of its kind training and certification program aimed at producing top-level information security executives.</strong></p>
+    </div>
+  </div>
+  <div class="row mb-5"  id="course">
+    <div class="col-md-12 ">
+      <div class="card p-3 ">
+        <div class="tabs new_tab ">
+          <ul class="tab-links">
+            <li class="active"><a href="#tab1"> About the CCISO</a></li>
+            <li><a href="#tab2">Why CCISO ? </a></li>
+            <li><a href="#tab3">Content Details </a></li>
+            <li><a href="#tab4">Prerequisites</a></li>
+            <li><a href="#tab5">Who Should Attend </a></li>
+            <li class="active1"><a href="#tab6">Exam </a></li>
+          </ul>
+          <div class="tab-content course_details">
+            <div id="tab1" class="tab active">
+               <h3 class="tab_head">  About the CCISO</h3>
+              <div class="tab_content">
+                <p> <img src="assets/images/cciso.jpg" align="right" class="d-inline-block ml-3"> EC-Council’s CCISO Program has certified leading information security professionals around the world. A core group of high-level information security executives, the CCISO Advisory Board, contributed by forming the foundation of the program and outlining the content that would be covered by the exam, body of knowledge, and training. Some members of the Board contributed as authors, others as exam writers, others as quality assurance checks, and still others as trainers. Each segment of the program was developed with the aspiring CISO in mind and looks to transfer the knowledge of seasoned professionals to the next generation in the areas that are most critical in the development and maintenance of a successful information security program.</p>
+                <p> <img src="assets/images/ec-council.jpg" align="right" class="d-inline-block ml-3"> The Certified CISO (CCISO) program is the first of its kind training and certification program aimed at producing top-level information security executives. The CCISO does not focus solely on technical knowledge but on the application of information security management principles from an executive management point of view. The program was developed by sitting CISOs for current and aspiring CISOs. </p>
+                <p>In order to sit for the CCISO exam and earn the certification, candidates must meet the basic CCISO requirements. Candidates who do not yet meet the CCISO requirements but are interested in information security management can pursue the EC-Council Information Security Management (EISM) certification. </p>
+              </div>
+            </div>
+            <div id="tab2" class="tab ">
+              <h3 class="tab_head"> Why CCISO ? </h3>
+              <div  class="tab_content">
+                <p><strong>Why should you consider the CCISO program?</strong></p>
+                <p>The CCISO Certification is an industry-leading program that recognizes the real-world experience necessary to succeed at the highest executive levels of information security.<br><br>
+
+Bringing together all the components required for a C-Level positions, the CCISO program combines audit management, governance, IS controls, human capital management, strategic program development, and the financial expertise vital to leading a highly successful IS program. Material in the CCISO Program assumes a high-level understanding of technical topics and doesn’t spend much time on strictly technical information, but rather on the application of technical knowledge to an information security executive’s day-to-day work. The CCISO aims to bridge the gap between the executive management knowledge that CISOs need and the technical knowledge that many aspiring CISOs have. This can be a crucial gap as a practitioner endeavors to move from mid-management to upper, executive management roles. Much of this is traditionally learned as on the job training, but the CCISO Training Program can be the key to a successful transition to the highest ranks of information security management.</p>
+              </div>
+            </div>
+            <div id="tab3" class="tab ">
+              <h3 class="tab_head">Content Details </h3>
+              <div class="tab_content">
+                <h3 class="head m-0">Certified CISO (CCISO) program Course Details </h3>
+                <p><strong>Domain 1: Governance (Policy, Legal, and Compliance)</strong></p>
+<ul>
+  <li>Information Security Management Program</li>
+  <li>Defining an Information Security Governance Program</li>
+  <li>Regulatory and Legal Compliance</li>
+  <li>Risk Management</li>
+</ul>
+<p><strong>Domain 2: IS Management Controls and Auditing Management</strong></p>
+<ul>
+  <li>Designing, deploying, and managing security controls</li>
+  <li>Understanding security controls types and objectives</li>
+  <li>Implementing control assurance frameworks</li>
+  <li>Understanding the audit management process</li>
+</ul>
+<p><strong>Domain 3: Security Program Management &amp; Operations</strong></p>
+<ul>
+  <li>The role of the CISO</li>
+  <li>Information Security Projects</li>
+  <li>Integration of security requirements into other operational processes (change management, version control, disaster recovery, etc.)</li>
+</ul>
+<p><strong>Domain 4: Information Security Core Concepts</strong></p>
+<ul>
+  <li>Access Controls</li>
+  <li>Physical Security</li>
+  <li>Disaster Recovery and Business Continuity Planning</li>
+  <li>Network Security</li>
+  <li>Threat and Vulnerability Management</li>
+  <li>Application Security</li>
+  <li>System Security</li>
+  <li>Encryption</li>
+  <li>Vulnerability Assessments and Penetration Testing</li>
+  <li>Computer Forensics and Incident Response</li>
+</ul>
+<p><strong>Domain 5: Strategic Planning, Finance, &amp; Vendor Management</strong></p>
+<ul>
+  <li>Security Strategic Planning</li>
+  <li>Alignment with business goals and risk tolerance</li>
+  <li>Security emerging trends</li>
+  <li>Key Performance Indicators (KPI)</li>
+  <li>Financial Planning</li>
+  <li>Development of business cases for security</li>
+  <li>Analyzing, forecasting, and developing a capital expense budget</li>
+  <li>Analyzing, forecasting, and developing an operating expense budget</li>
+  <li>Return on Investment (ROI) and cost-benefit analysis</li>
+  <li>Vendor management</li>
+  <li>Integrating security requirements into the contractual agreement and procurement process</li>
+</ul>
+
+              </div>
+            </div>
+            <div id="tab4" class="tab ">
+              <h3 class="tab_head">Pre-Requisite</h3>
+              <div class="tab_content">
+                <p>People who have certified experience and knowledge of the following Chief Information Security Officer domains should target this exam:</p>
+                <ul>
+                  <li>Strategic Planning & Finance</li>
+                  <li>Governance- Policy, Legal & Compliance</li>
+                  <li>Information Security Management Controls and Auditing Management (Projects, Technology & Operations).</li>
+                  <li>Project and Operations Management </li>
+                  <li>IS Core Competencies</li>
+                </ul>
+              </div>
+            </div>
+            <div id="tab5" class="tab ">
+              <h3 class="tab_head"> Who Should Attend</h3>
+              <div class="tab_content">
+                <p>Candidates who undergo the training programwould require five-year experience in any three domains of the CISO to undertake the exam. Candidates who don’t undergo the training but possess five years of experience in the five aforementioned CISO domains are also eligible to take up this examination. </p>
+              </div>
+            </div>
+            <div id="tab6" class="tab ">
+              <h3 class="tab_head">Exam Information</h3>
+              <div class="tab_content">
+                <ul>
+                  <li><strong> Number of Questions-</strong> 150</li>
+                  <li> <strong>Type of Questions-</strong> Multiple Choice Questions</li>
+                  <li> <strong> Exam Duration-</strong> 2.5</li>
+                  <li> <strong> Cut Score-</strong> Anywhere between 60 to 80 per cent </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+<section class="container-fluid section   bg5 " >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" id="training-calendar">
+        <h2 class="head-home wow  fadeInDown animated  text-white" id="trainers"  data-wow-duration="1s">CCISO TRAINING CALENDAR </h2>
+      </div>
+    </div>
+     
+<div class="row">
+      <div class="col-md-12">
+          <?php
+$url = "https://www.infosectrain.com/api/32382/href_toscroll/free_demo";
+ 
+
+function gettraning_Cal($url){
+  $ch = curl_init();
+curl_setopt($ch, CURLOPT_HEADER, 0);
+curl_setopt($ch, CURLOPT_VERBOSE, 1);
+//curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+// curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+//curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+curl_setopt($ch, CURLOPT_URL, $url);
+ 
+$content = curl_exec($ch);
+
+curl_close ($ch);
+return $content;
+}
+
+gettraning_Cal($url);
+ 
+   ?>
+
+ 
+
+ </div>
+    </div>
+
+  
+  </div>
+</section> 
+<section class="container-fluid  section  bg5 ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="head-home wow  fadeInDown animated  text-white"  data-wow-duration="1s"> Certified Chief Information Security Officer ( CCISO ) Benefits </h2>
+      </div>
+    </div>
+    <div class="row " >
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated text-white "  data-wow-duration="1s"> <span><img src="<?php echo BASE_URL; ?>assets/images/global.png"  ></span> Global Recognition 
+        Certification</span> </div>
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated text-white"   data-wow-duration="2s"> <span><img src="<?php echo BASE_URL; ?>assets/images/salary.png"  ></span> Salary Hike</span> </div>
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated text-white"  data-wow-duration="3s"> <span><img src="<?php echo BASE_URL; ?>assets/images/data-protection.png"  ></span> Wide Scope In
+        Information Security </span> </div>
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated text-white"  data-wow-duration="4s"> <span><img src="<?php echo BASE_URL; ?>assets/images/goal.png"  ></span> High Executive
+        Level Positions </span> </div>
+      <div class="col-md"> <span class="learning_mode wow  fadeInUp animated text-white"  data-wow-duration="4s"> <span><img src="<?php echo BASE_URL; ?>assets/images/infose-logo.png"  ></span> Respect</span> </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid   bg8  "  id="training-calendar">
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h2 class="head-home wow  "  >DOMAIN COVERAGE BETWEEN CERTIFICATIONS </h2>
+    </div>
+  </div>
+  <div class="row "  >
+    <div class="col-md-12 "> <img src="<?php echo BASE_URL; ?>assets/images/traning.jpg" class="d-inline img-v users img-fluid" alt="waypoint"> </div>
+  </div>
+</div>
+<section class="rows bg-fixed2      lazy" data-src="<?php echo BASE_URL; ?>assets/images/banner1.jpg"  >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h2 class="head-home wow text-white mt-5" id="trainers">Our Course Advisors <span><i></i></span></h2>
+        <div class="rows">
+        <div class="row home_testimonials2 justify-content-md-center">
+          <div class="col-md-6">
+            <div class="card">
+              <h3 class="head_name">Deepak Bhatt  <span> CCISO  | CEH | CHFI | Security + | PENTEST +  </span></h3>
+              <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/deepak.jpg" class="d-inline img-v users" alt="waypoint">  <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+              <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> Deepak, as a cyber security consultant adds to the experience of the company. His flawless technical and interpersonal skills makes him an excellent trainer. With his various certifications like CCISO , CEI, CEH, CHFI, CTIA, ECIH, he has great command over multiple cybersecurity domains. </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <h3 class="head_name">Prabh Nair <span> CCISO |  CISSP | CCSP | CISM | CISA </span></h3>
+              <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/prabh.jpg" class="d-inline img-v users" alt="waypoint">  <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+              <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> Certified security specialist having several years of experience in information security across all domains including application security, vulnerability assessment, ethical hacking, penetration testing, extensive security solutions, governance, risk &amp; compliance and many more.<br><br> </p>
+            </div>
+          </div>
+        
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid    home_flexible">
+  <div class="container">
+    <h3 class="wow  fadeInRight animated text-white f18 m-0 p-0"  >Looking For A Flexible, Customize, Cost-Effective Learning Solution? We Are Just A Click Away<span class="d-inline-block ml-4"><a href="#free_demo" class="btn-primary4 href_toscroll" data-target="#request_demo"> Request a Callback</a></span> </h3>
+  </div>
+</section>
+<section class="container-fluid home_testimonials b3" id="reviews">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="head-home wow  fadeInDown animated"> Words of Praise </h2>
+      </div>
+    </div>
+    <div id="home_testimonials" class="owl-carousel owl-theme owl-loaded owl-drag" >
+      <div class="item wow  fadeInUp animated"  data-wow-duration="1s">
+        <div class="card card2">
+          <h3 class="head_name">Fahim Asey <span>Network & Information Security Analyst </span></h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/fahim-asey.jpg" class="d-inline img-v users" alt="waypoint"> <a target="_blank" href="https://www.linkedin.com/in/fahim-asey-11275648/"><i class="fa fa-linkedin"  traget="_blank"></i></a> <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> I had the opportunity to take up my journey of becoming information security architect with infosectrain, a well-known Cybersecurity instructor, and a multi-talent information security architect. With his help and dedications, today I was able to crack the world most difficult exam, and successfully passed the my test. </p>
+        </div>
+      </div>
+      <div class="item wow  fadeInUp animated"  data-wow-duration="2s">
+        <div class="card">
+          <h3 class="head_name">Naveen N <span> Senior Information Security at Epsilon </span></h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/naveen.jpg" class="d-inline img-v users" alt="waypoint"> <a target="_blank" href="https://www.linkedin.com/in/naveen-n-39a98611/"><i class="fa fa-linkedin"  ></i></a> <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> I want to express my deepest gratitude for infosectrain who helped me to pass my exam. infosectrain's instructors  went the extra mile to assist me, and I have gained a significant benefit because of his knowledge and skills in Information Security. </p>
+        </div>
+      </div>
+      <div class="item wow  fadeInUp animated"  data-wow-duration="3s">
+        <div class="card card1">
+          <h3 class="head_name">Sudharsun <span> Duty Manager , Verizon </span></h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/Sudha.jpg" class="d-inline img-v users" alt="waypoint"> <a target="_blank" href="https://www.linkedin.com/in/sudharsun-govindan-40221a22/"><i class="fa fa-linkedin"  ></i></a> <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> I would like to thank infosectrain for the enhanced training provided for my course preparation.He has extensive knowledge in this topic a constant motivator and a brilliant person. </p>
+        </div>
+      </div>
+      
+      <div class="item wow  fadeInUp animated"  data-wow-duration="4s">
+        <div class="card">
+          <h3 class="head_name">Mohammed <span>Security Engineer at IBM, USA </span></h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/mohammed.jpg" class="d-inline img-v users" alt="waypoint"> <a target="_blank" href="https://www.linkedin.com/in/mohammed-islam-CCISO-ccnp-ceh-74b09335/"><i class="fa fa-linkedin"  ></i></a> <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> I took class with infosectrain. He is a very good Security expert and has lots of industry & training experience. He is very punctual about the class timing and explained everything and put extra time if some for slow students. </p>
+        </div>
+      </div>
+      <div class="item wow  fadeInUp animated"  data-wow-duration="5s">
+        <div class="card card1">
+          <h3 class="head_name">Shailesh Vishwakarma <span style="line-height: 17px;"> CISSP | Firewall Mgmt |  CSOC Monitoring in Deloitte, India</span></h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/shailesh-150x150.jpg" class="d-inline img-v users" alt="Shailesh Vishwakarma"> <a  traget="_blank" href="https://www.linkedin.com/in/shailesh-vishwakarma-63375a39/" ><i class="fa fa-linkedin"></i></a> <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> I want to express my deepest gratitude for trainer who helped me to pass my exam. Trainer went the extra mile to assist me, and I have gained a significant benefit because of his knowledge and skills in Information...<br>
+            <br>
+          </p>
+        </div>
+      </div>
+      <div class="item wow  fadeInUp animated"  data-wow-duration="6s">
+        <div class="card card2">
+          <h3 class="head_name">Srinivas Reddy Sudhini <span>Senior Information Security Specialist, India</span></h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/srinivas-150x150.jpg" class="d-inline img-v users" alt="Srinivas Reddy Sudhini"> <a  traget="_blank" href="https://www.linkedin.com/in/srinivas-reddy-sudhini-ba896b4a/" ><i class="fa fa-linkedin"></i></a> <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> My Trainer is an exceptional trainer I have seen in Information Security. Getting trained for course under him was the right decision I made. He is very patient and hardworking trainer who delivers security concepts in a more efficient...</p>
+        </div>
+      </div>
+      <div class="item wow  fadeInUp animated"  data-wow-duration="7s">
+        <div class="card">
+          <h3 class="head_name">Munish <span>Information Security</span></h3>
+          <div class="testie_head"> <img src="<?php echo BASE_URL; ?>assets/images/munish-3-150x150.jpg" class="d-inline img-v users" alt="Munish"> <img src="<?php echo BASE_URL; ?>assets/images/star5.png" class="d-inline img-v  " alt="star5"></div>
+          <p> <img src="<?php echo BASE_URL; ?>assets/images/cot.png" class="d-inline img-v  " alt="cot"> The way he teaches, the way he clears concepts.. you can feel the difference. Trainer dropped down to my level of understanding and then pulled me up! That is not what a “just teacher” does. Trainer never showed...<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container-fluid section    " >
+  <div class="container">
+    <div class="row" id="infosectrain">
+      <div class="col-md-12 mt-3">
+        <h2 class="head-home"  > Why Infosec Train </h2>
+      </div>
+    </div>
+    <div class="row mb-5" >
+      <div class="col-md-3"> <span class="learning_mode4"  > <img src="<?php echo BASE_URL; ?>assets/images/industry.png"  > Learn from Industry Experts</span> </div>
+      <div class="col-md-3"> <span class="learning_mode4" > <img src="<?php echo BASE_URL; ?>assets/images/support.png"  > Post Training Support</span> </div>
+      <div class="col-md-3"> <span class="learning_mode4"  data-wow-duration="3s"> <img src="<?php echo BASE_URL; ?>assets/images/programs.png"  > Certification Focused Programs</span> </div>
+      <div class="col-md-3"> <span class="learning_mode4"  data-wow-duration="4s"> <img src="<?php echo BASE_URL; ?>assets/images/flexible-schedule.png"  > Flexible Schedule</span> </div>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="container-fluid   bg2 popular_course">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="head-home text-white">Other Popular Courses</h2>
+      </div>
+    </div>
+    <div class="row mb-5 corporate_course" >
+      <div class="col-md-3">
+        <div class="c_wrapper"><a href="#"> <img src="<?php echo BASE_URL; ?>assets/images/cisa.png">
+          <div class="c_name">CISA Certification Course </div>
+          </a><a href="https://www.infosectrain.com/pages/lp/cisa/" target="_blank" class="s_demo"><i>Explore More</i></a></div>
+      </div>
+      <div class="col-md-3">
+        <div class="c_wrapper"><a href="#"> <img src="<?php echo BASE_URL; ?>assets/images/cism.png">
+          <div class="c_name">CISM Certification Training </div>
+          </a><a href="https://www.infosectrain.com/pages/lp/cism/" target="_blank" class="s_demo"><i>Explore More</i></a></div>
+      </div>
+      <div class="col-md-3">
+        <div class="c_wrapper"><a href="#"> <img src="<?php echo BASE_URL; ?>assets/images/ceh.png">
+          <div class="c_name">CEH (v11) - Certified Ethical Hacker </div>
+          </a><a href="https://www.infosectrain.com/pages/lp/ceh-v11/" target="_blank" class="s_demo"><i>Explore More</i></a></div>
+      </div>
+      <div class="col-md-3">
+        <div class="c_wrapper"><a href="#"> <img src="<?php echo BASE_URL; ?>assets/images/security.png">
+          <div class="c_name">CompTIA Security+ SY0-601 Certification </div>
+          </a><a href="https://www.infosectrain.com/pages/lp/security/" target="_blank" class="s_demo"><i>Explore More</i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php include('include/footer.php');?>
+<script src="https://www.infosectrain.com/pages/assets/js/countdown.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){ 
+$(".training_cal_courses").click(function(){
+    $("#me_others").val($(this).attr('data-text'));
+  });
+ 
+
+ setTimeout( function() {
+   //mahendra
+ 
+$('body').addClass('offer_on');
+var endDate = $('#countdown').attr('data-time'); 
+$('#countdown').countdown({date: endDate}, function() {        
+          $('body').removeClass('offer_on');
+        $('.counter_wrap').hide();       
+});  
+ }, 4000 ); //4000  
+
+
+ 
+ $(".close_counter").click(function(){
+$('body').removeClass('offer_on');
+
+ });
+
+  $(".grab_now").click(function(){
+//$('#popup_offer').addClass('active'); 
+ }); 
+
+  $(".pop_close").click(function(){
+$('#popup_offer').removeClass('active'); 
+ });
+ 
+$(".lazy").lazyload();
+ 
+$("#career_oppor").owlCarousel({
+margin:0,
+loop: true, 
+//autoplay: 5000,  
+autoplaySpeed : 1000, 
+paginationSpeed : 400,
+autoplayHoverPause : true, 
+lazyLoad: true,
+dots: false,
+nav: true, 
+items : 1
+}); 
+$("#home_testimonials").owlCarousel({
+margin: 20,
+loop: true, 
+//autoplay: 3000,  
+autoplaySpeed : 300, 
+paginationSpeed : 400,
+autoplayHoverPause : true, 
+lazyLoad: true,
+dots: false,
+nav: true, 
+items : 3,
+responsive:{  
+360:{items:1},
+480:{items:1},
+960:{items:3} }
+}); 
+
+ 
+
+});
+
+</script>
+</body>
+</html>

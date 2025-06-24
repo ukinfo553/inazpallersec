@@ -1,0 +1,6 @@
+[25-Sep-2023 09:27:16 UTC] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/infoswb1/public_html/pages/lp/advanced-penetration-testing-training-in/send-ajax.php on line 40
+[25-Sep-2023 09:27:16 UTC] PHP Warning:  file_get_contents(http://ipinfo.io/122.161.50.229): Failed to open stream: no suitable wrapper could be found in /home/infoswb1/public_html/pages/lp/advanced-penetration-testing-training-in/send-ajax.php on line 40
+[25-Sep-2023 09:27:16 UTC] PHP Warning:  Attempt to read property "country" on null in /home/infoswb1/public_html/pages/lp/advanced-penetration-testing-training-in/send-ajax.php on line 74
+[26-Sep-2023 15:12:39 UTC] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/infoswb1/public_html/pages/lp/advanced-penetration-testing-training-in/send-ajax.php on line 40
+[26-Sep-2023 15:12:39 UTC] PHP Warning:  file_get_contents(http://ipinfo.io/49.36.177.74): Failed to open stream: no suitable wrapper could be found in /home/infoswb1/public_html/pages/lp/advanced-penetration-testing-training-in/send-ajax.php on line 40
+[26-Sep-2023 15:12:39 UTC] PHP Warning:  Attempt to read property "country" on null in /home/infoswb1/public_html/pages/lp/advanced-penetration-testing-training-in/send-ajax.php on line 74
