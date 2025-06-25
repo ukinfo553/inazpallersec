@@ -9,7 +9,7 @@
  */
 function get_brochure_data($id) {
     // Build the API URL with the dynamic ID
-    $url = "http://localhost/infosectrain/api/brochure_byid.php?id=" . $id;
+    $url = "https://infosectrain.com/api/brochure_byid.php?id=" . $id;
 
     // Initialize cURL session
     $ch = curl_init();

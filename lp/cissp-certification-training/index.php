@@ -261,7 +261,7 @@ if ($course_data !== null) {
                                                 <?php
                                                 // If this is the first item and $brochureLink is set, show brochure button
                                                 if ($index === 0 && !empty($brochure)) {
-                                                    echo '<br><a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
+                                                    echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
                                                 }
                                                 ?>
                                             </div>
