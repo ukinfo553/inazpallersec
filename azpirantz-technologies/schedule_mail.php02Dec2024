@@ -1,0 +1,63 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer68/src/Exception.php';
+require 'phpmailer68/src/PHPMailer.php';
+require 'phpmailer68/src/SMTP.php';
+
+
+// Submitted form data
+$fullname    = $_REQUEST['fullname'];
+$email       = $_REQUEST['email'];
+$mobile      = $_REQUEST['mobile'];
+$company     = $_REQUEST['company'];
+$message     = $_REQUEST['message'];
+$pagename    = $_REQUEST['pagename'];
+$cdate       = date('d-M-Y');
+
+$subject     = "Schedule A Free Call ".$pagename."[".$cdate."]";
+$mailbody    = '<table width="100%" border="0">
+			  		<tr><td>Name:&nbsp;</td><td>'.$fullname.'</td></tr>
+			  		<tr><td>Email&nbsp;</td><td>'.$email.'</td></tr>
+			  		<tr><td>Mobile&nbsp;</td><td>'.$mobile.'</td></tr>
+			  		<tr><td>Company&nbsp;</td><td>'.$company.'</td></tr>
+			  		<tr><td>Message&nbsp;</td><td>'.$message.'</td></tr>
+			  		<tr><td>PageName&nbsp;</td><td>'.$pagename.'</td></tr>
+				</table>';
+			
+$email_userto = "tabir.a@infosectrain.com";
+$mail2 = new PHPMailer(TRUE); // create a new object
+$mail2->IsSMTP(); // enable SMTP
+$mail2->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+$mail2->SMTPAuth = true; // authentication enabled
+$mail2->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+$mail2->Host = "smtp.gmail.com";
+//$mail2->Host = "smtp.gmail.com";
+//$mail2->Port = 465; // or 587 
+$mail2->Port = 465; // or 587
+$mail2->IsHTML(true);
+$mail2->Username = "noreply@infosectrain.com";
+$mail2->Password = 'Ma##w0679!';
+$mail2->SetFrom("noreply@infosectrain.com", 'Infosec Train');
+
+//$mail2->AddAttachment($email_userattach);
+$mail2->Subject = $subject;
+$mail2->Body    = $mailbody; 
+$mail2->AddAddress($email_userto); 
+//$mail2->AddBCC('anas@infosectrain.com');
+//$mail2->AddReplyTo("noreply@infosectrain.com", 'Infosec Train');
+
+
+if($mail2->Send()){
+        $status = 'ok';
+    }else{
+	    $mailinfo = "Mailer Error: " . $mail2->ErrorInfo;
+        $status = 'err';
+    }
+
+
+?>
+
+
+

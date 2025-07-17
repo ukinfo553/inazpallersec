@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Banner</title>
+
+  <!-- Include Tippy.js CSS and JS -->
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+
+  <style>
+    /* Styling for the banner */
+    .banner {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Image Styling */
+    .image {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Point Style */
+    .point {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Optional: Add animation effect for points */
+    .point {
+      transition: transform 0.3s ease;
+    }
+
+    .pppp{
+      max-width: 100%;
+    }
+    .point:hover {
+      transform: scale(1.5);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="banner">
+    <img src="image/banner.jpg" alt="Banner Image" class="image">
+
+    <!-- Tooltip points -->
+    <div class="point" id="point-1" style="top: 30%; left: 40%;" data-tooltip="Product 1 details"> </div>
+    <div class="point" id="point-2" style="top: 60%; left: 60%;" data-tooltip="Product 2 details"> </div>
+  </div>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize Tippy.js for product tooltips
+        tippy('.point', {
+            content: function(reference) {
+                // Creating the product card inside the tooltip
+                const card = document.createElement('div');
+                card.classList.add('product-card');
+
+                // Example product content
+                const productImage = document.createElement('img');
+                productImage.src = 'image/banner.jpg'; // Placeholder image
+                productImage.className = 'pppp';
+                const productTitle = document.createElement('h4');
+                productTitle.textContent = reference.getAttribute('data-tooltip');
+                const productDescription = document.createElement('p');
+                productDescription.textContent = 'This is a brief description of the product.';
+                const productPrice = document.createElement('p');
+                productPrice.classList.add('price');
+                productPrice.textContent = '$49.99';
+
+                // Append the content to the card
+                card.appendChild(productImage);
+                card.appendChild(productTitle);
+                card.appendChild(productDescription);
+                card.appendChild(productPrice);
+
+                return card; // This card will be displayed as the tooltip content
+            },
+            placement: 'top', // Positioning the tooltip above the point
+            animation: 'scale', // Animation for the tooltip
+            arrow: true, // Tooltip with an arrow pointing to the point
+            theme: 'light-border', // Light theme for the tooltip
+        });
+    });
+  </script>
+
+</body>
+
+</html>

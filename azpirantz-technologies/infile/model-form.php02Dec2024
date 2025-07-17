@@ -1,0 +1,147 @@
+<style>
+/* Full-screen red background (overlay) */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #080808ba;
+      /* Red with opacity */
+      display: none;
+      /* Hidden by default */
+      z-index: 999;
+      /* Ensure it's below the modal */
+    }
+
+    /* Modal background and positioning */
+    dialog {
+      padding: 20px;
+      border: none;
+      width: 800px;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      /* Initially invisible */
+      transform: scale(0.8);
+      /* Start scaled down */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      /* Center the modal */
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      /* Add transition for smooth opening */
+      z-index: 1000;
+      /* Ensure it's above other content */
+    }
+
+    dialog[open] {
+      opacity: 1;
+      /* Fully visible when open */
+      transform: translate(-50%, -50%) scale(1);
+      /* Normal size, centered */
+    }
+
+    .modal-content {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    input[type="hidden"] {
+      display: none;
+    }
+
+    #closeModalBtn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 35px;
+      height: 35px;
+      border-radius: 35px;
+      text-align: center;
+      vertical-align: middle;
+      padding: 0;
+      font-size: 16px;
+      z-index: 9999;
+      transform: translate(0);
+      margin: 16px;
+      background: var(--red);
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- Red background overlay -->
+  <div class="overlay" id="redOverlay"></div>
+
+  <!-- Modal dialog -->
+  <dialog id="myModal">
+
+    <button id="closeModalBtn">x</button>
+    <div class="modal-header f-nunito fs-28 fw-bold text-dark mb-4 text-capitalize">
+      <!-- Dynamic Header Text Here -->
+    </div>
+    <div class="modal-content">
+      <form action="" class="d-flex flex-column align-items-start gap-3">
+        <input type="text" name="" id="" placeholder="Full Name">
+        <div class="w-100 d-flex flex-column flex-md-row gap-3">
+          <input type="email" name="" id="" placeholder="Email">
+          <input type="number" name="" id="" placeholder="Mobile">
+        </div>
+        <input type="text" name="" id="" placeholder="Your Company">
+        <div class="w-100 d-flex flex-column flex-md-row gap-3">
+          <select name="" id="">
+            <option value="Purpose of Contact">Purpose of Contact</option>
+          </select>
+          <select name="" id="">
+            <option value="Purpose of Contact">Country</option>
+          </select>
+        </div>
+        <textarea name="" rows="4" id="" placeholder="Message"></textarea>
+
+        <!-- Hidden Inputs to store button name and page URL -->
+        <input type="hidden" id="buttonName" name="buttonName">
+        <input type="hidden" id="pageURL" name="pageURL">
+        <button type="submit" class="button">Send Message</button>
+      </form>
+    </div>
+  </dialog>
+
+  <script>
+    // Get the modal and close button
+    const modal = document.getElementById('myModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const body = document.body;  // Reference to the body element
+    const overlay = document.getElementById('redOverlay'); // The overlay div
+
+    // Get all buttons with class 'model-form'
+    const buttons = document.querySelectorAll('.model-form');
+
+    // Function to open modal and set dynamic content
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Set the modal header text to the button's 'data-modal-header' value
+        const headerText = button.getAttribute('data-modal-header');
+        document.querySelector('.modal-header').innerText = headerText;
+
+        // Set the hidden input fields with button name and current page URL
+        document.getElementById('buttonName').value = button.innerText; // Button text as name
+        document.getElementById('pageURL').value = window.location.href; // Current page URL
+
+        // Show the red background overlay and modal
+        overlay.style.display = 'block'; // Show the red overlay
+        modal.showModal(); // Show the modal
+      });
+    });
+
+    // Close the modal when the close button is clicked
+    closeModalBtn.addEventListener('click', () => {
+      modal.close(); // Close the dialog box
+
+      // Hide the red background overlay when modal is closed
+      overlay.style.display = 'none'; // Hide the red overlay
+    });
+  </script>

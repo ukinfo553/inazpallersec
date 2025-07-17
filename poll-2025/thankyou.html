@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+  </style>
+</head>
+
+<body>
+
+  <div class="thank-you-container">
+    <h1>Thank you for your response!</h1>
+    <p>Your feedback is very important to us, and it helps us improve!</p>
+
+    <div class="feedback-details">
+      <h2>Your Submitted Feedback:</h2>
+      <p><strong>What do you think I should change about myself?</strong><br>
+        <?php echo htmlspecialchars($_SESSION['changeAboutMe']); ?>
+      </p>
+      <p><strong>What do you think I should continue doing?</strong><br>
+        <?php echo htmlspecialchars($_SESSION['continueDoing']); ?>
+      </p>
+      <p><strong>What new things should I start focusing on in 2025?</strong><br>
+        <?php echo htmlspecialchars($_SESSION['focusOn2025']); ?>
+      </p>
+      <p><strong>Is there anything you dislike about me?</strong><br>
+        <?php echo htmlspecialchars($_SESSION['dislikes']); ?>
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

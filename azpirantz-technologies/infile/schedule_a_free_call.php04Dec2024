@@ -1,0 +1,133 @@
+
+<script>
+function check_email(str) {
+event.preventDefault();
+var  fullname  = document.getElementById("fullname").value;
+var  email     = document.getElementById("email").value;
+var  mobile    = document.getElementById("mobile").value;
+var  company   = document.getElementById("company").value;
+var  message   = document.getElementById("message").value;
+var  pagename  = document.getElementById("pagename").value;
+
+const fullnameError = document.getElementById("fullname-error");
+const emailError    = document.getElementById("email-error");
+const mobileError   = document.getElementById("mobile-error");
+
+fullnameError.textContent = "";
+emailError.textContent    = "";
+mobileError.textContent   = "";
+
+let isValid = true;
+
+if (fullname === "" || /\d/.test(fullname))
+    {
+        fullnameError.textContent = "Please enter your name properly.";
+        isValid = false;
+    }
+
+if (email === "" || !email.includes("@"))
+	{
+        emailError.textContent = "Please enter a valid email address.";
+        isValid = false;
+    }
+
+if (mobile === "" || mobile.length < 6)
+	{
+        mobileError.textContent = "Please enter a mobile";
+        isValid = false;
+    }
+
+if (isValid)
+ 	{
+/*		if (str.length == 0)
+		{
+    	document.getElementById("statusMsg").innerHTML = "";
+    	return;
+  		}
+		else
+		{
+    	var xmlhttp = new XMLHttpRequest();
+    	xmlhttp.onreadystatechange = function() {
+      		if (this.readyState == 4 && this.status == 200)
+			 {
+        		document.getElementById("statusMsg").innerHTML = this.responseText;
+      		}
+    	};
+    	xmlhttp.open("GET", "schedule_mail.php?email=" + email +"&fullname=" + fullname+"&mobile=" + mobile+"&company=" + company+"&pagename=" + pagename+"&message=" + message, true);
+    	xmlhttp.send();}*/
+
+		$.ajax({
+            type:'POST',
+            url:'schedule_mail.php',
+            data: {
+                contactFrmSubmit: 1,
+                email: email,
+				fullname: fullname,
+				mobile: mobile,
+                company: company,
+				pagename: pagename,
+				message: message
+
+            },
+            beforeSend: function () {
+                $('.submitBtn').attr("disabled","disabled");
+
+                //$('.modal-body').css('opacity', '.5');
+            },
+            success:function(msg){
+                if(msg == 'ok'){
+                    //$('#inputName').val('');
+                    //$('#inputEmail').val('');
+                    //$('#inputMessage').val('');
+                    //$('.statusMsg').html('<span style="color:green;">Thanks for contacting us, we\'ll get back to you soon.</span>');
+                }else{
+                    //$('.statusMsg').html('<span style="color:red;">Some problem occurred, please try again.</span>');
+					$('.statusMsg').html('<span style="color:var(--green);font-family:var(--nunito);font-szie:14px;text-align:center;">Thanks for contacting us, we\'ll get back to you soon.</span>');
+					//window.location.href = "https://www.azpirantz.com/registration/reg2/calendar_list_advance.php";
+                }
+                $('.submitBtn').removeAttr("disabled");
+                //$('.modal-body').css('opacity', '');
+            }
+        });
+
+
+
+  }
+}
+</script>
+
+<div class="col-12 schedule-free-call mt-4">
+          <div class="item border-radius-10">
+
+            <!--image start-->
+            <img src="assets/image/service/man.png" alt="" class="left-image">
+            <!--image end-->
+
+            <!--form start-->
+            <form role="form" enctype="multipart/form-data" method="post" class="d-flex flex-column gap-3" id="myForm">
+              <div class="fs-28 f-nunito text-white text-center fw-bold">
+                Schedule A Free Call
+              </div>
+              <div class="mail-status" id="mail-status" style=" color:#FFFFFF;"></div>
+              <div class="d-flex flex-wrap flex-md-nowrap gap-3">
+                <div><input type="text" placeholder="full name*" name="fullname" id="fullname"><span id="fullname-error" class="error"></span></div>
+                <div><input type="email" placeholder="email*" name="email" id="email" ><span id="email-error" class="error"></span></div>
+              </div>
+              <div class="d-flex flex-wrap flex-md-nowrap gap-3">
+                <div><input type="number" placeholder="Mobile" name="mobile" id="mobile" ><span id="mobile-error" class="error"></span></div>
+                <div><input type="text" placeholder="your company" name="company" id="company"></div>
+              </div>
+              <div class="d-flex flex-wrap flex-md-nowrap gap-3">
+                <textarea name="message" id="message" placeholder="message"></textarea>
+                <input type="hidden" name="pagename" id="pagename" value="<?php echo $currentpage;?>">
+              </div>
+              <button type="submit" class="button m-auto submitBtn" value="Submit" onClick="check_email(this.value)" name="update_opps">Send Message</button>
+              <div class="statusMsg"></div>
+            </form>
+            <!--form end-->
+
+            <!--image start-->
+            <img src="assets/image/service/female.png" alt="" class="right-image">
+            <!--image end-->
+          </div>
+        </div>

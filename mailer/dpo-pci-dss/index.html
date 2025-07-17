@@ -1,0 +1,690 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="date=no" />
+	<meta name="format-detection" content="address=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700italic,700' rel='stylesheet'
+		type='text/css' />
+	<title>dpo-pci-dss</title>
+
+
+	<style type="text/css" media="screen">
+		[style*="SSP"] {
+			font-family: 'Source Sans Pro', Arial, sans-serif !important
+		}
+
+		/* Linked Styles */
+		body {
+			padding: 0 !important;
+			margin: 0 !important;
+			display: block !important;
+			min-width: 100% !important;
+			width: 100% !important;
+			background: #55544d;
+			-webkit-text-size-adjust: none
+		}
+
+		a {
+			color: #949490;
+			text-decoration: underline
+		}
+
+		p {
+			padding: 0 !important;
+			margin: 0 !important
+		}
+
+		img {
+			-ms-interpolation-mode: bicubic;
+			/* Allow smoother rendering of resized image in Internet Explorer */
+		}
+
+		/* Mobile styles */
+		@media only screen and (max-device-width: 480px),
+		only screen and (max-width: 480px) {
+			div[class='mobile-br-1'] {
+				height: 1px !important;
+				display: block !important;
+				background: #e9e8e2 !important;
+			}
+
+			div[class='mobile-br-5'] {
+				height: 5px !important;
+			}
+
+			div[class='mobile-br-10'] {
+				height: 10px !important;
+			}
+
+			div[class='mobile-br-15'] {
+				height: 15px !important;
+			}
+
+			div[class='mobile-br-20'] {
+				height: 20px !important;
+			}
+
+			div[class='mobile-br-25'] {
+				height: 25px !important;
+			}
+
+			th[class='m-td'],
+			td[class='m-td'],
+			div[class='hide-for-mobile'],
+			span[class='hide-for-mobile'] {
+				display: none !important;
+				width: 0 !important;
+				height: 0 !important;
+				font-size: 0 !important;
+				line-height: 0 !important;
+				min-height: 0 !important;
+			}
+
+			span[class='mobile-block'] {
+				display: block !important;
+			}
+
+			div[class='text-footer'],
+			td[class='text-footer'],
+			div[class='text-footer-r'],
+			td[class='text-footer-r'],
+			div[class='img-m-center'] {
+				text-align: center !important;
+			}
+
+			div[class='fluid-img'] img,
+			td[class='fluid-img'] img {
+				width: 100% !important;
+				max-width: 100% !important;
+				height: auto !important;
+			}
+
+			table[class='mobile-shell'] {
+				width: 100% !important;
+				min-width: 100% !important;
+			}
+
+			table[class='center'] {
+				margin: 0 auto;
+			}
+
+			td[class='column'],
+			th[class='column'] {
+				float: left !important;
+				width: 100% !important;
+				display: block !important;
+			}
+
+			td[class='td'] {
+				width: 100% !important;
+				min-width: 100% !important;
+			}
+
+			td[class='bg'] {
+				background-size: cover !important;
+				background-repeat: no-repeat !important;
+				background-position: center center !important;
+			}
+
+			td[class='content-spacing'] {
+				width: 15px !important;
+			}
+		}
+	</style>
+</head>
+
+<body class="body"
+	style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#55544d; -webkit-text-size-adjust:none">
+	
+	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f1">
+		<tr>
+			<td align="center" valign="top">
+				<table width="650" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
+					<tr>
+						<td class="td"
+							style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; Margin:0">
+							<!-- Header -->
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										<!-- Header Inner -->
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td>
+													
+
+													<!-- Logo + Date + Links -->
+													<table width="100%" border="0" cellspacing="0" cellpadding="0"
+														bgcolor="#4a4a44">
+														<tr>
+															<td class="content-spacing"
+																style="font-size:0pt; line-height:0pt; text-align:left"
+																width="30"></td>
+															<td>
+																<table width="100%" border="0" cellspacing="0"
+																	cellpadding="0" class="spacer"
+																	style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																	<tr>
+																		<td height="16" class="spacer"
+																			style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																			&nbsp;</td>
+																	</tr>
+																</table>
+
+																<table width="100%" border="0" cellspacing="0"
+																	cellpadding="0">
+																	<tr>
+																		<!-- Column -->
+																		<th class="column"
+																			style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; Margin:0"
+																			width="202" valign="top">
+																			<table width="100%" border="0"
+																				cellspacing="0" cellpadding="0">
+																				<tr>
+																					<td class="img"
+																						style="font-size:0pt; line-height:0pt; text-align:left">
+																						<!-- Logo -->
+																						<div class="img-m-center"
+																							style="font-size:0pt; line-height:0pt; text-align:left">
+																							<a href="https://www.infosectrain.com/"
+																								target="_blank"><img
+																									src="https://www.infosectrain.com/pages/mailer/rsa-archer-training/images/logo.png"
+																									border="0"
+																									width="203"
+																									height="20"
+																									alt="" /></a>
+																						</div>
+																						<!-- END Logo -->
+																						<div style="font-size:0pt; line-height:0pt;"
+																							class="mobile-br-20"></div>
+
+																					</td>
+																				</tr>
+																			</table>
+																		</th>
+																		<!-- END Column -->
+
+																		<!-- Column -->
+																		<th class="column"
+																			style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; Margin:0"
+																			valign="top">
+																			<table width="100%" border="0"
+																				cellspacing="0" cellpadding="0">
+																				<tr>
+																					<td align="right">
+																						<!-- Date + Links -->
+																						<table class="center" border="0"
+																							cellspacing="0"
+																							cellpadding="0">
+																							<tr>
+																								<td class="text-nav"
+																									style="letter-spacing: .5px; color:#ffffff; font-family:Arial,sans-serif, 'SSP'; font-size:13px; line-height:16px; text-align:left; text-transform:uppercase">
+																									<a href="mailto:sales@infosectrain.com"
+																										title=""
+																										class="link-white"
+																										style="color:#ffffff; text-decoration:none">sales@infosectrain.com</a>
+																								</td>
+																								<td class="img"
+																									style="font-size:0pt; line-height:0pt; text-align:left"
+																									width="12"></td>
+																								<td width="1"
+																									class="img"
+																									style="font-size:0pt; line-height:0pt; text-align:left">
+																									<img src="https://www.infosectrain.com/pages/mailer/rsa-archer-training/images/nav_separator.jpg"
+																										border="0"
+																										width="1"
+																										height="25"
+																										alt="" />
+																								</td>
+																								<td class="img"
+																									style="font-size:0pt; line-height:0pt; text-align:left"
+																									width="12"></td>
+																								<td class="text-nav"
+																									style="letter-spacing: .5px; color:#ffffff; font-family:Arial,sans-serif, 'SSP'; font-size:13px; line-height:16px; text-align:left; text-transform:uppercase">
+																									
+																									<a href="tel:1800-843-7890"
+																										title=""
+																										class="link-white"
+																										style="color:#ffffff; text-decoration:none">1800-843-7890 (IND)</a>
+																								</td>
+																							</tr>
+																						</table>
+																						<!-- END Date + Links -->
+																					</td>
+																				</tr>
+																			</table>
+																		</th>
+																		<!-- END Column -->
+																	</tr>
+																</table>
+																<table width="100%" border="0" cellspacing="0"
+																	cellpadding="0" class="spacer"
+																	style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																	<tr>
+																		<td height="20" class="spacer"
+																			style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																			&nbsp;</td>
+																	</tr>
+																</table>
+
+															</td>
+															<td class="content-spacing"
+																style="font-size:0pt; line-height:0pt; text-align:left"
+																width="30"></td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+										<!-- END Header Inner -->
+									</td>
+								</tr>
+							</table>
+							<!-- END Header -->
+
+							<!-- Main -->
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+								<tr>
+									<td>
+										<!-- Section 1 -->
+										<div class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left">
+											<img src="https://www.infosectrain.com//pages/mailer/dpo-pci-dss/images/banner.jpg" border="0"
+													height="300" alt="DPO" />
+										</div>
+										<!-- END Section 1 -->
+
+										<!-- Section 2 -->
+										<table width="100%" border="0" cellspacing="0" cellpadding="0"
+											>
+											<tr>
+												<td class="content-spacing"
+													style="font-size:0pt; line-height:0pt; text-align:left" width="30">
+												</td>
+												<td>
+													<table width="100%" border="0" cellspacing="0" cellpadding="0"
+														class="spacer"
+														style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+														<tr>
+															<td height="30" class="spacer"
+																style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																&nbsp;</td>
+														</tr>
+													</table>
+
+													<div class="h2-white-center"
+														style="letter-spacing: 1px; font-weight: 600; color:#4a4a44; font-family:Arial,sans-serif, 'SSP'; font-weight:bold; font-size:20px; line-height:32px;">
+														Hi <span style="color: #F70035;">Name</span>
+													</div>
+													<table width="100%" border="0" cellspacing="0" cellpadding="0"
+														class="spacer"
+														style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+														<tr>
+															<td height="8" class="spacer"
+																style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																&nbsp;</td>
+														</tr>
+													</table>
+													<div class="text-white-center"
+														style="letter-spacing: .5px; color:#4a4a44; font-family:Arial,sans-serif, 'SSP'; font-size:17px; line-height:24px;padding-bottom: 10px;">
+														Greetings from InfosecTrain.
+													</div>
+													<div class="text-white-center"
+														style="letter-spacing: .5px; color:#4a4a44; font-family:Arial,sans-serif, 'SSP'; font-size:17px; line-height:24px;">
+														Forget your monsoon woes and grab these courses at never-before prices!
+													</div>
+													<table width="100%" border="0" cellspacing="0" cellpadding="0"
+														class="spacer"
+														style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+														<tr>
+															<td height="15" class="spacer"
+																style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																&nbsp;</td>
+														</tr>
+													</table>
+
+												</td>
+												<td class="content-spacing"
+													style="font-size:0pt; line-height:0pt; text-align:left" width="30">
+												</td>
+											</tr>
+										</table>
+										<!-- END Section 2 -->
+
+										<!-- Section 7 -->
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td class="content-spacing"
+													style="font-size:0pt; line-height:0pt; text-align:left" width="30">
+												</td>
+												<td>
+
+													<table width="100%" border="0" cellspacing="0" cellpadding="0"
+														class="spacer"
+														style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+														<tr>
+															<td height="30" class="spacer"
+																style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																&nbsp;</td>
+														</tr>
+													</table>
+
+													<div class="h3-center"
+														style="letter-spacing: 1px; font-weight: 600; color:#4a4a44; font-family:Arial,sans-serif, 'SSP'; font-size:24px; line-height:30px; text-align:center">
+														Choose your Course
+													</div>
+													<table width="100%" border="0" cellspacing="0" cellpadding="0"
+														class="spacer"
+														style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+														<tr>
+															<td height="22" class="spacer"
+																style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																&nbsp;</td>
+														</tr>
+													</table>
+
+
+													<table bgcolor="#f5f5f5" width="650" border="0" cellspacing="0"
+														cellpadding="0" align="center" class="wrapper" mc:repeatable
+														mc:variant="Title + Sub title Section"
+														style="table-layout:fixed;">
+														<tr>
+
+															<td class="pad_side">
+																<table width="650" border="0" cellpadding="1"
+																	cellspacing="1"
+																	style="font:normal 12px Arial, Helvetica, sans-serif; color:#454141; text-align:center; line-height:24px; background-color:#afdefa">
+																	<tr>
+																		<td colspan="7"
+																			style="letter-spacing: 1px; font:bold 15px Arial, Helvetica, sans-serif; color:#FFFFFF; text-align:center; line-height:30px; background-color:#44464a">
+																			SCHEDULE
+																		</td>
+																	</tr>
+																	<tr bgcolor="#ededed"
+																		style="font:bold 15px Arial, Helvetica, sans-serif;line-height: 28px;letter-spacing: .5px;">
+																		<td width="210"> Course </td>
+																		<td width="100"> Start Date </td>
+
+																		<td width="100">Price</td>
+																		<td width="110" style="color: #F70035;font-size: 15px;">Offer Price</td>
+																		<td> Save a Seat</td>
+																	</tr>
+
+																	<tr bgcolor="#f6f6f6">
+
+																		<td height="35"
+																			style="font-size: 13px;letter-spacing: .5px;text-align: left;padding: 3px 8px;">
+																			Data Protection Officer  <strong style="color: #F70035;">(DPO)</strong> Training</td>
+																		<td
+																			style="font-size: 13px;letter-spacing: .5px;">
+																			15 Jul 2023</td>
+																		<td
+																			style="font-size: 13px;letter-spacing: .5px;">
+																			INR 18000</td>
+																		<td
+																			style="font-size: 13px;letter-spacing: .5px;color: #F70035;">
+																			<strong>INR 8999</strong></td>
+
+																		<td align="center"
+																			style="font-size: 13px;letter-spacing: .5px;">
+																			<div
+																				style="background-color:#ff5d00; width:80px; height:25px; font:normal 12px Arial, Helvetica, sans-serif; ">
+																				<a href="https://www.infosectrain.com/courses/data-protection-officer-training/"
+																					target="_blank"
+																					style="line-height:25px; padding:5px 0; color:#FFFFFF; text-decoration:none">Enroll
+																					Now</a>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr bgcolor="#f6f6f6">
+
+																		<td height="35"
+																			style="font-size: 13px;letter-spacing: .5px;text-align: left;padding: 3px 8px;">
+																			Payment Card Industry Data Security Standard <strong style="color: #F70035;">(PCI/DSS)</strong>
+																			Training
+																		</td>
+																		<td
+																			style="font-size: 13px;letter-spacing: .5px;">
+																			15 Jul 2023</td>
+																		<td
+																			style="font-size: 13px;letter-spacing: .5px;">
+																			INR 24000</td>
+																		<td
+																			style="font-size: 13px;letter-spacing: .5px;color: #F70035;">
+																			<strong>INR 8999</strong></td>
+
+																		<td align="center"
+																			style="font-size: 13px;letter-spacing: .5px;">
+																			<div
+																				style="background-color:#ff5d00; width:80px; height:25px; font:normal 12px Arial, Helvetica, sans-serif; ">
+																				<a href="https://www.infosectrain.com/courses/pci-data-security-standard-training-course/"
+																					target="_blank"
+																					style="line-height:25px; padding:5px 0; color:#FFFFFF; text-decoration:none">Enroll
+																					Now</a>
+																			</div>
+																		</td>
+																	</tr>
+
+
+																</table>
+
+
+																<table width="100%" border="0" cellspacing="0"
+																	cellpadding="0" class="spacer"
+																	style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																	<tr>
+																		<td height="30" class="spacer"
+																			style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																			&nbsp;</td>
+																	</tr>
+																</table>
+
+																<table width="100%" border="0" bgcolor="#ffffff"
+																	cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td class="content-spacing"
+																			style="font-size:0pt; line-height:0pt; text-align:left"
+																			width="30"></td>
+																		<td>
+																			<!-- Event -->
+
+																			<!-- END Button Transparent -->
+																		</td>
+																		<td class="content-spacing"
+																			style="font-size:0pt; line-height:0pt; text-align:left"
+																			width="30"></td>
+																	</tr>
+																</table>
+
+
+
+
+
+
+
+
+
+																<!-- END Button Transparent -->
+															</td>
+															
+														</tr>
+													</table>
+
+
+
+
+												</td>
+											</tr>
+										</table>
+										<!-- END Main -->
+
+										<!-- Section 2 -->
+										<table width="100%" border="0" cellspacing="0" cellpadding="0"
+											>
+											<tr>
+												<td class="content-spacing"
+													style="font-size:0pt; line-height:0pt; text-align:left" width="30">
+												</td>
+												<td>
+													<table width="100%" border="0" cellspacing="0" cellpadding="0"
+														class="spacer"
+														style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+														<tr>
+															<td height="30" class="spacer"
+																style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																&nbsp;</td>
+														</tr>
+													</table>
+
+													<div class="text-white-center"
+														style="letter-spacing: .5px; color:#4a4a44a8; font-family:Arial,sans-serif, 'SSP'; font-size:15px; line-height:24px;">
+														*Limited Period Offer
+													</div>
+													<table width="100%" border="0" cellspacing="0" cellpadding="0"
+														class="spacer"
+														style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+														<tr>
+															<td height="15" class="spacer"
+																style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																&nbsp;</td>
+														</tr>
+													</table>
+
+												</td>
+												<td class="content-spacing"
+													style="font-size:0pt; line-height:0pt; text-align:left" width="30">
+												</td>
+											</tr>
+										</table>
+										<!-- END Section 2 -->
+
+										<!-- Footer -->
+										<table width="100%" border="0" cellspacing="0" cellpadding="0"
+											bgcolor="#363731">
+											<tr>
+												<td>
+													<!-- Footer Inner -->
+													<table width="100%" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td class="content-spacing"
+																style="font-size:0pt; line-height:0pt; text-align:left"
+																width="30"></td>
+															<td>
+																<table width="100%" border="0" cellspacing="0"
+																	cellpadding="0" class="spacer"
+																	style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																	<tr>
+																		<td height="30" class="spacer"
+																			style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																			&nbsp;</td>
+																	</tr>
+																</table>
+
+																<table width="100%" border="0" cellspacing="0"
+																	cellpadding="0">
+																	<tr>
+																		<!-- Column -->
+																		<th class="column"
+																			style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; Margin:0"
+																			width="600" valign="top">
+																			<table width="100%" border="0"
+																				cellspacing="0" cellpadding="0">
+																				<tr>
+																					<td class="img"
+																						style="font-size:0pt; line-height:0pt; text-align:left">
+																						<!-- Footer Logo -->
+																						<div class="img-m-center"
+																							style="font-size:0pt; line-height:0pt; text-align:left">
+																							<a href="https://www.infosectrain.com/"
+																								target="_blank"><img
+																									src="https://www.infosectrain.com/pages/mailer/rsa-archer-training/images/logo.png"
+																									border="0"
+																									width="203"
+																									height="20"
+																									alt="" /></a>
+																						</div>
+																						<!-- END Footer Logo -->
+																						<table width="100%" border="0"
+																							cellspacing="0"
+																							cellpadding="0"
+																							class="spacer"
+																							style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																							<tr>
+																								<td height="20"
+																									class="spacer"
+																									style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																									&nbsp;</td>
+																							</tr>
+																						</table>
+
+																					</td>
+																				</tr>
+																			</table>
+																		</th>
+																		<!-- END Column -->
+																	</tr>
+																</table>
+																<table width="100%" border="0" cellspacing="0"
+																	cellpadding="0">
+																	<tr>
+																		<!-- Column -->
+																		<th class="column"
+																			style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; Margin:0"
+																			width="600" valign="top">
+																			<table width="100%" border="0"
+																				cellspacing="0" cellpadding="0">
+																				<tr>
+																					<td>
+																						<!-- Footer Copyright -->
+																						<div class="text-footer"
+																							style="color:#a0a09a; font-family:Arial,sans-serif, 'SSP'; font-size:12px; line-height:16px; text-align:left">
+																							COPYRIGHT © 2023 -
+																							INFOSECTRAIN. ALL RIGHTS
+																							RESERVED. </div>
+																						<!-- END Footer Copyright -->
+																					</td>
+																				</tr>
+																			</table>
+																		</th>
+																		<!-- END Column -->
+																	</tr>
+																</table>
+																<table width="100%" border="0" cellspacing="0"
+																	cellpadding="0" class="spacer"
+																	style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																	<tr>
+																		<td height="20" class="spacer"
+																			style="font-size:0pt; line-height:0pt; text-align:center; width:100%; min-width:100%">
+																			&nbsp;</td>
+																	</tr>
+																</table>
+
+
+															</td>
+															<td class="content-spacing"
+																style="font-size:0pt; line-height:0pt; text-align:left"
+																width="30"></td>
+														</tr>
+													</table>
+
+												</td>
+											</tr>
+										</table>
+
+										</div>
+										<!-- END Footer -->
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+</body>
+
+</html>

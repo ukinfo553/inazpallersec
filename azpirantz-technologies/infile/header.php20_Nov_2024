@@ -1,0 +1,63 @@
+<!-- site-navbar start -->
+<nav class="navbar-area">
+      <div class="container">
+        <nav class="site-navbar d-flex justify-content-between py-3 py-md-0">
+          <!-- site logo -->
+          <a href="#" class="site-logo">
+            <img src="assets/image/logo.png" width="200" alt="">
+          </a>
+
+          <!-- site menu/nav -->
+          <ul class="m-0 p-0 d-flex menu">
+
+            <li><a href="#" class="d-block py-2 px-4">home</a></li>
+            <li><a href="about" class="d-block py-2 px-4">about</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="d-block py-2 px-4">Service</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown"><a href="#" class="dropdown-item py-2 px-4">Information and Cyber Security</a>
+                	<ul class="subdropdown-menu">
+                        <li><a href="information-security-management-system-isms" class="dropdown-item py-2 px-4">Information Security Management System</a></li>
+                        <li><a href="hipaa-compliance-consulting-services" class="dropdown-item py-2 px-4">HIPAA</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-item py-2 px-4">Data Privacy</a>
+                  <ul class="subdropdown-menu">
+                    <li><a href="privacy-information-management-system" class="dropdown-item py-2 px-4">PIMS</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-item py-2 px-4">Business Continuity</a>
+                  <ul class="subdropdown-menu">
+                    <li><a href="business-continuity-management-system" class="dropdown-item py-2 px-4">BCMS</a></li>
+                  </ul>
+                </li>
+
+
+                <li><a href="risk-management" class="dropdown-item py-2 px-4">Risk Management</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-item py-2 px-4">Managed Services</a>
+                  <ul class="subdropdown-menu">
+                    <li><a href="virtual-ciso-advisory-services" class="dropdown-item py-2 px-4">vCISO</a></li>
+                    <li><a href="virtual-data-protection-officer-services" class="dropdown-item py-2 px-4">vDPO</a></li>
+                  </ul>
+                </li>
+
+
+              </ul>
+            </li>
+
+            <li><a href="contact" class="d-block py-2 px-4">contact</a></li>
+          </ul>
+
+          <!-- nav-toggler for mobile version only -->
+          <button class="nav-toggler">
+            <!--menu baar icon -->
+            <span></span>
+            <!-- menu baar icon end -->
+          </button>
+        </nav>
+      </div>
+    </nav><!-- navbar-area end -->

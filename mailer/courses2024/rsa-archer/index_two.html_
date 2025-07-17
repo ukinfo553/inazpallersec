@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--/ main table start /-->
+    <table cellpadding="0" cellspacing="0" border="0" width="100%"
+        style="width: 100%;border: none;background: #f0f0f0;">
+        <tbody>
+            <tr>
+                <td>
+                    <!--/ table width 650 /-->
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="650" bgcolor="#ffffff"
+                        style="width: 650px;border: none;display: block;margin: auto;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <!--/ logo sec start /-->
+                                    <table align="center" align="center" border="0" cellpadding="0" cellspacing="0" width="650"
+                                        bgcolor="#ffffff" style="width: 650px;border: none;">
+                                        <tbody>
+                                            <tr>
+                                                <td height="27" colspan="2" style="font-size: 27px;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" width="100%" style="width: 100%;text-align: center;">
+                                                    <!--/ logo sec start /-->
+                                                    <a href="https://www.infosectrain.com/courses/rsa-archer-training/" target="_blank">
+                                                        <img src="https://www.infosectrain.com/pages/mailer/courses2024/rsa-archer/img/logo.png" width="211" height="22" alt="InfosecTrain"
+                                                            style="width: 211px;height: 22px;">
+                                                    </a>
+                                                    <!--/ logo sec end /-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="27" colspan="2" style="font-size: 27px;">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--/ logo sec end /-->
+                                    <!--/ banner sec start /-->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="650"
+                                        bgcolor="#ffffff" style="width: 650px;border: none;">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center" width="100%" style="width: 100%;text-align: center;">
+                                                    <!--/ logo sec start /-->
+                                                    <a href="https://www.infosectrain.com/courses/rsa-archer-training/" target="_blank">
+                                                        <img src="https://www.infosectrain.com/pages/mailer/courses2024/rsa-archer/img/banner_two.jpg" width="650" height="300"
+                                                            alt="InfosecTrain" style="width: 650px;height: 300px;">
+                                                    </a>
+                                                    <!--/ logo sec end /-->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--/ banner sec end /-->
+                                    <!--/ content sec start /-->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="650"
+                                        bgcolor="#ffffff" style="width: 650px;border: none;">
+                                        <tbody>
+                                            <tr>
+                                                <td height="27" style="font-size: 27px;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" width="100%"
+                                                    style="color:#E50914;text-align: center;font-size: 20px;font-style: normal;font-weight: 700;line-height: 26px;font-family: roboto, 'helvetica neue', helvetica, arial, sans-serif;">
+                                                    RSA Archer Training
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="12" style="font-size: 12px;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" width="100%"
+                                                    style="color:#080808;font-size: 16px;font-style: normal;font-weight: 400;line-height: 26px;font-family: roboto, 'helvetica neue', helvetica, arial, sans-serif;">
+                                                    Designed to help you understand the key concepts and best practices
+                                                    for managing enterprise Governance, Risk Management, and Compliance
+                                                    (GRC).
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="27" style="font-size: 27px;">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--/ content sec end /-->
+                                    <!--/ price sec start /-->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="650"
+                                        bgcolor="#ffffff" style="width: 650px;border: none;">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center" width="100%" style="width: 100%;text-align: center;">
+                                                    <!--/ logo sec start /-->
+                                                    <a href="https://www.infosectrain.com/courses/rsa-archer-training/" target="_blank">
+                                                        <img src="https://www.infosectrain.com/pages/mailer/courses2024/rsa-archer/img/price-two.png" width="601" height="321"
+                                                            alt="InfosecTrain" style="width: 601px;height: 321px;">
+                                                    </a>
+                                                    <!--/ logo sec end /-->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--/ price sec end /-->
+                                    <!--/ date time sec start /-->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="650"
+                                        bgcolor="#ffffff" style="width: 650px;border: none;">
+                                        <tbody>
+                                            <tr>
+                                                <td height="27" style="font-size: 27px;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td height="27"
+                                                    style="color:#E50914;text-align: center;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 0.4px;font-family: roboto, 'helvetica neue', helvetica, arial, sans-serif;">
+                                                    Next Batch
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="12" style="font-size: 12px;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" width="100%" style="width: 100%;text-align: center;">
+                                                    <!--/ logo sec start /-->
+                                                    <img src="https://www.infosectrain.com/pages/mailer/courses2024/rsa-archer/img/date-time.png" width="446" height="38"
+                                                        alt="InfosecTrain" style="width: 446px;height: 38px;">
+                                                    <!--/ logo sec end /-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="27" style="font-size: 27px;">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--/ date time sec end /-->
+                                    <!--/ trainner sec start /-->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="650"
+                                        bgcolor="#ffffff" style="width: 650px;border: none;">
+                                        <tbody>
+                                            <tr>
+                                                <td height="27"
+                                                    style="color:#E50914;text-align: center;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 0.4px;font-family: roboto, 'helvetica neue', helvetica, arial, sans-serif;">
+                                                    Meet Your Trainer
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="12" style="font-size: 12px;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" width="100%" style="width: 100%;text-align: center;">
+                                                    <!--/ logo sec start /-->
+                                                    <img src="https://www.infosectrain.com/pages/mailer/courses2024/rsa-archer/img/trainner-profile.png" width="370" height="160"
+                                                        alt="InfosecTrain" style="width: 370px;height: 160px;">
+                                                    <!--/ logo sec end /-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="27" style="font-size: 27px;">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--/ trainner sec end /-->
+                                    <!--/ highlights sec start /-->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="650"
+                                        bgcolor="#ffffff" style="width: 650px;border: none;">
+                                        <tbody>
+                                            <tr>
+                                                <td height="27"
+                                                    style="color:#E50914;text-align: center;font-size: 20px;font-style: normal;font-weight: 700;line-height: normal;letter-spacing: 0.4px;font-family: roboto, 'helvetica neue', helvetica, arial, sans-serif;">
+                                                    What You Get
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="12" style="font-size: 12px;">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" width="100%" style="width: 100%;text-align: center;">
+                                                    <!--/ logo sec start /-->
+                                                    <img src="https://www.infosectrain.com/pages/mailer/courses2024/rsa-archer/img/highlights.png" width="601" height="274"
+                                                        alt="InfosecTrain" style="width: 601px;height: 274px;">
+                                                    <!--/ logo sec end /-->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="27" style="font-size: 27px;">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--/ highlights sec end /-->
+                                    <!--/ free demo sec start /-->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="650"
+                                        bgcolor="#ffffff" style="width: 650px;border: none;">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center" width="100%"
+                                                    style="width: 100%;text-align: center;padding: 23px 18px;background: #feeeee;border-radius: 10px;font-family: roboto,'helvetica neue',helvetica,arial,sans-serif;line-height: 26px;">
+                                                    <strong style="color: #E50914;">FREE DEMO</strong> - Get a free 30-minute session with our expert to discuss
+                                                    your learning goals and
+                                                    get firsthand experience of RSA Archer Training Course.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--/ free demo sec end /-->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--/ table width 650 /-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--/ main table end /-->
+</body>
+
+</html>

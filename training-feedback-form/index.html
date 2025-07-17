@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="content-sec">
+            <h1>Training Feedback Form</h1>
+            <h3>Certified Information Systems Security Professional (CISSP)</h3>
+            <p>We value your feedback! Please take a moment to share your experience with us.</p>
+            <div>
+                Trainer: <span>Sanyam</span>; Sales Person: <span>Mehak Jain</span>; Course Date: <span>24 June,
+                    2024</span>
+            </div>
+        </div>
+
+        <div class="form-sec">
+            <form action="" id="feedbackForm">
+                <div class="email" style="flex-direction: row;">
+                    <div class="email-input">
+                        <div style="display: flex;align-items: center;">
+                            <label for="email">email</label>
+                            <div class="mob-email-verify">
+                                <img src="assets/image/check.gif" width="30">
+                            </div>
+                        </div>
+                        <input type="email" name="" placeholder="danielbediako@yahoo.com">
+                    </div>
+                    <div class="email-input avtar-input">
+                        <div class="image-upload">
+                            <label for="file-input">
+                                <img id="preview" src="assets/image/profile-image.png" alt="Click to upload an image" />
+                            </label>
+                            <input id="file-input" type="file" accept="image/*" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="email">
+                    <div class="email-input">
+                        <label for="email">Participant Name</label>
+                        <input type="text" name="" placeholder="Daniel K Bediako">
+                    </div>
+                    <div class="email-input">
+                        <label for="email">LinkedIn</label>
+                        <input type="text" name="" placeholder="Enter Your LinkedIn Profile link">
+                    </div>
+                </div>
+
+                <!--hirizontal line start-->
+                <hr>
+                <!--hirizontal line start-->
+
+                <!--/ range item start /-->
+                <div class="range-item">
+                    <h3>Overall, how satisfied were you with the training?</h3>
+                    <span class="range-value">Excellent</span>
+                    <input type="range" class="satisfaction-slider" value="0" max="25" step="5">
+                </div>
+                <!--/ range item end /-->
+                <!--/ range item start /-->
+                <div class="range-item">
+                    <h3>How would you rate the instructor?</h3>
+                    <span class="range-value">Excellent</span>
+                    <input type="range" class="satisfaction-slider" value="0" max="25" step="5">
+                </div>
+                <!--/ range item end /-->
+                <!--/ range item start /-->
+                <div class="range-item">
+                    <h3>How effective was the training material and resources provided?</h3>
+                    <span class="range-value">Excellent</span>
+                    <input type="range" class="satisfaction-slider" value="0" max="25" step="5">
+                </div>
+                <!--/ range item end /-->
+                <!--/ range item start /-->
+                <div class="range-item">
+                    <h3>Did the training meet your expectations?</h3>
+                    <span class="range-value">Excellent</span>
+                    <input type="range" class="satisfaction-slider" value="0" max="25" step="5">
+                </div>
+                <!--/ range item end /-->
+                <!--/ yes no div start /-->
+                <div class="yesno">
+                    <h3>Would you recommend InfosecTrain to others?</h3>
+                    <!-- Radio buttons -->
+                    <div class="radio-div">
+                        <div class="yes-btn" id="yes-btn">
+                            <input type="radio" name="choice" value="yes" id="yes-radio">
+                            <label for="yes-radio" class="custom-radio yes"></label>
+                            Yes
+                        </div>
+                        <div class="no-btn" id="no-btn">
+                            <input type="radio" name="choice" value="no" id="no-radio">
+                            <label for="no-radio" class="custom-radio no"></label>
+                            No
+                        </div>
+                        <div class="input-field" style="display: none;">
+                            <input type="text" id="input-text" />
+                        </div>
+                    </div>
+
+                </div>
+                <!--/ yes no div end /-->
+
+                <div class="description">
+                    <h3>Is there anything else you would like to share about your experience with us?</h3>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="my-checkbox" class="hidden-checkbox">
+                    <label for="my-checkbox" class="checkbox-image">
+                        <img src="assets/image/agree-check.svg">
+                    </label>
+                    <p>I agree to publish this feedback on InfosecTrain website and its social media channels.</p>
+                </div>
+
+                <div class="submit-btn">
+                    <button type="submit">SUBMIT NOW</button>
+                </div>
+
+                <div class="review-div">
+                    <p>Your feedback matters! Review us on</p>
+                    <div>
+                        <a href="#" target="_blank">
+                            <img src="assets/image/google.svg" alt="">
+                            <span>4.8/5</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank">
+                            <img src="assets/image/trustpilot.svg" alt="">
+                            <span>4.9/5</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank">
+                            <img src="assets/image/glassdoorzz.svg" alt="">
+                            <span>4.7/5</span>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="assets/script.js"></script>
+</html>

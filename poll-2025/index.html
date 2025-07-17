@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the webpage (meta title) -->
+  <title>Feedback Form - Suggestions for Personal Growth and 2025 Goals</title>
+  <!-- Other meta tags -->
+  <meta name="robots" content="nofollow">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.6.0/jsrsasign-all-min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container-form">
+    <form method="post" action="" id="pollform" enctype="multipart/form-data">
+      <div>
+        <label for="changeAboutMe">What do you think I should change about myself?</label>
+        <textarea data-heading="What do you think I should change about myself?" id="changeAboutMe" name="changeAboutMe" rows="4"></textarea>
+      </div>
+      <div>
+        <label for="continueDoing">What do you think I should continue doing?</label>
+        <textarea data-heading="What do you think I should continue doing?" id="continueDoing" name="continueDoing" rows="4"></textarea>
+      </div>
+
+      <div>
+        <label for="focusOn2025">What new things should I start focusing on in 2025?</label>
+        <textarea data-heading="What new things should I start focusing on in 2025?" id="focusOn2025" name="focusOn2025" rows="4"></textarea>
+      </div>
+
+      <div>
+        <label for="dislikes">Is there anything you dislike about me? If yes, what is it?</label>
+        <textarea data-heading="Is there anything you dislike about me? If yes, what is it?" id="dislikes" name="dislikes" rows="4"></textarea>
+      </div>
+
+      <!-- <button type="submit"></button> -->
+      <button type="submit" name="submit">Submit Feedback</button>>
+    </form>
+  </div>
+
+</body>
+</html>

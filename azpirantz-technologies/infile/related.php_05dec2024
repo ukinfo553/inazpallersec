@@ -1,0 +1,540 @@
+<?php
+// Define an array collection with page names as keys
+$mataDetails = 
+[
+	"information-and-cyber-security-consulting.php" => 
+	[   
+	    //ISO 27001
+        [
+			"rs_link" =>   "iso-27001-implementation-consulting",
+			"rs_image" =>  "assets/image/banner/ISO-27001.webp",
+			"rs_title" =>  "ISO 27001"
+        ],
+		
+		//ISO 27017
+        [
+			"rs_link" =>   "iso-27017-consultant",
+			"rs_image" =>  "assets/image/banner/ISO-27017.webp",
+			"rs_title" =>  "ISO 27017"
+        ],
+		
+		//ISO 27018
+        [
+			"rs_link" =>   "iso-27018-consulting-services",
+			"rs_image" =>  "assets/image/banner/ISO-27018.webp",
+			"rs_title" =>  "ISO 27018"
+        ],
+		
+		//ISO 27701
+        [
+			"rs_link" =>   "iso-27701-consulting-services",
+			"rs_image" =>  "assets/image/banner/ISO-27701.webp",
+			"rs_title" =>  "ISO 27701"
+        ],
+		
+		//"NIST Cybersecurity Framework
+		[
+			"rs_link" =>   "nist-cybersecurity-framework-assessment",
+			"rs_image" =>  "assets/image/banner/NIST-Cybersecurity-Framework.webp",
+			"rs_title" =>  "NIST Cybersecurity Framework"
+        ],
+		
+		//NIST SP 800-53
+		[
+			"rs_link" =>   "nist-800-53-assessment-consulting-services",
+			"rs_image" =>  "assets/image/service/nist-cybersecurity-framework.webp",
+			"rs_title" =>  "NIST SP 800-53"
+        ],
+		
+		//Payment Card Industry Data Security Standard (PCI-DSS)
+		[
+			"rs_link" =>   "pci-dss-compliance",
+			"rs_image" =>  "assets/image/service/payment-card-industry-data-security-standard.webp",
+			"rs_title" =>  "Payment Card Industry Data Security Standard (PCI-DSS)"
+        ],
+		
+		//HITRUST CSF
+		[
+			"rs_link" =>   "hitrust-csf-compliance-services",
+			"rs_image" =>  "assets/image/banner/Health-Information-Trust-Alliance-Common-Security-Framework.webp",
+			"rs_title" =>  "HITRUST CSF"
+        ],
+		
+		//HIPAA
+		[
+			"rs_link" =>   "hipaa-compliance-consulting-services",
+			"rs_image" =>  "assets/image/banner/Health-Insurance-Portability-Accountability-Act.webp",
+			"rs_title" =>  "HIPAA"
+        ]
+		
+    ],
+
+	"information-security-management-system.php" => 
+	[
+	    //ISO 27001
+        [
+			"rs_link" =>   "iso-27001-implementation-consulting",
+			"rs_image" =>  "assets/image/banner/ISO-27001.webp",
+			"rs_title" =>  "ISO 27001"
+        ],
+		
+		//ISO 27017
+        [
+			"rs_link" =>   "iso-27017-consultant",
+			"rs_image" =>  "assets/image/banner/ISO-27017.webp",
+			"rs_title" =>  "ISO 27017"
+        ],
+		
+		//ISO 27018
+        [
+			"rs_link" =>   "iso-27018-consulting-services",
+			"rs_image" =>  "assets/image/banner/ISO-27018.webp",
+			"rs_title" =>  "ISO 27018"
+        ],
+		
+		//ISO 27701
+        [
+			"rs_link" =>   "iso-27701-consulting-services",
+			"rs_image" =>  "assets/image/banner/ISO-27701.webp",
+			"rs_title" =>  "ISO 27701"
+        ],
+		
+		//"NIST Cybersecurity Framework
+		[
+			"rs_link" =>   "nist-cybersecurity-framework-assessment",
+			"rs_image" =>  "assets/image/banner/NIST-Cybersecurity-Framework.webp",
+			"rs_title" =>  "NIST Cybersecurity Framework"
+        ],
+		
+		//NIST SP 800-53
+		[
+			"rs_link" =>   "nist-800-53-assessment-consulting-services",
+			"rs_image" =>  "assets/image/service/nist-cybersecurity-framework.webp",
+			"rs_title" =>  "NIST SP 800-53"
+        ],
+		
+		//Payment Card Industry Data Security Standard (PCI-DSS)
+		[
+			"rs_link" =>   "pci-dss-compliance",
+			"rs_image" =>  "assets/image/service/payment-card-industry-data-security-standard.webp",
+			"rs_title" =>  "Payment Card Industry Data Security Standard (PCI-DSS)"
+        ],
+		
+		//HITRUST CSF
+		[
+			"rs_link" =>   "hitrust-csf-compliance-services",
+			"rs_image" =>  "assets/image/banner/Health-Information-Trust-Alliance-Common-Security-Framework.webp",
+			"rs_title" =>  "HITRUST CSF"
+        ],
+		
+		//HIPAA
+		[
+			"rs_link" =>   "hipaa-compliance-consulting-services",
+			"rs_image" =>  "assets/image/banner/Health-Insurance-Portability-Accountability-Act.webp",
+			"rs_title" =>  "HIPAA"
+        ]
+    ],
+	
+	"iso-27001-implementation-consulting.php" => 
+	[
+        //ISO 27001
+        [
+			"rs_link" =>   "iso-27001-implementation-consulting",
+			"rs_image" =>  "assets/image/banner/ISO-27001.webp",
+			"rs_title" =>  "ISO 27001"
+        ],
+		
+		//ISO 27017
+        [
+			"rs_link" =>   "iso-27017-consultant",
+			"rs_image" =>  "assets/image/banner/ISO-27017.webp",
+			"rs_title" =>  "ISO 27017"
+        ],
+		
+		//ISO 27018
+        [
+			"rs_link" =>   "iso-27018-consulting-services",
+			"rs_image" =>  "assets/image/banner/ISO-27018.webp",
+			"rs_title" =>  "ISO 27018"
+        ],
+		
+		//ISO 27005
+        [
+			"rs_link" =>   "iso-27005-risk-assessment-standard-consulting-services",
+			"rs_image" =>  "assets/image/banner/ISO-27005.webp",
+			"rs_title" =>  "ISO 27005"
+        ],
+		
+		//ISO 22301
+        [
+			"rs_link" =>   "iso-22301-consultancy-services",
+			"rs_image" =>  "assets/image/banner/ISO-22301.webp",
+			"rs_title" =>  "ISO 22301"
+        ],
+		
+        //"NIST Cybersecurity Framework
+		[
+			"rs_link" =>   "nist-cybersecurity-framework-assessment",
+			"rs_image" =>  "assets/image/banner/NIST-Cybersecurity-Framework.webp",
+			"rs_title" =>  "NIST Cybersecurity Framework"
+        ],
+		
+		//NIST SP 800-53
+		[
+			"rs_link" =>   "nist-800-53-assessment-consulting-services",
+			"rs_image" =>  "assets/image/service/nist-cybersecurity-framework.webp",
+			"rs_title" =>  "NIST SP 800-53"
+        ],
+    ],
+	
+	"iso-27017-consultant.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"iso-27018-consulting-services.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"information-and-cyber-security-consulting.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"information-and-cyber-security-consulting.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"information-and-cyber-security-consulting.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"information-and-cyber-security-consulting.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"information-and-cyber-security-consulting.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"information-and-cyber-security-consulting.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"information-and-cyber-security-consulting.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"information-and-cyber-security-consulting.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+	
+	"information-and-cyber-security-consulting.php" => 
+	[
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ],
+        [
+			"rs_link" =>   "",
+			"rs_image" =>  "assets/image/related-service/pratice-test.png",
+			"rs_title" =>  "ISO 27001"
+        ]
+    ],
+];
+
+
+
+
+
+?><section class="related-service-sec pt-0">
+    <div class="container">
+      <div class="row gap-4">
+        <div class="col-12">
+          <div class="fs-28 text-center text-red f-raleway fw-bold">Related Standards & Frameworks</h2>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="swiper related-service">
+            <div class="swiper-wrapper">
+              <!--/ col start /-->
+              <div class="swiper-slide border-grey border-radius-10 related-item hover">
+                <img src="assets/image/related-service/pratice-test.png" alt="" class="img-fluid">
+                <div class="p-3">
+                  <div class="fs-18 f-raleway fw-bold text-start">
+                    ISO 27001
+                  </div>
+                </div>
+              </div>
+              <!--/ col start /-->
+              <div class="swiper-slide border-grey border-radius-10 related-item hover">
+                <img src="assets/image/related-service/pratice-test.png" alt="" class="img-fluid">
+                <div class="p-3">
+                  <div class="fs-18 f-raleway fw-bold text-start">
+                    ISO 27001
+                  </div>
+                </div>
+              </div>
+              <!--/ col start /-->
+              <div class="swiper-slide border-grey border-radius-10 related-item hover">
+                <img src="assets/image/related-service/pratice-test.png" alt="" class="img-fluid">
+                <div class="p-3">
+                  <div class="fs-18 f-raleway fw-bold text-start">
+                    ISO 27001
+                  </div>
+                </div>
+              </div>
+              <!--/ col start /-->
+              <div class="swiper-slide border-grey border-radius-10 related-item hover">
+                <img src="assets/image/related-service/pratice-test.png" alt="" class="img-fluid">
+                <div class="p-3">
+                  <div class="fs-18 f-raleway fw-bold text-start">
+                    ISO 27001
+                  </div>
+                </div>
+              </div>
+              <!--/ col start /-->
+              <div class="swiper-slide border-grey border-radius-10 related-item hover">
+                <img src="assets/image/related-service/pratice-test.png" alt="" class="img-fluid">
+                <div class="p-3">
+                  <div class="fs-18 f-raleway fw-bold text-start">
+                    ISO 27001
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- swippper nav arrow start-->
+            <div class="d-flex justify-content-center align-items-center gap-4 mt-md-4 mt-2 w-100 navigation">
+              <div class="swiper-button-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 16" fill="none">
+                  <path
+                    d="M17 7C17.5523 7 18 7.44772 18 8C18 8.55228 17.5523 9 17 9V7ZM0.292892 8.70711C-0.0976315 8.31658 -0.0976315 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41421 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM17 9H1V7H17V9Z"
+                    fill="#e50914" />
+                </svg>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 16" fill="none">
+                  <path
+                    d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9V7ZM17.7071 8.70711C18.0976 8.31658 18.0976 7.68342 17.7071 7.29289L11.3431 0.928932C10.9526 0.538408 10.3195 0.538408 9.92893 0.928932C9.53841 1.31946 9.53841 1.95262 9.92893 2.34315L15.5858 8L9.92893 13.6569C9.53841 14.0474 9.53841 14.6805 9.92893 15.0711C10.3195 15.4616 10.9526 15.4616 11.3431 15.0711L17.7071 8.70711ZM1 9H17V7H1V9Z"
+                    fill="#e50914" />
+                </svg>
+              </div>
+            </div>
+            <!-- swippper nav arrow end-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
