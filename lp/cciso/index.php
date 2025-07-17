@@ -101,7 +101,7 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="item">
                             <h3>
-                            Lead the Way with Vaibhav
+                            Lead the Way with
                             </h3>
                             <h1>CCISO Certification Training Course</h1>
                             <div class="d-flex flex-column flex-md-row banner-highlights">
