@@ -1,0 +1,289 @@
+<style>
+/*======== related course sec start ==========*/
+.related-course-sec .col-lg-3 {
+    margin-top: 32px;
+}
+.related-course-sec .item{
+    border: 1px solid #D0D0D0;
+    display: block;
+    text-decoration: none;
+    color: var(--dark-charcoal);
+    border-radius: 5px;
+    height: 100%;
+}
+.related-course-sec .item img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+.related-course-sec .item .item-body{
+    padding: 10px 8px;
+}
+@media (min-width:768px) {
+    .related-course-sec .item .item-body {
+        padding: 16px 12px;
+    }
+}
+.related-course-sec .item .item-body h4{
+    color: #282828;
+    font-family: "Nunito Sans";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media (min-width:768px) {
+    .related-course-sec .item .item-body h4{
+    font-size: 16px;
+}
+}
+.related-course-sec .item .item-body a{
+    border-radius: 5px;
+    background: linear-gradient(0deg, #F0F0F0 0%, #F0F0F0 100%), linear-gradient(267deg, #EE224A -15.61%, #FF8A00 123.55%);
+    width: 100%;
+    display: block;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    color: #686868;
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform:uppercase;
+    margin-top: 16px;
+}
+.related-course-sec .item .item-body a:hover{
+    background: linear-gradient(267deg, #EE224A -15.61%, #FF8A00 123.55%);
+    color: #ffffff;
+}
+@media (min-width:992px) {
+    .related-course-sec .item .item-body a{
+        margin-top: 24px;
+    }
+}
+/*======== related course sec end ==========*/
+
+</style>
+
+<?php
+$relatedCourses = [
+    "cissp-training" => [
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/cism-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CISM-1.png",
+            "text" => "Certified Information Security Manager (CISM)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/cisa-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/cisa-icon.jpg",
+            "text" => "Certified Information Systems Auditor (CISA)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/crisc/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/crisc-icon.jpg",
+            "text" => "Certified in Risk and Information Systems Control (CRISC)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/ccsp-training-online/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CCSP-1.png",
+            "text" => "Certified Cloud Security Professional (CCSP)"
+        ]
+    ],
+    "ccsp-training-online" => [
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/cism-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CISM-1.png",
+            "text" => "Certified Information Security Manager (CISM)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/cisa-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/cisa-icon.jpg",
+            "text" => "Certified Information Systems Auditor (CISA)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/cissp-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CISSP-ISSAP.png",
+            "text" => "Certified Information Systems Security Professional (CISSP)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/cloud-governance-security-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/cloud-feature.jpg",
+            "text" => "Advanced Cloud Security Governance Training"
+        ]
+    ],
+    "cisa-training" => [
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/cism-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CISM-1.png",
+            "text" => "Certified Information Security Manager (CISM)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/crisc-certification-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/crisc-icon.jpg",
+            "text" => "Certified in Risk and Information Systems Control (CRISC)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/cissp-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CISSP-ISSAP.png",
+            "text" => "Certified Information Systems Security Professional (CISSP)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/information-systems-auditor-online-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/11/information-system-audit-icon.jpg",
+            "text" => "Information Systems Auditor Training (Practical Hands-on)"
+        ]
+    ],
+    "cism-training" => [
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/ccsp-training-online/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CCSP-1.png",
+            "text" => "Certified Cloud Security Professional (CCSP)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/crisc-certification-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/crisc-icon.jpg",
+            "text" => "Certified in Risk and Information Systems Control (CRISC)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/cissp-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CISSP-ISSAP.png",
+            "text" => "Certified Information Systems Security Professional (CISSP)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/pages/lp/cisa-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/cisa-icon.jpg",
+            "text" => "Certified Information Systems Auditor (CISA)"
+        ]
+    ],
+    "iapp-cippe-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/certified-information-privacy-manager-cipm-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/08/cipm-training.jpg",
+            "text" => "Certified Information Privacy Manager (CIPM)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/certified-information-privacy-technologist-cipt-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/08/cipt-training.jpg",
+            "text" => "Certified Information Privacy Technologist (CIPT)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/iso27001la/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/ISO-IEC-20000-Lead-Auditor.png",
+            "text" => "ISO/IEC 27001:2022 Lead Auditor"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/data-protection-officer-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/04/data_protection_officer_icon.jpg",
+            "text" => "Data Protection Officer (DPO)"
+        ]
+    ],
+	
+	"iapp-cipm-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/european-privacy-training-cippe/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/08/cippe-training.jpg",
+            "text" => "European Privacy Training - CIPP/E Online Training & Certification Course"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/certified-information-privacy-technologist-cipt-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/08/cipt-training.jpg",
+            "text" => "Certified Information Privacy Technologist (CIPT)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/iso27001la/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/ISO-IEC-20000-Lead-Auditor.png",
+            "text" => "ISO/IEC 27001:2022 Lead Auditor"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/data-protection-officer-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/04/data_protection_officer_icon.jpg",
+            "text" => "Data Protection Officer (DPO)"
+        ]
+    ],
+	
+	
+		"iapp-cipt-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/european-privacy-training-cippe/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/08/cippe-training.jpg",
+            "text" => "European Privacy Training - CIPP/E Online Training & Certification Course"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/certified-information-privacy-manager-cipm-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/08/cipm-training.jpg",
+            "text" => "Certified Information Privacy Manager (CIPM)"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/iso27001la/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/ISO-IEC-20000-Lead-Auditor.png",
+            "text" => "ISO/IEC 27001:2022 Lead Auditor"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/data-protection-officer-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/04/data_protection_officer_icon.jpg",
+            "text" => "Data Protection Officer (DPO)"
+        ]
+    ],
+    // Add data for other courses
+];
+
+// Extract the current landing page from the URL
+$currentLandingPage = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+// Function to find a matching course key
+function findMatchingCourseKey($landingPage, $relatedCourses) {
+    foreach (array_keys($relatedCourses) as $courseKey) {
+        if (strpos($landingPage, $courseKey) !== false) {
+            return $courseKey;
+        }
+    }
+    return null;
+}
+
+// Find the matching course key
+$matchingCourseKey = findMatchingCourseKey($currentLandingPage, $relatedCourses);
+
+// If a matching key is found, display related courses
+if ($matchingCourseKey !== null) {
+    $courses = $relatedCourses[$matchingCourseKey];
+?>
+<section class="<?php echo isset($customClass) ? $customClass : 'related-course-sec'; ?> py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- <h2 class="text-center">Other Popular Courses</h2> -->
+
+                <h2 class="text-center"><?php echo isset($customHeading) ? $customHeading : 'Other Popular Courses'; ?></h2>
+            </div>
+        </div>
+        <div class="row">
+            <!-- col start -->
+            <?php
+            foreach ($courses as $course) {
+            ?>
+                <div class="col-6 col-lg-3">
+                    <div class="item">
+                        <img src="<?php echo $course['image']; ?>" alt="Related Courses" width="400" height="226">
+                        <div class="item-body">
+                            <h4><?php echo $course['text']; ?></h4>
+                            <a href="<?php echo $course['link']; ?>" target="_blank">Check Now</a>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+            <!-- col end -->
+        </div>
+    </div>
+</section>
+<?php
+}
+?>
