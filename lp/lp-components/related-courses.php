@@ -88,6 +88,28 @@ picture[title="Buy 1 Course Get 1 Free"] img{
 
 <?php
 $relatedCourses = [
+    "iso-42001-lead-auditor-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/iso-iec-42001-lead-implementer-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2024/08/ISO-IEC-42001-LI.png",
+            "text" => "ISO/IEC 42001 Lead Implementer Training and Certification"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/aigp-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2024/07/IAPP_AIGP_Certification_Training_Artificial_Intelligence_Governance.png",
+            "text" => "IAPP AIGP Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/iso27001la/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/ISO-27001-min.png",
+            "text" => "ISO/IEC 27001:2022 Lead Auditor Online Training & Certification"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/artificial-intelligence-ai-for-cyber-security-professionals-training/",
+             "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
+             "text" => "AI-Powered Cybersecurity Training"
+        ]
+    ],
     "ai-powered-cybersecurity-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/certified-ethical-hacker-ceh-training/",
