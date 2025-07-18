@@ -35,7 +35,7 @@ if ($course_data !== null) {
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/style.css" defer>
     <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer /> 
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
     <script>
@@ -119,7 +119,7 @@ if ($course_data !== null) {
                     <!--/ col start /-->
                     <div class="col-lg-7 col-md-6">
                         <div class="item">
-                            <h3 class="d-none d-lg-block">Unlock the future of Cloud Auditing with</h3>
+                            <h3 class="d-none d-lg-block">Become an Expert in AI Management System Audits</h3>
                             <h1>ISO/IEC 42001 Lead Auditor Training Course</h1>
                             <!-- <h3>Prepare For CISSP Exam</h3> -->
                             <div class="d-flex flex-row banner-highlights">
