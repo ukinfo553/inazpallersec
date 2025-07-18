@@ -28,7 +28,7 @@ if ($course_data !== null) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISO/IEC 42001 Lead Auditor Training Course</title>
     <meta name="description"
-        content="Master AI-powered cybersecurity techniques with InfosecTrain &#039;s expert-led online training course. Learn to combat cyber threats using AI tools and strategies.">
+        content="Enroll in ISO/IEC 42001 Lead Auditor Training at InfosecTrain. Achieve certification and enhance your career with expert guidance. Join now for comprehensive training">
     <meta name="robots" content="noindex, nofollow"/>
     <link rel="icon" href="assets/images/favicon.ico">
     <!--/ style link start /-->

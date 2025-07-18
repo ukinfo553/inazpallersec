@@ -114,7 +114,7 @@ if (isset($_POST['me_submited'])) {
 
 
 
-    $email_subject = "New Enquiry from AI-Powered Cybersecurity Landing Page";
+    $email_subject = "New Enquiry from ISO/IEC 42001 LA Landing Page";
 
     $user_subject = "Thank you for your enquiry! We'll be in touch soon.";
 
@@ -315,7 +315,7 @@ if (isset($_POST['me_submited'])) {
 
         'site_name' => 'lp',
 
-        'page_type' => 'AI-Powered Cybersecurity',
+        'page_type' => 'ISO/IEC 42001 LA',
 
         'name' => $me_name,
 
