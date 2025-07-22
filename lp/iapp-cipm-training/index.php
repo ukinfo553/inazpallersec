@@ -1,4 +1,27 @@
-<!-- <?php include ('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$courseID = 39518;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($courseID);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +36,7 @@
     <!--/ style link start /-->
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/style.css" defer>
+    <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" defer />
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
@@ -44,10 +68,6 @@
     $pag_url .= $_SERVER['HTTP_HOST'];
     // Append the requested resource location to the URL
     $pag_url .= $_SERVER['REQUEST_URI'];
-
-    // broucher link pdf file code start
-    $brochureLink = json_decode(file_get_contents("https://www.infosectrain.com/api/brochure_byid.php?id=39518"), true)[0]['brochure'] ?? null;
-    // broucher link pdf file code end
     ?> -->
 
     <!--/ navbar start /-->
@@ -73,7 +93,7 @@
                             <a href="#training-calendar">Training Calendar</a>
                         </li>
                         <li>
-                            <a href="#why-choose">Why InfosecTrain</a>
+                            <a href="#why-choose">Meet Our Instructor</a>
                         </li>
                         <li>
                             <a href="#benefits">Career Benefits</a>
@@ -122,8 +142,13 @@
                             <div class="button-sec">
                                 <button class="cta-button modal-btn" title="Talk to Our Expert"
                                     modal-title="TALK TO OUR EXPERT">Talk to Our Expert</button>
-                                    <a href="<?php echo $brochureLink; ?>" target="_blank" class="cta-button">Download
-                                    Brochure</a>
+                                    <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="cta-button"
+                                    title="Download Brochure">Download Brochure</a>';
+                                }
+                                ?>
                             </div>
                             <img src="assets/images/review-mob-img.png" alt="CIPM Course Review" width="636" height="34"
                                 fetchPriority="high" class="review-img">
@@ -224,92 +249,33 @@
                             </div>
                             <div class="faq-wrapper">
                                 <!--/ faq item /-->
-                                <div class="faq-item active open">
-                                    <h3 class="faq-title"><span class="title">Course Curriculum</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>You'll become an expert in the following modules:</p>
-                                        <ul>
-                                            <li><strong>Module 1</strong> - Introduction to privacy program management
-                                            </li>
-                                            <li><strong>Module 2</strong> - Privacy governance</li>
-                                            <li><strong>Module 3</strong> - Applicable laws and regulations</li>
-                                            <li><strong>Module 4</strong> - Data assessments</li>
-                                            <li><strong>Module 5</strong> - Policies</li>
-                                            <li><strong>Module 6</strong> - Data subject rights</li>
-                                            <li><strong>Module 7</strong> - Training and awareness</li>
-                                            <li><strong>Module 8</strong> - Protecting personal information</li>
-                                            <li><strong>Module 9</strong> - Data breach incident plans</li>
-                                            <li><strong>Module 10</strong> - Monitoring and auditing program performance
-                                            </li>
-                                        </ul>
+                                <?php
+                                // Check that course_details exists and is a non-empty array
+                                if (!empty($course_details) && is_array($course_details)) {
+                                    foreach ($course_details as $index => $detail) {
+                                        // Make the first item active and open
+                                        $activeClass = $index === 0 ? 'active open' : '';
+                                        ?>
+                                        <div class="faq-item <?php echo $activeClass; ?>">
+                                            <h3 class="faq-title">
+                                                <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                <span class="right-icon"></span>
+                                            </h3>
+                                            <div class="faq-content">
+                                                <?php echo $detail['ans']; ?>
 
-                                        <a href="<?php echo $brochureLink; ?>"
-                                            target="_blank" class="cta-button">Download Brochure</a>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Course Objectives</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>At the end of the course, you will be able to:</p>
-                                        <ul>
-                                            <li>Manage, develop and implement a privacy program </li>
-                                            <li>Perform data privacy and data protection assessment</li>
-                                            <li>Implement privacy related policies</li>
-                                            <li>Ensure data subject rights and develop and implement privacy training
-                                            </li>
-                                            <li>Protect personal information</li>
-                                            <li>Respond to data security incident or breach</li>
-                                            <li>Monitor, measure, analyze and audit performance of the privacy program
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Exam Details</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li><strong>Duration:</strong> 150 Minutes</li>
-                                            <li><strong>Number of Questions:</strong> 90 out of which 70 are scored</li>
-                                            <li><strong>Question Format:</strong> Multiple choice and Scenario - Based
-                                            </li>
-                                            <li><strong>Passing Marks:</strong> 300 out of 500</li>
-                                            <li><strong>Exam Language:</strong> English, French, German, Brazilian
-                                                Portuguese</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Pre-Requisites</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>There are no such prerequisites for CIPM certification.</p>
-
-
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Target Audience</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Data Protection Officer</li>
-                                            <li>Data Protection Lawyers</li>
-                                            <li>IT Auditors</li>
-                                            <li>Legal Compliance Officers</li>
-                                            <li>Security Manager</li>
-                                            <li>Information Officers</li>
-                                            <li>Professionals responsible for integrating privacy requirements into
-                                                day-to-day operations.</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                                <?php
+                                                // If this is the first item and $brochureLink is set, show brochure button
+                                                if ($index === 0 && !empty($brochure)) {
+                                                    echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <!--<[ course details sec end ]>-->
@@ -334,7 +300,18 @@
                                 <input type="hidden" id="me_redirect" value="<?php echo BASE_URL; ?>thank-you.php">
                                 <input type="hidden" id="me_others" name="me_others" value="">
                                 <input type="hidden" id="me_pageurl" name="me_pageurl" value="<?php echo $pag_url; ?>">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--white);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited">Request a Callback</button>
                             </form>
@@ -352,6 +329,7 @@
         <!--/ training calendar sec start /-->
         <section class="training-calendar" id="training-calendar">
             <div class="container">
+                <?php if (!empty($courseID)): ?>
                 <div class="row">
                     <div class="col-12">
                         <h2>CIPM Training Calendar</h2>
@@ -360,7 +338,7 @@
                 <div class="row">
                     <div class="col-12">
                         <?php
-                        $url = "https://www.infosectrain.com/api/39518/href_toscroll/free_demo";
+                        $url = "https://www.infosectrain.com/api/$courseID/href_toscroll/free_demo";
                         function gettraning_Cal($url)
                         {
                             $ch = curl_init();
@@ -385,6 +363,7 @@
                         ?>
                     </div>
                 </div>
+                <?php endif; ?>
                 <div class="row align-items-center">
                     <div class="col-lg-2 d-none d-lg-block">
                         <img src="assets/images/training-calendar.png" width="132" height="128" alt="Training Calendar"
@@ -559,22 +538,47 @@
                         <!--/ col end /-->
 
                         <!--/ col start /-->
-                        <div class="swiper-slide item">
+                        <!-- <div class="swiper-slide item">
                             <div class="profile-desc">
                                 <div class="avtar-data">
                                     <div class="avtar-name">
                                     JAI
                                     </div>
                                     <div class="avtar-exp">
-                                        11+ Years of Experience
+                                        14+ Years of Experience
                                     </div>
                                 </div>
                             </div>
                             <div class="designation">
-                            Data Privacy | CIPP/E | CIPM | CIPT | FIP | FIPT–OT| CISA | CSA STAR
+                            Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT | CISA | CSA STAR
                             </div>
                             <div class="summary">
-                            11+ years of experience as a core cyber security, Information Security and Data Privacy expert. He holds various top industry certifications which reinforce his quality and knowledge in these areas. He is a passionate teacher and mentor, his training sessions are highly interactive and discussion oriented. He uses real life examples to connect the learnings, using quiz and questions to prepare his students for exams and assist them achieve their goals.
+                            14+ years of experience as a core cyber security, Information Security and Data Privacy expert. He holds various top industry certifications which reinforce his quality and knowledge in these areas. He is a passionate teacher and mentor, his training sessions are highly interactive and discussion oriented. He uses real life examples to connect the learnings, using quiz and questions to prepare his students for exams and assist them achieve their goals.
+                            </div>
+                        </div> -->
+                        <div class="swiper-slide item">
+                            <div class="profile-desc">
+                                <div class="avtar">
+                                    <img src="https://www.infosectrain.com/wp-content/uploads/2024/02/jai-data-privacy-trainner.png"
+                                        alt="Jai|InfosecTrain Instructor">
+                                </div>
+                                <div class="avtar-data">
+                                    <div class="avtar-name">
+                                        JAI
+                                    </div>
+                                    <div class="avtar-exp">
+                                        14+ Years Of Experience
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="designation">
+                                Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT| CISA | CSA STAR
+                            </div>
+                            <div class="summary">
+                                14+ years of experience as a core cyber security, Information Security and Data Privacy
+                                expert. He holds various top industry certifications which reinforce his quality and
+                                knowledge in these areas. He is a passionate teacher and mentor, his training sessions
+                                are highly interactive and discussion oriented.
                             </div>
                         </div>
                         <!--/ col end /-->
@@ -1004,82 +1008,42 @@
         <!--<[success story start]>-->
 
         <!--<[FAQ SEC start]>-->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Frequently Asked Questions</h2>
+        <?php if ($faq !== null && !empty($faq)) { ?>
+            <section class="faq-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="faq-wrapper">
-                            <!--/ faq item /-->
-                            <div class="faq-item active open">
-                                <h3 class="faq-title"><span class="title">What is CIPM?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        An enterprise-wide privacy programme can be established, maintained, and managed
-                                        throughout its entire lifecycle with the help of the Certified Information
-                                        Privacy Manager (CIPM) credential, which provides privacy and data protection
-                                        professionals with all the tools they need. CIPMs are aware of privacy laws and
-                                        how to apply them to their organizations.
-                                    </p>
-                                </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="faq-wrapper">
+                                <!--/ faq item start /-->
+                                <?php
+                                // Display the FAQs section if the data is available
+
+                                foreach ($faq as $index => $question) {
+                                    // Determine if the first item should be open
+                                    $isOpen = $index === 0 ? 'open active' : '';
+                                    $displayStyle = $index === 0 ? 'style="display: block;"' : '';
+
+                                    echo '<div class="faq-item ' . $isOpen . '">';
+                                    echo '    <h3 class="faq-title"><span class="title">' . $question['title'] . '</span><span class="right-icon"></span></h3>';
+                                    echo '    <div class="faq-content" ' . $displayStyle . '>';
+                                    echo $question['ans'];
+                                    echo '    </div>';
+                                    echo '</div>';
+                                }
+                                ?>
+                                <!--/ faq item end /-->
                             </div>
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How many questions are there in the CIPM
-                                        exam?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>There are 90 questions in the CIPM exam which are to be answered in 150 minutes.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title"> How are the exam passing marks
-                                        determined?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The number of questions that are successfully answered determines the exam
-                                        score.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Can you tell me how many questions I correctly
-                                        answered?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>The IAPP does not disclose to the candidates how many questions they answered
-                                        correctly. However, a section breakdown showing the proportion of your right
-                                        answers for each blueprint domain is given to you after the exam is over.
-                                        Candidates who don’t pass might use this data to figure out which domains they
-                                        should concentrate on when preparing for the exam again.</p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title"> Why should you take the CIPM
-                                        exam?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The privacy obligations of business activities, including marketing, finance,
-                                        human resources, and customer service can expose their firms to financial loss
-                                        and reputational damage. The CIPM certification equips professionals with the
-                                        knowledge and abilities to operationalize privacy and reduce reputational risks
-                                        associated with negligent treatment of personal data.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[FAQ SEC start]>-->
 
         <!--<[reach us sec start]>-->
@@ -1110,7 +1074,18 @@
                                 <input type="hidden" value="CIPM Training" id="me_others_footer" name="me_others">
                                 <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_footer"
                                     name="me_pageurl">
-
+<!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited_footer">Request a Callback</button>
                             </form>
@@ -1303,7 +1278,18 @@
                     <input type="hidden" value="" id="me_others_pop" name="me_others" />
                     <!-- <input type="hidden" value="" id="me_message" name="me_message" /> -->
                     <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_pop" name="me_pageurl" />
-
+<!-- Privacy Policy Checkbox -->
+                    <label
+                        style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                        <span>
+                            By sharing your details, you agree to our Terms and <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
                     <button class="cta-button form-button" type="submit" name="me_submited" id="me_submited_pop">Request
                         a Callback</button>
 
