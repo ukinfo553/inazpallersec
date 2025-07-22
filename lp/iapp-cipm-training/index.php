@@ -100,10 +100,10 @@
             <div class="container">
                 <div class="row align-items-center flex-column-reverse flex-md-row">
                     <!--/ col start /-->
-                    <div class="col-lg-7 col-md-6">
+                    <div class="col-lg-7">
                         <div class="item">
                             <h3 class="d-none d-lg-block">Establish Your Privacy Expertise</h3>
-                            <h1>IAPP - CIPM Certification Training </h1>
+                            <h1>IAPP - CIPM Certification Training</h1>
                             <h3>Become a Certified Information Privacy Manager</h3>
                             <div class="d-flex flex-row banner-highlights">
                                 <div>
@@ -130,10 +130,10 @@
                         </div>
                     </div>
                     <!--/ col start /-->
-                    <div class="col-lg-5 col-md-6 d-none d-md-block">
+                    <div class="col-lg-5 col-md-6 d-none d-lg-block">
                         <div class="item">
-                            <img src="assets/images/banner.webp" fetchPriority="high"
-                                alt="CIPM Certification Training by InfosecTrain" width="400" height="400">
+                            <img src="assets/images/banner-img.webp" fetchPriority="high"
+                                alt="CIPM Certification Training by InfosecTrain" width="788" height="788">
                         </div>
                     </div>
                 </div>
