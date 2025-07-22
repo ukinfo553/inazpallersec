@@ -529,7 +529,7 @@ if ($course_data !== null) {
                                         JAI
                                     </div>
                                     <div class="avtar-exp">
-                                        13+ Years Of Experience
+                                        14+ Years Of Experience
                                     </div>
                                 </div>
                             </div>
@@ -537,7 +537,7 @@ if ($course_data !== null) {
                                 Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT| CISA | CSA STAR
                             </div>
                             <div class="summary">
-                                13+ years of experience as a core cyber security, Information Security and Data Privacy
+                                14+ years of experience as a core cyber security, Information Security and Data Privacy
                                 expert. He holds various top industry certifications which reinforce his quality and
                                 knowledge in these areas. He is a passionate teacher and mentor, his training sessions
                                 are highly interactive and discussion oriented.
