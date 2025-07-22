@@ -808,9 +808,9 @@ nav {
     margin-bottom: 24px;
     border-bottom: 1px solid var(--border-grey);
 }
-.expert-sec .item .profile-desc .avtar{
+/* .expert-sec .item {
     display: none;
-}
+} */
 .expert-sec .item .profile-desc .avtar img {
     width: 74px;
     height: 74px;

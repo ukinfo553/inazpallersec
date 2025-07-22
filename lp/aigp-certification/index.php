@@ -93,7 +93,7 @@ if ($course_data !== null) {
                             <a href="#training-calendar">Training Calendar</a>
                         </li>
                         <li>
-                            <a href="#why-choose">Why InfosecTrain</a>
+                            <a href="#why-choose">Meet Our Instructor</a>
                         </li>
                         <li>
                             <a href="#benefits">Career Benefits</a>
@@ -522,24 +522,24 @@ if ($course_data !== null) {
                         <!--/ col start /-->
                         <div class="swiper-slide item">
                             <div class="profile-desc">
-                                <!-- <div class="avtar">
-                                    <img src="https://www.infosectrain.com/wp-content/uploads/2024/04/prabh-nair.png"
-                                        alt="Prabh Nair|InfosecTrain Instructor">
-                                </div> -->
+                                <div class="avtar">
+                                    <img src="https://www.infosectrain.com/wp-content/uploads/2024/02/jai-data-privacy-trainner.png"
+                                        alt="Jai|InfosecTrain Instructor">
+                                </div>
                                 <div class="avtar-data">
                                     <div class="avtar-name">
                                         JAI
                                     </div>
                                     <div class="avtar-exp">
-                                        13+ Years of Experience
+                                        14+ Years Of Experience
                                     </div>
                                 </div>
                             </div>
                             <div class="designation">
-                                Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT-OT| CISA | CSA STAR
+                                Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT| CISA | CSA STAR
                             </div>
                             <div class="summary">
-                                13+ years of experience as a core cyber security, Information Security and Data Privacy
+                                14+ years of experience as a core cyber security, Information Security and Data Privacy
                                 expert. He holds various top industry certifications which reinforce his quality and
                                 knowledge in these areas. He is a passionate teacher and mentor, his training sessions
                                 are highly interactive and discussion oriented.
