@@ -1,4 +1,27 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$api_id = 33497;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($api_id);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +37,7 @@
     <link href="assets/css/bootstrap-grid.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/custom.css" defer>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
+    <link rel="stylesheet" href="../../lp-components/css_handler.php" defer>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,9 +75,6 @@
     $pag_url .= $_SERVER['HTTP_HOST'];
     // Append the requested resource location to the URL
     $pag_url .= $_SERVER['REQUEST_URI'];
-    // broucher link pdf file code start
-    $brochureLink = json_decode(file_get_contents("https://www.infosectrain.com/api/brochure_byid.php?id=33497"), true)[0]['brochure'] ?? null;
-    // broucher link pdf file code end
     ?> -->
 
     <!--/ navbar start /-->
@@ -127,24 +148,29 @@
                             <div class="d-flex flex-md-row flex-column align-items-start gap-3">
                                 <button class="button modal-btn" modal-title="Talk to Our Expert">Talk to Our
                                     Expert</button>
-                                <a href="<?php echo $brochureLink; ?>" target="_blank" class="button download-btn"
-                                    style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
-                                        viewBox="0 0 16 17" fill="none">
-                                        <g clip-path="url(#clip0_18618_896)">
-                                            <path
-                                                d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.379 12.6915 7.379 12.6915 7.37897 12.6915C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.37704 12.6897 7.37685 12.6894 7.3767 12.6893C7.3762 12.6888 7.37577 12.6884 7.3753 12.6879C7.37499 12.6876 7.37471 12.6874 7.3744 12.687C7.37409 12.6867 7.37369 12.6863 7.37341 12.686C7.37279 12.6854 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.6279 12.6847 8.62721 12.6854 8.62659 12.686C8.62625 12.6863 8.62588 12.6867 8.6256 12.6869C8.62529 12.6873 8.62501 12.6875 8.6247 12.6878C8.62426 12.6883 8.62377 12.6888 8.62333 12.6892C8.62318 12.6894 8.62296 12.6896 8.6228 12.6897C8.62224 12.6903 8.62165 12.6909 8.62106 12.6915C8.62103 12.6915 8.62103 12.6915 8.621 12.6915C8.61122 12.701 8.60132 12.7103 8.59119 12.7193C8.51676 12.7857 8.43386 12.8375 8.3462 12.8744C8.34589 12.8745 8.34564 12.8747 8.34533 12.8748C8.34499 12.8749 8.34471 12.8751 8.34437 12.8752C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
-                                                fill="#E50914" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_18618_896">
-                                                <rect width="16" height="16" fill="white"
-                                                    transform="translate(0 0.5)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    Download Brochure
-                                </a>
+                                <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="button download-btn"
+                                        style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
+                                            viewBox="0 0 16 17" fill="none">
+                                            <g clip-path="url(#clip0_18618_896)">
+                                                <path
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    fill="#E50914" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_18618_896">
+                                                    <rect width="16" height="16" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Download Brochure
+                                    </a>';
+                                }
+                                ?>
                             </div>
                             <!-- <div class="d-flex gap-3">
                                 <img src="assets/images/100-satisfaction.webp" alt="Conditions Apply"
@@ -258,137 +284,59 @@
                                 </p>
                             </div>
                             <div class="col-12 mt-4">
-                                <div class="accordion d-flex flex-column gap-4">
+                                <div class="accordion d-flex flex-column gap-4 course-content-accordion">
                                     <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Course-Curriculum.svg" width="24"
-                                                    height="24" alt="Course Curriculum">
-                                                <span>You'll become an expert in the following modules:</span>
+                                    <?php
+                                    // Check that course_details exists and is a non-empty array
+                                    if (!empty($course_details) && is_array($course_details)) {
+                                        foreach ($course_details as $index => $detail) {
+                                            // Make the first item active and open
+                                            $activeClass = $index === 0 ? 'open' : '';
+                                            ?>
+                                            <div
+                                                class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $activeClass; ?>">
+                                                <button
+                                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/course-content/Course-Curriculum.svg" width="24"
+                                                            height="24" alt="<?php echo htmlspecialchars($detail['title']); ?>">
+                                                        <span><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="accordion-body">
+                                                    <?php echo $detail['ans']; ?>
+
+                                                    <?php
+                                                    // If this is the first item and $brochureLink is set, show brochure button
+                                                    if ($index === 0 && !empty($brochure)) {
+                                                        echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="button download-btn mt-3 d-inline-block"
+                                        style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
+                                            viewBox="0 0 16 17" fill="none">
+                                            <g clip-path="url(#clip0_18618_896)">
+                                                <path
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    fill="#E50914" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_18618_896">
+                                                    <rect width="16" height="16" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Download Brochure
+                                    </a>';
+                                                    }
+                                                    ?>
+                                                </div>
                                             </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>
-                                                    <p><strong>Module 1</strong> - Introduction to European Data
-                                                        Protection</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Module 2</strong> - European Data Protection Law and
-                                                        Regulation</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Module 3</strong> - Compliance with European Data
-                                                        Protection Law and Regulation</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Module 4</strong> - Case Studies/ Practical Examples</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Module 5</strong> - Best Practices and Key Areas</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Course-Objectives.svg" width="24"
-                                                    height="24" alt="Course Objectives">
-                                                <span>Course Objectives</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <p>There are following learning objectives for this CIPP/e Training Course:
-                                            </p>
-                                            <ul class="liststar">
-                                                <li>Introduction to European Data Protection</li>
-                                                <li>European Regulatory Institutions</li>
-                                                <li>Legislative Framework</li>
-                                                <li>Compliance with European Data Protection Law and Regulation</li>
-                                                <li>International Data Transfers</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Exam-Details.svg" width="24"
-                                                    height="24" alt="Exam Details">
-                                                <span>Exam Details</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>
-                                                    <p><strong>Duration:</strong> 150 Minutes</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Number of Questions:</strong> 90 out of which 75 are
-                                                        scored</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Question Format:</strong> Multiple choice and Scenario -
-                                                        Based</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Passing Marks:</strong> 300 out of 500</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Exam Language:</strong> English, French, German</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Pre-requisites.svg" width="24"
-                                                    height="24" alt="Prerequisites">
-                                                <span>Pre-requisites</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <p>There are no prerequisites for this course. It is open to anyone looking
-                                                to gain knowledge about privacy laws and build a career in Data Privacy.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Target-Audience.svg" width="24"
-                                                    height="24" alt="Target Audience">
-                                                <span>Target Audience</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>Data Protection Officer</li>
-                                                <li>Data Protection Lawyers</li>
-                                                <li>Records Managers</li>
-                                                <li>Legal Compliance Officers</li>
-                                                <li>Human Resource Officers</li>
-                                                <li>Information Officers</li>
-                                                <li>Professionals using, processing and maintaining personal data.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                    <!--accordion-item end-->
                                 </div>
                             </div>
                         </div>
@@ -497,6 +445,19 @@
                                         value="<?php echo $pag_url; ?>">
                                     <input type="hidden" id="me_others" name="me_others" value="">
                                     <input type="hidden" name="me_submited" value="1">
+                                    <!-- Privacy Policy Checkbox -->
+                                    <label class="f-nunito fs-14 fw-normal"
+                                        style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                        <input type="checkbox" name="privacy_policy" checked required
+                                            style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                        <span>
+                                            By sharing your details, you agree to our Terms and <a
+                                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                                style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                                Policy</a>
+                                        </span>
+                                    </label>
+                                    <!-- privacy Policy Checkbox end -->
                                     <button type="submit" class="form-control-btn">Submit</button>
 
                                     <div class="loader text-center" style="display:none;">
@@ -678,7 +639,7 @@
                                 </div>
                             </div>
                             <div class="designation">
-                                Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT| CISA | CSA STAR
+                                Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT | CISA | CSA STAR
                             </div>
                             <div class="summary">
                                 14+ years of experience as a core cyber security, Information Security and Data Privacy
@@ -1063,93 +1024,37 @@
         <!--/ related courses /-->
 
         <!--<[faq start]>-->
-        <section class="faq-section pt-0">
-            <div class="container-fluid container-lg">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <h2 class="text-center">Frequently Asked Questions</h2>
-                    </div>
-                    <div class="col-12">
-                        <div class="accordion d-flex flex-column gap-4">
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>What is CIPP/E?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    The Certified Information Privacy Professional/Europe (CIPP/E) provides all the GDPR
-                                    knowledge, understanding, and perspective needed to ensure compliance and the
-                                    success of data protection in Europe, enabling DPOs to take advantage of the career
-                                    opportunity that this expansive legislation represents.
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>How many questions are there in the CIPP/E exam?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>There are 90 questions in the CIPP/E exam which are to be answered in 150
-                                        minutes.</p>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>How are the exam passing marks determined?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>The number of questions that are correctly answered determines the exam score.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>Can I know how many questions I correctly answered?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        The IAPP does not disclose to the candidates how many questions they answered
-                                        correctly. However, a section breakdown showing the proportion of your right
-                                        answers for each blueprint domain is given to you after the exam is over.
-                                        Candidates who don't pass might use this data to figure out which domains they
-                                        should concentrate on when preparing for the exam again.</p>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>Is the CIPP/E exam challenging?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        Though difficult, it's not impossible. There are both straightforward questions
-                                        and unexpected ones that could leave you unsure between two generally equivalent
-                                        choices.
-                                    </p>
-                                </div>
+        <?php if (!empty($faq)) { ?>
+            <section class="faq-section pt-0">
+                <div class="container-fluid container-lg">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <h2 class="text-center">Frequently Asked Questions</h2>
+                        </div>
+                        <div class="col-12">
+                            <div class="accordion d-flex flex-column gap-4 accordion-faq-section">
+                                <?php foreach ($faq as $index => $question) {
+                                    // Add "open" class and visible style for the first item
+                                    $isOpen = $index === 0 ? 'open' : '';
+                                    ?>
+                                    <div
+                                        class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $isOpen; ?>">
+                                        <button
+                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
+                                            <span><?php echo htmlspecialchars($question['title']); ?></span>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="accordion-body">
+                                            <?php echo $question['ans']; ?>
+                                        </div>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[faq end]>-->
 
         <!--<[reach us sec start]>-->
@@ -1178,6 +1083,19 @@
                                     value="<?php echo $pag_url; ?>">
 
                                 <input type="hidden" name="me_submited" value="1">
+                                <!-- Privacy Policy Checkbox -->
+                                <label class="f-nunito fs-14 fw-normal"
+                                    style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                            Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button type="submit" class="form-control-btn w-auto">Submit</button>
 
                                 <div class="loader text-center" style="display:none;">
@@ -1369,6 +1287,19 @@
                     <input type="hidden" name="me_pageurl" value="<?php echo $pag_url; ?>">
 
                     <input type="hidden" name="me_submited" value="1">
+                    <!-- Privacy Policy Checkbox -->
+                    <label class="f-nunito fs-14 fw-normal"
+                        style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                        <span>
+                            By sharing your details, you agree to our Terms and <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
                     <button type="submit" class="form-control-btn">Submit</button>
 
                     <div class="loader text-center" style="display:none;">
