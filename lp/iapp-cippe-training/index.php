@@ -206,7 +206,7 @@ if ($course_data !== null) {
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/training-support.png"
                                         alt="CIPP/E Course Highlights" width="45" height="45">
-                                    <p>24x7 Post-Training Support</p>
+                                    <p>Telegram Group for Exam Support</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
@@ -218,7 +218,7 @@ if ($course_data !== null) {
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/customer-service.png"
                                         alt="CIPP/E Course Highlights" width="45" height="45">
-                                    <p>Guaranteed Lowest Price</p>
+                                    <p>Guaranteed Lowest Price With Exam Included</p>
                                 </div>
                             </div>
                             <div class="item-footer">
