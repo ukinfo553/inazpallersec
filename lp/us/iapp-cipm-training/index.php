@@ -906,130 +906,87 @@ if ($course_data !== null) {
                     <div class="col-12">
                         <div class="swiper myGladiators">
                             <div class="swiper-wrapper">
-                                <!--/ col start /-->
+                                <!-- Testimonial 1 -->
                                 <div class="swiper-slide gladiators-item">
                                     <div class="profile">
                                         <div class="d-flex align-items-center gap-3">
                                             <div class="flex-shrink-0">
-                                                <img src="assets/images/testimonial/Mohammed-Shafee.png"
-                                                    alt="Mohammed Shafee" width="250" height="250">
+                                                <img src="assets/images/testimonial/partab-hirani.png" alt="Partab Hirani"
+                                                    width="250" height="250" loading="lazy">
                                             </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <h3>
-                                                    Mohammed Shafee
-                                                </h3>
-                                                <span>Bahrain</span>
+                                            <div class="flex-grow-1">
+                                                <h3>Partab Hirani</h3>
+                                                <span>United Kingdom</span>
                                             </div>
                                         </div>
                                     </div>
                                     <p class="desc">
-                                        The training was highly informative. Both the support team and the instructor
-                                        were excellent - clear, knowledgeable, and engaging. I gained valuable insights
-                                        that will certainly help in my role.
+                                        I'm very satisfied with all aspects of the training. The mentor is a true expert
+                                        - approachable, supportive, and genuinely passionate about helping learners
+                                        grow.
                                     </p>
                                 </div>
 
-                                <!--/ col start /-->
+                                <!-- Testimonial 2 -->
                                 <div class="swiper-slide gladiators-item">
                                     <div class="profile">
                                         <div class="d-flex align-items-center gap-3">
                                             <div class="flex-shrink-0">
-                                                <img src="assets/images/testimonial/Akmal.m.png" width="250"
-                                                    height="250" alt="Akmal.m">
+                                                <img src="assets/images/testimonial/Yash-Kanaiya.png" alt="Yash Kanaiya"
+                                                    width="250" height="250" loading="lazy">
                                             </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <h3>
-                                                    Akmal.m
-                                                </h3>
-                                                <span>UAE</span>
+                                            <div class="flex-grow-1">
+                                                <h3>Yash Kanaiya</h3>
+                                                <span>United States</span>
                                             </div>
                                         </div>
                                     </div>
                                     <p class="desc">
-                                        The class was really good. The instructor gave us confidence and delivered the
-                                        content in an impactful and easy-to-understand manner.
-                                    </p>
-                                </div>
-                                <!--/ col start /-->
-                                <div class="swiper-slide gladiators-item">
-                                    <div class="profile">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="flex-shrink-0">
-                                                <img src="assets/images/testimonial/MohmadSohel-Haradwala.png"
-                                                    width="250" height="250" alt="MohmadSohel Haradwala">
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <h3>
-                                                    MohmadSohel Haradwala
-                                                </h3>
-                                                <span>Kuwait</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="desc">
-                                        Excellent training! Sessions were timely, and everything was taught in a simple,
-                                        easy-to-follow way.
+                                        The course structure was well-planned. The instructor's primary focus was on
+                                        student improvement, and their approach truly helped elevate my understanding.
                                     </p>
                                 </div>
 
-                                <!--/ col start /-->
+                                <!-- Testimonial 3 -->
                                 <div class="swiper-slide gladiators-item">
                                     <div class="profile">
                                         <div class="d-flex align-items-center gap-3">
                                             <div class="flex-shrink-0">
-                                                <img src="assets/images/testimonial/Majid-Hamid.png" width="250"
-                                                    height="250" alt="Majid Hamid">
+                                                <img src="assets/images/testimonial/Naveed-Saghiruddin.png" alt="Naveed Saghiruddin"
+                                                    width="250" height="250" loading="lazy">
                                             </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <h3> Majid Hamid</h3>
-                                                <span>Iraq</span>
+                                            <div class="flex-grow-1">
+                                                <h3>Naveed Saghiruddin</h3>
+                                                <span>United Kingdom</span>
                                             </div>
                                         </div>
                                     </div>
                                     <p class="desc">
-                                        It was a very good class and extremely helpful in gaining valuable information.
+                                        The training was well-organized and comprehensive. The instructor explained each
+                                        topic clearly, using relatable examples that made learning easier.
                                     </p>
                                 </div>
 
-                                <!--/ col start /-->
+                                <!-- Testimonial 4 -->
                                 <div class="swiper-slide gladiators-item">
                                     <div class="profile">
                                         <div class="d-flex align-items-center gap-3">
                                             <div class="flex-shrink-0">
-                                                <img src="assets/images/testimonial/Laiju-Kodippadi-Lakshmanan.png"
-                                                    width="250" height="250" alt="Laiju Kodippadi Lakshmanan">
+                                                <img src="assets/images/testimonial/Vivek-Srivastava.png" alt="Vivek Srivastava"
+                                                    width="250" height="250" loading="lazy">
                                             </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <h3> Laiju Kodippadi Lakshmanan</h3>
-                                                <span>UAE</span>
+                                            <div class="flex-grow-1">
+                                                <h3>Vivek Srivastava</h3>
+                                                <span>United States</span>
                                             </div>
                                         </div>
                                     </div>
                                     <p class="desc">
-                                        Thanks to the instructor for their excellent teaching and subject knowledge. The
-                                        entire training was both enjoyable and enriching.
+                                        It was a great learning experience with the expert. The sessions were well
+                                        delivered and very informative.
                                     </p>
                                 </div>
 
-                                <!--/ col start /-->
-                                <div class="swiper-slide gladiators-item">
-                                    <div class="profile">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="flex-shrink-0">
-                                                <img src="assets/images/testimonial/Harinath-Narayanan.png" width="250"
-                                                    height="250" alt="Harinath Narayanan">
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <h3> Harinath Narayanan</h3>
-                                                <span>UAE</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="desc">
-                                        Thanks to the support team. The training provided an excellent walkthrough of
-                                        the key concepts.
-                                    </p>
-                                </div>
                             </div>
 
                             <div class="d-none d-md-flex justify-content-center align-items-center navigation">
