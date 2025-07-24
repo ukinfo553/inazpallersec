@@ -155,7 +155,7 @@ if ($course_data !== null) {
                     <!--/ col start /-->
                     <div class="col-lg-5 col-md-6 d-none d-lg-block">
                         <div class="item">
-                            <img src="assets/images/banner-img-v2.webp" fetchpriority="high" alt="CIPP/E by InfosecTrain"
+                            <img src="assets/images/banner-img.webp" fetchpriority="high" alt="CIPP/E by InfosecTrain"
                                 width="788" height="788" loading="lazy">
                         </div>
                     </div>
@@ -535,6 +535,24 @@ if ($course_data !== null) {
                         <!--/ col end /-->
 
                         <!--/ col start /-->
+                        <!-- <div class="swiper-slide item">
+                            <div class="profile-desc">
+                                <div class="avtar-data">
+                                    <div class="avtar-name">
+                                    JAI
+                                    </div>
+                                    <div class="avtar-exp">
+                                        14+ Years of Experience
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="designation">
+                            Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT | CISA | CSA STAR
+                            </div>
+                            <div class="summary">
+                            14+ years of experience as a core cyber security, Information Security and Data Privacy expert. He holds various top industry certifications which reinforce his quality and knowledge in these areas. He is a passionate teacher and mentor, his training sessions are highly interactive and discussion oriented. He uses real life examples to connect the learnings, using quiz and questions to prepare his students for exams and assist them achieve their goals.
+                            </div>
+                        </div> -->
                         <div class="swiper-slide item">
                             <div class="profile-desc">
                                 <div class="avtar">
@@ -546,15 +564,15 @@ if ($course_data !== null) {
                                         JAI
                                     </div>
                                     <div class="avtar-exp">
-                                        13+ Years Of Experience
+                                        14+ Years Of Experience
                                     </div>
                                 </div>
                             </div>
                             <div class="designation">
-                                Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT-OT| CISA | CSA STAR
+                                Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT| CISA | CSA STAR
                             </div>
                             <div class="summary">
-                                13+ years of experience as a core cyber security, Information Security and Data Privacy
+                                14+ years of experience as a core cyber security, Information Security and Data Privacy
                                 expert. He holds various top industry certifications which reinforce his quality and
                                 knowledge in these areas. He is a passionate teacher and mentor, his training sessions
                                 are highly interactive and discussion oriented.
