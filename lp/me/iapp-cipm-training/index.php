@@ -79,7 +79,7 @@
                             <a href="#training-calendar">Training Calendar</a>
                         </li>
                         <li>
-                            <a href="#why-choose">Why InfosecTrain</a>
+                            <a href="#instructor">Meet Our Instructor</a>
                         </li>
                         <li>
                             <a href="#benefits">Career Benefits</a>
@@ -622,7 +622,7 @@
         <!--<[corporate training sec end]>-->
 
         <!--<[expert sec start]>-->
-        <section class="expert-sec">
+        <section class="expert-sec" id="instructor">
             <div class="container-fluid container-lg">
                 <div class="row">
                     <div class="col-12">
