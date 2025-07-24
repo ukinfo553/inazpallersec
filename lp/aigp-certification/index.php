@@ -93,7 +93,7 @@ if ($course_data !== null) {
                             <a href="#training-calendar">Training Calendar</a>
                         </li>
                         <li>
-                            <a href="#why-choose">Meet Our Instructor</a>
+                            <a href="#instructor">Meet Our Instructor</a>
                         </li>
                         <li>
                             <a href="#benefits">Career Benefits</a>
@@ -509,7 +509,7 @@ if ($course_data !== null) {
         <!--<[corparate training end]>-->
 
         <!--<[expert sec start]>-->
-        <section class="expert-sec">
+        <section class="expert-sec" id="instructor">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
