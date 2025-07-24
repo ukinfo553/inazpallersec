@@ -79,7 +79,7 @@
                             <a href="#training-calendar">Training Calendar</a>
                         </li>
                         <li>
-                            <a href="#why-choose">Why InfosecTrain</a>
+                            <a href="#why-choose">Meet Our Instructor</a>
                         </li>
                         <li>
                             <a href="#benefits">Career Benefits</a>
@@ -633,14 +633,63 @@
                 <div class="swiper myAdvisor">
                     <div class="swiper-wrapper justify-content-md-center">
                         <!--/ col start /-->
-                        <div class="swiper-slide item">
+                        <!-- <div class="swiper-slide item">
                             <div class="profile-desc">
                                 <div class="avtar-data">
                                     <div class="avtar-name">
-                                        Jai
+                                        Prabh Nair
                                     </div>
                                     <div class="avtar-exp">
-                                        13+ Years of Experience
+                                        18+ Years of Experience
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="designation">
+                                CISSP-ISSAP | CGRC | CCSP | CSSLP | CCISO | CISM | CISA | CRISC | CGEIT | CIPM | CIPPE |
+                                CDPSE
+                            </div>
+                            <div class="summary">
+                                18 + years of experience in Information Technology industry with specialization in
+                                Information Security
+                                A distinguished Information Security professional with comprehensive knowledge across
+                                all domains of Information Security. Expertise ranges from Vulnerability Assessment &
+                                Penetration Testing to Application Security, and encompasses Security Solutions as well
+                                as IT Governance, Risk & Compliance
+                            </div>
+                        </div> -->
+                        <!--/ col end /-->
+
+                        <!--/ col start /-->
+                        <!-- <div class="swiper-slide item">
+                            <div class="profile-desc">
+                                <div class="avtar-data">
+                                    <div class="avtar-name">
+                                    JAI
+                                    </div>
+                                    <div class="avtar-exp">
+                                        14+ Years of Experience
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="designation">
+                            Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT | CISA | CSA STAR
+                            </div>
+                            <div class="summary">
+                            14+ years of experience as a core cyber security, Information Security and Data Privacy expert. He holds various top industry certifications which reinforce his quality and knowledge in these areas. He is a passionate teacher and mentor, his training sessions are highly interactive and discussion oriented. He uses real life examples to connect the learnings, using quiz and questions to prepare his students for exams and assist them achieve their goals.
+                            </div>
+                        </div> -->
+                        <div class="swiper-slide item">
+                            <div class="profile-desc">
+                                <div class="avtar">
+                                    <img src="https://www.infosectrain.com/wp-content/uploads/2024/02/jai-data-privacy-trainner.png"
+                                        alt="Jai|InfosecTrain Instructor">
+                                </div>
+                                <div class="avtar-data">
+                                    <div class="avtar-name">
+                                        JAI
+                                    </div>
+                                    <div class="avtar-exp">
+                                        14+ Years Of Experience
                                     </div>
                                 </div>
                             </div>
@@ -648,16 +697,15 @@
                                 Data Privacy | CIPP/E | CIPM | CIPT | AIGP | FIP | FIPT–OT| CISA | CSA STAR
                             </div>
                             <div class="summary">
-                                13+ years of experience as a core cyber security, Information Security and Data Privacy
+                                14+ years of experience as a core cyber security, Information Security and Data Privacy
                                 expert. He holds various top industry certifications which reinforce his quality and
                                 knowledge in these areas. He is a passionate teacher and mentor, his training sessions
                                 are highly interactive and discussion oriented.
                             </div>
                         </div>
                         <!--/ col end /-->
-
                     </div>
-                    <div class="d-none d-md-flex justify-content-center align-items-center navigation">
+                    <div class="d-flex justify-content-center align-items-center navigation">
                         <div class="swiper-button-prev">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 16"
                                 fill="none">
