@@ -174,7 +174,7 @@
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/weekend-batches.svg"
                                         alt="CCSK Online Training Course Highlights" width="45" height="45">
-                                    <p>Immersive Learning</p>
+                                    <p>Apply Zero Trust & AI</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
@@ -227,7 +227,7 @@
                                 <ul>
                                     <li>Practice-based training with real world cloud security scenarios</li>
                                     <li>Boost your success with exam simulations, practice question bank and 98% pass rate </li>
-                                    <li>Get career guidance, placement assistance and post training support</li>
+                                    <li>Get career guidance, and post training support till exam</li>
                                 </ul>
                             </div>
                             <div class="faq-wrapper">
@@ -650,7 +650,7 @@
                         <div class="item">
                             <img src="assets/images/why-choose/exam.png" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p><strong>Conquer the skills </strong>required to ace Cloud Security</p>
+                            <p><strong>Learn better with </strong>interactive flash cards, mind maps and quizzes</p>
                         </div>
                     </div>
                     <!--/ col start /-->
