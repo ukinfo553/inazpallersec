@@ -677,7 +677,7 @@ if ($course_data !== null) {
                         <div class="item">
                             <img src="assets/images/why-choose/learning-schedule.png" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p>Choose <strong> Flexible Learning</strong> options including weekend batches</p>
+                            <p>Telegram Group Support for <strong> Exam Preparation</strong></p>
                         </div>
                     </div>
                 </div>

@@ -552,7 +552,7 @@ if ($course_data !== null) {
                     <div class="col-lg-4 col-md-6 pt-4 pt-md-0 ps-md-4">
                         <div class="d-flex flex-column align-items-center align-items-md-start gap-3">
                             <h2>CIPM Corporate Training</h2>
-                            <p>Upskill Your Team on Information Security</p>
+                            <p>Upskill Your Team on Data Privacy</p>
                             <button class="button modal-btn" modal-title="Talk to Advisor">Talk to Advisor</button>
                         </div>
                     </div>
@@ -709,7 +709,7 @@ if ($course_data !== null) {
                         <div class="item">
                             <img src="assets/images/why-choose/price-list.png" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p>Best Quality Training with <strong>Best Price Guarantee</strong></p>
+                            <p>Telegram Group Support for <strong>Exam Preparation</strong></p>
                         </div>
                     </div>
                     <!--/ col start /-->

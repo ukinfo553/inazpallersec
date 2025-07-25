@@ -228,7 +228,7 @@ if ($course_data !== null) {
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/learning-schedule.png"
                                         alt="CompTIA Security+ SY0-701 Course Highlights" width="45" height="45">
-                                    <p>Weekend Batches</p>
+                                    <p>Telegram Group for Exam Support</p>
                                 </div>
                             </div>
                             <div class="item-footer">
@@ -718,7 +718,7 @@ if ($course_data !== null) {
                         <div class="item">
                             <img src="assets/images/why-choose/price-list.png" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p>Best Quality Training with <strong>Best Price Guarantee</strong></p>
+                            <p>Access to official study guides,<strong>curated study materials & resources</strong></p>
                         </div>
                     </div>
                     <!--/ col start /-->

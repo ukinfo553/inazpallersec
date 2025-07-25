@@ -230,7 +230,7 @@ if ($course_data !== null) {
                                     style="background: var(--acent-green);">
                                     <img src="assets/images/highlight-icon/exam-voucher.svg" width="42" height="42"
                                         alt="">
-                                    <p>Exam Voucher</p>
+                                    <p>Telegram Group for Exam Support</p>
                                 </div>
                             </div>
                             <!--col start-->
@@ -254,7 +254,7 @@ if ($course_data !== null) {
                                 <div class="h-100 d-flex flex-column gap-3 p-3 rounded-4"
                                     style="background: var(--acent-orange);">
                                     <img src="assets/images/highlight-icon/guarantee.svg" width="42" height="42" alt="">
-                                    <p>Guaranteed Lowest Price</p>
+                                    <p>Guaranteed Lowest Price With Exam Included</p>
                                 </div>
                             </div>
                             <!--col start-->

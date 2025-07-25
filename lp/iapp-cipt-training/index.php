@@ -205,7 +205,7 @@ if ($course_data !== null) {
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/exam-voucher.png"
                                         alt="CIPT Course Highlights" width="45" height="45">
-                                    <p>Career-oriented Skill-based Course</p>
+                                    <p>Exam Voucher Included</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
@@ -646,9 +646,9 @@ if ($course_data !== null) {
                     <!--/ col start /-->
                     <div class="col-lg-3 col-md-4 col-6">
                         <div class="item">
-                            <img src="assets/images/why-choose/price-list.png" width="45" height="45"
+                            <img src="assets/images/why-choose/telegram.svg" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p>Best Quality Training with <strong>Best Price Guarantee</strong></p>
+                            <p>Telegram Group Support for Exam Preparation</p>
                         </div>
                     </div>
                     <!--/ col start /-->

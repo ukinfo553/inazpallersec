@@ -204,7 +204,7 @@ if ($course_data !== null) {
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/weekend-batches.svg"
                                         alt="PCI-DSS Online Training Course Highlights" width="45" height="45">
-                                    <p>Immersive Learning</p>
+                                    <p>Covers PCI DSS v4.0.1</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
@@ -587,7 +587,7 @@ if ($course_data !== null) {
                         <div class="item">
                             <img src="assets/images/why-choose/assessment-practice.png" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p><strong>Practice with labs</strong>, regular assessments, and case studies</p>
+                            <p><strong>Practice with</strong> regular assessments, and case studies</p>
                         </div>
                     </div>
                     <!--/ col start /-->
@@ -619,7 +619,7 @@ if ($course_data !== null) {
                         <div class="item">
                             <img src="assets/images/why-choose/certificate.png" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p>Prepare to excel with mock tests, exam tips, and <strong>real-world examples</strong></p>
+                            <p>Prepare to excel with mock tests, and <strong>real-world examples</strong></p>
                         </div>
                     </div>
                     <!--/ col start /-->
