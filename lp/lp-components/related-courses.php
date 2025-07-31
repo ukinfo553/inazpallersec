@@ -99,19 +99,24 @@ picture[title="Buy 1 Course Get 1 Free"] img {
 $relatedCourses = [
     "comptia-a-plus-network-plus-certification-training" => [
         [
-            "link" => "https://www.infosectrain.com/courses/comptia-datax-training/",
-            "image" => "https://www.infosectrain.com/wp-content/uploads/2025/06/CompTIA-DataX_Feature-Image.png",
-            "text" => "CompTIA DataX (Plus) Certification Training"
+            "link" => "https://www.infosectrain.com/courses/comptia-security/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/SECURITY-min.png",
+            "text" => "CompTIA Security+ (Plus) Certification Training"
         ],
         [
-            "link" => "https://www.infosectrain.com/courses/cloudnetx-certification-training/",
-            "image" => "https://www.infosectrain.com/wp-content/uploads/2024/08/feature-default.webp",
-            "text" => "CompTIA CloudNetX Certification Training"
+            "link" => "https://www.infosectrain.com/courses/certified-in-cybersecurity-cc-exam-preparation/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2024/05/Certified-in-Cybersecurity-CC-Full-Practice-Exam-Training.jpg",
+            "text" => "Certified in Cybersecurity (CC) Certification Training"
         ],
         [
-            "link" => "https://www.infosectrain.com/courses/comptia-datasys-certification-training/",
-            "image" => "https://www.infosectrain.com/wp-content/uploads/2024/11/CompTIA-DataSys-DS0-001-Certification-Training.png",
-            "text" => "CompTIA DataSys+ (DS0-001) Certification Training"
+            "link" => "https://www.infosectrain.com/courses/soc-analyst-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
+            "text" => "SOC Analyst Hands-on Training [2025]"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/certified-ethical-hacker-ceh-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2024/09/CEH-v13-AI-Online-Training-Certification-Course.jpg",
+            "text" => "CEH v13 AI Certification Training"
         ],
     ],
     "iso-42001-lead-auditor-training" => [

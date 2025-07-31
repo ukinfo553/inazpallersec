@@ -129,7 +129,7 @@ if(IsInjected($me_email))
 
 
 
-$email_subject = "New Enquiry from CISM Landing Page";
+$email_subject = "New Enquiry from CompTIA A+ and Network+ Landing Page";
 
 $user_subject = "Thank you for your enquiry! We'll be in touch soon.";
 
@@ -356,7 +356,7 @@ return array($result,$last);
 
     'site_name' => 'lp',
 
-    'page_type' => 'CISM',
+    'page_type' => 'CompTIA A+ and Network+',
 
     'name' => $me_name,
 
