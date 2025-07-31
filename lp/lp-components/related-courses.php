@@ -3,7 +3,8 @@
 .related-course-sec .col-lg-3 {
     margin-top: 24px;
 }
-.related-course-sec .item{
+
+.related-course-sec .item {
     border: 1px solid #f0f0f0;
     display: block;
     text-decoration: none;
@@ -11,21 +12,25 @@
     border-radius: 5px;
     height: 100%;
 }
-.related-course-sec .item img{
+
+.related-course-sec .item img {
     width: 100%;
     max-width: 100%;
     height: auto;
     border-radius: 5px 5px 0 0;
 }
-.related-course-sec .item .item-body{
+
+.related-course-sec .item .item-body {
     padding: 10px 8px;
 }
+
 @media (min-width:768px) {
     .related-course-sec .item .item-body {
         padding: 16px 12px;
     }
 }
-.related-course-sec .item .item-body h4{
+
+.related-course-sec .item .item-body h4 {
     color: #080808;
     font-family: "Nunito Sans";
     font-size: 13px;
@@ -44,13 +49,15 @@
     -moz-box-orient: vertical;
     min-height: auto;
 }
+
 @media (min-width:768px) {
-    .related-course-sec .item .item-body h4{
-    font-size: 16px;
-    min-height: 3em;
+    .related-course-sec .item .item-body h4 {
+        font-size: 16px;
+        min-height: 3em;
+    }
 }
-}
-.related-course-sec .item .item-body a{
+
+.related-course-sec .item .item-body a {
     border-radius: 5px;
     background: linear-gradient(0deg, #F0F0F0 0%, #F0F0F0 100%), linear-gradient(267deg, #EE224A -15.61%, #FF8A00 123.55%);
     width: 100%;
@@ -65,29 +72,48 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    text-transform:uppercase;
+    text-transform: uppercase;
     margin-top: 16px;
 }
-.related-course-sec .item .item-body a:hover{
+
+.related-course-sec .item .item-body a:hover {
     background: linear-gradient(267deg, #E50914 -15.61%, #FF8A00 123.55%);
     color: #ffffff;
 }
+
 @media (min-width:992px) {
-    .related-course-sec .item .item-body a{
+    .related-course-sec .item .item-body a {
         margin-top: 24px;
     }
 }
 
-picture[title="Buy 1 Course Get 1 Free"] img{
-    max-width: 100%!important;
-    width: auto!important;
+picture[title="Buy 1 Course Get 1 Free"] img {
+    max-width: 100% !important;
+    width: auto !important;
 }
-/*======== related course sec end ==========*/
 
+/*======== related course sec end ==========*/
 </style>
 
 <?php
 $relatedCourses = [
+    "comptia-a-plus-network-plus-certification-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/comptia-datax-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2025/06/CompTIA-DataX_Feature-Image.png",
+            "text" => "CompTIA DataX (Plus) Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/cloudnetx-certification-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2024/08/feature-default.webp",
+            "text" => "CompTIA CloudNetX Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/comptia-datasys-certification-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2024/11/CompTIA-DataSys-DS0-001-Certification-Training.png",
+            "text" => "CompTIA DataSys+ (DS0-001) Certification Training"
+        ],
+    ],
     "iso-42001-lead-auditor-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/iso-iec-42001-lead-implementer-training/",
@@ -1180,7 +1206,8 @@ if ($matchingCourseKey !== null) {
             <div class="col-12">
                 <!-- <h2 class="text-center">Other Popular Courses</h2> -->
 
-                <h2 class="text-center"><?php echo isset($customHeading) ? $customHeading : 'Other Popular Courses'; ?></h2>
+                <h2 class="text-center"><?php echo isset($customHeading) ? $customHeading : 'Other Popular Courses'; ?>
+                </h2>
             </div>
         </div>
         <div class="row">
@@ -1188,15 +1215,16 @@ if ($matchingCourseKey !== null) {
             <?php
             foreach ($courses as $course) {
             ?>
-                <div class="col-6 col-lg-3">
-                    <div class="item">
-                        <!-- <img src="<?php //echo $course['image']; ?>" alt="Related Courses" width="400" height="226"> -->
-                        <div class="item-body">
-                            <h4 title="<?php echo $course['text']; ?>"><?php echo $course['text']; ?></h4>
-                            <a href="<?php echo $course['link']; ?>" target="_blank" title="<?php echo $course['text']; ?>">Check Now</a>
-                        </div>
+            <div class="col-6 col-lg-3">
+                <div class="item">
+                    <!-- <img src="<?php //echo $course['image']; ?>" alt="Related Courses" width="400" height="226"> -->
+                    <div class="item-body">
+                        <h4 title="<?php echo $course['text']; ?>"><?php echo $course['text']; ?></h4>
+                        <a href="<?php echo $course['link']; ?>" target="_blank"
+                            title="<?php echo $course['text']; ?>">Check Now</a>
                     </div>
                 </div>
+            </div>
             <?php
             }
             ?>
@@ -1209,10 +1237,10 @@ if ($matchingCourseKey !== null) {
 ?>
 
 <script>
-    // let tdata = document.querySelector('.row-hover .row-2');
-    // if(tdata == null){
-    //     document.getElementById('training-calendar').style.display = "none";
-    //     document.querySelector('.sidenav li:nth-child(2)').style.display = "none";
-    //     //document.querySelector('footer .quick-links ul li:nth-child(2)').style.display = 'none';
-    // }
+// let tdata = document.querySelector('.row-hover .row-2');
+// if(tdata == null){
+//     document.getElementById('training-calendar').style.display = "none";
+//     document.querySelector('.sidenav li:nth-child(2)').style.display = "none";
+//     //document.querySelector('footer .quick-links ul li:nth-child(2)').style.display = 'none';
+// }
 </script>
