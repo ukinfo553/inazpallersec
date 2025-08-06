@@ -234,7 +234,7 @@ if ($course_data !== null) {
                                     <img src="assets/images/highlight-icon/money-back.webp"
                                         alt="Combo A+-N+ Online Training Course Highlights" width="150" height="150">
                                     <img src="https://www.infosectrain.com/wp-content/uploads/2020/09/comp-tia.png"
-                                        width="120" height="129" alt="Combo A+-N+ Course Highlights" loading="lazy">
+                                        width="150" height="100" alt="Combo A+-N+ Course Highlights" loading="lazy">
                                 </div>
                                 <p style="margin-top: 24px;opacity: .8;">* Conditions Apply</p><br>
                             </div>

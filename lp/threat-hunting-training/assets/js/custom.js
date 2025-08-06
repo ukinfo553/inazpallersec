@@ -1,6 +1,6 @@
 var instructor = new Swiper(".myAdvisor", {
   slidesPerView: 1,
-  // spaceBetween: 40,
+  spaceBetween: 24,
   loop: false,
   pagination: {
     el: ".myAdvisor .swiper-pagination",
