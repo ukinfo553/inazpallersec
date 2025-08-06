@@ -1,4 +1,27 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$courseID = 44035;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($courseID);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +36,8 @@
         <!--/ style link start /-->
         <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
         <link rel="stylesheet" href="assets/css/style.css" defer>
+        <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" defer />
         <!--/ style link end /-->
         <!-- Google Tag Manager -->
@@ -48,10 +73,6 @@
     // Append the requested resource location to the URL
     $pag_url .= $_SERVER['REQUEST_URI'];
 
-    $courseID = 44035; // course id
-    // broucher link pdf file code start
-    $brochureLink = json_decode(file_get_contents("https://www.infosectrain.com/api/brochure_byid.php?id=$courseID"), true)[0]['brochure'] ?? null;
-    // broucher link pdf file code end
     ?> -->
 
         <!--/ navbar start /-->
@@ -127,8 +148,13 @@
                                 <div class="button-sec d-flex flex-column flex-md-row">
                                     <button class="cta-button modal-btn" title="Talk to Our Expert"
                                         modal-title="TALK TO OUR EXPERT">Talk to Our Expert</button>
-                                    <a href="<?php echo $brochureLink; ?>" target="_blank" class="cta-button">Download
-                                        Brochure</a>
+                                    <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="cta-button"
+                                    title="Download Brochure">Download Brochure</a>';
+                                }
+                                ?>
                                 </div>
                                 <img src="assets/images/review-mob-img.png" alt="Threat Hunting Course Review"
                                     width="636" height="34" fetchPriority="high" class="review-img">
@@ -232,246 +258,33 @@
                                 </div>
                                 <div class="faq-wrapper">
                                     <!--/ faq item /-->
-                                    <div class="faq-item active open">
-                                        <h3 class="faq-title"><span class="title">Course Curriculum</span><span
-                                                class="right-icon"></span></h3>
+                                    <?php
+                                // Check that course_details exists and is a non-empty array
+                                if (!empty($course_details) && is_array($course_details)) {
+                                    foreach ($course_details as $index => $detail) {
+                                        // Make the first item active and open
+                                        $activeClass = $index === 0 ? 'active open' : '';
+                                        ?>
+                                    <div class="faq-item <?php echo $activeClass; ?>">
+                                        <h3 class="faq-title">
+                                            <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
+                                            <span class="right-icon"></span>
+                                        </h3>
                                         <div class="faq-content">
-                                            <strong>Module 1: Advanced Security Operations</strong>
-                                            <ul>
-                                                <li>SOC Metrics and KPIs</li>
-                                                <li>Purple Team Integration</li>
-                                                <li>Detection Engineering Methodology</li>
-                                                <li>SIEM and SOAR Optimization</li>
-                                                <li>Implementing MITRE ATT&amp;CK Framework</li>
-                                            </ul>
-                                            <strong>Module 2: Persistence Threat Hunting</strong>
-                                            <ul>
-                                                <li>Advanced Registry Analysis Techniques</li>
-                                                <li>WMI Event Subscription Detection</li>
-                                                <li>COM Hijacking and DLL Search Order</li>
-                                                <li>Scheduled Task Analysis and Anomaly Detection</li>
-                                                <li>Mul-Log Correlation for Persistence Hunting</li>
-                                                <li><span style="color:var(--red);">Lab:</span> Detecting Advanced
-                                                    Persistence Mechanisms</li>
-                                            </ul>
-                                            <strong>Module 3: Lateral Movement Analysis</strong>
-                                            <ul>
-                                                <li>Pass-the-Hash and Pass-the-Ticket Detection</li>
-                                                <li>Detecting Authenticated Remote Execution</li>
-                                                <li>RDP/VPN Access Analysis</li>
-                                                <li>WMI and PowerShell Remoting Abuse</li>
-                                                <li>Kerberos Protocol Analysis</li>
-                                                <li><span style="color:var(--red);">Lab:</span> Lateral Movement
-                                                    Investigation</li>
-                                            </ul>
-                                            <strong>Module 4: Network-Based Threat Hunting</strong>
-                                            <ul>
-                                                <li>Statistical Approaches to Traffic Analysis</li>
-                                                <li>Beacon Pattern Detection in Network Traffic</li>
-                                                <li>DNS and HTTP Tunneling Identification</li>
-                                                <li>TLS/SSL Inspection Strategies</li>
-                                                <li>Network Timeline Reconstruction</li>
-                                                <li><span style="color:var(--red);">Lab:</span> Network Traffic Analysis
-                                                    for
-                                                    C2 Detection</li>
-                                            </ul>
-                                            <strong>Module 5: Credential Theft Investigation</strong>
-                                            <ul>
-                                                <li>Windows Authentication Mechanisms (In-depth)</li>
-                                                <li>Detecting Credential Dumping Operations</li>
-                                                <li>Kerberoasting and AS-REP Roasting Detection</li>
-                                                <li>DPAPI Analysis for Credential Extraction</li>
-                                                <li>Domain Controller Authentication Log Analysis</li>
-                                                <li><span style="color:var(--red);">Lab:</span>Credential Abuse Incident
-                                                    Response</li>
-                                            </ul>
-                                            <strong>Module 6: Malware Analysis Techniques</strong>
-                                            <ul>
-                                                <li>Static Analysis with Binary Analysis Tools</li>
-                                                <li>Dynamic Analysis in Isolated Environments</li>
-                                                <li>Memory Dumping and Analysis for Malware</li>
-                                                <li>Anti-Analysis Technique Identification</li>
-                                                <li>Process Injection and Hollowing Detection</li>
-                                                <li><span style="color:var(--red);">Lab:</span> Analyzing Real-World
-                                                    Malicious Samples</li>
-                                            </ul>
-                                            <strong>Module 7: Memory Forensics</strong>
-                                            <ul>
-                                                <li>Memory Acquisition Methods and Challenges</li>
-                                                <li>Process, DLL, and Driver Analysis</li>
-                                                <li>Detecting Rootkits and Bootkits</li>
-                                                <li>Finding Injected Code and Hidden Processes</li>
-                                                <li>Analyzing Malware Artifacts in Memory</li>
-                                                <li><span style="color:var(--red);">Lab:</span> Memory Analysis for
-                                                    Hidden
-                                                    Threats</li>
-                                            </ul>
-                                            <strong>Module 8: Disk Forensics</strong>
-                                            <ul>
-                                                <li>Analysis for Proof of Execution</li>
-                                                <li>Analysis for Proof of File / Folder Access</li>
-                                                <li>Extracting Windows Event Logs for Offline Analysis</li>
-                                                <li>Extracting Windows Registry for Offline Analysis</li>
-                                                <li>MFT Analysis for File System Artifacts</li>
-                                                <li>Advanced File System Artifact Analysis</li>
-                                                <li>Timeline Creation and Analysis</li>
-                                                <li>Super Timeline Creation and Analysis</li>
-                                                <li><span style="color:var(--red);">Lab:</span> Disk-Based Investigation
-                                                    and
-                                                    Evidence Recovery
-                                                </li>
-                                            </ul>
-                                            <strong>Module 9: Final Challenge</strong>
-                                            <ul>
-                                                <li>Perform Threat Hunting, Incident Response, Malware Analysis and
-                                                    Forensics</li>
-                                                <li>Solve and Answer Questions</li>
-                                                <li>Apply what you have learnt so far</li>
-                                                <li>Each module includes technical deep dives, practical
-                                                    demonstrations, and hands-on lab exercises.</li>
-                                                <li>Participants must complete lab assignments to receive
-                                                    certification.</li>
-                                            </ul>
-                                            <span style="color:var(--red);">Lab Contents</span>
-                                            <ul>
-                                                <li>Detection Engineering Lab Setup</li>
-                                                <li>Hands-on writing Windows detection</li>
-                                                <li>Hands-on writing complex multisource detection</li>
-                                                <li>Proactive Hunt for confirming presence of adversary</li>
-                                                <li>Hunt for credential abuse or malicious credential usage
-                                                </li>
-                                                <li>Hunt for evidence of adversary across Persistence points
-                                                </li>
-                                                <li>Hunt for advanced persistence techniques</li>
-                                                <li>Evidence identification for Lateral Movement</li>
-                                                <li>Hunt for detection of Lateral Movement</li>
-                                                <li>Credential Tracking for Lateral Movement Hunting</li>
-                                                <li>Malware Analysis Lab Setup</li>
-                                                <li>Static Malware Analysis</li>
-                                                <li>Dynamic Malware Analysis</li>
-                                                <li>Hunting for Malware via YARA rules</li>
-                                                <li>Network Hunting for Malware Beacons</li>
-                                                <li>Network Hunting for DNS Exfiltration</li>
-                                                <li>Network Hunting for Domain Fronting Techniques</li>
-                                                <li>Hands-on Hunting Report Writing with Hand-Off to
-                                                    Incident Response Teams</li>
-                                                <li>Forensics Evidence Acquisition</li>
-                                                <li>Analysing Disk Image</li>
-                                                <li>Analysing Memory Image</li>
-                                                <li>Analysing Filesystem Image</li>
-                                                <li>Writing Threat Intel Reports</li>
-                                            </ul>
-                                            <strong>Final Exercise Challenge:</strong>
-                                            <ul>
-                                                <li>To be completed by students – apply everything learnt so far and
-                                                    solve enterprise scale breach – write reports at the en</li>
-                                            </ul>
+                                            <?php echo $detail['ans']; ?>
 
-                                            <a href="<?php echo $brochureLink; ?>" target="_blank"
-                                                class="cta-button">Download Brochure</a>
+                                            <?php
+                                                // If this is the first item and $brochureLink is set, show brochure button
+                                                if ($index === 0 && !empty($brochure)) {
+                                                    echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
+                                                }
+                                                ?>
                                         </div>
                                     </div>
-                                    <!--/ faq item /-->
-                                    <div class="faq-item">
-                                        <h3 class="faq-title"><span class="title">Course Objectives</span><span
-                                                class="right-icon"></span></h3>
-                                        <div class="faq-content">
-                                            <p>Upon completion of the course, participants will be able to:</p>
-                                            <ul>
-                                                <li>Explain threat hunting workflows, DFIR lifecycle stages, and
-                                                    identify
-                                                    critical Windows artifacts.</li>
-                                                <li>Create detection rules using MITRE ATT&amp;CK (TTP mapping) and
-                                                    develop
-                                                    hypotheses for proactive hunting.</li>
-                                                <li>Detect credential abuse, lateral movement, and persistence
-                                                    mechanisms
-                                                    while performing basic static/dynamic malware analysis.</li>
-                                                <li>Acquire and analyze disk, memory, and registry artifacts, and use
-                                                    open-source tools to build artifact timelines.</li>
-                                                <li>Contain threats using NIST SP 800-61 principles and document
-                                                    findings
-                                                    for handoff to DFIR teams.</li>
-                                                <li>Map adversary behaviors to MITRE D3FEND mitigations and generate
-                                                    actionable alerts from STIX reports.</li>
-                                                <li>Investigate full attack chains—from initial access to
-                                                    exfiltration—and
-                                                    produce both technical and executive reports for mock breaches.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--/ faq item /-->
-                                    <div class="faq-item">
-                                        <h3 class="faq-title"><span class="title">Pre-requisites</span><span
-                                                class="right-icon"></span></h3>
-                                        <div class="faq-content">
-                                            <p>Required Technical Knowledge:</p><br>
-                                            <strong>Windows Systems (Essential)</strong>
-                                            <ul>
-                                                <li>Windows Event Log analysis (Security, System, Application logs)</li>
-                                                <li>Registry structure and common keys related to security</li>
-                                                <li>Windows authentication mechanisms and security tokens</li>
-                                                <li>PowerShell fundamentals and security-related cmdlets</li>
-                                                <li>Windows services, scheduled tasks, and startup mechanisms</li>
-                                            </ul>
-                                            <strong>Networking Fundamentals (Essential)</strong>
-                                            <ul>
-                                                <li>TCP/IP protocol stack operations</li>
-                                                <li>Common protocols and their security implications (HTTP/S, DNS, SMB,
-                                                    RDP)
-                                                </li>
-                                                <li>Basic packet analysis concepts</li>
-                                                <li>Network traffic patterns and anomaly identification</li>
-                                            </ul>
-                                            <strong>Security Concepts (Essential)</strong>
-                                            <ul>
-                                                <li>Common attack vectors and techniques</li>
-                                                <li>Basic log analysis and correlation</li>
-                                                <li>Security monitoring principles</li>
-                                                <li>Malware behavior fundamentals</li>
-                                            </ul>
-                                            <strong>Additional Skills (Highly Recommended)</strong>
-                                            <ul>
-                                                <li>Basic Linux command-line operations (can use an OS without GUI)</li>
-                                                <li>Virtualization experience (VMware/VirtualBox/Hyper-V/Docker)</li>
-                                                <li>Basic scripting and decent programming abilities
-                                                    (PowerShell/Bash/Python/C/C++)</li>
-                                                <li>Understanding of Applied Statistical Analysis (Maths and Stats)</li>
-                                                <li>Familiarity with MITRE ATT&amp;CK framework</li>
-                                            </ul>
-
-                                            <p></p>
-                                            <p><strong>Note:</strong> This is a technically rigorous course.
-                                                Participants
-                                                without these prerequisites will struggle significantly with the pace
-                                                and
-                                                depth of the material.</p>
-
-                                        </div>
-                                    </div>
-                                    <!--/ faq item /-->
-                                    <div class="faq-item">
-                                        <h3 class="faq-title"><span class="title">Target Audience</span><span
-                                                class="right-icon"></span></h3>
-                                        <div class="faq-content">
-                                            <p>This advanced course is specifically designed for:</p>
-                                            <ul>
-                                                <li>SOC Analysts (Tier 2+) seeking to advance beyond alert triage to
-                                                    proactive hunting</li>
-                                                <li>Incident Responders looking to enhance investigation techniques and
-                                                    efficiency</li>
-                                                <li>Security Engineers responsible for building detection engineering
-                                                    capabilities</li>
-                                                <li>Digital Forensic Analysts expanding into threat hunting
-                                                    methodologies
-                                                </li>
-                                                <li>Penetration Testers who want to understand defensive detection
-                                                    techniques</li>
-                                                <li>Security Architects responsible for designing security monitoring
-                                                    solutions</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <?php
+                                    }
+                                }
+                                ?>
                                 </div>
                             </div>
                             <!--<[ course details sec end ]>-->
@@ -497,7 +310,18 @@
                                     <input type="hidden" id="me_others" name="me_others" value="">
                                     <input type="hidden" id="me_pageurl" name="me_pageurl"
                                         value="<?php echo $pag_url; ?>">
-
+                                    <!-- Privacy Policy Checkbox -->
+                                    <label
+                                        style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                        <input type="checkbox" name="privacy_policy" checked required
+                                            style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                        <span>
+                                            By sharing your details, you agree to our Terms and <a
+                                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                                style="color: var(--white);font-size:14px;">Privacy Policy</a>
+                                        </span>
+                                    </label>
+                                    <!-- privacy Policy Checkbox end -->
                                     <button class="cta-button form-button" type="submit" name="me_submited"
                                         id="me_submited">Request a Callback</button>
                                 </form>
@@ -515,39 +339,41 @@
             <!--/ training calendar sec start /-->
             <section class="training-calendar" id="training-calendar">
                 <div class="container">
+                    <?php if (!empty($courseID)): ?>
                     <div class="row">
                         <div class="col-12">
-                            <h2>Advanced Threat Hunting Training Calendar</h2>
+                            <h2>CIPP/E Training Calendar</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <?php
-                        $url = "https://www.infosectrain.com/api/$courseID/href_toscroll/free_demo";
-                        function gettraning_Cal($url)
-                        {
-                            $ch = curl_init();
-                            curl_setopt($ch, CURLOPT_HEADER, 0);
-                            curl_setopt($ch, CURLOPT_VERBOSE, 1);
-                            //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                            curl_setopt($ch, CURLOPT_FAILONERROR, 0);
-                            // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-                            //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-                            curl_setopt($ch, CURLOPT_URL, $url);
+                            $url = "https://www.infosectrain.com/api/$courseID/href_toscroll/free_demo";
+                            function gettraning_Cal($url)
+                            {
+                                $ch = curl_init();
+                                curl_setopt($ch, CURLOPT_HEADER, 0);
+                                curl_setopt($ch, CURLOPT_VERBOSE, 1);
+                                //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+                                curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+                                // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+                                //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+                                curl_setopt($ch, CURLOPT_URL, $url);
 
-                            $content = curl_exec($ch);
+                                $content = curl_exec($ch);
 
-                            curl_close($ch);
-                            return $content;
-                        }
+                                curl_close($ch);
+                                return $content;
+                            }
 
-                        gettraning_Cal($url);
+                            gettraning_Cal($url);
 
-                        ?>
+                            ?>
                         </div>
                     </div>
+                    <?php endif; ?>
                     <div class="row align-items-center">
                         <div class="col-lg-2 d-none d-lg-block">
                             <img src="assets/images/training-calendar.png" width="132" height="128"
@@ -555,7 +381,7 @@
                         </div>
 
                         <div class="col-lg-10 col-md-12">
-                            <h3>Can't Find a Suitable Schedule? Talk to Our Training Advisor!</h3>
+                            <h3>Can't Find a Suitable Schedule? We Can Help You Customize</h3>
                             <div class="hide rows mt-2" id="demo_form_output_calendar"></div>
                             <form method="post" action="" onSubmit="return val_demo_request_calendar(this.form);"
                                 id="demo_contact_f_calendar">
@@ -596,7 +422,7 @@
             <!--/ training calendar sec end /-->
 
             <!--offer sec start -->
-            <?php // Include the related_courses.php file
+            <?php // Include the thankyou.php file
         include('../lp-components/offer.php');
         ?>
             <!--offer sec end -->
@@ -1148,7 +974,8 @@
             <!--<[success story start]>-->
 
             <!--<[FAQ SEC start]>-->
-            <section>
+            <?php if ($faq !== null && !empty($faq)) { ?>
+            <section class="faq-sec">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -1158,163 +985,31 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="faq-wrapper">
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">What is Advanced Threat Hunting and DFIR
-                                            Training?</span><span class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>
-                                            The Advanced Threat Hunting and DFIR Training teaches sophisticated methods
-                                            for
-                                            identifying and handling cybersecurity events. You will learn how to
-                                            identify
-                                            compromised systems, pinpoint the exact moment and method of a
-                                            breach, comprehend the items that attackers took or altered, and effectively
-                                            contain and resolve issues. In the event of a security breach, participants
-                                            will
-                                            get knowledge on how to effectively handle the incident response
-                                            process and aggressively search for risks within a network.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Who should enroll in the Advanced Threat
-                                            Hunting and DFIR Training course?</span><span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p></p>
-                                        <p>The Advanced Threat Hunting and DFIR training course is best suited for:</p>
-                                        <ul>
-                                            <li>Malware Analysts</li>
-                                            <li>Digital Forensic Investigators</li>
-                                            <li>Cyber Security Analysts</li>
-                                            <li>Network Security Engineers</li>
-                                            <li>Red Team Members/Penetration Testers</li>
-                                            <li>Incident Response Team Members</li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">What topics are covered in the Advanced
-                                            Threat
-                                            Hunting and DFIR Training course?</span><span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p>
-                                            The Advanced Threat Hunting and DFIR training course covers Detection
-                                            Engineering, MITRE Frameworks, Malware Analysis, Threat Hunting on Windows
-                                            Logs,
-                                            Advanced Persistence Hunting, Memory and Disk Forensics, Incident Response
-                                            Strategies, Threat Intelligence, and Hands-on Attack Chain Reconstruction
-                                            through real-world scenarios.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">How long is the Advanced Threat Hunting
-                                            and
-                                            DFIR Training course?</span><span class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>
-                                            The Advanced Threat Hunting and DFIR Training course is 40 hours long.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">What are the prerequisites for enrolling
-                                            in
-                                            the DFIR Training course?</span><span class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p></p>
-                                        <p>The prerequisites for enrolling in the Advanced Threat Hunting and DFIR
-                                            training
-                                            course are:</p>
-                                        <ul>
-                                            <li>Familiarity of Window and Linux at log level&nbsp;</li>
-                                            <li>Comprehensive understanding of Information Security and its terms</li>
-                                            <li>Basics of Networking</li>
-                                            <li>Experience in Cyber Security is highly recommended</li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">What certificate will I receive upon
-                                            completing the Advanced Threat Hunting and DFIR Training?</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>
-                                            InfosecTrain provides you with a 20 CPE certificate of achievement after
-                                            completion of this course.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">How can this Advanced Threat Hunting and
-                                            DFIR
-                                            Training course benefit my career?</span><span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p>
-                                            In order to ensure that organizations can protect themselves from cyber
-                                            attacks,
-                                            the Advanced Threat Hunting and DFIR Training is essential to determining
-                                            the
-                                            specifics of cyber incidents. This training will upskill your
-                                            career and provide you with a better position in an organization.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Are there hands-on labs included in the
-                                            DFIR
-                                            Training course?</span><span class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p></p>
-                                        <p>Yes, this course includes labs for:</p>
-                                        <ul>
-                                            <li>Simulating and detecting cyberattacks</li>
-                                            <li>Conducting malware analysis and reverse engineering</li>
-                                            <li>Ransomware Investigation</li>
-                                            <li>Practical Threat Hunting Scenarios</li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Is Advanced Threat Hunting and DFIR
-                                            Training
-                                            available online?</span><span class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>
-                                            Yes, the Advanced Threat Hunting and DFIR Training is available online.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
+                                <!--/ faq item start /-->
+                                <?php
+                                // Display the FAQs section if the data is available
+
+                                foreach ($faq as $index => $question) {
+                                    // Determine if the first item should be open
+                                    $isOpen = $index === 0 ? 'open active' : '';
+                                    $displayStyle = $index === 0 ? 'style="display: block;"' : '';
+
+                                    echo '<div class="faq-item ' . $isOpen . '">';
+                                    echo '    <h3 class="faq-title"><span class="title">' . $question['title'] . '</span><span class="right-icon"></span></h3>';
+                                    echo '    <div class="faq-content" ' . $displayStyle . '>';
+                                    echo $question['ans'];
+                                    echo '    </div>';
+                                    echo '</div>';
+                                }
+                                ?>
+                                <!--/ faq item end /-->
                             </div>
 
                         </div>
                     </div>
                 </div>
             </section>
+            <?php } ?>
             <!--<[FAQ SEC start]>-->
 
             <!--<[reach us sec start]>-->
@@ -1346,7 +1041,18 @@
                                         name="me_others">
                                     <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_footer"
                                         name="me_pageurl">
-
+                                    <!-- Privacy Policy Checkbox -->
+                                    <label
+                                        style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                        <input type="checkbox" name="privacy_policy" checked required
+                                            style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                        <span>
+                                            By sharing your details, you agree to our Terms and <a
+                                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                                style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                                        </span>
+                                    </label>
+                                    <!-- privacy Policy Checkbox end -->
                                     <button class="cta-button form-button" type="submit" name="me_submited"
                                         id="me_submited_footer">Request a Callback</button>
                                 </form>
@@ -1546,7 +1252,18 @@
                         <input type="hidden" value="" id="me_others_pop" name="me_others" />
                         <!-- <input type="hidden" value="" id="me_message" name="me_message" /> -->
                         <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_pop" name="me_pageurl" />
-
+                        <!-- Privacy Policy Checkbox -->
+                        <label
+                            style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                            <input type="checkbox" name="privacy_policy" checked required
+                                style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                            <span>
+                                By sharing your details, you agree to our Terms and <a
+                                    href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                    style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                            </span>
+                        </label>
+                        <!-- privacy Policy Checkbox end -->
                         <button class="cta-button form-button" type="submit" name="me_submited"
                             id="me_submited_pop">Request
                             a Callback</button>

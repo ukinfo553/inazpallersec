@@ -26,10 +26,6 @@
 }
 
 /*====== global tag style start =======*/
-.loading_w{
-    text-align: center;
-    margin-top: 8px;
-}
 section {
     padding: 36px 0;
 }
@@ -109,7 +105,7 @@ ul li {
     list-style-position: inside;
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
 }
 ul li::before{
@@ -137,7 +133,6 @@ ul li::before{
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
-    text-align: center;
 }
 
 @media (min-width:768px) {
@@ -153,7 +148,10 @@ ul li::before{
     height: auto;
     display: block;
 }
-
+.loading_w img{
+    display: block;
+    margin: 16px auto auto auto;
+}
 /*====== global tag style end =======*/
 
 /*========navbar style======*/
@@ -328,7 +326,7 @@ nav {
 .banner-sec .item h1 {
     color: var(--red);
     font-family: var(--roboto);
-    font-size: 24px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -364,10 +362,10 @@ nav {
     flex-direction: column;
 }
 
-/* .banner-sec .item .banner-highlights div:first-child {
+.banner-sec .item .banner-highlights div:first-child {
     border-bottom: 1px solid var(--border-grey);
     padding-bottom: 16px;
-} */
+}
 
 @media (min-width:768px) {
     .banner-sec .item .banner-highlights div:first-child {
@@ -394,18 +392,14 @@ nav {
 
 .banner-sec .item .banner-highlights div p {
     color: var(--bg-dark);
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-@media (min-width:768px) {
-    .banner-sec .item .banner-highlights div p {
-        font-size: 16px;
-    }
 
-}
 .banner-sec .item .button-sec {
+    display: flex;
     gap: 16px;
 }
 
@@ -414,7 +408,7 @@ nav {
 }
 
 .banner-sec .item .button-sec a.cta-button:nth-child(2) {
-    border: 1px solid var(--border-grey);
+    /* border: 1px solid var(--grey); */
     background: var(--white);
     color: var(--dark-grey);
 }
@@ -423,6 +417,7 @@ nav {
     .banner-sec .item .button-sec a.cta-button:nth-child(2):hover {
         background: var(--bg-gradient);
         color: var(--white);
+        border: none
     }
 }
 
@@ -445,23 +440,7 @@ nav {
         max-width: 60%;
     }
 }
-.banner-sec .item .nextBatch{
-    font-weight: bold;
-    font-size: 14px;
-}
-@media (min-width:768px) {
-    .banner-sec .item .nextBatch{
-        font-size: 16px;
-    }
 
-}
-.banner-sec .item .nextBatch br{
-    display: none;
-}
-.banner-sec .item .nextBatch span{
-    font-weight: bold;
-    color: var(--red);
-}
 /*>>>>>>>>>>>>>>>>>>>>>>>>> banner style end <<<<<<<<<<<<<<<<<<<<<<*/
 
 
@@ -547,14 +526,14 @@ nav {
     gap: 16px;
 }
 .highlights-sec .item-footer img {
-    max-width: 100%;
+    max-width: 12%;
     height: auto;
 }
-/* @media (max-width:768px) {
+@media (max-width:768px) {
     .highlights-sec .item-footer img{
         max-width: 20%;
     }
-} */
+}
 /*>>>>>>>>>>>>>>>>>>>>>>>>> highlights-sec end <<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>> course overview sec end <<<<<<<<<<<<<<<<<<<<<<*/
 .course-details {
@@ -832,7 +811,9 @@ nav {
     margin-bottom: 24px;
     border-bottom: 1px solid var(--border-grey);
 }
-
+.expert-sec .item .profile-desc .avtar{
+    display: none;
+}
 .expert-sec .item .profile-desc .avtar img {
     width: 74px;
     height: 74px;
@@ -903,6 +884,7 @@ border-radius: 50px;
     border-radius: 4px;
     border: 1px solid var(--border-grey);
     background-color: var(--white);
+    margin-top: 24px;
 }
 
 .table_training tbody tr:last-child td {

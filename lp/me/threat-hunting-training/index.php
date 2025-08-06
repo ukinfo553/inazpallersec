@@ -1,4 +1,27 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$api_id = 44035;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($api_id);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +37,7 @@
         <link href="assets/css/bootstrap-grid.css" rel="stylesheet" defer>
         <link rel="stylesheet" href="assets/css/custom.css" defer>
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
+        <link rel="stylesheet" href="../../lp-components/css_handler.php" defer>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -54,10 +78,6 @@
     $pag_url .= $_SERVER['HTTP_HOST'];
     // Append the requested resource location to the URL
     $pag_url .= $_SERVER['REQUEST_URI'];
-    // broucher link pdf file code start
-    $api_id = 44035; // Define the API ID
-    $brochureLink = json_decode(file_get_contents("https://www.infosectrain.com/api/brochure_byid.php?id=" . $api_id), true)[0]['brochure'] ?? null;
-    // broucher link pdf file code end
     ?> -->
 
         <!--/ navbar start /-->
@@ -131,13 +151,16 @@
                                 <div class="d-flex flex-md-row flex-column align-items-start gap-3">
                                     <button class="button modal-btn" modal-title="Talk to Our Expert">Talk to Our
                                         Expert</button>
-                                    <a href="<?php echo $brochureLink; ?>" target="_blank" class="button download-btn"
+                                    <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="button download-btn"
                                         style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
                                             viewBox="0 0 16 17" fill="none">
                                             <g clip-path="url(#clip0_18618_896)">
                                                 <path
-                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.379 12.6915 7.379 12.6915 7.37897 12.6915C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.37704 12.6897 7.37685 12.6894 7.3767 12.6893C7.3762 12.6888 7.37577 12.6884 7.3753 12.6879C7.37499 12.6876 7.37471 12.6874 7.3744 12.687C7.37409 12.6867 7.37369 12.6863 7.37341 12.686C7.37279 12.6854 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.6279 12.6847 8.62721 12.6854 8.62659 12.686C8.62625 12.6863 8.62588 12.6867 8.6256 12.6869C8.62529 12.6873 8.62501 12.6875 8.6247 12.6878C8.62426 12.6883 8.62377 12.6888 8.62333 12.6892C8.62318 12.6894 8.62296 12.6896 8.6228 12.6897C8.62224 12.6903 8.62165 12.6909 8.62106 12.6915C8.62103 12.6915 8.62103 12.6915 8.621 12.6915C8.61122 12.701 8.60132 12.7103 8.59119 12.7193C8.51676 12.7857 8.43386 12.8375 8.3462 12.8744C8.34589 12.8745 8.34564 12.8747 8.34533 12.8748C8.34499 12.8749 8.34471 12.8751 8.34437 12.8752C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
                                                     fill="#E50914" />
                                             </g>
                                             <defs>
@@ -148,7 +171,9 @@
                                             </defs>
                                         </svg>
                                         Download Brochure
-                                    </a>
+                                    </a>';
+                                }
+                                ?>
                                 </div>
                                 <!-- <div class="d-flex gap-3">
                                 <img src="assets/images/100-satisfaction.webp" alt="Conditions Apply"
@@ -271,242 +296,60 @@
                                     </p>
                                 </div>
                                 <div class="col-12 mt-4">
-                                    <div class="accordion d-flex flex-column gap-4">
+                                    <div class="accordion d-flex flex-column gap-4 course-content-accordion">
                                         <!--accordion-item start-->
-                                        <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
+                                        <?php
+                                    // Check that course_details exists and is a non-empty array
+                                    if (!empty($course_details) && is_array($course_details)) {
+                                        foreach ($course_details as $index => $detail) {
+                                            // Make the first item active and open
+                                            $activeClass = $index === 0 ? 'open' : '';
+                                            ?>
+                                        <div
+                                            class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $activeClass; ?>">
                                             <button
                                                 class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
                                                 <div class="d-flex align-items-center gap-2">
                                                     <img src="assets/images/course-content/Course-Curriculum.svg"
-                                                        width="24" height="24" alt="Course Curriculum">
-                                                    <span>Course Curriculum</span>
+                                                        width="24" height="24"
+                                                        alt="<?php echo htmlspecialchars($detail['title']); ?>">
+                                                    <span><?php echo htmlspecialchars($detail['title']); ?></span>
                                                 </div>
                                                 <span class="arrow"></span>
                                             </button>
                                             <div class="accordion-body">
-                                                <h4>1. Introduction and Fundamentals</h4>
-                                                <ul class="liststar">
-                                                    <li>Introduction to Threat Hunting</li>
-                                                    <li>Overview of DFIR lifecycle</li>
-                                                    <li>Windows logging architecture</li>
-                                                    <li>Key concepts and terminology</li>
-                                                </ul>
-                                                <h4>2. Detection Engineering</h4>
-                                                <ul class="liststar">
-                                                    <li>Detection lifecycle</li>
-                                                    <li>Developing Hybrid signals</li>
-                                                    <li>Real World Case studies</li>
-                                                </ul>
-                                                <h4>3. MITRE Frameworks</h4>
-                                                <ul class="liststar">
-                                                    <li>ATT&amp;CK vs Cyber Kill Chain</li>
-                                                    <li>D3FEND mitigations</li>
-                                                    <li>Engage for active defense</li>
-                                                </ul>
-                                                <h4>4. Initial Access &amp; Credential Hunting</h4>
-                                                <ul class="liststar">
-                                                    <li>Learn commonly abused TTPs for Initial Access</li>
-                                                    <li>Hunt for Evidence of Adversary who has Breached the Perimeter
-                                                    </li>
-                                                    <li>Hunt for Malicious Credential Usage</li>
-                                                </ul>
-                                                <h4>5. Persistence &amp; ASEP Hunting</h4>
-                                                <ul class="liststar">
-                                                    <li>Learn about ASEP and commonly abused TTPs for Persistence</li>
-                                                    <li>Hunt for Evidence of Adversary across ASEP locations</li>
-                                                    <li>Hunt for Advanced Persistence Techniques</li>
-                                                </ul>
-                                                <h4>6. Lateral Movement Hunting</h4>
-                                                <ul class="liststar">
-                                                    <li>Learn about Windows built-in techniques abused for Lateral
-                                                        Movement
-                                                    </li>
-                                                    <li>Learn to scope your Hunt and Incident Response by tracking
-                                                        attacker
-                                                        footprints</li>
-                                                    <li>Tracking Credentials for Hunting Lateral Movement</li>
-                                                </ul>
-                                                <h4>7. Malware Analysis</h4>
-                                                <ul class="liststar">
-                                                    <li>Techniques for static malware analysis</li>
-                                                    <li>Dynamic analysis methods</li>
-                                                    <li>Tools and resources for malware analysis</li>
-                                                    <li>Sigma and Yara rules</li>
-                                                    <li>Introduction to reverse engineering</li>
-                                                    <li>Tools and techniques for reversing malware</li>
-                                                </ul>
-                                                <h4>8. Network Hunting</h4>
-                                                <ul class="liststar">
-                                                    <li>Hunting for Malware Beacons</li>
-                                                    <li>Hunting DNS exfiltration</li>
-                                                    <li>Hunting for Domain Fronting Techniques</li>
-                                                </ul>
-                                                <h4>9. Incident Response</h4>
-                                                <ul class="liststar">
-                                                    <li>NIST Framework for Incident Response</li>
-                                                    <li>Hand-off from Threat Hunting findings to drive Incident Response
-                                                    </li>
-                                                    <li>Incident Containment and Next Steps</li>
-                                                </ul>
-                                                <h4>10. Digital Forensics</h4>
-                                                <ul class="liststar">
-                                                    <li>Forensics Evidence Acquisition and Handling</li>
-                                                    <li>Tools for collecting Forensic Evidence</li>
-                                                    <li>Disk and Filesystem Forensics</li>
-                                                    <li>Memory Forensics</li>
-                                                    <li>Anti-Forensic Techniques</li>
-                                                </ul>
-                                                <h4>11. Threat Intelligence</h4>
-                                                <ul class="liststar">
-                                                    <li>Diamond Model for Threat Intelligence</li>
-                                                    <li>Consuming Threat Intel to drive Operations</li>
-                                                    <li>Producing Threat Intel from concluded Incident</li>
-                                                </ul>
-                                                <h4>12. Capstone Exercise Challenge</h4>
-                                                <ul class="liststar">
-                                                    <li>Hands-on analysis challenge to hunt threats and perform DFIR
-                                                    </li>
-                                                    <li>Full attack chain reconstruction</li>
-                                                    <li>Produce Executive and Technical reports</li>
-                                                </ul>
+                                                <?php echo $detail['ans']; ?>
 
-                                                <h4>Lab:</h4>
-
-                                                <ul class="liststar">
-                                                    <li> Detection Engineering Lab Setup </li>
-                                                    <li> Hands-on writing windows detection </li>
-                                                    <li> Hands-on writing complex multi source detection </li>
-                                                    <li> Proactive Hunt for confirming presence of adversary </li>
-                                                    <li> Hunt for credential abuse </li>
-                                                    <li> Hunt for evidence of adversary across persistence points </li>
-                                                    <li> Hunt for advanced persistence techniques </li>
-                                                    <li> Evidence identification for Lateral Movement </li>
-                                                    <li> Hunt for detection of Lateral Movement </li>
-                                                    <li> Credential Tracking for Lateral Movement Hunting </li>
-                                                    <li> Malware Analysis Lab Setup </li>
-                                                    <li> Static Malware Analysis </li>
-                                                    <li> Dynamic Malware Analysis </li>
-                                                    <li> Hunting for Malware via YARA rules </li>
-                                                    <li> Network Hunting for Malware Beacons </li>
-                                                    <li> Network Hunting for DNS Exfiltration </li>
-                                                    <li> Network Hunting for Domain Fronting Techniques </li>
-                                                    <li> Hands-on Hunting Report Writing with Hand off to Incident
-                                                        Response
-                                                        Teams </li>
-                                                    <li> Forensics Evidence Acquisition </li>
-                                                    <li> Analysing Disk Image </li>
-                                                    <li> Analysing Memory Image </li>
-                                                    <li> Analysing Filesystem Image </li>
-                                                    <li> Writing Threat Intel Reports </li>
-                                                    <li> Final Exercise Challenge</li>
-                                                </ul>
-
-                                                <a href="<?php echo $brochureLink; ?>" target="_blank"
-                                                    class="button d-inline-block mt-4">Download Brochure</a>
+                                                <?php
+                                                    // If this is the first item and $brochureLink is set, show brochure button
+                                                    if ($index === 0 && !empty($brochure)) {
+                                                        echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="button download-btn mt-3 d-inline-block"
+                                        style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
+                                            viewBox="0 0 16 17" fill="none">
+                                            <g clip-path="url(#clip0_18618_896)">
+                                                <path
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    fill="#E50914" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_18618_896">
+                                                    <rect width="16" height="16" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Download Brochure
+                                    </a>';
+                                                    }
+                                                    ?>
                                             </div>
                                         </div>
-                                        <!--accordion-item start-->
-                                        <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                            <button
-                                                class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="assets/images/course-content/Course-Objectives.svg"
-                                                        width="24" height="24" alt="Course Objectives">
-                                                    <span>Course Objectives</span>
-                                                </div>
-                                                <span class="arrow"></span>
-                                            </button>
-                                            <div class="accordion-body">
-                                                <h4>Upon completion of the course, participants will be able to:</h4>
-                                                <ul class="liststar">
-                                                    <li>Explain threat hunting workflows, DFIR lifecycle stages, and
-                                                        identify
-                                                        critical Windows artifacts.</li>
-                                                    <li>Create detection rules using MITRE ATT&CK (TTP mapping) and
-                                                        develop
-                                                        hypotheses for proactive hunting.</li>
-                                                    <li>Detect credential abuse, lateral movement, and persistence
-                                                        mechanisms
-                                                        while performing basic static/dynamic malware analysis.</li>
-                                                    <li>Acquire and analyze disk, memory, and registry artifacts, and
-                                                        use
-                                                        open-source tools to build artifact timelines.</li>
-                                                    <li>Contain threats using NIST SP 800-61 principles and document
-                                                        findings
-                                                        for handoff to DFIR teams.</li>
-                                                    <li>Map adversary behaviors to MITRE D3FEND mitigations and generate
-                                                        actionable alerts from STIX reports.</li>
-                                                    <li>Investigate full attack chains—from initial access to
-                                                        exfiltration—and
-                                                        produce both technical and executive reports for mock breaches.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!--accordion-item start-->
-                                        <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                            <button
-                                                class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="assets/images/course-content/Exam-Details.svg" width="24"
-                                                        height="24" alt="Exam Details">
-                                                    <span>Exam Details</span>
-                                                </div>
-                                                <span class="arrow"></span>
-                                            </button>
-                                            <div class="accordion-body">
-                                                <p>
-                                                    There is no external exam for this Threat Hunting course. However,
-                                                    this
-                                                    course prepares you for most of the Professional Threat Hunting
-                                                    Certifications (eCTHP v2, CCTHP, Threat Hunter training Group-IB)
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <!--accordion-item start-->
-                                        <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                            <button
-                                                class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="assets/images/course-content/Pre-requisites.svg"
-                                                        width="24" height="24" alt="Prerequisites">
-                                                    <span>Pre-requisites</span>
-                                                </div>
-                                                <span class="arrow"></span>
-                                            </button>
-                                            <div class="accordion-body">
-                                                <ul class="liststar">
-                                                    <li>Familiarity of Window and Linux at log level</li>
-                                                    <li>Comprehensive understanding of Information Security and its
-                                                        terms
-                                                    </li>
-                                                    <li>Basics of Networking</li>
-                                                    <li>Experience in Cyber Security is highly recommended</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!--accordion-item start-->
-                                        <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                            <button
-                                                class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <img src="assets/images/course-content/Target-Audience.svg"
-                                                        width="24" height="24" alt="Target Audience">
-                                                    <span>Target Audience</span>
-                                                </div>
-                                                <span class="arrow"></span>
-                                            </button>
-                                            <div class="accordion-body">
-                                                <ul class="liststar">
-                                                    <li>Malware Analysts</li>
-                                                    <li>Digital Forensic Investigators</li>
-                                                    <li>Cyber Security Analysts</li>
-                                                    <li>Network Security Engineers</li>
-                                                    <li>Red Team Members/Penetration Testers</li>
-                                                    <li>Incident Response Team Members</li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                        <?php
+                                        }
+                                    }
+                                    ?>
+                                        <!--accordion-item end-->
                                     </div>
                                 </div>
                             </div>
@@ -616,6 +459,19 @@
                                             value="<?php echo $pag_url; ?>">
                                         <input type="hidden" id="me_others" name="me_others" value="">
                                         <input type="hidden" name="me_submited" value="1">
+                                        <!-- Privacy Policy Checkbox -->
+                                        <label class="f-nunito fs-14 fw-normal"
+                                            style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                            <input type="checkbox" name="privacy_policy" checked required
+                                                style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                            <span>
+                                                By sharing your details, you agree to our Terms and <a
+                                                    href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                                    style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                                    Policy</a>
+                                            </span>
+                                        </label>
+                                        <!-- privacy Policy Checkbox end -->
                                         <button type="submit" class="form-control-btn">Submit</button>
 
                                         <div class="loader text-center" style="display:none;">
@@ -1262,6 +1118,7 @@
             <!--/ related courses /-->
 
             <!--<[faq start]>-->
+            <?php if (!empty($faq)) { ?>
             <section class="faq-section pt-0">
                 <div class="container-fluid container-lg">
                     <div class="row g-4">
@@ -1269,162 +1126,29 @@
                             <h2 class="text-center">Frequently Asked Questions</h2>
                         </div>
                         <div class="col-12">
-                            <div class="accordion d-flex flex-column gap-4">
-                                <!--accordion-item start-->
-                                <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
+                            <div class="accordion d-flex flex-column gap-4 accordion-faq-section">
+                                <?php foreach ($faq as $index => $question) {
+                                    // Add "open" class and visible style for the first item
+                                    $isOpen = $index === 0 ? 'open' : '';
+                                    ?>
+                                <div
+                                    class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $isOpen; ?>">
                                     <button
                                         class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                        <span>What is Advanced Threat Hunting and DFIR Training?</span>
+                                        <span><?php echo htmlspecialchars($question['title']); ?></span>
                                         <span class="arrow"></span>
                                     </button>
                                     <div class="accordion-body">
-                                        <p>
-                                            The Advanced Threat Hunting and DFIR Training teaches sophisticated methods
-                                            for
-                                            identifying and handling cybersecurity events. It covers how to identify
-                                            compromised
-                                            systems, pinpoint the exact moment and method of a breach, comprehend what
-                                            attackers
-                                            took or altered, and resolve issues. It also focuses on incident response
-                                            and
-                                            aggressively searching for risks within a network.
-                                        </p>
+                                        <?php echo $question['ans']; ?>
                                     </div>
                                 </div>
-                                <!--accordion-item start-->
-                                <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                    <button
-                                        class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                        <span>Who should enroll in the Advanced Threat Hunting and DFIR Training
-                                            course?</span>
-                                        <span class="arrow"></span>
-                                    </button>
-                                    <div class="accordion-body">
-                                        <p>The Advanced Threat Hunting and DFIR training course is best suited for:</p>
-                                        <ul class="liststar">
-                                            <li>Malware Analysts</li>
-                                            <li>Digital Forensic Investigators</li>
-                                            <li>Cyber Security Analysts</li>
-                                            <li>Network Security Engineers</li>
-                                            <li>Red Team Members/Penetration Testers</li>
-                                            <li>Incident Response Team Members</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--accordion-item start-->
-                                <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                    <button
-                                        class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                        <span>What topics are covered in the Advanced Threat Hunting and DFIR Training
-                                            course?</span>
-                                        <span class="arrow"></span>
-                                    </button>
-                                    <div class="accordion-body">
-                                        <p>
-                                            The Advanced Threat Hunting and DFIR training course covers Detection
-                                            Engineering, MITRE Frameworks, Malware Analysis, Threat Hunting on Windows
-                                            Logs,
-                                            Advanced Persistence Hunting, Memory and Disk Forensics, Incident Response
-                                            Strategies, Threat Intelligence, and Hands-on Attack Chain Reconstruction
-                                            through real-world scenarios.
-                                        </p>
-                                    </div>
-                                </div>
-                                <!--accordion-item start-->
-                                <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                    <button
-                                        class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                        <span>How long is the Advanced Threat Hunting and DFIR Training course?</span>
-                                        <span class="arrow"></span>
-                                    </button>
-                                    <div class="accordion-body">
-                                        The course is 40 hours long.
-                                    </div>
-                                </div>
-                                <!--accordion-item start-->
-                                <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                    <button
-                                        class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                        <span>What are the prerequisites for enrolling in the DFIR Training
-                                            course?</span>
-                                        <span class="arrow"></span>
-                                    </button>
-                                    <div class="accordion-body">
-                                        The prerequisites include:
-                                        <ul class="liststar">
-                                            <li>Familiarity with Windows and Linux at the log level</li>
-                                            <li>Comprehensive understanding of Information Security and its terms</li>
-                                            <li>Basics of Networking</li>
-                                            <li>Experience in Cyber Security is highly recommended</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--accordion-item start-->
-                                <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                    <button
-                                        class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                        <span>What certificate will I receive upon completing the Advanced Threat
-                                            Hunting
-                                            and DFIR Training?</span>
-                                        <span class="arrow"></span>
-                                    </button>
-                                    <div class="accordion-body">
-                                        InfosecTrain provides you with a 20 CPE certificate of achievement after
-                                        completion
-                                        of this course.
-                                    </div>
-                                </div>
-                                <!--accordion-item start-->
-                                <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                    <button
-                                        class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                        <span>How can this Advanced Threat Hunting and DFIR Training course benefit my
-                                            career?</span>
-                                        <span class="arrow"></span>
-                                    </button>
-                                    <div class="accordion-body">
-                                        In order to ensure that organizations can protect themselves from cyber attacks,
-                                        the
-                                        Advanced Threat Hunting and DFIR Training is essential to determining the
-                                        specifics
-                                        of cyber incidents. This training will upskill your career and provide you with
-                                        a
-                                        better position in an organization.
-                                    </div>
-                                </div>
-                                <!--accordion-item start-->
-                                <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                    <button
-                                        class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                        <span>Are there hands-on labs included in the DFIR Training course?</span>
-                                        <span class="arrow"></span>
-                                    </button>
-                                    <div class="accordion-body">
-                                        <p>Yes, the course includes hands-on labs for:</p>
-                                        <ul class="liststar">
-                                            <li>Simulating and detecting cyberattacks</li>
-                                            <li>Conducting malware analysis and reverse engineering</li>
-                                            <li>Ransomware Investigation</li>
-                                            <li>Practical Threat Hunting Scenarios</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--accordion-item start-->
-                                <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                    <button
-                                        class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                        <span>Is Advanced Threat Hunting and DFIR Training available online?</span>
-                                        <span class="arrow"></span>
-                                    </button>
-                                    <div class="accordion-body">
-                                        <p>Yes, the Advanced Threat Hunting and DFIR Training is available online.</p>
-                                    </div>
-                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <?php } ?>
             <!--<[faq end]>-->
 
             <!--<[reach us sec start]>-->
@@ -1454,6 +1178,19 @@
                                         value="<?php echo $pag_url; ?>">
 
                                     <input type="hidden" name="me_submited" value="1">
+                                    <!-- Privacy Policy Checkbox -->
+                                    <label class="f-nunito fs-14 fw-normal"
+                                        style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                        <input type="checkbox" name="privacy_policy" checked required
+                                            style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                        <span>
+                                            By sharing your details, you agree to our Terms and <a
+                                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                                style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                                Policy</a>
+                                        </span>
+                                    </label>
+                                    <!-- privacy Policy Checkbox end -->
                                     <button type="submit" class="form-control-btn w-auto">Submit</button>
 
                                     <div class="loader text-center" style="display:none;">
@@ -1646,7 +1383,19 @@
 
                         <input type="hidden" id="me_others_pop" name="me_others" value="T">
                         <input type="hidden" name="me_pageurl" value="<?php echo $pag_url; ?>">
-
+                        <!-- Privacy Policy Checkbox -->
+                        <label class="f-nunito fs-14 fw-normal"
+                            style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                            <input type="checkbox" name="privacy_policy" checked required
+                                style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                            <span>
+                                By sharing your details, you agree to our Terms and <a
+                                    href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                    style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                    Policy</a>
+                            </span>
+                        </label>
+                        <!-- privacy Policy Checkbox end -->
                         <input type="hidden" name="me_submited" value="1">
                         <button type="submit" class="form-control-btn">Submit</button>
 

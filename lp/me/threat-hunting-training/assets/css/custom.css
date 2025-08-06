@@ -21,7 +21,7 @@
   --grey: #F6F6F6;
   --light-blue: #F4F4FF;
   --dark-grey: #484848;
-  --green: #00A538;
+  --green:#00A538;
   --disable-grey: #AFAFAF;
   --acent-yellow: #FFF8CC;
   --acent-orange: #FBE9D6;
@@ -118,44 +118,35 @@
   .text-md-start {
     text-align: left !important;
   }
-
   .text-md-end {
     text-align: right !important;
   }
-
   .text-md-center {
     text-align: center !important;
   }
 }
-
 @media (min-width:992px) {
   .text-lg-start {
     text-align: left !important;
   }
-
   .text-lg-end {
     text-align: right !important;
   }
-
   .text-lg-center {
     text-align: center !important;
   }
 }
-
 @media (min-width:1200px) {
   .text-xl-start {
     text-align: left !important;
   }
-
   .text-xl-end {
     text-align: right !important;
   }
-
   .text-xl-center {
     text-align: center !important;
   }
 }
-
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -617,7 +608,6 @@ nav {
     margin: 0 10px;
   }
 }
-
 .sidenav>li>a {
   color: var(--bg-dark);
   font-size: 16px;
@@ -645,16 +635,14 @@ nav {
     flex-direction: column;
     z-index: 200;
   }
-
-  .sidenav {
+  .sidenav{
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: start;
     padding-top: 50px;
   }
-
-  .sidenav>li:last-child {
+  .sidenav>li:last-child{
     display: none;
   }
 }
@@ -687,13 +675,11 @@ nav {
   gap: 16px;
   font-family: var(--nunito);
 }
-
 @media (min-width:768px) {
   .banner-sec .banner-highlights {
-    gap: 24px;
+      gap: 24px;
   }
 }
-
 .banner-sec .banner-highlights div {
   display: flex;
   flex-direction: column;
@@ -701,10 +687,10 @@ nav {
 
 @media (min-width:768px) {
   .banner-sec .banner-highlights div:first-child {
-    border-right: 1px solid var(--border-grey);
-    padding-right: 24px;
-    border-bottom: none;
-    padding-bottom: 0;
+      border-right: 1px solid var(--border-grey);
+      padding-right: 24px;
+      border-bottom: none;
+      padding-bottom: 0;
   }
 }
 
@@ -718,11 +704,11 @@ nav {
 
 @media (min-width:768px) {
   .banner-sec .banner-highlights div span {
-    font-size: 24px;
+      font-size: 24px;
   }
 }
 
-.banner-sec .banner-highlights div {
+.banner-sec .banner-highlights div{
   color: var(--bg-dark);
   font-style: normal;
   font-weight: 400;
@@ -732,39 +718,32 @@ nav {
 .banner-sec {
   background: radial-gradient(33.37% 135.35% at 76.08% 50.14%, #D0F4DD 0%, #F4F4FF 100%);
 }
-
 @media (max-width:768px) {
-  .banner-sec .button {
-    width: 100%;
+  .banner-sec .button{
+      width: 100%;
   }
 
 }
-
-.download-btn svg {
+.download-btn svg{
   transition: all 0.3s ease;
 }
-
-.download-btn svg {
+.download-btn svg{
   animation: bounce 1s ease-in-out infinite;
 }
-
 /* Bouncing Animation */
 @keyframes bounce {
   0% {
-    transform: translateY(0);
+      transform: translateY(0);
   }
-
   50% {
-    transform: translateY(-10px);
+      transform: translateY(-10px);
   }
-
   100% {
-    transform: translateY(0);
+      transform: translateY(0);
   }
 }
 
 /*------ banner-sec style end -------*/
-
 
 /*------ accordian style start ------*/
 .accordion .accordion-item {
@@ -780,11 +759,9 @@ nav {
   background: var(--light-blue);
   justify-content: space-between;
 }
-
-.accordion-header span:first-child {
+.accordion-header span:first-child{
   text-align: left;
 }
-
 .accordion-body {
   max-height: 0;
   overflow: hidden;
@@ -798,14 +775,6 @@ nav {
   max-height: 400px;
   padding: 16px;
   overflow-y: scroll;
-}
-
-.accordion-item.open .accordion-body h4,
-.accordion-item.open .accordion-body h3,
-.accordion-item.open .accordion-body h5,
-.accordion-item.open .accordion-body h6,
-.accordion-item.open .accordion-body p {
-  margin: 12px 0;
 }
 
 /* Arrow Icon using ::after */
@@ -822,15 +791,44 @@ nav {
   transform: rotate(45deg);
 }
 
-
 /* Rotate the arrow when the accordion is open */
-.accordion-item.open .arrow {
+.accordion-item.open .arrow{
   border-top: 2px solid var(--disable-grey);
   border-left: 2px solid var(--disable-grey);
   border-bottom: none;
   border-right: none;
 }
-
+.accordion-item .accordion-body p{
+  margin-bottom: 16px;
+}
+.accordion-item .accordion-body ul li{
+display: block;
+margin: 0;
+padding: 0 0 8px 28px;
+position: relative;
+}
+.accordion-item .accordion-body ul li::before{
+  content: url('https://www.infosectrain.com/wp-content/themes/Divi/assets/images/new-course/shield-check.svg');
+position: absolute;
+left: 0;
+top: 2px;
+width: 20px;
+height: 20px;
+}
+.accordion-item .accordion-body ul>li>ul {
+    margin-left: 0;
+}
+.accordion-item .accordion-body ul li ul li::before {
+    content: url('https://www.infosectrain.com/wp-content/themes/Divi/assets/images/new-course/2-check.svg');
+}
+.accordion-item .accordion-body table{
+    border-spacing: 0;
+}
+.accordion-item .accordion-body table tr td{
+    padding: 8px 8px;
+    border: 1px solid #d9d9d9;
+    background: #ffffff;
+}
 /*------ accordian style end -------*/
 
 /*>>>>>>>>>>>>>>> calendar-upcoming-batches style start <<<<<<<<<<<<*/
@@ -902,7 +900,6 @@ nav {
     justify-content: space-between;
     display: flex;
   }
-
   .calendar-upcoming-batches .item .item-body table tr td::before {
     content: attr(data-label);
     text-transform: capitalize;
@@ -1024,14 +1021,12 @@ input[type="email"].error,
 textarea.error {
   border: 1px solid red;
 }
-
-.seats-left-ani {
+.seats-left-ani{
   position: relative;
   color: var(--dark-grey);
   padding: 0 12px;
 }
-
-.seats-left-ani::before {
+.seats-left-ani::before{
   content: "[";
   float: left;
   position: absolute;
@@ -1045,34 +1040,28 @@ textarea.error {
   color: var(--danger);
 }
 
-.seats-left-ani::after {
+.seats-left-ani::after{
   content: "]";
   right: 0;
-  animation: bracket_blink;
-  animation-iteration-count: infinite;
-  animation-duration: 1s;
-  position: absolute;
-  color: var(--danger);
+    animation: bracket_blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    position: absolute;
+    color: var(--danger);
 }
-
 @keyframes bracket_blink {
-
-  0%,
-  50% {
-    opacity: 0;
-    color: var(--danger)
+  0%,50% {
+      opacity: 0;
+      color: var(--danger)
   }
 }
 
 @-webkit-keyframes bracket_blink {
-
-  0%,
-  50% {
-    opacity: 0;
-    color: var(--danger)
+  0%,50% {
+      opacity: 0;
+      color: var(--danger)
   }
 }
-
 /*------- form code end --------*/
 
 /*--------  expert-sec style start ----------*/
@@ -1215,6 +1204,164 @@ textarea.error {
 
 /*---------  why-choose style end ----------*/
 
+/*>>>>>>>>>>>>>>>> success story style start <<<<<<<<<<<<<*/
+.success-story-hm-sec {
+  background: var(--bg-dark);
+}
+
+@media (max-width:768px) {
+  .success-story-hm-sec {
+    background: var(--bg-dark);
+  }
+}
+
+.success-story-hm-sec .col-lg-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+}
+
+.success-story-hm-sec .success-item {
+  position: relative;
+}
+
+.success-story-hm-sec .success-story {
+  padding-right: 36px;
+  gap: 24px;
+}
+
+@media (max-width:768px) {
+  .success-story-hm-sec .success-story {
+    padding-right: 15px;
+  }
+}
+
+.success-story-hm-sec .success-story h2 {
+  color: var(--white);
+}
+
+@media (max-width:768px) {
+  .success-story-hm-sec .success-story h2 {
+    text-align: center;
+    color: var(--bg-dark);
+  }
+
+  .success-story-hm-sec h2 {
+    text-align: center;
+  }
+}
+
+.success-story-hm-sec .success-certificate {
+  padding-left: 36px;
+  gap: 24px;
+}
+
+@media (max-width:768px) {
+  .success-story-hm-sec .success-certificate {
+    padding-left: 15px;
+    margin-top: 24px;
+  }
+}
+
+.success-story-hm-sec .success-certificate h2 {
+  color: var(--white);
+}
+
+.success-item .video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio for the video */
+}
+
+.success-item .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.success-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://infosectrain.com/wp-content/themes/Divi/assets/images/home/success-thumbnail.webp');
+  /* Replace with the path to your poster image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.play-button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.play-button img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.play-button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  transition: border 0.3s ease;
+  background: var(--bg-gradient);
+  animation: pulseAnimation 1s infinite;
+  opacity: .2;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(238, 34, 74, 0.20);
+  }
+
+  75% {
+    -webkit-transform: scale(1.75);
+    transform: scale(1.75);
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(238, 34, 74, 0.50);
+  }
+
+  100% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    opacity: 0;
+    box-shadow: 0 0 40px rgba(238, 34, 74, 0);
+  }
+}
+
+.success-story-hm-sec .success-certificate-btn {
+  border: none;
+  display: block;
+  margin: auto;
+}
+
+/*>>>>>>>>>>> success story style end <<<<<<<<<<*/
+
 /*>>>>>>>> swiper style start <<<<<<<<<<<<*/
 .navigation {
   width: 100%;
@@ -1280,23 +1427,20 @@ textarea.error {
 /*>>>>>>>> swiper style end <<<<<<<<<<<*/
 
 /*>>>>>>>>> benefits-sec sec start <<<<<<<<*/
-.benefits-sec .benefits-item {
+.benefits-sec .benefits-item{
   width: 44%;
   background: var(--acent-red);
 }
-
 @media (min-width:768px) {
-  .benefits-sec .benefits-item {
+  .benefits-sec .benefits-item{
     width: 30%;
   }
 }
-
 @media (min-width:992px) {
-  .benefits-sec .benefits-item {
+  .benefits-sec .benefits-item{
     width: 100%;
   }
 }
-
 /*>>>>>>>>> benefits-sec sec end <<<<<<<<*/
 
 
@@ -1416,8 +1560,7 @@ footer .item ul li a {
 /*====== footer style end ======*/
 /*>>>>>>>>> fixed footer <<<<<<<<*/
 .footer-fixed {
-  background: var(--dark);
-  border-top: 1px solid var(--dark-grey);
+  background:var(--dark-grey);
   padding: 12px 0;
   position: fixed;
   left: 0;
@@ -1539,31 +1682,31 @@ footer .item ul li a {
 
 @media only screen and (max-width: 600px) {
   .modal-content {
-    width: 90%;
+      width: 90%;
   }
 }
 
 @-webkit-keyframes animatetop {
   from {
-    top: -300px;
-    opacity: 0
+      top: -300px;
+      opacity: 0
   }
 
   to {
-    top: 0;
-    opacity: 1
+      top: 0;
+      opacity: 1
   }
 }
 
 @keyframes animatetop {
   from {
-    top: -300px;
-    opacity: 0
+      top: -300px;
+      opacity: 0
   }
 
   to {
-    top: 0;
-    opacity: 1
+      top: 0;
+      opacity: 1
   }
 }
 
@@ -1609,7 +1752,7 @@ footer .item ul li a {
 /*>>>>>>>>>>> model style end <<<<<<<<<<<*/
 
 /*>>>>>>>>>>> success story style start <<<<<<<<<<*/
-/* .success-story {
+.success-story {
   background-color: #F0F0F0;
 }
 
@@ -1653,151 +1796,6 @@ footer .item ul li a {
 
 .success-story .mySwiper3 .navigation {
   margin: 12px 0;
-} */
-
-/*----- success story generic style start -----*/
-.success-story-hm-sec {
-  background: radial-gradient(33.37% 135.35% at 76.08% 50.14%, #F4F4FF 0%, #D0F4DD 100%);
 }
-
-.success-story-hm-sec .col-lg-6 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  text-align: center;
-}
-
-.success-story-hm-sec .success-item {
-  position: relative;
-}
-
-.success-story-hm-sec .success-story {
-  padding-right: 36px;
-  gap: 24px;
-}
-
-@media (max-width:768px) {
-  .success-story-hm-sec .success-story {
-    padding-right: 15px;
-  }
-}
-
-@media (max-width:768px) {
-  .success-story-hm-sec .success-story h2 {
-    text-align: center;
-    color: var(--bg-dark);
-  }
-
-  .success-story-hm-sec h2 {
-    text-align: center;
-  }
-}
-
-.success-story-hm-sec .success-certificate {
-  padding-left: 36px;
-  gap: 24px;
-}
-
-@media (max-width:768px) {
-  .success-story-hm-sec .success-certificate {
-    padding-left: 15px;
-    margin-top: 24px;
-  }
-}
-
-.success-item .video-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  /* 16:9 aspect ratio for the video */
-}
-
-.success-item .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.success-item .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://infosectrain.com/wp-content/themes/Divi/assets/images/home/success-thumbnail.webp');
-  /* Replace with the path to your poster image */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 1;
-  border-radius: 10px;
-  border: 4px solid var(--white);
-}
-
-.play-button {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-}
-
-.play-button img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-
-.play-button::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  z-index: -1;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  transition: border 0.3s ease;
-  background: var(--gradient-secondry);
-  animation: pulseAnimation 1s infinite;
-  opacity: .2;
-}
-
-@keyframes pulseAnimation {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    box-shadow: 0 0 20px rgba(238, 34, 74, 0.20);
-  }
-
-  75% {
-    -webkit-transform: scale(1.75);
-    transform: scale(1.75);
-    opacity: 1;
-    box-shadow: 0 0 30px rgba(238, 34, 74, 0.50);
-  }
-
-  100% {
-    -webkit-transform: scale(2);
-    transform: scale(2);
-    opacity: 0;
-    box-shadow: 0 0 40px rgba(238, 34, 74, 0);
-  }
-}
-
-.success-story-hm-sec .success-certificate-btn {
-  border: none;
-  display: block;
-  margin: auto;
-}
-
-/*----- success story generic style end -----*/
 
 /*>>>>>>>>>>> success story style end <<<<<<<<<<*/
