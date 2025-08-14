@@ -206,9 +206,9 @@
                             <div class="col-lg-3 col-6">
                                 <div class="h-100 d-flex flex-column gap-3 p-3 rounded-4"
                                     style="background: var(--acent-green);">
-                                    <img src="assets/images/highlight-icon/hands-on-lab.svg" width="42" height="42"
+                                    <img src="assets/images/highlight-icon/telegram.svg" width="42" height="42"
                                         alt="SOC Training Course Highlights">
-                                    <p>Immersive Learning</p>
+                                    <p>Telegram Support Group for Exam Practice</p>
                                 </div>
                             </div>
                             <!--col start-->

@@ -184,9 +184,9 @@ if ($course_data !== null) {
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
-                                    <img src="assets/images/highlight-icon/practical-session.svg"
+                                    <img src="assets/images/highlight-icon/telegram.svg"
                                         alt="ISO 27001:2022 Lead Auditor Course Highlights" width="45" height="45">
-                                    <p>Immersive Learning</p>
+                                    <p>Telegram Support Group for Exam Practice</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
