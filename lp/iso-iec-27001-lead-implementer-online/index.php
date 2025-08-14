@@ -206,10 +206,7 @@
                                 </div>
                                 <div class="item-footer d-flex">
                                     <img src="assets/images/TÜV-SÜD-logo.png" alt="SPLUNK Training Course Highlights"
-                                        width="100" height="100" loading="lazy">
-                                    <img src="assets/images/Exemplar-recognised-training-provider-rtp.png"
-                                        alt="SPLUNK Training Course Highlights" width="100" height="100" loading="lazy">
-
+                                        width="200" loading="lazy">
                                     <img src="assets/images/highlight-icon/100-satisfaction.webp"
                                         alt="SPLUNK Training Course Highlights" width="100" height="100" loading="lazy">
                                     <img src="assets/images/highlight-icon/money-back.webp"
