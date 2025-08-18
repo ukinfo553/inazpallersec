@@ -122,13 +122,13 @@ if ($course_data !== null) {
                         <!--/ col start /-->
                         <div class="col-lg-7 col-md-6">
                             <div class="item">
-                                <h3 class="d-none d-lg-block">Become an Expert in AI Management System Audits</h3>
+                                <h3 class="d-none d-lg-block">Master the world's first AI Audit standard </h3>
                                 <h1>ISO/IEC 42001 Lead Auditor Training Course</h1>
                                 <!-- <h3>Prepare For CISSP Exam</h3> -->
                                 <div class="d-flex flex-row banner-highlights">
                                     <div>
-                                        <span>63% Increase</span>
-                                        <p>Cyber Security Jobs</p>
+                                        <span>1.8 Million Increase</span>
+                                        <p>AI management and auditing roles</p>
                                     </div>
                                     <div>
                                         <span>$138,000</span>
@@ -155,7 +155,7 @@ if ($course_data !== null) {
                         <!--/ col start /-->
                         <div class="col-lg-5 col-md-6 d-none d-md-block">
                             <div class="item">
-                                <img src="assets/images/ISO 42001 LA-BANNER.png" fetchPriority="high"
+                                <img src="assets/images/ISO-42001-LA-BANNER.webp" fetchPriority="high"
                                     alt="AI-Powered Cybersecurity Training by InfosecTrain" width="400" height="400">
                             </div>
                         </div>
