@@ -23,26 +23,6 @@ if ($course_data !== null) {
 <!DOCTYPE html>
 <html lang="en">
 
-<<<<<<< HEAD
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISO/IEC 42001 Lead Auditor Training Course</title>
-    <meta name="description"
-        content="Enroll in ISO/IEC 42001 Lead Auditor Training at InfosecTrain. Achieve certification and enhance your career with expert guidance. Join now for comprehensive training">
-    <meta name="robots" content="noindex, nofollow"/>
-    <link rel="icon" href="assets/images/favicon.ico">
-    <!--/ style link start /-->
-    <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
-    <link rel="stylesheet" href="assets/css/style.css" defer>
-    <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
-    <!--/ style link end /-->
-    <!-- Google Tag Manager -->
-    <script>
-        setTimeout(function () {
-            (function (w, d, s, l, i) {
-=======
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +41,6 @@ if ($course_data !== null) {
         <script>
         setTimeout(function() {
             (function(w, d, s, l, i) {
->>>>>>> 801f9a48570aca7b96aa4b658963d04bcc2a635a
                 w[l] = w[l] || [];
                 w[l].push({
                     "gtm.start": new Date().getTime(),
@@ -135,23 +114,6 @@ if ($course_data !== null) {
         </nav>
         <!--/ navbar end /-->
 
-<<<<<<< HEAD
-    <main>
-        <!--<[banner sec start]>-->
-        <section class="banner-sec">
-            <div class="container">
-                <div class="row align-items-center flex-column-reverse flex-md-row">
-                    <!--/ col start /-->
-                    <div class="col-lg-7 col-md-6">
-                        <div class="item">
-                            <h3 class="d-none d-lg-block">Unlock the future of Cloud Auditing with</h3>
-                            <h1>ISO/IEC 42001 Lead Auditor Training Course</h1>
-                            <!-- <h3>Prepare For CISSP Exam</h3> -->
-                            <div class="d-flex flex-row banner-highlights">
-                                <div>
-                                    <span>63% Increase</span>
-                                    <p>Cyber Security Jobs</p>
-=======
         <main>
             <!--<[banner sec start]>-->
             <section class="banner-sec">
@@ -172,7 +134,6 @@ if ($course_data !== null) {
                                         <span>$138,000</span>
                                         <p>Median Salary of AI Lead Auditor Specialists</p>
                                     </div>
->>>>>>> 801f9a48570aca7b96aa4b658963d04bcc2a635a
                                 </div>
                                 <div class="button-sec">
                                     <button class="cta-button modal-btn" title="Talk to Our Expert"
@@ -278,20 +239,7 @@ if ($course_data !== null) {
                                 </div>
                                 <!-- <p style="margin-top: 24px;opacity: .8;">* Conditions Apply</p><br> -->
                             </div>
-<<<<<<< HEAD
-                            <div class="item-footer d-flex">
-                                <img src="assets/images/Exemplar-recognised-training-provider-rtp.png" alt="" width="100" height="100" loading="lazy">
-                                <img src="assets/images/highlight-icon/100-satisfaction.webp"
-                                    alt="AI-Powered Cybersecurity Training Course Highlights" width="150" height="150">
-                                <img src="assets/images/highlight-icon/money-back.webp"
-                                    alt="AI-Powered Cybersecurity Training Course Highlights" width="150" height="150">
-                            </div>
-                            <p style="margin-top: 24px;opacity: .8;">* Conditions Apply</p><br>
-                        </div>
-                        <!--<[ highlights-sec end ]>-->
-=======
                             <!--<[ highlights-sec end ]>-->
->>>>>>> 801f9a48570aca7b96aa4b658963d04bcc2a635a
 
                             <!--<[ course details sec start ]>-->
                             <div class="course-details">
