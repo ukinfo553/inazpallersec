@@ -220,10 +220,13 @@ if ($course_data !== null) {
                                 </div>
                             </div>
                             <div class="item-footer d-flex">
+                                <img src="assets/images/TÜV-SÜD-logo.png" alt="SPLUNK Training Course Highlights"
+                                        width="200" loading="lazy">
                                 <img src="assets/images/highlight-icon/100-satisfaction.webp"
                                     alt="SPLUNK Training Course Highlights" width="100" height="100" loading="lazy">
                                 <img src="assets/images/highlight-icon/money-back.webp"
                                     alt="SPLUNK Training Course Highlights" width="100" height="100" loading="lazy">
+
                             </div>
                         </div>
                         <!--<[ highlights-sec end ]>-->
