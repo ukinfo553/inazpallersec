@@ -75,11 +75,12 @@
                                 <a href="#training-calendar">Training Calendar</a>
                             </li>
                             <li>
-                                <a href="#why-choose">Why InfosecTrain</a>
+                                <a href="#offer">offer</a>
                             </li>
                             <li>
-                                <a href="#benefits">Career Benefits</a>
+                                <a href="#why-choose">Why InfosecTrain</a>
                             </li>
+
                             <li>
                                 <a href="#reviews">Testimonials</a>
                             </li>

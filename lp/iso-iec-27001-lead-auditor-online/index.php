@@ -98,11 +98,12 @@ if ($course_data !== null) {
                                 <a href="#training-calendar">Training Calendar</a>
                             </li>
                             <li>
-                                <a href="#why-choose">Why InfosecTrain</a>
+                                <a href="#offer">Offer</a>
                             </li>
                             <li>
-                                <a href="#benefits">Career Benefits</a>
+                                <a href="#why-choose">Why InfosecTrain</a>
                             </li>
+
                             <li>
                                 <a href="#reviews">Testimonials</a>
                             </li>
@@ -223,7 +224,6 @@ if ($course_data !== null) {
                                         <p>24x7 Post-Training Support</p>
                                     </div>
                                 </div>
-<<<<<<< HEAD
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/video-recording.svg"
@@ -269,7 +269,7 @@ if ($course_data !== null) {
                             </div>
                             <div class="item-footer d-flex">
                                 <img src="assets/images/TÜV-SÜD-logo.png" alt="SPLUNK Training Course Highlights"
-                                        width="200" loading="lazy">
+                                    width="200" loading="lazy">
                                 <img src="assets/images/highlight-icon/100-satisfaction.webp"
                                     alt="SPLUNK Training Course Highlights" width="100" height="100" loading="lazy">
                                 <img src="assets/images/highlight-icon/money-back.webp"
@@ -278,113 +278,110 @@ if ($course_data !== null) {
                             </div>
                         </div>
                         <!--<[ highlights-sec end ]>-->
-=======
-                                <div class="item-footer d-flex">
-                                    <img src="assets/images/TÜV-SÜD-logo.png" alt="SPLUNK Training Course Highlights"
-                                        width="200" loading="lazy">
-                                    <img src="assets/images/highlight-icon/100-satisfaction.webp"
-                                        alt="SPLUNK Training Course Highlights" width="100" height="100" loading="lazy">
-                                    <img src="assets/images/highlight-icon/money-back.webp"
-                                        alt="SPLUNK Training Course Highlights" width="100" height="100" loading="lazy">
-                                </div>
-                            </div>
-                            <!--<[ highlights-sec end ]>-->
->>>>>>> 801f9a48570aca7b96aa4b658963d04bcc2a635a
+                        =======
+                        <div class="item-footer d-flex">
+                            <img src="assets/images/TÜV-SÜD-logo.png" alt="SPLUNK Training Course Highlights"
+                                width="200" loading="lazy">
+                            <img src="assets/images/highlight-icon/100-satisfaction.webp"
+                                alt="SPLUNK Training Course Highlights" width="100" height="100" loading="lazy">
+                            <img src="assets/images/highlight-icon/money-back.webp"
+                                alt="SPLUNK Training Course Highlights" width="100" height="100" loading="lazy">
+                        </div>
+                    </div>
+                    <!--<[ highlights-sec end ]>-->
+                    >>>>>>> 801f9a48570aca7b96aa4b658963d04bcc2a635a
 
-                            <!--<[ course details sec start ]>-->
-                            <div class="course-details">
-                                <div class="course-overview">
-                                    <h2>ISO 27001 Certification - An Overview</h2>
-                                    <p>The ISO 27001 certification is a globally recognized standard that sets out the
-                                        criteria for creating, maintaining, and continually enhancing an Information
-                                        Security Management System (ISMS). This system is employed to safeguard the
-                                        confidentiality, integrity, and accessibility of data. It offers a structure for
-                                        information security, enabling organizations to identify and control their
-                                        information security risks effectively.</p>
-                                    <p>InfosecTrain’s ISO 27001:2022 Lead Auditor training and certification course is a
-                                        five-day intensive course to inculcate in participants the knowledge to perform
-                                        an
-                                        Information Security Management System (ISMS) audit by employing recommended
-                                        audit
-                                        fundamentals, principals, procedures, and methodologies.</p>
-                                </div>
-                                <div class="faq-wrapper">
-                                    <!--/ faq item /-->
-                                    <?php
+                    <!--<[ course details sec start ]>-->
+                    <div class="course-details">
+                        <div class="course-overview">
+                            <h2>ISO 27001 Certification - An Overview</h2>
+                            <p>The ISO 27001 certification is a globally recognized standard that sets out the
+                                criteria for creating, maintaining, and continually enhancing an Information
+                                Security Management System (ISMS). This system is employed to safeguard the
+                                confidentiality, integrity, and accessibility of data. It offers a structure for
+                                information security, enabling organizations to identify and control their
+                                information security risks effectively.</p>
+                            <p>InfosecTrain’s ISO 27001:2022 Lead Auditor training and certification course is a
+                                five-day intensive course to inculcate in participants the knowledge to perform
+                                an
+                                Information Security Management System (ISMS) audit by employing recommended
+                                audit
+                                fundamentals, principals, procedures, and methodologies.</p>
+                        </div>
+                        <div class="faq-wrapper">
+                            <!--/ faq item /-->
+                            <?php
                                 // Check that course_details exists and is a non-empty array
                                 if (!empty($course_details) && is_array($course_details)) {
                                     foreach ($course_details as $index => $detail) {
                                         // Make the first item active and open
                                         $activeClass = $index === 0 ? 'active open' : '';
                                         ?>
-                                    <div class="faq-item <?php echo $activeClass; ?>">
-                                        <h3 class="faq-title">
-                                            <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
-                                            <span class="right-icon"></span>
-                                        </h3>
-                                        <div class="faq-content">
-                                            <?php echo $detail['ans']; ?>
+                            <div class="faq-item <?php echo $activeClass; ?>">
+                                <h3 class="faq-title">
+                                    <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
+                                    <span class="right-icon"></span>
+                                </h3>
+                                <div class="faq-content">
+                                    <?php echo $detail['ans']; ?>
 
-                                            <?php
+                                    <?php
                                                 // If this is the first item and $brochureLink is set, show brochure button
                                                 if ($index === 0 && !empty($brochure)) {
                                                     echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
                                                 }
                                                 ?>
-                                        </div>
-                                    </div>
-                                    <?php
+                                </div>
+                            </div>
+                            <?php
                                     }
                                 }
                                 ?>
-                                </div>
-                            </div>
-                            <!--<[ course details sec end ]>-->
                         </div>
-                        <!--<[ form sec start-->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="form-item sticky-section" id="free_demo">
-                                <div class="hide rows  mt-2" id="demo_form_output"> </div>
-
-                                <form method="post" action="" onSubmit="return val_demo_request(this.form);"
-                                    id="demo_me_phone_f">
-                                    <h3 class="form-heading">Talk To Our Experts</h3>
-                                    <input type="text" class="form-control" id="me_name" name="me_name"
-                                        placeholder="Full Name">
-                                    <input type="email" class="form-control" id="me_email" name="me_email"
-                                        placeholder="Email">
-                                    <input type="number" class="form-control" id="me_phone" name="me_phone"
-                                        placeholder="Mobile">
-                                    <input type="text" class="form-control" id="me_message" name="me_message"
-                                        placeholder="Mention your call time preference">
-
-                                    <input type="hidden" id="me_redirect" value="<?php echo BASE_URL; ?>thank-you.php">
-                                    <input type="hidden" id="me_others" name="me_others" value="">
-                                    <input type="hidden" id="me_pageurl" name="me_pageurl"
-                                        value="<?php echo $pag_url; ?>">
-                                    <!-- Privacy Policy Checkbox -->
-                                    <label
-                                        style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
-                                        <input type="checkbox" name="privacy_policy" checked required
-                                            style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
-                                        <span>
-                                            By sharing your details, you agree to our Terms and <a
-                                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
-                                                style="color: var(--white);font-size:14px;">Privacy Policy</a>
-                                        </span>
-                                    </label>
-                                    <!-- privacy Policy Checkbox end -->
-                                    <button class="cta-button form-button" type="submit" name="me_submited"
-                                        id="me_submited">Request a Callback</button>
-                                </form>
-
-                                <div class="loading_w hide" id="loading_w">
-                                    <img src="<?php echo BASE_URL; ?>assets/images/loader.gif" />
-                                </div>
-                            </div>
-                        </div>
-                        <!--<[ form sec end ]>-->
                     </div>
+                    <!--<[ course details sec end ]>-->
+                </div>
+                <!--<[ form sec start-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="form-item sticky-section" id="free_demo">
+                        <div class="hide rows  mt-2" id="demo_form_output"> </div>
+
+                        <form method="post" action="" onSubmit="return val_demo_request(this.form);"
+                            id="demo_me_phone_f">
+                            <h3 class="form-heading">Talk To Our Experts</h3>
+                            <input type="text" class="form-control" id="me_name" name="me_name" placeholder="Full Name">
+                            <input type="email" class="form-control" id="me_email" name="me_email" placeholder="Email">
+                            <input type="number" class="form-control" id="me_phone" name="me_phone"
+                                placeholder="Mobile">
+                            <input type="text" class="form-control" id="me_message" name="me_message"
+                                placeholder="Mention your call time preference">
+
+                            <input type="hidden" id="me_redirect" value="<?php echo BASE_URL; ?>thank-you.php">
+                            <input type="hidden" id="me_others" name="me_others" value="">
+                            <input type="hidden" id="me_pageurl" name="me_pageurl" value="<?php echo $pag_url; ?>">
+                            <!-- Privacy Policy Checkbox -->
+                            <label
+                                style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                <input type="checkbox" name="privacy_policy" checked required
+                                    style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                <span>
+                                    By sharing your details, you agree to our Terms and <a
+                                        href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                        style="color: var(--white);font-size:14px;">Privacy Policy</a>
+                                </span>
+                            </label>
+                            <!-- privacy Policy Checkbox end -->
+                            <button class="cta-button form-button" type="submit" name="me_submited"
+                                id="me_submited">Request a Callback</button>
+                        </form>
+
+                        <div class="loading_w hide" id="loading_w">
+                            <img src="<?php echo BASE_URL; ?>assets/images/loader.gif" />
+                        </div>
+                    </div>
+                </div>
+                <!--<[ form sec end ]>-->
+                </div>
                 </div>
             </section>
 
