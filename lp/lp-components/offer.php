@@ -1,4 +1,4 @@
-<section style="padding-bottom:0;">
+<section style="padding-bottom:0;" id="offer">
     <div class="container">
         <div class="row">
             <div class="col-12 p-md-0">
