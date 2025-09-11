@@ -186,7 +186,7 @@ if ($course_data !== null) {
                                     </div>
                                     <!--<[ highlights item start ]>-->
                                     <div class="col-highlights">
-                                        <img src="assets/images/highlight-icon/video-recording.svg"
+                                        <img src="assets/images/highlight-icon/cpe-certificate.svg"
                                             alt="AI-Powered Cybersecurity Training Course Highlights" width="45"
                                             height="45">
                                         <p>Learn from Experienced Offensive Security Experts</p>
@@ -207,7 +207,7 @@ if ($course_data !== null) {
                                     </div>
                                     <!--<[ highlights item start ]>-->
                                     <div class="col-highlights">
-                                        <img src="assets/images/highlight-icon/passed-rate.svg"
+                                        <img src="assets/images/highlight-icon/report.svg"
                                             alt="AI-Powered Cybersecurity Training Course Highlights" width="45"
                                             height="45">
                                         <p>Custom Lab Environments (Detection-Aware Setups)</p>
@@ -581,7 +581,7 @@ if ($course_data !== null) {
                                     Compliance |AWS Security Specialty
                                 </div>
                                 <div class="summary">
-                                    12+ years of experience in Information Security industry with all round knowledge of
+                                    14+ years of experience in Information Security industry with all round knowledge of
                                     Vulnerability Assessment &amp; Penetration Testing to Application Security to
                                     Security Solutions to Governance, Risk &amp; Compliance. </div>
 

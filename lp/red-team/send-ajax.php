@@ -242,17 +242,19 @@ if (isset($_POST['me_submited'])) {
 
                     <tr>
                         <td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">
-                            <ul>                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/iso-27001-lead-auditor-interview-questions/" target="_blank">ISO 27001 Lead Auditor Interview Questions for 2024</a></li>
-                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/benefits-of-iso-iec-27001-compliance-for-organizations/" target="_blank">Benefits of ISO/IEC 27001 Compliance for Organizations</a></li>
-                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/iso-27001-best-practices-to-secure-business-information/" target="_blank">ISO 27001: Best Practices to Secure Business Information</a></li>
-                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/audit-techniques-and-tools-for-iso-27001-lead-auditors/" target="_blank">Audit Techniques and Tools for ISO 27001 Lead Auditors</a></li>                          </ul>
+                            <ul>                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/interview-questions-for-red-team-expert/" target="_blank">Interview Questions for Red Team Expert</a></li>
+                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/blue-team-vs-red-team-which-one-to-choose/" target="_blank">Blue Team Vs Red Team: Which One to Choose?</a></li>
+                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/penetration-testing-vs-red-teaming/" target="_blank">Penetration Testing vs. Red Teaming</a></li>
+                          </ul>
                         </td>                    </tr>
                     <tr>                        <td style="color: #414547; padding-left: 24px;padding-top:10px;font-family: Arial, Helvetica, sans-serif;font-size: 18px;">
                             <strong>Our Recommended Courses and Certification</strong>                        </td>
                     </tr>                    <tr>
                         <td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">                        <ul>
-                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/iso-iec-42001-lead-implementer-training/"  target="_blank"> ISO/IEC 42001 Lead Implementer Training and Certification</a> </li>                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/aigp-training/"  target="_blank"> IAPP AIGP Certification Training</a> </li>
-                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/iso27001la/"  target="_blank"> ISO/IEC 27001:2022 Lead Auditor Online Training & Certification</a> </li>                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/artificial-intelligence-ai-for-cyber-security-professionals-training/"  target="_blank"> AI-Powered Cybersecurity Training</a> </li>
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/soc-analyst-training/"  target="_blank"> SOC Analyst Hands-on Training [2025]</a> </li>                            
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/"  target="_blank"> Advanced Cyber Threat Hunting and DFIR Training</a> </li>
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/certified-ethical-hacker-ceh-training/"  target="_blank"> CEH v13 AI Certification Training</a> </li>                            
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/artificial-intelligence-ai-for-cyber-security-professionals-training/"  target="_blank"> AI-Powered Cybersecurity Training Course Online</a> </li>
                         </ul>                        </td>
                     </tr>
                     ' . $email_footer . '
