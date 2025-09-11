@@ -97,6 +97,28 @@ picture[title="Buy 1 Course Get 1 Free"] img {
 
 <?php
 $relatedCourses = [
+    "Red Team Operations Professional Training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/soc-analyst-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
+            "text" => "SOC Analyst Hands-on Training [2025]"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "Advanced Cyber Threat Hunting and DFIR Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/certified-ethical-hacker-ceh-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2024/09/CEH-v13-AI-Online-Training-Certification-Course.jpg",
+            "text" => "CEH v13 AI Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/artificial-intelligence-ai-for-cyber-security-professionals-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
+            "text" => "AI-Powered Cybersecurity Training Course Online"
+        ],
+    ],
     "comptia-a-plus-network-plus-certification-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/comptia-datax-training/",
