@@ -28,8 +28,11 @@ if ($course_data !== null) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Red Team Operations Professional Training</title>
         <meta name="description"
-            content="Enroll in ISO/IEC 42001 Lead Auditor Training at InfosecTrain. Achieve certification and enhance your career with expert guidance. Join now for comprehensive training">
-        <meta name="robots" content="noindex, nofollow" />
+            content="Expert-level Red Team Operations Training by InfosecTrain. Gain practical skills in cybersecurity, threat simulation, and compliance for career growth."
+            class="yoast-seo-meta-tag" />
+        <meta property="og:description"
+            content="Expert-level Red Team Operations Training by InfosecTrain. Gain practical skills in cybersecurity, threat simulation, and compliance for career growth."
+            class="yoast-seo-meta-tag" />
         <link rel="icon" href="assets/images/favicon.ico">
         <!--/ style link start /-->
         <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
