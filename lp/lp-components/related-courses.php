@@ -97,7 +97,7 @@ picture[title="Buy 1 Course Get 1 Free"] img {
 
 <?php
 $relatedCourses = [
-    "Red Team Operations Professional Training" => [
+    "red-team" => [
         [
             "link" => "https://www.infosectrain.com/courses/soc-analyst-training/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
