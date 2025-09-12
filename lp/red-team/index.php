@@ -926,46 +926,18 @@ if ($course_data !== null) {
                                         fill="#EE224A" />
                                 </svg>
                                 <p class="desc">
-                                    The team is very approachable and always ready to help. Their timely support for
-                                    ISO/IEC 42001 training the and clear communication made the entire learning process
-                                    smooth and comfortable.
+                                    The Red Team training provided deep knowledge in cybersecurity, and the hands-on
+                                    sessions helped me gain a strong grasp of the subjects.
 
                                 </p>
                                 <div class="profile">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="https://www.infosectrain.com/wp-content/uploads/2025/05/Romualdo-Antonio.png"
-                                                alt="Romualdo Antonio" width="250" height="250">
+                                            <img src="https://www.infosectrain.com/wp-content/uploads/2024/07/female-avatar-150x150.png"
+                                                alt="Thangalakshmi" width="250" height="250">
                                         </div>
                                         <div class="flex-grow-1 ms-3">
-                                            <h3>Romualdo Antonio</h3>
-                                            <span>Philippines</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide gladiators-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
-                                    fill="none" class="svgleft">
-                                    <path
-                                        d="M30.3085 11.6578C26.8025 11.7501 24.0115 12.327 21.9356 13.3884C19.8597 14.4037 18.222 16.019 17.0226 18.2342C21.8203 18.2342 25.7876 19.4111 28.9246 21.7647C32.1076 24.1184 33.6992 27.9489 33.6992 33.2562C33.6992 35.2407 33.3532 37.179 32.6612 39.0711C31.9693 40.9633 30.9082 42.6478 29.4781 44.1246C28.0481 45.5553 26.3181 46.7552 24.2883 47.7243C22.2585 48.6473 19.9289 49.1088 17.2994 49.1088C12.0865 49.1088 7.88852 47.4244 4.70543 44.0554C1.56848 40.6402 0 36.0944 0 30.4179C0 27.2797 0.438251 24.1184 1.31475 20.934C2.23739 17.7035 3.85199 14.7268 6.15858 12.0039C8.46516 9.2349 11.5791 6.812 15.5002 4.73524C19.4214 2.65847 24.3575 1.20473 30.3085 0.374023V11.6578ZM67.1908 11.6578C63.6848 11.7501 60.8938 12.327 58.8179 13.3884C56.742 14.4037 55.0812 16.019 53.8357 18.2342C58.6795 18.2342 62.6699 19.4111 65.8068 21.7647C68.9899 24.1184 70.5815 27.9489 70.5815 33.2562C70.5815 35.2407 70.2124 37.179 69.4743 39.0711C68.7823 40.9633 67.7213 42.6478 66.2912 44.1246C64.9073 45.5553 63.2004 46.7552 61.1706 47.7243C59.1408 48.6473 56.7881 49.1088 54.1125 49.1088C48.9457 49.1088 44.7708 47.4244 41.5877 44.0554C38.4046 40.6402 36.8131 36.0944 36.8131 30.4179C36.8131 27.2797 37.2513 24.1184 38.1278 20.934C39.0505 17.7035 40.6651 14.7268 42.9717 12.0039C45.3244 9.2349 48.4613 6.812 52.3825 4.73524C56.3037 2.65847 61.2398 1.20473 67.1908 0.374023V11.6578Z"
-                                        fill="#EE224A" />
-                                </svg>
-                                <p class="desc">
-                                    Training was thoughtfully structured and easy to follow. The trainer made even the
-                                    more complex parts of ISO/IEC 42001 feel approachable and relevant through examples
-                                    and clear explanations.
-
-                                </p>
-                                <div class="profile">
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <img src="https://www.infosectrain.com/wp-content/uploads/2025/05/Satish-Kumar.png"
-                                                alt="Satish Kumar" width="250" height="250">
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <h3>Satish Kumar</h3>
+                                            <h3>Thangalakshmi</h3>
                                             <span>India</span>
                                         </div>
                                     </div>
@@ -980,18 +952,18 @@ if ($course_data !== null) {
                                         fill="#EE224A" />
                                 </svg>
                                 <p class="desc">
-                                    Really enjoyed the ISO/IEC 42001 training. The instructor explained everything in a
-                                    simple and clear way, which made it easy to follow and understand. Overall, it was a
-                                    smooth and informative experience.
+                                    It was a wonderful journey with the trainer during the Red Team training, where I
+                                    got to learn many valuable things from him.
+
                                 </p>
                                 <div class="profile">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="https://www.infosectrain.com/wp-content/uploads/2025/05/Senthil-Kumar-M-150x150.png"
-                                                alt="Senthil Kumar M" width="250" height="250">
+                                            <img src="https://www.infosectrain.com/wp-content/uploads/2024/07/male-avatar-150x150.png"
+                                                alt="Bhanu Prakash MG" width="250" height="250">
                                         </div>
                                         <div class="flex-grow-1 ms-3">
-                                            <h3>Senthil Kumar M</h3>
+                                            <h3>Bhanu Prakash MG</h3>
                                             <span>India</span>
                                         </div>
                                     </div>
@@ -1006,21 +978,18 @@ if ($course_data !== null) {
                                         fill="#EE224A" />
                                 </svg>
                                 <p class="desc">
-                                    The instructor demonstrated deep expertise and made learning ISO/IEC 42001 Lead
-                                    Auditor Training highly engaging. Their mentorship approach helped clarify complex
-                                    topics, making the course both insightful and interactive. Looking forward to more
-                                    such sessions with InfosecTrain.
-
+                                    The Red Team training was extremely interesting and useful. The instructor explained
+                                    the concepts very clearly and effectively, making the sessions highly valuable.
                                 </p>
                                 <div class="profile">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
-                                            <img src="https://www.infosectrain.com/wp-content/uploads/2024/07/male-avatar-150x150.png"
-                                                alt="Naman Malhotra" width="250" height="250">
+                                            <img src="https://www.infosectrain.com/wp-content/uploads/2024/07/female-avatar-150x150.png"
+                                                alt="Jahnavi Gutta" width="250" height="250">
                                         </div>
                                         <div class="flex-grow-1 ms-3">
-                                            <h3>Naman Malhotra</h3>
-                                            <span>Singapore </span>
+                                            <h3>Jahnavi Gutta</h3>
+                                            <span>India</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1034,19 +1003,46 @@ if ($course_data !== null) {
                                         fill="#EE224A" />
                                 </svg>
                                 <p class="desc">
-                                    The session provided a comprehensive understanding of AIMS 42001, with
-                                    well-structured content and expert guidance. The trainer explained concepts in a
-                                    practical manner, making learning seamless. InfosecTrain ensured a valuable and
-                                    interactive experience.
+                                    It was a good experience overall. The Red Team training really helped me upskill my
+                                    technical knowledge and boosted my confidence in applying it.
+
                                 </p>
                                 <div class="profile">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0">
                                             <img src="https://www.infosectrain.com/wp-content/uploads/2024/07/male-avatar-150x150.png"
-                                                alt="Vaibhav Pathak" width="250" height="250">
+                                                alt="Rajeev S" width="250" height="250">
                                         </div>
                                         <div class="flex-grow-1 ms-3">
-                                            <h3>Vaibhav Pathak</h3>
+                                            <h3>Rajeev S</h3>
+                                            <span>India</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide gladiators-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
+                                    fill="none" class="svgleft">
+                                    <path
+                                        d="M30.3085 11.6578C26.8025 11.7501 24.0115 12.327 21.9356 13.3884C19.8597 14.4037 18.222 16.019 17.0226 18.2342C21.8203 18.2342 25.7876 19.4111 28.9246 21.7647C32.1076 24.1184 33.6992 27.9489 33.6992 33.2562C33.6992 35.2407 33.3532 37.179 32.6612 39.0711C31.9693 40.9633 30.9082 42.6478 29.4781 44.1246C28.0481 45.5553 26.3181 46.7552 24.2883 47.7243C22.2585 48.6473 19.9289 49.1088 17.2994 49.1088C12.0865 49.1088 7.88852 47.4244 4.70543 44.0554C1.56848 40.6402 0 36.0944 0 30.4179C0 27.2797 0.438251 24.1184 1.31475 20.934C2.23739 17.7035 3.85199 14.7268 6.15858 12.0039C8.46516 9.2349 11.5791 6.812 15.5002 4.73524C19.4214 2.65847 24.3575 1.20473 30.3085 0.374023V11.6578ZM67.1908 11.6578C63.6848 11.7501 60.8938 12.327 58.8179 13.3884C56.742 14.4037 55.0812 16.019 53.8357 18.2342C58.6795 18.2342 62.6699 19.4111 65.8068 21.7647C68.9899 24.1184 70.5815 27.9489 70.5815 33.2562C70.5815 35.2407 70.2124 37.179 69.4743 39.0711C68.7823 40.9633 67.7213 42.6478 66.2912 44.1246C64.9073 45.5553 63.2004 46.7552 61.1706 47.7243C59.1408 48.6473 56.7881 49.1088 54.1125 49.1088C48.9457 49.1088 44.7708 47.4244 41.5877 44.0554C38.4046 40.6402 36.8131 36.0944 36.8131 30.4179C36.8131 27.2797 37.2513 24.1184 38.1278 20.934C39.0505 17.7035 40.6651 14.7268 42.9717 12.0039C45.3244 9.2349 48.4613 6.812 52.3825 4.73524C56.3037 2.65847 61.2398 1.20473 67.1908 0.374023V11.6578Z"
+                                        fill="#EE224A" />
+                                </svg>
+                                <p class="desc">
+                                    Thank you for a great Red Team training. Great presentation style with lots of
+                                    opportunities to ask questions and talk about real-life examples, which all made for
+                                    a really enjoyable and informative course. This has more than met my expectations. A
+                                    wonderfully practical course, both personally and professionally.
+                                </p>
+                                </p>
+                                <div class="profile">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img src="https://www.infosectrain.com/wp-content/uploads/2024/07/male-avatar-150x150.png"
+                                                alt="Raviteja S Jyothi" width="250" height="250">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h3>Raviteja S Jyothi</h3>
                                             <span>India</span>
                                         </div>
                                     </div>
