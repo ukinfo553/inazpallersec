@@ -1,4 +1,27 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$api_id = 30781;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($api_id);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +36,7 @@
     <!--/ style link start /-->
     <link href="assets/css/bootstrap-grid.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/custom.css" defer>
+    <link rel="stylesheet" href="../../lp-components/css_handler.php" defer>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,10 +75,6 @@
     $pag_url .= $_SERVER['HTTP_HOST'];
     // Append the requested resource location to the URL
     $pag_url .= $_SERVER['REQUEST_URI'];
-    // broucher link pdf file code start
-    $api_id = 30781; // Define the API ID
-    $brochureLink = json_decode(file_get_contents("https://www.infosectrain.com/api/brochure_byid.php?id=" . $api_id), true)[0]['brochure'] ?? null;
-    // broucher link pdf file code end
     ?> -->
 
     <!--/ navbar start /-->
@@ -121,24 +141,29 @@
                             <div class="d-flex flex-md-row flex-column align-items-start gap-3">
                                 <button class="button modal-btn" modal-title="Talk to Our Expert">Talk to Our
                                     Expert</button>
-                                <a href="<?php echo $brochureLink; ?>" target="_blank" class="button download-btn"
-                                    style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
-                                        viewBox="0 0 16 17" fill="none">
-                                        <g clip-path="url(#clip0_18618_896)">
-                                            <path
-                                                d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.379 12.6915 7.379 12.6915 7.37897 12.6915C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.37704 12.6897 7.37685 12.6894 7.3767 12.6893C7.3762 12.6888 7.37577 12.6884 7.3753 12.6879C7.37499 12.6876 7.37471 12.6874 7.3744 12.687C7.37409 12.6867 7.37369 12.6863 7.37341 12.686C7.37279 12.6854 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.6279 12.6847 8.62721 12.6854 8.62659 12.686C8.62625 12.6863 8.62588 12.6867 8.6256 12.6869C8.62529 12.6873 8.62501 12.6875 8.6247 12.6878C8.62426 12.6883 8.62377 12.6888 8.62333 12.6892C8.62318 12.6894 8.62296 12.6896 8.6228 12.6897C8.62224 12.6903 8.62165 12.6909 8.62106 12.6915C8.62103 12.6915 8.62103 12.6915 8.621 12.6915C8.61122 12.701 8.60132 12.7103 8.59119 12.7193C8.51676 12.7857 8.43386 12.8375 8.3462 12.8744C8.34589 12.8745 8.34564 12.8747 8.34533 12.8748C8.34499 12.8749 8.34471 12.8751 8.34437 12.8752C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
-                                                fill="#E50914" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_18618_896">
-                                                <rect width="16" height="16" fill="white"
-                                                    transform="translate(0 0.5)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    Download Brochure
-                                </a>
+                                <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="button download-btn"
+                                        style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
+                                            viewBox="0 0 16 17" fill="none">
+                                            <g clip-path="url(#clip0_18618_896)">
+                                                <path
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    fill="#E50914" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_18618_896">
+                                                    <rect width="16" height="16" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Download Brochure
+                                    </a>';
+                                }
+                                ?>
                             </div>
                             <!-- <div class="d-flex gap-3">
                                 <img src="assets/images/100-satisfaction.webp" alt="Conditions Apply"
@@ -259,322 +284,59 @@
                                     fundamentals, principals, procedures, and methodologies.</p>
                             </div>
                             <div class="col-12 mt-4">
-                                <div class="accordion d-flex flex-column gap-4">
+                                <div class="accordion d-flex flex-column gap-4 course-content-accordion">
                                     <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Course-Curriculum.svg" width="24"
-                                                    height="24" alt="Course Curriculum">
-                                                <span>Course Curriculum</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <p><strong>Introduction to the Information Security Management System
-                                                    (ISMS) and ISO/IEC 27001</strong></p>
-                                            <p><strong>Section 1: Training course objectives and
-                                                    structure&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>General information</li>
-                                                <li>Learning objectives</li>
-                                                <li>Educational approach</li>
-                                                <li>Examination and certification</li>
-                                            </ul>
-                                            <p><strong>Section 2: Standards and regulatory frameworks&nbsp;</strong>
-                                            </p>
-                                            <ul class="liststar">
-                                                <li>What is ISO?</li>
-                                                <li>The ISO/IEC 27000 family of standards</li>
-                                                <li>Advantages of ISO/IEC 27001</li>
-                                            </ul>
-                                            <p><strong>Section 3: Certification process&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Certification process</li>
-                                                <li>Certification scheme</li>
-                                                <li>Accreditation bodies</li>
-                                                <li>Certification bodies</li>
-                                            </ul>
-                                            <p><strong>Section 4: Fundamental concepts and principles of information
-                                                    security&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Information and asset</li>
-                                                <li>Information security</li>
-                                                <li>Confidentiality, integrity, and availability</li>
-                                                <li>Vulnerability, threat, and impact</li>
-                                                <li>Information security risk</li>
-                                                <li>Security controls and control objectives</li>
-                                                <li>Classification of security controls</li>
-                                            </ul>
-                                            <p><strong>Section 5: Information Security Management System
-                                                    (ISMS)&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Definition of a management system</li>
-                                                <li>Definition of ISMS</li>
-                                                <li>Process approach</li>
-                                                <li>ISMS implementation</li>
-                                                <li>Overview – Clauses 4 to 10</li>
-                                                <li>Overview – Annex A</li>
-                                                <li>Statement of Applicability</li>
-                                            </ul>
-                                            <p><strong>Audit principles, preparation, and initiation of an
-                                                    audit</strong></p>
-                                            <p><strong>Section 6: Fundamental audit concepts and
-                                                    principles&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Audit standards</li>
-                                                <li>What is an audit?</li>
-                                                <li>Types of audits</li>
-                                                <li>Involved parties</li>
-                                                <li>Audit objectives and criteria</li>
-                                                <li>Combined audit</li>
-                                                <li>Principles of auditing</li>
-                                                <li>Competence and evaluation of auditors</li>
-                                            </ul>
-                                            <p><strong>Section 7: The impact of trends and technology in
-                                                    auditing&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Big data</li>
-                                                <li>The three V’s of big data</li>
-                                                <li>The use of big data in audits</li>
-                                                <li>Artificial intelligence</li>
-                                                <li>Machine learning</li>
-                                                <li>Cloud computing</li>
-                                                <li>Auditing outsourced operations</li>
-                                            </ul>
-                                            <p><strong>Section 8: Evidence-based auditing&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Audit evidence</li>
-                                                <li>Types of audit evidence</li>
-                                                <li>Quality and reliability of audit evidence</li>
-                                            </ul>
-                                            <p><strong>Section 9: Risk-based auditing&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Audit approach based on risk</li>
-                                                <li>Materiality and audit planning</li>
-                                                <li>Reasonable assurance</li>
-                                            </ul>
-                                            <p><strong>Section 10: Initiation of the audit process&nbsp;</strong>
-                                            </p>
-                                            <ul class="liststar">
-                                                <li>The audit offer</li>
-                                                <li>The audit team leader</li>
-                                                <li>The audit team</li>
-                                                <li>Audit feasibility</li>
-                                                <li>Audit acceptance</li>
-                                                <li>Establishing contact with the auditee</li>
-                                                <li>The audit schedule</li>
-                                            </ul>
-                                            <p><strong>Section 11: Stage 1 audit&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Objectives of the stage 1 audit</li>
-                                                <li>Pre on-site activities</li>
-                                                <li>Preparing for on-site activities</li>
-                                                <li>Conducting on-site activities</li>
-                                                <li>Documenting the outputs of stage 1 audit</li>
-                                            </ul>
-                                            <p><strong>On-site audit activities</strong></p>
-                                            <p><strong>Section 12: Preparing for stage 2 audit&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Setting the audit objectives</li>
-                                                <li>Planning the audit</li>
-                                                <li>Assigning work to the audit team</li>
-                                                <li>Preparing audit test plans</li>
-                                                <li>Preparing documented information for the audit</li>
-                                            </ul>
-                                            <p><strong>Section 13: Stage 2 audit&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Conducting the opening meeting</li>
-                                                <li>Collecting information</li>
-                                                <li>Conducting audit tests</li>
-                                                <li>Determining audit findings and nonconformity reports</li>
-                                                <li>Performing a quality review</li>
-                                            </ul>
-                                            <p><strong>Section 14: Communication during the audit&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Behavior during on-site visits</li>
-                                                <li>Communication during the audit</li>
-                                                <li>Audit team meetings</li>
-                                                <li>Guides and observers</li>
-                                                <li>Conflict management</li>
-                                                <li>Cultural aspects</li>
-                                                <li>Communication with the top management</li>
-                                            </ul>
-                                            <p><strong>Section 15: Audit procedures&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Overview of the audit process</li>
-                                                <li>Evidence collection and analysis procedures</li>
-                                                <li>Interview</li>
-                                                <li>Documented information review</li>
-                                                <li>Observation</li>
-                                                <li>Analysis</li>
-                                                <li>Sampling</li>
-                                                <li>Technical verification</li>
-                                            </ul>
-                                            <p><strong>Section 16: Creating audit test plans&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Audit test plans</li>
-                                                <li>Examples of audit test plans</li>
-                                                <li>Guidance for auditing an ISMS</li>
-                                                <li>Corroboration</li>
-                                                <li>Evaluation</li>
-                                                <li>Auditing virtual activities and locations</li>
-                                            </ul>
-                                            <p><strong>Closing of the audit</strong></p>
-                                            <p><strong>Section 17: Drafting audit findings and nonconformity
-                                                    reports&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Audit findings</li>
-                                                <li>Types of possible audit findings</li>
-                                                <li>Documenting the audit findings</li>
-                                                <li>Drafting a nonconformity report</li>
-                                                <li>The principle of the benefit of the doubt</li>
-                                            </ul>
-                                            <p><strong>Section 18: Audit documentation and quality review</strong>
-                                            </p>
-                                            <ul class="liststar">
-                                                <li>Work documents</li>
-                                                <li>Quality review</li>
-                                            </ul>
-                                            <p><strong>Section 19: Closing of the audit&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Determining audit conclusions</li>
-                                                <li>Discussing audit conclusions</li>
-                                                <li>Closing meeting</li>
-                                                <li>Preparing audit report</li>
-                                                <li>Distributing the audit report</li>
-                                                <li>Making the certification decision</li>
-                                                <li>Closing the audit</li>
-                                            </ul>
-                                            <p><strong>Section 20: Evaluation of action plans by the
-                                                    auditor&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Submission of action plans by the auditee</li>
-                                                <li>Content of action plans</li>
-                                                <li>Evaluation of action plans</li>
-                                            </ul>
-                                            <p><strong>Section 21: Beyond the initial audit&nbsp;</strong></p>
-                                            <ul class="liststar">
-                                                <li>Audit follow-up activities</li>
-                                                <li>Surveillance activities</li>
-                                                <li>Recertification audit</li>
-                                                <li>Use of trademarks</li>
-                                            </ul>
-                                            <p><strong>Section 22: Managing an internal audit program&nbsp;</strong>
-                                            </p>
-                                            <ul class="liststar">
-                                                <li>Managing an audit program</li>
-                                                <li>Role of the internal audit function</li>
-                                                <li>Main internal audit services and activities</li>
-                                                <li>Audit program resources</li>
-                                                <li>Audit program records</li>
-                                                <li>Follow up on nonconformities</li>
-                                                <li>Monitoring, evaluating, reviewing, and improving an audit
-                                                    program</li>
-                                            </ul>
-                                            <p>The above-mentioned content is delivered in 32 hours. In addition to
-                                                this, we have added 8 hours session.</p>
-                                            <p><strong>8hrs dedicated session</strong></p>
-                                            <p><strong>ISO 27001 Practical Approach</strong></p>
-                                            <ul class="liststar">
-                                                <li>ISO 27001 (new 93 controls) Controls to Evidence Mapping</li>
-                                                <li>Practical approach on how to collect evidence while auditing
-                                                    with three scenarios/ case studies paragraphs</li>
-                                            </ul>
-                                            <p><strong>ISO 27001 Exam Prep</strong></p>
-                                            <ul class="liststar">
-                                                <li>Revision of course and open mic session for doubts</li>
-                                                <li>Exam Prep – mock exam</li>
-                                                <li>Discussion on exam questions and answers</li>
-                                                <li>Discussion on different exams (TUV/IGC)</li>
-                                            </ul>
+                                    <?php
+                                    // Check that course_details exists and is a non-empty array
+                                    if (!empty($course_details) && is_array($course_details)) {
+                                        foreach ($course_details as $index => $detail) {
+                                            // Make the first item active and open
+                                            $activeClass = $index === 0 ? 'open' : '';
+                                            ?>
+                                            <div
+                                                class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $activeClass; ?>">
+                                                <button
+                                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/course-content/Course-Curriculum.svg" width="24"
+                                                            height="24" alt="<?php echo htmlspecialchars($detail['title']); ?>">
+                                                        <span><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="accordion-body">
+                                                    <?php echo $detail['ans']; ?>
 
-                                            <a href="<?php echo $brochureLink; ?>" target="_blank"
-                                                class="button d-inline-block mt-4">Download Brochure</a>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Course-Objectives.svg" width="24"
-                                                    height="24" alt="Course Objectives">
-                                                <span>Course Objectives</span>
+                                                    <?php
+                                                    // If this is the first item and $brochureLink is set, show brochure button
+                                                    if ($index === 0 && !empty($brochure)) {
+                                                        echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="button download-btn mt-3 d-inline-block"
+                                        style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
+                                            viewBox="0 0 16 17" fill="none">
+                                            <g clip-path="url(#clip0_18618_896)">
+                                                <path
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    fill="#E50914" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_18618_896">
+                                                    <rect width="16" height="16" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Download Brochure
+                                    </a>';
+                                                    }
+                                                    ?>
+                                                </div>
                                             </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>Fundamental concepts and principles of information security</li>
-                                                <li>ISO/IEC 27001 certification process</li>
-                                                <li>Information Security Management System (ISMS)</li>
-                                                <li>The ISO/IEC 27000 family of standards</li>
-                                                <li>Advantages of ISO/IEC 27001</li>
-                                                <li>Fundamental of information and assets</li>
-                                                <li>Fundamental principles of information security confidentiality,
-                                                    integrity, and availability</li>
-                                                <li>Preparation of an ISO/IEC 27001 certification audit</li>
-                                                <li>ISMS documentation audit</li>
-                                                <li>Big data, artificial intelligence, machine learning, and cloud
-                                                    computing
-                                                </li>
-                                                <li>Audit procedures: observation, document review, interview, sampling
-                                                    techniques, technical verification, corroboration, and evaluation
-                                                </li>
-                                                <li>Conducting a closing meeting and conclusion of an ISO/IEC 27001
-                                                    audit
-                                                </li>
-                                                <li>Evaluation of corrective action plans</li>
-                                                <li>Internal audit management program</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Pre-requisites.svg" width="24"
-                                                    height="24" alt="Prerequisites">
-                                                <span>Pre-requisites</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <p>Certified ISO/IEC 27001 Foundation Certification or basic knowledge of
-                                                ISO/IEC 27001 is recommended.</p>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Target-Audience.svg" width="24"
-                                                    height="24" alt="Target Audience">
-                                                <span>Target Audience</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>Internal Auditors</li>
-                                                <li>Auditors wanting to perform and lead ISMS certification audits</li>
-                                                <li>Project Managers or Consultants wanting to master the ISMS audit
-                                                    process
-                                                </li>
-                                                <li>CxO and Senior Managers responsible for the IT governance of an
-                                                    enterprise and the management of its risks</li>
-                                                <li>Members of an information security team</li>
-                                                <li>Expert advisors in information technology</li>
-                                                <li>Technical experts wanting to prepare for an information security
-                                                    audit
-                                                    function</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                    <!--accordion-item end-->
                                 </div>
                             </div>
                         </div>
@@ -683,6 +445,19 @@
                                         value="<?php echo $pag_url; ?>">
                                     <input type="hidden" id="me_others" name="me_others" value="">
                                     <input type="hidden" name="me_submited" value="1">
+                                    <!-- Privacy Policy Checkbox -->
+                                    <label class="f-nunito fs-14 fw-normal"
+                                        style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                        <input type="checkbox" name="privacy_policy" checked required
+                                            style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                        <span>
+                                            By sharing your details, you agree to our Terms and <a
+                                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                                style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                                Policy</a>
+                                        </span>
+                                    </label>
+                                    <!-- privacy Policy Checkbox end -->
                                     <button type="submit" class="form-control-btn">Submit</button>
 
                                     <div class="loader text-center" style="display:none;">
@@ -1262,134 +1037,37 @@
         <!--/ related courses /-->
 
         <!--<[faq start]>-->
-        <section class="faq-section pt-0">
-            <div class="container-fluid container-lg">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <h2 class="text-center">Frequently Asked Questions</h2>
-                    </div>
-                    <div class="col-12">
-                        <div class="accordion d-flex flex-column gap-4">
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>What is the ISO 27001:2022 revision?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        The updated version of ISO/IEC 27001, published on October 25, 2022, includes
-                                        significant Annex A changes, minor clause updates, and a revised title. The new
-                                        standard title is ISO/IEC 27001:2022 Information Security, Cybersecurity, and
-                                        Privacy Protection. It incorporates the latest updates and best practices to
-                                        help organizations establish and maintain effective information security
-                                        management systems.
-                                    </p>
-                                </div>
+        <?php if (!empty($faq)) { ?>
+            <section class="faq-section pt-0">
+                <div class="container-fluid container-lg">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <h2 class="text-center">Frequently Asked Questions</h2>
+                        </div>
+                        <div class="col-12">
+                            <div class="accordion d-flex flex-column gap-4 accordion-faq-section">
+                                <?php foreach ($faq as $index => $question) {
+                                    // Add "open" class and visible style for the first item
+                                    $isOpen = $index === 0 ? 'open' : '';
+                                    ?>
+                                    <div
+                                        class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $isOpen; ?>">
+                                        <button
+                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
+                                            <span><?php echo htmlspecialchars($question['title']); ?></span>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="accordion-body">
+                                            <?php echo $question['ans']; ?>
+                                        </div>
+                                    </div>
+                                <?php } ?>
                             </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>What exactly has changed in ISO 27001:2022?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p class="fw-bold">Here are the main changes in ISO 27001:2022:</p>
-                                    <ul class="liststar">
-                                        <li>The new version of ISO/IEC 27001, ISO/IEC 27001:2022, comes with a new
-                                            title: “Information Security, Cybersecurity, and Privacy Protection.”</li>
-                                        <li>The number of controls in Annex A has decreased from 114 to 93.</li>
-                                        <li>The 93 controls have been restructured into 4 sections.</li>
-                                        <li>11 new controls have been added to Annex A.</li>
-                                        <li>Clauses 4 to 10 have undergone several minor updates.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>How to Prepare for ISO/IEC 27001:2022?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p class="fw-bold">
-                                        Preparing for ISO/IEC 27001:2022 requires careful planning and implementation of
-                                        information security management practices. These are some preparatory measures:
-                                    </p>
-                                    <ul class="liststar">
-                                        <li>Familiarize yourself with the requirements and changes in ISO/IEC 27001:2022
-                                            by reading the standard thoroughly.</li>
-                                        <li>Conduct internal audits to evaluate the efficacy of your organization's ISMS
-                                            in meeting ISO/IEC 27001:2022 requirements.</li>
-                                        <li>Create a detailed plan to address the gaps identified in the assessment.
-                                        </li>
-                                        <li>Review and update your organization's policies, procedures, and
-                                            documentation to align with the requirements of ISO/IEC 27001:2022.</li>
-                                        <li>Provide training to all employees involved in the ISMS to ensure they
-                                            understand the updated requirements and their roles and responsibilities in
-                                            implementing and maintaining the ISMS.</li>
-                                        <li>Perform internal audits to assess the effectiveness of your organization's
-                                            ISMS in meeting the requirements of ISO/IEC 27001:2022.</li>
-                                        <li>Select a reputable certification body and schedule an external audit to
-                                            obtain certification to ISO/IEC 27001:2022.</li>
-                                        <li>Implement a process of continuous monitoring and improvement to ensure that
-                                            your organization's ISMS remains effective in managing information security
-                                            risks.</li>
-                                        <li>After obtaining certification to ISO/IEC 27001:2022, continue to maintain
-                                            compliance with the standard by conducting periodic internal audits,
-                                            addressing non-conformities, and keeping up-to-date with any further updates
-                                            or changes to the standard.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>What was changed in the newly published ISO 27002:2022?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        The updated version of the internationally recognized standard ISO/IEC 27001 has
-                                        been published with a more relevant and up-to-date title: ISO/IEC 27001:2022
-                                        Information Security, Cybersecurity, and Privacy Protection. This revised
-                                        edition addresses the evolving security challenges organizations face worldwide
-                                        and focuses on protecting information assets confidentiality, availability, and
-                                        integrity.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>What is the ISO 27001:2022 Lead Auditor certification?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        The ISO 27001:2022 Lead Auditor certification validates an individual's
-                                        knowledge and expertise in auditing Information Security Management Systems
-                                        (ISMS) based on the ISO/IEC 27001:2022 standard. It demonstrates that the
-                                        individual has met the required competency criteria and possesses the necessary
-                                        skills to conduct an ISMS audit.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[faq end]>-->
 
         <!--<[reach us sec start]>-->
@@ -1418,6 +1096,19 @@
                                     value="<?php echo $pag_url; ?>">
 
                                 <input type="hidden" name="me_submited" value="1">
+                                <!-- Privacy Policy Checkbox -->
+                                <label class="f-nunito fs-14 fw-normal"
+                                    style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                            Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button type="submit" class="form-control-btn w-auto">Submit</button>
 
                                 <div class="loader text-center" style="display:none;">
@@ -1609,6 +1300,19 @@
                     <input type="hidden" name="me_pageurl" value="<?php echo $pag_url; ?>">
 
                     <input type="hidden" name="me_submited" value="1">
+                    <!-- Privacy Policy Checkbox -->
+                    <label class="f-nunito fs-14 fw-normal"
+                        style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                        <span>
+                            By sharing your details, you agree to our Terms and <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
                     <button type="submit" class="form-control-btn">Submit</button>
 
                     <div class="loader text-center" style="display:none;">

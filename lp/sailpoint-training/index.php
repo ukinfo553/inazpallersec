@@ -1,4 +1,27 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$courseID = 32149;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($courseID);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +36,8 @@
     <!--/ style link start /-->
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/style.css" defer>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" defer />
+    <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
     <script>
@@ -115,8 +139,13 @@
                             <div class="button-sec d-flex flex-column flex-md-row">
                                 <button class="cta-button modal-btn" title="Talk to Our Expert"
                                     modal-title="TALK TO OUR EXPERT">Talk to Our Expert</button>
-                                <a href="https://www.infosectrain.com/wp-content/uploads/2019/09/Sailpoint-IdentityIQ-Exam-Prep-Training-v8.42025.pdf"
-                                    target="_blank" class="cta-button">Download Brochure</a>
+                                <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="cta-button"
+                                    title="Download Brochure">Download Brochure</a>';
+                                }
+                                ?>
                             </div>
                             <img src="assets/images/review-mob-img.png"
                                 alt="Sailpoint IdentityIQ Implementation Course Review" width="636" height="34"
@@ -227,198 +256,33 @@
                             </div>
                             <div class="faq-wrapper">
                                 <!--/ faq item /-->
-                                <div class="faq-item active open">
-                                    <h3 class="faq-title"><span class="title">Course Curriculum</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content course-curriculum">
-                                        <h3>Module 0 - Introduction</h3>
-                                        <ul>
-                                            <li>IAM Overview - SailPoint Introduction and Products
-                                            </li>
-                                            <li>SailPoint Product Installation and Patching</li>
-                                            <li>IdentityIQ Preview
-                                                <ul>
-                                                    <li>Compliance Manager</li>
-                                                    <li>Lifecycle Manager</li>
-                                                    <li>SailPoint Modules and Artefacts</li>
-                                                </ul>
-                                            </li>
-                                            <li>Introduction to SailPoint Virtual Machine
-                                                <ul>
-                                                    <li>Exercises Environment</li>
-                                                    <li>Deployment</li>
-                                                    <li>Migration</li>
-                                                </ul>
-                                            </li>
-                                            <li>SailPoint Monitoring Piece and Important Configuration Files
-                                                - Administration
-                                                <ul>
-                                                    <li>Extended Attributes</li>
-                                                    <li>IIQ Properties</li>
-                                                    <li>Log4j</li>
-                                                    <li>Audit Configuration</li>
-                                                    <li>SysLog</li>
-                                                    <li>Email Configuration</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <h3>Module 1 - Application Onboarding (Development and
-                                            Administration)</h3>
-                                        <ul>
-                                            <li><strong>Application Onboarding</strong>
-                                                <p>Authoritative Application and Non-Authoritative
-                                                    Applications Connectors</p>
-                                                <ul>
-                                                    <li>Delimited Single Object, Multiple Object</li>
-                                                    <li>JDBC Applications-Mysql database</li>
-                                                    <li>LDAP</li>
-                                                    <li>Special case Connectors</li>
-                                                    <li>Multiplex and Logical Application</li>
-                                                    <li>Best Practices and Aggregation Strategies</li>
-                                                    <li>Manual Correlation</li>
-                                                    <li>Important Tasks and Custom Schedules&nbsp;</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <h3>Module 2 - Compliance (Policy + Risk + Certifications and
-                                            RBAC)</h3>
-                                        <ul>
-                                            <li>Implementing Risk in IIQ
-                                                <ul>
-                                                    <li>Identity level Risk</li>
-                                                    <li>Application Level Risk</li>
-                                                    <li>Targeted Monitoring</li>
-                                                    <li>Reporting - Administration</li>
-                                                </ul>
-                                            </li>
-                                            <li>Policies In IIQ
-                                                <ul>
-                                                    <li>Policies in Compliance and Policies in Provisioning
-                                                        <ul>
-                                                            <li>SOD Policies - Role Level and Entitlement
-                                                                Level</li>
-                                                            <li>Activity Policy</li>
-                                                            <li>Account Policy</li>
-                                                            <li>Risk Policy</li>
-                                                            <li>Advanced Policy</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>Handling Policy Violations and Policy Reporting</li>
-                                                </ul>
-                                            </li>
-                                            <li>Certifications in IIQ
-                                                <p>Identity and Event-Based Certifications</p>
-                                                <ul>
-                                                    <li>Manager certification</li>
-                                                    <li>Entitlement Owner</li>
-                                                    <li>Application Owner</li>
-                                                    <li>Advanced Certification</li>
-                                                    <li>Membership Certification</li>
-                                                    <li>Composition Certification</li>
-                                                </ul>
-                                            </li>
-                                            <li>Event Based Certification
-                                                <ul>
-                                                    <li>Joiner</li>
-                                                    <li>Mover</li>
-                                                    <li>Leaver</li>
-                                                    <li>Dynamic Reports and OOTB Reports on Certifications
-                                                    </li>
-                                                    <li>SailPoint UI Branding</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <p>Roles in IIQ</p>
-                                                <p>Role Based Access Control</p>
-                                                <p>Role Modelling and Mining Activities</p>
-                                                <ul>
-                                                    <li>Business Role Mining</li>
-                                                    <li>IT Role Mining</li>
-                                                    <li>Entitlement Analysis</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                        <h3>Module 3 - LCM, Workflow and Provisioning (Development and
-                                            Administration)</h3>
-                                        <ul>
-                                            <li>11. Rules, Tasks and API
-                                                <ul>
-                                                    <li>Best Practices and Administration</li>
-                                                </ul>
-                                            </li>
-                                            <li>12. Lifecycle Manager and Components</li>
-                                            <li>13. Access Requests - Administration</li>
-                                            <li>14. Lifecycle Events and Custom Workflow
-                                                <ul>
-                                                    <li>Custom Workflow Development mapped to Lifecycle
-                                                        Event</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                <?php
+                                // Check that course_details exists and is a non-empty array
+                                if (!empty($course_details) && is_array($course_details)) {
+                                    foreach ($course_details as $index => $detail) {
+                                        // Make the first item active and open
+                                        $activeClass = $index === 0 ? 'active open' : '';
+                                        ?>
+                                        <div class="faq-item <?php echo $activeClass; ?>">
+                                            <h3 class="faq-title">
+                                                <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                <span class="right-icon"></span>
+                                            </h3>
+                                            <div class="faq-content">
+                                                <?php echo $detail['ans']; ?>
 
-                                        <strong style="color:var(--red);">Bonus:</strong><br>
-                                        <p>Mock Project Implementation (From Scratch till the
-                                                        end of the project)</p>
-                                                    <p>Real-time Simulations after completion of each
-                                                        module</p><br>
-                                        <a href="https://www.infosectrain.com/wp-content/uploads/2019/09/Sailpoint-IdentityIQ-Exam-Prep-Training-v8.42025.pdf"
-                                            target="_blank" class="cta-button">Download Brochure</a>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Course Objectives</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Understand the concepts and components of the IdentityIQ architecture
-                                                and its key features</li>
-                                            <li>Explore the application on-boarding process and correlation; </li>
-                                            <li>Learn about executive troubleshooting, debugging and control; </li>
-                                            <li>Learn to smoothly go through workflows, reports, provisioning broker,
-                                                and engine and build your true SailPoint IIQ capabilities. </li>
-                                            <li>Attend a 4 hours long Interview session at the end of this program that
-                                                will train you in essential SailPoint Interview questions and answers
-                                                and make you completely job-ready.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Pre-Requisites</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>There are no formal prerequisites for the SailPoint IdentityIQ training.
-                                            However, it is recommended that participants have:</p>
-                                        <ul>
-                                            <li>A background in IAM (Identity and Access Management) or a related field
-                                            </li>
-                                            <li>Basic knowledge of Java and MySQL</li>
-                                        </ul>
-                                        <strong style="color:var(--red);">Note:</strong>
-                                        <ul>
-                                            <li>SailPoint® is a registered mark of SailPoint Technologies Inc.</li>
-                                            <li>We are not an authorized training partner of SailPoint.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Target Audience</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>An aspirant looking forward to begin a career in Identity & Access
-                                                Management or SailPoint</li>
-                                            <li>A professional who want to change the career domain to Identity and
-                                                Access Management (IAM)</li>
-                                            <li>A Software Developer or Tester</li>
-                                            <li>Java Developer</li>
-                                            <li>Anyone who has Java knowledge and interested to start their career in
-                                                SailPoint IAM</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                                <?php
+                                                // If this is the first item and $brochureLink is set, show brochure button
+                                                if ($index === 0 && !empty($brochure)) {
+                                                    echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <!--<[ course details sec end ]>-->
@@ -443,7 +307,18 @@
                                 <input type="hidden" id="me_redirect" value="<?php echo BASE_URL; ?>thank-you.php">
                                 <input type="hidden" id="me_others" name="me_others" value="">
                                 <input type="hidden" id="me_pageurl" name="me_pageurl" value="<?php echo $pag_url; ?>">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--white);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited">Request a Callback</button>
                                 <div class="loading_w hide" id="loading_w">
@@ -463,39 +338,41 @@
         <!--/ training calendar sec start /-->
         <section class="training-calendar" id="training-calendar">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>SailPoint Training Calendar</h2>
+                <?php if (!empty($courseID)): ?>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>SailPoint Training Calendar</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <?php
-                        $url = "https://www.infosectrain.com/api/32149/href_toscroll/free_demo";
-                        function gettraning_Cal($url)
-                        {
-                            $ch = curl_init();
-                            curl_setopt($ch, CURLOPT_HEADER, 0);
-                            curl_setopt($ch, CURLOPT_VERBOSE, 1);
-                            //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                            curl_setopt($ch, CURLOPT_FAILONERROR, 0);
-                            // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-                            //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-                            curl_setopt($ch, CURLOPT_URL, $url);
+                    <div class="row">
+                        <div class="col-12">
+                            <?php
+                            $url = "https://www.infosectrain.com/api/$courseID/href_toscroll/free_demo";
+                            function gettraning_Cal($url)
+                            {
+                                $ch = curl_init();
+                                curl_setopt($ch, CURLOPT_HEADER, 0);
+                                curl_setopt($ch, CURLOPT_VERBOSE, 1);
+                                //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+                                curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+                                // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+                                //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+                                curl_setopt($ch, CURLOPT_URL, $url);
 
-                            $content = curl_exec($ch);
+                                $content = curl_exec($ch);
 
-                            curl_close($ch);
-                            return $content;
-                        }
+                                curl_close($ch);
+                                return $content;
+                            }
 
-                        gettraning_Cal($url);
+                            gettraning_Cal($url);
 
-                        ?>
+                            ?>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
                 <div class="row align-items-center">
                     <div class="col-lg-2 d-none d-lg-block">
                         <img src="assets/images/training-calendar.png" width="132" height="128" alt="Training Calendar"
@@ -1022,153 +899,42 @@
         <!--<[success story start]>-->
 
         <!--<[FAQ SEC start]>-->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Frequently Asked Questions</h2>
+        <?php if ($faq !== null && !empty($faq)) { ?>
+            <section class="faq-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="faq-wrapper">
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What is SailPoint IdentityIQ, and its
-                                        importance for organizations?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        SailPoint IdentityIQ is an extensive suite of identity management systems that
-                                        allows enterprises to control user access to applications and data efficiently
-                                        while ensuring adherence to policies and governance standards. </p>
-                                </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="faq-wrapper">
+                                <!--/ faq item start /-->
+                                <?php
+                                // Display the FAQs section if the data is available
+
+                                foreach ($faq as $index => $question) {
+                                    // Determine if the first item should be open
+                                    $isOpen = $index === 0 ? 'open active' : '';
+                                    $displayStyle = $index === 0 ? 'style="display: block;"' : '';
+
+                                    echo '<div class="faq-item ' . $isOpen . '">';
+                                    echo '    <h3 class="faq-title"><span class="title">' . $question['title'] . '</span><span class="right-icon"></span></h3>';
+                                    echo '    <div class="faq-content" ' . $displayStyle . '>';
+                                    echo $question['ans'];
+                                    echo '    </div>';
+                                    echo '</div>';
+                                }
+                                ?>
+                                <!--/ faq item end /-->
                             </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How is SailPoint implemented?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        Implementing SailPoint involves deploying and configuring SailPoint IdentityIQ
-                                        to manage and secure user identities by integrating them with existing systems,
-                                        establishing identity governance policies, and automating access control and
-                                        provisioning tasks. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What benefits does SailPoint IdentityIQ
-                                        offer?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                    </p>
-                                    <p>Benefits of SailPoint IdentityIQ include:</p>
-                                    <ul>
-                                        <li>Enhanced security via comprehensive identity governance</li>
-                                        <li>Reduced IT costs through automated user access management</li>
-                                        <li>Improved regulatory compliance</li>
-                                        <li>Increased operational efficiency in identity processes</li>
-                                        <li>Advanced analytics and reporting for informed decision-making</li>
-                                    </ul>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What are the necessary prerequisites for
-                                        learning SailPoint?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        To learn SailPoint, individuals must understand IAM concepts, directory services
-                                        like Active Directory and LDAP, basic security principles, and some Java and
-                                        BeanShell scripting skills for customizations. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What is the purpose of SailPoint?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        SailPoint provides a comprehensive identity governance solution to effectively
-                                        manage user access, ensure regulatory compliance, and reduce security risks in
-                                        identity and access management. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How many types of roles are there in
-                                        SailPoint?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        In SailPoint, there are primarily two types of roles: business roles, aligned
-                                        with organizational job functions, and technical (IT) roles, associated with
-                                        specific access rights to IT resources. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What is the purpose of implementing SailPoint
-                                        IdentityIQ?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        Implementing SailPoint IdentityIQ aims to boost security, streamline compliance,
-                                        and enhance operational efficiency by automating identity and access management
-                                        throughout the organization. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How can we measure the ROI of SailPoint
-                                        IdentityIQ implementation?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The ROI of SailPoint IdentityIQ implementation can be measured by assessing
-                                        unauthorized access reduction, user provisioning and de-provisioning efficiency,
-                                        compliance savings, and improved IT operations. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Can SailPoint IdentityIQ integrate with other
-                                        security and identity management tools?</span><span class="right-icon"></span>
-                                </h3>
-                                <div class="faq-content">
-                                    <p>
-                                        Yes, SailPoint IdentityIQ can integrate with various security and identity
-                                        management tools, such as Active Directory, LDAP directories, HR systems, and
-                                        IAM solutions, providing a unified and flexible identity governance framework to
-                                        improve an organization's security. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What resources and support options are
-                                        available from SailPoint for implementing IdentityIQ?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        SailPoint offers various resources and support options for implementing
-                                        IdentityIQ, including customer support, professional services, online
-                                        documentation, training programs, and a community portal for knowledge sharing
-                                        and collaboration. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[FAQ SEC start]>-->
 
         <!--<[reach us sec start]>-->
@@ -1200,7 +966,18 @@
                                     name="me_others">
                                 <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_footer"
                                     name="me_pageurl">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited_footer">Request a Callback</button>
                             </form>
@@ -1393,7 +1170,18 @@
                     <input type="hidden" value="" id="me_others_pop" name="me_others" />
                     <!-- <input type="hidden" value="" id="me_message" name="me_message" /> -->
                     <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_pop" name="me_pageurl" />
-
+                    <!-- Privacy Policy Checkbox -->
+                    <label
+                        style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                        <span>
+                            By sharing your details, you agree to our Terms and <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
                     <button class="cta-button form-button" type="submit" name="me_submited" id="me_submited_pop">Request
                         a Callback</button>
 
@@ -1427,7 +1215,7 @@
 
 <!--/ js link start /-->
 <script src="assets/js/common.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="assets/js/swiper-bundle.min.js" defer></script>
 <script src="assets/js/custom.js" defer></script>
 
 <!--/ js link start /-->

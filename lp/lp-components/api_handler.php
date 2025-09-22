@@ -9,13 +9,17 @@
  */
 function get_brochure_data($id) {
     // Build the API URL with the dynamic ID
-    $url = "https://infosectrain.com/api/brochure_byid.php?id=" . $id;
+    $url = "https://www.infosectrain.com/api/brochure_byid.php?id=" . $id;
 
     // Initialize cURL session
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);  // Return the response as a string
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);  // Follow redirects
+    // ----- BELOW: disable SSL verification (bypass) -----
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // don't verify peer certificate
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);     // don't verify host name
+    // ----------------------------------------------------
     $response = curl_exec($ch);  // Execute the request
     curl_close($ch);  // Close the cURL session
 

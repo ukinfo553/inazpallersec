@@ -1,4 +1,27 @@
-<?php include('include/comman_use.php'); ?>
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$courseID = 30782;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($courseID);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +37,7 @@
         <!--/ style link start /-->
         <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
         <link rel="stylesheet" href="assets/css/style.css" defer>
+    <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
         <!--/ style link end /-->
         <!-- Google Tag Manager -->
@@ -75,12 +99,11 @@
                                 <a href="#training-calendar">Training Calendar</a>
                             </li>
                             <li>
-                                <a href="#offer">offer</a>
-                            </li>
-                            <li>
                                 <a href="#why-choose">Why InfosecTrain</a>
                             </li>
-
+                            <li>
+                                <a href="#benefits">Career Benefits</a>
+                            </li>
                             <li>
                                 <a href="#reviews">Testimonials</a>
                             </li>
@@ -119,8 +142,13 @@
                                 <div class="button-sec">
                                     <button class="cta-button modal-btn" title="Talk to Our Expert"
                                         modal-title="TALK TO OUR EXPERT">Talk to Our Expert</button>
-                                    <a href="https://www.infosectrain.com/wp-content/uploads/2018/12/ISO-27001-2022-Lead-Implementer_2025.pdf"
-                                        target="_blank" class="cta-button">Download Brochure</a>
+                                    <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="cta-button"
+                                    title="Download Brochure">Download Brochure</a>';
+                                }
+                                ?>
                                 </div>
                                 <img src="assets/images/review-mob-img.png"
                                     alt="ISO 27001:2022 Lead Implementer Course Review" width="636" height="34"
@@ -232,181 +260,35 @@
                                         on ISO/IEC 27001:2022.</p>
                                 </div>
                                 <div class="faq-wrapper">
-                                    <!--/ faq item /-->
-                                    <div class="faq-item active open">
-                                        <h3 class="faq-title"><span class="title">Course Curriculum</span><span
-                                                class="right-icon"></span></h3>
-                                        <div class="faq-content">
-                                            <p>
-                                                Introduction to ISO/IEC 27001 and initiation of an ISMS
-                                            </p><br>
-                                            <ul>
-                                                <li>
-                                                    <p><strong> Section 1: </strong>Training course objectives and
-                                                        structure</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 2: </strong>Standards and regulatory frameworks
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 3: </strong>Information Security Management
-                                                        System (ISMS)</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 4: </strong>Fundamental information security
-                                                        concepts and principles</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 5: </strong>Initiation of the ISMS
-                                                        implementation</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 6: </strong>Understanding the organization and
-                                                        its context</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 7: </strong>ISMS scope Planning the
-                                                        implementation of an ISMS</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 8: </strong>Leadership and project approval</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 9: </strong>Organizational structure</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 10:</strong> Analysis of the existing system</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 11:</strong> Information security policy</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 12:</strong> Risk management</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 13:</strong> Statement of Applicability
-                                                        Implementation of an ISMS</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 14:</strong> Documented information management
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 15:</strong> Selection and design of controls
-                                                    </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 16:</strong> Implementation of controls</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 17:</strong> Trends and technologies</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 18:</strong> Communication</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 19:</strong> Competence and awareness</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 20:</strong> Security operations management ISMS
-                                                        monitoring, continual improvement, and preparation for the
-                                                        certification audit</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 21:</strong> Monitoring, measurement, analysis,
-                                                        and evaluation</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 22:</strong> Internal audit</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 23:</strong> Management review</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 24:</strong> Treatment of nonconformities</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 25:</strong> Continual improvement</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 26:</strong> Preparing for the certification
-                                                        audit</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong> Section 27:</strong> Practical Approach of ISMS
-                                                        Implementation</p>
-                                                </li>
+                                <!--/ faq item /-->
+                                <?php
+                                // Check that course_details exists and is a non-empty array
+                                if (!empty($course_details) && is_array($course_details)) {
+                                    foreach ($course_details as $index => $detail) {
+                                        // Make the first item active and open
+                                        $activeClass = $index === 0 ? 'active open' : '';
+                                        ?>
+                                        <div class="faq-item <?php echo $activeClass; ?>">
+                                            <h3 class="faq-title">
+                                                <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                <span class="right-icon"></span>
+                                            </h3>
+                                            <div class="faq-content">
+                                                <?php echo $detail['ans']; ?>
 
-                                            </ul>
-
-                                            <a href="https://www.infosectrain.com/wp-content/uploads/2018/12/ISO-27001-2022-Lead-Implementer_2025.pdf"
-                                                target="_blank" class="cta-button">Download Brochure</a>
+                                                <?php
+                                                // If this is the first item and $brochureLink is set, show brochure button
+                                                if ($index === 0 && !empty($brochure)) {
+                                                    echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!--/ faq item /-->
-                                    <div class="faq-item">
-                                        <h3 class="faq-title"><span class="title">Course Objectives</span><span
-                                                class="right-icon"></span></h3>
-                                        <div class="faq-content">
-                                            <ul>
-                                                <li>Introduction to management systems and the process approach</li>
-                                                <li>Presentation of the standards ISO/IEC 27001, ISO 27002 and ISO 27003
-                                                    and regulatory framework Fundamental principles of Information
-                                                    Security</li>
-                                                <li>Preliminary analysis and establishment of the level of the maturity
-                                                    level of an existing information security management system based on
-                                                    ISO 21827</li>
-                                                <li>Writing a business case and a project plan for the implementation of
-                                                    an ISMS</li>
-                                                <li>Defining the scope of an ISMS</li>
-                                                <li>Development of an ISMS and information security policies</li>
-                                                <li>Selection of the approach and methodology for risk assessment</li>
-                                                <li>Risk management: identification, analysis and treatment of risk
-                                                    (drawing on guidance from ISO/IEC 27005)</li>
-                                                <li>Development of a training & awareness program and communicating
-                                                    about the information security</li>
-                                                <li>Incident management (based on guidance from ISO 27035)</li>
-                                                <li>Operations, control and management of an ISMS</li>
-                                                <li>Development of metrics, performance indicators and dashboards in
-                                                    accordance with ISO 27004</li>
-                                                <li>Implementation of a continual improvement program</li>
-                                                <li>Preparing for an ISO/IEC 27001 certification audit</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--/ faq item /-->
-                                    <div class="faq-item">
-                                        <h3 class="faq-title"><span class="title">Pre-Requisites</span><span
-                                                class="right-icon"></span></h3>
-                                        <div class="faq-content">
-                                            <ul>
-                                                <li>ISO/IEC 27001 Foundation Certification or a basic knowledge of
-                                                    ISO/IEC 27001 is recommended.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--/ faq item /-->
-                                    <div class="faq-item">
-                                        <h3 class="faq-title"><span class="title">Target Audience</span><span
-                                                class="right-icon"></span></h3>
-                                        <div class="faq-content">
-                                            <ul>
-                                                <li>Project managers or consultants wanting to prepare and to support an
-                                                    organization in the implementation of an Information Security
-                                                    Management System (ISMS)</li>
-                                                <li>ISO/IEC 27001 auditors who wish to fully understand the Information
-                                                    Security Management System implementation process</li>
-                                                <li>CxO and Senior Managers responsible for the IT governance of an
-                                                    enterprise and the management of its risks</li>
-                                                <li>Members of an information security team</li>
-                                                <li>Expert advisors in information technology</li>
-                                                <li>Technical experts wanting to prepare for an information security
-                                                    function or for an ISMS project management function</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                            </div>
                             </div>
                             <!--<[ course details sec end ]>-->
                         </div>
@@ -431,7 +313,18 @@
                                     <input type="hidden" id="me_others" name="me_others" value="">
                                     <input type="hidden" id="me_pageurl" name="me_pageurl"
                                         value="<?php echo $pag_url; ?>">
-
+<!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--white);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                     <button class="cta-button form-button" type="submit" name="me_submited"
                                         id="me_submited">Request a Callback</button>
                                 </form>
@@ -449,39 +342,40 @@
             <!--/ training calendar sec start /-->
             <section class="training-calendar" id="training-calendar">
                 <div class="container">
+                <?php if (!empty($courseID)): ?>
                     <div class="row">
                         <div class="col-12">
                             <h2>ISO 27001 LI Training Calendar</h2>
                         </div>
-                    </div>
-                    <div class="row">
+                    </div><div class="row">
                         <div class="col-12">
                             <?php
-                        $url = "https://www.infosectrain.com/api/30782/href_toscroll/free_demo";
-                        function gettraning_Cal($url)
-                        {
-                            $ch = curl_init();
-                            curl_setopt($ch, CURLOPT_HEADER, 0);
-                            curl_setopt($ch, CURLOPT_VERBOSE, 1);
-                            //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                            curl_setopt($ch, CURLOPT_FAILONERROR, 0);
-                            // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-                            //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-                            curl_setopt($ch, CURLOPT_URL, $url);
+                            $url = "https://www.infosectrain.com/api/$courseID/href_toscroll/free_demo";
+                            function gettraning_Cal($url)
+                            {
+                                $ch = curl_init();
+                                curl_setopt($ch, CURLOPT_HEADER, 0);
+                                curl_setopt($ch, CURLOPT_VERBOSE, 1);
+                                //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+                                curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+                                // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+                                //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+                                curl_setopt($ch, CURLOPT_URL, $url);
 
-                            $content = curl_exec($ch);
+                                $content = curl_exec($ch);
 
-                            curl_close($ch);
-                            return $content;
-                        }
+                                curl_close($ch);
+                                return $content;
+                            }
 
-                        gettraning_Cal($url);
+                            gettraning_Cal($url);
 
-                        ?>
+                            ?>
                         </div>
                     </div>
+                <?php endif; ?>
                     <div class="row align-items-center">
                         <div class="col-lg-2 d-none d-lg-block">
                             <img src="assets/images/training-calendar.png" width="132" height="128"
@@ -1071,6 +965,44 @@
             </section>
             <!--<[success story start]>-->
 
+            <!--<[FAQ SEC start]>-->
+        <?php if ($faq !== null && !empty($faq)) { ?>
+            <section class="faq-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="faq-wrapper">
+                                <!--/ faq item start /-->
+                                <?php
+                                // Display the FAQs section if the data is available
+
+                                foreach ($faq as $index => $question) {
+                                    // Determine if the first item should be open
+                                    $isOpen = $index === 0 ? 'open active' : '';
+                                    $displayStyle = $index === 0 ? 'style="display: block;"' : '';
+
+                                    echo '<div class="faq-item ' . $isOpen . '">';
+                                    echo '    <h3 class="faq-title"><span class="title">' . $question['title'] . '</span><span class="right-icon"></span></h3>';
+                                    echo '    <div class="faq-content" ' . $displayStyle . '>';
+                                    echo $question['ans'];
+                                    echo '    </div>';
+                                    echo '</div>';
+                                }
+                                ?>
+                                <!--/ faq item end /-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php } ?>
+        <!--<[FAQ SEC start]>-->
 
             <!--<[reach us sec start]>-->
             <section class="reach-us">
@@ -1101,7 +1033,18 @@
                                         id="me_others_footer" name="me_others">
                                     <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_footer"
                                         name="me_pageurl">
-
+<!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                     <button class="cta-button form-button" type="submit" name="me_submited"
                                         id="me_submited_footer">Request a Callback</button>
                                 </form>
@@ -1300,7 +1243,18 @@
                         <input type="hidden" value="" id="me_others_pop" name="me_others" />
                         <!-- <input type="hidden" value="" id="me_message" name="me_message" /> -->
                         <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_pop" name="me_pageurl" />
-
+<!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                         <button class="cta-button form-button" type="submit" name="me_submited"
                             id="me_submited_pop">Request
                             a Callback</button>

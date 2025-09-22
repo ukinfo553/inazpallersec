@@ -33,3 +33,6 @@ height: 20px;
     border: 1px solid #d9d9d9;
     background: #ffffff;
 }
+.success-item .overlay{
+    background-image: url('https://www.infosectrain.com/wp-content/themes/Divi/assets/images/home/success-thumbnail.webp')!important;
+}

@@ -1,4 +1,27 @@
-<!-- <?php include ('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$courseID = 43195;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($courseID);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +36,8 @@
     <!--/ style link start /-->
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/style.css" defer>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" defer />
+    <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
     <script>
@@ -44,10 +68,6 @@
     $pag_url .= $_SERVER['HTTP_HOST'];
     // Append the requested resource location to the URL
     $pag_url .= $_SERVER['REQUEST_URI'];
-
-    // broucher link pdf file code start
-    $brochureLink = json_decode(file_get_contents("https://www.infosectrain.com/api/brochure_byid.php?id=43195"), true)[0]['brochure'] ?? null;
-    // broucher link pdf file code end
     ?> -->
 
     <!--/ navbar start /-->
@@ -55,8 +75,8 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-6 col-lg-2 cl-xl-3">
-                   <img src="https://www.infosectrain.com/wp-content/themes/Divi/assets/images/logo.svg"
-                            class="navbar-brand" alt="infosectrain" loading="lazy" width="306" height="31" />
+                    <img src="https://www.infosectrain.com/wp-content/themes/Divi/assets/images/logo.svg"
+                        class="navbar-brand" alt="infosectrain" loading="lazy" width="306" height="31" />
                 </div>
                 <div class="col-6 col-lg-10 col-xl-9 d-flex justify-content-end">
                     <input id="toggle" type="checkbox" />
@@ -121,8 +141,13 @@
                             <div class="button-sec">
                                 <button class="cta-button modal-btn" title="Talk to Our Expert"
                                     modal-title="TALK TO OUR EXPERT">Talk to Our Expert</button>
-                                    <a href="<?php echo $brochureLink; ?>" target="_blank" class="cta-button">Download
-                                    Brochure</a>
+                                <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="cta-button"
+                                    title="Download Brochure">Download Brochure</a>';
+                                }
+                                ?>
                             </div>
                             <img src="assets/images/review-mob-img.png" alt="GRC Hands-On Course Review" width="636"
                                 height="34" fetchPriority="high" class="review-img">
@@ -223,71 +248,33 @@
                             </div>
                             <div class="faq-wrapper">
                                 <!--/ faq item /-->
-                                <div class="faq-item active open">
-                                    <h3 class="faq-title"><span class="title">Course Curriculum</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Introduction to GRC</li>
-                                            <li>Security Policies and Governance</li>
-                                            <li>Audit</li>
-                                            <li>Security Controls and Compliance Frameworks</li>
-                                            <li>Risk Management in Information Security</li>
-                                            <li>Integrating GRC</li>
-                                        </ul>
-                                        <a href="<?php echo $brochureLink; ?>" target="_blank" class="cta-button">Download Brochure</a>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Course Objectives</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Understand the basics of Governance, Risk, and Compliance (GRC), along
-                                                with the principles of information security and the critical CIA Triad.
-                                            </li>
-                                            <li>Analyze and derive insights from interactive case studies and real-world
-                                                incidents to apply GRC principles effectively.</li>
-                                            <li>Gain expertise in key governance frameworks like COSO and COBIT and
-                                                learn to identify and assess organizational governance structures.</li>
-                                            <li>Enhance knowledge of crucial laws and regulations such as GDPR and
-                                                HIPAA, essential for legal and regulatory compliance.</li>
-                                            <li>Understand and apply best practices in audit methodology, including the
-                                                purpose and process of auditing.</li>
-                                            <li>Develop practical insights into integrating GRC practices effectively
-                                                within businesses through case studies and creating a GRC plan.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Pre-Requisites</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Fundamental IT knowledge is required</li>
-                                            <li>Prior experience in IT, security, or compliance roles can be beneficial but is not mandatory</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Target Audience</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>IT Analysts</li>
-                                            <li>System Administrators</li>
-                                            <li>Network Engineers</li>
-                                            <li>Business Analysts</li>
-                                            <li>Project Managers</li>
-                                            <li>Security Governance Consultant</li>
-                                            <li>Compliance Analyst</li>
-                                            <li>Risk Manager</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <?php
+                                // Check that course_details exists and is a non-empty array
+                                if (!empty($course_details) && is_array($course_details)) {
+                                    foreach ($course_details as $index => $detail) {
+                                        // Make the first item active and open
+                                        $activeClass = $index === 0 ? 'active open' : '';
+                                        ?>
+                                        <div class="faq-item <?php echo $activeClass; ?>">
+                                            <h3 class="faq-title">
+                                                <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                <span class="right-icon"></span>
+                                            </h3>
+                                            <div class="faq-content">
+                                                <?php echo $detail['ans']; ?>
+
+                                                <?php
+                                                // If this is the first item and $brochureLink is set, show brochure button
+                                                if ($index === 0 && !empty($brochure)) {
+                                                    echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <!--<[ course details sec end ]>-->
@@ -312,13 +299,24 @@
                                 <input type="hidden" id="me_redirect" value="<?php echo BASE_URL; ?>thank-you.php">
                                 <input type="hidden" id="me_others" name="me_others" value="">
                                 <input type="hidden" id="me_pageurl" name="me_pageurl" value="<?php echo $pag_url; ?>">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--white);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited">Request a Callback</button>
 
                                 <div class="loading_w hide" id="loading_w">
-                                    <img src="<?php echo BASE_URL; ?>assets/images/loader.gif"
-                                        loading="lazy" class="mx-auto mt-2">
+                                    <img src="<?php echo BASE_URL; ?>assets/images/loader.gif" loading="lazy"
+                                        class="mx-auto mt-2">
                                 </div>
                             </form>
                         </div>
@@ -331,39 +329,41 @@
         <!--/ training calendar sec start /-->
         <section class="training-calendar" id="training-calendar">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>GRC Training Calendar</h2>
+                <?php if (!empty($courseID)): ?>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>GRC Training Calendar</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <?php
-                        $url = "https://www.infosectrain.com/api/43195/href_toscroll/free_demo";
-                        function gettraning_Cal($url)
-                        {
-                            $ch = curl_init();
-                            curl_setopt($ch, CURLOPT_HEADER, 0);
-                            curl_setopt($ch, CURLOPT_VERBOSE, 1);
-                            //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                            curl_setopt($ch, CURLOPT_FAILONERROR, 0);
-                            // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-                            //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-                            curl_setopt($ch, CURLOPT_URL, $url);
+                    <div class="row">
+                        <div class="col-12">
+                            <?php
+                            $url = "https://www.infosectrain.com/api/$courseID/href_toscroll/free_demo";
+                            function gettraning_Cal($url)
+                            {
+                                $ch = curl_init();
+                                curl_setopt($ch, CURLOPT_HEADER, 0);
+                                curl_setopt($ch, CURLOPT_VERBOSE, 1);
+                                //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+                                curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+                                // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+                                //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+                                curl_setopt($ch, CURLOPT_URL, $url);
 
-                            $content = curl_exec($ch);
+                                $content = curl_exec($ch);
 
-                            curl_close($ch);
-                            return $content;
-                        }
+                                curl_close($ch);
+                                return $content;
+                            }
 
-                        gettraning_Cal($url);
+                            gettraning_Cal($url);
 
-                        ?>
+                            ?>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
                 <div class="row align-items-center">
                     <div class="col-lg-2 d-none d-lg-block">
                         <img src="assets/images/training-calendar.png" width="132" height="128"
@@ -415,7 +415,7 @@
 
         <!--offer sec start -->
         <?php // Include the related_courses.php file
-        include ('../lp-components/offer.php');
+        include('../lp-components/offer.php');
         ?>
         <!--offer sec end -->
 
@@ -522,7 +522,7 @@
                                 </div>
                                 <div class="avtar-data">
                                     <div class="avtar-name">
-                                    Atul
+                                        Atul
                                     </div>
                                     <div class="avtar-exp">
                                         10+ Years of Experience
@@ -530,11 +530,12 @@
                                 </div>
                             </div>
                             <div class="designation">
-                            Cyber Security & GRC Consultant & Instructor
+                                Cyber Security & GRC Consultant & Instructor
                             </div>
                             <div class="summary">
-                            Core expertise as a GRC specialist with extensive experience in assisting organizations maintain their compliance and level up their governance.
-                            Mentoring professionals in the field of cyber security, GRC and data privacy.
+                                Core expertise as a GRC specialist with extensive experience in assisting organizations
+                                maintain their compliance and level up their governance.
+                                Mentoring professionals in the field of cyber security, GRC and data privacy.
                             </div>
                         </div>
                     </div>
@@ -747,7 +748,9 @@
                                     fill="#EE224A" />
                             </svg>
                             <p class="desc">
-                            The GRC Course provided by InfosecTrain featured a highly knowledgeable trainer, and it was an interactive session. The trainer's expertise and interactive approach greatly enriched the learning experience.
+                                The GRC Course provided by InfosecTrain featured a highly knowledgeable trainer, and it
+                                was an interactive session. The trainer's expertise and interactive approach greatly
+                                enriched the learning experience.
                             </p>
 
                             <div class="profile">
@@ -775,7 +778,8 @@
                                     fill="#EE224A" />
                             </svg>
                             <p class="desc">
-                            The GRC Course sessions provided by InfosecTrain were good. The content was informative, and the delivery was effective, contributing to a positive learning experience.</p>
+                                The GRC Course sessions provided by InfosecTrain were good. The content was informative,
+                                and the delivery was effective, contributing to a positive learning experience.</p>
 
                             <div class="profile">
                                 <div class="d-flex align-items-center">
@@ -785,7 +789,7 @@
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h3>
-                                        Sri Devi Dharani Balasubramani
+                                            Sri Devi Dharani Balasubramani
                                         </h3>
                                         <span>Australia</span>
                                     </div>
@@ -802,7 +806,10 @@
                                     fill="#EE224A" />
                             </svg>
                             <p class="desc">
-                            I enjoyed the past 1 and a half months during the GRC Course provided by InfosecTrain. The trainer was excellent, ensuring that I was consistently learning new and valuable information. His patience in addressing our questions until we were satisfied was commendable. Thank you so much for the sessions!
+                                I enjoyed the past 1 and a half months during the GRC Course provided by InfosecTrain.
+                                The trainer was excellent, ensuring that I was consistently learning new and valuable
+                                information. His patience in addressing our questions until we were satisfied was
+                                commendable. Thank you so much for the sessions!
                             </p>
 
                             <div class="profile">
@@ -829,7 +836,11 @@
                                     fill="#EE224A" />
                             </svg>
                             <p class="desc">
-                            The GRC (Governance, Risk & Compliance) Hands-on Online Training at InfosecTrain was an excellent course with a highly knowledgeable trainer. The sessions were interactive and engaging, making complex concepts easy to understand. InfosecTrain's  commitment to providing top-notch training and expertise truly shines through in this comprehensive course.
+                                The GRC (Governance, Risk & Compliance) Hands-on Online Training at InfosecTrain was an
+                                excellent course with a highly knowledgeable trainer. The sessions were interactive and
+                                engaging, making complex concepts easy to understand. InfosecTrain's commitment to
+                                providing top-notch training and expertise truly shines through in this comprehensive
+                                course.
                             </p>
 
                             <div class="profile">
@@ -840,7 +851,7 @@
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h3>
-                                        Maruti Prabhakar Rapaka
+                                            Maruti Prabhakar Rapaka
                                         </h3>
                                         <span>India</span>
                                     </div>
@@ -856,7 +867,10 @@
                                     fill="#EE224A" />
                             </svg>
                             <p class="desc">
-                            The GRC (Governance, Risk & Compliance) Hands-on Online Training at InfosecTrain was outstanding, with a knowledgeable and engaging instructor who delivered the material clearly and concisely. InfosecTrain's expert trainers and their real-world  experience added significant value, making the course highly informative and interactive.
+                                The GRC (Governance, Risk & Compliance) Hands-on Online Training at InfosecTrain was
+                                outstanding, with a knowledgeable and engaging instructor who delivered the material
+                                clearly and concisely. InfosecTrain's expert trainers and their real-world experience
+                                added significant value, making the course highly informative and interactive.
                             </p>
 
                             <div class="profile">
@@ -867,7 +881,7 @@
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h3>
-                                        Rohit Singh
+                                            Rohit Singh
                                         </h3>
                                         <span>India</span>
                                     </div>
@@ -903,7 +917,7 @@
 
         <!--/ related courses /-->
         <?php // Include the related_courses.php file
-        include ('../lp-components/related-courses.php');
+        include('../lp-components/related-courses.php');
         ?>
         <!--/ related courses /-->
 
@@ -942,74 +956,42 @@
         <!--<[success story start]>-->
 
         <!--<[FAQ SEC start]>-->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Frequently Asked Questions</h2>
+        <?php if ($faq !== null && !empty($faq)) { ?>
+            <section class="faq-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="faq-wrapper">
-                            <!--/ faq item /-->
-                            <div class="faq-item active open">
-                                <h3 class="faq-title"><span class="title">Who should enroll in this GRC online course?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                    This course is ideal for IT professionals, risk managers, compliance officers, auditors, security professionals, and anyone looking to enhance their knowledge and skills in governance, risk, and compliance within an organization.
-                                    </p>
-                                </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="faq-wrapper">
+                                <!--/ faq item start /-->
+                                <?php
+                                // Display the FAQs section if the data is available
+
+                                foreach ($faq as $index => $question) {
+                                    // Determine if the first item should be open
+                                    $isOpen = $index === 0 ? 'open active' : '';
+                                    $displayStyle = $index === 0 ? 'style="display: block;"' : '';
+
+                                    echo '<div class="faq-item ' . $isOpen . '">';
+                                    echo '    <h3 class="faq-title"><span class="title">' . $question['title'] . '</span><span class="right-icon"></span></h3>';
+                                    echo '    <div class="faq-content" ' . $displayStyle . '>';
+                                    echo $question['ans'];
+                                    echo '    </div>';
+                                    echo '</div>';
+                                }
+                                ?>
+                                <!--/ faq item end /-->
                             </div>
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What are the prerequisites for the GRC training course?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>Participants should have a basic understanding of IT concepts and principles. Prior experience in IT, security, or compliance roles can be beneficial but is not mandatory.</p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How long is the GRC online training course?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                    The duration of the GRC training course is 40 hours.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What will I learn in this GRC course?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                    The course combines both theoretical knowledge and practical application. It includes case studies, interactive sessions, and practical exercises to ensure participants can apply GRC concepts in real-world scenarios.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Will I receive a certification upon completing the GRC training course?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>Yes, the GRC training course from InfosecTrain provides a certificate of participation as a testament to their accomplishment.</p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How can the GRC training course benefit my career?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>GRC skills are in high demand across various industries. This course can enhance your career prospects by qualifying you for roles such as Compliance Officer, Risk Manager, Governance Specialist, or Information Security Manager.</p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[FAQ SEC start]>-->
 
         <!--<[reach us sec start]>-->
@@ -1040,7 +1022,18 @@
                                 <input type="hidden" value="DevSecOps Training" id="me_others_footer" name="me_others">
                                 <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_footer"
                                     name="me_pageurl">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited_footer">Request a Callback</button>
                             </form>
@@ -1086,7 +1079,7 @@
                     <div class="item">
                         <h3>Corporate Office</h3>
                         <p>
-                        B7, Sector 1, Noida, Uttar Pradesh 201301 <br> India
+                            B7, Sector 1, Noida, Uttar Pradesh 201301 <br> India
                         </p>
                         <p style="font-size: 12px;margin-top: 15px;">
                             All rights reserved. , InfosecTrain
@@ -1233,7 +1226,18 @@
                     <input type="hidden" value="" id="me_others_pop" name="me_others" />
                     <!-- <input type="hidden" value="" id="me_message" name="me_message" /> -->
                     <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_pop" name="me_pageurl" />
-
+                    <!-- Privacy Policy Checkbox -->
+                    <label
+                        style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                        <span>
+                            By sharing your details, you agree to our Terms and <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
                     <button class="cta-button form-button" type="submit" name="me_submited" id="me_submited_pop">Request
                         a Callback</button>
 
@@ -1267,7 +1271,7 @@
 
 <!--/ js link start /-->
 <script src="assets/js/common.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="assets/js/swiper-bundle.min.js" defer></script>
 <script src="assets/js/custom.js" defer></script>
 
 <!--/ js link start /-->

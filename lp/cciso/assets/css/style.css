@@ -407,14 +407,14 @@ nav {
     color: var(--white);
 }
 
-.banner-sec .item .button-sec button.cta-button:nth-child(2) {
+.banner-sec .item .button-sec a.cta-button:nth-child(2) {
     border: 1px solid var(--border-grey);
     background: var(--white);
     color: var(--dark-grey);
 }
 
 @media (min-width:992px) {
-    .banner-sec .item .button-sec button.cta-button:nth-child(2):hover {
+    .banner-sec .item .button-sec a.cta-button:nth-child(2):hover {
         background: var(--bg-gradient);
         color: var(--white);
         border-color: var(--grey);
@@ -1432,7 +1432,7 @@ footer .item ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://infosectrain.com/wp-content/themes/Divi/assets/images/home/success-thumbnail.webp');
+    background-image: url('https://www.infosectrain.com/wp-content/themes/Divi/assets/images/home/success-thumbnail.webp');
     /* Replace with the path to your poster image */
     background-size: cover;
     background-position: center;

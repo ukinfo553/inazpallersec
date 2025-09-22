@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 p-md-0">
-                <picture title="Buy 1 Course Get 1 Free" class="modal-btn" style="cursor: pointer;">
+                <picture title="Buy 1 Course Get 1 Free" modal-title="Buy 1 Course Get 1 Free" class="modal-btn" style="cursor: pointer;">
                     <source width="1120" height="433" media="(min-width:768px)"
                         srcset="https://www.infosectrain.com/wp-content/uploads/2025/09/course-offer-desktop.webp">
                     <img width="350" height="413"

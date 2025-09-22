@@ -1,4 +1,27 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$courseID = 32382;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($courseID);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +36,7 @@
     <!--/ style link start /-->
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/style.css" defer>
+    <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
@@ -101,7 +125,7 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="item">
                             <h3>
-                            Lead the Way with
+                                Lead the Way with
                             </h3>
                             <h1>CCISO Certification Training Course</h1>
                             <div class="d-flex flex-column flex-md-row banner-highlights">
@@ -117,17 +141,23 @@
                             <div class="button-sec">
                                 <button class="cta-button modal-btn" title="Talk to Our Expert"
                                     modal-title="TALK TO OUR EXPERT">Talk to Our Expert</button>
-                                <button class="cta-button modal-btn" title="Enroll Now">Enroll Now</button>
+                                <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="cta-button"
+                                    title="Download Brochure">Download Brochure</a>';
+                                }
+                                ?>
                             </div>
-                            <img src="assets/images/review-mob-img.png" alt="CCISO Course Review" width="636" height="34"
-                                fetchPriority="high" class="review-img">
+                            <img src="assets/images/review-mob-img.png" alt="CCISO Course Review" width="636"
+                                height="34" fetchPriority="high" class="review-img">
                         </div>
                     </div>
                     <!--/ col start /-->
                     <div class="col-lg-5 col-md-6 d-none d-md-block">
                         <div class="item">
-                            <img src="assets/images/banner-v2.webp" fetchPriority="high"
-                                alt="CCISO by InfosecTrain" width="400" height="400">
+                            <img src="assets/images/banner-v2.webp" fetchPriority="high" alt="CCISO by InfosecTrain"
+                                width="400" height="400">
                         </div>
                     </div>
                 </div>
@@ -151,8 +181,8 @@
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
-                                    <img src="assets/images/highlight-icon/video-recording.svg" alt="CCISO Course Highlights"
-                                        width="45" height="45">
+                                    <img src="assets/images/highlight-icon/video-recording.svg"
+                                        alt="CCISO Course Highlights" width="45" height="45">
                                     <p>Access to Recorded Sessions</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
@@ -175,8 +205,8 @@
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
-                                    <img src="assets/images/highlight-icon/support.svg"
-                                        alt="CCISO Course Highlights" width="45" height="45">
+                                    <img src="assets/images/highlight-icon/support.svg" alt="CCISO Course Highlights"
+                                        width="45" height="45">
                                     <p>24x7 Post-Training Support</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
@@ -193,8 +223,8 @@
                                 </div>
                             </div>
                             <div class="item-footer">
-                                <img src="assets/images/highlight-icon/Satisfaction-Guaranteed.webp" width="300" height="146"
-                                    alt="CCISO Course Highlights">
+                                <img src="assets/images/highlight-icon/Satisfaction-Guaranteed.webp" width="300"
+                                    height="146" alt="CCISO Course Highlights">
                             </div>
                             <p style="margin-top: 24px;opacity: .8;">* Conditions Apply</p><br>
                         </div>
@@ -205,77 +235,42 @@
                             <div class="course-overview">
                                 <h2>CCISO Training - An Overview</h2>
                                 <p>
-                                    EC-Council's CCISO certification validates a candidate's knowledge and expertise to meet the real-life challenges in the information security domain. It establishes a person’s suitability to work as the highest-level executive responsible for information security in an organization. Today, most mid to large-sized organizations around the globe have a CISO, who are paid really well.
+                                    EC-Council's CCISO certification validates a candidate's knowledge and expertise to
+                                    meet the real-life challenges in the information security domain. It establishes a
+                                    person’s suitability to work as the highest-level executive responsible for
+                                    information security in an organization. Today, most mid to large-sized
+                                    organizations around the globe have a CISO, who are paid really well.
                                 </p>
                             </div>
                             <div class="faq-wrapper">
                                 <!--/ faq item /-->
-                                <div class="faq-item active open">
-                                    <h3 class="faq-title"><span class="title">Course Curriculum</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li><strong>Domain 1:</strong> Governance (Policy, Legal, and Compliance)</li>
-                                            <li><strong>Domain 2:</strong> IS Management Controls and Auditing Management</li>
-                                            <li><strong>Domain 3:</strong> Security Program Management & Operations</li>
-                                            <li><strong>Domain 4:</strong> Information Security Core Concepts</li>
-                                            <li><strong>Domain 5:</strong> Strategic Planning, Finance, & Vendor Management</li>
-                                        </ul>
-                                        <a href="https://www.infosectrain.com/wp-content/uploads/2019/11/CCISO_Course-Outline.pdf"
-                                            target="_blank" class="cta-button">Download Brochure</a>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Course Objectives</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Gain comprehensive knowledge and skills to manage and lead the information security domain. </li>
-                                            <li>Learn about policy setting, project management, audit management, executive strategy, contract management, and financial expertise. </li>
-                                            <li>Validate your competence in handling the top-level executive tasks and in effectively leading an information security program.</li>
-                                            <li>Learn to apply IS management principles from top-management perspective</li>
-                                            <li>Prepare the candidates to pass the CCISO exam in a single attempt</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Exam Details</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li><p><strong>Duration:</strong> 2.5 Hours</p></li>
-                                            <li><p><strong>Number of questions:</strong> 150</p></li>
-                                            <li><p><strong>Question format:</strong> Multiple Choice</p></li>
-                                            <li><p><strong>Passing score:</strong> 60% to 85% depending upon the exam form</p></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Pre-requisites</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Candidates who are sitting for the exam without training must have 5 years of experience in the 5 core CCISO domains verified via the Exam Eligibility Application.</li>
-                                            <li>Candidates who have taken training must possess 3 years of IS management experience in 3 of the 5 core CCISO domains verified via the Exam Eligibility Application.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Target Audience</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Network Engineers with security specialization</li>
-                                            <li>Experienced IT Professionals engaged in information security management</li>
-                                            <li>Those who perform CISO functions, but don't have an official title</li>
-                                            <li>All the professionals who aspire to reach top-level position in information security profession</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <?php
+                                // Check that course_details exists and is a non-empty array
+                                if (!empty($course_details) && is_array($course_details)) {
+                                    foreach ($course_details as $index => $detail) {
+                                        // Make the first item active and open
+                                        $activeClass = $index === 0 ? 'active open' : '';
+                                        ?>
+                                        <div class="faq-item <?php echo $activeClass; ?>">
+                                            <h3 class="faq-title">
+                                                <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                <span class="right-icon"></span>
+                                            </h3>
+                                            <div class="faq-content">
+                                                <?php echo $detail['ans']; ?>
+
+                                                <?php
+                                                // If this is the first item and $brochureLink is set, show brochure button
+                                                if ($index === 0 && !empty($brochure)) {
+                                                    echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <!--<[ course details sec end ]>-->
@@ -300,14 +295,25 @@
                                 <input type="hidden" id="me_redirect" value="<?php echo BASE_URL; ?>thank-you.php">
                                 <input type="hidden" id="me_others" name="me_others" value="Talk To Our Experts">
                                 <input type="hidden" id="me_pageurl" name="me_pageurl" value="<?php echo $pag_url; ?>">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--white);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited">Request a Callback</button>
-                                    <div class="loading_w hide" id="loading_w">
-                                <center>
-                                    <img src="<?php echo BASE_URL; ?>assets/images/loader.gif" />
-                                </center>
-                            </div>
+                                <div class="loading_w hide" id="loading_w">
+                                    <center>
+                                        <img src="<?php echo BASE_URL; ?>assets/images/loader.gif" />
+                                    </center>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -319,39 +325,41 @@
         <!--/ training calendar sec start /-->
         <section class="training-calendar" id="training-calendar">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>CCISO Training Calendar</h2>
+                <?php if (!empty($courseID)): ?>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>CCISO Training Calendar</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <?php
-                        $url = "https://www.infosectrain.com/api/32382/href_toscroll/free_demo";
-                        function gettraning_Cal($url)
-                        {
-                            $ch = curl_init();
-                            curl_setopt($ch, CURLOPT_HEADER, 0);
-                            curl_setopt($ch, CURLOPT_VERBOSE, 1);
-                            //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                            curl_setopt($ch, CURLOPT_FAILONERROR, 0);
-                            // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-                            //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-                            curl_setopt($ch, CURLOPT_URL, $url);
+                    <div class="row">
+                        <div class="col-12">
+                            <?php
+                            $url = "https://www.infosectrain.com/api/$courseID/href_toscroll/free_demo";
+                            function gettraning_Cal($url)
+                            {
+                                $ch = curl_init();
+                                curl_setopt($ch, CURLOPT_HEADER, 0);
+                                curl_setopt($ch, CURLOPT_VERBOSE, 1);
+                                //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+                                curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+                                // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+                                //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+                                curl_setopt($ch, CURLOPT_URL, $url);
 
-                            $content = curl_exec($ch);
+                                $content = curl_exec($ch);
 
-                            curl_close($ch);
-                            return $content;
-                        }
+                                curl_close($ch);
+                                return $content;
+                            }
 
-                        gettraning_Cal($url);
+                            gettraning_Cal($url);
 
-                        ?>
+                            ?>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
                 <div class="row align-items-center">
                     <div class="col-lg-2 d-none d-lg-block">
                         <img src="assets/images/training-calendar.webp" width="132" height="128" alt="Training Calendar"
@@ -403,7 +411,7 @@
 
         <!--offer sec start -->
         <?php // Include the related_courses.php file
-        include ('../lp-components/offer.php');
+        include('../lp-components/offer.php');
         ?>
         <!--offer sec end -->
 
@@ -509,7 +517,7 @@
                                 </div>
                                 <div class="avtar-data">
                                     <div class="avtar-name">
-                                    SANYAM NEGI
+                                        SANYAM NEGI
                                     </div>
                                     <div class="avtar-exp">
                                         10+ Years of Experience
@@ -517,10 +525,13 @@
                                 </div>
                             </div>
                             <div class="designation">
-                            CEH | CSA | CND | CHFI | CTIA | CCISO | Security+ | Pentest+ | CySA+
+                                CEH | CSA | CND | CHFI | CTIA | CCISO | Security+ | Pentest+ | CySA+
                             </div>
                             <div class="summary">
-                            Information Security Consultant & Trainer with over 10+  years of hands-on experience, Specializations in Security Testing, Cloud Security, Security Operations Center, Threat Hunting and DevOps,Proficient in crafting customized training programs and courseware focused on Security Solutions
+                                Information Security Consultant & Trainer with over 10+ years of hands-on experience,
+                                Specializations in Security Testing, Cloud Security, Security Operations Center, Threat
+                                Hunting and DevOps,Proficient in crafting customized training programs and courseware
+                                focused on Security Solutions
                             </div>
                         </div>
                         <!--/ col end /-->
@@ -596,7 +607,7 @@
                         <div class="item">
                             <img src="assets/images/why-choose/exam.png" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p><strong>Conquer the CCISO exam</strong> in the first attempt  </p>
+                            <p><strong>Conquer the CCISO exam</strong> in the first attempt </p>
                         </div>
                     </div>
                     <!--/ col start /-->
@@ -692,8 +703,8 @@
                             <picture>
                                 <source media="(min-width:768px)" width="1472" height="486"
                                     srcset="assets/images/benifits/benefits-security-plus-desk.webp">
-                                <img src="assets/images/benifits/benefits-security-plus-mob.webp" width="640" height="473"
-                                    alt="Benefits of CCISO Certification">
+                                <img src="assets/images/benifits/benefits-security-plus-mob.webp" width="640"
+                                    height="473" alt="Benefits of CCISO Certification">
                             </picture>
                         </div>
                     </div>
@@ -733,7 +744,9 @@
                                     d="M30.3085 11.6578C26.8025 11.7501 24.0115 12.327 21.9356 13.3884C19.8597 14.4037 18.222 16.019 17.0226 18.2342C21.8203 18.2342 25.7876 19.4111 28.9246 21.7647C32.1076 24.1184 33.6992 27.9489 33.6992 33.2562C33.6992 35.2407 33.3532 37.179 32.6612 39.0711C31.9693 40.9633 30.9082 42.6478 29.4781 44.1246C28.0481 45.5553 26.3181 46.7552 24.2883 47.7243C22.2585 48.6473 19.9289 49.1088 17.2994 49.1088C12.0865 49.1088 7.88852 47.4244 4.70543 44.0554C1.56848 40.6402 0 36.0944 0 30.4179C0 27.2797 0.438251 24.1184 1.31475 20.934C2.23739 17.7035 3.85199 14.7268 6.15858 12.0039C8.46516 9.2349 11.5791 6.812 15.5002 4.73524C19.4214 2.65847 24.3575 1.20473 30.3085 0.374023V11.6578ZM67.1908 11.6578C63.6848 11.7501 60.8938 12.327 58.8179 13.3884C56.742 14.4037 55.0812 16.019 53.8357 18.2342C58.6795 18.2342 62.6699 19.4111 65.8068 21.7647C68.9899 24.1184 70.5815 27.9489 70.5815 33.2562C70.5815 35.2407 70.2124 37.179 69.4743 39.0711C68.7823 40.9633 67.7213 42.6478 66.2912 44.1246C64.9073 45.5553 63.2004 46.7552 61.1706 47.7243C59.1408 48.6473 56.7881 49.1088 54.1125 49.1088C48.9457 49.1088 44.7708 47.4244 41.5877 44.0554C38.4046 40.6402 36.8131 36.0944 36.8131 30.4179C36.8131 27.2797 37.2513 24.1184 38.1278 20.934C39.0505 17.7035 40.6651 14.7268 42.9717 12.0039C45.3244 9.2349 48.4613 6.812 52.3825 4.73524C56.3037 2.65847 61.2398 1.20473 67.1908 0.374023V11.6578Z"
                                     fill="#e50914" />
                             </svg>
-                            <p class="desc"> The instructor clearly presented the skills to be learned, he engaged the class in productive discussions, I enjoyed the course and learned a lot from it and he explained concepts clearly.</p>
+                            <p class="desc"> The instructor clearly presented the skills to be learned, he engaged the
+                                class in productive discussions, I enjoyed the course and learned a lot from it and he
+                                explained concepts clearly.</p>
 
                             <div class="profile">
                                 <div class="d-flex align-items-center">
@@ -743,8 +756,8 @@
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h3>
-                                        Yuosof Radi
-                  </h3>
+                                            Yuosof Radi
+                                        </h3>
                                         <span>UAE</span>
                                     </div>
                                 </div>
@@ -759,7 +772,8 @@
                                     d="M30.3085 11.6578C26.8025 11.7501 24.0115 12.327 21.9356 13.3884C19.8597 14.4037 18.222 16.019 17.0226 18.2342C21.8203 18.2342 25.7876 19.4111 28.9246 21.7647C32.1076 24.1184 33.6992 27.9489 33.6992 33.2562C33.6992 35.2407 33.3532 37.179 32.6612 39.0711C31.9693 40.9633 30.9082 42.6478 29.4781 44.1246C28.0481 45.5553 26.3181 46.7552 24.2883 47.7243C22.2585 48.6473 19.9289 49.1088 17.2994 49.1088C12.0865 49.1088 7.88852 47.4244 4.70543 44.0554C1.56848 40.6402 0 36.0944 0 30.4179C0 27.2797 0.438251 24.1184 1.31475 20.934C2.23739 17.7035 3.85199 14.7268 6.15858 12.0039C8.46516 9.2349 11.5791 6.812 15.5002 4.73524C19.4214 2.65847 24.3575 1.20473 30.3085 0.374023V11.6578ZM67.1908 11.6578C63.6848 11.7501 60.8938 12.327 58.8179 13.3884C56.742 14.4037 55.0812 16.019 53.8357 18.2342C58.6795 18.2342 62.6699 19.4111 65.8068 21.7647C68.9899 24.1184 70.5815 27.9489 70.5815 33.2562C70.5815 35.2407 70.2124 37.179 69.4743 39.0711C68.7823 40.9633 67.7213 42.6478 66.2912 44.1246C64.9073 45.5553 63.2004 46.7552 61.1706 47.7243C59.1408 48.6473 56.7881 49.1088 54.1125 49.1088C48.9457 49.1088 44.7708 47.4244 41.5877 44.0554C38.4046 40.6402 36.8131 36.0944 36.8131 30.4179C36.8131 27.2797 37.2513 24.1184 38.1278 20.934C39.0505 17.7035 40.6651 14.7268 42.9717 12.0039C45.3244 9.2349 48.4613 6.812 52.3825 4.73524C56.3037 2.65847 61.2398 1.20473 67.1908 0.374023V11.6578Z"
                                     fill="#e50914" />
                             </svg>
-                            <p class="desc">It was a good session and gathered all relevant information with regards to the CCISO knowledge and skills.  </p>
+                            <p class="desc">It was a good session and gathered all relevant information with regards to
+                                the CCISO knowledge and skills. </p>
 
                             <div class="profile">
                                 <div class="d-flex align-items-center">
@@ -769,8 +783,8 @@
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h3>
-                                        Anbu Selvan Chellappa Nadar
-                  </h3>
+                                            Anbu Selvan Chellappa Nadar
+                                        </h3>
                                         <span>Nepal</span>
                                     </div>
                                 </div>
@@ -796,8 +810,8 @@
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h3>
-                                        Hatim Lokat
-                  </h3>
+                                            Hatim Lokat
+                                        </h3>
                                         <span>India</span>
                                     </div>
                                 </div>
@@ -814,7 +828,7 @@
                                     fill="#e50914" />
                             </svg>
                             <p class="desc">I really liked the training material and the trainer. Thanks, Infosec Train.
-</p>
+                            </p>
 
                             <div class="profile">
                                 <div class="d-flex align-items-center">
@@ -824,8 +838,8 @@
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h3>
-                     Mohammad Saud Reyaz
-                  </h3>
+                                            Mohammad Saud Reyaz
+                                        </h3>
                                         <span>UAE</span>
                                     </div>
                                 </div>
@@ -888,9 +902,11 @@
                         class="col-md-6 success-certificate d-flex align-items-center justify-content-center flex-column">
                         <h2>Get a Sample Certificate</h2>
                         <div class="success-item">
-                            <img src="assets/images/certificate.webp" width="429" height="263" alt="CCISO ertificate" class="d-block m-auto img-fluid">
+                            <img src="assets/images/certificate.webp" width="429" height="263" alt="CCISO ertificate"
+                                class="d-block m-auto img-fluid">
                         </div>
-                        <button class="success-certificate-btn cta-button modal-btn button2" title="Get in touch">get in touch</button>
+                        <button class="success-certificate-btn cta-button modal-btn button2" title="Get in touch">get in
+                            touch</button>
                     </div>
                 </div>
             </div>
@@ -898,84 +914,42 @@
         <!--<[success story start]>-->
 
         <!--<[FAQ SEC start]>-->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Frequently Asked Questions</h2>
+        <?php if ($faq !== null && !empty($faq)) { ?>
+            <section class="faq-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="faq-wrapper">
-                            <!--/ faq item /-->
-                            <div class="faq-item active open">
-                                <h3 class="faq-title"><span class="title">What is the CCISO Program?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>The CCISO program is a training course designed to develop skilled CISOs by combining a range of essential competencies for a C-level role. This comprehensive program provides information security leaders with the most effective tools to protect organizations from cyber-attacks.
-</p>
-                                </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="faq-wrapper">
+                                <!--/ faq item start /-->
+                                <?php
+                                // Display the FAQs section if the data is available
+
+                                foreach ($faq as $index => $question) {
+                                    // Determine if the first item should be open
+                                    $isOpen = $index === 0 ? 'open active' : '';
+                                    $displayStyle = $index === 0 ? 'style="display: block;"' : '';
+
+                                    echo '<div class="faq-item ' . $isOpen . '">';
+                                    echo '    <h3 class="faq-title"><span class="title">' . $question['title'] . '</span><span class="right-icon"></span></h3>';
+                                    echo '    <div class="faq-content" ' . $displayStyle . '>';
+                                    echo $question['ans'];
+                                    echo '    </div>';
+                                    echo '</div>';
+                                }
+                                ?>
+                                <!--/ faq item end /-->
                             </div>
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">For how long is the CCISO certification valid?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>CCISO certification is valid for a period of one year.</p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How to decided whether or not to go for CCISO?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>All the aspiring CISOs and even existing CISOs who are interested in enhancing their skills regarding</p>
-                                    <ul>
-                                        <li>governance</li>
-                                        <li>security risk management</li>
-                                        <li>controls</li>
-                                        <li>audit management</li>
-                                        <li>security program management and operations</li>
-                                        <li>information-security core concepts, and strategic planning</li>
-                                        <li>finance and vendor management can go ahead with CCISO Certification Training.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Is it compulsory to attend the EC-Council Authorized Training for CCISO?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                    Applicants who do not wish to attend EC-Council Authorized Training for this exam must have five years of experience in each of the five CCISO Domains (overlapping experience is accepted)
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How helpful is the EC-Council Authorized Training for CCISO?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>Applicants who purchase EC-Council Authorized Training, do not have to pay the application fee separately and only five years of experience in three of the five domains is required.</p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What is the expected time in which the CCISO Exam Eligibility Application gets processed?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>Processing of CCISO Exam Eligibility Application can differ from from applicant to another.</p>
-                                    <ul>
-                                        <li>Experience mentioned by the applicants needs to be verified and therefore, to speed up this process it is suggested that candidates should reach out to their verifiers to confirm they have received the required forms from EC-Council and respond well in time.</li>
-                                        <li>For the applicants who attend EC-Council Authorized Training, processing of exam application gets priority.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
+
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[FAQ SEC start]>-->
 
         <!--<[reach us sec start]>-->
@@ -1006,7 +980,18 @@
                                 <input type="hidden" value="CCISO" id="me_others_footer" name="me_others">
                                 <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_footer"
                                     name="me_pageurl">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited_footer">Request a Callback</button>
                             </form>
@@ -1052,7 +1037,7 @@
                     <div class="item">
                         <h3>Corporate Office</h3>
                         <p>
-                        B7, Sector 1, Noida, Uttar Pradesh 201301 <br> India
+                            B7, Sector 1, Noida, Uttar Pradesh 201301 <br> India
                         </p>
                         <p style="font-size: 12px;margin-top: 15px;">
                             All rights reserved. , InfosecTrain
@@ -1199,7 +1184,18 @@
                     <input type="hidden" value="" id="me_others_pop" name="me_others" />
                     <!-- <input type="hidden" value="" id="me_message" name="me_message" /> -->
                     <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_pop" name="me_pageurl" />
-
+                    <!-- Privacy Policy Checkbox -->
+                    <label
+                        style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                        <span>
+                            By sharing your details, you agree to our Terms and <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
                     <button class="cta-button form-button" type="submit" name="me_submited" id="me_submited_pop">Request
                         a Callback</button>
 

@@ -1,4 +1,27 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$api_id = 37880;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($api_id);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +36,7 @@
     <!--/ style link start /-->
     <link href="assets/css/bootstrap-grid.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/custom.css" defer>
+    <link rel="stylesheet" href="../../lp-components/css_handler.php" defer>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,10 +75,6 @@
     $pag_url .= $_SERVER['HTTP_HOST'];
     // Append the requested resource location to the URL
     $pag_url .= $_SERVER['REQUEST_URI'];
-    // broucher link pdf file code start
-    $api_id = 37880; // Define the API ID
-    $brochureLink = json_decode(file_get_contents("https://www.infosectrain.com/api/brochure_byid.php?id=" . $api_id), true)[0]['brochure'] ?? null;
-    // broucher link pdf file code end
     ?> -->
 
     <!--/ navbar start /-->
@@ -128,24 +148,29 @@
                             <div class="d-flex flex-md-row flex-column align-items-start gap-3">
                                 <button class="button modal-btn" modal-title="Talk to Our Expert">Talk to Our
                                     Expert</button>
-                                <a href="<?php echo $brochureLink; ?>" target="_blank" class="button download-btn"
-                                    style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
-                                        viewBox="0 0 16 17" fill="none">
-                                        <g clip-path="url(#clip0_18618_896)">
-                                            <path
-                                                d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.379 12.6915 7.379 12.6915 7.37897 12.6915C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.37704 12.6897 7.37685 12.6894 7.3767 12.6893C7.3762 12.6888 7.37577 12.6884 7.3753 12.6879C7.37499 12.6876 7.37471 12.6874 7.3744 12.687C7.37409 12.6867 7.37369 12.6863 7.37341 12.686C7.37279 12.6854 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.6279 12.6847 8.62721 12.6854 8.62659 12.686C8.62625 12.6863 8.62588 12.6867 8.6256 12.6869C8.62529 12.6873 8.62501 12.6875 8.6247 12.6878C8.62426 12.6883 8.62377 12.6888 8.62333 12.6892C8.62318 12.6894 8.62296 12.6896 8.6228 12.6897C8.62224 12.6903 8.62165 12.6909 8.62106 12.6915C8.62103 12.6915 8.62103 12.6915 8.621 12.6915C8.61122 12.701 8.60132 12.7103 8.59119 12.7193C8.51676 12.7857 8.43386 12.8375 8.3462 12.8744C8.34589 12.8745 8.34564 12.8747 8.34533 12.8748C8.34499 12.8749 8.34471 12.8751 8.34437 12.8752C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
-                                                fill="#E50914" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_18618_896">
-                                                <rect width="16" height="16" fill="white"
-                                                    transform="translate(0 0.5)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    Download Brochure
-                                </a>
+                                <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="button download-btn"
+                                        style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
+                                            viewBox="0 0 16 17" fill="none">
+                                            <g clip-path="url(#clip0_18618_896)">
+                                                <path
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    fill="#E50914" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_18618_896">
+                                                    <rect width="16" height="16" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Download Brochure
+                                    </a>';
+                                }
+                                ?>
                             </div>
                             <!-- <div class="d-flex gap-3">
                                 <img src="assets/images/100-satisfaction.webp" alt="Conditions Apply"
@@ -260,425 +285,59 @@
                                 </p>
                             </div>
                             <div class="col-12 mt-4">
-                                <div class="accordion d-flex flex-column gap-4">
+                                <div class="accordion d-flex flex-column gap-4 course-content-accordion">
                                     <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Course-Curriculum.svg" width="24"
-                                                    height="24" alt="Course Curriculum">
-                                                <span>Course Curriculum</span>
+                                    <?php
+                                    // Check that course_details exists and is a non-empty array
+                                    if (!empty($course_details) && is_array($course_details)) {
+                                        foreach ($course_details as $index => $detail) {
+                                            // Make the first item active and open
+                                            $activeClass = $index === 0 ? 'open' : '';
+                                            ?>
+                                            <div
+                                                class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $activeClass; ?>">
+                                                <button
+                                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/course-content/Course-Curriculum.svg" width="24"
+                                                            height="24" alt="<?php echo htmlspecialchars($detail['title']); ?>">
+                                                        <span><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="accordion-body">
+                                                    <?php echo $detail['ans']; ?>
+
+                                                    <?php
+                                                    // If this is the first item and $brochureLink is set, show brochure button
+                                                    if ($index === 0 && !empty($brochure)) {
+                                                        echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="button download-btn mt-3 d-inline-block"
+                                        style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
+                                            viewBox="0 0 16 17" fill="none">
+                                            <g clip-path="url(#clip0_18618_896)">
+                                                <path
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    fill="#E50914" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_18618_896">
+                                                    <rect width="16" height="16" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Download Brochure
+                                    </a>';
+                                                    }
+                                                    ?>
+                                                </div>
                                             </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li><strong>Module 01: Introduction to Information Security</strong>
-                                                    <ul>
-                                                        <li>Overview of Information Security</li>
-                                                        <li>Information Security vs. Cybersecurity</li>
-                                                        <li>Elements of Information Security:
-                                                            <ul>
-                                                                <li>Confidentiality</li>
-                                                                <li>Integrity</li>
-                                                                <li>Availability</li>
-                                                                <li>Non-Repudiation</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Security Controls:
-                                                            <ul>
-                                                                <li>Managerial</li>
-                                                                <li>Technical</li>
-                                                                <li>Operational</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Introduction to Cybersecurity Frameworks:
-                                                            <ul>
-                                                                <li>NIST</li>
-                                                                <li>MITRE ATT&amp;CK</li>
-                                                                <li>ISO</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li><strong>Module 02: Security Operations Center (SOC)
-                                                        Foundations</strong>
-                                                    <ul>
-                                                        <li>Introduction to Security Management</li>
-                                                        <li>Introduction to the Security Operations Center (SOC)
-                                                        </li>
-                                                        <li>Why Do We Need a SOC?</li>
-                                                        <li>Role of a SOC Analyst in Modern Cybersecurity</li>
-                                                        <li>SOC Tiers and Responsibilities:
-                                                            <ul>
-                                                                <li>Tier 1</li>
-                                                                <li>Tier 2</li>
-                                                                <li>Tier 3</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Key SOC Technologies and Terminologies</li>
-                                                        <li>SOC Workflow</li>
-                                                    </ul>
-                                                </li>
-
-                                                <li><strong>Module 03: Threat Landscape</strong>
-                                                    <ul>
-                                                        <li>Types of Cyber Threats:
-                                                            <ul>
-                                                                <li>Malware</li>
-                                                                <li>Ransomware</li>
-                                                                <li>Phishing</li>
-                                                                <li>Insider Threats</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Overview of Advanced Persistent Threats (APTs)</li>
-                                                        <li>Understanding Attacks and Their Patterns</li>
-                                                        <li>Case Studies:
-                                                            <ul>
-                                                                <li>MOVEit Data Breach</li>
-                                                                <li>SolarWinds Supply Chain Attack</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li><strong>Module 04: Vulnerability Management</strong>
-                                                    <ul>
-                                                        <li>Understanding Vulnerability Assessment</li>
-                                                        <li>Types of Vulnerability Assessment</li>
-                                                        <li>Vulnerability Management Lifecycle:
-                                                            <ul>
-                                                                <li>Asset Identification</li>
-                                                                <li>Vulnerability Assessment</li>
-                                                                <li>Risk Assessment</li>
-                                                                <li>Remediation</li>
-                                                                <li>Verification</li>
-                                                                <li>Monitoring</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li><strong>Module 05: Log Management and Analysis</strong>
-                                                    <ul>
-                                                        <li>Understanding Log Sources:
-                                                            <ul>
-                                                                <li>Firewalls</li>
-                                                                <li>IDS/IPS</li>
-                                                                <li>Web Servers</li>
-                                                                <li>Endpoints</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Hands-On with Centralized Logging Tool (Splunk)</li>
-                                                        <li>Identifying Anomalies in Logs</li>
-                                                        <li>Lab: Analyzing Apache Server Logs for Intrusion Attempts
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li><strong>Module 06: Threat Intelligence</strong>
-                                                    <ul>
-                                                        <li>What is Threat Intelligence?</li>
-                                                        <li>Why Do We Need Intelligence?</li>
-                                                        <li>Threats, Threat Actors, APTs, and Global Campaigns</li>
-                                                        <li>Types of Threats:
-                                                            <ul>
-                                                                <li>Network-Level</li>
-                                                                <li>Web Application-Level</li>
-                                                                <li>Host-Level</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Indicators of Compromise (IoCs) vs. Indicators of Attack
-                                                            (IoAs)
-                                                            vs. Precursors</li>
-                                                        <li>Traffic Light Protocol (TLP)</li>
-                                                        <li>Understanding the Pyramid of Pain</li>
-                                                        <li>Practical Labs:
-                                                            <ul>
-                                                                <li>Collecting IoCs</li>
-                                                                <li>Exploring Threat Intelligence Platforms (e.g.,
-                                                                    Maltego,
-                                                                    MISP)</li>
-                                                                <li>Checking IP/Domain Reputations</li>
-                                                                <li>Analyzing Malicious Files</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li><strong>Module 07: Threat Hunting Essentials</strong>
-                                                    <ul>
-                                                        <li>Introduction to Threat Hunting</li>
-                                                        <li>Threat Hunting vs. Threat Detection</li>
-                                                        <li>Relationship Between Incident Response and Threat
-                                                            Hunting</li>
-                                                        <li>Threat Hunting Models:
-                                                            <ul>
-                                                                <li>Hypotheses and Methodologies</li>
-                                                                <li>Diamond Model of Intrusion Analysis</li>
-                                                                <li>MITRE ATT&amp;CK Framework</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Practical Labs:
-                                                            <ul>
-                                                                <li>Network Traffic Analysis (Wireshark, Network
-                                                                    Miner)</li>
-                                                                <li>Endpoint Process Analysis
-                                                                    <ul>
-                                                                        <li>Memory Hunt - Volatility Framework</li>
-                                                                        <li>Monitoring and Detecting USB drives in
-                                                                            Windows
-                                                                        </li>
-                                                                        <li>Process Injection lab in Wazuh</li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li><strong>Module 08: Security Information and Event Management
-                                                        (SIEM)</strong>
-                                                    <ul>
-                                                        <li>What is SIEM and Why Do We Need It?</li>
-                                                        <li>SIEM Components:
-                                                            <ul>
-                                                                <li>Security Information Management (SIM)</li>
-                                                                <li>Security Event Management (SEM)</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>SIEM Capabilities:
-                                                            <ul>
-                                                                <li>Aggregation</li>
-                                                                <li>Correlation</li>
-                                                                <li>Alerts</li>
-                                                                <li>Reporting</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Hands-On with Splunk:
-                                                            <ul>
-                                                                <li>Installation</li>
-                                                                <li>Rule Writing &amp; Alert Creation</li>
-                                                                <li>Event Analysis</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-
-                                                <li><strong>Module 09: Malware Analysis</strong>
-                                                    <ul>
-                                                        <li>Malware Analysis Basics</li>
-                                                        <li>Static vs. Dynamic Analysis</li>
-                                                        <li>Practical Labs:
-                                                            <ul>
-                                                                <li>PE Analysis</li>
-                                                                <li>YARA Rules</li>
-                                                                <li>Traffic Analysis (Using Wireshark)</li>
-
-                                                            </ul>
-                                                        </li>
-                                                        <li>Setting Up a Malware Lab</li>
-                                                        <li>Anti-Sandboxing Techniques</li>
-                                                    </ul>
-                                                </li>
-
-                                                <li><strong>Module 10: Digital Forensics and Incident Response
-                                                        (DFIR)</strong>
-                                                    <ul>
-                                                        <li>Phases of Incident Response:
-                                                            <ul>
-                                                                <li>Preparation</li>
-                                                                <li>Detection</li>
-                                                                <li>Containment</li>
-                                                                <li>Eradication</li>
-                                                                <li>Recovery</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Incident Playbook Overview</li>
-                                                        <li>Ticketing System</li>
-                                                        <li>Dissecting Phishing Emails (Practical):
-                                                            <ul>
-                                                                <li>Identifying Red Flags in Phishing Emails</li>
-                                                                <li>URL Reputation Analysis</li>
-                                                                <li>File Reputation Analysis</li>
-                                                                <li>Authentication Mechanisms:
-                                                                    <ul>
-                                                                        <li>SPF</li>
-                                                                        <li>DKIM</li>
-                                                                        <li>DMARC</li>
-                                                                    </ul>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-
-                                                        <li>The 6 A’s of the Forensics Process:
-                                                            <ul>
-                                                                <li>Acquisition</li>
-                                                                <li>Authentication</li>
-                                                                <li>Analysis</li>
-                                                                <li>Attribution</li>
-                                                                <li>Articulation</li>
-                                                                <li>Audit</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Anti-Forensics Techniques (Practical):
-                                                            <ul>
-                                                                <li>Steganography Detection and Analysis</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Data Recovery (Practical):
-                                                            <ul>
-                                                                <li>Recovering Deleted Data</li>
-                                                                <li>Live Acquisition (Magnetic RAM Capture)</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Network Forensics (Practical):
-                                                            <ul>
-                                                                <li>Network Traffic Analysis</li>
-                                                                <li>Real-Time vs. Post-Mortem Analysis</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>System Forensics:
-                                                            <ul>
-                                                                <li>Disk Imaging with FTK Imager</li>
-                                                                <li>Disk Analysis Using Autopsy</li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>Practical Labs:
-                                                            <ul>
-                                                                <li>PCAP Analysis (Wireshark)</li>
-                                                                <li>File and Disk Artifact Investigation</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <span class="fw-bold f-nunito text-red d-block my-3"><sup>*</sup>Bonus
-                                                Section: Your
-                                                <span class="text-dark">Final Steps to Mastery</span> </span>
-                                            <ul class="liststar">
-                                                <li>Incident Response Project:
-                                                    <ul>
-                                                        <li>Attack Simulation</li>
-                                                        <li>Detection &amp; Remediation</li>
-                                                        <li>Report Preparation</li>
-                                                    </ul>
-                                                </li>
-
-                                                <li>Interview Preparation</li>
-                                            </ul>
-
-                                            <a href="<?php echo $brochureLink; ?>" target="_blank"
-                                                class="button d-inline-block mt-4">Download Brochure</a>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Course-Objectives.svg" width="24"
-                                                    height="24" alt="Course Objectives">
-                                                <span>Course Objectives</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>Understand the core principles of Information Security, including
-                                                    confidentiality, integrity, availability, non-repudiation, and
-                                                    managerial, technical, and operational security controls.</li>
-                                                <li>Gain expertise in Security Operations Center (SOC) workflows, roles,
-                                                    and
-                                                    technologies to monitor and manage cyber threats effectively.</li>
-                                                <li>Master the techniques for identifying and mitigating cyber threats
-                                                    like
-                                                    malware, ransomware, and Advanced Persistent Threats (APTs).</li>
-                                                <li>Develop proficiency in vulnerability assessment and management,
-                                                    covering
-                                                    the complete lifecycle from asset identification to risk mitigation.
-                                                </li>
-                                                <li>Acquire hands-on experience in log management and analysis using
-                                                    tools
-                                                    like Splunk to detect anomalies and secure infrastructure.</li>
-                                                <li>Build advanced skills in malware analysis, digital forensics, and
-                                                    incident response to investigate, contain, and remediate
-                                                    sophisticated
-                                                    cyber attacks.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Exam-Details.svg" width="24"
-                                                    height="24" alt="Exam Information">
-                                                <span>Exam Information</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <p>
-                                                This course is not directly linked to any exam. However, the course
-                                                curriculum provides in-depth training and expertise for participants to
-                                                qualify any SOC exam or interview to become seasoned SOC Analysts.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Pre-requisites.svg" width="24"
-                                                    height="24" alt="Prerequisites">
-                                                <span>Pre-requisites</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <p>Basic Knowledge of:</p>
-                         <ul class="liststar">
-<li>Networking fundamentals</li>
-<li>OS basics &amp; Troubleshooting is recommended</li>
-<li>Basics of Information Security</li>
-<li>Basics of Cyber World &amp; Security</li>
-<li>Beginner or Fresher for SOC Operations Centre</li>
-<li>Working on Information Security Role</li>
-</ul>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Target-Audience.svg" width="24"
-                                                    height="24" alt="Target Audience">
-                                                <span>Target Audience</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>Technical Support Engineers</li>
-                                                <li>System Administrators</li>
-                                                <li>Security Consultants</li>
-                                                <li>Cyber Security Analysts</li>
-                                                <li>Network Engineers</li>
-                                                <li>Network Architects or Admin</li>
-                                                <li>Security System Engineers</li>
-                                                <li>SOC Analysts (L1 &amp; L2)</li>
-                                                <li>Information Security Researcher</li>
-                                                <li>Aspiring Information Security Professionals</li>
-                                                <li>Anyone Who Wants to Become a SOC Analyst</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                    <!--accordion-item end-->
                                 </div>
                             </div>
                         </div>
@@ -787,6 +446,19 @@
                                         value="<?php echo $pag_url; ?>">
                                     <input type="hidden" id="me_others" name="me_others" value="">
                                     <input type="hidden" name="me_submited" value="1">
+                                    <!-- Privacy Policy Checkbox -->
+                                    <label class="f-nunito fs-14 fw-normal"
+                                        style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                        <input type="checkbox" name="privacy_policy" checked required
+                                            style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                        <span>
+                                            By sharing your details, you agree to our Terms and <a
+                                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                                style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                                Policy</a>
+                                        </span>
+                                    </label>
+                                    <!-- privacy Policy Checkbox end -->
                                     <button type="submit" class="form-control-btn">Submit</button>
 
                                     <div class="loader text-center" style="display:none;">
@@ -1390,205 +1062,37 @@
         <!--/ related courses /-->
 
         <!--<[faq start]>-->
-        <section class="faq-section pt-0">
-            <div class="container-fluid container-lg">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <h2 class="text-center">Frequently Asked Questions</h2>
-                    </div>
-                    <div class="col-12">
-                        <div class="accordion d-flex flex-column gap-4">
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>What is the role of a SOC Analyst?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        A SOC Analyst monitors, detects, investigates, and responds to cybersecurity
-                                        incidents within an organization's IT infrastructure.
-                                    </p>
-                                </div>
+        <?php if (!empty($faq)) { ?>
+            <section class="faq-section pt-0">
+                <div class="container-fluid container-lg">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <h2 class="text-center">Frequently Asked Questions</h2>
+                        </div>
+                        <div class="col-12">
+                            <div class="accordion d-flex flex-column gap-4 accordion-faq-section">
+                                <?php foreach ($faq as $index => $question) {
+                                    // Add "open" class and visible style for the first item
+                                    $isOpen = $index === 0 ? 'open' : '';
+                                    ?>
+                                    <div
+                                        class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $isOpen; ?>">
+                                        <button
+                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
+                                            <span><?php echo htmlspecialchars($question['title']); ?></span>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="accordion-body">
+                                            <?php echo $question['ans']; ?>
+                                        </div>
+                                    </div>
+                                <?php } ?>
                             </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>Who is this training program for?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>The training program is ideal for:</p>
-                                    <ul class="liststar">
-                                        <li>Technical Support Engineers</li>
-                                        <li>System Administrators</li>
-                                        <li>Security Consultants</li>
-                                        <li>Cyber Security Analysts</li>
-                                        <li>Network Engineers</li>
-                                        <li>Network Architects or Admin</li>
-                                        <li>Security System Engineers</li>
-                                        <li>SOC Analysts (L1 & L2)</li>
-                                        <li>Information Security Researcher</li>
-                                        <li>Entry-level Information Security role</li>
-                                        <li>Anyone who wants to become a SOC Analyst</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>What are the prerequisites for this course?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        The prerequisites for the course include basic knowledge of Networking
-                                        fundamentals, Information security,
-                                        and Cyber world and security. It is also recommended to have an understanding of
-                                        OS basics and troubleshooting.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>What tools will I get hands-on experience with during the training?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        You will get hands-on experience with tools like Splunk, Wireshark, MISP, Wazuh,
-                                        and FTK Imager, along with
-                                        other cutting-edge cybersecurity tools.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>Is this course suitable for beginners?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        Yes, this course is beginner-friendly and includes foundational concepts, making
-                                        it accessible to those new to SOC operations or cybersecurity.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>How is the training delivered?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        The program offers 48 hours of instructor-led training, hands-on labs, and
-                                        scenario-based learning in a fully practical environment.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>Will I receive a certificate upon completion?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        Yes, participants will receive a certificate of completion after successfully
-                                        completing the course.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>Does this course prepare me for any certifications?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        While this course does not directly align with a specific certification, it
-                                        equips participants with the skills to excel in SOC-related certification exams
-                                        and interviews.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>Does the program include post-training support?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                    Yes, you will receive extended post-training support, career guidance and mentorship.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>Are there any projects included in the course?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        Yes, a bonus includes an Incident Response Project, which involves attack
-                                        simulation, detection, remediation, and report preparation.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                    <span>How is this course different from other cybersecurity courses?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        This course combines foundational principles with hands-on labs, scenario-based
-                                        learning, and post-training mentorship to ensure practical expertise and career
-                                        readiness.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item end-->
-
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[faq end]>-->
 
         <!--<[reach us sec start]>-->
@@ -1617,6 +1121,19 @@
                                     value="<?php echo $pag_url; ?>">
 
                                 <input type="hidden" name="me_submited" value="1">
+                                <!-- Privacy Policy Checkbox -->
+                                <label class="f-nunito fs-14 fw-normal"
+                                    style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                            Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button type="submit" class="form-control-btn w-auto">Submit</button>
 
                                 <div class="loader text-center" style="display:none;">
@@ -1808,6 +1325,19 @@
                     <input type="hidden" name="me_pageurl" value="<?php echo $pag_url; ?>">
 
                     <input type="hidden" name="me_submited" value="1">
+                    <!-- Privacy Policy Checkbox -->
+                    <label class="f-nunito fs-14 fw-normal"
+                        style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                        <span>
+                            By sharing your details, you agree to our Terms and <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
                     <button type="submit" class="form-control-btn">Submit</button>
 
                     <div class="loader text-center" style="display:none;">

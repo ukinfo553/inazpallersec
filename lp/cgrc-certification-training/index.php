@@ -1,4 +1,27 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$courseID = 42932;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($courseID);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +36,7 @@
     <!--/ style link start /-->
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/style.css" defer>
+    <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
@@ -113,8 +137,13 @@
                             <div class="button-sec">
                                 <button class="cta-button modal-btn" title="Talk to Our Expert"
                                     modal-title="TALK TO OUR EXPERT">Talk to Our Expert</button>
-                                <a href="https://www.infosectrain.com/wp-content/uploads/2024/01/CGRC-Course-Brouchur.pdf"
-                                    target="_blank" class="cta-button">Download Brochure</a>
+                                <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="cta-button"
+                                    title="Download Brochure">Download Brochure</a>';
+                                }
+                                ?>
                             </div>
                             <img src="assets/images/review-mob-img.png" alt="CGRC Online Training Course Review"
                                 width="636" height="34" fetchPriority="high" class="review-img">
@@ -216,208 +245,33 @@
                             </div>
                             <div class="faq-wrapper">
                                 <!--/ faq item /-->
-                                <div class="faq-item active open">
-                                    <h3 class="faq-title"><span class="title">Course Curriculum</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>
-                                                <p> <strong>Domain 1:</strong> Security and Privacy Governance, Risk
-                                                    Management, and Compliance Program <strong>(16%)</strong> </p>
-                                            </li>
-                                            <li>
-                                                <p> <strong>Domain 2:</strong> Scope of the System
-                                                    <strong>(10%)</strong>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p> <strong>Domain 3:</strong> Selection and Approval of Framework,
-                                                    Security, and Privacy Controls <strong>(14%)</strong></p>
-                                            </li>
-                                            <li>
-                                                <p> <strong>Domain 4:</strong> Implementation of Security and Privacy
-                                                    Controls <strong>(17%)</strong></p>
-                                            </li>
-                                            <li>
-                                                <p> <strong>Domain 5:</strong> Assessment/Audit of Security and Privacy
-                                                    Controls <strong>(16%)</strong></p>
-                                            </li>
-                                            <li>
-                                                <p> <strong>Domain 6:</strong> System Compliance <strong>(14%)</strong>
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p> <strong>Domain 7:</strong> Compliance Maintenance
-                                                    <strong>(13%)</strong>
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <a href="https://www.infosectrain.com/wp-content/uploads/2024/01/CGRC-Course-Brouchur.pdf"
-                                            target="_blank" class="cta-button">Download Brochure</a>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">CGRC Exam Domains </span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <table border="0" cellspacing="0" class="course-details-table">
-                                            <tbody>
-                                                <tr>
-                                                    <td><strong>Old CGRC Domains</strong></td>
-                                                    <td><strong>New CGRC Domains</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Domain 1:</strong> Information Security Risk Management
-                                                        Program (16%)</td>
-                                                    <td><strong>Domain 1:</strong> Security and Privacy Governance, Risk
-                                                        Management, and Compliance Program (16%)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Domain 2:</strong> Scope of the Information System (11%)
-                                                    </td>
-                                                    <td><strong>Domain 2:</strong> Scope of the System (10%)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Domain 3:</strong> Selection and Approval of Security
-                                                        and Privacy Controls (15%)</td>
-                                                    <td><strong>Domain 3:</strong> Selection and Approval of Framework,
-                                                        Security, and Privacy Controls (14%)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Domain 4:</strong> Implementation of Security and
-                                                        Privacy Controls (16%)</td>
-                                                    <td><strong>Domain 4:</strong> Implementation of Security and
-                                                        Privacy Controls (17%)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Domain 5:</strong> Assessment/Audit of Security and
-                                                        Privacy Controls (16%)</td>
-                                                    <td><strong>Domain 5:</strong> Assessment/Audit of Security and
-                                                        Privacy Controls (16%)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Domain 6:</strong> Authorization/Approval of Information
-                                                        Systems (10%)</td>
-                                                    <td><strong>Domain 6:</strong> System Compliance (14%)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Domain 7:</strong> Continuous Monitoring (16%)</td>
-                                                    <td><strong>Domain 7:</strong> Compliance Maintenance (13%)</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Course Objectives</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>You will be able to:</p>
-                                        <ul>
-                                            <li>Grasp the principles of security and privacy governance, risk
-                                                management, and compliance to align organizational objectives with
-                                                regulatory standards.</li>
-                                            <li>Identify and establish clear system boundaries and objectives to meet
-                                                organizational and regulatory requirements.</li>
-                                            <li>Analyze, select, and gain approval for appropriate security and privacy
-                                                frameworks and controls tailored to mitigate organizational risks.</li>
-                                            <li>Apply practical skills to implement and integrate effective security and
-                                                privacy controls within organizational operations.</li>
-                                            <li>Develop the expertise to evaluate and audit the effectiveness of
-                                                implemented security and privacy controls to ensure compliance and
-                                                operational integrity.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Exam Details</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>
-                                                <p><strong>Exam Format</strong> : Multiple-choice</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Duration</strong> : 180 minutes</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Number of questions</strong> : 125 </p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Passing marks</strong> : 700 out of 1000</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Exam language</strong> : English</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Testing center</strong> : Pearson VUE Testing Center</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Pre-requisites</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>
-                                                <p>
-                                                    <strong>Minimum Requirement:</strong> Two years of full-time
-                                                    experience in one or more domains of the CGRC exam outline.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <strong>Alternative Experience:</strong> Part-time work and
-                                                    internships can contribute to the experience requirement.
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <strong>Associate Path:</strong> Without the required experience,
-                                                    pass the CGRC exam to become an Associate of (ISC)².
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p>
-                                                    <strong>Timeframe for Associates:</strong> Associates must gain two
-                                                    years of experience within three years.
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <strong style="color:var(--red);">Note: </strong>
-                                        <ul>
-                                            <li>CGRC® is a registered mark of The International Information Systems
-                                                Security Certification Consortium (ISC)².</li>
-                                            <li>We are not an authorized training partner of (ISC)².</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Target Audience </span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <strong>This course is ideal for:</strong>
-                                        <ul>
-                                            <li>Cybersecurity Auditors</li>
-                                            <li>Cybersecurity Compliance Officers</li>
-                                            <li>GRC Architects</li>
-                                            <li>GRC Managers</li>
-                                            <li>Cybersecurity Risk & Compliance Project Managers</li>
-                                            <li>Cybersecurity Risk & Controls Analysts</li>
-                                            <li>Cybersecurity Third-party Risk Managers</li>
-                                            <li>Enterprise Risk Managers</li>
-                                            <li>GRC Analysts</li>
-                                            <li>GRC Directors</li>
-                                            <li>Information Assurance Managers</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <?php
+                                // Check that course_details exists and is a non-empty array
+                                if (!empty($course_details) && is_array($course_details)) {
+                                    foreach ($course_details as $index => $detail) {
+                                        // Make the first item active and open
+                                        $activeClass = $index === 0 ? 'active open' : '';
+                                        ?>
+                                        <div class="faq-item <?php echo $activeClass; ?>">
+                                            <h3 class="faq-title">
+                                                <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                <span class="right-icon"></span>
+                                            </h3>
+                                            <div class="faq-content">
+                                                <?php echo $detail['ans']; ?>
+
+                                                <?php
+                                                // If this is the first item and $brochureLink is set, show brochure button
+                                                if ($index === 0 && !empty($brochure)) {
+                                                    echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <!--<[ course details sec end ]>-->
@@ -442,7 +296,18 @@
                                 <input type="hidden" id="me_redirect" value="<?php echo BASE_URL; ?>thank-you.php">
                                 <input type="hidden" id="me_others" name="me_others" value="Talk To Our Experts">
                                 <input type="hidden" id="me_pageurl" name="me_pageurl" value="<?php echo $pag_url; ?>">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--white);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited">Request a Callback</button>
 
@@ -461,39 +326,41 @@
         <!--/ training calendar sec start /-->
         <section class="training-calendar" id="training-calendar">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>CGRC Training Calendar</h2>
+                <?php if (!empty($courseID)): ?>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>CGRC Training Calendar</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <?php
-                        $url = "https://www.infosectrain.com/api/42932/href_toscroll/free_demo";
-                        function gettraning_Cal($url)
-                        {
-                            $ch = curl_init();
-                            curl_setopt($ch, CURLOPT_HEADER, 0);
-                            curl_setopt($ch, CURLOPT_VERBOSE, 1);
-                            //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-                            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                            curl_setopt($ch, CURLOPT_FAILONERROR, 0);
-                            // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-                            //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-                            curl_setopt($ch, CURLOPT_URL, $url);
+                    <div class="row">
+                        <div class="col-12">
+                            <?php
+                            $url = "https://www.infosectrain.com/api/$courseID/href_toscroll/free_demo";
+                            function gettraning_Cal($url)
+                            {
+                                $ch = curl_init();
+                                curl_setopt($ch, CURLOPT_HEADER, 0);
+                                curl_setopt($ch, CURLOPT_VERBOSE, 1);
+                                //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+                                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+                                curl_setopt($ch, CURLOPT_FAILONERROR, 0);
+                                // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
+                                //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
+                                curl_setopt($ch, CURLOPT_URL, $url);
 
-                            $content = curl_exec($ch);
+                                $content = curl_exec($ch);
 
-                            curl_close($ch);
-                            return $content;
-                        }
+                                curl_close($ch);
+                                return $content;
+                            }
 
-                        gettraning_Cal($url);
+                            gettraning_Cal($url);
 
-                        ?>
+                            ?>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
                 <div class="row align-items-center">
                     <div class="col-lg-2 d-none d-lg-block">
                         <img src="assets/images/training-calendar.png" width="132" height="128"
@@ -1098,184 +965,42 @@
         <!--<[success story start]>-->
 
         <!--<[FAQ SEC start]>-->
-        <section>
-            <div class="container">
-                <!-- row start -->
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Frequently Asked Questions</h2>
+        <?php if ($faq !== null && !empty($faq)) { ?>
+            <section class="faq-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
                     </div>
-                </div>
-                <!-- row end -->
-                <!-- row start -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="faq-wrapper">
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What is the CGRC certification, and how is it
-                                        different from CAP?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        CGRC (Certified in Governance, Risk, and Compliance) is the updated version of
-                                        the Certified Authorization Professional (CAP). It focuses on security and
-                                        privacy governance, risk management, and compliance practices, aligning with
-                                        modern organizational needs. </p>
-                                </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="faq-wrapper">
+                                <!--/ faq item start /-->
+                                <?php
+                                // Display the FAQs section if the data is available
+
+                                foreach ($faq as $index => $question) {
+                                    // Determine if the first item should be open
+                                    $isOpen = $index === 0 ? 'open active' : '';
+                                    $displayStyle = $index === 0 ? 'style="display: block;"' : '';
+
+                                    echo '<div class="faq-item ' . $isOpen . '">';
+                                    echo '    <h3 class="faq-title"><span class="title">' . $question['title'] . '</span><span class="right-icon"></span></h3>';
+                                    echo '    <div class="faq-content" ' . $displayStyle . '>';
+                                    echo $question['ans'];
+                                    echo '    </div>';
+                                    echo '</div>';
+                                }
+                                ?>
+                                <!--/ faq item end /-->
                             </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Who is the targeted audience for the CGRC
-                                        certification?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                    </p>
-                                    <p>The targeted audience for the CGRC certification includes:</p>
-                                    <ul>
-                                        <li>Cybersecurity Auditor</li>
-                                        <li>Cybersecurity Compliance Officer</li>
-                                        <li>GRC Architect</li>
-                                        <li>GRC Manager</li>
-                                        <li>Cybersecurity Risk &amp; Compliance Project Manager</li>
-                                        <li>Cybersecurity Risk &amp; Controls Analyst</li>
-                                        <li>Cybersecurity Third-party Risk Manager</li>
-                                        <li>Enterprise Risk Manager</li>
-                                        <li>GRC Analyst</li>
-                                        <li>GRC Director</li>
-                                        <li>Information Assurance Manager</li>
-                                    </ul>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What are the prerequisites for enrolling in
-                                        the CGRC training course?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                    </p>
-                                    <p>The prerequisites for enrolling in the CGRC training course are:</p>
-                                    <ul>
-                                        <li><strong>Minimum Requirement:</strong> Two years of full-time experience in
-                                            one or more domains of the CGRC exam outline.</li>
-                                        <li><strong>Alternative Experience:</strong> Part-time work and internships can
-                                            contribute to the experience requirement.</li>
-                                        <li><strong>Associate Path:</strong> Without the required experience, pass the
-                                            CGRC exam to become an Associate of ISC2.</li>
-                                        <li><strong>Timeframe for Associates:</strong> Associates must gain two years of
-                                            experience within three years.</li>
-                                    </ul>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What are the domains covered in the latest
-                                        CGRC course?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                    </p>
-                                    <p>The latest course includes the following domains:</p>
-                                    <ul>
-                                        <li><strong>Domain 1:</strong> Security and Privacy Governance, Risk Management,
-                                            and Compliance Program (16%)</li>
-                                        <li><strong>Domain 2:</strong> Scope of the System (10%)</li>
-                                        <li><strong>Domain 3:</strong> Selection and Approval of Framework, Security,
-                                            and Privacy Controls (14%)</li>
-                                        <li><strong>Domain 4:</strong> Implementation of Security and Privacy Controls
-                                            (17%)</li>
-                                        <li><strong>Domain 5:</strong> Assessment/Audit of Security and Privacy Controls
-                                            (16%)</li>
-                                        <li><strong>Domain 6:</strong> System Compliance (14%)</li>
-                                        <li><strong>Domain 7:</strong> Compliance Maintenance (13%)</li>
-                                    </ul>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Is the CGRC certification program accredited
-                                        or recognized by industry associations or organizations?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The CGRC certification program is recognized and follows standards like ANAB and
-                                        ISO/IEC 17024. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Are there any exams or assessments associated
-                                        with the CGRC certification program?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The CGRC exam is a 180-minutes test with 125 multiple-choice questions. The
-                                        passing score is 700 out of 1000 points, and the exam is conducted in English at
-                                        Pearson VUE Testing Centers. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What is the pass score for the CGRC
-                                        certification exam?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The passing score is 700 out of 1000 points. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Can I access course materials and resources
-                                        after completing the CGRC certification program?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        Yes, you can access course materials and resources after completing the CGRC
-                                        certification training. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Is there a renewal or recertification process
-                                        for the CGRC certification, and how often is it required?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The CGRC certification is valid for three years. Holders must comply with
-                                        Continuing Professional Education (CPE) policies and pay a yearly maintenance
-                                        fee. The renewal process involves satisfying the CAP CPE requirement and paying
-                                        the annual maintenance fee (AMF), which is $125 for members and $50 for
-                                        associates. </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How can I contact the course administrators or
-                                        instructors for further questions or assistance?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        For further questions or assistance regarding the CGRC certification program,
-                                        you can contact the service and support team of InfosecTrain. &ZeroWidthSpace;
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
+
                         </div>
                     </div>
                 </div>
-                <!-- row end -->
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[FAQ SEC start]>-->
 
         <!--<[reach us sec start]>-->
@@ -1306,7 +1031,18 @@
                                 <input type="hidden" value="CGRC Training" id="me_others_footer" name="me_others">
                                 <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_footer"
                                     name="me_pageurl">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited_footer">Request a Callback</button>
                             </form>
@@ -1499,7 +1235,18 @@
                     <input type="hidden" value="" id="me_others_pop" name="me_others" />
                     <!-- <input type="hidden" value="" id="me_message" name="me_message" /> -->
                     <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_pop" name="me_pageurl" />
-
+                    <!-- Privacy Policy Checkbox -->
+                    <label
+                        style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                        <span>
+                            By sharing your details, you agree to our Terms and <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
                     <button class="cta-button form-button" type="submit" name="me_submited" id="me_submited_pop">Request
                         a Callback</button>
 
