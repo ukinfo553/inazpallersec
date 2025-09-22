@@ -8,55 +8,56 @@
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
     rel="stylesheet">
 <style>
-    .thankyou-navbar {
-        border-bottom: 1px solid var(#D9D9D9);
-        box-shadow: 8px 4px 25px 5px rgba(8, 8, 8, 0.15);
-    }
+.thankyou-navbar {
+    border-bottom: 1px solid var(#D9D9D9);
+    box-shadow: 8px 4px 25px 5px rgba(8, 8, 8, 0.15);
+}
 
-    .thankyou-banner {
-        display: none;
-    }
+.thankyou-banner {
+    display: none;
+}
 
-    .thank-you-grcskills {
-        padding: 52px 0;
-        color: #fff;
-        text-align: center;
-        font-family: 'Nunito Sans', sans-serif;
-        ;
-    }
+.thank-you-grcskills {
+    padding: 52px 0;
+    color: #fff;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    ;
+}
 
-    .thank-you-grcskills ul li {
-        list-style: none;
-        text-align: center;
-        margin-bottom: 5px;
-        color: #080808;
-        font-family: 'Nunito Sans', sans-serif;
-        font-weight: bold;
-    }
+.thank-you-grcskills ul li {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #080808;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+}
 
-    h2 {
-        font-size: 28px;
-        font-weight: bold;
-    }
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
 
-    h3 {
-        font-size: 18px;
-        color: #e50914;
-        font-weight: bold;
-        font-family: 'Nunito Sans', sans-serif;
-    }
+h3 {
+    font-size: 18px;
+    color: #e50914;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+}
 
-    .thank-you-grcskills p {
-        color: #080808;
-    }
+.thank-you-grcskills p {
+    color: #080808;
+}
 </style>
 <section class="thank-you-grcskills">
     <div class="container thank-you-container">
         <img src="https://www.infosectrain.com/pages/lp/grc-skills-meetup/assets/images/thank-you.gif" alt=""
             style="max-width: 100%;display: block;margin: 0 auto;">
-        <h2 class="thank-you-header">For Showing Interest in the AI Summit 2025!</h2>
-        <p class="thank-you-message">you'll gain hands-on exposure to 30+ breakthrough tools, see exactly how leading
-            organizations <br> are applying AI to drive growth, and walk away with strategies you can implement immediately.
+        <h2 class="thank-you-header">For Showing Interest in the LLM Security & Red Teaming Masterclass!</h2>
+        <p class="thank-you-message">We’re excited to have you on board for this expert-led, hands-on session where
+            you'll gain <br>practical insights into securing and red-teaming LLMs against real-world threats.
+
         </p>
 
         <div class="next-steps">
@@ -78,7 +79,7 @@
                     Stay tuned for more updates and event reminders in your inbox.</li>
             </ul>
             <p>Follow us on Social Media for event updates and discussions.<br>
-                We look forward to seeing you in the AI Summit.</p>
+                We look forward to seeing you in the masterclass.</p>
         </div>
     </div>
 </section>
