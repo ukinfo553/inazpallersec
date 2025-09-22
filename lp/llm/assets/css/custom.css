@@ -1009,6 +1009,11 @@ nav {
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.10);
   padding: 8px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.3px);
+  -webkit-backdrop-filter: blur(11.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .feature-box span {
@@ -1186,6 +1191,11 @@ textarea.error {
 
 .timers-item {
   width: 100%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.3px);
+  -webkit-backdrop-filter: blur(11.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .timers-item strong {
@@ -1596,7 +1606,8 @@ footer .item ul li a {
   flex-wrap: nowrap;
   align-items: center;
   flex-direction: row;
-  background: linear-gradient(89deg, rgba(255, 185, 86, 0.60) 0%, rgba(90, 9, 229, 0.60) 98.66%);
+  background: linear-gradient(89deg, rgba(255, 185, 86), rgba(90, 9, 229));
+  opacity: 0.9;
 }
 
 .faq-wrapper .faq-item .right-icon::after,
@@ -1675,10 +1686,28 @@ footer .item ul li a {
   border-left: 1px solid rgba(255, 185, 86, 0.20);
   border-bottom: 1px solid rgba(90, 9, 229, 0.20);
   border-right: 1px solid rgba(90, 9, 229, 0.20);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .learning-card:hover {
-  background-color: #2738ED66;
+  background: rgba(90, 9, 229, 0.20);
+}
+
+.owl-carousel {
+  box-shadow: 12px -17px 20px 2px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.3px);
+  -webkit-backdrop-filter: blur(11.3px);
+  border: 1px solid rgb(255 255 255 / 17%);
+}
+
+.takeaway-card {
+  box-shadow: 12px -17px 20px 2px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.3px);
+  -webkit-backdrop-filter: blur(11.3px);
+  border: 1px solid rgb(255 255 255 / 25%);
 }
 
 .learning-card h3,
