@@ -54,7 +54,7 @@ $country = $_SESSION['country'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LLM Security & Red Teaming Masterclass</title>
-    <meta name="description" content="AI Summit 2025">
+    <meta name="description" content="LLM Security & Red Teaming Masterclass">
     <meta name="robots" content="index, follow" />
     <link rel="icon" href="assets/images/favicon.ico">
     <!--/ style link start /-->
@@ -73,15 +73,14 @@ $country = $_SESSION['country'];
         rel="stylesheet">
 
     <!-- Owl Carousel CSS -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
     <script>
-        setTimeout(function() {
-            (function(w, d, s, l, i) {
+        setTimeout(function () {
+            (function (w, d, s, l, i) {
                 w[l] = w[l] || [];
                 w[l].push({
                     "gtm.start": new Date().getTime(),
@@ -101,16 +100,16 @@ $country = $_SESSION['country'];
 
 <body>
     <!-- <?php
-            if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
-                $pag_url = "https://";
-            } else {
-                $pag_url = "http://";
-            }
-            // Append the host(domain name, ip) to the URL.
-            $pag_url .= $_SERVER['HTTP_HOST'];
-            // Append the requested resource location to the URL
-            $pag_url .= $_SERVER['REQUEST_URI'];
-            ?> -->
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+        $pag_url = "https://";
+    } else {
+        $pag_url = "http://";
+    }
+    // Append the host(domain name, ip) to the URL.
+    $pag_url .= $_SERVER['HTTP_HOST'];
+    // Append the requested resource location to the URL
+    $pag_url .= $_SERVER['REQUEST_URI'];
+    ?> -->
 
     <main>
         <!--banner sec start-->
@@ -162,7 +161,7 @@ $country = $_SESSION['country'];
             <!-- Background Video -->
             <!-- <video class="video-background" autoplay muted loop playsinline>
                     <source src="assets/videos/background.mp4" type="video/mp4">
-                    <!-- Fallback for browsers that don't support video -
+                    Fallback for browsers that don't support video -
                     Your browser does not support the video tag.
                 </video> -->
 
@@ -175,7 +174,8 @@ $country = $_SESSION['country'];
                 <div class="row">
                     <div class="col-12">
                         <div class="hero-item d-flex flex-column gap-4 justify-content-center align-items-center">
-                            <img src="assets/images/logo.png" alt="AI Summit 2025" class="img-fluid mb-md-4">
+                            <img src="assets/images/logo.png" alt="LLM Security & Red Teaming Masterclass"
+                                class="img-fluid mb-md-4">
                             <div>
                                 <!-- <div class="fs-16 f-general-sans text-white mb-md-4"
                                         style="text-transform: uppercase;letter-spacing: 16px;font-weight: 200;">
@@ -245,12 +245,17 @@ $country = $_SESSION['country'];
 
                                 <div class="feature-box d-flex align-items-center gap-2">
 
-                                    <span>6 CPE Credits</span>
+                                    <span>8 CPE Credits</span>
                                 </div>
                             </div>
                             <div class="special-offer">
-                                <img src="assets/images/special-offer.png" alt="special-offer"
-                                    style="width: 100%; margin:auto;">
+                                <?php if ($country == 'IN') { ?>
+                                    <img src="assets/images/prices/indian-price.png" alt="special-offer"
+                                        style="width: 100%; margin:auto;">
+                                <?php } else { ?>
+                                    <img src="assets/images/prices/usd-offer.png"
+                                        alt="LLM Security & Red Teaming Masterclass" class="w-100 d-block">
+                                <?php } ?>
                             </div>
 
                             <div class="owl-carousel" style="border-radius: 8px;
@@ -267,8 +272,20 @@ background: rgba(8, 8, 8, 0.40); padding: 12px 16px;">
                                 <div><img src="assets/images/carousal-10.png" alt="Slide 10"></div>
                                 <div><img src="assets/images/carousal-11.png" alt="Slide 11"></div>
                             </div>
-                            <div class="d-flex gap-4 align-items-center mt-2">
-                                <button class="button modal-btn" modal-title="Join Now">Register Now</button>
+                            <div class="d-flex flex-wrap justify-content-center gap-4 align-items-center mt-2">
+                                <?php if ($country == 'IN') { ?>
+                                    <a href="https://pages.razorpay.com/infosectrain-llm-masterclass" class="button">Pay
+                                        Now</a>
+
+                                <?php } else { ?>
+                                    <a href="https://pages.razorpay.com/ist-llm-masterclass" class="button">Pay Now</a>
+                                <?php } ?>
+                                <a href="assets/LLM-Security-Red-Team-Masterclass.pdf"
+                                    download="LLM Security Red Team Masterclass Brochure" class="button" style="    background: transparent;
+    color: #FFB956;
+    border: 1px solid #FFB956;">
+                                    Download Agenda
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -293,9 +310,9 @@ background: rgba(8, 8, 8, 0.40); padding: 12px 16px;">
 
         <!-- <div class="col-md-4">
                             <?php if ($country == 'IN') { ?>
-                            <img src="assets/images/prices/inr-offer.png" alt="AI Summit 2025" class="w-100 d-block">
+                            <img src="assets/images/prices/inr-offer.png" alt="LLM Security & Red Teaming Masterclass" class="w-100 d-block">
                             <?php } else { ?>
-                            <img src="assets/images/prices/usd-offer.png" alt="AI Summit 2025" class="w-100 d-block">
+                            <img src="assets/images/prices/usd-offer.png" alt="LLM Security & Red Teaming Masterclass" class="w-100 d-block">
                             <?php } ?>
                         </div> -->
         <!-- </div>
@@ -303,7 +320,7 @@ background: rgba(8, 8, 8, 0.40); padding: 12px 16px;">
             </section> -->
 
         <section
-            style="background: #0A0017;background-image: url('assets/images/gradient-background.png');background-size: cover;background-position: center;background-size:contain; padding:0px;">
+            style="background: #0A0017;background-image: url('assets/images/gradient-background.png');background-size: cover;background-position: center;background-size:contain;">
             <div class="container">
                 <div class="row flex-column-reverse flex-lg-row">
                     <div class="col-lg-8 mt-4 mt-lg-0">
@@ -324,8 +341,8 @@ background-clip: text;
                                     Join global experts and forward-thinking peers to gain the skills, insights, and
                                     confidence to drive real change in your organization, starting now!
                                 </p> -->
-                            <div class="learning-cards mt-4 d-flex flex-wrap gap-4">
-                                <div class="learning-card">
+                            <div class="learning-cards mt-4 d-flex flex-md-row flex-column gap-4">
+                                <div class="learning-card w-100">
                                     <img src="assets/images/online-education.png" alt="online-education">
                                     <div>
                                         <h3>Hands-On Learning</h3>
@@ -335,7 +352,7 @@ background-clip: text;
                                     </div>
                                 </div>
 
-                                <div class="learning-card">
+                                <div class="learning-card w-100">
                                     <img src="assets/images/online-service.png" alt="online-service">
                                     <div>
                                         <h3>Top Industry Tools</h3>
@@ -343,8 +360,10 @@ background-clip: text;
                                             ART, and more cutting-edge tools.</p>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="learning-cards mt-4 d-flex flex-md-row flex-column gap-4">
 
-                                <div class="learning-card">
+                                <div class="learning-card w-100">
                                     <img src="assets/images/online-horse.png" alt="online-horse">
                                     <div>
                                         <h3>Step-by-Step Playbooks</h3>
@@ -353,7 +372,7 @@ background-clip: text;
                                     </div>
                                 </div>
 
-                                <div class="learning-card">
+                                <div class="learning-card w-100">
                                     <img src="assets/images/online-user.png" alt="online-user">
                                     <div>
                                         <h3>Expert Practitioners</h3>
@@ -367,7 +386,7 @@ background-clip: text;
                                 <img src="assets/images/online-edu.png" alt="online-edu">
                                 <div>
                                     <h3>Professional Development</h3>
-                                    <p>Earn 6 CPE credits to enhance your credentials in cybersecurity</p>
+                                    <p>Earn 8 CPE credits to enhance your credentials in cybersecurity</p>
                                 </div>
                             </div>
                         </div>
@@ -464,7 +483,7 @@ background-clip: text;
                                         <div
                                             class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
                                             <strong class="fw-600"> Introduction to AI and LLM Security by Avnish
-                                                (10 AM - 12 PM)</strong>
+                                                (7 PM - 11 PM)</strong>
                                         </div>
                                     </span>
                                     <span class="right-icon"></span>
@@ -495,112 +514,6 @@ background-clip: text;
                                 </div>
                             </div>
                             <!--/ faq item /-->
-                            <!-- <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/anas1.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600"> AI Productivity Tools - Anas (12 PM - 1
-                                                    PM)</strong>
-                                            </div>
-                                        </span>
-                                        <span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p class="mb-3 fw-bold">AI Playbook for Leaders: Implement 15+ Game-changing AI
-                                            Tools</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
-                                        <ul>
-                                            <li>Productivity Redefined: How AI boosts individual and team output.</li>
-                                            <li>Executive Tool Showcase: Practical use of ChatGPT, NotebookLM, Gamma,
-                                                Perplexity, Gemini, Meta, Mistral, Deepseek, Sora, Llama Coder, Deep
-                                                Learning LMS, Napkin AI, Consensus and more.</li>
-                                            <li>Strategic AI Applications: Leveraging AI for planning, analysis, and
-                                                communication.</li>
-                                            <li>Blueprint for Adoption: Best practices for integrating AI tools into
-                                                your
-                                                workflow.</li>
-                                            <li>Leadership in AI: Fostering an AI-first mindset and measuring ROI.</li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-
-                            <!--/ faq item /-->
-                            <!-- <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/break-time.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600"> Lunch Break (1 PM - 2 PM)</strong>
-                                            </div>
-                                        </span>
-                                    </h3>
-                                </div> -->
-
-                            <!--/ faq item /-->
-                            <!-- <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/krish1.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">Cloud & AI - Krish (2 PM - 4 PM)</strong>
-                                            </div>
-                                        </span>
-                                        <span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p class="mb-3 fw-bold">Securing AI applications in the Cloud</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
-                                        <ul>
-                                            <li>Cloud AI Infrastructure: Compute, storage, network & application stack
-                                                considerations.</li>
-                                            <li>AI deployment methodologies on Cloud </li>
-                                            <li>Security Implications of Cloud AI: Data protection, access control, and
-                                                compliance.</li>
-                                            <li>Best Practices for Hosting AI Workloads: Scalability, reliability, and
-                                                cost
-                                                optimization.</li>
-                                            <li>Cloud AI Security Frameworks: Identity and access management, threat
-                                                detection, and incident response.</li>
-                                            <li>Case Studies: Real-world examples of secure and efficient cloud AI
-                                                deployments.</li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <!-- <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/prabh1.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">AI Governance - Prabh (4 PM - 6 PM)</strong>
-                                            </div>
-                                        </span>
-                                        <span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p class="mb-3 fw-bold">Building Trust & Control with AI Governance</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
-                                        <ul>
-                                            <li>The Governance Imperative: Mitigating risks and building trust in AI.
-                                            </li>
-                                            <li>Core Pillars: Ethics, risk management, and compliance frameworks.</li>
-                                            <li>Regulatory Landscape: Navigating global AI laws and standards.</li>
-                                            <li>Practical Implementation: Steps to establish an AI Ethics Committee and
-                                                policies.</li>
-                                            <li>Fostering Responsibility: Cultivating an AI-responsible organizational
-                                                culture.</li>
-                                        </ul>
-                                    </div>
-                                </div> -->
 
                             <!--/ faq item /-->
                             <div class="d-flex gap-3 text-white align-items-center f-general-sans fs-16 mt-4">
@@ -628,7 +541,7 @@ background-clip: text;
                                         <!-- <img src="assets/images/speakers/shakti1.png" alt=""> -->
                                         <div
                                             class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                            <strong class="fw-600">AI and LLM Red Teaming by Ashish (10 AM - 12
+                                            <strong class="fw-600">AI and LLM Red Teaming by Ashish (7 PM - 11
                                                 PM)</strong>
                                         </div>
                                     </span>
@@ -751,7 +664,7 @@ background-clip: text;
                                                 class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
                                                 <strong class="fw-600">AI in Cybersecurity - Avnish (4 PM - 6
                                                     PM)</strong>
-                                                <!-- <div class="d-flex gap-2 gap-md-3">
+                                                <div class="d-flex gap-2 gap-md-3">
                                                 <span class="fw-400">by Avnish</span>
                                                 <div>
                                                     <span class="fw-400">at:</span>
@@ -794,35 +707,33 @@ background-clip: text;
                                 Key Takeaways
                             </div>
 
-                            <div class="d-flex flex-wrap  gap-4 mt-3">
-                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded"
+                            <div class="d-flex flex-md-row flex-column gap-4 mt-3">
+                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded w-100"
                                     style="border-radius: 8px; background: linear-gradient(90deg, rgba(10, 0, 23,
                                         0.15) 0.24%, rgba(108, 10, 226, 0.15) 71.84%, rgba(39, 56, 237, 0.15) 119.53%); display: flex;
-width: 228px;
 padding: 16px;
 align-items: center;
 gap: 16px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                                        viewBox="0 0 16 16" fill="none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16"
+                                        fill="none">
                                         <path
                                             d="M16 4.9987V11.2347C16 12.1287 15.6747 12.99 15.0833 13.66C14.7173 14.0747 14.0867 14.114 13.672 13.7487C13.258 13.3834 13.218 12.7514 13.5833 12.3374C13.852 12.0327 14 11.6414 14 11.2354V4.9987C14 4.08003 13.2527 3.33203 12.3333 3.33203H3.66667C2.74733 3.33203 2 4.08003 2 4.9987V10.9987C2 11.9174 2.74733 12.6654 3.66667 12.6654H5.66667C6.21867 12.6654 6.66667 13.1127 6.66667 13.6654C6.66667 14.218 6.21867 14.6654 5.66667 14.6654H3.66667C1.64533 14.6654 0 13.0207 0 10.9987V4.9987C0 2.9767 1.64533 1.33203 3.66667 1.33203H12.3333C14.3547 1.33203 16 2.9767 16 4.9987ZM12.6667 5.66536C12.6667 5.1127 12.2187 4.66536 11.6667 4.66536H4.33333C3.78133 4.66536 3.33333 5.1127 3.33333 5.66536C3.33333 6.21803 3.78133 6.66536 4.33333 6.66536H11.6667C12.2187 6.66536 12.6667 6.21803 12.6667 5.66536ZM13 10.9987C13 12.0367 12.47 12.952 11.6667 13.4907V15.5634C11.6667 15.9787 11.1393 16.1567 10.8873 15.8267L10 14.6647L9.11267 15.8267C8.86067 16.1567 8.33333 15.9787 8.33333 15.5634V13.4907C7.53 12.952 7 12.036 7 10.9987C7 9.3447 8.346 7.9987 10 7.9987C11.654 7.9987 13 9.3447 13 10.9987ZM9 10.9987C9 11.55 9.44867 11.9987 10 11.9987C10.5513 11.9987 11 11.55 11 10.9987C11 10.4474 10.5513 9.9987 10 9.9987C9.44867 9.9987 9 10.4474 9 10.9987ZM4.33333 7.9987C3.78133 7.9987 3.33333 8.44603 3.33333 8.9987C3.33333 9.55136 3.78133 9.9987 4.33333 9.9987H5C5.552 9.9987 6 9.55136 6 8.9987C6 8.44603 5.552 7.9987 5 7.9987H4.33333Z"
                                             fill="white" />
                                     </svg>
 
                                     <div class="fw-400 fs-14 f-general-sans text-white">
-                                        6 CPE Credits Issued on Completion
+                                        8 CPE Credits Issued on Completion
                                     </div>
                                 </div>
 
-                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded"
+                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded w-100"
                                     style="border-radius: 8px; background: linear-gradient(90deg, rgba(10, 0, 23,
                                         0.15) 0.24%, rgba(108, 10, 226, 0.15) 71.84%, rgba(39, 56, 237, 0.15) 119.53%); display: flex;
-width: 228px;
 padding: 16px;
 align-items: center;
 gap: 16px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        viewBox="0 0 16 16" fill="none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"
+                                        fill="none">
                                         <g clip-path="url(#clip0_27955_89345)">
                                             <path
                                                 d="M2.678 13.468C3.15533 13.1913 3.768 13.3547 4.04467 13.8327C4.10533 13.9373 4.21333 13.9993 4.334 13.9993H9.00067C9.184 13.9993 9.334 13.85 9.334 13.666V12.9993C9.334 12.4467 9.782 11.9993 10.334 11.9993H10.74C11.578 11.9993 12.2887 11.3727 12.3933 10.5413L12.6033 8.874C12.6667 8.374 13.0913 7.99867 13.5953 7.99867H13.8553C13.446 7.018 12.3167 4.97533 11.654 4.15533C10.686 2.864 9.216 2.08 7.61933 2.00467C7.068 1.97867 6.64133 1.51067 6.66733 0.958667C6.69267 0.407333 7.176 -0.0253333 7.71267 0.00666667C9.90733 0.11 11.9267 1.18467 13.2307 2.92667C13.9093 3.76467 15.9987 7.254 15.9987 8.362C15.9987 9.126 15.466 9.93733 14.4767 9.99533L14.3767 10.7907C14.1707 12.4253 12.8987 13.7007 11.3147 13.9527C11.172 15.104 10.1887 15.998 8.99867 15.998H4.332C3.50133 15.998 2.72733 15.5513 2.31133 14.832C2.03533 14.354 2.19867 13.742 2.67667 13.466L2.678 13.468ZM5.33333 1.33333V4C5.33333 4.73667 4.73667 5.33333 4 5.33333H1.33333C0.596667 5.33333 0 4.73667 0 4V1.33333C0 0.596667 0.596667 0 1.33333 0H4C4.73667 0 5.33333 0.596667 5.33333 1.33333ZM4.47667 1.40667C4.214 1.138 3.782 1.13933 3.52133 1.40933L2.30267 2.67067L1.78467 2.12333C1.52333 1.84733 1.08467 1.84533 0.821333 2.11933C0.574667 2.37533 0.573333 2.78067 0.817333 3.03867L1.33 3.58067C1.85467 4.13533 2.736 4.14 3.26667 3.59067L4.48 2.33533C4.73067 2.076 4.72933 1.664 4.47733 1.406L4.47667 1.40667ZM0 8V10.6667C0 11.4033 0.596667 12 1.33333 12H4C4.73667 12 5.33333 11.4033 5.33333 10.6667V8C5.33333 7.26333 4.73667 6.66667 4 6.66667H1.33333C0.596667 6.66667 0 7.26333 0 8Z"
@@ -840,15 +751,14 @@ gap: 16px;">
                                     </div>
                                 </div>
 
-                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded"
+                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded w-100"
                                     style="border-radius: 8px; background: linear-gradient(90deg, rgba(10, 0, 23,
                                         0.15) 0.24%, rgba(108, 10, 226, 0.15) 71.84%, rgba(39, 56, 237, 0.15) 119.53%); display: flex;
-width: 228px;
 padding: 16px;
 align-items: center;
 gap: 16px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        viewBox="0 0 16 16" fill="none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"
+                                        fill="none">
                                         <g clip-path="url(#clip0_27955_89349)">
                                             <path
                                                 d="M1.00012 12C1.00012 11.2633 1.59679 10.6667 2.33345 10.6667C3.07012 10.6667 3.66679 11.2633 3.66679 12C3.66679 12.7367 3.07012 13.3333 2.33345 13.3333C1.59679 13.3333 1.00012 12.7367 1.00012 12ZM8.00012 10.6667C7.26345 10.6667 6.66679 11.2633 6.66679 12C6.66679 12.7367 7.26345 13.3333 8.00012 13.3333C8.73679 13.3333 9.33345 12.7367 9.33345 12C9.33345 11.2633 8.73679 10.6667 8.00012 10.6667ZM8.00012 2.66667C8.73679 2.66667 9.33345 2.07 9.33345 1.33333C9.33345 0.596667 8.73679 0 8.00012 0C7.26345 0 6.66679 0.596667 6.66679 1.33333C6.66679 2.07 7.26345 2.66667 8.00012 2.66667ZM13.6668 10.6667C12.9301 10.6667 12.3335 11.2633 12.3335 12C12.3335 12.7367 12.9301 13.3333 13.6668 13.3333C14.4035 13.3333 15.0001 12.7367 15.0001 12C15.0001 11.2633 14.4035 10.6667 13.6668 10.6667ZM2.33345 10C2.88612 10 3.33345 9.552 3.33345 9C3.33345 8.448 3.78212 8 4.33345 8H7.00012V9C7.00012 9.552 7.44745 10 8.00012 10C8.55279 10 9.00012 9.552 9.00012 9V8H11.6668C12.2181 8 12.6668 8.44867 12.6668 9C12.6668 9.55133 13.1141 10 13.6668 10C14.2195 10 14.6668 9.552 14.6668 9C14.6668 7.346 13.3208 6 11.6668 6H4.33345C2.67945 6 1.33345 7.346 1.33345 9C1.33345 9.552 1.78079 10 2.33345 10ZM15.9795 15.5433C15.6381 14.6447 14.7355 14 13.6668 14C12.5981 14 11.6955 14.644 11.3541 15.5433C11.2695 15.7653 11.4548 16 11.7041 16H15.6288C15.8788 16 16.0641 15.7653 15.9795 15.5433ZM2.33345 14C1.26479 14 0.362121 14.644 0.0207875 15.5433C-0.0638791 15.7653 0.121454 16 0.370787 16H4.29545C4.54545 16 4.73012 15.7653 4.64545 15.5433C4.30412 14.6447 3.40212 14 2.33345 14ZM8.00012 14C6.93145 14 6.02879 14.644 5.68745 15.5433C5.60279 15.7653 5.78812 16 6.03745 16H9.96212C10.2121 16 10.3968 15.7653 10.3121 15.5433C9.97079 14.6447 9.06812 14 7.99945 14H8.00012ZM6.03745 5.33333H9.96212C10.2121 5.33333 10.3968 5.09867 10.3121 4.87667C9.97079 3.978 9.06812 3.33333 7.99945 3.33333C6.93079 3.33333 6.02812 3.97733 5.68679 4.87667C5.60212 5.09867 5.78812 5.33333 6.03745 5.33333Z"
@@ -865,16 +775,17 @@ gap: 16px;">
                                         Attack & Defense Playbooks
                                     </div>
                                 </div>
+                            </div>
+                            <div class="d-flex flex-md-row flex-column gap-4 mt-3">
 
-                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded"
+                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded w-100"
                                     style="border-radius: 8px; background: linear-gradient(90deg, rgba(10, 0, 23,
                                         0.15) 0.24%, rgba(108, 10, 226, 0.15) 71.84%, rgba(39, 56, 237, 0.15) 119.53%); display: flex;
-width: 228px;
 padding: 16px;
 align-items: center;
 gap: 16px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        viewBox="0 0 16 16" fill="none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"
+                                        fill="none">
                                         <g clip-path="url(#clip0_27955_89353)">
                                             <path
                                                 d="M13.4544 2.78969C12.5607 2.69459 11.6811 2.49577 10.8333 2.19726C10.0554 1.92239 9.30913 1.56488 8.60742 1.13085C8.4243 1.01971 8.21421 0.960938 8 0.960938C7.78579 0.960938 7.57569 1.01971 7.39258 1.13085L7.39191 1.13152C6.69034 1.56519 5.94434 1.92248 5.16667 2.19726C4.31912 2.49571 3.43973 2.69453 2.54623 2.78971C2.25921 2.8191 1.99332 2.95396 1.80003 3.16816C1.60675 3.38237 1.49984 3.66068 1.5 3.94919V7.41273C1.50047 8.69064 1.84245 9.9452 2.49054 11.0466C3.13864 12.148 4.0693 13.0561 5.1862 13.6771L7.43294 14.9257C7.60597 15.023 7.80115 15.0742 7.99967 15.0742C8.1982 15.0742 8.39337 15.023 8.56641 14.9257L10.8138 13.6771C11.9307 13.0561 12.8614 12.148 13.5095 11.0466C14.1575 9.9452 14.4995 8.69064 14.5 7.41273V3.94919C14.5002 3.66077 14.3934 3.38254 14.2002 3.16834C14.0071 2.95414 13.7413 2.81922 13.4544 2.78969ZM10.653 6.79102L8.15299 9.45769C8.03428 9.58458 7.87067 9.66003 7.69709 9.66794C7.52351 9.67584 7.35371 9.61558 7.22396 9.50001L5.72396 8.16667C5.59187 8.04926 5.51183 7.88418 5.50145 7.70776C5.49108 7.53133 5.55121 7.35801 5.66862 7.22592C5.78603 7.09383 5.95111 7.01379 6.12754 7.00341C6.30396 6.99304 6.47728 7.05317 6.60937 7.17058L7.62435 8.07227L9.68035 5.87957C9.74274 5.8131 9.81807 5.7601 9.9017 5.72382C9.98533 5.68754 10.0755 5.66874 10.1667 5.66859C10.2966 5.66866 10.4237 5.70671 10.5324 5.77807C10.641 5.84943 10.7264 5.95098 10.7781 6.07023C10.8297 6.18949 10.8454 6.32124 10.8232 6.4493C10.801 6.57735 10.7418 6.69615 10.653 6.79102Z"
@@ -892,15 +803,14 @@ gap: 16px;">
                                     </div>
                                 </div>
 
-                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded"
+                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded w-100"
                                     style="border-radius: 8px; background: linear-gradient(90deg, rgba(10, 0, 23,
                                         0.15) 0.24%, rgba(108, 10, 226, 0.15) 71.84%, rgba(39, 56, 237, 0.15) 119.53%); display: flex;
-width: 228px;
 padding: 16px;
 align-items: center;
 gap: 16px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        viewBox="0 0 16 16" fill="none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"
+                                        fill="none">
                                         <path
                                             d="M6.82021 5.83372C8.44227 6.73083 10.6058 5.4575 10.5643 3.56184C10.5633 2.88269 10.2931 2.23162 9.81291 1.75138C9.33268 1.27114 8.68161 1.00093 8.00246 1C5.31332 1.03394 4.47616 4.5909 6.82021 5.83372Z"
                                             fill="white" />
@@ -923,15 +833,14 @@ gap: 16px;">
                                     </div>
                                 </div>
 
-                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded"
+                                <div class="takeaway-card rounded-8 p-3 d-flex align-items-center gap-3 rounded w-100"
                                     style="border-radius: 8px; background: linear-gradient(90deg, rgba(10, 0, 23,
                                         0.15) 0.24%, rgba(108, 10, 226, 0.15) 71.84%, rgba(39, 56, 237, 0.15) 119.53%); display: flex;
-width: 228px;
 padding: 16px;
 align-items: center;
 gap: 16px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        viewBox="0 0 16 16" fill="none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"
+                                        fill="none">
                                         <g clip-path="url(#clip0_27955_89366)">
                                             <path
                                                 d="M15.0452 10.4029C14.2222 9.57921 13.0802 9.23027 11.6135 9.62333L6.38359 4.38809L6.45272 4.12671C6.75394 2.99652 6.42847 1.78168 5.60359 0.956805C4.76372 0.116274 3.56972 -0.192132 2.4405 0.118055C2.27947 0.162274 2.15412 0.288805 2.11147 0.450274C2.06881 0.611743 2.11559 0.783368 2.23362 0.901461L3.4929 2.16074C3.86106 2.5298 3.85747 3.12087 3.49381 3.48549C3.13303 3.84724 2.52659 3.84668 2.16725 3.4864L0.907717 2.22677C0.789623 2.10862 0.617498 2.06227 0.456029 2.10518C0.294529 2.14805 0.168467 2.27371 0.124404 2.4349C-0.181252 3.55171 0.119435 4.75312 0.963342 5.59702C1.78603 6.4203 2.92662 6.77049 4.39415 6.37659L9.6245 11.6118C9.23418 13.0781 9.57087 14.209 10.405 15.0431C11.2459 15.8847 12.4405 16.1908 13.5672 15.8816C13.7283 15.8375 13.8537 15.7109 13.8963 15.5494C13.939 15.388 13.8923 15.2163 13.7742 15.0982L12.5152 13.8392C12.147 13.4701 12.1506 12.879 12.5143 12.5144C12.8796 12.151 13.4847 12.1568 13.8408 12.514L15.1005 13.7732C15.2186 13.8913 15.3907 13.9377 15.5521 13.8948C15.7136 13.8519 15.8397 13.7263 15.8837 13.5651C16.1894 12.4485 15.8887 11.2468 15.0452 10.4029Z"
@@ -982,112 +891,79 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                                     masterclass.</p>
                             </div>
                             <div>
-                                <a href="#" class="button modal-btn" modal-title="Register Now"
-                                    style="background: var(--BG-DARK, #080808); color:white;">Register Now</a>
+                                <?php if ($country == 'IN') { ?>
+                                    <a href="https://pages.razorpay.com/infosectrain-llm-masterclass" class="button"
+                                        style="background: var(--BG-DARK, #080808); color:white;">Pay Now</a>
+                                <?php } else { ?>
+                                    <a href="https://pages.razorpay.com/ist-llm-masterclass" class="button"
+                                        style="background: var(--BG-DARK, #080808); color:white;">Pay Now</a>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4">
-                        <div style="position: sticky; top: 100px;">
-                            <div class="d-flex flex-column gap-3 rounded-4"
-                                style="overflow: hidden;background: linear-gradient(19deg, rgba(255, 185, 86, 0.15) 25.67%, rgba(90, 9, 229, 0.15) 74.33%);">
-                                <div class="fs-28 text-center  p-3">
-                                    <span class="fs-18 text-white f-general-sans">Interested in Joining the</span>
-                                    <div class="fs-28 fw-400 f-Gloock" style="background: linear-gradient(92deg, #FFB956 3.38%, #5A09E5 98.81%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;font-family: 'Gloock';">
-                                        Masterclass?
-                                    </div>
+                        <div class="price-card f-general-sans" aria-label="Masterclass purchase"
+                            style="position: sticky; top: 100px;">
+                            <div class="price-title">
+                                <h3>Interested in Joining the</h3>
+                                <div class="em">Masterclass?</div>
+                            </div>
+
+                            <!-- countdown -->
+                            <div class="timer" aria-live="polite">
+                                <div class="tbox">
+                                    <div class="num" id="d"></div>
+                                    <div class="lbl">Days</div>
                                 </div>
-                                <div class="d-flex justify-content-center gap-3 px-3 timers">
-                                    <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-white rounded"
-                                        id="timer1" style="background: rgba(255, 185, 86, 0.20);">
-                                        <strong style="color: var(--white);"></strong>
-                                        <span style="color: var(--white);">Days</span>
-                                    </div>
-                                    <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-dark rounded"
-                                        id="timer2" style="background: rgba(255, 185, 86, 0.20);">
-                                        <strong style="color: var(--white);"></strong>
-                                        <span style="color: var(--white);">Hours</span>
-                                    </div>
-                                    <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-dark rounded"
-                                        id="timer3" style="background: rgba(255, 185, 86, 0.20);">
-                                        <strong style="color: var(--white);"></strong>
-                                        <span style="color: var(--white);">Minutes</span>
-                                    </div>
-                                    <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-dark rounded"
-                                        id="timer4" style="background: rgba(255, 185, 86, 0.20);">
-                                        <strong style="color: var(--white);"></strong>
-                                        <span style="color: var(--white);">Seconds</span>
-                                    </div>
+                                <div class="tbox">
+                                    <div class="num" id="h"></div>
+                                    <div class="lbl">Hours</div>
                                 </div>
-                                <div class="fs-16 f-general-sans fw-600 px-3 text-white text-center">Please Fill the
-                                    Form</div>
-                                <div class="d-flex flex-column gap-3 px-3">
-                                    <form method="post" class="ajax-form d-flex flex-column gap-3">
-                                        <div>
-                                            <input type="text" name="me_name" class="me_name form-control"
-                                                placeholder="Full Name">
-                                            <div class="error-message name_error"></div>
-                                        </div>
-
-                                        <div>
-                                            <input type="email" name="me_email" class="me_email form-control"
-                                                placeholder="Email">
-                                            <div class="error-message email_error"></div>
-                                        </div>
-
-                                        <input type="text" name="me_phone" class="me_phone form-control"
-                                            placeholder="Mobile">
-
-                                        <input type="text" name="me_message" class="me_message form-control"
-                                            placeholder="Mention your call time preference">
-
-
-                                        <input type="hidden" name="me_pageurl" value="<?php echo $pag_url; ?>">
-                                        <input type="hidden" id="me_others" name="me_others" value="">
-                                        <input type="hidden" name="me_submited" value="1">
-                                        <button type="submit" class="form-control-btn">SUBMIT</button>
-
-                                        <div class="loader text-center" style="display:none;">
-                                            <img src="assets/images/loader.gif" alt="Loading..." loading="lazy">
-                                        </div>
-                                    </form>
-                                    <div class="fs-12 f-general-sans text-white">
-                                        Our advisor will contact you with event details, payment options, and
-                                        exclusive offers!
-                                    </div>
-                                    <div class="d-flex gap-3 align-items-center pb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17"
-                                            viewBox="0 0 16 17" fill="none">
-                                            <g clip-path="url(#clip0_27955_89440)">
-                                                <path
-                                                    d="M10.692 12.5676C11.9187 13.2289 12.882 14.3209 13.3007 15.6689C13.3317 15.7687 13.3388 15.8744 13.3215 15.9775C13.3042 16.0805 13.2629 16.1781 13.2009 16.2622C13.1389 16.3464 13.0581 16.4148 12.9648 16.4619C12.8715 16.5091 12.7685 16.5336 12.664 16.5336H3.33132C3.22672 16.5339 3.12352 16.5095 3.0301 16.4625C2.93668 16.4154 2.85568 16.347 2.79366 16.2628C2.73164 16.1785 2.69035 16.0809 2.67315 15.9777C2.65594 15.8745 2.66331 15.7687 2.69465 15.6689C3.11465 14.3183 4.08065 13.2249 5.31065 12.5636C5.46321 12.4806 5.63978 12.4528 5.81048 12.485C5.98117 12.5172 6.13549 12.6074 6.24732 12.7403L7.54665 14.2989C7.60233 14.3658 7.67205 14.4196 7.75085 14.4566C7.82966 14.4935 7.91562 14.5127 8.00265 14.5127C8.08968 14.5127 8.17565 14.4935 8.25445 14.4566C8.33325 14.4196 8.40297 14.3658 8.45865 14.2989L9.75465 12.7436C9.8666 12.6106 10.0211 12.5205 10.1919 12.4884C10.3628 12.4563 10.5394 12.4843 10.692 12.5676ZM13.7733 2.26694L9.46398 0.746271C8.53595 0.419287 7.52426 0.417877 6.59532 0.742271L2.23332 2.26894C1.96984 2.35851 1.7413 2.52888 1.5802 2.7558C1.41911 2.98272 1.33365 3.25466 1.33598 3.53294C1.33598 4.11094 1.68865 4.60694 2.23398 4.79694L6.57198 6.31027C7.49488 6.63119 8.49909 6.63119 9.42198 6.31027L13.3313 4.94694V7.86627C13.3313 8.04308 13.4016 8.21265 13.5266 8.33768C13.6516 8.4627 13.8212 8.53294 13.998 8.53294C14.1748 8.53294 14.3444 8.4627 14.4694 8.33768C14.5944 8.21265 14.6647 8.04308 14.6647 7.86627L14.6673 3.5316C14.6699 3.25366 14.585 2.98193 14.4247 2.75485C14.2644 2.52778 14.0368 2.35686 13.774 2.26627L13.7733 2.26694ZM11.9973 6.82427L9.86065 7.56961C8.65314 7.98762 7.34016 7.98762 6.13265 7.56961L3.99732 6.82427V7.19961C3.99732 9.40561 5.79132 11.1996 7.99732 11.1996C10.2033 11.1996 11.9973 9.40561 11.9973 7.19961V6.82361V6.82427Z"
-                                                    fill="#FFB956" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_27955_89440">
-                                                    <rect width="16" height="16" fill="white"
-                                                        transform="translate(0 0.5)" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                        <div class="text-white fs-14 f-general-sans fw-400">
-                                            <strong>62</strong> People have registered
-                                        </div>
-                                    </div>
+                                <div class="tbox">
+                                    <div class="num" id="m"></div>
+                                    <div class="lbl">Minutes</div>
+                                </div>
+                                <div class="tbox">
+                                    <div class="num" id="s"></div>
+                                    <div class="lbl">Seconds</div>
                                 </div>
                             </div>
 
+                            <!-- pricing -->
+                            <div class="pricing">
+                                <?php if ($country == 'IN') { ?>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <span class="strike" id="strikePrice">₹3,999</span>
+                                        <span class="now" id="currentPrice">₹999</span>
+                                        <span class="tag" id="offerTag">Early Bird Offer</span>
+                                    </div>
+                                <?php } else { ?>
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <span class="strike" id="strikePrice">$199</span>
+                                        <span class="now" id="currentPrice">$75</span>
+                                        <span class="tag" id="offerTag">Early Bird Offer</span>
+                                    </div>
+                                <?php } ?>
 
-                            <!-- <div>
-                                    <img src="assets/images/prices/group-discount.png" class="img-fluid d-block mt-4"
-                                        alt="">
-                                </div> -->
+                                <div class="deadline" id="deadlineText"></div>
+
+                                <!-- Pay button -->
+                                <?php if ($country == 'IN') { ?>
+                                    <a class="cta" id="payBtn"
+                                        href="https://pages.razorpay.com/infosectrain-llm-masterclass">
+                                        <span>Pay Now & Secure Seat</span>
+                                    </a>
+                                <?php } else { ?>
+                                    <a class="cta" id="payBtn" href="https://pages.razorpay.com/ist-llm-masterclass">
+                                        <span>Pay Now & Secure Seat</span>
+                                    </a>
+                                <?php } ?>
+                            </div>
+
+                            <div class="foot"><span class="dot"></span><span id="regCount">9 people have
+                                    registered</span></div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1309,9 +1185,9 @@ background-clip: text;
     </script>
     <!--/ js link start /-->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Your jQuery code here
-            $('.faq-wrapper .faq-title').on('click', function(e) {
+            $('.faq-wrapper .faq-title').on('click', function (e) {
                 var element = $(this).parent('.faq-item');
                 if (element.hasClass('open')) {
                     element.removeClass('open');
@@ -1395,17 +1271,17 @@ background-clip: text;
         });
 
         /*-------- form validation and ajax script --------*/
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
 
             // Function to load Zopim chat widget after a delay
             function loadZopim() {
-                window.$zopim || (function(d, s) {
-                    var z = $zopim = function(c) {
-                            z._.push(c)
-                        },
+                window.$zopim || (function (d, s) {
+                    var z = $zopim = function (c) {
+                        z._.push(c)
+                    },
                         $ = z.s = d.createElement(s),
                         e = d.getElementsByTagName(s)[0];
-                    z.set = function(o) {
+                    z.set = function (o) {
                         z.set._.push(o)
                     };
                     z._ = [];
@@ -1490,7 +1366,7 @@ background-clip: text;
                 const xhr = new XMLHttpRequest();
                 xhr.open('POST', 'send-ajax.php', true);
 
-                xhr.onload = function() {
+                xhr.onload = function () {
                     if (xhr.status === 200) {
                         // Redirect to the thank-you page or any other page
                         window.location.href = "thank-you.php";
@@ -1502,7 +1378,7 @@ background-clip: text;
                     }
                 };
 
-                xhr.onerror = function() {
+                xhr.onerror = function () {
                     loader.style.display = 'none'; // Hide the loader in case of an error
                     alert("An error occurred. Please try again.");
                 };
@@ -1518,428 +1394,110 @@ background-clip: text;
         });
         /*-------- form valudation and ajax script end --------*/
 
+        function updateUI() {
+            const now = new Date();
 
-        // Countdown function to show only specific time units in each div
-        function startCountdown() {
-            const targetDate = new Date("September 26, 2025 09:00:00").getTime(); // Target date
+            // format today's date as "01 Oct", "15 Oct", etc.
+            const todayDayMon = now.toLocaleDateString("en-US", {
+                day: "2-digit",
+                month: "short",
+            });
 
-            // Update the countdown every second
-            const interval = setInterval(function() {
-                const currentDate = new Date().getTime(); // Current date and time
-                const timeRemaining = targetDate - currentDate; // Time remaining in milliseconds
+            // get short timezone abbreviation (IST, EST, PST, GMT, etc.)
+            const tz = new Intl.DateTimeFormat("en-US", {
+                timeZoneName: "short"
+            }).formatToParts(now).find(p => p.type === "timeZoneName").value;
 
-                // Calculate days, hours, minutes, and seconds
-                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-                // Update each timer separately
-                document.getElementById("timer1").querySelector("strong").textContent = days;
-                document.getElementById("timer2").querySelector("strong").textContent = hours;
-                document.getElementById("timer3").querySelector("strong").textContent = minutes;
-                document.getElementById("timer4").querySelector("strong").textContent = seconds;
-
-                // If the countdown reaches zero, stop the timer and display "Time's up!"
-                if (timeRemaining <= 0) {
-                    clearInterval(interval);
-                    document.getElementById("timer1").querySelector("strong").textContent = "0";
-                    document.getElementById("timer2").querySelector("strong").textContent = "0";
-                    document.getElementById("timer3").querySelector("strong").textContent = "0";
-                    document.getElementById("timer4").querySelector("strong").textContent = "0";
-                }
-            }, 1000); // Update every second
+            // Set the deadline text with today's date + local timezone
+            document.getElementById("deadlineText").textContent =
+                `Offer price valid till ${todayDayMon}, 11:59 PM ${tz}`;
         }
 
-        // Call the function to start the countdown
-        startCountdown();
-    </script>
+        updateUI();
 
 
 
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": "AI Summit 2025",
-            "description": "Master Tools, Build Trust & Lead the AI Revolution. A comprehensive 2-day summit featuring hands-on exposure to 15+ breakthrough AI tools, practical strategies for AI implementation, and insights from global experts on AI governance, security, and privacy.",
-            "url": "https://www.infosectrain.com/pages/lp/ai-summit/",
-            "image": "https://www.infosectrain.com/assets/images/logo.png",
-            "startDate": "2025-TBD",
-            "endDate": "2025-TBD",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-            "location": {
-                "@type": "VirtualLocation",
-                "url": "https://www.infosectrain.com/pages/lp/ai-summit/"
-            },
+        // ===== Helper: build a roller column with digits 0..9 =====
+        function createRollerColumn() {
+            const col = document.createElement('div');
+            col.className = 'roller';
+            const track = document.createElement('div');
+            track.className = 'roller-track';
+            for (let i = 0; i <= 9; i++) {
+                const d = document.createElement('div');
+                d.className = 'roller-digit';
+                d.textContent = i;
+                track.appendChild(d);
+            }
+            col.appendChild(track);
+            return col;
+        }
 
-            "potentialAction": {
-                "@type": "RegisterAction",
-                "target": {
-                    "@type": "EntryPoint",
-                    "urlTemplate": "https://www.infosectrain.com/pages/lp/ai-summit/",
-                    "actionPlatform": [
-                        "http://schema.org/DesktopWebPlatform",
-                        "http://schema.org/MobileWebPlatform"
-                    ]
-                },
-                "result": {
-                    "@type": "Order",
-                    "name": "AI Summit 2025 Registration"
-                }
+        // ===== Turn a .num container into N rolling digits =====
+        function ensureDigits(container, count) {
+            const want = count;
+            const have = container.querySelectorAll('.roller').length;
+            for (let i = have; i < want; i++) container.appendChild(createRollerColumn());
+            // remove extra (unlikely)
+            if (have > want) {
+                [...container.querySelectorAll('.roller')].slice(want).forEach(n => n.remove());
             }
         }
-    </script>
-    <!-- Additional FAQ Schema for Common Questions -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [{
-                    "@type": "Question",
-                    "name": "What AI tools will be covered in the AI Summit 2025?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "The summit covers 15+ breakthrough AI tools including ChatGPT, NotebookLM, Gamma, Perplexity, Gemini, Meta, Mistral, Deepseek, Sora, Llama Coder, Deep Learning LMS, Napkin AI, Consensus and more with hands-on practical demonstrations."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Who should attend the AI Summit 2025?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "This summit is designed for business leaders, IT professionals, CISOs, data scientists, AI practitioners, privacy officers, and forward-thinking professionals who want to master AI implementation and governance in their organizations."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What topics are covered in the AI Summit curriculum?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "The 2-day summit covers AI/ML fundamentals, AI productivity tools, cloud AI security, AI governance frameworks, AI auditing with ISO 42001, AI security for CISOs, privacy-by-design in GenAI with GDPR/HIPAA compliance, and AI in cybersecurity."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "What compliance frameworks are covered?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "The summit covers key compliance frameworks including DPDP Act, GDPR, HIPAA, ISO 42001 for AI auditing, and various AI governance and security frameworks relevant for enterprise implementation."
-                    }
-                },
-                {
-                    "@type": "Question",
-                    "name": "Who are the expert speakers at AI Summit 2025?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "The summit features 8 global experts: Dr. Ram (AI Security), Prabh Nair (AI Governance), Krish (Cloud AI Security), Kiran (AI/ML), Jai (AI Privacy), Shakti (AI Auditing), Anas (AI Productivity), and Avinish (AI Cybersecurity)."
-                    }
-                }
-            ]
-        }
-    </script>
-    <!-- Organization Schema for InfosecTrain -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "InfosecTrain",
-            "url": "https://www.infosectrain.com",
-            "logo": "https://www.infosectrain.com/assets/images/logo.png",
-            "description": "Leading provider of information security and AI training programs",
-            "sameAs": [
-                "https://www.linkedin.com/company/infosectrain",
-                "https://twitter.com/infosectrain",
-                "https://www.facebook.com/infosectrain"
-            ],
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Customer Service",
-                "url": "https://www.infosectrain.com/contact"
-            },
 
-            "offers": {
-                "@type": "Offer",
-                "category": "AI Training and Education",
-                "itemOffered": {
-                    "@type": "EducationalEvent",
-                    "name": "AI Summit 2025"
-                }
-            }
+        // ===== Scroll a digit column to a specific numeral (0-9) =====
+        function scrollToDigit(roller, digit) {
+            const track = roller.querySelector('.roller-track');
+            const cellHeight = roller.clientHeight || 38; // fallback to CSS height
+            const clamped = Math.max(0, Math.min(9, Number(digit)));
+            track.style.transform = `translateY(${-clamped * cellHeight}px)`;
         }
-    </script>
-    <!-- BreadcrumbList Schema -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://www.infosectrain.com"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Training Programs",
-                    "item": "https://www.infosectrain.com/training"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "AI Summit 2025",
-                    "item": "https://www.infosectrain.com/pages/lp/ai-summit/"
-                }
-            ]
-        },
-        "organizer": {
-            "@type": "Organization",
-            "name": "InfosecTrain",
-            "url": "https://www.infosectrain.com"
-        },
-        "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "price": "TBD",
-            "priceCurrency": "USD",
-            "url": "https://www.infosectrain.com/pages/lp/ai-summit/",
-            "validFrom": "2025-01-01"
-        },
-        "audience": {
-            "@type": "Audience",
-            "audienceType": ["Business Leaders", "IT Professionals", "CISOs", "Data Scientists", "AI Practitioners",
-                "Privacy Officers"
-            ]
-        },
-        "educationalLevel": "Intermediate to Advanced",
-        "about": [{
-                "@type": "Thing",
-                "name": "Artificial Intelligence"
-            },
-            {
-                "@type": "Thing",
-                "name": "Machine Learning"
-            },
-            {
-                "@type": "Thing",
-                "name": "AI Governance"
-            },
-            {
-                "@type": "Thing",
-                "name": "AI Security"
-            },
-            {
-                "@type": "Thing",
-                "name": "AI Privacy"
-            },
-            {
-                "@type": "Thing",
-                "name": "Cloud AI"
-            },
-            {
-                "@type": "Thing",
-                "name": "AI Auditing"
-            }
-        ],
-        "teaches": [
-            "Hands-on experience with 15+ AI tools including ChatGPT, NotebookLM, Gamma, Perplexity, Gemini",
-            "AI/ML core concepts and practical applications",
-            "AI productivity tools for business leaders",
-            "Cloud AI security and deployment methodologies",
-            "AI governance frameworks and compliance",
-            "AI auditing with ISO 42001 standards",
-            "AI security frameworks for CISOs",
-            "Privacy-by-design in GenAI with DPDP, GDPR, HIPAA compliance",
-            "AI in cybersecurity - offensive vs defensive strategies"
-        ],
-        "performer": [{
-                "@type": "Person",
-                "name": "Dr. Ram",
-                "jobTitle": "AI Security Expert",
-                "description": "Expert in AI Security Frameworks for CISOs"
-            },
-            {
-                "@type": "Person",
-                "name": "Prabh Nair",
-                "jobTitle": "AI Governance Specialist",
-                "description": "Expert in AI Governance and Trust Building"
-            },
-            {
-                "@type": "Person",
-                "name": "Krish",
-                "jobTitle": "Cloud AI Security Expert",
-                "description": "Specialist in securing AI applications in the Cloud"
-            },
-            {
-                "@type": "Person",
-                "name": "Kiran",
-                "jobTitle": "AI/ML Expert",
-                "description": "Expert in AI/ML fundamentals and practical applications"
-            },
-            {
-                "@type": "Person",
-                "name": "Jai",
-                "jobTitle": "AI Privacy Specialist",
-                "description": "Expert in Privacy-by-Design in GenAI and regulatory compliance"
-            },
-            {
-                "@type": "Person",
-                "name": "Shakti",
-                "jobTitle": "AI Auditing Expert",
-                "description": "Specialist in AI auditing with digital trust and ISO 42001"
-            },
-            {
-                "@type": "Person",
-                "name": "Anas",
-                "jobTitle": "AI Productivity Expert",
-                "description": "Expert in AI productivity tools and practical implementation"
-            },
-            {
-                "@type": "Person",
-                "name": "Avinish",
-                "jobTitle": "AI Cybersecurity Expert",
-                "description": "Expert in AI's role in cybersecurity - offense vs defense"
-            }
-        ],
-        "workExample": [{
-                "@type": "LearningResource",
-                "name": "Day 1 - Session 1: Introduction to AI/ML",
-                "description": "Demystifying AI/ML core concepts, real-world applications, and future trends",
-                "timeRequired": "PT2H",
-                "instructor": "Kiran"
-            },
-            {
-                "@type": "LearningResource",
-                "name": "Day 1 - Session 2: AI Productivity Tools",
-                "description": "Hands-on showcase of 15+ AI tools including ChatGPT, NotebookLM, Gamma, and more",
-                "timeRequired": "PT1H",
-                "instructor": "Anas"
-            },
-            {
-                "@type": "LearningResource",
-                "name": "Day 1 - Session 3: Cloud & AI Security",
-                "description": "Securing AI applications in the cloud with best practices and frameworks",
-                "timeRequired": "PT2H",
-                "instructor": "Krish"
-            },
-            {
-                "@type": "LearningResource",
-                "name": "Day 1 - Session 4: AI Governance",
-                "description": "Building trust and control with AI governance frameworks",
-                "timeRequired": "PT2H",
-                "instructor": "Prabh Nair"
-            },
-            {
-                "@type": "LearningResource",
-                "name": "Day 2 - Session 1: AI Auditing with ISO 42001",
-                "description": "Auditing AI systems with digital trust and compliance standards",
-                "timeRequired": "PT2H",
-                "instructor": "Shakti"
-            },
-            {
-                "@type": "LearningResource",
-                "name": "Day 2 - Session 2: AI Security Frameworks for CISOs",
-                "description": "Designing and implementing secure AI frameworks for enterprise",
-                "timeRequired": "PT1H",
-                "instructor": "Dr. Ram"
-            },
-            {
-                "@type": "LearningResource",
-                "name": "Day 2 - Session 3: AI Privacy Compliance",
-                "description": "Privacy-by-design in GenAI with DPDP Act, GDPR, and HIPAA compliance",
-                "timeRequired": "PT2H",
-                "instructor": "Jai"
-            },
-            {
-                "@type": "LearningResource",
-                "name": "Day 2 - Session 4: AI in Cybersecurity",
-                "description": "AI's cyber battleground - offensive vs defensive strategies",
-                "timeRequired": "PT2H",
-                "instructor": "Avinish"
-            }
-        ],
-        "learningResourceType": "Course",
-        "educationalCredentialAwarded": "Certificate of Completion",
-        "competencyRequired": "Basic understanding of technology and business operations",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "150",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "review": [{
-            "@type": "Review",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-            },
-            "author": {
-                "@type": "Person",
-                "name": "Sample Reviewer"
-            },
-            "reviewBody": "Excellent comprehensive coverage of AI tools and governance frameworks"
-        }],
-        "keywords":
-        "AI Summit, AI training, Machine Learning, AI governance, AI security, AI privacy, AI tools, ChatGPT training, AI compliance, GDPR AI, ISO 42001, AI auditing, cloud AI security",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://www.infosectrain.com/pages/lp/ai-summit/"
-        },
-        "provider": {
-            "@type": "Organization",
-            "name": "InfosecTrain",
-            "url": "https://www.infosectrain.com",
-            "logo": "https://www.infosectrain.com/assets/images/logo.png",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Customer Service",
-                "url": "https://www.infosectrain.com/contact"
-            }
-        },
-        "inLanguage": "en-US",
-        "isAccessibleForFree": false,
-        "hasCourseInstance": {
-            "@type": "CourseInstance",
-            "courseMode": "Online",
-            "instructor": [{
-                    "@type": "Person",
-                    "name": "Dr. Ram"
-                },
-                {
-                    "@type": "Person",
-                    "name": "Prabh Nair"
-                },
-                {
-                    "@type": "Person",
-                    "name": "Krish"
-                },
-                {
-                    "@type": "Person",
-                    "name": "Kiran"
-                },
-                {
-                    "@type": "Person",
-                    "name": "Jai"
-                },
-                {
-                    "@type": "Person",
-                    "name": "Shakti"
-                },
-                {
-                    "@type": "Person",
-                    "name": "Anas"
-                },
-                {
-                    "@type": "Person",
-                    "name": "Avinish"
-                }
-            ]
+
+        // ===== Set the entire number (multi-digit) into a .num as rolling digits =====
+        function setRollingNumber(numEl, value, minLen = 2) {
+            const str = String(value).padStart(minLen, '0');
+            ensureDigits(numEl, str.length);
+            const rollers = numEl.querySelectorAll('.roller');
+            // If digits length changed, rebuild order (left->right)
+            // update each column
+            str.split('').forEach((ch, idx) => {
+                scrollToDigit(rollers[idx], ch);
+            });
         }
+
+        // ===== Example countdown hook-up =====
+        // target date/time (set yours)
+        const eventDate = new Date("2025-11-01T10:00:00"); // local TZ; change if needed
+
+        function tickCountdown() {
+            const now = new Date();
+            let diff = Math.max(0, eventDate - now);
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            diff -= d * (1000 * 60 * 60 * 24);
+            const h = Math.floor(diff / (1000 * 60 * 60));
+            diff -= h * (1000 * 60 * 60);
+            const m = Math.floor(diff / (1000 * 60));
+            diff -= m * (1000 * 60);
+            const s = Math.floor(diff / 1000);
+
+            setRollingNumber(document.getElementById('d'), d, d > 99 ? 3 : 2); // auto 3 digits if needed
+            setRollingNumber(document.getElementById('h'), h, 2);
+            setRollingNumber(document.getElementById('m'), m, 2);
+            setRollingNumber(document.getElementById('s'), s, 2);
         }
+
+        // ===== Initialize rollers once (so they exist before first tick) =====
+        ['d', 'h', 'm', 's'].forEach(id => {
+            const el = document.getElementById(id);
+            // start with 2 digits, except days could be 3 later; we can start with 2
+            ensureDigits(el, id === 'd' ? 2 : 2);
+            // initialize to 00
+            setRollingNumber(el, 0, 2);
+        });
+
+        // Start ticking
+        tickCountdown();
+        setInterval(tickCountdown, 1000);
     </script>
 </body>
 

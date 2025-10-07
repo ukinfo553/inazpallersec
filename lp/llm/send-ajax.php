@@ -110,7 +110,7 @@ if (isset($_POST['me_submited'])) {
 
 
 
-    $email_subject = "New Enquiry from LLM Masterclass Page";
+    $email_subject = "New Enquiry from LLM Security & Red Teaming Masterclass Page";
 
     $user_subject = "Ready to attend the LLM Masterclass  Stay Tuned!";
 
@@ -221,94 +221,243 @@ if (isset($_POST['me_submited'])) {
 
     include("email-include.php");
     $user_body = '
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" align="center">
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" align="center" style="margin:0; padding:0; background:#F3F5F7;">
+  <tr>
+    <td align="center" style="padding:28px 12px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="700" style="width:700px; max-width:700px; background:#ffffff; border:1px solid #E6E8EB;">
         <tr>
-            <td style="padding: 20px 0 30px 0;" align="center">
-                <table align="center" border="0" cellpadding="0" cellspacing="0" width="700px" style="background: #f8f8f8;">
-
-                    ' . $email_header . '
-
-                    <tr>
-                        <td style="color: #414547; padding-left: 24px;padding-top:15px;font-family: Arial, Helvetica, sans-serif;font-size: 18px;">
-                            <strong>📢 Next Steps</strong>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">
-							<ul>
-                                <li>Stay tuned for further communication from us in your inbox.</li>
-                                <li>Save the date & mark your calendar!</li>
-                                <li>Get set for the BIG day!</li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">
-							<p>We look forward to seeing you there!</p>
-                        </td>
-                    </tr>
-
-					<tr>
-						<td style="color: #414547; padding-left: 24px;padding-top:10px;font-family: Arial, Helvetica, sans-serif;font-size: 18px;">
-							<strong>Best Regards,</strong>
-						</td>
-					</tr>
-					<tr>
-						<td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">
-							<p>Team InfosecTrain </p>
-						</td>
-					</tr>
-                    ' . $email_footer . '
-                </table>
-            </td>
+          <td height="6" style="background:#FF1046; line-height:6px; font-size:0;">&nbsp;</td>
         </tr>
+
+        <!-- Header -->
+        <tr>
+          <td style="padding:24px;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left" style="vertical-align:middle;">
+                  <img src="https://www.infosectrain.com/wp-content/uploads/mail_images/Intersection12x.png" alt="InfosecTrain" height="40" style="display:block; border:0; height:40px;">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Title + Meta -->
+        <tr>
+          <td style="padding:0 24px;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="padding:0 0 8px 0; font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:24px; line-height:1.3; color:#111827;">
+                  LLM Security & Red Teaming Masterclass
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:0 0 12px 0; font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:1.6; color:#374151;">
+                  <img src="https://www.infosectrain.com/wp-content/uploads/mail_images/eventmail_cal.png" alt="" style="vertical-align:middle; border:0;">&nbsp;01-02 November 2025
+                  &nbsp;&nbsp;
+                  <img src="https://www.infosectrain.com/wp-content/uploads/mail_images/eventmail_clock.png" alt="" style="vertical-align:middle; border:0;">&nbsp;7:00 PM - 11:00 PM (IST)
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Speakers (2 profiles) -->
+        <tr>
+          <td style="padding:0 24px 16px 24px;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <!-- Speaker 1 -->
+                <td width="50%" valign="top" style="padding:12px; text-align:center;">
+                  <img src="https://www.infosectrain.com/wp-content/uploads/2025/10/ASHISH.png" alt="Speaker 1" width="80" height="80" style="display:block; margin:0 auto; border-radius:50%; border:0; width:80px; height:80px;">
+                  <div style="font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:13px; color:#FF1046; letter-spacing:.08em; text-transform:uppercase; padding-top:8px;">Speaker</div>
+                  <div style="font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:16px; color:#111827; padding-top:6px;">Ashish Dhyani</div>
+<div style="font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:10px; color:#FF1046; letter-spacing:.08em; text-transform:uppercase; padding-top:8px;">10+ Years of Experience</div>
+                  <div style="font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:1.6; color:#4B5563; padding-top:4px;">Network+ | Security+| Pentest+ | CEH | CND | ECSA | CCNA | ECDE | CPENT | LPT | OSCP</div>
+                </td>
+
+                <!-- Speaker 2 -->
+                <td width="50%" valign="top" style="padding:12px; text-align:center;">
+                  <img src="https://www.infosectrain.com/wp-content/uploads/2025/10/AVNISH.png" alt="Speaker 2" width="80" height="80" style="display:block; margin:0 auto; border-radius:50%; border:0; width:80px; height:80px;">
+                  <div style="font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:13px; color:#FF1046; letter-spacing:.08em; text-transform:uppercase; padding-top:8px;">Speaker</div>
+                  <div style="font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:16px; color:#111827; padding-top:6px;">Avnish</div>
+                  <div style="font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:10px; color:#FF1046; letter-spacing:.08em; text-transform:uppercase; padding-top:8px;">7+ Years of Experience</div>
+                  <div style="font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:1.6; color:#4B5563; padding-top:4px;">Information Security | Cloud Security | AI Security | Data Security | Consultant & Trainer</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- CTA -->
+        <tr>
+          <td align="center" style="padding:0 24px 12px 24px;">
+            <!--[if mso]>
+            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" arcsize="8%" stroke="f" fillcolor="#FF1046" style="height:42px; v-text-anchor:middle; width:200px;">
+              <w:anchorlock/>
+              <center style="color:#FFFFFF; font-family:Arial, sans-serif; font-size:15px; font-weight:bold;">Join Webinar</center>
+            </v:roundrect>
+            <![endif]-->
+            <!--[if !mso]><!-- -->
+            <a href="https://zoom.us/j/96052713847?pwd=2l1ZagMR1ajADtG8PVa3C3PkGRiJXD.1" target="_blank"
+               style="display:inline-block; background:#FF1046; color:#FFFFFF; font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:15px; padding:12px 20px; border-radius:6px;">
+              Join Webinar
+            </a>
+            <!--<![endif]-->
+          </td>
+        </tr>
+
+        <!-- Webinar Link + Password -->
+        <tr>
+          <td style="padding:0 24px 24px 24px;">
+            <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="background:#F3F4F6; border-radius:6px;">
+              <tr>
+                <td style="padding:12px 14px; font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:1.6; color:#111827;">
+                  <strong>Link:</strong> <a href="https://zoom.us/j/96052713847?pwd=2l1ZagMR1ajADtG8PVa3C3PkGRiJXD.1" target="_blank" style="color:#FF1046; text-decoration:underline;">https://zoom.us/j/96052713847?pwd=2l1ZagMR1ajADtG8PVa3C3PkGRiJXD.1</a><br>
+                  <strong>Password:</strong> 572461
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Add to Calendar -->
+        <tr>
+  <td style="padding:12px 24px;">
+    <div style="font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:13px; color:#6B7280; letter-spacing:.06em;">
+      ADD THE EVENT TO YOUR CALENDAR
+    </div>
+  </td>
+</tr>
+<tr>
+  <td style="padding:0 24px 8px 24px;">
+    <!-- Buttons row -->
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="padding:6px 8px 0 0;">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=LLM%20Security%20%26%20Red%20Teaming%20Masterclass&details=Webinar%20link%3A%20https%3A%2F%2Fzoom.us%2Fj%2F96052713847%3Fpwd%3D2l1ZagMR1ajADtG8PVa3C3PkGRiJXD.1%0AWebinar%20Password%3A%20572461%0AEvent%20page%3A%20https%3A%2F%2Fwww.infosectrain.com%2Fpages%2Flp%2Fllm-masterclass%2F&location=Online&dates=20251101T133000Z%2F20251101T173000Z"
+             target="_blank"
+             style="display:inline-block; background:#EBEBEB; color:#232020; font-family:Arial, Helvetica, sans-serif; font-size:14px; padding:8px 16px; border-radius:6px;">
+            Google
+          </a>
+        </td>
+        <td style="padding:6px 8px 0 0;">
+          <a href="https://outlook.live.com/calendar/0/deeplink/compose?rru=addevent&subject=LLM%20Security%20%26%20Red%20Teaming%20Masterclass&body=Webinar%20link%3A%20https%3A%2F%2Fzoom.us%2Fj%2F96052713847%3Fpwd%3D2l1ZagMR1ajADtG8PVa3C3PkGRiJXD.1%0AWebinar%20Password%3A%20572461%0AEvent%20page%3A%20https%3A%2F%2Fwww.infosectrain.com%2Fpages%2Flp%2Fllm-masterclass%2F&location=Online&startdt=2025-11-01T19%3A00%3A00&enddt=2025-11-01T23%3A00%3A00"
+             target="_blank"
+             style="display:inline-block; background:#EBEBEB; color:#232020; font-family:Arial, Helvetica, sans-serif; font-size:14px; padding:8px 16px; border-radius:6px;">
+            Outlook.com
+          </a>
+        </td>
+        <td style="padding:6px 8px 0 0;">
+          <a href="https://outlook.office.com/calendar/0/deeplink/compose?rru=addevent&subject=LLM%20Security%20%26%20Red%20Teaming%20Masterclass&body=Webinar%20link%3A%20https%3A%2F%2Fzoom.us%2Fj%2F96052713847%3Fpwd%3D2l1ZagMR1ajADtG8PVa3C3PkGRiJXD.1%0AWebinar%20Password%3A%20572461%0AEvent%20page%3A%20https%3A%2F%2Fwww.infosectrain.com%2Fpages%2Flp%2Fllm-masterclass%2F&location=Online&startdt=2025-11-01T19%3A00%3A00&enddt=2025-11-01T23%3A00%3A00"
+             target="_blank"
+             style="display:inline-block; background:#EBEBEB; color:#232020; font-family:Arial, Helvetica, sans-serif; font-size:14px; padding:8px 16px; border-radius:6px;">
+            Office 365
+          </a>
+        </td>
+        <td style="padding:6px 0 0 0;">
+          <a href="https://calendar.yahoo.com/?v=60&title=LLM%20Security%20%26%20Red%20Teaming%20Masterclass&desc=Webinar%20link%3A%20https%3A%2F%2Fzoom.us%2Fj%2F96052713847%3Fpwd%3D2l1ZagMR1ajADtG8PVa3C3PkGRiJXD.1%0AWebinar%20Password%3A%20572461%0AEvent%20page%3A%20https%3A%2F%2Fwww.infosectrain.com%2Fpages%2Flp%2Fllm-masterclass%2F&in_loc=Online&st=20251101T190000&et=20251101T230000"
+             target="_blank"
+             style="display:inline-block; background:#EBEBEB; color:#232020; font-family:Arial, Helvetica, sans-serif; font-size:14px; padding:8px 16px; border-radius:6px;">
+            Yahoo
+          </a>
+        </td>
+      </tr>
     </table>
+  </td>
+</tr>
+
+
+        <!-- Agenda -->
+        <!-- Agenda -->
+<tr>
+  <td style="padding:4px 24px 12px 24px;">
+    <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-top:1px solid #E6E8EB;">
+      <tr>
+        <td style="height:12px; line-height:12px; font-size:0;">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:14px; color:#111827;">
+          Agenda
+        </td>
+      </tr>
+      <tr>
+        <td style="font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:1.7; color:#374151; padding-top:6px;">
+          <div style="font-weight:700; color:#111827; margin-top:4px;">Day 1 | 1 November</div>
+          <ul style="margin:8px 0 12px 18px; padding:0; list-style-type:disc; list-style-position:outside;">
+            <li>Introduction to AI and LLM Security by Avnish (7 PM – 11 PM)</li>
+          </ul>
+
+          <div style="font-weight:700; color:#111827; margin-top:4px;">Day 2 | 2 November</div>
+          <ul style="margin:8px 0 0 18px; padding:0; list-style-type:disc; list-style-position:outside;">
+            <li>AI and LLM Red Teaming by Ashish (7 PM – 11 PM)</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+
+        <!-- Footer -->
+        <tr>
+          <td style="padding:16px 24px; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:1.6; color:#111827;">
+            Best Regards,<br>Team InfosecTrain<br><br>
+            Email: saksham.kumar@infosectrain.com<br>
+            Call: IND: +91-7995115380<br>
+            Website: www.infosectrain.com
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
 ';
 
-    function curl_trip($url, $fields_string = "")
-    {
+    // function curl_trip($url, $fields_string = "")
+    // {
 
-        $ua = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13';
+    //     $ua = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13';
 
-        $ch = curl_init();
+    //     $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL, $url);
-
-
-
-        curl_setopt($ch, CURLOPT_HEADER, true);
+    //     curl_setopt($ch, CURLOPT_URL, $url);
 
 
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        curl_setopt($ch, CURLOPT_USERAGENT, $ua);
-
-        curl_setopt($ch, CURLOPT_COOKIE, 'NID=67=pdjIQN5CUKVn0bRgAlqitBk7WHVivLsbLcr7QOWMn35Pq03N1WMy6kxYBPORtaQUPQrfMK4Yo0vVz8tH97ejX3q7P2lNuPjTOhwqaI2bXCgPGSDKkdFoiYIqXubR0cTJ48hIAaKQqiQi_lpoe6edhMglvOO9ynw; PREF=ID=52aa671013493765:U=0cfb5c96530d04e3:FF=0:LD=en:TM=1370266105:LM=1370341612:GM=1:S=Kcc6KUnZwWfy3cOl; OTZ=1800625_34_34__34_; S=talkgadget=38GaRzFbruDPtFjrghEtRw; SID=DQAAALoAAADHyIbtG3J_u2hwNi4N6UQWgXlwOAQL58VRB_0xQYbDiL2HA5zvefboor5YVmHc8Zt5lcA0LCd2Riv4WsW53ZbNCv8Qu_THhIvtRgdEZfgk26LrKmObye1wU62jESQoNdbapFAfEH_IGHSIA0ZKsZrHiWLGVpujKyUvHHGsZc_XZm4Z4tb2bbYWWYAv02mw2njnf4jiKP2QTxnlnKFK77UvWn4FFcahe-XTk8Jlqblu66AlkTGMZpU0BDlYMValdnU; HSID=A6VT_ZJ0ZSm8NTdFf; SSID=A9_PWUXbZLazoEskE; APISID=RSS_BK5QSEmzBxlS/ApSt2fMy1g36vrYvk; SAPISID=ZIMOP9lJ_E8SLdkL/A32W20hPpwgd5Kg1J');
+    //     curl_setopt($ch, CURLOPT_HEADER, true);
 
 
 
-        curl_setopt($ch, CURLOPT_AUTOREFERER, true);
+    //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    //     curl_setopt($ch, CURLOPT_USERAGENT, $ua);
 
-        curl_setopt($ch, CURLOPT_MAXREDIRS, 20);
-
-        curl_setopt($ch, CURLOPT_POST, true);
-
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+    //     curl_setopt($ch, CURLOPT_COOKIE, 'NID=67=pdjIQN5CUKVn0bRgAlqitBk7WHVivLsbLcr7QOWMn35Pq03N1WMy6kxYBPORtaQUPQrfMK4Yo0vVz8tH97ejX3q7P2lNuPjTOhwqaI2bXCgPGSDKkdFoiYIqXubR0cTJ48hIAaKQqiQi_lpoe6edhMglvOO9ynw; PREF=ID=52aa671013493765:U=0cfb5c96530d04e3:FF=0:LD=en:TM=1370266105:LM=1370341612:GM=1:S=Kcc6KUnZwWfy3cOl; OTZ=1800625_34_34__34_; S=talkgadget=38GaRzFbruDPtFjrghEtRw; SID=DQAAALoAAADHyIbtG3J_u2hwNi4N6UQWgXlwOAQL58VRB_0xQYbDiL2HA5zvefboor5YVmHc8Zt5lcA0LCd2Riv4WsW53ZbNCv8Qu_THhIvtRgdEZfgk26LrKmObye1wU62jESQoNdbapFAfEH_IGHSIA0ZKsZrHiWLGVpujKyUvHHGsZc_XZm4Z4tb2bbYWWYAv02mw2njnf4jiKP2QTxnlnKFK77UvWn4FFcahe-XTk8Jlqblu66AlkTGMZpU0BDlYMValdnU; HSID=A6VT_ZJ0ZSm8NTdFf; SSID=A9_PWUXbZLazoEskE; APISID=RSS_BK5QSEmzBxlS/ApSt2fMy1g36vrYvk; SAPISID=ZIMOP9lJ_E8SLdkL/A32W20hPpwgd5Kg1J');
 
 
 
-        $result = curl_exec($ch);
+    //     curl_setopt($ch, CURLOPT_AUTOREFERER, true);
 
-        $last = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+    //     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
-        curl_close($ch);
+    //     curl_setopt($ch, CURLOPT_MAXREDIRS, 20);
 
-        return array($result, $last);
-    }
+    //     curl_setopt($ch, CURLOPT_POST, true);
+
+    //     curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+
+
+
+    //     $result = curl_exec($ch);
+
+    //     $last = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+
+    //     curl_close($ch);
+
+    //     return array($result, $last);
+    // }
 
 
 
@@ -318,7 +467,7 @@ if (isset($_POST['me_submited'])) {
 
         'site_name' => 'lp',
 
-        'page_type' => 'LLM Masterclass',
+        'page_type' => 'LLM Security & Red Teaming Masterclass',
 
         'name' => $me_name,
 
@@ -344,7 +493,7 @@ if (isset($_POST['me_submited'])) {
 
     $payload = json_encode(array("result_email" => $data));
 
-    $apiurl = 'https://www.infosectrain.com/my-admin/send_email.php';
+    $apiurl = 'https://www.infosectrain.com/my-admin/send_email_onlinepay_lp.php';
 
     $first_data = curl_trip($apiurl, $payload);
 

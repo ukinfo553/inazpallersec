@@ -94,12 +94,11 @@ if ($course_data !== null) {
                                 <a href="#training-calendar">Training Calendar</a>
                             </li>
                             <li>
-                                <a href="#offer">Offer</a>
-                            </li>
-                            <li>
                                 <a href="#instructor">Meet Our Instructor</a>
                             </li>
-
+                            <li>
+                                <a href="#benefits">Career Benefits</a>
+                            </li>
                             <li>
                                 <a href="#reviews">Testimonials</a>
                             </li>
