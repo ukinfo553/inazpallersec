@@ -423,6 +423,7 @@ h1 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  font-size: 52px;
 }
 
 h1 span {
@@ -435,9 +436,14 @@ h1 span {
   }
 }
 
-@media (min-width:992px) {
+@media (max-width:992px) {
   h1 {
-    font-size: 46px;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .seats img {
+    width: 100%;
   }
 }
 
@@ -447,18 +453,20 @@ h2 {
   font-family: var(--unicephalon);
   font-style: normal;
   font-weight: 700;
+  font-size: 28px;
   line-height: normal;
 }
 
 @media (min-width:768px) {
-  h2 {
+  /* h2 {
     font-size: 36px;
-  }
+  } */
 }
 
-@media (min-width:992px) {
+@media (max-width:992px) {
   h2 {
-    font-size: 46px;
+    font-size: 18px;
+    text-align: center;
   }
 }
 
@@ -1138,7 +1146,7 @@ nav {
   cursor: pointer;
 }
 
-.error-message {
+.F-message {
   color: var(--white);
   font-size: 12px;
   margin-top: 2px;
@@ -1368,6 +1376,10 @@ footer .item ul li a {
   .footer-fixed .desktop-list {
     display: none;
   }
+
+  .footer-sec {
+    margin-bottom: 350px;
+  }
 }
 
 .footer-fixed .desktop-list li {
@@ -1398,6 +1410,7 @@ footer .item ul li a {
   .footer-fixed .mobile-list {
     display: none;
   }
+
 }
 
 .footer-fixed .mobile-list li {
@@ -1718,6 +1731,9 @@ footer .item ul li a {
   backdrop-filter: blur(11.3px);
   -webkit-backdrop-filter: blur(11.3px);
   border: 1px solid rgb(255 255 255 / 25%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .learning-card h3,
@@ -1758,6 +1774,11 @@ footer .item ul li a {
   background: var(--paid-events-Yellow-Purple, linear-gradient(89deg, #FFB956 0%, #5A09E5 98.66%)) !important;
   color: var(--WHITE, #FFF);
 } */
+.error-message {
+  color: white;
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
+}
 
 @media(max-width:992px) {
 
@@ -1771,6 +1792,8 @@ footer .item ul li a {
 
   .takeaway-card {
     width: 100% !important;
+    display: flex;
+    flex-direction: row;
   }
 
   .learning-card ul li,
@@ -1805,10 +1828,10 @@ footer .item ul li a {
     align-items: center !important;
   }
 
-  h1 {
+  /* h1 {
     text-align: center;
-    font-size: 46px;
-  }
+    font-size: 52px;
+  } */
 
   .live-badge,
   .live-date {
@@ -1830,6 +1853,11 @@ footer .item ul li a {
   tbody tr:nth-child(even) {
     font-size: 12px !important;
   }
+
+  .instructor-profile {
+    flex-wrap: wrap;
+  }
+
 }
 
 
@@ -1963,6 +1991,16 @@ td {
   width: 29%;
 }
 
+@media only screen and (min-width: 1024px) {
+  .footer-sec {
+    margin-bottom: 80px;
+  }
+
+  .masterclass-fixedA {
+    flex-wrap: wrap;
+  }
+}
+
 /* ======== ipad ================== */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -1985,5 +2023,9 @@ td {
 
   .timers {
     width: 100%;
+  }
+
+  .footer-sec {
+    margin-bottom: 300px;
   }
 }

@@ -139,7 +139,7 @@ $country = $_SESSION['country'];
         <!-- Background Video -->
 
         <section class="hero-section p-0" style="background-color: #011432; background-image: url(assets/images/dpdpa-banner.webp); background-repeat: no-repeat;
-    background-position: right;">
+    background-position: right; background-position-y: top;">
             <div class="container">
                 <div class="row hero">
                     <div class="col-md-7" style="padding: 72px 0px;">
@@ -348,15 +348,15 @@ line-height: normal;">
 font-family: Raleway;
 font-style: normal;
 line-height: normal;" id="experts">
-                                Speakers Lineup
+                                Expert Speaker
                             </div>
 
                             <div class="g-3 mb-3">
 
-                                <div class="col"
-                                    style="display: flex; gap:24px; align-items:start; flex-wrap: wrap;">
+                                <div class="col instructor-profile"
+                                    style="display: flex; gap:24px; align-items:start;">
                                     <img src="assets/images/speakers/kartikeya.png" alt="kartikeya">
-                                    <div class="trainer-profile col-md-5">
+                                    <div class="trainer-profile">
                                         <div class="trainer-title">
                                             <h3>Kartikeya Raman</h3>
                                             <p>20+ Years of Experience</p>
@@ -371,7 +371,7 @@ line-height: normal;" id="experts">
                                         </div>
                                     </div>
 
-                                    <div class="trainer-register col-md-5">
+                                    <div class="trainer-register">
                                         <div class="d-flex gap-4 text-align-center justify-content-center">
                                             <h3>Masterclass</h3>
                                             <img src="assets/images/live.gif" alt="live-gif" width="77" height="24">
@@ -684,12 +684,11 @@ line-height: normal; margin-top:36px;">
                                 </div>
 
                                 <div class="d-flex flex-wrap  gap-4 mt-4">
-                                    <div class="takeaway-card align-items-center gap-3" style="border-radius: 16px;
+                                    <div class="takeaway-card" style="border-radius: 16px;
 border: 1px solid rgba(255, 185, 86, 0.20);
 background: rgba(255, 185, 86, 0.10); 
 width: 262px;
 padding: 24px;
-align-items: center;
 gap: 16px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none">
@@ -698,17 +697,16 @@ gap: 16px;">
                                                 fill="#FBE9D6" />
                                         </svg>
 
-                                        <div class="fw-400 fs-14 f-general-sans text-white mt-3">
+                                        <div class="fw-400 fs-14 f-general-sans text-white">
                                             Get 8 CPE Credits / 8 CPD Hours
                                         </div>
                                     </div>
 
-                                    <div class="takeaway-card align-items-center gap-3" style="border-radius: 16px;
+                                    <div class="takeaway-card" style="border-radius: 16px;
 border: 1px solid rgba(255, 185, 86, 0.20);
 background: rgba(255, 185, 86, 0.10); 
 width: 262px;
 padding: 24px;
-align-items: center;
 gap: 16px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none">
@@ -724,17 +722,16 @@ gap: 16px;">
                                             </defs>
                                         </svg>
 
-                                        <div class="fw-400 fs-14 f-general-sans text-white mt-3">
+                                        <div class="fw-400 fs-14 f-general-sans text-white">
                                             DPDPA Guide, Templates, Checklists
                                         </div>
                                     </div>
 
-                                    <div class="takeaway-card align-items-center gap-3" style="border-radius: 16px;
+                                    <div class="takeaway-card" style="border-radius: 16px;
 border: 1px solid rgba(255, 185, 86, 0.20);
 background: rgba(255, 185, 86, 0.10); 
 width: 262px;
 padding: 24px;
-align-items: center;
 gap: 16px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none">
@@ -750,17 +747,16 @@ gap: 16px;">
                                             </defs>
                                         </svg>
 
-                                        <div class="fw-400 fs-14 f-general-sans text-white mt-3">
+                                        <div class="fw-400 fs-14 f-general-sans text-white">
                                             Interactive Real-World Case Studies
                                         </div>
                                     </div>
 
-                                    <div class="takeaway-card align-items-center gap-3" style="border-radius: 16px;
+                                    <div class="takeaway-card" style="border-radius: 16px;
 border: 1px solid rgba(255, 185, 86, 0.20);
 background: rgba(255, 185, 86, 0.10); 
 width: 262px;
 padding: 24px;
-align-items: center;
 gap: 16px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none">
@@ -769,17 +765,16 @@ gap: 16px;">
                                                 fill="#FBE9D6" />
                                         </svg>
 
-                                        <div class="fw-400 fs-14 f-general-sans text-white mt-3">
+                                        <div class="fw-400 fs-14 f-general-sans text-white">
                                             Simulation-Based Practice Exercises
                                         </div>
                                     </div>
 
-                                    <div class="takeaway-card align-items-center gap-3" style="border-radius: 16px;
+                                    <div class="takeaway-card" style="border-radius: 16px;
 border: 1px solid rgba(255, 185, 86, 0.20);
 background: rgba(255, 185, 86, 0.10);
 width: 262px;
 padding: 24px;
-align-items: center;
 gap: 16px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none">
@@ -800,17 +795,16 @@ gap: 16px;">
                                                 fill="#FBE9D6" />
                                         </svg>
 
-                                        <div class="fw-400 fs-14 f-general-sans text-white mt-3">
+                                        <div class="fw-400 fs-14 f-general-sans text-white">
                                             Learn from Seasoned Industry Expert
                                         </div>
                                     </div>
 
-                                    <div class="takeaway-card align-items-center gap-3" style="border-radius: 16px;
+                                    <div class="takeaway-card" style="border-radius: 16px;
 border: 1px solid rgba(255, 185, 86, 0.20);
 background: rgba(255, 185, 86, 0.10);
 width: 262px;
 padding: 24px;
-align-items: center;
 gap: 16px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none">
@@ -826,17 +820,16 @@ gap: 16px;">
                                             </defs>
                                         </svg>
 
-                                        <div class="fw-400 fs-14 f-general-sans text-white mt-3">
+                                        <div class="fw-400 fs-14 f-general-sans text-white">
                                             Get a Certificate of Completion
                                         </div>
                                     </div>
 
-                                    <div class="takeaway-card align-items-center gap-3" style="border-radius: 16px;
+                                    <div class="takeaway-card" style="border-radius: 16px;
 border: 1px solid rgba(255, 185, 86, 0.20);
 background: rgba(255, 185, 86, 0.10);
 width: 262px;
 padding: 24px;
-align-items: center;
 gap: 16px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none">
@@ -858,17 +851,16 @@ gap: 16px;">
                                             </defs>
                                         </svg>
 
-                                        <div class="fw-400 fs-14 f-general-sans text-white mt-3">
+                                        <div class="fw-400 fs-14 f-general-sans text-white">
                                             Alumni Network for Continued Support
                                         </div>
                                     </div>
 
-                                    <div class="takeaway-card align-items-center gap-3" style="border-radius: 16px;
+                                    <div class="takeaway-card" style="border-radius: 16px;
 border: 1px solid rgba(255, 185, 86, 0.20);
 background: rgba(255, 185, 86, 0.10);
 width: 262px;
 padding: 24px;
-align-items: center;
 gap: 16px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none">
@@ -884,7 +876,7 @@ gap: 16px;">
                                             </defs>
                                         </svg>
 
-                                        <div class="fw-400 fs-14 f-general-sans text-white mt-3">
+                                        <div class="fw-400 fs-14 f-general-sans text-white">
                                             Exclusive Insights on Global Privacy Trends
                                         </div>
                                     </div>
@@ -950,7 +942,7 @@ line-height: normal; margin-top:36px;">
                                             <img src="assets/images/live.gif" alt="live-gif" width="77" height="24">
 
                                         </div>
-                                        <div class="d-flex gap-3 justify-content-center mt-1 masterclass-fixed">
+                                        <div class="d-flex gap-3 justify-content-center mt-1 masterclass-fixedA">
                                             <div
                                                 class="fs-18 f-general-sans text-white d-flex gap-2 align-items-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
@@ -1067,7 +1059,7 @@ background: rgba(8, 8, 8, 0.30);">
 
     <!--footer start-->
     <footer>
-        <div class="container-fluid container-lg">
+        <div class="container-fluid container-lg footer-sec">
             <div class="row">
                 <div class="col-md-4">
                     <div class="item">
@@ -1230,6 +1222,7 @@ background: rgba(8, 8, 8, 0.30);">
                     </div>
 
                     <input type="text" name="me_phone" class="me_phone form-control" placeholder="Mobile">
+                    <div class="error-message mobile_error"></div>
                     <input type="text" name="me_message" class="me_message form-control"
                         placeholder="Mention your call time preference">
 
@@ -1403,6 +1396,7 @@ background: rgba(8, 8, 8, 0.30);">
 
                 const name = form.querySelector('input[name="me_name"]');
                 const email = form.querySelector('input[name="me_email"]');
+                const mobile = form.querySelector('input[name="me_phone"]');
 
                 // Validate Name field
                 if (!name.value.trim()) {
@@ -1424,6 +1418,19 @@ background: rgba(8, 8, 8, 0.30);">
                     errorMessages.email = "Please enter a valid email.";
                 } else {
                     email.classList.remove('error');
+                }
+                // Validate Mobile Number field
+                if (!mobile.value.trim()) {
+                    isValid = false;
+                    mobile.classList.add('error');
+                    errorMessages.mobile = "Mobile number is required.";
+                } else if (!/^[6-9]\d{9}$/.test(mobile.value)) {
+                    // For India: 10-digit numbers starting with 6,7,8,9
+                    isValid = false;
+                    mobile.classList.add('error');
+                    errorMessages.mobile = "Please enter a valid 10-digit mobile number.";
+                } else {
+                    mobile.classList.remove('error');
                 }
 
                 // Display error messages
