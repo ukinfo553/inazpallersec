@@ -377,7 +377,7 @@ line-height: normal;font-family: 'Raleway'">
                         <div class="fs-28 text-white fw-700 f-Raleway mt-5 mb-4" style="color: var(--Soft-Orange, #FFB956);
 font-style: normal;
 line-height: normal; font-family: 'Raleway'" id="experts">
-                            Your Instructor
+                            Expert Speaker
                         </div>
 
                         <div class="row gap-4">
@@ -522,19 +522,7 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                         <div class="faq-wrapper">
                             <!--/ faq item /-->
                             <div class="d-flex gap-3 text-white align-items-center f-general-sans fs-16">
-                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <g clip-path="url(#clip0_23541_857)">
-                                            <path
-                                                d="M13.5727 9.66667L13.416 9.63067C13.0739 8.85714 12.4872 8.21742 11.7461 7.80993C11.0049 7.40244 10.1504 7.24974 9.314 7.37533C8.43624 7.51529 7.63553 7.95909 7.05164 8.62924C6.46774 9.2994 6.13777 10.1533 6.11933 11.042C6.11772 11.1773 6.12618 11.3126 6.14467 11.4467C5.68248 11.632 5.29086 11.9589 5.02601 12.3806C4.76116 12.8023 4.63669 13.297 4.67045 13.7938C4.70422 14.2907 4.89448 14.764 5.21394 15.146C5.53341 15.528 5.96565 15.7989 6.44867 15.92C6.64247 15.9695 6.84134 15.9966 7.04133 16.0007H12.786C13.0178 15.9964 13.2485 15.9684 13.4747 15.9173C14.1814 15.7621 14.815 15.3729 15.2728 14.8126C15.7307 14.2523 15.9859 13.5539 15.9973 12.8304C16.0086 12.107 15.7754 11.4009 15.3353 10.8266C14.8952 10.2522 14.2742 9.84328 13.5727 9.666V9.66667ZM13.962 13.078C13.9047 13.2965 13.7883 13.495 13.6255 13.6517C13.4627 13.8084 13.2599 13.9171 13.0393 13.966C12.95 13.9867 12.8589 13.9985 12.7673 14.0013H7.07C7.02791 14.0004 6.98607 13.9946 6.94533 13.984C6.88327 13.9672 6.82638 13.9351 6.77982 13.8908C6.73326 13.8464 6.69849 13.7912 6.67867 13.73C6.62 13.5127 6.846 13.3073 7.024 13.248C7.40651 13.1118 7.72889 12.8453 7.93464 12.4952C8.14039 12.1451 8.21639 11.7338 8.14933 11.3333C8.13177 11.2504 8.12173 11.1661 8.11933 11.0813C8.12171 10.9464 8.13938 10.8122 8.172 10.6813C8.24925 10.3428 8.42622 10.0352 8.68006 9.7982C8.9339 9.56124 9.25294 9.40582 9.596 9.352C10.0008 9.28924 10.415 9.36137 10.7747 9.55726C11.1344 9.75315 11.4198 10.0619 11.5867 10.436C11.7137 10.7401 11.9164 11.0066 12.1754 11.2103C12.4344 11.4141 12.7412 11.5482 13.0667 11.6C13.381 11.6775 13.6518 11.8764 13.8196 12.1532C13.9874 12.4301 14.0387 12.7621 13.962 13.0767V13.078ZM4.91867 9.16133L3.26667 10.8113C3.07603 10.9804 2.82802 11.0704 2.5733 11.0628C2.31858 11.0552 2.07637 10.9507 1.89613 10.7705C1.7159 10.5904 1.61124 10.3482 1.60353 10.0935C1.59582 9.83877 1.68565 9.59072 1.85467 9.4L2.886 8.368C2.69636 8.04494 2.5536 7.69657 2.462 7.33333H1C0.734783 7.33333 0.48043 7.22798 0.292893 7.04044C0.105357 6.8529 0 6.59855 0 6.33333C0 6.06812 0.105357 5.81376 0.292893 5.62623C0.48043 5.43869 0.734783 5.33333 1 5.33333H2.46667C2.56017 4.97242 2.70379 4.62639 2.89333 4.30533L1.85467 3.26667C1.68565 3.07595 1.59582 2.8279 1.60353 2.57318C1.61124 2.31847 1.7159 2.07631 1.89613 1.89615C2.07637 1.716 2.31858 1.61146 2.5733 1.60387C2.82802 1.59628 3.07603 1.68623 3.26667 1.85533L4.30533 2.89133C4.6265 2.70248 4.97252 2.55954 5.33333 2.46667V1C5.33333 0.734784 5.43869 0.48043 5.62623 0.292893C5.81376 0.105357 6.06812 0 6.33333 0C6.59855 0 6.8529 0.105357 7.04044 0.292893C7.22798 0.48043 7.33333 0.734784 7.33333 1V2.46667C7.69517 2.55867 8.04217 2.70141 8.364 2.89067L9.4 1.85533C9.59064 1.68623 9.83864 1.59628 10.0934 1.60387C10.3481 1.61146 10.5903 1.716 10.7705 1.89615C10.9508 2.07631 11.0554 2.31847 11.0631 2.57318C11.0708 2.8279 10.981 3.07595 10.812 3.26667L9.77267 4.308C9.82067 4.39067 9.87467 4.46867 9.91733 4.55533C10.0353 4.79297 10.054 5.06772 9.96933 5.31914C9.88469 5.57057 9.70363 5.77807 9.466 5.896C9.22837 6.01393 8.95362 6.03264 8.70219 5.94799C8.45077 5.86335 8.24327 5.6823 8.12533 5.44467C6.62533 2.75667 2.85267 5.468 4.91933 7.748C5.10651 7.93559 5.21158 8.18981 5.21145 8.45481C5.21133 8.71981 5.10602 8.97392 4.91867 9.16133Z"
-                                                fill="white" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_23541_857">
-                                                <rect width="16" height="16" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg> -->
+
                                 <span>Day 1 (4-Hour Session)</span>
                                 <!-- <span>|</span>
                                 <span>1 November</span> -->
@@ -551,9 +539,7 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                                     <span class="right-icon"></span>
                                 </h3>
                                 <div class="faq-content">
-                                    <!-- <p class="mb-3 fw-bold">AI Explained: No Jargon, Just Breakthroughs</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span> -->
+
                                     <ul>
                                         <li>Welcome & Masterclass Objectives
                                         </li>
@@ -570,22 +556,9 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
 
                             <!--/ faq item /-->
                             <div class="d-flex gap-3 text-white align-items-center f-general-sans fs-16 mt-4">
-                                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <g clip-path="url(#clip0_23541_857)">
-                                            <path
-                                                d="M13.5727 9.66667L13.416 9.63067C13.0739 8.85714 12.4872 8.21742 11.7461 7.80993C11.0049 7.40244 10.1504 7.24974 9.314 7.37533C8.43624 7.51529 7.63553 7.95909 7.05164 8.62924C6.46774 9.2994 6.13777 10.1533 6.11933 11.042C6.11772 11.1773 6.12618 11.3126 6.14467 11.4467C5.68248 11.632 5.29086 11.9589 5.02601 12.3806C4.76116 12.8023 4.63669 13.297 4.67045 13.7938C4.70422 14.2907 4.89448 14.764 5.21394 15.146C5.53341 15.528 5.96565 15.7989 6.44867 15.92C6.64247 15.9695 6.84134 15.9966 7.04133 16.0007H12.786C13.0178 15.9964 13.2485 15.9684 13.4747 15.9173C14.1814 15.7621 14.815 15.3729 15.2728 14.8126C15.7307 14.2523 15.9859 13.5539 15.9973 12.8304C16.0086 12.107 15.7754 11.4009 15.3353 10.8266C14.8952 10.2522 14.2742 9.84328 13.5727 9.666V9.66667ZM13.962 13.078C13.9047 13.2965 13.7883 13.495 13.6255 13.6517C13.4627 13.8084 13.2599 13.9171 13.0393 13.966C12.95 13.9867 12.8589 13.9985 12.7673 14.0013H7.07C7.02791 14.0004 6.98607 13.9946 6.94533 13.984C6.88327 13.9672 6.82638 13.9351 6.77982 13.8908C6.73326 13.8464 6.69849 13.7912 6.67867 13.73C6.62 13.5127 6.846 13.3073 7.024 13.248C7.40651 13.1118 7.72889 12.8453 7.93464 12.4952C8.14039 12.1451 8.21639 11.7338 8.14933 11.3333C8.13177 11.2504 8.12173 11.1661 8.11933 11.0813C8.12171 10.9464 8.13938 10.8122 8.172 10.6813C8.24925 10.3428 8.42622 10.0352 8.68006 9.7982C8.9339 9.56124 9.25294 9.40582 9.596 9.352C10.0008 9.28924 10.415 9.36137 10.7747 9.55726C11.1344 9.75315 11.4198 10.0619 11.5867 10.436C11.7137 10.7401 11.9164 11.0066 12.1754 11.2103C12.4344 11.4141 12.7412 11.5482 13.0667 11.6C13.381 11.6775 13.6518 11.8764 13.8196 12.1532C13.9874 12.4301 14.0387 12.7621 13.962 13.0767V13.078ZM4.91867 9.16133L3.26667 10.8113C3.07603 10.9804 2.82802 11.0704 2.5733 11.0628C2.31858 11.0552 2.07637 10.9507 1.89613 10.7705C1.7159 10.5904 1.61124 10.3482 1.60353 10.0935C1.59582 9.83877 1.68565 9.59072 1.85467 9.4L2.886 8.368C2.69636 8.04494 2.5536 7.69657 2.462 7.33333H1C0.734783 7.33333 0.48043 7.22798 0.292893 7.04044C0.105357 6.8529 0 6.59855 0 6.33333C0 6.06812 0.105357 5.81376 0.292893 5.62623C0.48043 5.43869 0.734783 5.33333 1 5.33333H2.46667C2.56017 4.97242 2.70379 4.62639 2.89333 4.30533L1.85467 3.26667C1.68565 3.07595 1.59582 2.8279 1.60353 2.57318C1.61124 2.31847 1.7159 2.07631 1.89613 1.89615C2.07637 1.716 2.31858 1.61146 2.5733 1.60387C2.82802 1.59628 3.07603 1.68623 3.26667 1.85533L4.30533 2.89133C4.6265 2.70248 4.97252 2.55954 5.33333 2.46667V1C5.33333 0.734784 5.43869 0.48043 5.62623 0.292893C5.81376 0.105357 6.06812 0 6.33333 0C6.59855 0 6.8529 0.105357 7.04044 0.292893C7.22798 0.48043 7.33333 0.734784 7.33333 1V2.46667C7.69517 2.55867 8.04217 2.70141 8.364 2.89067L9.4 1.85533C9.59064 1.68623 9.83864 1.59628 10.0934 1.60387C10.3481 1.61146 10.5903 1.716 10.7705 1.89615C10.9508 2.07631 11.0554 2.31847 11.0631 2.57318C11.0708 2.8279 10.981 3.07595 10.812 3.26667L9.77267 4.308C9.82067 4.39067 9.87467 4.46867 9.91733 4.55533C10.0353 4.79297 10.054 5.06772 9.96933 5.31914C9.88469 5.57057 9.70363 5.77807 9.466 5.896C9.22837 6.01393 8.95362 6.03264 8.70219 5.94799C8.45077 5.86335 8.24327 5.6823 8.12533 5.44467C6.62533 2.75667 2.85267 5.468 4.91933 7.748C5.10651 7.93559 5.21158 8.18981 5.21145 8.45481C5.21133 8.71981 5.10602 8.97392 4.91867 9.16133Z"
-                                                fill="white" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_23541_857">
-                                                <rect width="16" height="16" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg> -->
+
                                 <span>Day 2 (4-Hour Session)</span>
-                                <!-- <span>|</span>
-                                <span>2 November</span> -->
+
                             </div>
                             <!--/ faq item /-->
                             <div class="faq-item">
@@ -600,10 +573,7 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                                     <span class="right-icon"></span>
                                 </h3>
                                 <div class="faq-content">
-                                    <!-- <p class="mb-3 fw-bold">Auditing AI with Digital Trust
-                                        </p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span> -->
+
                                     <ul>
                                         <li>Recap & Day 2 Kickoff</li>
                                         <li>Audit Evidence & Documentation <b>(Group Exercise)</b></li>
@@ -616,128 +586,6 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                                     </ul>
                                 </div>
                             </div>
-                            <!--/ faq item /-->
-
-                            <!--/ faq item /-->
-                            <!-- <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/dr-ram1.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">AI Security Frameworks: CISO Edition - Dr Ram (12
-                                                    PM -
-                                                    1 PM)</strong>
-                                            </div>
-                                        </span>
-                                        <span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p class="mb-3 fw-bold">Enable leaders to design and implement secure
-                                            AI frameworks</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
-                                        <ul>
-                                            <li>AI Security Threat Landscape & Business Impact</li>
-                                            <li>Building AI Governance Structure & Risk Management</li>
-                                            <li>AI Asset Discovery & Classification Methods</li>
-                                            <li>Essential Security Controls for AI Systems</li>
-                                            <li>Regulatory Compliance & Audit Considerations</li>
-                                            <li>Implementation Roadmap & Quick Wins</li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                            <!--/ faq item /-->
-
-                            <!--/ faq item /-->
-                            <!-- <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/break-time.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600"> Lunch Break (1 PM - 2 PM)</strong>
-                                            </div>
-                                        </span>
-                                    </h3>
-                                </div> -->
-
-                            <!--/ faq item /-->
-                            <!-- <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/jai1.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">AI in Privacy - Jai (2 PM - 4 PM) </strong>
-                                            </div>
-                                        </span>
-                                        <span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p class="mb-3 fw-bold">Privacy-by-Design in GenAI: DPDP Act, GDPR, HIPAA</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
-                                        <ul>
-                                            <li>GenAI Privacy Challenges: Understanding data leakage and unique risks.
-                                            </li>
-                                            <li>Global Compliance: Navigating DPDP, GDPR, HIPAA, and other key
-                                                regulations.
-                                            </li>
-                                            <li>Privacy-by-Design Techniques: Implementing data minimization, federated
-                                                learning, and more.</li>
-                                            <li>Secure Implementation: Best practices for consent management and prompt
-                                                engineering.</li>
-                                            <li>Compliance Strategies: Conducting PIAs and ensuring vendor due
-                                                diligence.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> -->
-                            <!--/ faq item /-->
-
-                            <!--/ faq item /-->
-                            <!-- <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/avinish1.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">AI in Cybersecurity - Avnish (4 PM - 6
-                                                    PM)</strong>
-                                                <div class="d-flex gap-2 gap-md-3">
-                                                <span class="fw-400">by Avnish</span>
-                                                <div>
-                                                    <span class="fw-400">at:</span>
-                                                    <strong class="fw-600"> </strong>
-                                                </div>
-                                            </div> --
-                                            </div>
-                                        </span>
-                                        <span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p class="mb-3 fw-bold">AI's Cyber Battleground: Offense vs. Defense in the
-                                            Machine Age
-                                        </p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
-                                        <ul>
-                                            <li>Evolving Threats: Why traditional cybersecurity isn't enough.</li>
-                                            <li>Offensive AI: How attackers weaponize AI for reconnaissance, phishing,
-                                                and
-                                                malware.</li>
-                                            <li>Defensive AI: Leveraging MLSecOps and real-time threat hunting for
-                                                protection.</li>
-                                            <li>AI's Shield: Automated response, predictive analytics, and enhanced
-                                                security
-                                                platforms.</li>
-                                            <li>Future of Cyber Warfare: Emerging trends and the ethical implications of
-                                                AI
-                                                in defense.</li>
-                                        </ul>
-                                    </div>
-                                </div> -->
                             <!--/ faq item /-->
                         </div>
                         <div class="my-4" id="key-takeaways">
@@ -892,41 +740,7 @@ gap: 16px;">
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="p-4 mt-5 text-md-start text-center rounded-4 d-flex align-items-center justify-content-between flex-column gap-3"
-                                style="background: linear-gradient(89deg, #5A09E5 0%, #FFB956 98.66%);">
-                                <div>
-                                    <div class="fs-18 text-white fw-500 f-general-sans text-center" style="border-radius: 16px;
-background: rgba(8, 8, 8, 0.30); padding: 8px 16px;">
-                                        🔒 Limited Seats Available!
-                                    </div>
 
-                                </div>
-                                <div class="text-center d-flex flex-wrap gap-3 justify-content-between">
-                                    <h3 style="color: var(--WHITE, #FFF);
-text-align: center;
-font-family: Gloock;
-font-size: 28px;
-font-style: normal;
-font-weight: 400;
-width:100%;
-line-height: normal;">Secure Your Spot in the Future of AI Security</h3>
-                                    <p style="color: var(--WHITE, #FFF);
-text-align: center;
-font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400; line-height: normal;">Don't miss
-                                        this opportunity to master LLM security and red teaming techniques
-                                        from industry experts. Join professionals worldwide in this comprehensive
-                                        masterclass.</p>
-                                </div>
-                                <div>
-                                    <?php if ($country == 'IN') { ?>
-                                    <a href="https://pages.razorpay.com/infosectrain-llm-masterclass" class="button"
-                                        style="background: var(--BG-DARK, #080808); color:white;">Pay Now</a>
-                                    <?php } else { ?>
-                                    <a href="https://pages.razorpay.com/ist-llm-masterclass" class="button"
-                                        style="background: var(--BG-DARK, #080808); color:white;">Pay Now</a>
-                                    <?php } ?>
-                                </div>
-                            </div> -->
                     </div>
 
                     <!-- ========== footer-fixed =========== -->
@@ -1035,70 +849,7 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                             </div>
                         </div>
                     </div>
-                    <!-- ================ footer-fixed end ============= -->
-                    <!-- <div class="col-lg-4">
-                            <div class="price-card f-general-sans" aria-label="Masterclass purchase"
-                                style="position: sticky; top: 100px;">
-                                <div class="price-title">
-                                    <h3>Interested in Joining the</h3>
-                                    <div class="em">Masterclass?</div>
-                                </div> -->
 
-                    <!-- countdown -->
-                    <!-- <div class="timer" aria-live="polite">
-                            <div class="tbox">
-                                <div class="num" id="d"></div>
-                                <div class="lbl">Days</div>
-                            </div>
-                            <div class="tbox">
-                                <div class="num" id="h"></div>
-                                <div class="lbl">Hours</div>
-                            </div>
-                            <div class="tbox">
-                                <div class="num" id="m"></div>
-                                <div class="lbl">Minutes</div>
-                            </div>
-                            <div class="tbox">
-                                <div class="num" id="s"></div>
-                                <div class="lbl">Seconds</div>
-                            </div>
-                        </div> -->
-
-                    <!-- pricing -->
-                    <!-- <div class="pricing">
-                                    <?php if ($country == 'IN') { ?>
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <span class="strike" id="strikePrice">₹3,999</span>
-                                        <span class="now" id="currentPrice">₹999</span>
-                                        <span class="tag" id="offerTag">Early Bird Offer</span>
-                                    </div>
-                                    <?php } else { ?>
-                                    <div class="d-flex gap-3 align-items-center">
-                                        <span class="strike" id="strikePrice">$199</span>
-                                        <span class="now" id="currentPrice">$75</span>
-                                        <span class="tag" id="offerTag">Early Bird Offer</span>
-                                    </div>
-                                    <?php } ?>
-
-                                    <div class="deadline" id="deadlineText"></div>
-
-                                    <!-- Pay button -
-                                    <?php if ($country == 'IN') { ?>
-                                    <a class="cta" id="payBtn"
-                                        href="https://pages.razorpay.com/infosectrain-llm-masterclass">
-                                        <span>Pay Now & Secure Seat</span>
-                                    </a>
-                                    <?php } else { ?>
-                                    <a class="cta" id="payBtn" href="https://pages.razorpay.com/ist-llm-masterclass">
-                                        <span>Pay Now & Secure Seat</span>
-                                    </a>
-                                    <?php } ?>
-                                </div>
-
-                                <div class="foot"><span class="dot"></span><span id="regCount">9 people have
-                                        registered</span></div>
-                            </div>
-                        </div> -->
                 </div>
             </div>
         </section>
@@ -1106,7 +857,7 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
 
     <!--footer start-->
     <footer>
-        <div class="container-fluid container-lg">
+        <div class="container-fluid container-lg footer-sec">
             <div class="row">
                 <div class="col-md-4">
                     <div class="item">
@@ -1268,7 +1019,11 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                         <div class="error-message email_error"></div>
                     </div>
 
-                    <input type="text" name="me_phone" class="me_phone form-control" placeholder="Mobile">
+                    <div>
+                        <input type="text" name="me_phone" class="me_phone form-control" placeholder="Mobile">
+                        <div class="error-message mobile_error"></div>
+                    </div>
+
                     <input type="text" name="me_message" class="me_message form-control"
                         placeholder="Mention your call time preference">
 
@@ -1336,72 +1091,6 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                     element.siblings('.taq-item').find('.faq-content').slideUp(300, "swing");
                 }
             });
-
-            // ---- First Typing: "AI Summit 2025", keep "A" ----
-            // let fullText1 = "AI Summit 2025";
-            // let fixedChar1 = fullText1.charAt(0); // "A"
-            // let rest1 = fullText1.substring(1);
-            // let i1 = 0;
-            // let isDeleting1 = false;
-
-            // function typeOne() {
-            //     let display = fixedChar1 + rest1.substring(0, i1);
-            //     $('#typing-one').text(display);
-
-            //     if (!isDeleting1) {
-            //         i1++;
-            //         if (i1 > rest1.length) {
-            //             isDeleting1 = true;
-            //             setTimeout(typeOne, 1500); // Pause at full text
-            //             return;
-            //         }
-            //     } else {
-            //         i1--;
-            //         if (i1 < 0) {
-            //             isDeleting1 = false;
-            //             i1 = 0;
-            //             setTimeout(typeOne, 500); // Pause before restart
-            //             return;
-            //         }
-            //     }
-
-            //     setTimeout(typeOne, 100); // Typing/deleting speed
-            // }
-
-            // typeOne();
-
-            // ---- Second Typing: "Empowering the Future", keep "E" ----
-            let fullText2 = "AI Revolution";
-            let fixedChar2 = fullText2.charAt(0); // "E"
-            let rest2 = fullText2.substring(1);
-            let i2 = 0;
-            let isDeleting2 = false;
-
-            function typeTwo() {
-                let display = fixedChar2 + rest2.substring(0, i2);
-                $('#typing-two').text(display);
-
-                if (!isDeleting2) {
-                    i2++;
-                    if (i2 > rest2.length) {
-                        isDeleting2 = true;
-                        setTimeout(typeTwo, 1500);
-                        return;
-                    }
-                } else {
-                    i2--;
-                    if (i2 < 0) {
-                        isDeleting2 = false;
-                        i2 = 0;
-                        setTimeout(typeTwo, 500);
-                        return;
-                    }
-                }
-
-                setTimeout(typeTwo, 100);
-            }
-
-            typeTwo();
         });
 
         /*-------- form validation and ajax script --------*/
@@ -1442,6 +1131,7 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
 
                 const name = form.querySelector('input[name="me_name"]');
                 const email = form.querySelector('input[name="me_email"]');
+                const mobile = form.querySelector('input[name="me_phone"]');
 
                 // Validate Name field
                 if (!name.value.trim()) {
@@ -1457,12 +1147,27 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                     isValid = false;
                     email.classList.add('error');
                     errorMessages.email = "Email is required.";
-                } else if (!/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9]{2,4}$/.test(email.value)) {
+                } else if (!/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9]{2,4}$/.test(email
+                        .value)) {
                     isValid = false;
                     email.classList.add('error');
                     errorMessages.email = "Please enter a valid email.";
                 } else {
                     email.classList.remove('error');
+                }
+
+                // Validate Mobile Number field
+                if (!mobile.value.trim()) {
+                    isValid = false;
+                    mobile.classList.add('error');
+                    errorMessages.mobile = "Mobile number is required.";
+                } else if (!/^[6-9]\d{9}$/.test(mobile.value)) {
+                    // For India: 10-digit numbers starting with 6,7,8,9
+                    isValid = false;
+                    mobile.classList.add('error');
+                    errorMessages.mobile = "Please enter a valid 10-digit mobile number.";
+                } else {
+                    mobile.classList.remove('error');
                 }
 
                 // Display error messages
@@ -1527,29 +1232,6 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
             });
         });
         /*-------- form valudation and ajax script end --------*/
-
-        function updateUI() {
-            const now = new Date();
-
-            // format today's date as "01 Oct", "15 Oct", etc.
-            const todayDayMon = now.toLocaleDateString("en-US", {
-                day: "2-digit",
-                month: "short",
-            });
-
-            // get short timezone abbreviation (IST, EST, PST, GMT, etc.)
-            const tz = new Intl.DateTimeFormat("en-US", {
-                timeZoneName: "short"
-            }).formatToParts(now).find(p => p.type === "timeZoneName").value;
-
-            // Set the deadline text with today's date + local timezone
-            document.getElementById("deadlineText").textContent =
-                `Offer price valid till ${todayDayMon}, 11:59 PM ${tz}`;
-        }
-
-        updateUI();
-
-
 
         // ===== Helper: build a roller column with digits 0..9 =====
         function createRollerColumn() {
@@ -1635,7 +1317,7 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
 
         // Countdown function to show only specific time units in each div
         function startCountdown() {
-            const targetDate = new Date("October 26, 2025 09:00:00").getTime(); // Target date
+            const targetDate = new Date("November 29, 2025 09:00:00").getTime(); // Target date
 
             // Update the countdown every second
             const interval = setInterval(function() {
@@ -1644,7 +1326,8 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
 
                 // Calculate days, hours, minutes, and seconds
                 const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 *
+                    60));
                 const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 

@@ -1845,6 +1845,10 @@ footer .item ul li a {
     gap: 0;
   }
 
+  .masterclass-fixedA {
+    flex-wrap: wrap;
+  }
+
   .masterclass-fixed {
     flex-wrap: wrap;
   }

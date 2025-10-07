@@ -356,7 +356,7 @@ line-height: normal;" id="experts">
                                 <div class="col instructor-profile"
                                     style="display: flex; gap:24px; align-items:start;">
                                     <img src="assets/images/speakers/kartikeya.png" alt="kartikeya">
-                                    <div class="trainer-profile">
+                                    <div class="trainer-profile col-md-5">
                                         <div class="trainer-title">
                                             <h3>Kartikeya Raman</h3>
                                             <p>20+ Years of Experience</p>
@@ -371,7 +371,7 @@ line-height: normal;" id="experts">
                                         </div>
                                     </div>
 
-                                    <div class="trainer-register">
+                                    <div class="trainer-register col-md-5">
                                         <div class="d-flex gap-4 text-align-center justify-content-center">
                                             <h3>Masterclass</h3>
                                             <img src="assets/images/live.gif" alt="live-gif" width="77" height="24">
@@ -1223,6 +1223,7 @@ background: rgba(8, 8, 8, 0.30);">
 
                     <input type="text" name="me_phone" class="me_phone form-control" placeholder="Mobile">
                     <div class="error-message mobile_error"></div>
+
                     <input type="text" name="me_message" class="me_message form-control"
                         placeholder="Mention your call time preference">
 

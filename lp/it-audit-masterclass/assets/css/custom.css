@@ -519,6 +519,14 @@ ul.liststar li::before {
 
 
 @media (min-width:992px) {
+  .masterclass-fixedA {
+    flex-wrap: wrap;
+  }
+
+  .masterclass-fixed {
+    flex-wrap: wrap;
+  }
+
   .button {
     font-size: 14px;
     padding: 16px 24px;
@@ -559,6 +567,16 @@ footer {
   section,
   footer {
     padding: 72px 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-sec {
+    margin-bottom: 80px;
+  }
+
+  .masterclass-fixedA {
+    flex-wrap: wrap;
   }
 }
 
@@ -852,6 +870,10 @@ nav {
   .live-badge svg {
     width: 16px;
     height: 16px;
+  }
+
+  .footer-sec {
+    margin-bottom: 350px;
   }
 }
 
