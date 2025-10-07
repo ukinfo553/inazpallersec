@@ -486,7 +486,7 @@ font-family:Nunito Sans;
                             <div class="col-lg-4 col-md-6">
                                 <div class="item item-three">
                                     <div class="d-flex flex-wrap align-items-center mt-2">
-                                        <button class="button modal-btn" modal-title="Join Now">
+                                        <button class="button modal-btn modal-button" modal-title="Join Now">
                                             <span class="btn-text">Register Now!</span>
                                             <span class="price"
                                                 style="display: flex; gap:16px; align-items: center;">
@@ -746,7 +746,7 @@ gap: 16px;">
                     <!-- ========== footer-fixed =========== -->
 
                     <div class="col-lg-12">
-                        <div style="position: fixed; bottom: 0px; width:100%; left:0;">
+                        <div class="footer-fix">
                             <div class="d-flex gap-4 masterclass-fixed"
                                 style="overflow: hidden;background: var(--paid-events-Yellow-Purple, linear-gradient(89deg, #FFB956 0%, #5A09E5 98.66%)); padding:24px; justify-content:center; align-items:center;">
 
@@ -836,9 +836,9 @@ line-height: normal;">7:00 PM - 11:00 PM (IST)</span>
 font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400; line-height: normal; text-align:center; margin-top:8px;">
                                         9 People have registered</p>
                                 </div>
-                                <div class="d-flex gap-4 align-items-center mt-2">
-                                    <button class="button modal-btn" modal-title="Join Now">
-                                        <span class="btn-text">Register Now!</span>
+                                <div class="d-flex gap-4 align-items-center mt-2 cta-fix">
+                                    <button class="button modal-btn button-fixA" modal-title="Join Now">
+                                        <span class="btn-textA">Register Now!</span>
                                         <span class="price" style="display: flex; gap:16px; align-items: center;">
                                             <del class="old">₹3999/-</del>
                                             <span class="new">₹999/-</span>

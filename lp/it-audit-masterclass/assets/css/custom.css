@@ -395,6 +395,8 @@ h1 span {
 @media (min-width:768px) {
   h1 {
     font-size: 36px;
+    text-align: center;
+
   }
 }
 
@@ -632,6 +634,10 @@ nav {
     position: relative;
     z-index: 250;
     right: 0;
+  }
+
+  h1 {
+    text-align: center;
   }
 }
 
@@ -872,9 +878,9 @@ nav {
     height: 16px;
   }
 
-  .footer-sec {
+  /* .footer-sec {
     margin-bottom: 350px;
-  }
+  } */
 }
 
 .live-dot {
@@ -1740,17 +1746,49 @@ footer .item ul li a {
 
   .takeaway-card {
     width: 100% !important;
+    display: flex;
+  }
+
+  .takeaway-card div {
+    margin-top: 0 !important;
   }
 
   .lineup-heading {
     width: 60%;
+  }
+
+  .footer-fix {
+    position: relative !important;
+  }
+
+  .masterclass-fixed {
+    border-radius: 16px;
+  }
+
+  .cta-fix {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .button-fixA {
+    border-radius: 0px;
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+
+  .btn-textA {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
   }
 }
 
 .mobile-banner {
   display: none;
 }
-
 
 .price-card {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
@@ -2015,11 +2053,20 @@ footer .item ul li a {
 @media (max-width: 992px) {
   .masterclass-fixed {
     flex-wrap: wrap;
+    padding: 16px !important;
+  }
+
+  .price .new,
+  .price .old {
+    font-size: 20px;
   }
 
   .button {
     padding: 16px;
     flex-wrap: wrap;
+  }
+
+  .modal-button {
     gap: 0;
   }
 
@@ -2039,4 +2086,11 @@ footer .item ul li a {
   .live-badge div {
     justify-content: center;
   }
+}
+
+.footer-fix {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  left: 0;
 }

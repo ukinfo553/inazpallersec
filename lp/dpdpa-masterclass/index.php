@@ -285,7 +285,6 @@ $country = $_SESSION['country'];
                         <div class="item">
                             <div class="fs-28 text-white fw-700" style="color: var(--Soft-Orange, #FFB956);
 font-family: Raleway;
-font-size: 28px;
 font-style: normal;
 line-height: normal;">
                                 Why Attend?
@@ -623,7 +622,6 @@ font-family: Nunito Sans; font-size: 18px; font-style: normal; font-weight: 400;
                             <div class="learning-outcome">
                                 <div class="fs-28 text-white fw-700" style="color: var(--Soft-Orange, #FFB956);
 font-family: Raleway;
-font-size: 28px;
 font-style: normal;
 line-height: normal;">
                                     Learning Outcome
@@ -655,7 +653,6 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                             <div class="learning-outcome">
                                 <div class="fs-28 text-white fw-700" style="color: var(--Soft-Orange, #FFB956);
 font-family: Raleway;
-font-size: 28px;
 font-style: normal;
 line-height: normal; margin-top:36px;">
                                     Materials Provided
@@ -677,7 +674,6 @@ line-height: normal; margin-top:36px;">
                             <div class="my-4" id="key-takeaways">
                                 <div class="fs-28 text-white fw-700" style="color: var(--Soft-Orange, #FFB956);
 font-family: Raleway;
-font-size: 28px;
 font-style: normal;
 line-height: normal; margin-top:36px;">
                                     Key Takeaways
@@ -885,7 +881,6 @@ gap: 16px;">
                             <div class="learning-outcome">
                                 <div class="fs-28 text-white fw-700" style="color: var(--Soft-Orange, #FFB956);
 font-family: Raleway;
-font-size: 28px;
 font-style: normal;
 line-height: normal;">
                                     Target Audience
@@ -913,7 +908,6 @@ font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 400;
                             <div class="learning-outcome">
                                 <div class="fs-28 text-white fw-700" style="color: var(--Soft-Orange, #FFB956);
 font-family: Raleway;
-font-size: 28px;
 font-style: normal;
 line-height: normal; margin-top:36px;">
                                     Prerequisites
@@ -933,7 +927,7 @@ line-height: normal; margin-top:36px;">
                         </div>
 
                         <div class="col-lg-12">
-                            <div style="position: fixed; bottom: 0px; width:100%; left:0;">
+                            <div class="footer-fix">
                                 <div class="d-flex gap-4 masterclass-fixed"
                                     style="overflow: hidden;background: var(--Soft-Orange, #FFB956); padding:24px; justify-content:center; align-items:center;">
                                     <div>
@@ -1028,8 +1022,8 @@ background: rgba(8, 8, 8, 0.30);">
                                         </div>
                                     </div>
                                     <div class=" gap-4 align-items-center mt-2">
-                                        <button class="button modal-btn" modal-title="Join Now">
-                                            <span class="btn-text">Register Now!</span>
+                                        <button class="button modal-btn cta-fix button-fixA" modal-title="Join Now">
+                                            <span class="btn-textA">Register Now!</span>
                                             <span class="price"
                                                 style="display: flex; gap:16px; align-items: center;">
                                                 <span class="old">₹3999/-</span>
@@ -1221,9 +1215,10 @@ background: rgba(8, 8, 8, 0.30);">
                         <div class="error-message email_error"></div>
                     </div>
 
-                    <input type="text" name="me_phone" class="me_phone form-control" placeholder="Mobile">
-                    <div class="error-message mobile_error"></div>
-
+                    <div>
+                        <input type="text" name="me_phone" class="me_phone form-control" placeholder="Mobile">
+                        <div class="error-message mobile_error"></div>
+                    </div>
                     <input type="text" name="me_message" class="me_message form-control"
                         placeholder="Mention your call time preference">
 
