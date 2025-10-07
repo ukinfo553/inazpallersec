@@ -1964,3 +1964,57 @@ footer .item ul li a {
 }
 
 /* details-cta-sec end */
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .hero,
+  .seats {
+    justify-content: center;
+  }
+
+  .hero .col-md-7 {
+    width: 100%;
+  }
+
+  .typing-three {
+    text-align: left;
+  }
+
+  .col-md-5 {
+    width: 100%;
+  }
+
+  .timers {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .masterclass-fixed {
+    flex-wrap: wrap;
+  }
+
+  .button {
+    padding: 16px;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .hero-section {
+    background-image: none !important;
+  }
+
+  .hero-item {
+    align-items: center !important;
+  }
+
+  .live-badge {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .live-badge div {
+    justify-content: center;
+  }
+}

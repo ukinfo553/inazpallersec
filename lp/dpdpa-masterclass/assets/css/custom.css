@@ -452,7 +452,7 @@ h2 {
 
 @media (min-width:768px) {
   h2 {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
@@ -1818,6 +1818,8 @@ footer .item ul li a {
 
   .button {
     padding: 16px;
+    flex-wrap: wrap;
+    gap: 0;
   }
 
   .masterclass-fixed {
