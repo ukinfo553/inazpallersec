@@ -395,8 +395,21 @@ h1 span {
 @media (min-width:768px) {
   h1 {
     font-size: 36px;
-    text-align: center;
+  }
+}
 
+@media (max-width:768px) {
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  p {
+    line-height: 25px !important;
+  }
+
+  ul li {
+    line-height: 25px !important;
   }
 }
 
@@ -638,6 +651,10 @@ nav {
 
   h1 {
     text-align: center;
+  }
+
+  .details-cta-sec {
+    padding: 8px !important;
   }
 }
 
@@ -2068,6 +2085,7 @@ footer .item ul li a {
 
   .modal-button {
     gap: 0;
+    width: 100%;
   }
 
   .hero-section {

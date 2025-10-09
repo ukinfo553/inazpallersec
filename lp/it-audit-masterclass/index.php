@@ -395,8 +395,8 @@ background: rgba(255, 185, 86, 0.50); padding:8px 16px;">
                                         </div>
                                     </div>
                                     <div class="certifications fs-18 text-white f-general-sans">
-                                        CISA | CSX | CISM | CIA (Part 1) | CCAK | Cloud Compliance | Risk & Audit
-                                        Specialist
+                                        <b>CISA | CSX | CISM | CIA (Part 1) | CCAK | Cloud Compliance | Risk & Audit
+                                            Specialist</b>
                                     </div>
                                     <p class="fs-16 f-general-sans text-white">
                                         Aarti is a battle-tested IT audit and risk management professional with deep
@@ -610,7 +610,7 @@ gap: 16px;">
                                     </svg>
 
                                     <div class="fw-400 fs-14 f-general-sans text-white mt-3">
-                                        Earn 6 CPE Credits
+                                        Earn 8 CPE Credits
                                     </div>
                                 </div>
 
