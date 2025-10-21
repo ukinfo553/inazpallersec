@@ -1994,6 +1994,7 @@ thead tr th {
   line-height: normal;
   text-align: left;
   border-left: 1px solid rgba(255, 185, 86, 0.17);
+  width: 50%;
 }
 
 th,

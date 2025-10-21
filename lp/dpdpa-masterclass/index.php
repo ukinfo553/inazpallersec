@@ -990,10 +990,6 @@ font-weight: 400;
 line-height: normal;">7:00 PM - 11:00 PM (IST)</span>
                                             </div>
                                         </div>
-                                        <p
-                                            style="color: black;
-font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 700; line-height: normal; text-align:center; margin-top:8px;">
-                                            9 People have registered</p>
                                     </div>
                                     <div class="d-flex justify-content-center gap-3 px-3 timers">
                                         <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-white rounded"
@@ -1024,13 +1020,17 @@ background: rgba(8, 8, 8, 0.30);">
                                     <div class=" gap-4 align-items-center mt-2">
                                         <button class="button modal-btn cta-fix button-fixA" modal-title="Join Now">
                                             <span class="btn-textA">Register Now!</span>
+
                                             <span class="price"
                                                 style="display: flex; gap:16px; align-items: center;">
                                                 <span class="old">₹3999/-</span>
                                                 <span class="new">₹999/-</span>
                                             </span>
                                         </button>
-
+                                        <p
+                                            style="color: black;
+font-family: Nunito Sans; font-size: 16px; font-style: normal; font-weight: 700; line-height: normal; text-align:center; margin-top:8px;">
+                                            9 People have registered</p>
 
                                     </div>
 
