@@ -227,6 +227,14 @@ $country = $_SESSION['country'];
                                 </button>
                             </div>
 
+                            <div style="margin-top: 24px;">
+                                <a href="assets/DPDPA Implementation Bootcamp.pdf"
+                                    download="DPDPA Implementation Bootcamp Brochure" class="buttonA"
+                                    style="background: transparent; color: #FFB956; border: 1px solid #FFB956; padding:16px 24px; border-radius:8px; font-size:18px;">
+                                    Download Agenda
+                                </a>
+                            </div>
+
                             <!-- <div class="special-offer">
                                     <?php if ($country == 'IN') { ?>
                                     <img src="assets/images/prices/indian-price.png" alt="special-offer"

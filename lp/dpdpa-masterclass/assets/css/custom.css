@@ -2093,3 +2093,13 @@ td {
   width: 100%;
   left: 0;
 }
+
+/* -========= agenda button =========== */
+
+.agenda {
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
