@@ -53,8 +53,8 @@ $country = $_SESSION['country'];
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AI Summit 2025</title>
-        <meta name="description" content="AI Summit 2025">
+        <title>Cybersecurity Awareness Program</title>
+        <meta name="description" content="Cybersecurity Awareness Program">
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="assets/images/favicon.ico">
         <!--/ style link start /-->
@@ -135,13 +135,8 @@ $country = $_SESSION['country'];
             </style>
             <!-- Background Video -->
 
-            <section class="hero-section">
-                <!-- Background Video -->
-                <video class="video-background" autoplay muted loop playsinline>
-                    <source src="assets/videos/background.mp4" type="video/mp4">
-                    <!-- Fallback for browsers that don't support video -->
-                    Your browser does not support the video tag.
-                </video>
+            <section class="hero-section"
+                style="background-image: url(assets/images/DIDAC-Banner.png); background-repeat: no-repeat; background-size: cover; ">
                 <!-- Logo Section -->
 
                 <!-- Main Content -->
@@ -149,13 +144,16 @@ $country = $_SESSION['country'];
                     <div class="row">
                         <div class="col-12">
                             <div class="hero-item d-flex flex-column gap-4 justify-content-center align-items-center">
-                                <img src="assets/images/logo.png" alt="AI Summit 2025" class="img-fluid mb-md-4">
-                                <div>
-                                    <div class="fs-16 f-general-sans text-white mb-md-4"
+                                <img src="assets/images/logo.png" alt="Cybersecurity Awareness Program"
+                                    class="img-fluid mb-md-4">
+                                <div class="top-subheading">
+                                    <!-- <div class="fs-16 f-general-sans text-white mb-md-4"
                                         style="text-transform: uppercase;letter-spacing: 16px;font-weight: 200;">
                                         PRESENTS
-                                    </div>
-                                    <h1 id="typing-one"></h1>
+                                    </div> -->
+                                    <h1 id="typing-one">Cybersecurity Awareness Program</h1>
+                                    <h2>How to Stay Safe Online</h2>
+                                    <p sty>Complimentary Training for the Cyber Warriors of DIDAC India 2025</p>
 
                                 </div>
                                 <div class="live-badge align-items-center d-flex gap-md-4 gap-2 p-3">
@@ -164,43 +162,43 @@ $country = $_SESSION['country'];
                                         <div class="fs-24 f-general-sans text-white d-flex gap-3 align-items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <g clip-path="url(#clip0_23541_758)">
+                                                <g clip-path="url(#clip0_30753_155)">
                                                     <path
                                                         d="M18.5 2H18V1.5C18 0.671 17.328 0 16.5 0C15.672 0 15 0.671 15 1.5V2H9V1.5C9 0.671 8.328 0 7.5 0C6.672 0 6 0.671 6 1.5V2H5.5C2.468 2 0 4.467 0 7.5V18.5C0 21.533 2.468 24 5.5 24H18.5C21.532 24 24 21.533 24 18.5V7.5C24 4.467 21.532 2 18.5 2ZM18.5 21H5.5C4.121 21 3 19.878 3 18.5V9H21V18.5C21 19.878 19.879 21 18.5 21ZM10 12.5V14.5C10 15.328 9.328 16 8.5 16H6.5C5.672 16 5 15.328 5 14.5V12.5C5 11.672 5.672 11 6.5 11H8.5C9.328 11 10 11.672 10 12.5Z"
-                                                        fill="#21D6FF" />
+                                                        fill="#FFB956" />
                                                 </g>
                                                 <defs>
-                                                    <clipPath id="clip0_23541_758">
+                                                    <clipPath id="clip0_30753_155">
                                                         <rect width="24" height="24" fill="white" />
                                                     </clipPath>
                                                 </defs>
                                             </svg>
-                                            <span>26 & 27 July, 2025</span>
+                                            <span>14th December 2025</span>
                                         </div>
                                         <div class="fs-24 f-general-sans text-white d-flex gap-3 align-items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none">
-                                                <g clip-path="url(#clip0_23541_762)">
+                                                <g clip-path="url(#clip0_30753_159)">
                                                     <path
                                                         d="M13.4964 2.115V1.5C13.4964 1.10218 13.3384 0.720644 13.0571 0.43934C12.7758 0.158035 12.3942 0 11.9964 0C11.5986 0 11.2171 0.158035 10.9358 0.43934C10.6544 0.720644 10.4964 1.10218 10.4964 1.5V2.115C8.58877 2.37259 6.78252 3.1277 5.25914 4.30446C3.73576 5.48123 2.54892 7.03819 1.81786 8.81892C1.0868 10.5997 0.83727 12.5414 1.09435 14.4491C1.35143 16.3569 2.10606 18.1633 3.28242 19.687C2.86837 20.0273 2.53735 20.4575 2.31451 20.945C2.09167 21.4324 1.98289 21.9642 1.99642 22.5C1.99642 22.8978 2.15445 23.2794 2.43576 23.5607C2.71706 23.842 3.09859 24 3.49642 24C3.89424 24 4.27577 23.842 4.55708 23.5607C4.83838 23.2794 4.99641 22.8978 4.99641 22.5C4.98113 22.3514 5.01824 22.2021 5.10131 22.078C5.18439 21.9538 5.30822 21.8626 5.45141 21.82C7.3399 23.2341 9.63566 23.9984 11.9949 23.9984C14.3542 23.9984 16.6499 23.2341 18.5384 21.82C18.6822 21.862 18.8067 21.953 18.8903 22.0772C18.974 22.2014 19.0115 22.351 18.9964 22.5C18.9964 22.8978 19.1545 23.2794 19.4358 23.5607C19.7171 23.842 20.0986 24 20.4964 24C20.8942 24 21.2758 23.842 21.5571 23.5607C21.8384 23.2794 21.9964 22.8978 21.9964 22.5C22.0099 21.9642 21.9012 21.4324 21.6783 20.945C21.4555 20.4575 21.1245 20.0273 20.7104 19.687C21.8868 18.1633 22.6414 16.3569 22.8985 14.4491C23.1556 12.5414 22.906 10.5997 22.175 8.81892C21.4439 7.03819 20.2571 5.48123 18.7337 4.30446C17.2103 3.1277 15.4041 2.37259 13.4964 2.115ZM3.99642 13C3.99642 11.4177 4.46561 9.87103 5.34466 8.55544C6.22371 7.23984 7.47314 6.21447 8.93495 5.60896C10.3968 5.00346 12.0053 4.84504 13.5571 5.15372C15.109 5.4624 16.5344 6.22433 17.6533 7.34315C18.7721 8.46197 19.534 9.88743 19.8427 11.4393C20.1514 12.9911 19.993 14.5997 19.3875 16.0615C18.782 17.5233 17.7566 18.7727 16.441 19.6518C15.1254 20.5308 13.5787 21 11.9964 21C9.87541 20.9976 7.84197 20.154 6.34219 18.6542C4.84242 17.1544 3.9988 15.121 3.99642 13Z"
-                                                        fill="#21D6FF" />
+                                                        fill="#FFB956" />
                                                     <path
                                                         d="M19.5 0.0019296C19.1022 0.0019296 18.7206 0.159965 18.4393 0.441269C18.158 0.722574 18 1.1041 18 1.50193C18 1.89975 18.158 2.28129 18.4393 2.56259C18.7206 2.84389 19.1022 3.00193 19.5 3.00193C19.6991 2.98644 19.8992 3.01496 20.086 3.08547C20.2729 3.15597 20.4419 3.26673 20.5812 3.40988C20.7204 3.55304 20.8264 3.72509 20.8917 3.91382C20.957 4.10254 20.98 4.30333 20.959 4.50193C20.959 4.89975 21.117 5.28129 21.3983 5.56259C21.6796 5.84389 22.0612 6.00193 22.459 6.00193C22.8568 6.00193 23.2384 5.84389 23.5197 5.56259C23.801 5.28129 23.959 4.89975 23.959 4.50193C23.9822 3.90825 23.883 3.31616 23.6676 2.76243C23.4523 2.20871 23.1254 1.70519 22.7072 1.28316C22.289 0.861131 21.7885 0.529611 21.2368 0.309201C20.685 0.0887915 20.0939 -0.0157988 19.5 0.0019296Z"
-                                                        fill="#21D6FF" />
+                                                        fill="#FFB956" />
                                                     <path
                                                         d="M3.03845 4.50193C3.01745 4.30333 3.04042 4.10254 3.10572 3.91382C3.17102 3.72509 3.27705 3.55304 3.41629 3.40988C3.55554 3.26673 3.72458 3.15597 3.91143 3.08547C4.09827 3.01496 4.29835 2.98644 4.49745 3.00193C4.89528 3.00193 5.27681 2.84389 5.55811 2.56259C5.83942 2.28129 5.99745 1.89975 5.99745 1.50193C5.99745 1.1041 5.83942 0.722574 5.55811 0.441269C5.27681 0.159965 4.89528 0.0019296 4.49745 0.0019296C3.90359 -0.0157988 3.31243 0.0887915 2.76069 0.309201C2.20896 0.529611 1.70846 0.861131 1.29027 1.28316C0.872089 1.70519 0.545164 2.20871 0.329814 2.76243C0.114463 3.31616 0.0152876 3.90825 0.0384507 4.50193C0.0384507 4.89975 0.196486 5.28129 0.477791 5.56259C0.759095 5.84389 1.14063 6.00193 1.53845 6.00193C1.93628 6.00193 2.31781 5.84389 2.59911 5.56259C2.88042 5.28129 3.03845 4.89975 3.03845 4.50193Z"
-                                                        fill="#21D6FF" />
+                                                        fill="#FFB956" />
                                                     <path
                                                         d="M13.5352 12.379V8.5C13.5352 8.10218 13.3771 7.72064 13.0958 7.43934C12.8145 7.15804 12.433 7 12.0352 7C11.6373 7 11.2558 7.15804 10.9745 7.43934C10.6932 7.72064 10.5352 8.10218 10.5352 8.5V12.793C10.5353 13.3234 10.7461 13.832 11.1212 14.207L12.9142 16C13.1971 16.2732 13.576 16.4244 13.9693 16.421C14.3626 16.4176 14.7388 16.2598 15.0169 15.9817C15.295 15.7036 15.4527 15.3274 15.4562 14.9341C15.4596 14.5408 15.3084 14.1619 15.0352 13.879L13.5352 12.379Z"
-                                                        fill="#21D6FF" />
+                                                        fill="#FFB956" />
                                                 </g>
                                                 <defs>
-                                                    <clipPath id="clip0_23541_762">
+                                                    <clipPath id="clip0_30753_159">
                                                         <rect width="24" height="24" fill="white" />
                                                     </clipPath>
                                                 </defs>
                                             </svg>
-                                            <span>10 AM - 6 PM (IST)</span>
+                                            <span>9:00 AM - 1:00 PM (IST)</span>
                                         </div>
                                     </div>
                                 </div>
@@ -209,33 +207,33 @@ $country = $_SESSION['country'];
                                 <div
                                     class="d-flex flex-wrap justify-content-md-start justify-content-center gap-3 feature-boxes">
                                     <div class="feature-box d-flex align-items-center gap-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            viewBox="0 0 16 16" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
                                             <path
-                                                d="M11.8878 1.42681L7.71121 0.03416C7.57446 -0.0113867 7.42664 -0.0113867 7.28989 0.03416L3.11328 1.42681C2.44923 1.64739 1.87158 2.07163 1.46241 2.63926C1.05323 3.20689 0.833343 3.88903 0.833986 4.58876V8.00004C0.833986 13.042 6.96722 15.8266 7.22989 15.9426C7.3151 15.9804 7.40731 16 7.50055 16C7.59379 16 7.686 15.9804 7.77121 15.9426C8.03387 15.8266 14.1671 13.042 14.1671 8.00004V4.58876C14.1678 3.88903 13.9479 3.20689 13.5387 2.63926C13.1295 2.07163 12.5519 1.64739 11.8878 1.42681ZM10.6458 6.47806L7.79788 9.32602C7.68134 9.44334 7.54265 9.53634 7.38987 9.59963C7.23709 9.66292 7.07326 9.69522 6.90789 9.69468H6.88589C6.71716 9.69209 6.5507 9.65531 6.39658 9.58656C6.24246 9.51781 6.10389 9.41852 5.98924 9.29469L4.45193 7.69471C4.38535 7.63294 4.3321 7.55822 4.29543 7.47513C4.25877 7.39204 4.23947 7.30233 4.23872 7.21151C4.23797 7.1207 4.25578 7.03068 4.29107 6.947C4.32635 6.86331 4.37836 6.78772 4.44391 6.72486C4.50946 6.66199 4.58716 6.61318 4.67224 6.58143C4.75733 6.54967 4.84801 6.53563 4.93871 6.54018C5.02942 6.54472 5.11824 6.56775 5.19973 6.60786C5.28121 6.64796 5.35365 6.70429 5.41258 6.77339L6.90856 8.33337L9.70052 5.53341C9.82625 5.41197 9.99465 5.34478 10.1694 5.3463C10.3442 5.34782 10.5114 5.41793 10.635 5.54153C10.7587 5.66513 10.8288 5.83234 10.8303 6.00713C10.8318 6.18193 10.7646 6.35033 10.6432 6.47606L10.6458 6.47806Z"
-                                                fill="#00FFFF"></path>
+                                                d="M18.081 2.14021L11.816 0.05124C11.6109 -0.01708 11.3891 -0.01708 11.184 0.05124L4.919 2.14021C3.92291 2.47108 3.05642 3.10745 2.44265 3.95889C1.82887 4.81033 1.49904 5.83354 1.5 6.88314V12.0001C1.5 19.5629 10.7 23.7399 11.094 23.9139C11.2218 23.9707 11.3601 24 11.5 24C11.6399 24 11.7782 23.9707 11.906 23.9139C12.3 23.7399 21.5 19.5629 21.5 12.0001V6.88314C21.501 5.83354 21.1711 4.81033 20.5574 3.95889C19.9436 3.10745 19.0771 2.47108 18.081 2.14021ZM16.218 9.71709L11.946 13.989C11.7712 14.165 11.5631 14.3045 11.334 14.3994C11.1048 14.4944 10.8591 14.5428 10.611 14.542H10.578C10.3249 14.5381 10.0752 14.483 9.84402 14.3798C9.61284 14.2767 9.40498 14.1278 9.233 13.942L6.927 11.5421C6.82713 11.4494 6.74725 11.3373 6.69225 11.2127C6.63726 11.0881 6.60831 10.9535 6.60718 10.8173C6.60606 10.681 6.63278 10.546 6.6857 10.4205C6.73863 10.295 6.81665 10.1816 6.91497 10.0873C7.01329 9.99299 7.12985 9.91978 7.25748 9.87214C7.38511 9.82451 7.52113 9.80345 7.65719 9.81027C7.79325 9.81709 7.92648 9.85163 8.04871 9.91179C8.17095 9.97194 8.2796 10.0564 8.368 10.1601L10.612 12.5L14.8 8.30011C14.9886 8.11796 15.2412 8.01717 15.5034 8.01944C15.7656 8.02172 16.0164 8.12689 16.2018 8.31229C16.3872 8.4977 16.4924 8.74851 16.4947 9.0107C16.497 9.27289 16.3962 9.52549 16.214 9.71409L16.218 9.71709Z"
+                                                fill="#FFB956" />
                                         </svg>
-                                        <span>15+ AI Tools</span>
+                                        <span>4 Hours</span>
                                     </div>
 
                                     <div class="feature-box d-flex align-items-center gap-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            viewBox="0 0 16 16" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
                                             <path
-                                                d="M11.8878 1.42681L7.71121 0.03416C7.57446 -0.0113867 7.42664 -0.0113867 7.28989 0.03416L3.11328 1.42681C2.44923 1.64739 1.87158 2.07163 1.46241 2.63926C1.05323 3.20689 0.833343 3.88903 0.833986 4.58876V8.00004C0.833986 13.042 6.96722 15.8266 7.22989 15.9426C7.3151 15.9804 7.40731 16 7.50055 16C7.59379 16 7.686 15.9804 7.77121 15.9426C8.03387 15.8266 14.1671 13.042 14.1671 8.00004V4.58876C14.1678 3.88903 13.9479 3.20689 13.5387 2.63926C13.1295 2.07163 12.5519 1.64739 11.8878 1.42681ZM10.6458 6.47806L7.79788 9.32602C7.68134 9.44334 7.54265 9.53634 7.38987 9.59963C7.23709 9.66292 7.07326 9.69522 6.90789 9.69468H6.88589C6.71716 9.69209 6.5507 9.65531 6.39658 9.58656C6.24246 9.51781 6.10389 9.41852 5.98924 9.29469L4.45193 7.69471C4.38535 7.63294 4.3321 7.55822 4.29543 7.47513C4.25877 7.39204 4.23947 7.30233 4.23872 7.21151C4.23797 7.1207 4.25578 7.03068 4.29107 6.947C4.32635 6.86331 4.37836 6.78772 4.44391 6.72486C4.50946 6.66199 4.58716 6.61318 4.67224 6.58143C4.75733 6.54967 4.84801 6.53563 4.93871 6.54018C5.02942 6.54472 5.11824 6.56775 5.19973 6.60786C5.28121 6.64796 5.35365 6.70429 5.41258 6.77339L6.90856 8.33337L9.70052 5.53341C9.82625 5.41197 9.99465 5.34478 10.1694 5.3463C10.3442 5.34782 10.5114 5.41793 10.635 5.54153C10.7587 5.66513 10.8288 5.83234 10.8303 6.00713C10.8318 6.18193 10.7646 6.35033 10.6432 6.47606L10.6458 6.47806Z"
-                                                fill="#00FFFF"></path>
+                                                d="M18.081 2.14021L11.816 0.05124C11.6109 -0.01708 11.3891 -0.01708 11.184 0.05124L4.919 2.14021C3.92291 2.47108 3.05642 3.10745 2.44265 3.95889C1.82887 4.81033 1.49904 5.83354 1.5 6.88314V12.0001C1.5 19.5629 10.7 23.7399 11.094 23.9139C11.2218 23.9707 11.3601 24 11.5 24C11.6399 24 11.7782 23.9707 11.906 23.9139C12.3 23.7399 21.5 19.5629 21.5 12.0001V6.88314C21.501 5.83354 21.1711 4.81033 20.5574 3.95889C19.9436 3.10745 19.0771 2.47108 18.081 2.14021ZM16.218 9.71709L11.946 13.989C11.7712 14.165 11.5631 14.3045 11.334 14.3994C11.1048 14.4944 10.8591 14.5428 10.611 14.542H10.578C10.3249 14.5381 10.0752 14.483 9.84402 14.3798C9.61284 14.2767 9.40498 14.1278 9.233 13.942L6.927 11.5421C6.82713 11.4494 6.74725 11.3373 6.69225 11.2127C6.63726 11.0881 6.60831 10.9535 6.60718 10.8173C6.60606 10.681 6.63278 10.546 6.6857 10.4205C6.73863 10.295 6.81665 10.1816 6.91497 10.0873C7.01329 9.99299 7.12985 9.91978 7.25748 9.87214C7.38511 9.82451 7.52113 9.80345 7.65719 9.81027C7.79325 9.81709 7.92648 9.85163 8.04871 9.91179C8.17095 9.97194 8.2796 10.0564 8.368 10.1601L10.612 12.5L14.8 8.30011C14.9886 8.11796 15.2412 8.01717 15.5034 8.01944C15.7656 8.02172 16.0164 8.12689 16.2018 8.31229C16.3872 8.4977 16.4924 8.74851 16.4947 9.0107C16.497 9.27289 16.3962 9.52549 16.214 9.71409L16.218 9.71709Z"
+                                                fill="#FFB956" />
                                         </svg>
-                                        <span>Real-world Use Cases</span>
+                                        <span>4 CPEs</span>
                                     </div>
 
                                     <div class="feature-box d-flex align-items-center gap-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            viewBox="0 0 16 16" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none">
                                             <path
-                                                d="M11.8878 1.42681L7.71121 0.03416C7.57446 -0.0113867 7.42664 -0.0113867 7.28989 0.03416L3.11328 1.42681C2.44923 1.64739 1.87158 2.07163 1.46241 2.63926C1.05323 3.20689 0.833343 3.88903 0.833986 4.58876V8.00004C0.833986 13.042 6.96722 15.8266 7.22989 15.9426C7.3151 15.9804 7.40731 16 7.50055 16C7.59379 16 7.686 15.9804 7.77121 15.9426C8.03387 15.8266 14.1671 13.042 14.1671 8.00004V4.58876C14.1678 3.88903 13.9479 3.20689 13.5387 2.63926C13.1295 2.07163 12.5519 1.64739 11.8878 1.42681ZM10.6458 6.47806L7.79788 9.32602C7.68134 9.44334 7.54265 9.53634 7.38987 9.59963C7.23709 9.66292 7.07326 9.69522 6.90789 9.69468H6.88589C6.71716 9.69209 6.5507 9.65531 6.39658 9.58656C6.24246 9.51781 6.10389 9.41852 5.98924 9.29469L4.45193 7.69471C4.38535 7.63294 4.3321 7.55822 4.29543 7.47513C4.25877 7.39204 4.23947 7.30233 4.23872 7.21151C4.23797 7.1207 4.25578 7.03068 4.29107 6.947C4.32635 6.86331 4.37836 6.78772 4.44391 6.72486C4.50946 6.66199 4.58716 6.61318 4.67224 6.58143C4.75733 6.54967 4.84801 6.53563 4.93871 6.54018C5.02942 6.54472 5.11824 6.56775 5.19973 6.60786C5.28121 6.64796 5.35365 6.70429 5.41258 6.77339L6.90856 8.33337L9.70052 5.53341C9.82625 5.41197 9.99465 5.34478 10.1694 5.3463C10.3442 5.34782 10.5114 5.41793 10.635 5.54153C10.7587 5.66513 10.8288 5.83234 10.8303 6.00713C10.8318 6.18193 10.7646 6.35033 10.6432 6.47606L10.6458 6.47806Z"
-                                                fill="#00FFFF"></path>
+                                                d="M18.081 2.14021L11.816 0.05124C11.6109 -0.01708 11.3891 -0.01708 11.184 0.05124L4.919 2.14021C3.92291 2.47108 3.05642 3.10745 2.44265 3.95889C1.82887 4.81033 1.49904 5.83354 1.5 6.88314V12.0001C1.5 19.5629 10.7 23.7399 11.094 23.9139C11.2218 23.9707 11.3601 24 11.5 24C11.6399 24 11.7782 23.9707 11.906 23.9139C12.3 23.7399 21.5 19.5629 21.5 12.0001V6.88314C21.501 5.83354 21.1711 4.81033 20.5574 3.95889C19.9436 3.10745 19.0771 2.47108 18.081 2.14021ZM16.218 9.71709L11.946 13.989C11.7712 14.165 11.5631 14.3045 11.334 14.3994C11.1048 14.4944 10.8591 14.5428 10.611 14.542H10.578C10.3249 14.5381 10.0752 14.483 9.84402 14.3798C9.61284 14.2767 9.40498 14.1278 9.233 13.942L6.927 11.5421C6.82713 11.4494 6.74725 11.3373 6.69225 11.2127C6.63726 11.0881 6.60831 10.9535 6.60718 10.8173C6.60606 10.681 6.63278 10.546 6.6857 10.4205C6.73863 10.295 6.81665 10.1816 6.91497 10.0873C7.01329 9.99299 7.12985 9.91978 7.25748 9.87214C7.38511 9.82451 7.52113 9.80345 7.65719 9.81027C7.79325 9.81709 7.92648 9.85163 8.04871 9.91179C8.17095 9.97194 8.2796 10.0564 8.368 10.1601L10.612 12.5L14.8 8.30011C14.9886 8.11796 15.2412 8.01717 15.5034 8.01944C15.7656 8.02172 16.0164 8.12689 16.2018 8.31229C16.3872 8.4977 16.4924 8.74851 16.4947 9.0107C16.497 9.27289 16.3962 9.52549 16.214 9.71409L16.218 9.71709Z"
+                                                fill="#FFB956" />
                                         </svg>
-                                        <span>C-Suite Ready Insights</span>
+                                        <span>Hands-on Sessions</span>
                                     </div>
                                 </div>
 
@@ -249,112 +247,94 @@ $country = $_SESSION['country'];
             </section>
             <!--banner sec end-->
 
-            <section class="p-lg-0 pt-0" style="background: #0A0017;">
-                <div class="container">
-                    <div class="row g-4 flex-column-reverse flex-md-row align-items-center">
-                        <div class="col-md-8">
-                            <h2>
-                                Master Tools, Build Trust <br> & Lead the <span id="typing-two" class="f-unicephalon"
-                                    style="background: linear-gradient(89deg, #2738ED 0%, #6C0AE2 98.66%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; /* For Firefox */
-  color: transparent;">AI Revolution</span>
-                            </h2>
-                        </div>
 
-                        <div class="col-md-4">
-                            <?php if ($country == 'IN') { ?>
-                                <img src="assets/images/prices/inr-offer.png" alt="AI Summit 2025" class="w-100 d-block">
-                            <?php } else { ?>
-                                <img src="assets/images/prices/usd-offer.png" alt="AI Summit 2025" class="w-100 d-block">
-                            <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section
+            <section id="why-attend"
                 style="background: #0A0017;background-image: url('assets/images/gradient-background.png');background-size: cover;background-position: center;background-size:contain;">
                 <div class="container">
                     <div class="row flex-column-reverse flex-lg-row">
                         <div class="col-lg-8 mt-4 mt-lg-0">
                             <div class="item">
-                                <div class="fs-24 text-white fw-600 f-general-sans" style="color:#21D6FF;">
+                                <div class="fs-24 text-white fw-600 f-general-sans" style="color:#FFB956;">
                                     Why Attend?
                                 </div>
                                 <p class="mt-3 text-white f-general-sans">
-                                    AI Summit 2025 isn’t just about learning AI - it's about mastering how to use it.
-                                    Across
-                                    two high-impact days, you'll gain hands-on exposure to 15+ breakthrough tools, see
-                                    exactly how leading organizations are applying AI to drive growth, and walk away
-                                    with
-                                    strategies you can implement immediately. From productivity to privacy, from
-                                    governance
-                                    to growth, this is where future-ready leaders come to sharpen their edge and shape
-                                    the
-                                    AI revolution.
+                                    Cyber threats are evolving rapidly. From UPI scams to deepfake frauds, criminals are
+                                    targeting Indians with alarming precision. This FREE 4-hour intensive training is
+                                    your shield against these threats.
                                 </p>
-                                <p class="mt-3 text-white f-general-sans">
-                                    Join global experts and forward-thinking peers to gain the skills, insights, and
-                                    confidence to drive real change in your organization, starting now!
-                                </p>
-                            </div>
-
-                            <div class="fs-24 text-white fw-600 f-general-sans mt-5 mb-4" style="color:#21D6FF;"
-                                id="experts">
-                                Speaker Lineup
-                            </div>
-
-                            <div class="row row-cols-2 row-cols-lg-4 g-3 mb-3">
-
-                                <div class="col">
-                                    <img src="assets/images/speakers/shakti-v2.png" alt="Shakti AI Speaker"
-                                        class="w-100 d-block speakers">
-                                </div>
-                                <div class="col">
-                                    <img src="assets/images/speakers/dr-ram.png" alt="Dr. Ram AI Speaker"
-                                        class="w-100 d-block speakers">
-                                </div>
-                                <div class="col">
-                                    <img src="assets/images/speakers/prabh.png" alt="Prabh Nair AI Speaker"
-                                        class="w-100 d-block speakers">
-                                </div>
-                                <div class="col">
-                                    <img src="assets/images/speakers/krish.png" alt="Krish AI Speaker"
-                                        class="w-100 d-block speakers">
+                                <div class="learning-cards mt-4 d-flex flex-wrap gap-4">
+                                    <div class="learning-card">
+                                        <div>
+                                            <h3 class="mt-0">What sets this training apart:</h3>
+                                            <ul>
+                                                <li><b>Hands-On Learning</b> - Identify, exploit, and fix coding flaws
+                                                    across real-world use cases.</li>
+                                                <li><b>OWASP Mastery</b> - Deep dive into the Top 10 vulnerabilities
+                                                    that threaten modern applications.</li>
+                                                <li><b>Secure Design Skills</b> - Learn to integrate security by design
+                                                    principles into every stage of development.</li>
+                                                <li><b>Compliance Awareness</b> - Understand GDPR and privacy-by-design
+                                                    principles for secure data handling.</li>
+                                                <li><b>Career Growth</b> - Gain hands-on experience, earn 8 CPEs, and
+                                                    strengthen your application security profile.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <div class="fs-28 text-white fw-700 mt-5 mb-4 lineup-heading" style="color: var(--Soft-Orange, #FFB956);
+font-family: Raleway;
+font-style: normal;
+line-height: normal;" id="experts">
+                                Expert Speaker
+                            </div>
 
-                            <div class="row row-cols-2 row-cols-lg-4 g-3">
+                            <div class="g-3 mb-3">
 
-                                <div class="col">
-                                    <img src="assets/images/speakers/kiran.png" alt="Kiran AI Speaker"
-                                        class="w-100 d-block speakers">
+                                <div class="col instructor-profile"
+                                    style="display: flex; gap:24px; align-items:start; flex-wrap: wrap;">
+                                    <img src="assets/images/speakers/Sanyam.png" alt="Sanyam">
+                                    <div class="trainer-profile col-md-9">
+                                        <div class="trainer-title">
+                                            <h3>Ashish Dhyani</h3>
+                                            <p>10+ Years of Experience</p>
+                                        </div>
+                                        <div class="certificates">
+                                            <p>Network+ | Security+ | Pentest+ | CEH | CND | ECSA | CCNA | ECDE |
+                                                CPENT | LPT | OSCP</p>
+                                            <p>Ashish Dhyani is an accomplished cybersecurity and network security
+                                                professional, known for blending technical precision with practical
+                                                application. He has delivered 30+ training programs annually,
+                                                mentoring over 250 professionals worldwide in practical network
+                                                defense, penetration testing, and exploit development. </p>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                <div class="col">
-                                    <img src="assets/images/speakers/jai.png" alt="Jai AI Speaker"
-                                        class="w-100 d-block speakers">
-                                </div>
-                                <div class="col">
-                                    <img src="assets/images/speakers/anas.png" alt="Anas AI Speaker"
-                                        class="w-100 d-block speakers">
-                                </div>
-                                <div class="col">
-                                    <img src="assets/images/speakers/avinish.png" alt="Avinish AI Speaker"
-                                        class="w-100 d-block speakers">
+                                <div class="learning-card mt-4">
+                                    <div>
+                                        <h3>His specializations include:</h3>
+                                        <ul>
+                                            <li>Internal & external vulnerability assessment and penetration testing
+                                                (manual + tools).</li>
+                                            <li>Cyber Threat Intelligence and Digital Forensics operations.</li>
+                                            <li>Secure application and infrastructure design aligned with global
+                                                standards.</li>
+                                            <li>OSINT-based threat analysis and mitigation.</li>
+                                            <li>Advanced red teaming, exploit development, and VAPT reporting.</li>
+                                        </ul>
+
+                                        <p class="mt-2">Ashish's teaching style focuses on real-world threats,
+                                            enabling participants to code, test, and defend with confidence.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!--price tag start-->
-                            <!-- <picture class="my-5 d-block">
-                            <source media="(min-width:768px)" srcset="assets/images/prices/desk.png">
-                            <img src="assets/images/prices/mob.png" alt="Flowers" class="w-100 d-block">
-                        </picture> -->
-                            <!--price tag end-->
 
-                            <div class="my-4" id="key-takeaways">
+                            <!-- <div class="my-4" id="key-takeaways">
                                 <div class="fs-24 text-white fw-600 f-general-sans mt-5 mb-4" style="color:#21D6FF;">
                                     Key Takeaways
                                 </div>
@@ -440,60 +420,64 @@ $country = $_SESSION['country'];
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
 
-                            <div class="fs-24 text-white fw-600 f-general-sans my-4" style="color:#21D6FF;"
+                            <div class="fs-24 text-white fw-600 f-general-sans my-4" style="color:#FFB956;"
                                 id="masterclass-agenda">
-                                AI Summit Agenda
+                                Agenda
                             </div>
 
                             <div class="faq-wrapper">
-                                <!--/ faq item /-->
-                                <div class="d-flex gap-3 text-white align-items-center f-general-sans fs-16">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <g clip-path="url(#clip0_23541_857)">
-                                            <path
-                                                d="M13.5727 9.66667L13.416 9.63067C13.0739 8.85714 12.4872 8.21742 11.7461 7.80993C11.0049 7.40244 10.1504 7.24974 9.314 7.37533C8.43624 7.51529 7.63553 7.95909 7.05164 8.62924C6.46774 9.2994 6.13777 10.1533 6.11933 11.042C6.11772 11.1773 6.12618 11.3126 6.14467 11.4467C5.68248 11.632 5.29086 11.9589 5.02601 12.3806C4.76116 12.8023 4.63669 13.297 4.67045 13.7938C4.70422 14.2907 4.89448 14.764 5.21394 15.146C5.53341 15.528 5.96565 15.7989 6.44867 15.92C6.64247 15.9695 6.84134 15.9966 7.04133 16.0007H12.786C13.0178 15.9964 13.2485 15.9684 13.4747 15.9173C14.1814 15.7621 14.815 15.3729 15.2728 14.8126C15.7307 14.2523 15.9859 13.5539 15.9973 12.8304C16.0086 12.107 15.7754 11.4009 15.3353 10.8266C14.8952 10.2522 14.2742 9.84328 13.5727 9.666V9.66667ZM13.962 13.078C13.9047 13.2965 13.7883 13.495 13.6255 13.6517C13.4627 13.8084 13.2599 13.9171 13.0393 13.966C12.95 13.9867 12.8589 13.9985 12.7673 14.0013H7.07C7.02791 14.0004 6.98607 13.9946 6.94533 13.984C6.88327 13.9672 6.82638 13.9351 6.77982 13.8908C6.73326 13.8464 6.69849 13.7912 6.67867 13.73C6.62 13.5127 6.846 13.3073 7.024 13.248C7.40651 13.1118 7.72889 12.8453 7.93464 12.4952C8.14039 12.1451 8.21639 11.7338 8.14933 11.3333C8.13177 11.2504 8.12173 11.1661 8.11933 11.0813C8.12171 10.9464 8.13938 10.8122 8.172 10.6813C8.24925 10.3428 8.42622 10.0352 8.68006 9.7982C8.9339 9.56124 9.25294 9.40582 9.596 9.352C10.0008 9.28924 10.415 9.36137 10.7747 9.55726C11.1344 9.75315 11.4198 10.0619 11.5867 10.436C11.7137 10.7401 11.9164 11.0066 12.1754 11.2103C12.4344 11.4141 12.7412 11.5482 13.0667 11.6C13.381 11.6775 13.6518 11.8764 13.8196 12.1532C13.9874 12.4301 14.0387 12.7621 13.962 13.0767V13.078ZM4.91867 9.16133L3.26667 10.8113C3.07603 10.9804 2.82802 11.0704 2.5733 11.0628C2.31858 11.0552 2.07637 10.9507 1.89613 10.7705C1.7159 10.5904 1.61124 10.3482 1.60353 10.0935C1.59582 9.83877 1.68565 9.59072 1.85467 9.4L2.886 8.368C2.69636 8.04494 2.5536 7.69657 2.462 7.33333H1C0.734783 7.33333 0.48043 7.22798 0.292893 7.04044C0.105357 6.8529 0 6.59855 0 6.33333C0 6.06812 0.105357 5.81376 0.292893 5.62623C0.48043 5.43869 0.734783 5.33333 1 5.33333H2.46667C2.56017 4.97242 2.70379 4.62639 2.89333 4.30533L1.85467 3.26667C1.68565 3.07595 1.59582 2.8279 1.60353 2.57318C1.61124 2.31847 1.7159 2.07631 1.89613 1.89615C2.07637 1.716 2.31858 1.61146 2.5733 1.60387C2.82802 1.59628 3.07603 1.68623 3.26667 1.85533L4.30533 2.89133C4.6265 2.70248 4.97252 2.55954 5.33333 2.46667V1C5.33333 0.734784 5.43869 0.48043 5.62623 0.292893C5.81376 0.105357 6.06812 0 6.33333 0C6.59855 0 6.8529 0.105357 7.04044 0.292893C7.22798 0.48043 7.33333 0.734784 7.33333 1V2.46667C7.69517 2.55867 8.04217 2.70141 8.364 2.89067L9.4 1.85533C9.59064 1.68623 9.83864 1.59628 10.0934 1.60387C10.3481 1.61146 10.5903 1.716 10.7705 1.89615C10.9508 2.07631 11.0554 2.31847 11.0631 2.57318C11.0708 2.8279 10.981 3.07595 10.812 3.26667L9.77267 4.308C9.82067 4.39067 9.87467 4.46867 9.91733 4.55533C10.0353 4.79297 10.054 5.06772 9.96933 5.31914C9.88469 5.57057 9.70363 5.77807 9.466 5.896C9.22837 6.01393 8.95362 6.03264 8.70219 5.94799C8.45077 5.86335 8.24327 5.6823 8.12533 5.44467C6.62533 2.75667 2.85267 5.468 4.91933 7.748C5.10651 7.93559 5.21158 8.18981 5.21145 8.45481C5.21133 8.71981 5.10602 8.97392 4.91867 9.16133Z"
-                                                fill="white" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_23541_857">
-                                                <rect width="16" height="16" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    <span>Day 1</span>
-                                    <span>26 July</span>
-                                </div>
+
                                 <div class="faq-item active open">
                                     <h3 class="faq-title">
                                         <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/kiran1.png" alt="">
                                             <div
                                                 class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600"> Introduction to AI/ML - Kiran (10 AM - 12
-                                                    PM)</strong>
+                                                <strong class="fw-600"> Module 1: India's Top Scams & Red Flags</strong>
                                             </div>
                                         </span>
                                         <span class="right-icon"></span>
                                     </h3>
                                     <div class="faq-content">
-                                        <p class="mb-3 fw-bold">AI Explained: No Jargon, Just Breakthroughs</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
                                         <ul>
-                                            <li>Demystifying AI/ML: Core concepts simplified for practical
-                                                understanding.
+                                            <li><b>Learning Outcomes:</b>
+                                                <ul>
+                                                    <li>Identify 5 major scams in India (UPI, QR, KYC, FASTag, parcel,
+                                                        fake support).</li>
+                                                    <li>Recognize at least 3 red flags that indicate a scam.</li>
+                                                    <li>Apply quick phone hygiene measures to reduce risk.</li>
+                                                </ul>
                                             </li>
-                                            <li>AI in Action: Real-world applications across diverse industries.</li>
-                                            <li>Key Techniques: Understanding neural networks, NLP, and computer vision.
+
+                                            <li><b>Topics:</b>
+                                                <ul>
+                                                    <li>UPI & QR scams - collect requests, fake “receive money” QR.</li>
+                                                    <li>KYC/FASTag fraud - fake SMS links for recharge/update.</li>
+                                                    <li>Parcel/customs duty frauds - IVR calls demanding payment.</li>
+                                                    <li>Fake support scams - remote access apps like AnyDesk.</li>
+                                                    <li>Common red flags - urgency, shortened links, new channels.</li>
+                                                    <li>Phone Hygiene quick wins:
+                                                        <ul>
+                                                            <li>Never install screen-share apps for bank help.</li>
+                                                            <li>SIM in your own name, PIN the SIM.</li>
+                                                            <li>Recognize SIM-swap signs (sudden “No Service”)</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
                                             </li>
-                                            <li>Global Impact: How AI is transforming healthcare, finance, retail, and
-                                                more.
+
+                                            <li><b>Activities:</b>
+                                                <ul>
+                                                    <li>“Spot the Fake” exercise with WhatsApp/FASTag screenshots.</li>
+                                                    <li>Quick wins: SIM PIN setup demo, identifying SIM-swap signals.
+                                                    </li>
+                                                </ul>
                                             </li>
-                                            <li>Future Trends: Debunking myths and exploring what's next in AI.</li>
+
+                                            <li><b>Checklist Card:</b> Decline → Block → Screenshot → Report (Chakshu) →
+                                                Inform family.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -501,31 +485,42 @@ $country = $_SESSION['country'];
                                 <div class="faq-item">
                                     <h3 class="faq-title">
                                         <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/anas1.png" alt="">
                                             <div
                                                 class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600"> AI Productivity Tools - Anas (12 PM - 1
-                                                    PM)</strong>
+                                                <strong class="fw-600">Module 2: Responding to Financial Fraud in
+                                                    Minutes</strong>
                                             </div>
                                         </span>
                                         <span class="right-icon"></span>
                                     </h3>
                                     <div class="faq-content">
-                                        <p class="mb-3 fw-bold">AI Playbook for Leaders: Implement 15+ Game-changing AI
-                                            Tools</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
                                         <ul>
-                                            <li>Productivity Redefined: How AI boosts individual and team output.</li>
-                                            <li>Executive Tool Showcase: Practical use of ChatGPT, NotebookLM, Gamma,
-                                                Perplexity, Gemini, Meta, Mistral, Deepseek, Sora, Llama Coder, Deep
-                                                Learning LMS, Napkin AI, Consensus and more.</li>
-                                            <li>Strategic AI Applications: Leveraging AI for planning, analysis, and
-                                                communication.</li>
-                                            <li>Blueprint for Adoption: Best practices for integrating AI tools into
-                                                your
-                                                workflow.</li>
-                                            <li>Leadership in AI: Fostering an AI-first mindset and measuring ROI.</li>
+                                            <li><b>Learning Outcomes:</b>
+                                                <ul>
+                                                    <li>Execute the correct freeze path within 15 minutes.</li>
+                                                    <li>File a cyber complaint with the right details.</li>
+                                                    <li>Escalate unresolved UPI disputes as per NPCI process.</li>
+                                                </ul>
+                                            </li>
+
+                                            <li><b>Topics:</b>
+                                                <ul>
+                                                    <li>Emergency helplines: 1930 cyber helpline, cybercrime.gov.in
+                                                        portal.</li>
+                                                    <li>Integration with 112 (state-wise).</li>
+                                                    <li>UPI dispute escalation: in-app → PSP bank → own bank → NPCI.
+                                                    </li>
+                                                    <li>Handling device/SIM risks: CEIR IMEI block via Sanchar Saathi.
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><b>Activities:</b>
+                                                <ul>
+                                                    <li>Role-play: Victim pays UPI collect request → group dials 1930,
+                                                        files portal case, documents ref. numbers.</li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -534,259 +529,188 @@ $country = $_SESSION['country'];
                                 <div class="faq-item">
                                     <h3 class="faq-title">
                                         <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/break-time.png" alt="">
                                             <div
                                                 class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600"> Lunch Break (1 PM - 2 PM)</strong>
+                                                <strong class="fw-600">Module 3: Securing Your Digital Accounts (Gmail &
+                                                    Facebook)</strong>
                                             </div>
                                         </span>
+                                        <span class="right-icon"></span>
                                     </h3>
+                                    <div class="faq-content">
+                                        <ul>
+                                            <li><b>Learning Outcomes:</b>
+                                                <ul>
+                                                    <li>Audit and secure Gmail account settings.</li>
+                                                    <li>Apply phishing-resistant login to Gmail.</li>
+                                                    <li>Enable Facebook protections to prevent hijack.</li>
+                                                </ul>
+                                            </li>
+
+                                            <li><b>Topics:</b>
+                                                <ul>
+                                                    <li>Gmail: kill auto-forward/filters/delegates, disable POP/IMAP,
+                                                        Enhanced Safe Browsing.</li>
+                                                    <li>Facebook: Security Checkup, 2FA, login alerts, lock profile,
+                                                        remove old connected apps.</li>
+                                                    <li>Tracking Google Data</li>
+                                                </ul>
+                                            </li>
+
+                                            <li><b>Activities:</b>
+                                                <ul>
+                                                    <li>Live audit of Gmail and Facebook accounts using a 6-step
+                                                        checklist card.</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
 
                                 <!--/ faq item /-->
                                 <div class="faq-item">
                                     <h3 class="faq-title">
                                         <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/krish1.png" alt="">
                                             <div
                                                 class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">Cloud & AI - Krish (2 PM - 4 PM)</strong>
+                                                <strong class="fw-600">Module 4: Spotting Fakes (Emails, Domains,
+                                                    Deepfakes)</strong>
                                             </div>
                                         </span>
                                         <span class="right-icon"></span>
                                     </h3>
                                     <div class="faq-content">
-                                        <p class="mb-3 fw-bold">Securing AI applications in the Cloud</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
                                         <ul>
-                                            <li>Cloud AI Infrastructure: Compute, storage, network & application stack
-                                                considerations.</li>
-                                            <li>AI deployment methodologies on Cloud </li>
-                                            <li>Security Implications of Cloud AI: Data protection, access control, and
-                                                compliance.</li>
-                                            <li>Best Practices for Hosting AI Workloads: Scalability, reliability, and
-                                                cost
-                                                optimization.</li>
-                                            <li>Cloud AI Security Frameworks: Identity and access management, threat
-                                                detection, and incident response.</li>
-                                            <li>Case Studies: Real-world examples of secure and efficient cloud AI
-                                                deployments.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/prabh1.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">AI Governance - Prabh (4 PM - 6 PM)</strong>
-                                            </div>
-                                        </span>
-                                        <span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p class="mb-3 fw-bold">Building Trust & Control with AI Governance</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
-                                        <ul>
-                                            <li>The Governance Imperative: Mitigating risks and building trust in AI.
+                                            <li><b>Learning Outcomes:</b>
+                                                <ul>
+                                                    <li>Verify authenticity of suspicious emails.</li>
+                                                    <li>Detect fake/malicious domains.</li>
+                                                    <li>Recognize deepfake/morphed media.</li>
+                                                    <li>Use Aadhaar safely with VID and biometrics lock.</li>
+                                                </ul>
                                             </li>
-                                            <li>Core Pillars: Ethics, risk management, and compliance frameworks.</li>
-                                            <li>Regulatory Landscape: Navigating global AI laws and standards.</li>
-                                            <li>Practical Implementation: Steps to establish an AI Ethics Committee and
-                                                policies.</li>
-                                            <li>Fostering Responsibility: Cultivating an AI-responsible organizational
-                                                culture.</li>
+
+                                            <li><b>Topics:</b>
+                                                <ul>
+                                                    <li>Email checks: headers (SPF/DKIM/DMARC), link hover, macro
+                                                        alerts.</li>
+                                                    <li>Domain tricks: hyphens, lookalikes, rn vs m, 0 vs O.</li>
+                                                    <li>Deepfakes: lip sync errors, lighting mismatch, reverse image
+                                                        tools.</li>
+                                                    <li>Aadhaar safety: Virtual ID, biometric lock/unlock,
+                                                        authentication history.</li>
+                                                    <li>AI Tools Safety</li>
+                                                </ul>
+                                            </li>
+
+                                            <li><b>Activities:</b>
+                                                <ul>
+                                                    <li>Drill: 10 email/domain comparisons (real vs fake).</li>
+                                                    <li>Deepfake Challenge: teams vote real/fake, list red flags, pick
+                                                        reporting route.</li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
-
                                 <!--/ faq item /-->
-                                <div class="d-flex gap-3 text-white align-items-center f-general-sans fs-16 mt-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <g clip-path="url(#clip0_23541_857)">
-                                            <path
-                                                d="M13.5727 9.66667L13.416 9.63067C13.0739 8.85714 12.4872 8.21742 11.7461 7.80993C11.0049 7.40244 10.1504 7.24974 9.314 7.37533C8.43624 7.51529 7.63553 7.95909 7.05164 8.62924C6.46774 9.2994 6.13777 10.1533 6.11933 11.042C6.11772 11.1773 6.12618 11.3126 6.14467 11.4467C5.68248 11.632 5.29086 11.9589 5.02601 12.3806C4.76116 12.8023 4.63669 13.297 4.67045 13.7938C4.70422 14.2907 4.89448 14.764 5.21394 15.146C5.53341 15.528 5.96565 15.7989 6.44867 15.92C6.64247 15.9695 6.84134 15.9966 7.04133 16.0007H12.786C13.0178 15.9964 13.2485 15.9684 13.4747 15.9173C14.1814 15.7621 14.815 15.3729 15.2728 14.8126C15.7307 14.2523 15.9859 13.5539 15.9973 12.8304C16.0086 12.107 15.7754 11.4009 15.3353 10.8266C14.8952 10.2522 14.2742 9.84328 13.5727 9.666V9.66667ZM13.962 13.078C13.9047 13.2965 13.7883 13.495 13.6255 13.6517C13.4627 13.8084 13.2599 13.9171 13.0393 13.966C12.95 13.9867 12.8589 13.9985 12.7673 14.0013H7.07C7.02791 14.0004 6.98607 13.9946 6.94533 13.984C6.88327 13.9672 6.82638 13.9351 6.77982 13.8908C6.73326 13.8464 6.69849 13.7912 6.67867 13.73C6.62 13.5127 6.846 13.3073 7.024 13.248C7.40651 13.1118 7.72889 12.8453 7.93464 12.4952C8.14039 12.1451 8.21639 11.7338 8.14933 11.3333C8.13177 11.2504 8.12173 11.1661 8.11933 11.0813C8.12171 10.9464 8.13938 10.8122 8.172 10.6813C8.24925 10.3428 8.42622 10.0352 8.68006 9.7982C8.9339 9.56124 9.25294 9.40582 9.596 9.352C10.0008 9.28924 10.415 9.36137 10.7747 9.55726C11.1344 9.75315 11.4198 10.0619 11.5867 10.436C11.7137 10.7401 11.9164 11.0066 12.1754 11.2103C12.4344 11.4141 12.7412 11.5482 13.0667 11.6C13.381 11.6775 13.6518 11.8764 13.8196 12.1532C13.9874 12.4301 14.0387 12.7621 13.962 13.0767V13.078ZM4.91867 9.16133L3.26667 10.8113C3.07603 10.9804 2.82802 11.0704 2.5733 11.0628C2.31858 11.0552 2.07637 10.9507 1.89613 10.7705C1.7159 10.5904 1.61124 10.3482 1.60353 10.0935C1.59582 9.83877 1.68565 9.59072 1.85467 9.4L2.886 8.368C2.69636 8.04494 2.5536 7.69657 2.462 7.33333H1C0.734783 7.33333 0.48043 7.22798 0.292893 7.04044C0.105357 6.8529 0 6.59855 0 6.33333C0 6.06812 0.105357 5.81376 0.292893 5.62623C0.48043 5.43869 0.734783 5.33333 1 5.33333H2.46667C2.56017 4.97242 2.70379 4.62639 2.89333 4.30533L1.85467 3.26667C1.68565 3.07595 1.59582 2.8279 1.60353 2.57318C1.61124 2.31847 1.7159 2.07631 1.89613 1.89615C2.07637 1.716 2.31858 1.61146 2.5733 1.60387C2.82802 1.59628 3.07603 1.68623 3.26667 1.85533L4.30533 2.89133C4.6265 2.70248 4.97252 2.55954 5.33333 2.46667V1C5.33333 0.734784 5.43869 0.48043 5.62623 0.292893C5.81376 0.105357 6.06812 0 6.33333 0C6.59855 0 6.8529 0.105357 7.04044 0.292893C7.22798 0.48043 7.33333 0.734784 7.33333 1V2.46667C7.69517 2.55867 8.04217 2.70141 8.364 2.89067L9.4 1.85533C9.59064 1.68623 9.83864 1.59628 10.0934 1.60387C10.3481 1.61146 10.5903 1.716 10.7705 1.89615C10.9508 2.07631 11.0554 2.31847 11.0631 2.57318C11.0708 2.8279 10.981 3.07595 10.812 3.26667L9.77267 4.308C9.82067 4.39067 9.87467 4.46867 9.91733 4.55533C10.0353 4.79297 10.054 5.06772 9.96933 5.31914C9.88469 5.57057 9.70363 5.77807 9.466 5.896C9.22837 6.01393 8.95362 6.03264 8.70219 5.94799C8.45077 5.86335 8.24327 5.6823 8.12533 5.44467C6.62533 2.75667 2.85267 5.468 4.91933 7.748C5.10651 7.93559 5.21158 8.18981 5.21145 8.45481C5.21133 8.71981 5.10602 8.97392 4.91867 9.16133Z"
-                                                fill="white" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_23541_857">
-                                                <rect width="16" height="16" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    <span>Day 2</span>
-                                    <span>27 July</span>
-                                </div>
                                 <!--/ faq item /-->
                                 <div class="faq-item">
                                     <h3 class="faq-title">
                                         <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/shakti1.png" alt="">
                                             <div
                                                 class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">Auditing 42001 - Shakti (10 AM - 12 PM)</strong>
+                                                <strong class="fw-600">Module 5: Drill Hour — Simulations & Role
+                                                    Plays</strong>
                                             </div>
                                         </span>
                                         <span class="right-icon"></span>
                                     </h3>
                                     <div class="faq-content">
-                                        <p class="mb-3 fw-bold">Auditing AI with Digital Trust
-                                        </p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
                                         <ul>
-                                            <li>The Need for Audits: Ensuring trustworthiness and compliance in AI
-                                                systems.
+                                            <li><b>Learning Outcomes:</b>
+                                                <ul>
+                                                    <li>Apply course knowledge in simulated scam scenarios.</li>
+                                                    <li>Choose the correct reporting path under pressure.</li>
+                                                    <li>Work as a team to spot and fix account compromise.</li>
+                                                </ul>
                                             </li>
-                                            <li>Audit Dimensions: Assessing fairness, explainability, robustness, and
-                                                data
-                                                quality.</li>
-                                            <li>Bias Detection: Techniques for identifying and mitigating algorithmic
-                                                bias.
+
+                                            <li><b>Activities:</b>
+                                                <ul>
+                                                    <li>WhatsApp Scam Deck: UPI, FASTag, parcel, job fraud scenarios.
+                                                    </li>
+                                                </ul>
                                             </li>
-                                            <li>Practical Methodologies: Developing audit plans and utilizing automated
-                                                tools.</li>
-                                            <li>Building Trust: Fostering collaboration for continuous monitoring and
-                                                auditable AI.</li>
                                         </ul>
                                     </div>
-                                </div>
-                                <!--/ faq item /-->
-
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/dr-ram1.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">AI Security Frameworks: CISO Edition - Dr Ram (12
-                                                    PM -
-                                                    1 PM)</strong>
-                                            </div>
-                                        </span>
-                                        <span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p class="mb-3 fw-bold">Enable leaders to design and implement secure
-                                            AI frameworks</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
-                                        <ul>
-                                            <li>AI Security Threat Landscape & Business Impact</li>
-                                            <li>Building AI Governance Structure & Risk Management</li>
-                                            <li>AI Asset Discovery & Classification Methods</li>
-                                            <li>Essential Security Controls for AI Systems</li>
-                                            <li>Regulatory Compliance & Audit Considerations</li>
-                                            <li>Implementation Roadmap & Quick Wins</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/break-time.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600"> Lunch Break (1 PM - 2 PM)</strong>
-                                            </div>
-                                        </span>
-                                    </h3>
                                 </div>
 
                                 <!--/ faq item /-->
                                 <div class="faq-item">
                                     <h3 class="faq-title">
                                         <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/jai1.png" alt="">
                                             <div
                                                 class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">AI in Privacy - Jai (2 PM - 4 PM) </strong>
+                                                <strong class="fw-600">Module 6: Wrap-Up & Action Plan</strong>
                                             </div>
                                         </span>
                                         <span class="right-icon"></span>
                                     </h3>
                                     <div class="faq-content">
-                                        <p class="mb-3 fw-bold">Privacy-by-Design in GenAI: DPDP Act, GDPR, HIPAA</p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
                                         <ul>
-                                            <li>GenAI Privacy Challenges: Understanding data leakage and unique risks.
+                                            <li><b>Learning Outcomes:</b>
+                                                <ul>
+                                                    <li>Commit to personal security changes.</li>
+                                                    <li>Spread awareness within family and friends.</li>
+                                                </ul>
                                             </li>
-                                            <li>Global Compliance: Navigating DPDP, GDPR, HIPAA, and other key
-                                                regulations.
-                                            </li>
-                                            <li>Privacy-by-Design Techniques: Implementing data minimization, federated
-                                                learning, and more.</li>
-                                            <li>Secure Implementation: Best practices for consent management and prompt
-                                                engineering.</li>
-                                            <li>Compliance Strategies: Conducting PIAs and ensuring vendor due
-                                                diligence.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
 
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title">
-                                        <span class="title d-flex align-items-center gap-3">
-                                            <img src="assets/images/speakers/avinish1.png" alt="">
-                                            <div
-                                                class="d-flex flex-column flex-md-row gap-1 gap-md-3 fs-18 f-general-sans text-white">
-                                                <strong class="fw-600">AI in Cybersecurity - Avnish (4 PM - 6
-                                                    PM)</strong>
-                                                <!-- <div class="d-flex gap-2 gap-md-3">
-                                                <span class="fw-400">by Avnish</span>
-                                                <div>
-                                                    <span class="fw-400">at:</span>
-                                                    <strong class="fw-600"> </strong>
-                                                </div>
-                                            </div> -->
-                                            </div>
-                                        </span>
-                                        <span class="right-icon"></span>
-                                    </h3>
-                                    <div class="faq-content">
-                                        <p class="mb-3 fw-bold">AI's Cyber Battleground: Offense vs. Defense in the
-                                            Machine Age
-                                        </p>
-                                        <span class="fs-16 text-white f-general-sans fw-600"
-                                            style="color:#21D6FF;">Agenda</span>
-                                        <ul>
-                                            <li>Evolving Threats: Why traditional cybersecurity isn't enough.</li>
-                                            <li>Offensive AI: How attackers weaponize AI for reconnaissance, phishing,
-                                                and
-                                                malware.</li>
-                                            <li>Defensive AI: Leveraging MLSecOps and real-time threat hunting for
-                                                protection.</li>
-                                            <li>AI's Shield: Automated response, predictive analytics, and enhanced
-                                                security
-                                                platforms.</li>
-                                            <li>Future of Cyber Warfare: Emerging trends and the ethical implications of
-                                                AI
-                                                in defense.</li>
+                                            <li><b>Activities:</b>
+                                                <ul>
+                                                    <li>Write a Personal Action Plan: 3 changes today + 2 family members
+                                                        to brief tonight.</li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <!--/ faq item /-->
+
+                            </div>
+
+                            <div class="fs-28 text-white fw-700 mt-5 mb-4 lineup-heading" style="color: var(--Soft-Orange, #FFB956);
+font-family: Raleway;
+font-style: normal;
+line-height: normal;" id="experts">
+                                Don't Be the Next Victim
+                            </div>
+
+                            <div class="g-3 mb-3">
+
+                                <div class="col instructor-profile" style="display: flex; gap:24px; align-items:start;">
+                                    <!-- <img src="assets/images/speakers/Ashish-Dhyani.png" alt="Ashish"> -->
+                                    <div class="trainer-profile">
+                                        <div class="certificates">
+
+                                            <p>Thousands of Indians lose money to cyber frauds daily. This exclusive
+                                                training is our gift to the cyber warriors we met at DIDAC India 2025.
+                                                Transform from a potential victim into a cyber-aware defender.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
 
                             <div class="p-3 mt-5 text-md-start text-center rounded-4 d-flex align-items-center justify-content-between flex-column flex-md-row gap-3"
-                                style="background: linear-gradient(89deg, #2738ED 0%, #6C0AE2 98.66%);">
+                                style="border-radius: 16px;
+background: linear-gradient(90deg, rgba(255, 204, 0, 0.20) 0%, rgba(255, 138, 0, 0.20) 100%);">
                                 <div>
-                                    <div class="fs-18 text-white fw-500 f-general-sans">
-                                        Ready to Be an AI Innovator? Secure Your Spot Now!
+                                    <div class="secure-spot"
+                                        style="display:flex; flex-direction:column; gap:8px; color:#FFF;">
+                                        <p>🔒 Limited Seats Available!</p>
+                                        <h3 style="color: #FFF;">Secure Your Spot
+                                            Now!</h3>
+                                        <p>Claim the early-bird offer before it expires!</p>
                                     </div>
                                 </div>
                                 <div>
@@ -798,39 +722,16 @@ $country = $_SESSION['country'];
                         <div class="col-lg-4">
                             <div style="position: sticky;
         top: 100px;">
-                                <div class="d-flex flex-column gap-3 rounded-4"
-                                    style="overflow: hidden;box-shadow: var(--box-shadow);border-radius: 0px 0px 16px 16px;background: rgba(108, 10, 226, 0.15);border:1px solid #2738ED;">
+                                <div class="d-flex flex-column gap-3 rounded-4" style="border-radius: 0 0 16px 16px;border: 1px solid rgba(255, 185, 86, 0.20);
+background: linear-gradient(90deg, rgba(255, 204, 0, 0.10) 0%, rgba(255, 138, 0, 0.10) 100%);">
                                     <div class="fs-28 text-center f-general-sans p-3">
-                                        <span class="fs-16 text-white">The Biggest AI Knowledge Drop of the Year</span>
-                                        <div class="fs-28 f-general-sans" style="color:#21D6FF;font-weight: 600;">Are
-                                            You
-                                            Ready?
+                                        <span class="fs-16 text-white">Interested in Joining this</span>
+                                        <div class="fs-28 f-general-sans" style="color:#FFB956;font-weight: 600;">
+                                            Awareness Program?
                                         </div>
                                     </div>
-                                    <div class="d-flex justify-content-center gap-3 px-3 timers">
-                                        <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-white rounded"
-                                            id="timer1"
-                                            style="background: linear-gradient(89deg, #2738ED 0%, #6C0AE2 98.66%);">
-                                            <strong style="color: var(--white);"></strong>
-                                            <span style="color: var(--white);">Days</span>
-                                        </div>
-                                        <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-dark rounded"
-                                            id="timer2" style="background: rgba(39, 56, 237, 0.40);">
-                                            <strong style="color: var(--white);"></strong>
-                                            <span style="color: var(--white);">Hours</span>
-                                        </div>
-                                        <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-dark rounded"
-                                            id="timer3" style="background: rgba(39, 56, 237, 0.40);">
-                                            <strong style="color: var(--white);"></strong>
-                                            <span style="color: var(--white);">Minutes</span>
-                                        </div>
-                                        <div class="d-flex flex-column gap-2 align-items-center timers-item p-2 text-dark rounded"
-                                            id="timer4" style="background: rgba(39, 56, 237, 0.40);">
-                                            <strong style="color: var(--white);"></strong>
-                                            <span style="color: var(--white);">Seconds</span>
-                                        </div>
-                                    </div>
-                                    <div class="fs-16 f-general-sans fw-600 px-3 text-white">Please Fill the Form</div>
+                                    <div class="fs-16 f-general-sans fw-600 px-3 text-white text-center">Please Fill the
+                                        Form</div>
                                     <div class="d-flex flex-column gap-3 px-3">
                                         <form method="post" class="ajax-form d-flex flex-column gap-3">
                                             <div>
@@ -867,17 +768,16 @@ $country = $_SESSION['country'];
                                             Offers!
                                         </div>
                                         <div class="d-flex gap-3 align-items-center pb-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17"
-                                                viewBox="0 0 16 17" fill="none">
-                                                <g clip-path="url(#clip0_23541_1086)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <g clip-path="url(#clip0_30784_92)">
                                                     <path
-                                                        d="M10.692 12.5676C11.9187 13.2289 12.882 14.3209 13.3007 15.6689C13.3317 15.7687 13.3388 15.8744 13.3215 15.9775C13.3042 16.0805 13.2629 16.1781 13.2009 16.2622C13.1389 16.3464 13.0581 16.4148 12.9648 16.4619C12.8715 16.5091 12.7685 16.5336 12.664 16.5336H3.33132C3.22672 16.5339 3.12352 16.5095 3.0301 16.4625C2.93668 16.4154 2.85568 16.347 2.79366 16.2628C2.73164 16.1785 2.69035 16.0809 2.67315 15.9777C2.65594 15.8745 2.66331 15.7687 2.69465 15.6689C3.11465 14.3183 4.08065 13.2249 5.31065 12.5636C5.46321 12.4806 5.63978 12.4528 5.81048 12.485C5.98117 12.5172 6.13549 12.6074 6.24732 12.7403L7.54665 14.2989C7.60233 14.3658 7.67205 14.4196 7.75085 14.4566C7.82966 14.4935 7.91562 14.5127 8.00265 14.5127C8.08968 14.5127 8.17565 14.4935 8.25445 14.4566C8.33325 14.4196 8.40297 14.3658 8.45865 14.2989L9.75465 12.7436C9.8666 12.6106 10.0211 12.5205 10.1919 12.4884C10.3628 12.4563 10.5394 12.4843 10.692 12.5676ZM13.7733 2.26694L9.46398 0.746271C8.53595 0.419287 7.52426 0.417877 6.59532 0.742271L2.23332 2.26894C1.96984 2.35851 1.7413 2.52888 1.5802 2.7558C1.41911 2.98272 1.33365 3.25466 1.33598 3.53294C1.33598 4.11094 1.68865 4.60694 2.23398 4.79694L6.57198 6.31027C7.49488 6.63119 8.49909 6.63119 9.42198 6.31027L13.3313 4.94694V7.86627C13.3313 8.04308 13.4016 8.21265 13.5266 8.33768C13.6516 8.4627 13.8212 8.53294 13.998 8.53294C14.1748 8.53294 14.3444 8.4627 14.4694 8.33768C14.5944 8.21265 14.6647 8.04308 14.6647 7.86627L14.6673 3.5316C14.6699 3.25366 14.585 2.98193 14.4247 2.75485C14.2644 2.52778 14.0368 2.35686 13.774 2.26627L13.7733 2.26694ZM11.9973 6.82427L9.86065 7.56961C8.65314 7.98762 7.34016 7.98762 6.13265 7.56961L3.99732 6.82427V7.19961C3.99732 9.40561 5.79132 11.1996 7.99732 11.1996C10.2033 11.1996 11.9973 9.40561 11.9973 7.19961V6.82361V6.82427Z"
-                                                        fill="#2738ED" />
+                                                        d="M10.692 12.0676C11.9187 12.7289 12.882 13.8209 13.3007 15.1689C13.3317 15.2687 13.3388 15.3744 13.3215 15.4775C13.3042 15.5805 13.2629 15.6781 13.2009 15.7622C13.1389 15.8464 13.0581 15.9148 12.9648 15.9619C12.8715 16.0091 12.7685 16.0336 12.664 16.0336H3.33132C3.22672 16.0339 3.12352 16.0095 3.0301 15.9625C2.93668 15.9154 2.85568 15.847 2.79366 15.7628C2.73164 15.6785 2.69035 15.5809 2.67315 15.4777C2.65594 15.3745 2.66331 15.2687 2.69465 15.1689C3.11465 13.8183 4.08065 12.7249 5.31065 12.0636C5.46321 11.9806 5.63978 11.9528 5.81048 11.985C5.98117 12.0172 6.13549 12.1074 6.24732 12.2403L7.54665 13.7989C7.60233 13.8658 7.67205 13.9196 7.75085 13.9566C7.82966 13.9935 7.91562 14.0127 8.00265 14.0127C8.08968 14.0127 8.17565 13.9935 8.25445 13.9566C8.33325 13.9196 8.40297 13.8658 8.45865 13.7989L9.75465 12.2436C9.8666 12.1106 10.0211 12.0205 10.1919 11.9884C10.3628 11.9563 10.5394 11.9843 10.692 12.0676ZM13.7733 1.76694L9.46398 0.246271C8.53595 -0.0807128 7.52426 -0.0821235 6.59532 0.242271L2.23332 1.76894C1.96984 1.85851 1.7413 2.02888 1.5802 2.2558C1.41911 2.48272 1.33365 2.75466 1.33598 3.03294C1.33598 3.61094 1.68865 4.10694 2.23398 4.29694L6.57198 5.81027C7.49488 6.13119 8.49909 6.13119 9.42198 5.81027L13.3313 4.44694V7.36627C13.3313 7.54308 13.4016 7.71265 13.5266 7.83768C13.6516 7.9627 13.8212 8.03294 13.998 8.03294C14.1748 8.03294 14.3444 7.9627 14.4694 7.83768C14.5944 7.71265 14.6647 7.54308 14.6647 7.36627L14.6673 3.0316C14.6699 2.75366 14.585 2.48193 14.4247 2.25485C14.2644 2.02778 14.0368 1.85686 13.774 1.76627L13.7733 1.76694ZM11.9973 6.32427L9.86065 7.06961C8.65314 7.48762 7.34016 7.48762 6.13265 7.06961L3.99732 6.32427V6.69961C3.99732 8.90561 5.79132 10.6996 7.99732 10.6996C10.2033 10.6996 11.9973 8.90561 11.9973 6.69961V6.32361V6.32427Z"
+                                                        fill="#FFB956" />
                                                 </g>
                                                 <defs>
-                                                    <clipPath id="clip0_23541_1086">
-                                                        <rect width="16" height="16" fill="white"
-                                                            transform="translate(0 0.5)" />
+                                                    <clipPath id="clip0_30784_92">
+                                                        <rect width="16" height="16" fill="white" />
                                                     </clipPath>
                                                 </defs>
                                             </svg>
@@ -889,10 +789,10 @@ $country = $_SESSION['country'];
                                 </div>
 
 
-                                <div>
+                                <!-- <div>
                                     <img src="assets/images/prices/group-discount.png" class="img-fluid d-block mt-4"
                                         alt="">
-                                </div>
+                                </div> -->
                             </div>
 
                         </div>
@@ -922,9 +822,10 @@ $country = $_SESSION['country'];
                         <div class="item">
                             <h3>Quick Links</h3>
                             <ul>
-                                <li><a href="#masterclass-agenda">AI Summit Agenda</a></li>
-                                <li><a href="#experts">Speaker Lineup</a></li>
-                                <li><a href="#key-takeaways">Key Takeaways</a></li>
+                                <li><a href="#why-attend">Why Attend</a></li>
+                                <li><a href="#masterclass-agenda">Agenda</a></li>
+                                <li><a href="#experts">Speaker</a></li>
+
                                 <li><a href="https://www.infosectrain.com/events/" target="_blank">Free Training</a>
                                 </li>
                             </ul>
@@ -1108,72 +1009,6 @@ $country = $_SESSION['country'];
                         element.siblings('.taq-item').find('.faq-content').slideUp(300, "swing");
                     }
                 });
-
-                // ---- First Typing: "AI Summit 2025", keep "A" ----
-                let fullText1 = "AI Summit 2025";
-                let fixedChar1 = fullText1.charAt(0); // "A"
-                let rest1 = fullText1.substring(1);
-                let i1 = 0;
-                let isDeleting1 = false;
-
-                function typeOne() {
-                    let display = fixedChar1 + rest1.substring(0, i1);
-                    $('#typing-one').text(display);
-
-                    if (!isDeleting1) {
-                        i1++;
-                        if (i1 > rest1.length) {
-                            isDeleting1 = true;
-                            setTimeout(typeOne, 1500); // Pause at full text
-                            return;
-                        }
-                    } else {
-                        i1--;
-                        if (i1 < 0) {
-                            isDeleting1 = false;
-                            i1 = 0;
-                            setTimeout(typeOne, 500); // Pause before restart
-                            return;
-                        }
-                    }
-
-                    setTimeout(typeOne, 100); // Typing/deleting speed
-                }
-
-                typeOne();
-
-                // ---- Second Typing: "Empowering the Future", keep "E" ----
-                let fullText2 = "AI Revolution";
-                let fixedChar2 = fullText2.charAt(0); // "E"
-                let rest2 = fullText2.substring(1);
-                let i2 = 0;
-                let isDeleting2 = false;
-
-                function typeTwo() {
-                    let display = fixedChar2 + rest2.substring(0, i2);
-                    $('#typing-two').text(display);
-
-                    if (!isDeleting2) {
-                        i2++;
-                        if (i2 > rest2.length) {
-                            isDeleting2 = true;
-                            setTimeout(typeTwo, 1500);
-                            return;
-                        }
-                    } else {
-                        i2--;
-                        if (i2 < 0) {
-                            isDeleting2 = false;
-                            i2 = 0;
-                            setTimeout(typeTwo, 500);
-                            return;
-                        }
-                    }
-
-                    setTimeout(typeTwo, 100);
-                }
-
-                typeTwo();
             });
 
             /*-------- form validation and ajax script --------*/
@@ -1289,42 +1124,6 @@ $country = $_SESSION['country'];
                 });
             });
             /*-------- form valudation and ajax script end --------*/
-
-
-            // Countdown function to show only specific time units in each div
-            function startCountdown() {
-                const targetDate = new Date("July 26, 2025 09:00:00").getTime(); // Target date
-
-                // Update the countdown every second
-                const interval = setInterval(function () {
-                    const currentDate = new Date().getTime(); // Current date and time
-                    const timeRemaining = targetDate - currentDate; // Time remaining in milliseconds
-
-                    // Calculate days, hours, minutes, and seconds
-                    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-                    // Update each timer separately
-                    document.getElementById("timer1").querySelector("strong").textContent = days;
-                    document.getElementById("timer2").querySelector("strong").textContent = hours;
-                    document.getElementById("timer3").querySelector("strong").textContent = minutes;
-                    document.getElementById("timer4").querySelector("strong").textContent = seconds;
-
-                    // If the countdown reaches zero, stop the timer and display "Time's up!"
-                    if (timeRemaining <= 0) {
-                        clearInterval(interval);
-                        document.getElementById("timer1").querySelector("strong").textContent = "0";
-                        document.getElementById("timer2").querySelector("strong").textContent = "0";
-                        document.getElementById("timer3").querySelector("strong").textContent = "0";
-                        document.getElementById("timer4").querySelector("strong").textContent = "0";
-                    }
-                }, 1000); // Update every second
-            }
-
-            // Call the function to start the countdown
-            startCountdown();
 
         </script>
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -416,8 +418,8 @@
 /*--- image style end ---*/
 
 h1 {
-  color: #21D6FF;
-  font-family: var(--unicephalon);
+  color: var(--infosectrain-Soft-Orange, #FFB956);
+  font-family: Raleway;
   font-size: 32px;
   font-weight: 700;
   line-height: normal;
@@ -432,7 +434,7 @@ h1 {
 
 @media (min-width:992px) {
   h1 {
-    font-size: 72px;
+    font-size: 48px;
   }
 }
 
@@ -863,7 +865,7 @@ nav {
 
 .live-badge {
   border-radius: 8px;
-  background: linear-gradient(89deg, rgba(39, 56, 237, 0.70) 0%, rgba(108, 10, 226, 0.70) 98.66%);
+  background: linear-gradient(90deg, rgba(255, 204, 0, 0.25) 0%, rgba(255, 138, 0, 0.25) 100%);
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 14px;
@@ -1310,7 +1312,7 @@ footer .item ul li a {
 /*====== footer style end ======*/
 /*>>>>>>>>> fixed footer <<<<<<<<*/
 .footer-fixed {
-  background: linear-gradient(89deg, #2738ED 0%, #6C0AE2 98.66%);
+  background: black;
   padding: 12px 0;
   position: fixed;
   left: 0;
@@ -1410,7 +1412,7 @@ footer .item ul li a {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background: linear-gradient(89deg, rgba(39, 56, 237, 0.70) 0%, rgba(108, 10, 226, 0.70) 98.66%);
+  background: black;
   margin: auto;
   padding: 20px;
   border: 1px solid var(--border-grey);
@@ -1554,7 +1556,9 @@ footer .item ul li a {
 .faq-wrapper .faq-item.open .faq-title,
 .course-description,
 .testimonial-sec {
-  background: linear-gradient(90deg, #0A0017 0.24%, #6C0AE2 71.84%, #2738ED 119.53%);
+  border-radius: 16px 16px 0 0;
+  border: 1px solid rgba(255, 185, 86, 0.17);
+  background: rgba(255, 185, 86, 0.30);
 }
 
 .faq-wrapper .faq-item {
@@ -1562,8 +1566,8 @@ footer .item ul li a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin-top: 24px;
-  background: linear-gradient(90deg, rgba(10, 0, 23, 0.15) 0.24%, rgba(108, 10, 226, 0.15) 71.84%, rgba(39, 56, 237, 0.15) 119.53%);
-  border: 1px solid #2738ED;
+  /* background: linear-gradient(90deg, rgba(10, 0, 23, 0.15) 0.24%, rgba(108, 10, 226, 0.15) 71.84%, rgba(39, 56, 237, 0.15) 119.53%); */
+  border: 1px solid rgba(255, 185, 86, 0.17);
   cursor: pointer;
   overflow: hidden;
 }
@@ -1583,8 +1587,9 @@ footer .item ul li a {
   flex-wrap: nowrap;
   align-items: center;
   flex-direction: row;
-  background: linear-gradient(90deg, rgba(10, 0, 23, 0.15) 0.24%, rgba(108, 10, 226, 0.15) 71.84%, rgba(39, 56, 237, 0.15) 119.53%);
-  ;
+  border-radius: 16px 16px 0 0;
+  border: 1px solid rgba(255, 185, 86, 0.17);
+  background: rgba(255, 185, 86, 0.30);
 }
 
 .faq-wrapper .faq-item .right-icon::after,
@@ -1601,7 +1606,7 @@ footer .item ul li a {
 .faq-wrapper .faq-item .faq-content {
   display: none;
   padding: 16px 20px;
-  border-top: 1px solid #2738ED;
+  /* border-top: 1px solid #2738ED; */
   color: var(--white);
 }
 
@@ -1651,3 +1656,138 @@ footer .item ul li a {
 }
 
 /*>>>>>>>>>>> faq style end <<<<<<<<<<*/
+
+.learning-card {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 185, 86, 0.20);
+  padding: 24px;
+  /* display: flex; */
+  /* gap: 16px; */
+  width: 100%;
+  /* align-items: flex-start; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.learning-card h3,
+.professional-development h3 {
+  color: var(--Acent-Orange, #FBE9D6);
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  margin-top: 16px;
+}
+
+.learning-card p,
+.professional-development p {
+  color: var(--WHITE, #FFF);
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.learning-card ul li,
+.learning-cards ul li {
+  color: var(--WHITE, #FFF);
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+/* ============ trainer ================= */
+.trainer-title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.trainer-title h3 {
+  overflow: hidden;
+  color: var(--WHITE, #FFF);
+  text-overflow: ellipsis;
+  font-family: Raleway;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.trainer-title p {
+  border-radius: 16px;
+  background: rgba(255, 185, 86, 0.50);
+  color: var(--WHITE, #FFF);
+  text-align: center;
+  padding: 8px 16px;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.certificates p {
+  margin-top: 8px;
+  color: var(--WHITE, #FFF);
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.trainer-register {
+  border-radius: 16px;
+  background: var(--Soft-Orange, #FFB956);
+  padding: 24px;
+}
+
+.secure-spot p,
+.secure-spot h3 {
+  color: #FFF;
+}
+
+.top-subheading {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.top-subheading h2 {
+  color: #FFF;
+  font-family: "Nunito Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.top-subheading p {
+  color: #FFF;
+  font-family: "Nunito Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+@media (max-width:768px) {
+  .top-subheading h2 {
+    font-size: 20px;
+  }
+
+  .top-subheading p {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 24px
+  }
+}
