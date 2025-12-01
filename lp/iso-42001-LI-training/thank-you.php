@@ -73,8 +73,8 @@ include('../lp-components/related-courses.php');
             <!--/card start /-->
             <div class="col-lg-3 col-6">
                 <div class="thankyou--card-item">
-                    <h4>ISO 27001 Lead Auditor Interview Questions for 2024</h4>
-                    <a href="https://www.infosectrain.com/blog/iso-27001-lead-auditor-interview-questions/"
+                    <h4>ISO/IEC 42001:2023 Artificial Intelligence Management System (AIMS): A Comprehensive Guide</h4>
+                    <a href="https://www.infosectrain.com/blog/iso-iec-420012023-artificial-intelligence-management-system-aims-a-comprehensive-guide/"
                         target="_blank">CHECK NOW</a>
                 </div>
             </div>
@@ -82,8 +82,8 @@ include('../lp-components/related-courses.php');
             <!--/card start /-->
             <div class="col-lg-3 col-6">
                 <div class="thankyou--card-item">
-                    <h4>Benefits of ISO/IEC 27001 Compliance for Organizations</h4>
-                    <a href="https://www.infosectrain.com/blog/benefits-of-iso-iec-27001-compliance-for-organizations/"
+                    <h4>15 Must-Have Documents & Evidence for an ISO/IEC 42001 Audit</h4>
+                    <a href="https://www.infosectrain.com/blog/15-must-have-documents-evidence-for-an-iso-iec-42001-audit/"
                         target="_blank">CHECK NOW</a>
                 </div>
             </div>
@@ -91,8 +91,8 @@ include('../lp-components/related-courses.php');
             <!--/card start /-->
             <div class="col-lg-3 col-6">
                 <div class="thankyou--card-item">
-                    <h4>ISO 27001: Best Practices to Secure Business Information</h4>
-                    <a href="https://www.infosectrain.com/blog/iso-27001-best-practices-to-secure-business-information/"
+                    <h4>What is the ISO Family of Standards?</h4>
+                    <a href="https://www.infosectrain.com/blog/what-is-the-iso-family-of-standards/"
                         target="_blank">CHECK NOW</a>
                 </div>
             </div>
@@ -100,8 +100,8 @@ include('../lp-components/related-courses.php');
             <!--/card start /-->
             <div class="col-lg-3 col-6">
                 <div class="thankyou--card-item">
-                    <h4>Audit Techniques and Tools for ISO 27001 Lead Auditors</h4>
-                    <a href="https://www.infosectrain.com/blog/audit-techniques-and-tools-for-iso-27001-lead-auditors/"
+                    <h4>AI Associated Risks and How to Mitigate Them?</h4>
+                    <a href="https://www.infosectrain.com/blog/ai-associated-risks-and-how-to-mitigate-them/"
                         target="_blank">CHECK NOW</a>
                 </div>
             </div>

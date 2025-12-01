@@ -242,10 +242,10 @@ if (isset($_POST['me_submited'])) {
 
                     <tr>
                         <td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">
-                            <ul>                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/iso-27001-lead-auditor-interview-questions/" target="_blank">ISO 27001 Lead Auditor Interview Questions for 2024</a></li>
-                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/benefits-of-iso-iec-27001-compliance-for-organizations/" target="_blank">Benefits of ISO/IEC 27001 Compliance for Organizations</a></li>
-                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/iso-27001-best-practices-to-secure-business-information/" target="_blank">ISO 27001: Best Practices to Secure Business Information</a></li>
-                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/audit-techniques-and-tools-for-iso-27001-lead-auditors/" target="_blank">Audit Techniques and Tools for ISO 27001 Lead Auditors</a></li>                          </ul>
+                            <ul>                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/iso-iec-420012023-artificial-intelligence-management-system-aims-a-comprehensive-guide/" target="_blank">ISO/IEC 42001:2023 Artificial Intelligence Management System (AIMS): A Comprehensive Guide</a></li>
+                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/15-must-have-documents-evidence-for-an-iso-iec-42001-audit/" target="_blank">15 Must-Have Documents & Evidence for an ISO/IEC 42001 Audit</a></li>
+                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/what-is-the-iso-family-of-standards/" target="_blank">What is the ISO Family of Standards?</a></li>
+                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/ai-associated-risks-and-how-to-mitigate-them/" target="_blank">AI Associated Risks and How to Mitigate Them?</a></li>                          </ul>
                         </td>                    </tr>
                     <tr>                        <td style="color: #414547; padding-left: 24px;padding-top:10px;font-family: Arial, Helvetica, sans-serif;font-size: 18px;">
                             <strong>Our Recommended Courses and Certification</strong>                        </td>
@@ -315,7 +315,7 @@ if (isset($_POST['me_submited'])) {
 
         'site_name' => 'lp',
 
-        'page_type' => 'ISO/IEC 42001 LA',
+        'page_type' => 'ISO/IEC 42001 LI',
 
         'name' => $me_name,
 
