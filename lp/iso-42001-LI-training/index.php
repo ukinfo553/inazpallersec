@@ -432,7 +432,9 @@ if ($course_data !== null) {
 
             <!--offer sec start -->
             <!--/ related courses /-->
-
+            <?php // Include the related_courses.php file
+            include('../lp-components/offer.php');
+            ?>
             <!--/ related courses /-->
             <!--offer sec end -->
 
