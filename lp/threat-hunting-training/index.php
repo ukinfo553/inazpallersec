@@ -342,7 +342,7 @@ if ($course_data !== null) {
                     <?php if (!empty($courseID)): ?>
                     <div class="row">
                         <div class="col-12">
-                            <h2>CIPP/E Training Calendar</h2>
+                            <h2>Advanced Threat Hunting Training Calendar</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -1101,8 +1101,7 @@ if ($course_data !== null) {
                         <div class="item">
                             <h3>Corporate Office</h3>
                             <p>
-                                C19 (2nd floor), Block C, Sector 2, <br>
-                                Near Nirulas Hotel, Noida, Uttar Pradesh 201301 <br> India
+                                B7, Sector 1, Noida, Uttar Pradesh 201301 (India)
                             </p>
                             <p style="font-size: 12px;margin-top: 15px;">
                                 All rights reserved. , InfosecTrain

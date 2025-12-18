@@ -26,7 +26,7 @@ if ($course_data !== null) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CISSP Certification Training 2024 | CISSP 2024 latest version</title>
+    <title>CISSP Certification Training | CISSP latest version</title>
     <meta name="description"
         content="Certified Information Systems Security Professional (CISSP Exam) Certification Training 2024 covers CISSP 2024 latest version to help learners pass the latest edition of CISSP.">
     <meta name="robots" content="noindex, nofollow" />
