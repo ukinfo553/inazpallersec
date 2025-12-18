@@ -1,4 +1,27 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<!--
+<?php
+
+include('include/comman_use.php');
+include('../../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$api_id = 30764;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($api_id);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +36,7 @@
     <!--/ style link start /-->
     <link href="assets/css/bootstrap-grid.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/custom.css" defer>
+    <link rel="stylesheet" href="../../lp-components/css_handler.php" defer>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,6 +133,7 @@
                             <div class="fs-18 f-nunito text-dark fw-bold">
                                 Prepare For CISSP Exam
                             </div>
+                            <div class="d-md-none seats-left fs-16 fw-bold f-nunito"></div>
                             <div class="d-flex flex-row banner-highlights">
                                 <div>
                                     <span>70% Increase</span>
@@ -122,25 +147,29 @@
                             <div class="d-flex flex-md-row flex-column align-items-start gap-3">
                                 <button class="button modal-btn" modal-title="Talk to Our Expert">Talk to Our
                                     Expert</button>
-                                <a href="https://www.infosectrain.com/wp-content/uploads/2018/12/CISSP_2024.pdf"
-                                    target="_blank" class="button download-btn"
-                                    style="background:var(--acent-red);border:1px solid var(--danger);color:var(--text-dark);">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
-                                        viewBox="0 0 16 17" fill="none">
-                                        <g clip-path="url(#clip0_18618_896)">
-                                            <path
-                                                d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.379 12.6915 7.379 12.6915 7.37897 12.6915C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.37704 12.6897 7.37685 12.6894 7.3767 12.6893C7.3762 12.6888 7.37577 12.6884 7.3753 12.6879C7.37499 12.6876 7.37471 12.6874 7.3744 12.687C7.37409 12.6867 7.37369 12.6863 7.37341 12.686C7.37279 12.6854 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.6279 12.6847 8.62721 12.6854 8.62659 12.686C8.62625 12.6863 8.62588 12.6867 8.6256 12.6869C8.62529 12.6873 8.62501 12.6875 8.6247 12.6878C8.62426 12.6883 8.62377 12.6888 8.62333 12.6892C8.62318 12.6894 8.62296 12.6896 8.6228 12.6897C8.62224 12.6903 8.62165 12.6909 8.62106 12.6915C8.62103 12.6915 8.62103 12.6915 8.621 12.6915C8.61122 12.701 8.60132 12.7103 8.59119 12.7193C8.51676 12.7857 8.43386 12.8375 8.3462 12.8744C8.34589 12.8745 8.34564 12.8747 8.34533 12.8748C8.34499 12.8749 8.34471 12.8751 8.34437 12.8752C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
-                                                fill="#E50914" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_18618_896">
-                                                <rect width="16" height="16" fill="white"
-                                                    transform="translate(0 0.5)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    Download Brochure
-                                </a>
+                                <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="button download-btn"
+                                        style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
+                                            viewBox="0 0 16 17" fill="none">
+                                            <g clip-path="url(#clip0_18618_896)">
+                                                <path
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    fill="#E50914" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_18618_896">
+                                                    <rect width="16" height="16" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Download Brochure
+                                    </a>';
+                                }
+                                ?>
                             </div>
                             <!-- <div class="d-flex gap-3">
                                 <img src="assets/images/100-satisfaction.webp" alt="Conditions Apply"
@@ -166,7 +195,7 @@
                         <!--highlights sec start-->
                         <div class="row g-4">
                             <div class="col-12">
-                                <h2>Training Course Highlights</h2>
+                                <h2 class="text-center text-md-start">Training Course Highlights</h2>
                             </div>
                             <!--col start-->
                             <div class="col-lg-3 col-6">
@@ -208,7 +237,7 @@
                                     style="background: var(--acent-green);">
                                     <img src="assets/images/highlight-icon/passed-rate.svg" width="42" height="42"
                                         alt="">
-                                    <p>98% Pass Rate</p>
+                                    <p>98% Success Rate</p>
                                 </div>
                             </div>
                             <!--col start-->
@@ -226,7 +255,7 @@
                                     style="background: var(--acent-orange);">
                                     <img src="assets/images/highlight-icon/certified-trainner.svg" width="42"
                                         height="42" alt="">
-                                    <p>Certified Trainers</p>
+                                    <p>Certified & Experienced Instructors</p>
                                 </div>
                             </div>
                             <!--col start-->
@@ -234,7 +263,7 @@
                                 <div class="h-100 d-flex flex-column gap-3 p-3 rounded-4"
                                     style="background: var(--acent-yellow);">
                                     <img src="assets/images/highlight-icon/learning.svg" width="42" height="42" alt="">
-                                    <p>Scenario-based Learning</p>
+                                    <p>Telegram Group for Exam Support</p>
                                 </div>
                             </div>
                         </div>
@@ -243,7 +272,7 @@
                         <!--course content start-->
                         <div class="row mt-4">
                             <div class="col-12">
-                                <h2>CISSP - An Overview</h2>
+                                <h2 class="text-center text-md-start">CISSP - An Overview</h2>
                                 <p class="my-3">
                                     The Certified Information Systems Security Professional (CISSP®) certification
                                     training course offered by InfosecTrain is perfectly suited for individuals working
@@ -259,237 +288,94 @@
                                 </p>
                             </div>
                             <div class="col-12 mt-4">
-                                <div class="accordion d-flex flex-column gap-4">
+                                <div class="accordion d-flex flex-column gap-4 course-content-accordion">
                                     <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Course-Curriculum.svg" width="24"
-                                                    height="24" alt="Course Curriculum">
-                                                <span>Course Curriculum</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <h3>Domain 1:</h3>
-                                            <strong>Security and Risk Management (16%)</strong>
-                                            <p>Understand and apply security, governance and compliance, risk management
-                                                and
-                                                legal/regulatory requirements that pertain to information security in an
-                                                organization.</p>
-                                            <br>
-                                            <h3>Domain 2:</h3>
-                                            <strong>Asset Security (10%)</strong>
-                                            <p>Manage data life cycle and security controls to provision resources
-                                                securely
-                                                in an organization.</p>
-                                            <br>
-                                            <h3>Domain 3:</h3>
-                                            <strong>Security Architecture and Engineering (13%)</strong>
-                                            <p>Assess and mitigate vulnerabilities in security architectures by
-                                                implementing
-                                                cryptographic solutions and site/facility security controls</p>
-                                            <br>
-                                            <h3>Domain 4:</h3>
-                                            <strong>Communication and Network Security (13%)</strong>
-                                            <p>Assess and implement secure design principles and communication channels
-                                            </p>
-                                            <br>
-                                            <h3>Domain 5:</h3>
-                                            <strong>Identity and Access Management (IAM) (13%)</strong>
-                                            <p>Manage identification and authentication of people, devices and services
-                                            </p>
-                                            <br>
-                                            <h3>Domain 6:</h3>
-                                            <strong>Security Assessment and Testing (12%)</strong>
-                                            <p>Conduct security control testing and facilitate security audits</p>
-                                            <br>
-                                            <h3>Domain 7:</h3>
-                                            <strong>Security Operations (13%)</strong>
-                                            <p>Conduct configuration management, incident management, vulnerability
-                                                management and implement disaster recovery processes</p>
-                                            <br>
-                                            <h3>Domain 8:</h3>
-                                            <strong>Software Development Security (10%)</strong>
-                                            <p>Integrate security in the SDLC (Software Development Life Cycle)</p>
-                                            <br>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Course-Objectives.svg" width="24"
-                                                    height="24" alt="Course Objectives">
-                                                <span>Course Objectives</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>Master core concepts of risk management, security
-                                                    governance, and compliance.</li>
-                                                <li>Understand the ethical and legal requirements impacting
-                                                    information security.</li>
-                                                <li>Learn to classify information and assets, ensuring
-                                                    appropriate protection.</li>
-                                                <li>Understand data security controls and asset retention.</li>
-                                                <li>Gain insights into secure design principles, engineering
-                                                    processes, and security models.</li>
-                                                <li>Apply cryptography and secure architecture solutions
-                                                    effectively.</li>
-                                                <li>Develop skills in designing and protecting network
-                                                    security.</li>
-                                                <li>Manage secure network architecture and components.</li>
-                                                <li>Implement comprehensive IAM solutions, including access
-                                                    control, identity management, and authentication mechanisms.</li>
-                                                <li>Integrate third-party identity services and manage
-                                                    identities across different platforms.</li>
-                                                <li>Conduct assessments and testing of security systems to
-                                                    identify vulnerabilities.</li>
-                                                <li>Analyze and interpret test data to enhance security
-                                                    measures.</li>
-                                                <li>Understand operational security controls, incident
-                                                    management, and disaster recovery.</li>
-                                                <li>Support forensic investigations and understand the
-                                                    foundations of operational security.</li>
-                                                <li>Enforce security controls in software development
-                                                    environments.</li>
-                                                <li>Integrate security throughout the Software Development Life
-                                                    Cycle (SDLC).</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Exam-Details.svg" width="24"
-                                                    height="24" alt="Exam Details">
-                                                <span>Exam Details</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>
-                                                    <p><strong>Duration</strong>: 3 Hours</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Number of questions</strong>: 150 </p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Question format</strong>: Multiple Choice</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Passing marks</strong>: 700 out of 1000</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Exam language</strong>: English, French, German,
-                                                        Brazilian,
-                                                        Portuguese, Spanish, Japanese, Simplified Chinese, Korean,
-                                                        Visually
-                                                        Impaired</p>
-                                                </li>
-                                                <li>
-                                                    <p><strong>Delivery Method</strong>: CAT</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Pre-requisites.svg" width="24"
-                                                    height="24" alt="Prerequisites">
-                                                <span>Prerequisites</span>
-                                            </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <p>To apply for the CISSP® course certification, you need to:</p>
-                                            <ul class="liststar">
-                                                <li>Have a minimum 5 years of cumulative paid full-time work experience
-                                                    in
-                                                    two or more of the 8 domains of the (ISC)² CISSP® Common Body of
-                                                    Knowledge (CBK)</li>
-                                                <li>One-year experience waiver can be earned with a 4-year college
-                                                    degree,
-                                                    or regional equivalent or additional credential from the (ISC)²
-                                                    approved
-                                                    list</li>
+                                    <?php
+                                    // Check that course_details exists and is a non-empty array
+                                    if (!empty($course_details) && is_array($course_details)) {
+                                        foreach ($course_details as $index => $detail) {
+                                            // Make the first item active and open
+                                            $activeClass = $index === 0 ? 'open' : '';
+                                            ?>
+                                            <div
+                                                class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $activeClass; ?>">
+                                                <button
+                                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/course-content/Course-Curriculum.svg" width="24"
+                                                            height="24" alt="<?php echo htmlspecialchars($detail['title']); ?>">
+                                                        <span><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                    </div>
+                                                    <span class="arrow"></span>
+                                                </button>
+                                                <div class="accordion-body">
+                                                    <?php echo $detail['ans']; ?>
 
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--accordion-item start-->
-                                    <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                        <button
-                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <img src="assets/images/course-content/Target-Audience.svg" width="24"
-                                                    height="24" alt="Target Audience">
-                                                <span>Target Audience</span>
+                                                    <?php
+                                                    // If this is the first item and $brochureLink is set, show brochure button
+                                                    if ($index === 0 && !empty($brochure)) {
+                                                        echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="button download-btn mt-3 d-inline-block"
+                                        style="background:var(--acent-red);border:1px solid var(--danger);color:var(--dark);">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="12" height="12"
+                                            viewBox="0 0 16 17" fill="none">
+                                            <g clip-path="url(#clip0_18618_896)">
+                                                <path
+                                                    d="M12.4444 16.5H3.55555C2.60588 16.5 1.71302 16.1302 1.04142 15.4586C0.369847 14.787 0 13.8941 0 12.9444V12.0555C0 11.5646 0.397948 11.1666 0.888894 11.1666C1.37984 11.1666 1.77779 11.5646 1.77779 12.0555V12.9444C1.77779 13.4193 1.96273 13.8657 2.29845 14.2015C2.63426 14.5372 3.08068 14.7222 3.55555 14.7222H12.4444C12.9193 14.7222 13.3657 14.5372 13.7015 14.2015C14.0372 13.8656 14.2222 13.4192 14.2222 12.9444V12.0555C14.2222 11.5646 14.6202 11.1666 15.1111 11.1666C15.602 11.1666 16 11.5646 16 12.0555V12.9444C16 13.8941 15.6302 14.7869 14.9586 15.4586C14.287 16.1302 13.3941 16.5 12.4444 16.5ZM7.99998 12.9444C7.87702 12.9444 7.75996 12.9194 7.65346 12.8743C7.55409 12.8323 7.46072 12.7713 7.37903 12.6916C7.37838 12.691 7.37779 12.6904 7.3772 12.6898C7.3762 12.6888 7.3753 12.6879 7.3744 12.687C7.37341 12.686 7.3721 12.6847 7.37148 12.6841L3.81591 9.12852C3.46879 8.7814 3.46879 8.21857 3.81591 7.87142C4.16302 7.5243 4.72588 7.52427 5.073 7.87142L7.11112 9.90954V1.38889C7.11109 0.897948 7.50904 0.5 7.99998 0.5C8.49093 0.5 8.88891 0.897948 8.88891 1.38889V9.90951L10.927 7.87142C11.2741 7.5243 11.837 7.5243 12.1841 7.87142C12.5312 8.21854 12.5312 8.7814 12.1841 9.12852L8.62852 12.6841C8.59119 12.7193 8.51676 12.7857 8.43386 12.8375C8.23842 12.9198 8.12211 12.9444 7.99998 12.9444Z"
+                                                    fill="#E50914" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_18618_896">
+                                                    <rect width="16" height="16" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        Download Brochure
+                                    </a>';
+                                                    }
+                                                    ?>
+                                                </div>
                                             </div>
-                                            <span class="arrow"></span>
-                                        </button>
-                                        <div class="accordion-body">
-                                            <ul class="liststar">
-                                                <li>Chief Information Security Officer</li>
-                                                <li>Chief Information Officer</li>
-                                                <li>Director of Security</li>
-                                                <li>IT Director/Manager</li>
-                                                <li>Security Systems Engineer</li>
-                                                <li>Security Analyst</li>
-                                                <li>Security Manager</li>
-                                                <li>Security Auditor</li>
-                                                <li>Security Architect</li>
-                                                <li>Security Consultant</li>
-                                                <li>Network Architect</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                    <!--accordion-item end-->
                                 </div>
                             </div>
                         </div>
                         <!--course content end-->
 
                         <!--course calendar start-->
-                        <div class="row g-4 mt-4 training-calendar" id="training-calendar">
-                            <div class="col-12">
-                                <h2>CISSP Training Calendar</h2>
+                        <div class="row g-4 mt-4 calendar-upcoming-batches d-block" id="training-calendar">
+                            <div class="col-12 available-batch">
+                                <h2 class="text-center text-md-start">CISSP Training Calendar</h2>
+                                <div class="item mt-4">
+                                    <div class="item-body">
+                                        <table>
+                                            <thead>
+                                                <tr
+                                                    class="d-none d-md-flex align-items-center flex-wrap flex-lg-nowrap">
+                                                    <td>Batch Date</td>
+                                                    <td>Batch Type</td>
+                                                    <td>Training Mode</td>
+                                                    <td>Batch Status</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-12 mt-0">
-                                <?php
-                                $url = "https://www.infosectrain.com/api/30764/href_toscroll/free_demo";
-                                function gettraning_Cal($url)
-                                {
-                                    $ch = curl_init();
-                                    curl_setopt($ch, CURLOPT_HEADER, 0);
-                                    curl_setopt($ch, CURLOPT_VERBOSE, 1);
-                                    //curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-                                    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-                                    curl_setopt($ch, CURLOPT_FAILONERROR, 0);
-                                    // curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_ANY);
-                                    //curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
-                                    curl_setopt($ch, CURLOPT_URL, $url);
-
-                                    $content = curl_exec($ch);
-
-                                    curl_close($ch);
-                                    return $content;
-                                }
-
-                                gettraning_Cal($url);
-
-                                ?>
+                            <!-- if bathc not available then show div -->
+                            <div class="col-12 not-available-batch d-none">
+                                <h2>Looking for a customized training?</h2>
+                                <button class="button modal-btn mt-4" modal-title="REQUEST A BATCH">REQUEST A
+                                    BATCH</button>
                             </div>
+                            <!-- if batch avvaible then show div -->
                         </div>
                         <!--course calendar end-->
 
@@ -563,29 +449,27 @@
                                         value="<?php echo $pag_url; ?>">
                                     <input type="hidden" id="me_others" name="me_others" value="">
                                     <input type="hidden" name="me_submited" value="1">
+                                    <!-- Privacy Policy Checkbox -->
+                                    <label class="f-nunito fs-14 fw-normal"
+                                        style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                        <input type="checkbox" name="privacy_policy" checked required
+                                            style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                        <span>
+                                            By sharing your details, you agree to our Terms and <a
+                                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                                style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                                Policy</a>
+                                        </span>
+                                    </label>
+                                    <!-- privacy Policy Checkbox end -->
                                     <button type="submit" class="form-control-btn">Submit</button>
 
                                     <div class="loader text-center" style="display:none;">
                                         <img src="assets/images/loader.gif" alt="Loading...">
                                     </div>
                                 </form>
-                                <p class="fw-bold text-center">Save your seat before the batch fills out!</p>
-                                <!-- <div class="fs-16 f-nunito d-flex align-items-center gap-3 fw-bold">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <g clip-path="url(#clip0_19109_664)">
-                                            <path
-                                                d="M10.692 12.0676C11.9187 12.7289 12.882 13.8209 13.3007 15.1689C13.3317 15.2687 13.3388 15.3744 13.3215 15.4775C13.3042 15.5805 13.2629 15.6781 13.2009 15.7622C13.1389 15.8464 13.0581 15.9148 12.9648 15.9619C12.8715 16.0091 12.7685 16.0336 12.664 16.0336H3.33132C3.22672 16.0339 3.12352 16.0095 3.0301 15.9625C2.93668 15.9154 2.85568 15.847 2.79366 15.7628C2.73164 15.6785 2.69035 15.5809 2.67315 15.4777C2.65594 15.3745 2.66331 15.2687 2.69465 15.1689C3.11465 13.8183 4.08065 12.7249 5.31065 12.0636C5.46321 11.9806 5.63978 11.9528 5.81048 11.985C5.98117 12.0172 6.13549 12.1074 6.24732 12.2403L7.54665 13.7989C7.60233 13.8658 7.67205 13.9196 7.75085 13.9566C7.82966 13.9935 7.91562 14.0127 8.00265 14.0127C8.08968 14.0127 8.17565 13.9935 8.25445 13.9566C8.33325 13.9196 8.40297 13.8658 8.45865 13.7989L9.75465 12.2436C9.8666 12.1106 10.0211 12.0205 10.1919 11.9884C10.3628 11.9563 10.5394 11.9843 10.692 12.0676ZM13.7733 1.76694L9.46398 0.246271C8.53595 -0.0807128 7.52426 -0.0821235 6.59532 0.242271L2.23332 1.76894C1.96984 1.85851 1.7413 2.02888 1.5802 2.2558C1.41911 2.48272 1.33365 2.75466 1.33598 3.03294C1.33598 3.61094 1.68865 4.10694 2.23398 4.29694L6.57198 5.81027C7.49488 6.13119 8.49909 6.13119 9.42198 5.81027L13.3313 4.44694V7.36627C13.3313 7.54308 13.4016 7.71265 13.5266 7.83768C13.6516 7.9627 13.8212 8.03294 13.998 8.03294C14.1748 8.03294 14.3444 7.9627 14.4694 7.83768C14.5944 7.71265 14.6647 7.54308 14.6647 7.36627L14.6673 3.0316C14.6699 2.75366 14.585 2.48193 14.4247 2.25485C14.2644 2.02778 14.0368 1.85686 13.774 1.76627L13.7733 1.76694ZM11.9973 6.32427L9.86065 7.06961C8.65314 7.48762 7.34016 7.48762 6.13265 7.06961L3.99732 6.32427V6.69961C3.99732 8.90561 5.79132 10.6996 7.99732 10.6996C10.2033 10.6996 11.9973 8.90561 11.9973 6.69961V6.32361V6.32427Z"
-                                                fill="#E50914" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_19109_664">
-                                                <rect width="16" height="16" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    <span class="seats-left">4 Seats Left</span>
-                                </div> -->
+                                <p class="fw-bold">Save your seat before the batch fills out!</p>
+                                <div class="seats-left fs-16 fw-bold f-nunito"></div>
                             </div>
                         </div>
                     </div>
@@ -614,7 +498,7 @@
                             <img src="assets/images/one-on-one.png" width="70" height="70" alt="1-TO-1 Training"
                                 class="d-block">
                             <div class="f-nunito fs-18 fw-bold text-dark">1-TO-1 TRAINING</div>
-                            <ul class="d-flex flex-column align-items-center gap-1">
+                            <ul class="d-flex flex-column align-items-center gap-1 text-center">
                                 <li>Customized Schedule</li>
                                 <li>Learn at Your Dedicated Hour</li>
                                 <li>Instant Clarification of Doubts</li>
@@ -632,7 +516,7 @@
                             <img src="assets/images/online-training.png" width="70" height="70" alt="Online Training"
                                 class="d-block">
                             <div class="f-nunito fs-18 fw-bold text-dark">ONLINE TRAINING</div>
-                            <ul class="d-flex flex-column align-items-center gap-1">
+                            <ul class="d-flex flex-column align-items-center gap-1 text-center">
                                 <li>Flexible, Convenient & Time Saving</li>
                                 <li>Highly Interactive</li>
                                 <li>Affordable Yet Effective</li>
@@ -650,7 +534,7 @@
                             <img src="assets/images/corporate-training.png" width="70" height="70"
                                 alt="Corporate Training" class="d-block">
                             <div class="f-nunito fs-18 fw-bold text-dark">CORPORATE TRAINING</div>
-                            <ul class="d-flex flex-column align-items-center gap-1">
+                            <ul class="d-flex flex-column align-items-center gap-1 text-center">
                                 <li>Anytime, Anywhere - Across The Globe</li>
                                 <li>Hire a Trainer</li>
                                 <li>Your Schedule, Your Pace</li>
@@ -723,6 +607,28 @@
                             </div>
                         </div>
                         <!--/ col end /-->
+
+
+                        <!--/ col start /-->
+                        <div class="swiper-slide item">
+                            <div class="profile-desc">
+                                <div class="avtar-data">
+                                    <div class="avtar-name">
+                                        Sujay
+                                    </div>
+                                    <div class="avtar-exp">
+                                        25+ Years of Experience
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="designation">
+                                Corporate Trainer | CISO | CCSP | CISSP | ISO 42001 | ISO 27001 | CTO | CSOA
+                            </div>
+                            <div class="summary">
+                                Sujay is a cybersecurity and cloud security expert with over 25 years of experience in enterprise security, risk management, and compliance. As a CCSP, CISSP, and ISO 42001 Lead Auditor, he specializes in cloud security architecture, AI-driven cybersecurity frameworks, and security governance. His expertise spans SOC implementation, ISO 27001 & ISO 42001 compliance, penetration testing, and threat modeling, ensuring organizations achieve robust security postures aligned with global standards.
+                            </div>
+                        </div>
+                        <!--/ COL END -->
 
                         <!--/ col start /-->
                         <div class="swiper-slide item">
@@ -798,32 +704,6 @@
                                 ISMS, Risk Management, and GRC compliance domains. His expertise extends to managing and
                                 implementing complex technical solutions, with a strong focus on IBM Security Guardium
                                 versions 9.0 and 10.0.
-                            </div>
-                        </div>
-                        <!--/ COL END -->
-
-                        <!--/ col start /-->
-                        <div class="swiper-slide item">
-                            <div class="profile-desc">
-                                <div class="avtar-data">
-                                    <div class="avtar-name">
-                                        Sujay
-                                    </div>
-                                    <div class="avtar-exp">
-                                        15+ Years of Experience
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="designation">
-                                CSOA | CCSP | CISSP | ISO 27001 Lead Auditor | ITIL v3
-                            </div>
-                            <div class="summary">
-                                Nearly 15+ years of experience as a seasoned, technically inclined and highly empowered
-                                IT professional with strong emphasis on understanding business vision, requirements,
-                                effective communication and team building to deliver robust IT solutions and services.
-                                Sujay delivers power-packed training sessions on certification courses like CISSP, CCSP,
-                                AWS Architect, Cloud Architecture, Information Security Awareness. His sessions are
-                                highly interactive, maintaining a very high success rate throughout his courses.
                             </div>
                         </div>
                         <!--/ COL END -->
@@ -921,7 +801,7 @@
                         <div class="item">
                             <img src="assets/images/why-choose/assessment-practice.png" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p><strong>Practice with labs</strong>, regular assessments, and case studies</p>
+                            <p><strong>Practice with case studies</strong>, flash cards, mind maps & quizzes</p>
                         </div>
                     </div>
                     <!--/ col start /-->
@@ -982,7 +862,7 @@
             <div class="container-fluid container-lg">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Real Stories, Real Success</h2>
+                        <h2 class="text-center text-md-start">Real Stories, Real Success</h2>
                     </div>
                 </div>
 
@@ -1076,51 +956,36 @@
                         <h2 class="text-center">Benefits Of CISSP Certification</h2>
                     </div>
                 </div>
-                <div class="row my-4 justify-content-center g-4">
+                <div class="d-flex flex-lg-nowrap flex-wrap justify-content-center gap-4 my-4">
                     <!--/ col start /-->
-                    <div class="col-6 col-lg-2 col-md-3">
-                        <div class="h-100 text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4"
-                            style="background: var(--acent-red);">
-                            <img src="assets/images/benifits/global-recognition.svg" width="24" height="24"
-                                alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p class="mb-0">Get global recognition</p>
-                        </div>
+                    <div class="benefits-item text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4">
+                        <img src="assets/images/benifits/global-recognition.svg" width="24" height="24"
+                            alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
+                        <p class="mb-0">Get global recognition</p>
                     </div>
                     <!--/ col start /-->
-                    <div class="col-6 col-lg-2 col-md-3">
-                        <div class="h-100 text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4"
-                            style="background: var(--acent-red);">
-                            <img src="assets/images/benifits/earning.svg" width="24" height="24"
-                                alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p class="mb-0">Maximize your earning potential</p>
-                        </div>
+                    <div class="benefits-item text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4">
+                        <img src="assets/images/benifits/earning.svg" width="24" height="24"
+                            alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
+                        <p class="mb-0">Maximize your earning potential</p>
                     </div>
                     <!--/ col start /-->
-                    <div class="col-6 col-lg-2 col-md-3">
-                        <div class="h-100 text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4"
-                            style="background: var(--acent-red);">
-                            <img src="assets/images/benifits/cybersecurity-expert.svg" width="24" height="24"
-                                alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p class="mb-0">Earn the status of CISSP expert</p>
-                        </div>
+                    <div class="benefits-item text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4">
+                        <img src="assets/images/benifits/cybersecurity-expert.svg" width="24" height="24"
+                            alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
+                        <p class="mb-0">Earn the status of CISSP expert</p>
                     </div>
                     <!--/ col start /-->
-                    <div class="col-6 col-lg-2 col-md-3">
-                        <div class="h-100 text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4"
-                            style="background: var(--acent-red);">
-                            <img src="assets/images/benifits/career-growth.svg" width="24" height="24"
-                                alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p class="mb-0">Advanced career growth</p>
-                        </div>
+                    <div class="benefits-item text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4">
+                        <img src="assets/images/benifits/career-growth.svg" width="24" height="24"
+                            alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
+                        <p class="mb-0">Advanced career growth</p>
                     </div>
                     <!--/ col start /-->
-                    <div class="col-6 col-lg-2 col-md-3">
-                        <div class="h-100 text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4"
-                            style="background: var(--acent-red);">
-                            <img src="assets/images/benifits/community.svg" width="24" height="24"
-                                alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p class="mb-0">Become a part of an esteemed community</p>
-                        </div>
+                    <div class="benefits-item text-center d-flex align-items-center flex-column gap-3 p-3 rounded-4">
+                        <img src="assets/images/benifits/community.svg" width="24" height="24"
+                            alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
+                        <p class="mb-0">Become a part of an esteemed community</p>
                     </div>
                 </div>
 
@@ -1136,7 +1001,7 @@
 
                     <div class="col-lg-6 col-md-6">
                         <div>
-                            <img src="assets/images/benifits/hiring-company.webp" alt="Hiring Company" width="533"
+                            <img src="assets/images/benifits/hiring-company-v2.webp" alt="Hiring Company" width="533"
                                 height="161" class="w-100 h-auto d-block m-auto rounded-4">
                         </div>
                         <div class="d-flex flex-column flex-lg-row align-items-center text-center gap-3 rounded-4 p-3 mt-4"
@@ -1170,52 +1035,92 @@
                                     <div class="profile">
                                         <div class="d-flex align-items-center gap-3">
                                             <div class="flex-shrink-0">
-                                                <img src="https://www.infosectrain.com/wp-content/uploads/2023/05/Prajith-Gopidas-150x150.png"
-                                                    alt="Prajith Gopidas" width="250" height="250">
+                                                <img src="assets/images/testimonial/Humaid-Abdullah-Ali-Alabdouli.png"
+                                                    alt="Humaid Abdullah Ali Alabdouli" width="250" height="250">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    Prajith Gopidas
+                                                    Humaid Abdullah Ali Alabdouli
                                                 </h3>
                                                 <span>UAE</span>
                                             </div>
                                         </div>
                                     </div>
                                     <p class="desc">
-                                        Thank you trainers for your dedication and patience in explaining the concepts.
-                                        Also,
-                                        the way you spend extra days to cover the topics satisfactorily for the students
-                                        is
-                                        great. Good job, InfosecTrain, and all the best to all the students. A big
-                                        thanks to the
-                                        Infosec team.
+                                        InfosecTrain's CISSP Training simplifies complex concepts, making learning easy
+                                        and effective. The support provided throughout the training ensures a smooth
+                                        learning experience. Highly recommended for CISSP aspirants!
                                     </p>
                                 </div>
-
                                 <!--/ col start /-->
                                 <div class="swiper-slide gladiators-item">
                                     <div class="profile">
                                         <div class="d-flex align-items-center gap-3">
                                             <div class="flex-shrink-0">
-                                                <img src="https://www.infosectrain.com/wp-content/uploads/2023/05/Rafi-150x150.jpeg"
-                                                    width="250" height="250" alt="Mohamed Rafi">
+                                                <img src="assets/images/testimonial/Anirban-Das.png"
+                                                    alt="Anirban-Das" width="250" height="250">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    Mohamed Rafi
+                                                    Anirban-Das
+                                                </h3>
+                                                <span>UAE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="desc">
+                                        This is an exceptionally well-structured course that helped me tremendously in
+                                        clearing my doubts. I highly recommend InfosecTrain's CISSP Training for anyone
+                                        looking to deepen their understanding of cybersecurity.
+                                    </p>
+                                </div>
+                                <!--/ col start /-->
+                                <div class="swiper-slide gladiators-item">
+                                    <div class="profile">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="flex-shrink-0">
+                                                <img src="assets/images/testimonial/Nizamuddin-ck.png"
+                                                    alt="Nizamuddin ck" width="250" height="250">
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h3>
+                                                    Nizamuddin ck
+                                                </h3>
+                                                <span>UAE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="desc">
+                                        First and foremost I want to express my gratitude to InfosecTrain in conducting
+                                        this CISSP training. Trainer's expertise and knowledge were evident throughout
+                                        the training and they made the entire learning experience engaging and
+                                        informative. The training was well-structured and the concepts were explained in
+                                        a clear and concise manner making it easy to understand and retain the
+                                        information. The practical examples and case studies shared during the training
+                                        were especially helpful in providing a real-world perspective on the topics
+                                        covered.
+                                    </p>
+                                </div>
+                                <!--/ col start /-->
+                                <div class="swiper-slide gladiators-item">
+                                    <div class="profile">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="flex-shrink-0">
+                                                <img src="assets/images/testimonial/MohmadSohel-Haradwala.png"
+                                                    alt="MohmadSohel Haradwala" width="250" height="250">
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h3>
+                                                    MohmadSohel Haradwala
                                                 </h3>
                                                 <span>Kuwait</span>
                                             </div>
                                         </div>
                                     </div>
                                     <p class="desc">
-                                        The class was very detailed and organized. I thoroughly enjoyed and gained much
-                                        knowledge. I liked that the course notes and PowerPoint slides were really
-                                        useful,
-                                        making it easier to understand textbooks and adding more information that
-                                        textbooks
-                                        sometimes lack. I liked the trainer’s quick response. The course at InfosecTrain
-                                        surpassed my expectations. Overall, I found it effective and enjoyed it.
+                                        InfosecTrain's CISSP Training was excellent! The sessions were well-structured,
+                                        conducted on time, and the concepts were explained in a simple and
+                                        easy-to-understand manner.
                                     </p>
                                 </div>
                                 <!--/ col start /-->
@@ -1223,56 +1128,21 @@
                                     <div class="profile">
                                         <div class="d-flex align-items-center gap-3">
                                             <div class="flex-shrink-0">
-                                                <img src="https://www.infosectrain.com/wp-content/uploads/2023/05/Gokul-Govindan-150x150.jpg"
-                                                    width="250" height="250" alt="Gokul Govindan">
+                                                <img src="assets/images/testimonial/Laiju-Kodippadi-Lakshmanan.png"
+                                                    width="250" height="250" alt="Laiju Kodippadi Lakshmanan">
                                             </div>
                                             <div class="flex-grow-1 ms-3">
                                                 <h3>
-                                                    Gokul Govindan
+                                                    Laiju Kodippadi Lakshmanan
                                                 </h3>
-                                                <span>Qatar</span>
+                                                <span>UAE</span>
                                             </div>
                                         </div>
                                     </div>
                                     <p class="desc">
-                                        The training session was up to the mark and focused on the exam point of view.
-                                        These
-                                        were good informative sessions that helped enhance the overall view towards the
-                                        IT
-                                        Information Security domain.
+                                    Thank you, InfosecTrain, for an excellent CISSP training session! The entire class was insightful and engaging, making the learning experience truly enjoyable. Looking forward to applying this knowledge in the cybersecurity domain!
                                     </p>
                                 </div>
-
-                                <!--/ col start /-->
-                                <div class="swiper-slide gladiators-item">
-                                    <div class="profile">
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="flex-shrink-0">
-                                                <img src="https://www.infosectrain.com/wp-content/uploads/2023/05/zuber-150x150.jpg"
-                                                    width="250" height="250" alt="Sayed Zuber">
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <h3> Sayed Zuber </h3>
-                                                <span>India</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="desc">
-                                        The trainers are amazing. Before joining the course, I tried learning from
-                                        videos online
-                                        but didn’t understand 5% of CISSP concepts. After getting training from
-                                        InfosecTrain, I
-                                        learned and cleared almost every doubt regarding CISSP. Now, I feel very
-                                        confident to
-                                        attempt CISSP after completing this training. I thank my trainer from the bottom
-                                        of my
-                                        heart for providing such wonderful training and clearing a lot of concepts.
-                                    </p>
-
-
-                                </div>
-
-
                             </div>
 
                             <div class="d-none d-md-flex justify-content-center align-items-center navigation">
@@ -1308,234 +1178,37 @@
         <!--/ related courses /-->
 
         <!--<[faq start]>-->
-        <section class="faq-section pt-0">
-            <div class="container-fluid container-lg">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <h2 class="text-center">Frequently Asked Questions</h2>
-                    </div>
-                    <div class="col-12">
-                        <div class="accordion d-flex flex-column gap-4">
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden open">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>What is CISSP certification?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    The Certified Information Systems Security Professional (CISSP) certification is a
-                                    globally recognized credential in the field of information security. It is designed
-                                    for IT professionals who wish to demonstrate their expertise in designing,
-                                    implementing, and managing a best-in-class cybersecurity program. The certification
-                                    is offered by (ISC)², the International Information System Security Certification
-                                    Consortium.
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>How can I prepare for the CISSP exam?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        Preparing for the CISSP exam can be a comprehensive process. Here's a condensed
-                                        guide with key pointers to help you get ready for the exam:
-                                    </p>
-                                    <ul class="liststar">
-                                        <li>Make a study plan</li>
-                                        <li>Join study groups for collaboration</li>
-                                        <li>Prioritize understanding over memorization</li>
-                                        <li>Regularly practice with mock exams</li>
-                                        <li>Ensure materials are current with the exam outline</li>
-                                        <li>Enroll in structured learning</li>
-                                        <li>
-                                            <p>Study with the <strong>Official (ISC)² CISSP CBK Reference</strong> and
-                                                Study Guide</p>
-                                        </li>
-                                        <li>
-                                            <p>Simplify concepts with <strong>CISSP For Dummies</strong></p>
-                                        </li>
-                                        <li>
-                                            <p>Take <strong>Official (ISC)² Practice Tests.</strong></p>
-                                        </li>
-                                        <li>
-                                            <p>Use <strong>Boson Practice Exams</strong> for simulation.</p>
-                                        </li>
-                                        <li>
-                                            <p>Read <strong>How To Think Like A Manager</strong> for the <strong>CISSP
-                                                    Exam</strong> for strategy.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>What are the prerequisites for CISSP certification?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>To apply for the CISSP® course certification, you need to:</p>
-                                    <ul class="liststar">
-                                        <ul>
-                                            <li>Have a minimum of 5 years of cumulative paid full-time work experience
-                                                in
-                                                two or more of the 8 domains of the (ISC)² CISSP® Common Body of
-                                                Knowledge
-                                                (CBK).</li>
-                                            <li>A one-year experience waiver can be earned with a 4-year college degree,
-                                                regional equivalent, or additional credential from the (ISC)² approved
-                                                list.
-                                            </li>
-                                        </ul>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>How many attempts do I have to pass the CISSP exam?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        (ISC)² does not limit the number of times you can attempt the CISSP exam, but
-                                        there are waiting periods between attempts. Typically, you must wait 30 days
-                                        after your first failed attempt and 90 days after subsequent failed attempts, up
-                                        to a maximum of three times within a 12-month period.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>What is the passing score for the CISSP certification exam?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>The passing score for the CISSP exam is 700 out of 1000 points.</p>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>What are CPEs?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        Continuing Professional Education (CPE) credits are required to maintain your
-                                        CISSP certification. CISSP holders must earn and report a minimum of 40 CPE
-                                        credits per year and a total of 120 CPE credits over the three-year
-                                        certification cycle.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>Is the CISSP exam difficult to pass?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        The CISSP exam is widely recognized for its rigorous assessment of a candidate's
-                                        understanding across the broad spectrum of information security topics,
-                                        demanding a deep and comprehensive knowledge of its eight domains. While it
-                                        poses a significant challenge, dedicated and well-prepared candidates can
-                                        navigate its complexities successfully with the right approach to training and
-                                        preparation.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>How long is the CISSP certification valid for?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        The CISSP certification is valid for three years.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>What are the career prospects after CISSP certification?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        Earning the CISSP certification can open doors to senior and managerial
-                                        positions in information security, such as:
-                                    </p>
-                                    <ul class="liststar">
-                                        <li>Chief Information Security Officer (CISO)</li>
-                                        <li>Security Manager</li>
-                                        <li>IT Director/Manager</li>
-                                        <li>Security Auditor</li>
-                                        <li>Security Architect</li>
-                                        <li>Security Analyst</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>Can I take the CISSP exam online or at a testing center?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        The CISSP exam is available at authorized Pearson VUE testing centers worldwide.
-                                        (ISC)² does not offer the CISSP exam in an online format that can be taken
-                                        remotely.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--accordion-item start-->
-                            <div class="accordion-item border-grey w-100 rounded-4 overflow-hidden">
-                                <button
-                                    class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
-
-                                    <span>How long does it take to prepare for the CISSP exam?</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <div class="accordion-body">
-                                    <p>
-                                        Preparation time varies by individual, depending on background, experience, and
-                                        familiarity with the material.
-                                    </p>
-                                </div>
+        <?php if (!empty($faq)) { ?>
+            <section class="faq-section pt-0">
+                <div class="container-fluid container-lg">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <h2 class="text-center">Frequently Asked Questions</h2>
+                        </div>
+                        <div class="col-12">
+                            <div class="accordion d-flex flex-column gap-4 accordion-faq-section">
+                                <?php foreach ($faq as $index => $question) {
+                                    // Add "open" class and visible style for the first item
+                                    $isOpen = $index === 0 ? 'open' : '';
+                                    ?>
+                                    <div
+                                        class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $isOpen; ?>">
+                                        <button
+                                            class="accordion-header f-nunito fs-18 fw-bold p-3 d-flex align-items-center gap-3">
+                                            <span><?php echo htmlspecialchars($question['title']); ?></span>
+                                            <span class="arrow"></span>
+                                        </button>
+                                        <div class="accordion-body">
+                                            <?php echo $question['ans']; ?>
+                                        </div>
+                                    </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[faq end]>-->
 
         <!--<[reach us sec start]>-->
@@ -1544,7 +1217,7 @@
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-6">
                         <div class="d-flex flex-column gap-4">
-                            <h2>Need Help? Reach Us.</h2>
+                            <h2 class="text-center text-md-start">Need Help? Reach Us.</h2>
                             <form method="post" class="ajax-form d-flex align-items-start flex-column gap-3">
                                 <div class="w-100">
                                     <input type="text" name="me_name" class="me_name form-control"
@@ -1564,6 +1237,21 @@
                                     value="<?php echo $pag_url; ?>">
 
                                 <input type="hidden" name="me_submited" value="1">
+
+                                <!-- Privacy Policy Checkbox -->
+                                <label class="f-nunito fs-14 fw-normal"
+                                    style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                                    <span>
+                                        By sharing your details, you agree to our Terms and <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy
+                                            Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
+
                                 <button type="submit" class="form-control-btn w-auto">Submit</button>
 
                                 <div class="loader text-center" style="display:none;">
@@ -1755,6 +1443,20 @@
                     <input type="hidden" name="me_pageurl" value="<?php echo $pag_url; ?>">
 
                     <input type="hidden" name="me_submited" value="1">
+
+                    <!-- Privacy Policy Checkbox -->
+                    <label class="f-nunito fs-14 fw-normal"
+                        style="color:var(--dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--danger); border: 1px solid var(--danger); margin-top: 4px;">
+                        <span>
+                            By sharing your details, you agree to our Terms and <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--dark);font-size:14px;text-decoration: underline;">Privacy Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
+
                     <button type="submit" class="form-control-btn">Submit</button>
 
                     <div class="loader text-center" style="display:none;">
@@ -1781,10 +1483,19 @@
             </div>
         </div>
     </div>
-
     <!--<[model sec start]>-->
 
+    <!--RAMDAN offer sec start -->
+    <?php // Include the related_courses.php file
+    include('../../lp-components/ramdan-offer.php');
+    ?>
+    <!--RAMDAN offer sec end -->
+
     <!--/ js link start /-->
+    <script type="text/javascript">
+        // api code Pass the PHP variable to JavaScript
+        var apiId = <?php echo $api_id; ?>;
+    </script>
     <script src="assets/js/swiper-bundle.min.js" defer></script>
     <script src="assets/js/custom.js" defer></script>
     <!--/ js link start /-->
