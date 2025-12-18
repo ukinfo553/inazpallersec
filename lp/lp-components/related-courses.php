@@ -1,102 +1,146 @@
 <style>
-/*======== related course sec start ==========*/
-.related-course-sec .col-lg-3 {
-    margin-top: 24px;
-}
-
-.related-course-sec .item {
-    border: 1px solid #f0f0f0;
-    display: block;
-    text-decoration: none;
-    color: var(--dark-charcoal);
-    border-radius: 5px;
-    height: 100%;
-}
-
-.related-course-sec .item img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px 5px 0 0;
-}
-
-.related-course-sec .item .item-body {
-    padding: 10px 8px;
-}
-
-@media (min-width:768px) {
-    .related-course-sec .item .item-body {
-        padding: 16px 12px;
-    }
-}
-
-.related-course-sec .item .item-body h4 {
-    color: #080808;
-    font-family: "Nunito Sans";
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    overflow: hidden;
-    /* text-overflow: ellipsis;
-    white-space: nowrap; */
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -moz-box;
-    -moz-box-orient: vertical;
-    min-height: auto;
-}
-
-@media (min-width:768px) {
-    .related-course-sec .item .item-body h4 {
-        font-size: 16px;
-        min-height: 3em;
-    }
-}
-
-.related-course-sec .item .item-body a {
-    border-radius: 5px;
-    background: linear-gradient(0deg, #F0F0F0 0%, #F0F0F0 100%), linear-gradient(267deg, #EE224A -15.61%, #FF8A00 123.55%);
-    width: 100%;
-    display: block;
-    padding: 12px 16px;
-    text-align: center;
-    text-decoration: none;
-    color: #484848;
-    text-align: center;
-    font-family: "Nunito Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    margin-top: 16px;
-}
-
-.related-course-sec .item .item-body a:hover {
-    background: linear-gradient(267deg, #E50914 -15.61%, #FF8A00 123.55%);
-    color: #ffffff;
-}
-
-@media (min-width:992px) {
-    .related-course-sec .item .item-body a {
+    /*======== related course sec start ==========*/
+    .related-course-sec .col-lg-3 {
         margin-top: 24px;
     }
-}
 
-picture[title="Buy 1 Course Get 1 Free"] img {
-    max-width: 100% !important;
-    width: auto !important;
-}
+    .related-course-sec .item {
+        border: 1px solid #f0f0f0;
+        display: block;
+        text-decoration: none;
+        color: var(--dark-charcoal);
+        border-radius: 5px;
+        height: 100%;
+    }
 
-/*======== related course sec end ==========*/
+    .related-course-sec .item img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .related-course-sec .item .item-body {
+        padding: 10px 8px;
+    }
+
+    @media (min-width:768px) {
+        .related-course-sec .item .item-body {
+            padding: 16px 12px;
+        }
+    }
+
+    .related-course-sec .item .item-body h4 {
+        color: #080808;
+        font-family: "Nunito Sans";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        overflow: hidden;
+        /* text-overflow: ellipsis;
+    white-space: nowrap; */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        min-height: auto;
+    }
+
+    @media (min-width:768px) {
+        .related-course-sec .item .item-body h4 {
+            font-size: 16px;
+            min-height: 3em;
+        }
+    }
+
+    .related-course-sec .item .item-body a {
+        border-radius: 5px;
+        background: linear-gradient(0deg, #F0F0F0 0%, #F0F0F0 100%), linear-gradient(267deg, #EE224A -15.61%, #FF8A00 123.55%);
+        width: 100%;
+        display: block;
+        padding: 12px 16px;
+        text-align: center;
+        text-decoration: none;
+        color: #484848;
+        text-align: center;
+        font-family: "Nunito Sans";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-top: 16px;
+    }
+
+    .related-course-sec .item .item-body a:hover {
+        background: linear-gradient(267deg, #E50914 -15.61%, #FF8A00 123.55%);
+        color: #ffffff;
+    }
+
+    @media (min-width:992px) {
+        .related-course-sec .item .item-body a {
+            margin-top: 24px;
+        }
+    }
+
+    picture[title="Buy 1 Course Get 1 Free"] img {
+        max-width: 100% !important;
+        width: auto !important;
+    }
+
+    /*======== related course sec end ==========*/
 </style>
 
 <?php
 $relatedCourses = [
+    "isaca-aaism-certification" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/advanced-in-ai-audit-aaia-certification-training/",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
+            "text" => "Advanced in AI Audit (AAIA) Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/cisa-certification-training/",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "CISA Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/aigp-training/",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2024/09/CEH-v13-AI-Online-Training-Certification-Course.jpg",
+            "text" => "IAPP AIGP Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/iso-iec-42001-lead-auditor-training/",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
+            "text" => "ISO/IEC 42001:2023 Lead Auditor Training"
+        ],
+    ],
+    "isaca-aaia-certification" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/isaca-advanced-in-ai-security-management-aaism-certification-training/",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
+            "text" => "Advanced in AI Security Management (AAISM) Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/cisa-certification-training/",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "CISA Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/aigp-training/",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2024/09/CEH-v13-AI-Online-Training-Certification-Course.jpg",
+            "text" => "IAPP AIGP Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/iso-iec-42001-lead-auditor-training/",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
+            "text" => "ISO/IEC 42001:2023 Lead Auditor Training"
+        ],
+    ],
     "red-team" => [
         [
             "link" => "https://www.infosectrain.com/courses/soc-analyst-training/",
@@ -154,8 +198,8 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/artificial-intelligence-ai-for-cyber-security-professionals-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
-             "text" => "AI-Powered Cybersecurity Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
+            "text" => "AI-Powered Cybersecurity Training"
         ]
     ],
     "ai-powered-cybersecurity-training" => [
@@ -171,8 +215,8 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
-             "text" => "Advanced Cyber Threat Hunting and DFIR Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "Advanced Cyber Threat Hunting and DFIR Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/splunk-training/",
@@ -489,7 +533,7 @@ $relatedCourses = [
         ]
     ],
 
-	"iapp-cipm-training" => [
+    "iapp-cipm-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/european-privacy-training-cippe/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CIPP-E-min.png",
@@ -513,7 +557,7 @@ $relatedCourses = [
     ],
 
 
-		"iapp-cipt-training" => [
+    "iapp-cipt-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/european-privacy-training-cippe/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CIPP-E-min.png",
@@ -560,16 +604,16 @@ $relatedCourses = [
     ],
 
 
-	"ceh-v12-certification-training-online" => [
-         [
+    "ceh-v12-certification-training-online" => [
+        [
             "link" => "https://www.infosectrain.com/courses/comptia-security/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2020/11/CompTIA-Security-Plus.jpg",
             "text" => "CompTIA Security+ Online Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
-             "text" => "Advanced Cyber Threat Hunting and DFIR Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "Advanced Cyber Threat Hunting and DFIR Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/soc-analyst-training/",
@@ -585,37 +629,37 @@ $relatedCourses = [
 
     "ceh-certification-training" => [
         [
-           "link" => "https://www.infosectrain.com/courses/comptia-security/",
-           "image" => "https://www.infosectrain.com/wp-content/uploads/2020/11/CompTIA-Security-Plus.jpg",
-           "text" => "CompTIA Security+ Online Training"
-       ],
-       [
-           "link" => "https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/",
+            "link" => "https://www.infosectrain.com/courses/comptia-security/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2020/11/CompTIA-Security-Plus.jpg",
+            "text" => "CompTIA Security+ Online Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
             "text" => "Advanced Cyber Threat Hunting and DFIR Training"
-       ],
-       [
-           "link" => "https://www.infosectrain.com/courses/soc-analyst-training/",
-           "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
-           "text" => "SOC Analyst Training"
-       ],
-       [
-           "link" => "https://www.infosectrain.com/courses/advanced-penetration-testing-online-training-course/",
-           "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/apt-min.png",
-           "text" => "Advanced Penetration Testing (APT) Training"
-       ]
-   ],
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/soc-analyst-training/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
+            "text" => "SOC Analyst Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/advanced-penetration-testing-online-training-course/",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/apt-min.png",
+            "text" => "Advanced Penetration Testing (APT) Training"
+        ]
+    ],
 
-	"comptia-security-training" => [
-         [
+    "comptia-security-training" => [
+        [
             "link" => "https://www.infosectrain.com/courses/certified-ethical-hacker-ceh-training/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2024/09/CEH-v13-AI-Online-Training-Certification-Course.jpg",
             "text" => "Certified Ethical Hacker (CEH)"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/soc-analyst-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
-             "text" => "SOC Analyst Online Training Course"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
+            "text" => "SOC Analyst Online Training Course"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/advanced-penetration-testing-online-training-course/",
@@ -624,15 +668,15 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
-             "text" => "Advanced Cyber Threat Hunting and DFIR Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "Advanced Cyber Threat Hunting and DFIR Training"
         ]
     ],
 
 
 
-	"advanced-penetration-testing-course" => [
-         [
+    "advanced-penetration-testing-course" => [
+        [
             "link" => "https://www.infosectrain.com/courses/ccsp-certification-training/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CCSP-min.png",
             "text" => "Certified Cloud Security Professional (CCSP)"
@@ -655,8 +699,8 @@ $relatedCourses = [
     ],
 
 
-	"rsa-archer-grc-training-online" => [
-         [
+    "rsa-archer-grc-training-online" => [
+        [
             "link" => "https://www.infosectrain.com/courses/grc-online-training/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/grc-hands-on-min.png",
             "text" => "GRC : (Governance, Risk and Compliance) Hands-on Online Training"
@@ -679,8 +723,8 @@ $relatedCourses = [
     ],
 
 
-	"cyberark-training-online" => [
-         [
+    "cyberark-training-online" => [
+        [
             "link" => "https://www.infosectrain.com/courses/sailpoint-training/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2024/06/SailPoint-IdentityIQ-Implementation-Developer-Exam-Training.jpg",
             "text" => "SailPoint IdentityIQ Implementation & Developer"
@@ -703,7 +747,7 @@ $relatedCourses = [
     ],
 
 
-	"cloud-security-governance-training" => [
+    "cloud-security-governance-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/ccsp-certification-training/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CCSP-min.png",
@@ -728,10 +772,10 @@ $relatedCourses = [
 
 
 
-	"iso-iec-27001-lead-auditor-online" => [
+    "iso-iec-27001-lead-auditor-online" => [
         [
             "link" => "https://www.infosectrain.com/courses/iso27001li/",
-            "image" =>"https://www.infosectrain.com/wp-content/uploads/2023/11/isi-hands-on-min.png",
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/isi-hands-on-min.png",
             "text" => "ISO/IEC 27001:2022 Lead Implementer Online Training & Certification"
         ],
         [
@@ -752,7 +796,7 @@ $relatedCourses = [
     ],
 
 
-		"iso-iec-27001-lead-implementer-online" => [
+    "iso-iec-27001-lead-implementer-online" => [
         [
             "link" => "https://www.infosectrain.com/courses/iso27001la/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/ISO-27001-min.png",
@@ -776,7 +820,7 @@ $relatedCourses = [
     ],
 
 
-	"data-protection-officer-training" => [
+    "data-protection-officer-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/certified-information-privacy-manager-cipm-training/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CIPM-min.png",
@@ -834,8 +878,8 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/soc-analyst-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
-             "text" => "SOC Analyst Online Training Course"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
+            "text" => "SOC Analyst Online Training Course"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/comptia-cysa-certification-training/",
@@ -900,13 +944,13 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
-             "text" => "Advanced Cyber Threat Hunting and DFIR Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "Advanced Cyber Threat Hunting and DFIR Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/artificial-intelligence-ai-for-cyber-security-professionals-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
-             "text" => "AI-Powered Cybersecurity Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
+            "text" => "AI-Powered Cybersecurity Training"
         ]
     ],
     "awapt-training" => [
@@ -922,8 +966,8 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
-             "text" => "Advanced Cyber Threat Hunting and DFIR Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "Advanced Cyber Threat Hunting and DFIR Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/artificial-intelligence-ai-for-cyber-security-professionals-training/",
@@ -1027,8 +1071,8 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/azure-security-combo-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2020/11/AZ_104T00_and_AZ_500T00A.png",
-             "text" => "Azure Administrator & Security (AZ-104 + AZ-500)"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2020/11/AZ_104T00_and_AZ_500T00A.png",
+            "text" => "Azure Administrator & Security (AZ-104 + AZ-500)"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/ccsp-certification-training/",
@@ -1050,8 +1094,8 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/azure-security-combo-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2020/11/AZ_104T00_and_AZ_500T00A.png",
-             "text" => "Azure Administrator & Security (AZ-104 + AZ-500)"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2020/11/AZ_104T00_and_AZ_500T00A.png",
+            "text" => "Azure Administrator & Security (AZ-104 + AZ-500)"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/aws-combo-course-training/",
@@ -1072,8 +1116,8 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/rsa-archer-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/grc-rsa-min.png",
-             "text" => "GRC RSA Archer Online Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/grc-rsa-min.png",
+            "text" => "GRC RSA Archer Online Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/security-architecture-training/",
@@ -1094,8 +1138,8 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/rsa-archer-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/grc-rsa-min.png",
-             "text" => "GRC RSA Archer Online Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/grc-rsa-min.png",
+            "text" => "GRC RSA Archer Online Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/security-architecture-training/",
@@ -1129,8 +1173,8 @@ $relatedCourses = [
             "image" => "https://www.infosectrain.com/wp-content/uploads/2018/12/CCSP-min.png",
             "text" => "Certified Cloud Security Professional (CCSP)"
         ],
-	],
-	"sscp-certification-training" => [
+    ],
+    "sscp-certification-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/comptia-security/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2020/11/CompTIA-Security-Plus.jpg",
@@ -1154,7 +1198,7 @@ $relatedCourses = [
     ],
 
 
-	"csslp-certification-training" => [
+    "csslp-certification-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/sscp-certification-training/",
             "image" => "https://www.infosectrain.com/wp-content/uploads/2024/06/Systems-Security-Certified-Practitioner-Training.jpg",
@@ -1190,8 +1234,8 @@ $relatedCourses = [
         ],
         [
             "link" => "https://www.infosectrain.com/courses/advanced-threat-hunting-and-digital-forensics-and-incident-response-training/",
-             "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
-             "text" => "Advanced Cyber Threat Hunting and DFIR Training"
+            "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "Advanced Cyber Threat Hunting and DFIR Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/information-systems-implementer-training/",
@@ -1206,7 +1250,8 @@ $relatedCourses = [
 $currentLandingPage = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 // Function to find a matching course key
-function findMatchingCourseKey($landingPage, $relatedCourses) {
+function findMatchingCourseKey($landingPage, $relatedCourses)
+{
     foreach (array_keys($relatedCourses) as $courseKey) {
         if (strpos($landingPage, $courseKey) !== false) {
             return $courseKey;
@@ -1221,48 +1266,48 @@ $matchingCourseKey = findMatchingCourseKey($currentLandingPage, $relatedCourses)
 // If a matching key is found, display related courses
 if ($matchingCourseKey !== null) {
     $courses = $relatedCourses[$matchingCourseKey];
-?>
-<section class="<?php echo isset($customClass) ? $customClass : 'related-course-sec'; ?> py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <!-- <h2 class="text-center">Other Popular Courses</h2> -->
+    ?>
+    <section class="<?php echo isset($customClass) ? $customClass : 'related-course-sec'; ?> py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- <h2 class="text-center">Other Popular Courses</h2> -->
 
-                <h2 class="text-center"><?php echo isset($customHeading) ? $customHeading : 'Other Popular Courses'; ?>
-                </h2>
-            </div>
-        </div>
-        <div class="row">
-            <!-- col start -->
-            <?php
-            foreach ($courses as $course) {
-            ?>
-            <div class="col-6 col-lg-3">
-                <div class="item">
-                    <!-- <img src="<?php //echo $course['image']; ?>" alt="Related Courses" width="400" height="226"> -->
-                    <div class="item-body">
-                        <h4 title="<?php echo $course['text']; ?>"><?php echo $course['text']; ?></h4>
-                        <a href="<?php echo $course['link']; ?>" target="_blank"
-                            title="<?php echo $course['text']; ?>">Check Now</a>
-                    </div>
+                    <h2 class="text-center"><?php echo isset($customHeading) ? $customHeading : 'Other Popular Courses'; ?>
+                    </h2>
                 </div>
             </div>
-            <?php
-            }
-            ?>
-            <!-- col end -->
+            <div class="row">
+                <!-- col start -->
+                <?php
+                foreach ($courses as $course) {
+                    ?>
+                    <div class="col-6 col-lg-3">
+                        <div class="item">
+                            <!-- <img src="<?php //echo $course['image']; ?>" alt="Related Courses" width="400" height="226"> -->
+                            <div class="item-body">
+                                <h4 title="<?php echo $course['text']; ?>"><?php echo $course['text']; ?></h4>
+                                <a href="<?php echo $course['link']; ?>" target="_blank"
+                                    title="<?php echo $course['text']; ?>">Check Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+                <!-- col end -->
+            </div>
         </div>
-    </div>
-</section>
-<?php
+    </section>
+    <?php
 }
 ?>
 
 <script>
-// let tdata = document.querySelector('.row-hover .row-2');
-// if(tdata == null){
-//     document.getElementById('training-calendar').style.display = "none";
-//     document.querySelector('.sidenav li:nth-child(2)').style.display = "none";
-//     //document.querySelector('footer .quick-links ul li:nth-child(2)').style.display = 'none';
-// }
+    // let tdata = document.querySelector('.row-hover .row-2');
+    // if(tdata == null){
+    //     document.getElementById('training-calendar').style.display = "none";
+    //     document.querySelector('.sidenav li:nth-child(2)').style.display = "none";
+    //     //document.querySelector('footer .quick-links ul li:nth-child(2)').style.display = 'none';
+    // }
 </script>
