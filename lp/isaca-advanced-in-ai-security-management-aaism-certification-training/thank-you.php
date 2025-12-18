@@ -23,8 +23,8 @@ include('../lp-components/related-courses.php');
             <div class="col-lg-3 col-6">
                 <div class="thankyou--card-item">
                     <!-- <img src="assets/images/you-tube1.jpg" alt=""> -->
-                    <h4>Complete AI Governance Training</h4>
-                    <a href="https://www.youtube.com/watch?v=zCBqjEMORHY" target="_blank">CHECK NOW</a>
+                    <h4>Master AI Audit with ISACA's AAIA | Complete Certification Guide</h4>
+                    <a href="https://www.youtube.com/watch?v=tZu14fpiA70" target="_blank">CHECK NOW</a>
                 </div>
             </div>
             <!--/card end /-->
@@ -32,8 +32,8 @@ include('../lp-components/related-courses.php');
             <div class="col-lg-3 col-6">
                 <div class="thankyou--card-item">
                     <!-- <img src="assets/images/you-tube2.jpg" alt=""> -->
-                    <h4>Boost Productivity with AI in Spreadsheets</h4>
-                    <a href="https://www.youtube.com/watch?v=KbkF8DiWIkw" target="_blank">CHECK NOW</a>
+                    <h4>CISA Expert Shares Top Tips to Pass in Your First Attempt</h4>
+                    <a href="https://www.youtube.com/watch?v=tlqygi09Puc" target="_blank">CHECK NOW</a>
                 </div>
             </div>
             <!--/card end /-->
@@ -41,8 +41,8 @@ include('../lp-components/related-courses.php');
             <div class="col-lg-3 col-6">
                 <div class="thankyou--card-item">
                     <!-- <img src="assets/images/you-tube3.jpg" alt=""> -->
-                    <h4>Future-Ready AI-Powered Cloud Security: Top Tools & Trends in 2026</h4>
-                    <a href="https://www.youtube.com/watch?v=NW06L0E6-Uk&feature=youtu.be" target="_blank">CHECK NOW</a>
+                    <h4>Ace the CISM Exam: Top Strategies & Real Practice Questions</h4>
+                    <a href="https://www.youtube.com/watch?v=5cWR-97FZSo" target="_blank">CHECK NOW</a>
                 </div>
             </div>
             <!--/card end /-->
@@ -73,26 +73,25 @@ include('../lp-components/related-courses.php');
             <!--/card start /-->
             <div class="col-lg-3 col-6">
                 <div class="thankyou--card-item">
-                    <h4>Centralized vs. Federated vs. Decentralized AI Governance</h4>
-                    <a href="https://www.infosectrain.com/blog/centralized-vs-federated-vs-decentralized-ai-governance/"
-                        target="_blank">CHECK NOW</a>
-                </div>
-            </div>
-            <!--/card end /-->
-            <!--/card start /-->
-            <div class="col-lg-3 col-6">
-                <div class="thankyou--card-item">
-                    <h4>Types of Artificial Intelligence (AI) Systems</h4>
-                    <a href="https://www.infosectrain.com/blog/types-of-artificial-intelligence-ai-systems/"
-                        target="_blank">CHECK NOW</a>
-                </div>
-            </div>
-            <!--/card end /-->
-            <!--/card start /-->
-            <div class="col-lg-3 col-6">
-                <div class="thankyou--card-item">
                     <h4>AI Auditing Tools and Techniques</h4>
                     <a href="https://www.infosectrain.com/blog/ai-auditing-tools-and-techniques/" target="_blank">CHECK
+                        NOW</a>
+                </div>
+            </div>
+            <!--/card end /-->
+            <!--/card start /-->
+            <div class="col-lg-3 col-6">
+                <div class="thankyou--card-item">
+                    <h4>Types of AI Controls</h4>
+                    <a href="https://www.infosectrain.com/blog/types-of-ai-controls/" target="_blank">CHECK NOW</a>
+                </div>
+            </div>
+            <!--/card end /-->
+            <!--/card start /-->
+            <div class="col-lg-3 col-6">
+                <div class="thankyou--card-item">
+                    <h4>Change Management in AI</h4>
+                    <a href="https://www.infosectrain.com/blog/change-management-in-ai/" target="_blank">CHECK
                         NOW</a>
                 </div>
             </div>
