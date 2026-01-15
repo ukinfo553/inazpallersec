@@ -97,6 +97,52 @@
 
 <?php
 $relatedCourses = [
+
+    "cissp-classroom-training-hyderabad" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/cciso-certification-online-training",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
+            "text" => "CCISO Certification Training"
+        ],
+        [
+            "link" => "http://infosectrain.com/courses/cism-certification-training",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "CISM Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/grc-online-training",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2024/09/CEH-v13-AI-Online-Training-Certification-Course.jpg",
+            "text" => "GRC Hands-on Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/security-architecture-training",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
+            "text" => "Security Architecture Hands-on Training"
+        ],
+    ],
+    "ai-governance-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/artificial-intelligence-ai-for-cyber-security-professionals-training",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
+            "text" => "AI-Powered Cybersecurity Training Course Online"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/ccsp-certification-training",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
+            "text" => "CCSP Training & Certification Course"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/grc-online-training",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2024/09/CEH-v13-AI-Online-Training-Certification-Course.jpg",
+            "text" => "GRC Hands-on Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/aigp-training",
+            // "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
+            "text" => "IAPP AIGP Certification Training"
+        ],
+    ],
+
     "isaca-aaism-certification" => [
         [
             "link" => "https://www.infosectrain.com/courses/advanced-in-ai-audit-aaia-certification-training/",

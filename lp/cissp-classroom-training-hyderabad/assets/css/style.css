@@ -47,13 +47,13 @@ h2 {
 
 @media (min-width:768px) {
     h2 {
-        font-size: 26px;
+        font-size: 28px;
     }
 }
 
 @media (min-width:992px) {
     h2 {
-        font-size: 36px;
+        font-size: 28px;
     }
 }
 
@@ -69,13 +69,13 @@ h3 {
 
 @media (min-width:768px) {
     h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
 @media (min-width:992px) {
     h3 {
-        font-size: 24px;
+        font-size: 18px;
     }
 }
 
@@ -149,10 +149,12 @@ ul li::before {
     height: auto;
     display: block;
 }
-.loading_w img{
+
+.loading_w img {
     display: block;
     margin: 16px auto auto;
 }
+
 /*====== global tag style end =======*/
 
 /*========navbar style======*/
@@ -231,31 +233,31 @@ nav {
     align-items: center;
 }
 
-.sidenav>li {
+.sidenav > li {
     display: inline-block;
     list-style: none;
     margin: 0 5px;
 }
 
-.sidenav>li::before {
+.sidenav > li::before {
     content: '';
 }
 
 @media (min-width:1200px) {
-    .sidenav>li {
+    .sidenav > li {
         margin: 0 10px;
     }
 }
 
 @media (max-width:992px) {
-    .sidenav>li {
+    .sidenav > li {
         display: flex;
         flex-direction: row;
         margin-top: 50px;
     }
 }
 
-.sidenav>li>a {
+.sidenav > li > a {
     color: var(--bg-dark);
     font-size: 16px;
     font-weight: 600;
@@ -263,7 +265,7 @@ nav {
 }
 
 @media (max-width:992px) {
-    .sidenav>li>a {
+    .sidenav > li > a {
         color: var(--bg-dark);
     }
 }
@@ -286,22 +288,22 @@ nav {
     }
 }
 
-#toggle:checked~.hamburger .top-bun {
+#toggle:checked ~ .hamburger .top-bun {
     transform: rotate(-45deg);
     /* margin-top: 25px; */
 }
 
-#toggle:checked~.hamburger .bottom-bun {
+#toggle:checked ~ .hamburger .bottom-bun {
     opacity: 0;
     transform: rotate(45deg);
 }
 
-#toggle:checked~.hamburger .meat {
+#toggle:checked ~ .hamburger .meat {
     transform: rotate(45deg);
     margin-top: -3px;
 }
 
-#toggle:checked~.sidenav {
+#toggle:checked ~ .sidenav {
     width: 50%;
 }
 
@@ -1553,7 +1555,7 @@ footer .item ul li a {
     margin-top: 24px;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
@@ -1726,9 +1728,11 @@ footer .item ul li a {
 .hide {
     display: none !important;
 }
-.loading_w img{
+
+.loading_w img {
     margin: 15px auto auto auto;
 }
+
 .rows {
     background: var(--red);
     border-radius: 10px;
@@ -1747,3 +1751,7 @@ footer .item ul li a {
 }
 
 /*>>>>> form validatio end <<<<<<*/
+
+.swiper-slide img {
+    width: 100%;
+}

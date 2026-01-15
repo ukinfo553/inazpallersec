@@ -113,7 +113,7 @@ if (isset($_POST['me_submited'])) {
 
 
 
-    $email_subject = "New Enquiry from CCSP Landing Page";
+    $email_subject = "Certified AI Governance Specialist Training Landing Page";
 
     $user_subject = "Thank you for your enquiry! We'll be in touch soon.";
 
@@ -241,10 +241,9 @@ if (isset($_POST['me_submited'])) {
                     <tr>
                         <td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">
 							<ul>
-								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/ccsp-scenario-based-interview-questions/" target="_blank">CCSP Scenario-Based Interview Questions </a></li>
-								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/ccsp-vs-ccsk-which-one-to-choose/" target="_blank">CCSP vs CCSK: Which one to choose?</a></li>
-								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/best-backup-management-tools-on-cloud/" target="_blank">Best Backup Management Tools on Cloud in 2024</a></li>
-								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/trending-cloud-certification/"  target="_blank">Top Trending Cloud Certification</a></li>
+								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/how-the-eu-ai-act-impacts-ai-governance-practices" target="_blank">How the EU AI Act Impacts AI Governance Practices?</a></li>
+								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/ai-governance-in-each-sdlc-phase" target="_blank">AI Governance in each SDLC Phase</a></li>
+								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/centralized-vs-federated-vs-decentralized-ai-governance" target="_blank">Centralized vs. Federated vs. Decentralized AI Governance</a></li>
 							</ul>
                         </td>
                     </tr>
@@ -256,10 +255,10 @@ if (isset($_POST['me_submited'])) {
 					<tr>
 						<td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">
 							<ul>
-								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.youtube.com/watch?v=eb2O5xpeVsw" target="_blank">CCSP Exam Tips, Tricks & Certification Benefits</a> </li>
-								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.youtube.com/watch?v=A7hjsfzz3YY" target="_blank">CCSP Success Secrets</a></li>
-								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.youtube.com/watch?v=7oU7GfoyFBg" target="_blank">Last-Minute Prep for  CCSP Q&A Session</a></li>
-								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.youtube.com/watch?v=CDzWQTg2dvQ" target="_blank">Crack the CCSP Code: 10 Secrets to Ace the Exam</a></li>
+								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.youtube.com/watch?v=ely0Mn5pNZs" target="_blank">AI Governance Explained | How to Manage AI Agents in Your Organization</a> </li>
+								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.youtube.com/watch?v=7uozn3uukHI" target="_blank">AI Governance Masterclass: Build Responsible & Ethical AI Systems</a></li>
+								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.youtube.com/watch?v=yiuFRabWIlQ" target="_blank">IAPP AIGP Essentials: Boost Your Career with AI & Governance</a></li>
+								<li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.youtube.com/watch?v=JxveKI6XcO0" target="_blank">The Future of AI: Why Governance Matters! Free Session</a></li>
 							</ul>
 						</td>
 					</tr>
@@ -271,10 +270,10 @@ if (isset($_POST['me_submited'])) {
 					<tr>
 						<td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">
                         <ul>
-                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/courses/cism-certification-training/"  target="_blank">Certified Information Security Manager (CISM)</a> </li>
-                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/courses/cisa-certification-training/"  target="_blank">Certified Information Systems Auditor (CISA) </a> </li>
-                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/courses/cissp-certification-training/"  target="_blank">Certified Information Systems Security Professional (CISSP)</a> </li>
-                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/courses/cloud-governance-security-training/"  target="_blank">Advanced Cloud Security Governance Training</a> </li>
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/courses/artificial-intelligence-ai-for-cyber-security-professionals-training"  target="_blank">AI-Powered Cybersecurity Training Course Online</a> </li>
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/courses/ccsp-certification-training"  target="_blank">CCSP Training & Certification Course</a> </li>
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/courses/grc-online-training"  target="_blank">GRC Hands-on Training</a> </li>
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/courses/aigp-training"  target="_blank">IAPP AIGP Certification Training</a> </li>
                         </ul>
 						</td>
 					</tr>
@@ -286,50 +285,50 @@ if (isset($_POST['me_submited'])) {
     </table>
 ';
 
-    function curl_trip($url, $fields_string = "")
-    {
+    // function curl_trip($url, $fields_string = "")
+    // {
 
-        $ua = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13';
+    //     $ua = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.A.B.C Safari/525.13';
 
-        $ch = curl_init();
+    //     $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_URL, $url);
-
-
-
-        curl_setopt($ch, CURLOPT_HEADER, true);
+    //     curl_setopt($ch, CURLOPT_URL, $url);
 
 
 
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        curl_setopt($ch, CURLOPT_USERAGENT, $ua);
-
-        curl_setopt($ch, CURLOPT_COOKIE, 'NID=67=pdjIQN5CUKVn0bRgAlqitBk7WHVivLsbLcr7QOWMn35Pq03N1WMy6kxYBPORtaQUPQrfMK4Yo0vVz8tH97ejX3q7P2lNuPjTOhwqaI2bXCgPGSDKkdFoiYIqXubR0cTJ48hIAaKQqiQi_lpoe6edhMglvOO9ynw; PREF=ID=52aa671013493765:U=0cfb5c96530d04e3:FF=0:LD=en:TM=1370266105:LM=1370341612:GM=1:S=Kcc6KUnZwWfy3cOl; OTZ=1800625_34_34__34_; S=talkgadget=38GaRzFbruDPtFjrghEtRw; SID=DQAAALoAAADHyIbtG3J_u2hwNi4N6UQWgXlwOAQL58VRB_0xQYbDiL2HA5zvefboor5YVmHc8Zt5lcA0LCd2Riv4WsW53ZbNCv8Qu_THhIvtRgdEZfgk26LrKmObye1wU62jESQoNdbapFAfEH_IGHSIA0ZKsZrHiWLGVpujKyUvHHGsZc_XZm4Z4tb2bbYWWYAv02mw2njnf4jiKP2QTxnlnKFK77UvWn4FFcahe-XTk8Jlqblu66AlkTGMZpU0BDlYMValdnU; HSID=A6VT_ZJ0ZSm8NTdFf; SSID=A9_PWUXbZLazoEskE; APISID=RSS_BK5QSEmzBxlS/ApSt2fMy1g36vrYvk; SAPISID=ZIMOP9lJ_E8SLdkL/A32W20hPpwgd5Kg1J');
+    //     curl_setopt($ch, CURLOPT_HEADER, true);
 
 
 
-        curl_setopt($ch, CURLOPT_AUTOREFERER, true);
+    //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    //     curl_setopt($ch, CURLOPT_USERAGENT, $ua);
 
-        curl_setopt($ch, CURLOPT_MAXREDIRS, 20);
-
-        curl_setopt($ch, CURLOPT_POST, true);
-
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+    //     curl_setopt($ch, CURLOPT_COOKIE, 'NID=67=pdjIQN5CUKVn0bRgAlqitBk7WHVivLsbLcr7QOWMn35Pq03N1WMy6kxYBPORtaQUPQrfMK4Yo0vVz8tH97ejX3q7P2lNuPjTOhwqaI2bXCgPGSDKkdFoiYIqXubR0cTJ48hIAaKQqiQi_lpoe6edhMglvOO9ynw; PREF=ID=52aa671013493765:U=0cfb5c96530d04e3:FF=0:LD=en:TM=1370266105:LM=1370341612:GM=1:S=Kcc6KUnZwWfy3cOl; OTZ=1800625_34_34__34_; S=talkgadget=38GaRzFbruDPtFjrghEtRw; SID=DQAAALoAAADHyIbtG3J_u2hwNi4N6UQWgXlwOAQL58VRB_0xQYbDiL2HA5zvefboor5YVmHc8Zt5lcA0LCd2Riv4WsW53ZbNCv8Qu_THhIvtRgdEZfgk26LrKmObye1wU62jESQoNdbapFAfEH_IGHSIA0ZKsZrHiWLGVpujKyUvHHGsZc_XZm4Z4tb2bbYWWYAv02mw2njnf4jiKP2QTxnlnKFK77UvWn4FFcahe-XTk8Jlqblu66AlkTGMZpU0BDlYMValdnU; HSID=A6VT_ZJ0ZSm8NTdFf; SSID=A9_PWUXbZLazoEskE; APISID=RSS_BK5QSEmzBxlS/ApSt2fMy1g36vrYvk; SAPISID=ZIMOP9lJ_E8SLdkL/A32W20hPpwgd5Kg1J');
 
 
 
-        $result = curl_exec($ch);
+    //     curl_setopt($ch, CURLOPT_AUTOREFERER, true);
 
-        $last = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+    //     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
-        curl_close($ch);
+    //     curl_setopt($ch, CURLOPT_MAXREDIRS, 20);
 
-        return array($result, $last);
+    //     curl_setopt($ch, CURLOPT_POST, true);
 
-    }
+    //     curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+
+
+
+    //     $result = curl_exec($ch);
+
+    //     $last = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL);
+
+    //     curl_close($ch);
+
+    //     return array($result, $last);
+
+    // }
 
 
 

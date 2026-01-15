@@ -5,7 +5,7 @@ include('include/comman_use.php');
 include('../lp-components/api_handler.php');
 
 // Set the course ID dynamically
-$courseID = 33810;  // Change this to the specific course ID for different pages
+$courseID = 33810; // Change this to the specific course ID for different pages
 
 // Fetch the course data using the global API handler function
 $course_data = get_brochure_data($courseID);
@@ -41,10 +41,13 @@ if ($course_data !== null) {
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
     <script>
-        setTimeout(function () {
-            (function (w, d, s, l, i) {
+        setTimeout(function() {
+            (function(w, d, s, l, i) {
                 w[l] = w[l] || [];
-                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js"
+                });
                 var f = d.getElementsByTagName(s)[0],
                     j = d.createElement(s),
                     dl = l != "dataLayer" ? "&l=" + l : "";
@@ -59,16 +62,16 @@ if ($course_data !== null) {
 
 <body>
     <!-- <?php
-    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
-        $pag_url = "https://";
-    } else {
-        $pag_url = "http://";
-    }
-    // Append the host(domain name, ip) to the URL.
-    $pag_url .= $_SERVER['HTTP_HOST'];
-    // Append the requested resource location to the URL
-    $pag_url .= $_SERVER['REQUEST_URI'];
-    ?> -->
+            if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+                $pag_url = "https://";
+            } else {
+                $pag_url = "http://";
+            }
+            // Append the host(domain name, ip) to the URL.
+            $pag_url .= $_SERVER['HTTP_HOST'];
+            // Append the requested resource location to the URL
+            $pag_url .= $_SERVER['REQUEST_URI'];
+            ?> -->
 
     <!--/ navbar start /-->
     <nav class="navbar navbar-expand-lg py-3 d-flex">
@@ -237,7 +240,7 @@ if ($course_data !== null) {
                                     foreach ($course_details as $index => $detail) {
                                         // Make the first item active and open
                                         $activeClass = $index === 0 ? 'active open' : '';
-                                        ?>
+                                ?>
                                         <div class="faq-item <?php echo $activeClass; ?>">
                                             <h3 class="faq-title">
                                                 <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
@@ -254,7 +257,7 @@ if ($course_data !== null) {
                                                 ?>
                                             </div>
                                         </div>
-                                        <?php
+                                <?php
                                     }
                                 }
                                 ?>
@@ -1008,7 +1011,7 @@ if ($course_data !== null) {
                         </div>
                     </div>
                 </section>
-            <?php }
+        <?php }
         } ?>
         <!--<[FAQ SEC start]>-->
 
@@ -1296,15 +1299,24 @@ if ($course_data !== null) {
 
 <!--/ zendesk chat box /-->
 <script>
-
     // Function to load Zopim chat widget after a delay
     function loadZopim() {
-        window.$zopim || (function (d, s) {
-            var z = $zopim = function (c) { z._.push(c) }, $ = z.s = d.createElement(s),
-                e = d.getElementsByTagName(s)[0]; z.set = function (o) { z.set._.push(o) };
-            z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+        window.$zopim || (function(d, s) {
+            var z = $zopim = function(c) {
+                    z._.push(c)
+                },
+                $ = z.s = d.createElement(s),
+                e = d.getElementsByTagName(s)[0];
+            z.set = function(o) {
+                z.set._.push(o)
+            };
+            z._ = [];
+            z.set._ = [];
+            $.async = !0;
+            $.setAttribute("charset", "utf-8");
             $.src = "https://v2.zopim.com/?5Y1ZvMP3lrSPwhhyQjIGwo618dlqPLkD";
-            z.t = +new Date; $.type = "text/javascript";
+            z.t = +new Date;
+            $.type = "text/javascript";
             e.parentNode.insertBefore($, e)
         })(document, "script");
     }
@@ -1316,10 +1328,9 @@ if ($course_data !== null) {
 
 <!--<[new script start]>-->
 <script>
-
-    $(document).ready(function () {
+    $(document).ready(function() {
         // Your jQuery code here
-        $('.faq-wrapper .faq-title').on('click', function (e) {
+        $('.faq-wrapper .faq-title').on('click', function(e) {
             var element = $(this).parent('.faq-item');
             if (element.hasClass('open')) {
                 element.removeClass('open');
@@ -1337,7 +1348,7 @@ if ($course_data !== null) {
 
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         /*===== add lozyloading attribute */
         const img = document.querySelectorAll('img');
         img.forEach(images => {
@@ -1350,7 +1361,7 @@ if ($course_data !== null) {
         // console.log(inputElement)
         // Attach a click event listener to each button
         courseCard_button.forEach(button => {
-            button.addEventListener('click', function () {
+            button.addEventListener('click', function() {
                 const modalTitle = this.getAttribute('title');
                 inputElement.value = modalTitle;
             });
@@ -1393,8 +1404,6 @@ if ($course_data !== null) {
             item.style.overflowY = 'scroll';
         }
     });
-
-
 </script>
 
 </html>

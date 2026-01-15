@@ -1,4 +1,25 @@
-<!-- <?php include('include/comman_use.php'); ?> -->
+<?php
+
+include('include/comman_use.php');
+include('../lp-components/api_handler.php');
+
+// Set the course ID dynamically
+$courseID = 30764;  // Change this to the specific course ID for different pages
+
+// Fetch the course data using the global API handler function
+$course_data = get_brochure_data($courseID);
+
+// Check if the data is successfully fetched
+if ($course_data !== null) {
+    // Extract data (assuming the response is in the expected structure)
+    $brochure = isset($course_data[0]['brochure']) ? $course_data[0]['brochure'] : null;  // Access brochure link
+    $course_details = isset($course_data[0]['course_details']) ? $course_data[0]['course_details'] : null;  // Access course details
+    $faq = isset($course_data[0]['faq']) ? $course_data[0]['faq'] : null;  // Access FAQ data
+} else {
+    // Handle the case where no data was fetched
+    echo "Failed to fetch course data.";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +33,18 @@
     <!--/ style link start /-->
     <link href="assets/css/bootstrap-grid.min.css" rel="stylesheet" defer>
     <link rel="stylesheet" href="assets/css/style.css" defer>
+    <link rel="stylesheet" href="../lp-components/css_handler.php" defer>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" defer />
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
     <script>
-        setTimeout(function () {
-            (function (w, d, s, l, i) {
+        setTimeout(function() {
+            (function(w, d, s, l, i) {
                 w[l] = w[l] || [];
-                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js"
+                });
                 var f = d.getElementsByTagName(s)[0],
                     j = d.createElement(s),
                     dl = l != "dataLayer" ? "&l=" + l : "";
@@ -34,16 +59,16 @@
 
 <body>
     <!-- <?php
-    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
-        $pag_url = "https://";
-    } else {
-        $pag_url = "http://";
-    }
-    // Append the host(domain name, ip) to the URL.
-    $pag_url .= $_SERVER['HTTP_HOST'];
-    // Append the requested resource location to the URL
-    $pag_url .= $_SERVER['REQUEST_URI'];
-    ?> -->
+            if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+                $pag_url = "https://";
+            } else {
+                $pag_url = "http://";
+            }
+            // Append the host(domain name, ip) to the URL.
+            $pag_url .= $_SERVER['HTTP_HOST'];
+            // Append the requested resource location to the URL
+            $pag_url .= $_SERVER['REQUEST_URI'];
+            ?> -->
 
     <!--/ navbar start /-->
     <nav class="navbar navbar-expand-lg py-3 d-flex">
@@ -103,7 +128,7 @@
 
                             <div class="d-flex flex-column flex-md-row banner-highlights">
                                 <div>
-                                    <span>70% Increase</span>
+                                    <span>90% Increase</span>
                                     <p>in Information Security Jobs</p>
                                 </div>
                                 <div>
@@ -114,8 +139,13 @@
                             <div class="button-sec">
                                 <button class="cta-button modal-btn" title="Talk to Our Expert"
                                     modal-title="TALK TO OUR EXPERT">Talk to Our Expert</button>
-                                <a href="https://www.infosectrain.com/wp-content/uploads/2018/12/CISSP_2024.pdf"
-                                    target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>
+                                <?php
+                                // Display the Brochure section if the data is available
+                                if ($brochure !== null && !empty($brochure)) {
+                                    echo '<a href="' . $brochure . '" target="_blank" class="cta-button"
+                                    title="Download Brochure">Download Brochure</a>';
+                                }
+                                ?>
                             </div>
                             <img src="assets/images/review-mob-img.png" alt="CISSP Online Training Course Review"
                                 width="636" height="34" fetchPriority="high" class="review-img">
@@ -151,7 +181,7 @@
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/cissp.svg"
                                         alt="CISSP Online Training Course Highlights" width="45" height="45">
-                                    <p>Aligned with CISSP New Version 2024</p>
+                                    <p>Aligned with CISSP New Version</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
@@ -205,184 +235,42 @@
                             <div class="course-overview">
                                 <h2>CISSP - An Overview</h2>
                                 <p>
-                                    The Certified Information Systems Security Professional (CISSP®) certification
-                                    training course offered by InfosecTrain is perfectly suited for individuals working
-                                    in the field of information security.
+                                    CISSP® is the most renowned certification in the information security domain. Our CISSP® certification training program aims to equip participants with in-demand technical and administrative competence to design, architect, and manage an organization’s security posture by applying internationally accepted information security standards.
                                 </p>
-                                <p>The <strong>latest version (2024) of CISSP</strong> enhances the participant’s
-                                    understanding by covering the critical elements of the 8 domains that comprise the
-                                    Common Body of Knowledge (CBK)®. This course aims to equip learners with both the
-                                    technical and managerial competencies required to design, architect, and oversee an
-                                    organization’s security framework in alignment with internationally accepted
-                                    information security principles.</p>
+                                <p>The latest version of CISSP enhances the participant’s understanding by covering the critical elements of the 8 domains that comprise the Common Body of Knowledge (CBK)®.
+
+                                    (ISC)² is a globally recognized, nonprofit organization dedicated to advancing the information security field. The CISSP® was the first credential in information security to meet the stringent requirements of ISO/IEC Standard 17024. It is looked upon as an objective measure of excellence and a highly reputed standard of achievement.</p>
                             </div>
                             <div class="faq-wrapper">
                                 <!--/ faq item /-->
-                                <div class="faq-item active open">
-                                    <h3 class="faq-title"><span class="title">Course Curriculum</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li><strong>CISSP Domain 1:</strong> Security and Risk Management
-                                                <strong>(16%)</strong>
-                                            </li>
-                                            <li><strong>CISSP Domain 2:</strong> Asset Security <strong>(10%)</strong>
-                                            </li>
-                                            <li><strong>CISSP Domain 3:</strong> Security Architecture and Engineering
-                                                <strong>(13%)</strong>
-                                            </li>
-                                            <li><strong>CISSP Domain 4:</strong> Communication and Network Security
-                                                <strong>(13%)</strong>
-                                            </li>
-                                            <li><strong>CISSP Domain 5:</strong> Identity and Access Management (IAM)
-                                                <strong>(13%)</strong>
-                                            </li>
-                                            <li><strong>CISSP Domain 6:</strong> Security Assessment and Testing
-                                                <strong>(12%)</strong>
-                                            </li>
-                                            <li><strong>CISSP Domain 7:</strong> Security Operations
-                                                <strong>(13%)</strong>
-                                            </li>
-                                            <li><strong>CISSP Domain 8:</strong> Software Development Security
-                                                <strong>(10%)</strong>
-                                            </li>
-                                        </ul>
-                                        <a href="https://www.infosectrain.com/wp-content/uploads/2018/12/CISSP_2024.pdf"
-                                            target="_blank" class="cta-button">Download Brochure</a>
-                                    </div>
-                                </div>
                                 <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Course Objectives</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Master core concepts of risk management, security
-                                                governance, and compliance.</li>
-                                            <li>Understand the ethical and legal requirements impacting
-                                                information security.</li>
-                                            <li>Learn to classify information and assets, ensuring
-                                                appropriate protection.</li>
-                                            <li>Understand data security controls and asset retention.</li>
-                                            <li>Gain insights into secure design principles, engineering
-                                                processes, and security models.</li>
-                                            <li>Apply cryptography and secure architecture solutions
-                                                effectively.</li>
-                                            <li>Develop skills in designing and protecting network
-                                                security.</li>
-                                            <li>Manage secure network architecture and components.</li>
-                                            <li>Implement comprehensive IAM solutions, including access
-                                                control, identity management, and authentication mechanisms.</li>
-                                            <li>Integrate third-party identity services and manage
-                                                identities across different platforms.</li>
-                                            <li>Conduct assessments and testing of security systems to
-                                                identify vulnerabilities.</li>
-                                            <li>Analyze and interpret test data to enhance security
-                                                measures.</li>
-                                            <li>Understand operational security controls, incident
-                                                management, and disaster recovery.</li>
-                                            <li>Support forensic investigations and understand the
-                                                foundations of operational security.</li>
-                                            <li>Enforce security controls in software development
-                                                environments.</li>
-                                            <li>Integrate security throughout the Software Development Life
-                                                Cycle (SDLC).</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Exam Details</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <table width="100%" border="1">
-                                            <tbody>
-                                                <tr>
-                                                    <td width="150"><b>Exam Name</b></td>
-                                                    <td width="260"><b>CISSP CAT 2021</b></td>
-                                                    <td width="260"><b>CISSP CAT 2024</b></td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="150"><b>Launch Date</b></td>
-                                                    <td width="400">Effective May 1, 2021</td>
-                                                    <td width="400">Effective April 15, 2024</td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="150"><b>Exam Duration</b></td>
-                                                    <td width="400">4 hours</td>
-                                                    <td width="400">3 hours</td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="150"><b>Number of Items</b></td>
-                                                    <td width="400">125-175</td>
-                                                    <td width="400">100-150</td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="150"><b>Exam Format</b></td>
-                                                    <td width="400">Multiple-choice and advanced innovative items</td>
-                                                    <td width="400">Multiple-choice and advanced innovative items</td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="150"><b>Passing Score</b></td>
-                                                    <td width="400">700 out of 1000 points</td>
-                                                    <td width="400">700 out of 1000 points</td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="150"><b>Language</b></td>
-                                                    <td width="400">English</td>
-                                                    <td width="400">English</td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="150"><b>Testing Center</b></td>
-                                                    <td width="400">(ISC)2 Authorized PPC and PVTC Select Pearson VUE
-                                                        Testing Centers</td>
-                                                    <td width="400">(ISC)2 Authorized PPC and PVTC Select Pearson VUE
-                                                        Testing Centers</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                <?php
+                                // Check that course_details exists and is a non-empty array
+                                if (!empty($course_details) && is_array($course_details)) {
+                                    foreach ($course_details as $index => $detail) {
+                                        // Make the first item active and open
+                                        $activeClass = $index === 0 ? 'active open' : '';
+                                ?>
+                                        <div class="faq-item <?php echo $activeClass; ?>">
+                                            <h3 class="faq-title">
+                                                <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
+                                                <span class="right-icon"></span>
+                                            </h3>
+                                            <div class="faq-content" style="height: 435px;overflow-y: scroll;">
+                                                <?php echo $detail['ans']; ?>
 
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Pre-requisites</span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <p>
-                                            To apply for the CISSP® course certification, you need to:
-                                        </p>
-                                        <ul>
-                                            <li>Have a minimum 5 years of cumulative paid full-time work experience in
-                                                two or more of the 8 domains of the (ISC)² CISSP® Common Body of
-                                                Knowledge (CBK)</li>
-                                            <li>One-year experience waiver can be earned with a 4-year college degree,
-                                                or regional equivalent or additional credential from the (ISC)² approved
-                                                list</li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--/ faq item /-->
-                                <div class="faq-item">
-                                    <h3 class="faq-title"><span class="title">Target Audience </span><span
-                                            class="right-icon"></span></h3>
-                                    <div class="faq-content">
-                                        <ul>
-                                            <li>Chief Information Security Officer</li>
-                                            <li>Chief Information Officer</li>
-                                            <li>Director of Security</li>
-                                            <li>IT Director/Manager</li>
-                                            <li>Security Systems Engineer</li>
-                                            <li>Security Analyst</li>
-                                            <li>Security Manager</li>
-                                            <li>Security Auditor</li>
-                                            <li>Security Architect</li>
-                                            <li>Security Consultant</li>
-                                            <li>Network Architect</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                                <?php
+                                                // If this is the first item and $brochureLink is set, show brochure button
+                                                if ($index === 0 && !empty($brochure)) {
+                                                    echo '<a href="' . htmlspecialchars($brochure) . '" target="_blank" class="cta-button" title="Download Brochure">Download Brochure</a>';
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+                                <?php
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <!--<[ course details sec end ]>-->
@@ -407,7 +295,18 @@
                                 <input type="hidden" id="me_redirect" value="<?php echo BASE_URL; ?>thank-you.php">
                                 <input type="hidden" id="me_others" name="me_others" value="Talk To Our Experts">
                                 <input type="hidden" id="me_pageurl" name="me_pageurl" value="<?php echo $pag_url; ?>">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--white); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By submitting your contact details, you agree to our <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--white);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited">Request a Callback</button>
 
@@ -543,7 +442,9 @@
             </div>
         </section>
         <!--/ training calendar sec end /-->
-
+        <?php // Include the related_courses.php file
+        include('../lp-components/offer.php');
+        ?>
         <!--<[corparate training start]>-->
         <section class="corparate-training" style="padding-bottom: 0;">
             <div class="container">
@@ -696,7 +597,7 @@
                         <div class="item">
                             <img src="assets/images/why-choose/course-curriculum.png" width="45" height="45"
                                 alt="InfosecTrain - Your Trusted Cybersecurity Training Partner">
-                            <p><strong>Updated curriculum</strong> aligned with CISSP 2024 </p>
+                            <p><strong>Updated curriculum</strong> aligned with latest version of CISSP </p>
                         </div>
                     </div>
                     <!--/ col start /-->
@@ -811,7 +712,7 @@
                     <div class="swiper-wrapper">
                         <!--/ col start /-->
                         <div class="swiper-slide gladiators-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
                                 fill="none" class="svgleft">
                                 <path
                                     d="M30.3085 11.6578C26.8025 11.7501 24.0115 12.327 21.9356 13.3884C19.8597 14.4037 18.222 16.019 17.0226 18.2342C21.8203 18.2342 25.7876 19.4111 28.9246 21.7647C32.1076 24.1184 33.6992 27.9489 33.6992 33.2562C33.6992 35.2407 33.3532 37.179 32.6612 39.0711C31.9693 40.9633 30.9082 42.6478 29.4781 44.1246C28.0481 45.5553 26.3181 46.7552 24.2883 47.7243C22.2585 48.6473 19.9289 49.1088 17.2994 49.1088C12.0865 49.1088 7.88852 47.4244 4.70543 44.0554C1.56848 40.6402 0 36.0944 0 30.4179C0 27.2797 0.438251 24.1184 1.31475 20.934C2.23739 17.7035 3.85199 14.7268 6.15858 12.0039C8.46516 9.2349 11.5791 6.812 15.5002 4.73524C19.4214 2.65847 24.3575 1.20473 30.3085 0.374023V11.6578ZM67.1908 11.6578C63.6848 11.7501 60.8938 12.327 58.8179 13.3884C56.742 14.4037 55.0812 16.019 53.8357 18.2342C58.6795 18.2342 62.6699 19.4111 65.8068 21.7647C68.9899 24.1184 70.5815 27.9489 70.5815 33.2562C70.5815 35.2407 70.2124 37.179 69.4743 39.0711C68.7823 40.9633 67.7213 42.6478 66.2912 44.1246C64.9073 45.5553 63.2004 46.7552 61.1706 47.7243C59.1408 48.6473 56.7881 49.1088 54.1125 49.1088C48.9457 49.1088 44.7708 47.4244 41.5877 44.0554C38.4046 40.6402 36.8131 36.0944 36.8131 30.4179C36.8131 27.2797 37.2513 24.1184 38.1278 20.934C39.0505 17.7035 40.6651 14.7268 42.9717 12.0039C45.3244 9.2349 48.4613 6.812 52.3825 4.73524C56.3037 2.65847 61.2398 1.20473 67.1908 0.374023V11.6578Z"
@@ -835,12 +736,14 @@
                                         <span>Hyderabad</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+
+                            <img src="assets/images/cissp-2.webp" alt="">
                         </div>
 
                         <!--/ col start /-->
                         <div class="swiper-slide gladiators-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
                                 fill="none" class="svgleft">
                                 <path
                                     d="M30.3085 11.6578C26.8025 11.7501 24.0115 12.327 21.9356 13.3884C19.8597 14.4037 18.222 16.019 17.0226 18.2342C21.8203 18.2342 25.7876 19.4111 28.9246 21.7647C32.1076 24.1184 33.6992 27.9489 33.6992 33.2562C33.6992 35.2407 33.3532 37.179 32.6612 39.0711C31.9693 40.9633 30.9082 42.6478 29.4781 44.1246C28.0481 45.5553 26.3181 46.7552 24.2883 47.7243C22.2585 48.6473 19.9289 49.1088 17.2994 49.1088C12.0865 49.1088 7.88852 47.4244 4.70543 44.0554C1.56848 40.6402 0 36.0944 0 30.4179C0 27.2797 0.438251 24.1184 1.31475 20.934C2.23739 17.7035 3.85199 14.7268 6.15858 12.0039C8.46516 9.2349 11.5791 6.812 15.5002 4.73524C19.4214 2.65847 24.3575 1.20473 30.3085 0.374023V11.6578ZM67.1908 11.6578C63.6848 11.7501 60.8938 12.327 58.8179 13.3884C56.742 14.4037 55.0812 16.019 53.8357 18.2342C58.6795 18.2342 62.6699 19.4111 65.8068 21.7647C68.9899 24.1184 70.5815 27.9489 70.5815 33.2562C70.5815 35.2407 70.2124 37.179 69.4743 39.0711C68.7823 40.9633 67.7213 42.6478 66.2912 44.1246C64.9073 45.5553 63.2004 46.7552 61.1706 47.7243C59.1408 48.6473 56.7881 49.1088 54.1125 49.1088C48.9457 49.1088 44.7708 47.4244 41.5877 44.0554C38.4046 40.6402 36.8131 36.0944 36.8131 30.4179C36.8131 27.2797 37.2513 24.1184 38.1278 20.934C39.0505 17.7035 40.6651 14.7268 42.9717 12.0039C45.3244 9.2349 48.4613 6.812 52.3825 4.73524C56.3037 2.65847 61.2398 1.20473 67.1908 0.374023V11.6578Z"
@@ -864,11 +767,12 @@
                                         <span>Hyderabad</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                            <img src="assets/images/cissp-3.webp" alt="">
                         </div>
                         <!--/ col start /-->
                         <div class="swiper-slide gladiators-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
                                 fill="none" class="svgleft">
                                 <path
                                     d="M30.3085 11.6578C26.8025 11.7501 24.0115 12.327 21.9356 13.3884C19.8597 14.4037 18.222 16.019 17.0226 18.2342C21.8203 18.2342 25.7876 19.4111 28.9246 21.7647C32.1076 24.1184 33.6992 27.9489 33.6992 33.2562C33.6992 35.2407 33.3532 37.179 32.6612 39.0711C31.9693 40.9633 30.9082 42.6478 29.4781 44.1246C28.0481 45.5553 26.3181 46.7552 24.2883 47.7243C22.2585 48.6473 19.9289 49.1088 17.2994 49.1088C12.0865 49.1088 7.88852 47.4244 4.70543 44.0554C1.56848 40.6402 0 36.0944 0 30.4179C0 27.2797 0.438251 24.1184 1.31475 20.934C2.23739 17.7035 3.85199 14.7268 6.15858 12.0039C8.46516 9.2349 11.5791 6.812 15.5002 4.73524C19.4214 2.65847 24.3575 1.20473 30.3085 0.374023V11.6578ZM67.1908 11.6578C63.6848 11.7501 60.8938 12.327 58.8179 13.3884C56.742 14.4037 55.0812 16.019 53.8357 18.2342C58.6795 18.2342 62.6699 19.4111 65.8068 21.7647C68.9899 24.1184 70.5815 27.9489 70.5815 33.2562C70.5815 35.2407 70.2124 37.179 69.4743 39.0711C68.7823 40.9633 67.7213 42.6478 66.2912 44.1246C64.9073 45.5553 63.2004 46.7552 61.1706 47.7243C59.1408 48.6473 56.7881 49.1088 54.1125 49.1088C48.9457 49.1088 44.7708 47.4244 41.5877 44.0554C38.4046 40.6402 36.8131 36.0944 36.8131 30.4179C36.8131 27.2797 37.2513 24.1184 38.1278 20.934C39.0505 17.7035 40.6651 14.7268 42.9717 12.0039C45.3244 9.2349 48.4613 6.812 52.3825 4.73524C56.3037 2.65847 61.2398 1.20473 67.1908 0.374023V11.6578Z"
@@ -889,24 +793,25 @@
                                     </div>
                                     <div class="flex-grow-1 ms-3">
                                         <h3>
-                                        Amita Devadiga
+                                            Amita Devadiga
                                         </h3>
                                         <span>Hyderabad</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                            <img src="assets/images/cissp-4.webp" alt="">
                         </div>
 
                         <!--/ col start /-->
                         <div class="swiper-slide gladiators-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
                                 fill="none" class="svgleft">
                                 <path
                                     d="M30.3085 11.6578C26.8025 11.7501 24.0115 12.327 21.9356 13.3884C19.8597 14.4037 18.222 16.019 17.0226 18.2342C21.8203 18.2342 25.7876 19.4111 28.9246 21.7647C32.1076 24.1184 33.6992 27.9489 33.6992 33.2562C33.6992 35.2407 33.3532 37.179 32.6612 39.0711C31.9693 40.9633 30.9082 42.6478 29.4781 44.1246C28.0481 45.5553 26.3181 46.7552 24.2883 47.7243C22.2585 48.6473 19.9289 49.1088 17.2994 49.1088C12.0865 49.1088 7.88852 47.4244 4.70543 44.0554C1.56848 40.6402 0 36.0944 0 30.4179C0 27.2797 0.438251 24.1184 1.31475 20.934C2.23739 17.7035 3.85199 14.7268 6.15858 12.0039C8.46516 9.2349 11.5791 6.812 15.5002 4.73524C19.4214 2.65847 24.3575 1.20473 30.3085 0.374023V11.6578ZM67.1908 11.6578C63.6848 11.7501 60.8938 12.327 58.8179 13.3884C56.742 14.4037 55.0812 16.019 53.8357 18.2342C58.6795 18.2342 62.6699 19.4111 65.8068 21.7647C68.9899 24.1184 70.5815 27.9489 70.5815 33.2562C70.5815 35.2407 70.2124 37.179 69.4743 39.0711C68.7823 40.9633 67.7213 42.6478 66.2912 44.1246C64.9073 45.5553 63.2004 46.7552 61.1706 47.7243C59.1408 48.6473 56.7881 49.1088 54.1125 49.1088C48.9457 49.1088 44.7708 47.4244 41.5877 44.0554C38.4046 40.6402 36.8131 36.0944 36.8131 30.4179C36.8131 27.2797 37.2513 24.1184 38.1278 20.934C39.0505 17.7035 40.6651 14.7268 42.9717 12.0039C45.3244 9.2349 48.4613 6.812 52.3825 4.73524C56.3037 2.65847 61.2398 1.20473 67.1908 0.374023V11.6578Z"
                                     fill="#EE224A" />
                             </svg>
                             <p class="desc">
-                            Firstly its an amazing team at InfosecTrain. Support team made everything comfortable. Trainer is most kind and humble human being, it is an amazing combination of knowledge and kindness. He was on time every day stuck to his commitments and ensured the objective of the course was met without any compromises.I feel his training passion and experience are adding great value to the sessions. We were kept active and ensured what is needed was provided without an ask. Thank you so much for everything, appreciate the professionalism throughout the days.
+                                Firstly its an amazing team at InfosecTrain. Support team made everything comfortable. Trainer is most kind and humble human being, it is an amazing combination of knowledge and kindness. He was on time every day stuck to his commitments and ensured the objective of the course was met without any compromises.I feel his training passion and experience are adding great value to the sessions. We were kept active and ensured what is needed was provided without an ask. Thank you so much for everything, appreciate the professionalism throughout the days.
                             </p>
 
                             <div class="profile">
@@ -920,9 +825,36 @@
                                         <span>Hyderabad</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                            <img src="assets/images/cissp-5.webp" alt="">
                         </div>
 
+                        <!--/ col start /-->
+                        <div class="swiper-slide gladiators-item">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 71 50"
+                                fill="none" class="svgleft">
+                                <path
+                                    d="M30.3085 11.6578C26.8025 11.7501 24.0115 12.327 21.9356 13.3884C19.8597 14.4037 18.222 16.019 17.0226 18.2342C21.8203 18.2342 25.7876 19.4111 28.9246 21.7647C32.1076 24.1184 33.6992 27.9489 33.6992 33.2562C33.6992 35.2407 33.3532 37.179 32.6612 39.0711C31.9693 40.9633 30.9082 42.6478 29.4781 44.1246C28.0481 45.5553 26.3181 46.7552 24.2883 47.7243C22.2585 48.6473 19.9289 49.1088 17.2994 49.1088C12.0865 49.1088 7.88852 47.4244 4.70543 44.0554C1.56848 40.6402 0 36.0944 0 30.4179C0 27.2797 0.438251 24.1184 1.31475 20.934C2.23739 17.7035 3.85199 14.7268 6.15858 12.0039C8.46516 9.2349 11.5791 6.812 15.5002 4.73524C19.4214 2.65847 24.3575 1.20473 30.3085 0.374023V11.6578ZM67.1908 11.6578C63.6848 11.7501 60.8938 12.327 58.8179 13.3884C56.742 14.4037 55.0812 16.019 53.8357 18.2342C58.6795 18.2342 62.6699 19.4111 65.8068 21.7647C68.9899 24.1184 70.5815 27.9489 70.5815 33.2562C70.5815 35.2407 70.2124 37.179 69.4743 39.0711C68.7823 40.9633 67.7213 42.6478 66.2912 44.1246C64.9073 45.5553 63.2004 46.7552 61.1706 47.7243C59.1408 48.6473 56.7881 49.1088 54.1125 49.1088C48.9457 49.1088 44.7708 47.4244 41.5877 44.0554C38.4046 40.6402 36.8131 36.0944 36.8131 30.4179C36.8131 27.2797 37.2513 24.1184 38.1278 20.934C39.0505 17.7035 40.6651 14.7268 42.9717 12.0039C45.3244 9.2349 48.4613 6.812 52.3825 4.73524C56.3037 2.65847 61.2398 1.20473 67.1908 0.374023V11.6578Z"
+                                    fill="#EE224A" />
+                            </svg>
+                            <p class="desc">
+                                Firstly its an amazing team at InfosecTrain. Support team made everything comfortable. Trainer is most kind and humble human being, it is an amazing combination of knowledge and kindness. He was on time every day stuck to his commitments and ensured the objective of the course was met without any compromises.I feel his training passion and experience are adding great value to the sessions. We were kept active and ensured what is needed was provided without an ask. Thank you so much for everything, appreciate the professionalism throughout the days.
+                            </p>
+
+                            <div class="profile">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <img src="https://www.infosectrain.com/wp-content/uploads/2024/07/male-avatar.png"
+                                            width="250" height="250" alt="Aravinda NN Bhat">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h3>Aravinda NN Bhat</h3>
+                                        <span>Hyderabad</span>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <img src="assets/images/cissp-6.webp" alt="">
+                        </div>
 
                     </div>
 
@@ -991,200 +923,43 @@
         <!--<[success story start]>-->
 
         <!--<[FAQ SEC start]>-->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Frequently Asked Questions</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="faq-wrapper">
-                            <!--/ faq item /-->
-                            <div class="faq-item active open">
-                                <h3 class="faq-title"><span class="title">What is CISSP certification?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The Certified Information Systems Security Professional (CISSP) certification is
-                                        a globally recognized credential in the field of information security. It is
-                                        designed for IT professionals who wish to demonstrate their
-                                        expertise in designing, implementing, and managing a best-in-class cybersecurity
-                                        program. The certification is offered by (ISC)², the International Information
-                                        System Security Certification Consortium.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How can I prepare for the CISSP
-                                        exam?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        Preparing for the CISSP exam can be a comprehensive process. Here's a condensed
-                                        guide with key pointers to help you get ready for the exam:
-                                    </p>
-                                    <ul>
-                                        <li>Make a study plan</li>
-                                        <li>Join study groups for collaboration</li>
-                                        <li>Prioritize understanding over memorization</li>
-                                        <li>Regularly practice with mock exams</li>
-                                        <li>Ensure materials are current with the exam outline</li>
-                                        <li>Enroll in structured learning</li>
-                                        <li>Study with the <strong>Official (ISC)² CISSP CBK Reference</strong> and
-                                            Study Guide</li>
-                                        <li>Simplify concepts with <strong>CISSP For Dummies</strong></li>
-                                        <li>Take <strong>Official (ISC)² Practice Tests.</strong></li>
-                                        <li>Use <strong>Boson Practice Exams</strong> for simulation.</li>
-                                        <li>Read <strong>How To Think Like A Manager</strong> for the <strong>CISSP
-                                                Exam</strong> for strategy.</li>
-                                    </ul>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What are the prerequisites for CISSP
-                                        certification?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        To apply for the CISSP® course certification, you need to:
-                                    </p>
-                                    <ul>
-                                        <li>Have a minimum of 5 years of cumulative paid full-time work experience in
-                                            two or more of the 8 domains of the (ISC)² CISSP® Common Body of Knowledge
-                                            (CBK).</li>
-                                        <li>A one-year experience waiver can be earned with a 4-year college degree,
-                                            regional equivalent, or additional credential from the (ISC)² approved list.
-                                        </li>
-                                    </ul>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How many attempts do I have to pass the CISSP
-                                        exam?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        (ISC)² does not limit the number of times you can attempt the CISSP exam, but
-                                        there are waiting periods between attempts. Typically, you must wait 30 days
-                                        after your first failed attempt and 90 days after subsequent failed
-                                        attempts, up to a maximum of three times within a 12-month period.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What is the passing score for the CISSP
-                                        certification exam?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The passing score for the CISSP exam is 700 out of 1000 points.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What are CPEs?</span><span
-                                        class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        Continuing Professional Education (CPE) credits are required to maintain your
-                                        CISSP certification. CISSP holders must earn and report a minimum of 40 CPE
-                                        credits per year and a total of 120 CPE credits over the three-year
-                                        certification cycle.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Is the CISSP exam difficult to
-                                        pass?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The CISSP exam is widely recognized for its rigorous assessment of a candidate's
-                                        understanding across the broad spectrum of information security topics,
-                                        demanding a deep and comprehensive knowledge of its eight domains.
-                                        While it poses a significant challenge, dedicated and well-prepared candidates
-                                        can navigate its complexities successfully with the right approach to training
-                                        and preparation.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How long is the CISSP certification valid
-                                        for?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The CISSP certification is valid for three years.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">What are the career prospects after CISSP
-                                        certification?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        Earning the CISSP certification can open doors to senior and managerial
-                                        positions in information security, such as:
-                                    </p>
-                                    <ul>
-                                        <li>Chief Information Security Officer (CISO)</li>
-                                        <li>Security Manager</li>
-                                        <li>IT Director/Manager</li>
-                                        <li>Security Auditor</li>
-                                        <li>Security Architect</li>
-                                        <li>Security Analyst</li>
-                                    </ul>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">Can I take the CISSP exam online or at a
-                                        testing center?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        The CISSP exam is available at authorized Pearson VUE testing centers worldwide.
-                                        (ISC)² does not offer the CISSP exam in an online format that can be taken
-                                        remotely.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
-                            <!--/ faq item /-->
-                            <div class="faq-item">
-                                <h3 class="faq-title"><span class="title">How long does it take to prepare for the CISSP
-                                        exam?</span><span class="right-icon"></span></h3>
-                                <div class="faq-content">
-                                    <p>
-                                        Preparation time varies by individual, depending on background, experience, and
-                                        familiarity with the material.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--/ faq item /-->
+        <?php if ($faq !== null && !empty($faq)) { ?>
+            <section class="faq-sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Frequently Asked Questions</h2>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="faq-wrapper">
+                                <!--/ faq item start /-->
+                                <?php
+                                // Display the FAQs section if the data is available
 
+                                foreach ($faq as $index => $question) {
+                                    // Determine if the first item should be open
+                                    $isOpen = $index === 0 ? 'open active' : '';
+                                    $displayStyle = $index === 0 ? 'style="display: block;"' : '';
+
+                                    echo '<div class="faq-item ' . $isOpen . '">';
+                                    echo '    <h3 class="faq-title"><span class="title">' . $question['title'] . '</span><span class="right-icon"></span></h3>';
+                                    echo '    <div class="faq-content" ' . $displayStyle . '>';
+                                    echo $question['ans'];
+                                    echo '    </div>';
+                                    echo '</div>';
+                                }
+                                ?>
+                                <!--/ faq item end /-->
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php } ?>
         <!--<[FAQ SEC start]>-->
-
         <!--<[reach us sec start]>-->
         <section class="reach-us">
             <div class="container">
@@ -1214,7 +989,18 @@
                                     name="me_others">
                                 <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_footer"
                                     name="me_pageurl">
-
+                                <!-- Privacy Policy Checkbox -->
+                                <label
+                                    style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                                    <input type="checkbox" name="privacy_policy" checked required
+                                        style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                                    <span>
+                                        By submitting your contact details, you agree to our <a
+                                            href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                            style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                                    </span>
+                                </label>
+                                <!-- privacy Policy Checkbox end -->
                                 <button class="cta-button form-button" type="submit" name="me_submited"
                                     id="me_submited_footer">Request a Callback</button>
                             </form>
@@ -1407,7 +1193,18 @@
                     <input type="hidden" value="" id="me_others_pop" name="me_others" />
                     <!-- <input type="hidden" value="" id="me_message" name="me_message" /> -->
                     <input type="hidden" value="<?php echo $pag_url; ?>" id="me_pageurl_pop" name="me_pageurl" />
-
+                    <!-- Privacy Policy Checkbox -->
+                    <label
+                        style="color:var(--bg-dark); font-size: 14px; margin-top: 16px;display: flex; align-items: start;gap: 8px;">
+                        <input type="checkbox" name="privacy_policy" checked required
+                            style="accent-color: var(--red); border: 1px solid var(--red); margin-top: 4px;">
+                        <span>
+                            By submitting your contact details, you agree to our <a
+                                href="https://www.infosectrain.com/privacy-policy/" target="_blank"
+                                style="color: var(--bg-dark);font-size:14px;">Privacy Policy</a>
+                        </span>
+                    </label>
+                    <!-- privacy Policy Checkbox end -->
                     <button class="cta-button form-button" type="submit" name="me_submited" id="me_submited_pop">Request
                         a Callback</button>
 
@@ -1448,15 +1245,24 @@
 
 <!--/ zendesk chat box /-->
 <script>
-
     // Function to load Zopim chat widget after a delay
     function loadZopim() {
-        window.$zopim || (function (d, s) {
-            var z = $zopim = function (c) { z._.push(c) }, $ = z.s = d.createElement(s),
-                e = d.getElementsByTagName(s)[0]; z.set = function (o) { z.set._.push(o) };
-            z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+        window.$zopim || (function(d, s) {
+            var z = $zopim = function(c) {
+                    z._.push(c)
+                },
+                $ = z.s = d.createElement(s),
+                e = d.getElementsByTagName(s)[0];
+            z.set = function(o) {
+                z.set._.push(o)
+            };
+            z._ = [];
+            z.set._ = [];
+            $.async = !0;
+            $.setAttribute("charset", "utf-8");
             $.src = "https://v2.zopim.com/?5Y1ZvMP3lrSPwhhyQjIGwo618dlqPLkD";
-            z.t = +new Date; $.type = "text/javascript";
+            z.t = +new Date;
+            $.type = "text/javascript";
             e.parentNode.insertBefore($, e)
         })(document, "script");
     }
@@ -1468,10 +1274,9 @@
 
 <!--<[new script start]>-->
 <script>
-
-    $(document).ready(function () {
+    $(document).ready(function() {
         // Your jQuery code here
-        $('.faq-wrapper .faq-title').on('click', function (e) {
+        $('.faq-wrapper .faq-title').on('click', function(e) {
             var element = $(this).parent('.faq-item');
             if (element.hasClass('open')) {
                 element.removeClass('open');
@@ -1489,7 +1294,7 @@
 
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         /*===== add lozyloading attribute */
         const img = document.querySelectorAll('img');
         img.forEach(images => {
@@ -1502,7 +1307,7 @@
         // console.log(inputElement)
         // Attach a click event listener to each button
         courseCard_button.forEach(button => {
-            button.addEventListener('click', function () {
+            button.addEventListener('click', function() {
                 const modalTitle = this.getAttribute('title');
                 inputElement.value = modalTitle;
             });
@@ -1532,8 +1337,6 @@
         youtubeVideo.setAttribute('autoplay', '1');
         youtubeVideo.setAttribute('muted', '1');
     }
-
-
 </script>
 
 </html>
