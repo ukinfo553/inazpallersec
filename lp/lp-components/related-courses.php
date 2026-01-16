@@ -98,25 +98,59 @@
 <?php
 $relatedCourses = [
 
+    "wazuh-practical-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/certified-ai-powered-soc-analyst-training",
+            "text" => "InfosecTrain’s Certified AI Powered SOC Analyst Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/splunk-training",
+            "text" => "Splunk Practical Approach Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/certified-ethical-hacker-ceh-training",
+            "text" => "CEH v13 AI Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/soc-analyst-training",
+            "text" => "SOC Analyst Hands-on Training [2026]"
+        ],
+    ],
+
+    "ciso-practical-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/cism-certification-training",
+            "text" => "CISM Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/ccsp-certification-training",
+            "text" => "CCSP Training & Certification Course"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/security-architecture-training",
+            "text" => "Security Architecture Hands-on Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/cisa-certification-training",
+            "text" => "CISA Certification Training"
+        ],
+    ],
+
     "cissp-classroom-training-hyderabad" => [
         [
             "link" => "https://www.infosectrain.com/courses/cciso-certification-online-training",
-            // "image" => "https://www.infosectrain.com/wp-content/uploads/2023/11/soc-analyst-min.png",
             "text" => "CCISO Certification Training"
         ],
         [
             "link" => "http://infosectrain.com/courses/cism-certification-training",
-            // "image" => "https://www.infosectrain.com/wp-content/uploads/2022/01/Threat-Hunting-1.jpg",
             "text" => "CISM Certification Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/grc-online-training",
-            // "image" => "https://www.infosectrain.com/wp-content/uploads/2024/09/CEH-v13-AI-Online-Training-Certification-Course.jpg",
             "text" => "GRC Hands-on Training"
         ],
         [
             "link" => "https://www.infosectrain.com/courses/security-architecture-training",
-            // "image" => "https://www.infosectrain.com/wp-content/uploads/2025/01/AI-Powered-Cybersecurity-Training-Course-Online.webp",
             "text" => "Security Architecture Hands-on Training"
         ],
     ],
@@ -1312,7 +1346,7 @@ $matchingCourseKey = findMatchingCourseKey($currentLandingPage, $relatedCourses)
 // If a matching key is found, display related courses
 if ($matchingCourseKey !== null) {
     $courses = $relatedCourses[$matchingCourseKey];
-    ?>
+?>
     <section class="<?php echo isset($customClass) ? $customClass : 'related-course-sec'; ?> py-5">
         <div class="container">
             <div class="row">
@@ -1327,10 +1361,11 @@ if ($matchingCourseKey !== null) {
                 <!-- col start -->
                 <?php
                 foreach ($courses as $course) {
-                    ?>
+                ?>
                     <div class="col-6 col-lg-3">
                         <div class="item">
-                            <!-- <img src="<?php //echo $course['image']; ?>" alt="Related Courses" width="400" height="226"> -->
+                            <!-- <img src="<?php //echo $course['image']; 
+                                            ?>" alt="Related Courses" width="400" height="226"> -->
                             <div class="item-body">
                                 <h4 title="<?php echo $course['text']; ?>"><?php echo $course['text']; ?></h4>
                                 <a href="<?php echo $course['link']; ?>" target="_blank"
@@ -1338,14 +1373,14 @@ if ($matchingCourseKey !== null) {
                             </div>
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
                 ?>
                 <!-- col end -->
             </div>
         </div>
     </section>
-    <?php
+<?php
 }
 ?>
 
