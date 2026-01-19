@@ -147,15 +147,15 @@ if ($course_data !== null) {
                                 }
                                 ?>
                             </div>
-                            <img src="assets/images/review-mob-img.png" alt="Agentic AI Training for Non-Tech"
+                            <img src="assets/images/review-mob-img.png" alt="wazuh training"
                                 width="636" height="34" fetchPriority="high" class="review-img">
                         </div>
                     </div>
                     <!--/ col start /-->
                     <div class="col-lg-5 col-md-6 d-none d-md-block">
                         <div class="item">
-                            <img src="assets/images/Advanced-AI-Audit-Certification-Training-BANNER.webp"
-                                fetchPriority="high" alt="Agentic AI Training for Non-Tech" width="400"
+                            <img src="assets/images/Wazuh-Practical Training-BANNER.webp"
+                                fetchPriority="high" alt="wazuh training" width="400"
                                 height="400">
                         </div>
                     </div>
@@ -175,66 +175,66 @@ if ($course_data !== null) {
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/time.svg"
-                                        alt="Agentic AI Training for Non-Tech Course Highlights" width="45"
+                                        alt="wazuh training Course Highlights" width="45"
                                         height="45">
                                     <p>32-Hour Instructor-led Training</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/video-recording.svg"
-                                        alt="Agentic AI Training for Non-Tech Course Highlights" width="45"
+                                        alt="wazuh training Course Highlights" width="45"
                                         height="45">
                                     <p>Real-World Detection Engineering & Alert Tuning</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/isaca-premium.svg"
-                                        alt="Agentic AI Training for Non-Tech Course Highlights" width="45"
+                                        alt="wazuh training Course Highlights" width="45"
                                         height="45">
                                     <p>Live Wazuh Environment with Attack Simulation</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/batch.svg"
-                                        alt="Agentic AI Training for Non-Tech Course Highlights" width="45"
+                                        alt="wazuh training Course Highlights" width="45"
                                         height="45">
                                     <p>SOC Analyst Workflows & Investigation Techniques</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/passed-rate.svg"
-                                        alt="Agentic AI Training for Non-Tech Course Highlights" width="45"
+                                        alt="wazuh training Course Highlights" width="45"
                                         height="45">
                                     <p>Custom Decoder & Rule Development</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/customer-service.svg"
-                                        alt="Agentic AI Training for Non-Tech Course Highlights" width="45"
+                                        alt="wazuh training Course Highlights" width="45"
                                         height="45">
                                     <p>Endpoint Telemetry, Active Response & Automation</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/certified-trainner.svg"
-                                        alt="Agentic AI Training for Non-Tech Course Highlights" width="45"
+                                        alt="wazuh training Course Highlights" width="45"
                                         height="45">
                                     <p>Vulnerability Detection & Compliance Monitoring</p>
                                 </div>
                                 <!--<[ highlights item start ]>-->
                                 <div class="col-highlights">
                                     <img src="assets/images/highlight-icon/learning.svg"
-                                        alt="Agentic AI Training for Non-Tech Course Highlights" width="45"
+                                        alt="wazuh training Course Highlights" width="45"
                                         height="45">
                                     <p>Recorded Sessions & Post-Training Support</p>
                                 </div>
                             </div>
                             <div class="item-footer d-flex">
                                 <img src="assets/images/highlight-icon/100-satisfaction.webp"
-                                    alt="Agentic AI Training for Non-Tech Course Highlights" width="100"
+                                    alt="wazuh training Course Highlights" width="100"
                                     height="100" loading="lazy">
                                 <img src="assets/images/highlight-icon/money-back.webp"
-                                    alt="Agentic AI Training for Non-Tech Course Highlights" width="100"
+                                    alt="wazuh training Course Highlights" width="100"
                                     height="100" loading="lazy">
                             </div>
                             <!-- <p style="margin-top: 24px;opacity: .8;">* Conditions Apply</p><br> -->
@@ -372,7 +372,7 @@ if ($course_data !== null) {
                     <div class="row align-items-center">
                         <div class="col-lg-2 d-none d-lg-block">
                             <img src="assets/images/training-calendar.webp" width="132" height="128"
-                                alt="Agentic AI Training for Non-Tech" class="img-fluid">
+                                alt="wazuh training" class="img-fluid">
                         </div>
 
                         <div class="col-lg-10 col-md-12">
@@ -499,9 +499,9 @@ if ($course_data !== null) {
                         <a href="#" class="modal-btn" title="Corparate Training">
                             <picture>
                                 <source media="(min-width:768px)" width="1400" height="420"
-                                    srcset="assets/images/Advanced-AI-Audit-Certification-Training-corporate-training-web.webp">
-                                <img src="assets/images/Advanced-AI-Audit-Certification-Training-corporate-training-mob.webp"
-                                    width="364" height="301" alt="Agentic AI Training for Non-Tech"
+                                    srcset="assets/images/Wazuh-Practical-Training-corporate-training-web.png">
+                                <img src="assets/images/Wazuh-Practical-Training-corporate-training-mob.png"
+                                    width="364" height="301" alt="wazuh training"
                                     style="width: 100%;height: auto;display: block;">
                             </picture>
                         </a>
@@ -659,7 +659,7 @@ if ($course_data !== null) {
                         <div class="d-flex align-items-center benifits-item">
                             <div class="flex-shrink-0">
                                 <img src="assets/images/benifits/global-recognition.svg" width="22" height="22"
-                                    alt="Benefits of Agentic AI Training for Non-Tech">
+                                    alt="Benefits of wazuh training">
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p>Get global recognition</p>
@@ -668,7 +668,7 @@ if ($course_data !== null) {
                         <div class="d-flex align-items-center benifits-item">
                             <div class="flex-shrink-0">
                                 <img src="assets/images/benifits/earning.svg" width="22" height="22"
-                                    alt="Benefits of Agentic AI Training for Non-Tech">
+                                    alt="Benefits of wazuh training">
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p>Maximize your earning potential</p>
@@ -677,7 +677,7 @@ if ($course_data !== null) {
                         <div class="d-flex align-items-center benifits-item">
                             <div class="flex-shrink-0">
                                 <img src="assets/images/benifits/cybersecurity-expert.svg" width="22" height="22"
-                                    alt="Benefits of Agentic AI Training for Non-Tech">
+                                    alt="Benefits of wazuh training">
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p>Earn the status of a SIEM Engineer</p>
@@ -686,7 +686,7 @@ if ($course_data !== null) {
                         <div class="d-flex align-items-center benifits-item">
                             <div class="flex-shrink-0">
                                 <img src="assets/images/benifits/career-growth.svg" width="22" height="22"
-                                    alt="Benefits of Agentic AI Training for Non-Tech">
+                                    alt="Benefits of wazuh training">
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p>Advanced career growth</p>
@@ -695,7 +695,7 @@ if ($course_data !== null) {
                         <div class="d-flex align-items-center benifits-item">
                             <div class="flex-shrink-0">
                                 <img src="assets/images/benifits/community.svg" width="22" height="22"
-                                    alt="Benefits of Agentic AI Training for Non-Tech">
+                                    alt="Benefits of wazuh training">
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <p>Become a part of an esteemed community</p>
@@ -708,9 +708,9 @@ if ($course_data !== null) {
                             <h3>Average Salary Range for Wazuh Roles</h3>
                             <picture>
                                 <source media="(min-width:768px)" width="1472" height="486"
-                                    srcset="assets/images/benifits/Advanced-AI-Audit-Certification-Training-benefits-desktop.webp">
-                                <img src="assets/images/benifits/Advanced-AI-Audit-Certification-Training-benefits--mobile.webp"
-                                    width="640" height="473" alt="Benefits of Agentic AI Training for Non-Tech">
+                                    srcset="assets/images/benifits/benefits-Wazuh-Practical-Training-desktop.png">
+                                <img src="assets/images/benifits/benefits-Wazuh-Practical-Training-mobile.png"
+                                    width="640" height="473" alt="Benefits of wazuh training">
                             </picture>
                         </div>
                     </div>
@@ -914,7 +914,7 @@ if ($course_data !== null) {
                                 <div class="overlay" id="overlay">
                                     <div class="play-button" onClick="playVideo()" id="playButton">
                                         <img src="https://www.infosectrain.com/wp-content/themes/Divi/assets/images/home/play-button.svg"
-                                            alt="Agentic AI Training for Non-Tech Success Story" width="150"
+                                            alt="wazuh training Success Story" width="150"
                                             height="150">
                                     </div>
                                 </div>

@@ -108,7 +108,7 @@ if (isset($_POST['me_submited'])) {
 
 
 
-    $email_subject = "New Enquiry from CISO Foundation: A Hands-On Training to Building Enterprise Security Program Landing Page";
+    $email_subject = "New Enquiry from Wazuh Practical Training Landing Page";
 
     $user_subject = "Thank you for your enquiry! We'll be in touch soon.";
 
@@ -234,17 +234,18 @@ if (isset($_POST['me_submited'])) {
 
                     <tr>
                         <td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">
-                            <ul>                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/why-choose-ciso-foundation-hands-on-training-from-infosectrain" target="_blank">Why Choose CISO Foundation Hands-On Training from InfosecTrain</a></li>
-                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/vciso-vs-ciso" target="_blank">vCISO vs. CISO</a></li>
-                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/chief-information-security-officer-ciso-interview-questions" target="_blank">Chief Information Security Officer (CISO) Interview Questions</a></li>
+                            <ul>                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/role-of-a-soc-analyst-in-modern-cybersecurity" target="_blank">Role of a SOC Analyst in Modern Cybersecurity</a></li>
+                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/top-7-log-sources-every-soc-analyst-should-know" target="_blank">Top 7 Log Sources Every SOC Analyst Should Know</a></li>
+                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/how-to-become-a-soc-analyst-step-by-step-learning-sequence" target="_blank">How to Become a SOC Analyst — Step-by-Step Learning Sequence</a></li>
+                                <li><a style="font-size: 12px;text-decoration: none;color: #414547;" href="https://www.infosectrain.com/blog/top-soc-analyst-interview-questions-and-answers" target="_blank">Top 20 SOC Analyst Interview Questions and Answers</a></li>
                             </ul>
                         </td>                    </tr>
                     <tr>                        <td style="color: #414547; padding-left: 24px;padding-top:10px;font-family: Arial, Helvetica, sans-serif;font-size: 18px;">
                             <strong>Our Recommended Courses and Certification</strong>                        </td>
                     </tr>                    <tr>
                         <td style="padding-left: 24px; padding-right: 24px; text-align: left;font-family: Arial, Helvetica, sans-serif;">                        <ul>
-                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/security-architecture-training"  target="_blank"> Security Architecture Hands-on Training</a> </li>                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/cisa-certification-training"  target="_blank"> CISA Certification Training</a> </li>
-                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/cism-certification-training"  target="_blank"> CISM Certification Training</a> </li>                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/ccsp-certification-training"  target="_blank"> CCSP Training & Certification Course</a> </li>
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/certified-ai-powered-soc-analyst-training"  target="_blank"> InfosecTrain’s Certified AI Powered SOC Analyst Certification Training</a> </li>                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/certified-ethical-hacker-ceh-training"  target="_blank">CEH v13 AI Certification Training</a> </li>
+                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;" https://www.infosectrain.com/courses/splunk-training"  target="_blank"> Splunk Practical Approach Training</a> </li>                            <li><a style="font-size: 12px;text-decoration: none;color: #414547;"https://www.infosectrain.com/courses/soc-analyst-training"  target="_blank">SOC Analyst Hands-on Training [2026]</a> </li>
                         </ul>                        </td>
                     </tr>
                     ' . $email_footer . '
