@@ -2,7 +2,7 @@
 session_start();
 $refferer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : "";
 $requesturl = isset($_SERVER['REQUEST_URI']) ? 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] : "";
-define("BASE_URL", "https://www.infosectrain.com/pages/lp/ciso-practical-training/");
+define("BASE_URL", "https://www.infosectrain.com/pages/lp/wazuh-practical-training");
 //define("BASE_URL", "http://localhost/infosectrain.com/pages/lp/cissp-training-dubai/");
 define("MINFILE", ".min"); //.min
 
