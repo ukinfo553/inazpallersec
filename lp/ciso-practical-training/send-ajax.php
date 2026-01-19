@@ -307,7 +307,7 @@ if (isset($_POST['me_submited'])) {
 
         'site_name' => 'lp',
 
-        'page_type' => 'Advanced in AI Audit (AAIA) Certification Training',
+        'page_type' => 'CISO Foundation: A Hands-On Training to Building Enterprise Security Program',
 
         'name' => $me_name,
 

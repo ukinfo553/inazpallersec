@@ -308,7 +308,7 @@ if (isset($_POST['me_submited'])) {
 
         'site_name' => 'lp',
 
-        'page_type' => 'Advanced in AI Audit (AAIA) Certification Training',
+        'page_type' => 'Wazuh Practical Training',
 
         'name' => $me_name,
 
