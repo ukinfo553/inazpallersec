@@ -48,10 +48,13 @@ if ($course_data !== null) {
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
     <script>
-        setTimeout(function () {
-            (function (w, d, s, l, i) {
+        setTimeout(function() {
+            (function(w, d, s, l, i) {
                 w[l] = w[l] || [];
-                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js"
+                });
                 var f = d.getElementsByTagName(s)[0],
                     j = d.createElement(s),
                     dl = l != "dataLayer" ? "&l=" + l : "";
@@ -66,16 +69,16 @@ if ($course_data !== null) {
 
 <body>
     <!-- <?php
-    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
-        $pag_url = "https://";
-    } else {
-        $pag_url = "http://";
-    }
-    // Append the host(domain name, ip) to the URL.
-    $pag_url .= $_SERVER['HTTP_HOST'];
-    // Append the requested resource location to the URL
-    $pag_url .= $_SERVER['REQUEST_URI'];
-    ?> -->
+            if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+                $pag_url = "https://";
+            } else {
+                $pag_url = "http://";
+            }
+            // Append the host(domain name, ip) to the URL.
+            $pag_url .= $_SERVER['HTTP_HOST'];
+            // Append the requested resource location to the URL
+            $pag_url .= $_SERVER['REQUEST_URI'];
+            ?> -->
 
     <!--/ navbar start /-->
     <nav class="navbar navbar-expand-lg py-3 d-flex">
@@ -297,7 +300,7 @@ if ($course_data !== null) {
                                         foreach ($course_details as $index => $detail) {
                                             // Make the first item active and open
                                             $activeClass = $index === 0 ? 'open' : '';
-                                            ?>
+                                    ?>
                                             <div
                                                 class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $activeClass; ?>">
                                                 <button
@@ -337,7 +340,7 @@ if ($course_data !== null) {
                                                     ?>
                                                 </div>
                                             </div>
-                                            <?php
+                                    <?php
                                         }
                                     }
                                     ?>
@@ -581,7 +584,7 @@ if ($course_data !== null) {
                 </div>
 
                 <div class="swiper myAdvisor">
-                    <div class="swiper-wrapper justify-content-md-center">
+                    <div class="swiper-wrapper">
                         <!--/ col start /-->
                         <div class="swiper-slide item">
                             <div class="profile-desc">
@@ -608,7 +611,28 @@ if ($course_data !== null) {
                             </div>
                         </div>
                         <!--/ col end /-->
-
+                        <!--/ col start /-->
+                        <div class="swiper-slide item">
+                            <div class="profile-desc">
+                                <div class="avtar">
+                                </div>
+                                <div class="avtar-data">
+                                    <div class="avtar-name">
+                                        Yasesveni
+                                    </div>
+                                    <div class="avtar-exp">
+                                        19+ Years of Experience
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="designation">
+                                Corporate Trainer | CISM | ISO 42001 | ISO 22301 | ISO 27001 | GDPR | PCI DSS | AI Governance | GRC | Risk Management
+                            </div>
+                            <div class="summary">
+                                Yasesveni is a seasoned cybersecurity and GRC professional with over 19 years of experience in the IT industry. She has led major security implementations, audits, and governance programs across global enterprises. As a corporate trainer, she has delivered 450+ sessions, training over 4000 professionals in GRC, Information Security, and AI Management Systems. She combines hands-on expertise in ISO standards, cybersecurity frameworks, and privacy compliance with deep experience in risk governance and digital assurance.
+                            </div>
+                        </div>
+                        <!--/ col end /-->
                         <!--/ col start /-->
                         <div class="swiper-slide item">
                             <div class="profile-desc">
@@ -1075,7 +1099,7 @@ if ($course_data !== null) {
                                 <?php foreach ($faq as $index => $question) {
                                     // Add "open" class and visible style for the first item
                                     $isOpen = $index === 0 ? 'open' : '';
-                                    ?>
+                                ?>
                                     <div
                                         class="accordion-item border-grey w-100 rounded-4 overflow-hidden <?php echo $isOpen; ?>">
                                         <button
@@ -1383,16 +1407,26 @@ if ($course_data !== null) {
     <!--/ js link start /-->
     <script>
         /*-------- form validation and ajax script --------*/
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
 
             // Function to load Zopim chat widget after a delay
             function loadZopim() {
-                window.$zopim || (function (d, s) {
-                    var z = $zopim = function (c) { z._.push(c) }, $ = z.s = d.createElement(s),
-                        e = d.getElementsByTagName(s)[0]; z.set = function (o) { z.set._.push(o) };
-                    z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+                window.$zopim || (function(d, s) {
+                    var z = $zopim = function(c) {
+                            z._.push(c)
+                        },
+                        $ = z.s = d.createElement(s),
+                        e = d.getElementsByTagName(s)[0];
+                    z.set = function(o) {
+                        z.set._.push(o)
+                    };
+                    z._ = [];
+                    z.set._ = [];
+                    $.async = !0;
+                    $.setAttribute("charset", "utf-8");
                     $.src = "https://v2.zopim.com/?5Y1ZvMP3lrSPwhhyQjIGwo618dlqPLkD";
-                    z.t = +new Date; $.type = "text/javascript";
+                    z.t = +new Date;
+                    $.type = "text/javascript";
                     e.parentNode.insertBefore($, e)
                 })(document, "script");
             }
@@ -1448,14 +1482,14 @@ if ($course_data !== null) {
 
             // Handle form submission
             function handleFormSubmit(event) {
-                event.preventDefault();  // Prevent the default form submission
+                event.preventDefault(); // Prevent the default form submission
 
                 const form = event.target;
                 const loader = form.querySelector('.loader');
                 const isValid = validateForm(form);
 
                 if (!isValid) {
-                    return;  // Stop the submission if the form is invalid
+                    return; // Stop the submission if the form is invalid
                 }
 
                 // Show the loader while submitting
@@ -1468,7 +1502,7 @@ if ($course_data !== null) {
                 const xhr = new XMLHttpRequest();
                 xhr.open('POST', 'send-ajax.php', true);
 
-                xhr.onload = function () {
+                xhr.onload = function() {
                     if (xhr.status === 200) {
                         // Redirect to the thank-you page or any other page
                         window.location.href = "thank-you.php";
@@ -1480,7 +1514,7 @@ if ($course_data !== null) {
                     }
                 };
 
-                xhr.onerror = function () {
+                xhr.onerror = function() {
                     loader.style.display = 'none'; // Hide the loader in case of an error
                     alert("An error occurred. Please try again.");
                 };
@@ -1495,7 +1529,6 @@ if ($course_data !== null) {
             });
         });
         /*-------- form valudation and ajax script end --------*/
-
     </script>
 </body>
 
