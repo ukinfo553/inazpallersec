@@ -41,10 +41,13 @@ if ($course_data !== null) {
     <!--/ style link end /-->
     <!-- Google Tag Manager -->
     <script>
-        setTimeout(function () {
-            (function (w, d, s, l, i) {
+        setTimeout(function() {
+            (function(w, d, s, l, i) {
                 w[l] = w[l] || [];
-                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js"
+                });
                 var f = d.getElementsByTagName(s)[0],
                     j = d.createElement(s),
                     dl = l != "dataLayer" ? "&l=" + l : "";
@@ -59,16 +62,16 @@ if ($course_data !== null) {
 
 <body>
     <!-- <?php
-    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
-        $pag_url = "https://";
-    } else {
-        $pag_url = "http://";
-    }
-    // Append the host(domain name, ip) to the URL.
-    $pag_url .= $_SERVER['HTTP_HOST'];
-    // Append the requested resource location to the URL
-    $pag_url .= $_SERVER['REQUEST_URI'];
-    ?> -->
+            if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+                $pag_url = "https://";
+            } else {
+                $pag_url = "http://";
+            }
+            // Append the host(domain name, ip) to the URL.
+            $pag_url .= $_SERVER['HTTP_HOST'];
+            // Append the requested resource location to the URL
+            $pag_url .= $_SERVER['REQUEST_URI'];
+            ?> -->
 
     <!--/ navbar start /-->
     <nav class="navbar navbar-expand-lg py-3 d-flex">
@@ -255,7 +258,7 @@ if ($course_data !== null) {
                                     foreach ($course_details as $index => $detail) {
                                         // Make the first item active and open
                                         $activeClass = $index === 0 ? 'active open' : '';
-                                        ?>
+                                ?>
                                         <div class="faq-item <?php echo $activeClass; ?>">
                                             <h3 class="faq-title">
                                                 <span class="title"><?php echo htmlspecialchars($detail['title']); ?></span>
@@ -272,7 +275,7 @@ if ($course_data !== null) {
                                                 ?>
                                             </div>
                                         </div>
-                                        <?php
+                                <?php
                                     }
                                 }
                                 ?>
@@ -329,9 +332,9 @@ if ($course_data !== null) {
 
         <!--/ training calendar sec start /-->
 
-            <section class="training-calendar" id="training-calendar">
-                <div class="container">
-                    <?php if (!empty($courseID)): ?>
+        <section class="training-calendar" id="training-calendar">
+            <div class="container">
+                <?php if (!empty($courseID)): ?>
                     <div class="row">
                         <div class="col-12">
                             <h2>CISM Training Calendar</h2>
@@ -365,54 +368,54 @@ if ($course_data !== null) {
                             ?>
                         </div>
                     </div>
-                    <?php endif; ?>
-                    <div class="row align-items-center">
-                        <div class="col-lg-2 d-none d-lg-block">
-                            <img src="assets/images/training-calendar.webp" width="132" height="128"
-                                alt="CISM Training Calendar" class="img-fluid">
-                        </div>
-
-                        <div class="col-lg-10 col-md-12">
-                            <h3>Can't Find a Suitable Schedule? Talk to Our Training Advisor!</h3>
-                            <div class="hide rows mt-2" id="demo_form_output_calendar"></div>
-                            <form method="post" action="" onSubmit="return val_demo_request_calendar(this.form);"
-                                id="demo_contact_f_calendar">
-                                <div class="row align-items-center">
-                                    <div class="col-md-3">
-                                        <input type="text" id="me_name_calendar" name="me_name" class="form-control"
-                                            placeholder="Full Name" />
-                                    </div>
-                                    <div class="col-md-3">
-                                        <input type="text" id="me_email_calendar" name="me_email" class="form-control"
-                                            placeholder="Email" />
-                                    </div>
-                                    <div class="col-md-3">
-                                        <input type="text" id="me_phone_calendar" name="me_phone" class="form-control"
-                                            placeholder="Mobile" />
-                                    </div>
-                                    <input type="hidden" id="me_redirect_calendar"
-                                        value="<?php echo BASE_URL; ?>thank-you.php" />
-                                    <input type="hidden" id="me_others_calendar" name="me_others"
-                                        value="Talk to Our Training Advisor" />
-                                    <input type="hidden" id="me_pageurl_calendar" name="me_pageurl"
-                                        value="<?php echo $pag_url; ?>" />
-
-                                    <div class="col-md-3">
-                                        <button class="cta-button form-button" type="submit" name="me_submited"
-                                            id="me_submited_calendar">Request a Callback</button>
-                                    </div>
-                                </div>
-                                <div class="loading_w hide" id="loading_w_calendar">
-                                    <center>
-                                        <img src="<?php echo BASE_URL; ?>assets/images/loader.gif" />
-                                    </center>
-                                </div>
-                            </form>
-                        </div>
-
+                <?php endif; ?>
+                <div class="row align-items-center">
+                    <div class="col-lg-2 d-none d-lg-block">
+                        <img src="assets/images/training-calendar.webp" width="132" height="128"
+                            alt="CISM Training Calendar" class="img-fluid">
                     </div>
+
+                    <div class="col-lg-10 col-md-12">
+                        <h3>Can't Find a Suitable Schedule? Talk to Our Training Advisor!</h3>
+                        <div class="hide rows mt-2" id="demo_form_output_calendar"></div>
+                        <form method="post" action="" onSubmit="return val_demo_request_calendar(this.form);"
+                            id="demo_contact_f_calendar">
+                            <div class="row align-items-center">
+                                <div class="col-md-3">
+                                    <input type="text" id="me_name_calendar" name="me_name" class="form-control"
+                                        placeholder="Full Name" />
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" id="me_email_calendar" name="me_email" class="form-control"
+                                        placeholder="Email" />
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" id="me_phone_calendar" name="me_phone" class="form-control"
+                                        placeholder="Mobile" />
+                                </div>
+                                <input type="hidden" id="me_redirect_calendar"
+                                    value="<?php echo BASE_URL; ?>thank-you.php" />
+                                <input type="hidden" id="me_others_calendar" name="me_others"
+                                    value="Talk to Our Training Advisor" />
+                                <input type="hidden" id="me_pageurl_calendar" name="me_pageurl"
+                                    value="<?php echo $pag_url; ?>" />
+
+                                <div class="col-md-3">
+                                    <button class="cta-button form-button" type="submit" name="me_submited"
+                                        id="me_submited_calendar">Request a Callback</button>
+                                </div>
+                            </div>
+                            <div class="loading_w hide" id="loading_w_calendar">
+                                <center>
+                                    <img src="<?php echo BASE_URL; ?>assets/images/loader.gif" />
+                                </center>
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
-            </section>
+            </div>
+        </section>
         <!--/ training calendar sec end /-->
 
         <!--offer sec start -->
@@ -543,6 +546,30 @@ if ($course_data !== null) {
                                 all domains of Information Security. Expertise ranges from Vulnerability Assessment &
                                 Penetration Testing to Application Security, and encompasses Security Solutions as well
                                 as IT Governance, Risk & Compliance
+                            </div>
+                        </div>
+                        <!--/ col end /-->
+                        <!--/ col start /-->
+                        <div class="swiper-slide item">
+                            <div class="profile-desc">
+                                <div class="avtar">
+                                    <img src="https://www.infosectrain.com/wp-content/uploads/2024/04/prabh-nair.png"
+                                        alt="Prabh Nair|InfosecTrain Instructor">
+                                </div>
+                                <div class="avtar-data">
+                                    <div class="avtar-name">
+                                        Yasesveni
+                                    </div>
+                                    <div class="avtar-exp">
+                                        19+ Years of Experience
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="designation">
+                                Corporate Trainer | CISM | ISO 42001 | ISO 22301 | ISO 27001 | GDPR | PCI DSS | AI Governance | GRC | Risk Management
+                            </div>
+                            <div class="summary">
+                                Yasesveni is a seasoned cybersecurity and GRC professional with over 19 years of experience in the IT industry. She has led major security implementations, audits, and governance programs across global enterprises. As a corporate trainer, she has delivered 450+ sessions, training over 4000 professionals in GRC, Information Security, and AI Management Systems. She combines hands-on expertise in ISO standards, cybersecurity frameworks, and privacy compliance with deep experience in risk governance and digital assurance.
                             </div>
                         </div>
                         <!--/ col end /-->
@@ -1329,15 +1356,24 @@ if ($course_data !== null) {
 
 <!--/ zendesk chat box /-->
 <script>
-
     // Function to load Zopim chat widget after a delay
     function loadZopim() {
-        window.$zopim || (function (d, s) {
-            var z = $zopim = function (c) { z._.push(c) }, $ = z.s = d.createElement(s),
-                e = d.getElementsByTagName(s)[0]; z.set = function (o) { z.set._.push(o) };
-            z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+        window.$zopim || (function(d, s) {
+            var z = $zopim = function(c) {
+                    z._.push(c)
+                },
+                $ = z.s = d.createElement(s),
+                e = d.getElementsByTagName(s)[0];
+            z.set = function(o) {
+                z.set._.push(o)
+            };
+            z._ = [];
+            z.set._ = [];
+            $.async = !0;
+            $.setAttribute("charset", "utf-8");
             $.src = "https://v2.zopim.com/?5Y1ZvMP3lrSPwhhyQjIGwo618dlqPLkD";
-            z.t = +new Date; $.type = "text/javascript";
+            z.t = +new Date;
+            $.type = "text/javascript";
             e.parentNode.insertBefore($, e)
         })(document, "script");
     }
@@ -1349,10 +1385,9 @@ if ($course_data !== null) {
 
 <!--<[new script start]>-->
 <script>
-
-    $(document).ready(function () {
+    $(document).ready(function() {
         // Your jQuery code here
-        $('.faq-wrapper .faq-title').on('click', function (e) {
+        $('.faq-wrapper .faq-title').on('click', function(e) {
             var element = $(this).parent('.faq-item');
             if (element.hasClass('open')) {
                 element.removeClass('open');
@@ -1370,7 +1405,7 @@ if ($course_data !== null) {
 
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         /*===== add lozyloading attribute */
         const img = document.querySelectorAll('img');
         img.forEach(images => {
@@ -1383,7 +1418,7 @@ if ($course_data !== null) {
         // console.log(inputElement)
         // Attach a click event listener to each button
         courseCard_button.forEach(button => {
-            button.addEventListener('click', function () {
+            button.addEventListener('click', function() {
                 const modalTitle = this.getAttribute('title');
                 inputElement.value = modalTitle;
             });
@@ -1413,8 +1448,6 @@ if ($course_data !== null) {
         youtubeVideo.setAttribute('autoplay', '1');
         youtubeVideo.setAttribute('muted', '1');
     }
-
-
 </script>
 
 </html>
