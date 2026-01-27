@@ -122,6 +122,7 @@ if ($course_data !== null) {
                     <!--/ col start /-->
                     <div class="col-lg-7 col-md-6">
                         <div class="item">
+                            <p class="powered-ai"><img src="assets/images/ai-powered.gif" alt=""> AI Powered Course</p>
                             <h3 class="d-none d-lg-block">The First Certification Built to Secure AI Security
                                 Management</h3>
                             <h1>Advanced in AI Security Management (AAISM) Certification Training</h1>

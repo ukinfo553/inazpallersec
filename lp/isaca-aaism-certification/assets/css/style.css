@@ -1753,3 +1753,18 @@ footer .item ul li a {
 .thankyou--card-item > img {
     display: none !important;
 }
+
+.powered-ai {
+    background: rgba(77, 142, 255, 0.10);
+    color: var(--Soft-Blue, #4D8EFF);
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.powered-ai img {
+    width: 25px;
+}
