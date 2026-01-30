@@ -98,6 +98,25 @@
 <?php
 $relatedCourses = [
 
+    "iso-42001-LI-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/certified-grc-auditor-training",
+            "text" => "Certified GRC IT Auditor Training Course"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/iso-iec-42001-lead-auditor-training",
+            "text" => "ISO/IEC 42001:2023 Lead Auditor Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/aigp-training",
+            "text" => "IAPP AIGP Certification Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/iso27001li",
+            "text" => "ISO 27001:2022 Lead Implementer Training and Certification"
+        ],
+    ],
+
     "wazuh-practical-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/certified-ai-powered-soc-analyst-training",

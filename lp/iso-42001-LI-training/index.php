@@ -232,9 +232,8 @@ if ($course_data !== null) {
                                 </div>
                             </div>
                             <div class="item-footer d-flex">
-                                <img src="assets/images/TÜV-SÜD-logo.png"
-                                    alt="ISO/IEC 42001:2023 Lead Implementer Course Highlights" width="100"
-                                    height="100" loading="lazy">
+                                <img src="https://www.infosectrain.com/wp-content/uploads/2024/08/TUV-EXAMPLER.png"
+                                    alt="ISO/IEC 42001:2023 Lead Implementer Course Highlights" loading="lazy">
                                 <img src="assets/images/highlight-icon/100-satisfaction.webp"
                                     alt="ISO/IEC 42001:2023 Lead Implementer Course Highlights" width="100"
                                     height="100" loading="lazy">
