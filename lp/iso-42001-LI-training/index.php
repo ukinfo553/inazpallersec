@@ -122,6 +122,7 @@ if ($course_data !== null) {
                     <!--/ col start /-->
                     <div class="col-lg-7 col-md-6">
                         <div class="item">
+                            <p class="powered-ai"><img src="assets/images/ai-powered.gif" alt="" loading="lazy"> AI Powered Course</p>
                             <h3 class="d-none d-lg-block">Build Ethical, Transparent, and Secure AI Systems with
                                 Confidence</h3>
                             <h1>ISO/IEC 42001:2023 Lead Implementer Training and Certification</h1>
@@ -533,6 +534,28 @@ if ($course_data !== null) {
 
                 <div class="swiper myAdvisor">
                     <div class="swiper-wrapper justify-content-md-center">
+
+                        <!--/ col start /-->
+                        <div class="swiper-slide item">
+                            <div class="profile-desc">
+                                <div class="avtar-data">
+                                    <div class="avtar-name">
+                                        Prabh Nair
+                                    </div>
+                                    <div class="avtar-exp">
+                                        18+ Years Of Experience
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="designation">
+                                CISSP | ISSAP | CGRC | CCSP | CSSLP | CISM | CRISC | CISA | CDPSE | CIPM | CIPP/E | AIGP
+                            </div>
+                            <div class="summary">
+                                18 + years of experience in Information Technology industry with specialization in Information Security
+                                A distinguished Information Security professional with comprehensive knowledge across all domains of Information Security. Expertise ranges from Vulnerability Assessment &amp; Penetration Testing to Application Security, and encompasses Security Solutions as well as IT Governance, Risk &amp; Compliance
+                            </div>
+                        </div>
+                        <!--/ COL END -->
                         <!--/ col start /-->
                         <div class="swiper-slide item">
                             <div class="profile-desc">
@@ -558,34 +581,6 @@ if ($course_data !== null) {
                             </div>
                         </div>
                         <!--/ col end /-->
-
-
-                        <!--/ col start /-->
-                        <!-- <div class="swiper-slide item">
-                            <div class="profile-desc">
-                                <div class="avtar-data">
-                                    <div class="avtar-name">
-                                        Sujay
-                                    </div>
-                                    <div class="avtar-exp">
-                                        25+ Years of Experience
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="designation">
-                                Corporate Trainer | CISO | CCSP | CISSP | ISO 42001 | ISO 27001 | CTO | CSOA
-                            </div>
-                            <div class="summary">
-                                Sujay is a cybersecurity and cloud security expert with over 25 years of experience in
-                                enterprise security, risk management, and compliance. As a CCSP, CISSP, and ISO 42001
-                                Lead Auditor, he specializes in cloud security architecture, AI-driven cybersecurity
-                                frameworks, and security governance. His expertise spans SOC implementation, ISO 27001 &
-                                ISO 42001 compliance, penetration testing, and threat modeling, ensuring organizations
-                                achieve robust security postures aligned with global standards.
-                            </div>
-                        </div> -->
-                        <!--/ COL END -->
-
                         <!--/ col start /-->
                         <!-- <div class="swiper-slide item">
                             <div class="profile-desc">
