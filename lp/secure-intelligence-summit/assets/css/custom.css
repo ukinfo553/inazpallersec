@@ -1384,7 +1384,7 @@ footer .item ul li a {
   font-size: 12px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
   text-decoration: none;
   font-weight: 400;
 }
@@ -1748,9 +1748,7 @@ footer .item ul li a {
   border: 1px solid rgba(255, 255, 255, 0.20);
   background: rgba(13, 18, 176, 0.40);
   padding: 24px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
+
 }
 
 .agenda {
@@ -1778,7 +1776,7 @@ footer .item ul li a {
   line-height: normal;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .agenda h3 {
@@ -1959,13 +1957,65 @@ ul li {
     flex-direction: column;
   }
 
-  .curriculum {
-    flex-direction: column;
-    align-items: flex-start;
+  .curriculum-top {
+    flex-direction: column-reverse;
+    gap: 16px;
   }
+
+
 }
 
 .pay-btn span {
   font-weight: 800;
   font-size: 18px;
+}
+
+.coupon-wrapper {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 165, 56, 0.60);
+  background: rgba(0, 165, 56, 0.40);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px;
+}
+
+.coupon-wrapper input {
+  background-color: transparent;
+  border: none;
+  color: var(--infosectrain-WHITE, #FFF);
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
+  width: 60%;
+}
+
+.coupon-wrapper input::placeholder {
+  color: var(--infosectrain-WHITE, #FFF);
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
+}
+
+.coupon-btn {
+  border-radius: 8px;
+  background: var(--infosectrain-SUCCESS, #00A538);
+  align-items: center;
+  padding: 8px 12px;
+  color: var(--infosectrain-WHITE, #FFF);
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 }
