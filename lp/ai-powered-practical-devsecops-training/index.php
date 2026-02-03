@@ -125,7 +125,7 @@ if ($course_data !== null) {
             <div class="container">
                 <div class="row align-items-center flex-column-reverse flex-md-row">
                     <!--/ col start /-->
-                    <div class="col-lg-7">
+                    <div class="col-lg-7 col-md-6">
                         <div class="item">
                             <p class="powered-ai"><img src="assets/images/ai-powered.gif" alt="" loading="lazy"> AI Powered Course</p>
                             <h3>
@@ -166,8 +166,8 @@ if ($course_data !== null) {
                     <!--/ col start /-->
                     <div class="col-lg-5 col-md-6 d-none d-lg-block">
                         <div class="item">
-                            <img src="assets/images/banner-img.webp" fetchPriority="high" alt="AIGP by InfosecTrain"
-                                width="788" height="788">
+                            <img src="assets/images/DevSecOps-BANNER.webp" fetchPriority="high" alt="AIGP by InfosecTrain"
+                                width="400" height="400">
                         </div>
                     </div>
                 </div>
@@ -494,9 +494,9 @@ if ($course_data !== null) {
                         <a href="#" class="modal-btn" title="Corparate Training">
                             <picture>
                                 <source media="(min-width:768px)" width="1120" height="336"
-                                    srcset="assets/images/corporate-training-web.webp">
-                                <img src="assets/images/corporate-training-mob.webp" width="350" height="290"
-                                    alt="AIGP Training  Corporate Training"
+                                    srcset="assets/images/DevSecOps-corporate-training-web.webp">
+                                <img src="assets/images/DevSecOps-corporate-training-mob.webp" width="350" height="290"
+                                    alt="ai-powered-practical-devsecops-training"
                                     style="width: 100%;height: auto;display: block;">
                             </picture>
                         </a>
@@ -651,7 +651,7 @@ if ($course_data !== null) {
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Benefits of IAPP AIGP Certification Training</h2>
+                        <h2>Benefits of AI-Powered Practical DevSecOps Training</h2>
                     </div>
                 </div>
 
@@ -706,11 +706,11 @@ if ($course_data !== null) {
 
                     <div class="col-md-8">
                         <div class="benifits-item-two">
-                            <h3>Average Salary Range for AIGP Training Profiles</h3>
+                            <h3>Average Salary Range for DevSecOps-Related Roles</h3>
                             <picture>
                                 <source media="(min-width:768px)" width="726" height="246"
-                                    srcset="assets/images/benifits/benefits-desktop.webp">
-                                <img src="assets/images/benifits/benefits-mobile.webp" width="320" height="292"
+                                    srcset="assets/images/benifits/benefits-DevSecOps-desktop.webp">
+                                <img src="assets/images/benifits/benefits-DevSecOps-mobile.webp" width="320" height="292"
                                     alt="Benefits of AIGP Training Certification">
                             </picture>
                         </div>

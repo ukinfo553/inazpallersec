@@ -98,6 +98,25 @@
 <?php
 $relatedCourses = [
 
+    "ai-powered-practical-devsecops-training" => [
+        [
+            "link" => "https://www.infosectrain.com/courses/ccsp-certification-training",
+            "text" => "CCSP Training & Certification Course"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/azure-security-combo-training",
+            "text" => "Azure Administrator & Security (AZ-104 + AZ-500) Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/aws-combo-course-training",
+            "text" => "AWS Architecture Foundation & AWS Security Speciality Training"
+        ],
+        [
+            "link" => "https://www.infosectrain.com/courses/grc-online-training",
+            "text" => "GRC Hands-on Training"
+        ],
+    ],
+
     "iso-42001-LI-training" => [
         [
             "link" => "https://www.infosectrain.com/courses/certified-grc-auditor-training",
